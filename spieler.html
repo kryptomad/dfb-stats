@@ -3,7 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/variables.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <title>DFB Stats – Seite</title>
 </head>
@@ -11,26 +13,35 @@
   <!-- Hier kommt der Hauptinhalt rein -->
   <div id="content" class="content">
 
- <div class="content">
-    <h2>Seite in Arbeit</h2>
-    <p>Diese Seite wird demnächst mit Inhalten gefüllt.</p>
+<div class="player-gallery">
+  <div class="player-card">
+    <img src="assets/players/dummy.png" alt="Spieler 1">
+    <p>Franz-Josef 'Y'</p>
   </div>
+  <div class="player-card">
+    <img src="assets/players/dummy.png" alt="Spieler 2">
+    <p>Heiner 'TC'</p>
+  </div>
+  <div class="player-card">
+    <img src="assets/players/dummy.png" alt="Spieler 3">
+    <p>Uwe</p>
+  </div>
+  <div class="player-card">
+    <img src="assets/players/dummy.png" alt="Spieler 4">
+    <p>Frank</p>
+  </div>
+<a href="spieler_mad.html" class="player-card solo">
+  <img src="assets/players/dummy.png" alt="Martin 'mad'">
+  <p>Martin 'mad'</p>
+</a>
+</div>
+
   
-    <!-- Menü-Platzhalter -->
-  <div id="menu-placeholder"></div>
+<!-- Menu -->
+<div id="menu-placeholder"></div>
 
-  <script>
-    async function loadMenu() {
-      const res = await fetch('menu.html');
-      const html = await res.text();
-      document.getElementById('menu-placeholder').innerHTML = html;
-    }
-    loadMenu();
+<!-- Common Scripts -->
+<script src="assets/js/common.js"></script>
 
-    // Menü Toggle-Funktion
-    function toggleMenu() {
-      document.querySelector('.menu').classList.toggle('active');
-    }
-  </script>
 </body>
 </html>

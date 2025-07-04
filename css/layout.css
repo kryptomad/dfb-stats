@@ -1,0 +1,49 @@
+.player-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 40px;
+}
+
+  .player-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 1rem;
+    margin: 2rem 0 1.5rem;
+  }
+
+  .player-image-rect {
+    width: 120px;
+    height: 160px;
+    object-fit: cover;
+    border: 2px solid var(--border-color);
+    border-radius: 4px;
+  }
+
+  .player-info {
+    flex: 1;
+  }
+
+  .player-info h1 {
+    margin: 0;
+    font-size: 1.5rem;
+  }
+
+  .player-info .subtext {
+    color: var(--color-gray-400);
+    font-size: 0.9rem;
+    margin-top: 0.3rem;
+  }
+
+  .honor-table td {
+    padding: 0.5rem 1rem;
+    border-bottom: 1px solid var(--color-gray-700);
+    color: var(--text);
+  }
+
+  .emoji {
+    font-size: 1.2rem;
+  }
+

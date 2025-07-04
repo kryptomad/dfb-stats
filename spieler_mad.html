@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <title>DFB Stats – Seite</title>
+</head>
+<body>
+  <!-- Hier kommt der Hauptinhalt rein -->
+  <div id="content" class="content">
+
+<div class="player-profile">
+  <!-- Sektion 1: Header mit Bild & Name -->
+  <div class="player-header">
+    <div class="player-info">
+      <h1>Martin 'mad'</h1>
+      <p class="subtext">Mitglied • Seit 2007</p>
+    </div>
+    <img src="assets/players/dummy.png" alt="Martin 'mad'" class="player-image-rect">
+  </div>
+
+  <!-- Sektion 2: Mini-Honors-Tabelle -->
+  <table class="standard-table">
+    <tr>
+      <td>Jahresoskar</td>
+      <td><span class="emoji">🌟</span> 2</td>
+    </tr>
+    <tr>
+      <td>Monatsoskar</td>
+      <td><span class="emoji">🥇</span> 4</td>
+    </tr>
+    <!-- Optional: weitere Zeilen -->
+  </table>
+
+  <!-- Sektion 3: Aufklappbare Statistiken -->
+    <div class="standard-table">
+  <div class="toggle-header" onclick="toggleBox(this)">Best of</div>
+  <div class="toggle-content">
+    <p>[Tabelle mit Jahresdaten]</p>
+  </div>
+</div>
+  <div class="standard-table">
+    <div class="toggle-header" onclick="toggleBox(this)">Jahresstatistik 2025</div>
+    <div class="toggle-content">
+      <p>[Tabelle mit Jahresdaten]</p>
+    </div>
+  </div>
+  <div class="toggle-box">
+    <div class="toggle-header" onclick="toggleBox(this)">Monatsstatistik Juli</div>
+    <div class="toggle-content">
+      <p>[Tabelle mit Monatsdaten]</p>
+    </div>
+  </div>
+  <div class="toggle-box">
+    <div class="toggle-header" onclick="toggleBox(this)">Alle Spiele</div>
+    <div class="toggle-content">
+      <p>[Tabelle aller Spiele mit Gegner, Datum, Avg usw.]</p>
+    </div>
+  </div>
+</div>
+
+<script>
+function toggleBox(header) {
+  header.classList.toggle('open');
+  const content = header.nextElementSibling;
+  content.style.display = content.style.display === 'block' ? 'none' : 'block';
+}
+</script>
+
+  <!-- Menu -->
+  <div id="menu-placeholder"></div>
+
+<!-- Common Scripts -->
+<script src="assets/js/common.js"></script>
+
+</body>
+</html>

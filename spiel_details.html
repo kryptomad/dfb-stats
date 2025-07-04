@@ -3,7 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/variables.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <title>DFB Stats – Spiel-Details</title>
 </head>
@@ -132,9 +134,9 @@
               ${
                 leg.rounds && leg.rounds.length
                   ? leg.rounds[leg.rounds.length - 1].p1_score < 0
-                    ? `<span class="text-left bold">${leg.p1_darts_leg}</span> <span>Darts</span><span class="text-left red"> | </span><span class="text-left bold">${leg.p1_avg_leg?.toFixed(2)}</span> <span>3DA</span>`
+                    ? `<span class="text-left bold">${leg.p1_darts_leg}</span> <span>Darts</span><span class="text-left text-red"> | </span><span class="text-left bold">${leg.p1_avg_leg?.toFixed(2)}</span> <span>3DA</span>`
                     : leg.rounds[leg.rounds.length - 1].p2_score < 0
-                      ? `<span class="text-left bold">${leg.p2_darts_leg}</span> <span>Darts</span><span class="text-left red"> | </span><span class="text-left bold">${leg.p2_avg_leg?.toFixed(2)}</span> <span>3DA</span>`
+                      ? `<span class="text-left bold">${leg.p2_darts_leg}</span> <span>Darts</span><span class="text-left text-red"> | </span><span class="text-left bold">${leg.p2_avg_leg?.toFixed(2)}</span> <span>3DA</span>`
                       : ''
                   : ''
               }
@@ -152,20 +154,11 @@
     window.onload = loadDetails;
   </script>
 
-  <!-- menü -->
-  <div id="menu-placeholder"></div>
+<!-- Menu -->
+<div id="menu-placeholder"></div>
 
-  <script>
-    async function loadMenu() {
-      const res = await fetch('menu.html');
-      const html = await res.text();
-      document.getElementById('menu-placeholder').innerHTML = html;
-    }
-    loadMenu();
+<!-- Common Scripts -->
+<script src="assets/js/common.js"></script>
 
-    function toggleMenu() {
-      document.querySelector('.menu').classList.toggle('active');
-    }
-  </script>
 </body>
 </html>

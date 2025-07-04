@@ -1,19 +1,13 @@
 :root {
-  --accent: #d70000; /*footer background*/
-  --highlight: #ff4c42;
-  --table-bg: #1c1c1c;
-  --table-header-bg: #111;
-  --border-color: #444;
-  --text: var(--color-white);   /* zentrale Textfarbe */
   --bg: var(--color-gray-700); /* zentrale Hintergrundfarbe */
-
-  /* Base Colors */
-  --color-white: #fff;
-  --color-black: #000;
-  --color-gray: #
-  --color-red-primary: #d60000;   /* z. B. Scorebox, Buttons */
-  --color-red-footer: #a00000;    /* dunkler für Footer */
-  --color-red-accent: #ff2d2d;    /* z. B. Warnungen, CTAs */
+  --table-bg: var(--color-gray-600);
+  --table-header-bg: var(--color-gray-600);
+  --border-color: var(--color-gray-500);
+  --table-header-text: var(--color-red-200);
+  --text: var(--color-white);   /* zentrale Textfarbe */
+  --heading-primary: var(--color-red-200);
+  --heading-secondary: var(--color-gray-400); /* not in use */
+  --footer-bg: var(--color-red-500); /*footer background*/
 
   /* Grautöne */
   --color-gray-100: #f0f0f0; /* sehr hell */
@@ -21,14 +15,16 @@
   --color-gray-200: #cccccc;
   --color-gray-300: #999999;
   --color-gray-400: #666666;
-  --color-gray-500: #333333;
+  --color-gray-500: #292929; /* Border color*/
   --color-gray-600: #1c1c1c; /* dein Standard-Background in Tabellen? */
-  --color-gray-700: #111111; /* Main-Background */
+  --color-gray-700: #111111; /* Main-Background - Table header? */
   
   /* Rottöne */
   --color-red-100: #ffb3b3; /* helles Rot */
-  --color-red-200: #ff4c42; /* dein loser-Rot */
-  --color-red-300: #b80000; /* dunkles Rot (optional) */
+  --color-red-200: #ff4c42; /* dein loser-Rot / Überschriften */
+  --color-red-300: #ff2d2d; /* dunkles Rot (optional) */
+  --color-red-500: #d70000; /* dunkles Rot (optional) */
+  --color-red-500: #b80000; /* dunkles Rot (optional) */
 
   /* Grüntöne */
   --color-green-100: #b6f2d4; /* sehr helles Grün */
@@ -55,8 +51,9 @@ body::before {
   position: absolute;
   top: 50%;
   left: 50%;
+  z-index: 1;
   transform: translate(-50%, -50%);
-  background: url('logo.svg') no-repeat center center;
+  background: url('assets/logo.svg') no-repeat center center;
   background-size: 80%;
   opacity: 0.03;
   width: 100%;
@@ -72,6 +69,7 @@ body::before {
   width: clamp(320px, 90%, 1000px);
   margin: 0 auto;
 }
+
 table {
   width: 100%;
   border-collapse: collapse;
@@ -92,7 +90,7 @@ th {
   background: var(--table-header-bg);
   font-weight: 600;
   font-size: 1rem;
-  color: var(--highlight);
+  color: var(--table-header-text);
 }
 
 td {
@@ -120,9 +118,9 @@ td {
 .lowercase    { text-transform: lowercase; }
 
 /* === Farben === */
-.red         { color: #ff4c42; }      /* Primärrot DFB-Stil */
-.grey        { color: #aaa; }      /* Dezent, für Kommentare/Meta */
-.darkgrey    { color: #666; }      /* Für Labels, weniger dominant */
+.text-red         { color: #ff4c42; }      /* Primärrot DFB-Stil */
+.text-grey        { color: #aaa; }      /* Dezent, für Kommentare/Meta */
+.text-darkgrey    { color: #666; }      /* Für Labels, weniger dominant */
 
 /* === Größen (Überschriften & Reduzierung) === */
 .supersmall  { font-size: 0.7rem; }  /* kleiner Text, z. B. Fußzeile */
@@ -131,101 +129,6 @@ td {
 .large      { font-size: 1.25rem; }  /* größer, z. B. Sub-Heading */
 
 
-/* ====================================================================
-   Verhalten und Optik der Bottom Bar (Vereinslogo)
-   &
-   Verhalten und Optik der Buttons im Menü
-   menu.html
-   ==================================================================== */
-
-
-/* Bottom Bar */
-.bottom-bar {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background: var(--accent);
-  height: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 1rem;
-  z-index: 2;
-  box-sizing: border-box;
-}
-
-.bottom-bar img {
-  height: 38px;
-}
-
-.menu-btn {
-  font-size: 2rem;
-  background: none;
-  border: none;
-  color: white;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0;
-  width: 44px;
-  height: 44px;
-}
-
-/* Side Menu */
-.menu {
-  position: fixed;
-  bottom: 60px;
-  right: -100%;
-  width: 80px;
-  height: calc(100% - 60px);
-  background: #000;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-end;
-  padding-bottom: 2rem;
-  transition: right 0.3s ease;
-  z-index: 3;
-  box-sizing: border-box;
-  box-shadow: -4px 0 12px rgba(0, 0, 0, 0.6);
-}
-
-.menu.active {
-  right: 0;
-}
-
-.menu-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.9rem;
-  margin: 1rem 0;
-  gap: 0.2rem;
-  opacity: 0.95;
-  transition: transform 0.2s ease, opacity 0.2s ease;
-  text-align: center;
-  width: 100%;
-  text-decoration: none;
-  color: inherit;
-}
-
-.menu-item span {
-  font-size: 0.7rem;
-}
-
-.menu-item i {
-  font-size: 1.5rem;
-}
-
-.menu-item:hover {
-  opacity: 1;
-  transform: scale(1.1);
-  color: red
-}
 
 
 /* ====================================================================
@@ -299,12 +202,6 @@ td {
 .calendar-cell {
   padding: 0.4rem 0;
   border-radius: 0.3rem;
-}
-
-.highlight {
-  background-color: var(--highlight);
-  color: #000;
-  font-weight: bold;
 }
 
 .event-card {
@@ -414,7 +311,7 @@ dann sind alle gleich groß und selbe Farbe*/
   margin-bottom: 1rem;
   margin-top: 1rem;
   text-align: center;
-  color: var(--highlight); /*oder eine andere Farbe*/
+  color: var(--heading-primar); /*oder eine andere Farbe*/
 }
 
 .filter-box {
@@ -436,7 +333,7 @@ dann sind alle gleich groß und selbe Farbe*/
 /* Überschrift der Legs; Leg 1-5 */
 .leg-count {
   text-align: center;
-  color: var(--highlight);
+  color: var(--heading-primary);
   margin-top: 2rem;
   margin-bottom: 1rem;
   font-weight: bold;
@@ -480,7 +377,7 @@ dann sind alle gleich groß und selbe Farbe*/
 /*Hintergrund Darts/Rounds spalte in der Mitte*/
 .leg-table td:nth-child(3) {
   background-color: #111;
-  color: var(--highlight);
+  color: var(--heading-primar);
   font-weight: 600;
 }
 
@@ -611,7 +508,7 @@ dann sind alle gleich groß und selbe Farbe*/
 }
 
 .standard-table th {
-  background-color: #111;
+  background-color: #111111;
   color: #e74c3c;
   text-align: center;
 }
