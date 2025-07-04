@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <title>DFB Stats – Spiel-Details</title>
+</head>
+<body>
+
+  <!-- content -->
+  <div id="content" class="content"></div>
+
+  <script>
+    function getParam(key) {
+      const urlParams = new URLSearchParams(window.location.search);
+      return urlParams.get(key);
+    }
+
+    async function loadDetails() {
+      const gameDate = getParam('game_date');
+      const p1 = getParam('p1');
+      const p2 = getParam('p2');
+
+      const res = await fetch('dumps/spiele_details.json');
+      const allGames = await res.json();
+      const game = allGames.find(g => g.date === gameDate && g.p1 === p1 && g.p2 === p2);
+
+      if (!game) {
+        document.body.innerHTML = '<p>Spiel nicht gefunden.</p>';
+        return;
+      }
+
+      const labels = [
+        "Average Darts", "Average", "Average First 9",
+        "Best Leg", "High-out", "TON", "140s", "180s"
+      ];
+
+      const filteredStats = labels.map(label => {
+        const row = game.stats.find(r => r.label === label) || { p1: "-", p2: "-" };
+
+        if (["Best Leg", "Average Darts", "High-out"].includes(label)) {
+          return {
+            label,
+            p1: game.legs1 > 0 ? row.p1 : "-",
+            p2: game.legs2 > 0 ? row.p2 : "-"
+          };
+        }
+        if (["TON", "140s", "180s"].includes(label)) {
+          return {
+            label,
+            p1: row.p1 === 0 ? "-" : row.p1,
+            p2: row.p2 === 0 ? "-" : row.p2
+          };
+        }
+        return {
+          label,
+          p1: typeof row.p1 === "number" && (label === "Average" || label === "Average First 9")
+            ? row.p1.toFixed(2) : row.p1,
+          p2: typeof row.p2 === "number" && (label === "Average" || label === "Average First 9")
+            ? row.p2.toFixed(2) : row.p2
+        };
+      });
+
+      const statsTable = `
+        <h2 class="match-title">
+        <span class="player-name">${p1}</span>
+        <span class="vs">vs</span>
+        <span class="player-name">${p2}</span>
+         </h2>
+        <table class="standard-table">
+          <tr><th>${p1}</th><th>Stats</th><th>${p2}</th></tr>
+          <tr><td>${game.legs1}</td><td>Legs Won</td><td>${game.legs2}</td></tr>
+          ${filteredStats.map(row => `
+            <tr>
+              <td>${row.p1}</td>
+              <td>${row.label}</td>
+              <td>${row.p2}</td>
+            </tr>
+          `).join('')}
+        </table>`;
+
+      const legBlocks = game.legs.map((leg, i) => {
+        const checkoutP1Darts = leg.p1_darts_leg || null;
+        const checkoutP2Darts = leg.p2_darts_leg || null;
+
+        const rows = leg.rounds.map((round, rIndex) => {
+          const isLastRound = (rIndex === leg.rounds.length - 1);
+
+          const p1Darts = round.p1_darts !== undefined ? round.p1_darts : rIndex * 3;
+          const p2Darts = round.p2_darts !== undefined ? round.p2_darts : rIndex * 3;
+
+          function formatScore(score, isCheckout) {
+            if (score === '' || score === null) return '';
+            return isCheckout ? `<span class="score-box winner">CD ${Math.abs(score)}</span>` : score;
+          }
+
+          const isCheckoutP1 = isLastRound && round.p1_score < 0;
+          const isCheckoutP2 = isLastRound && round.p2_score < 0;
+
+          return `
+            <tr>
+              <td>${formatScore(round.p1_score, isCheckoutP1)}</td>
+              <td>${round.p1_left}</td>
+              <td>${rIndex === 0 ? '' : p1Darts}</td>
+              <td>${formatScore(round.p2_score, isCheckoutP2)}</td>
+              <td>${round.p2_left}</td>
+            </tr>
+          `;
+        }).join('');
+
+        return `
+          <div>
+            <h3 class="leg-count">Leg ${i + 1}</h3>
+            <table class="leg-table">
+              <thead>
+                <tr>
+                  <th colspan="2">${p1}${leg.starter === 'p1' ? ' *' : ''}</th>
+                  <th></th>
+                  <th colspan="2">${p2}${leg.starter === 'p2' ? ' *' : ''}</th>
+                </tr>
+                <tr>
+                  <th>Turn</th><th>Score</th><th>Darts</th><th>Turn</th><th>Score</th>
+                </tr>
+              </thead>
+              <tbody>
+                ${rows}
+              </tbody>
+            </table>
+            <div class="leg-summary-line">
+              ${
+                leg.rounds && leg.rounds.length
+                  ? leg.rounds[leg.rounds.length - 1].p1_score < 0
+                    ? `<span class="text-left bold">${leg.p1_darts_leg}</span> <span>Darts</span><span class="text-left red"> | </span><span class="text-left bold">${leg.p1_avg_leg?.toFixed(2)}</span> <span>3DA</span>`
+                    : leg.rounds[leg.rounds.length - 1].p2_score < 0
+                      ? `<span class="text-left bold">${leg.p2_darts_leg}</span> <span>Darts</span><span class="text-left red"> | </span><span class="text-left bold">${leg.p2_avg_leg?.toFixed(2)}</span> <span>3DA</span>`
+                      : ''
+                  : ''
+              }
+            </div>
+        `;
+      }).join('');
+
+
+
+      document.querySelector('.content').innerHTML =
+        statsTable + legBlocks + `<a class="leg_backbutton" href="spieltag.html">⇦ Zurück zum Spieltag</a>`;
+    }
+
+    // Seite initial laden
+    window.onload = loadDetails;
+  </script>
+
+  <!-- menü -->
+  <div id="menu-placeholder"></div>
+
+  <script>
+    async function loadMenu() {
+      const res = await fetch('menu.html');
+      const html = await res.text();
+      document.getElementById('menu-placeholder').innerHTML = html;
+    }
+    loadMenu();
+
+    function toggleMenu() {
+      document.querySelector('.menu').classList.toggle('active');
+    }
+  </script>
+</body>
+</html>

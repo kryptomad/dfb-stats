@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <title>DFB Stats</title>
+ </head>
+<body>
+    <!-- content -->
+  <div id="content" class="content">
+  <br>
+  <div class="content">
+    <div class="event-card">
+      <div class="event">
+        <h2>Nächster Abend</h2>
+        <div><i class="fas fa-home"></i> Frank</div>
+        <div><i class="fas fa-clock"></i> 19:30 Uhr</div>
+      </div>
+      <div class="abend-icons">
+        <i class="fas fa-coins active" title="Geldabend"></i>
+        <i class="fas fa-trophy inactive" title="Oscarabend"></i>
+      </div>
+    </div>
+
+    <div class="calendar-box">
+      <div class="calendar">
+        <div class="calendar-header">Juli 2025</div>
+        <div class="calendar-day">MO</div><div class="calendar-day">DI</div><div class="calendar-day">MI</div><div class="calendar-day">DO</div><div class="calendar-day">FR</div><div class="calendar-day">SA</div><div class="calendar-day">SO</div>
+        <div></div><div></div><div></div><div></div><div class="calendar-cell color-red-200">4</div><div class="calendar-cell">5</div><div class="calendar-cell">6</div>
+        <div class="calendar-cell">7</div><div class="calendar-cell">8</div><div class="calendar-cell">9</div><div class="calendar-cell">10</div><div class="calendar-cell">11</div><div class="calendar-cell">12</div><div class="calendar-cell">13</div>
+        <div class="calendar-cell">14</div><div class="calendar-cell">15</div><div class="calendar-cell">16</div><div class="calendar-cell">17</div><div class="calendar-cell">18</div><div class="calendar-cell">19</div><div class="calendar-cell">20</div>
+        <div class="calendar-cell">21</div><div class="calendar-cell">22</div><div class="calendar-cell">23</div><div class="calendar-cell">24</div><div class="calendar-cell">25</div><div class="calendar-cell">26</div><div class="calendar-cell">27</div>
+        <div class="calendar-cell">28</div><div class="calendar-cell">29</div><div class="calendar-cell">30</div><div class="calendar-cell">31</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Menü -->
+  <div id="menu-placeholder"></div>
+
+  <script>
+    async function loadMenu() {
+      const res = await fetch('menu.html');
+      const html = await res.text();
+      document.getElementById('menu-placeholder').innerHTML = html;
+    }
+    loadMenu();
+
+    // Menü Toggle-Funktion
+    function toggleMenu() {
+      document.querySelector('.menu').classList.toggle('active');
+    }
+  </script>
+</body>
+</html>
