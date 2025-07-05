@@ -36,12 +36,62 @@
 }
 
 /* ====================================================================
-   Verhalten und Optik der Bottom Bar (Vereinslogo)
-   &
-   Verhalten und Optik der Buttons im Menü
-   menu.html
+   Spieler Bilder spieler.html und Hover effect
    ==================================================================== */
 
+.player-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 40px;
+}
+
+  .player-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 1rem;
+    margin: 2rem 0 1.5rem;
+  }
+
+  .player-image-rect {
+    width: 120px;
+    height: 160px;
+    object-fit: cover;
+    border: 2px solid var(--border-color);
+    border-radius: 4px;
+  }
+
+  .player-info {
+    flex: 1;
+  }
+
+  .player-info h1 {
+    margin: 0;
+    font-size: 1.5rem;
+  }
+
+  .player-info .subtext {
+    color: var(--color-gray-400);
+    font-size: 0.9rem;
+    margin-top: 0.3rem;
+  }
+
+  .honor-table td {
+    padding: 0.5rem 1rem;
+    border-bottom: 1px solid var(--color-gray-700);
+    color: var(--text);
+  }
+
+  .emoji {
+    font-size: 1.2rem;
+  }
+
+
+/* ====================================================================
+   Verhalten und Optik der Bottom Bar und des Vereinslogos menu.html
+   ==================================================================== */
 
 /* Bottom Bar */
 .bottom-bar {
@@ -67,7 +117,7 @@
   font-size: 2rem;
   background: none;
   border: none;
-  color: white;
+  color: var(--color-white);
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -77,13 +127,18 @@
   height: 44px;
 }
 
-  /* Menu two rows */
+/* ----------- menu.html -----------
 
-  .menu.two-column {
+/* ====================================================================
+   Verhalten und Optik der Buttons im Menü menu.html
+   ==================================================================== */
+
+/* Menu grid - two rows */
+.menu.two-column {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 0.8rem;
-  padding: 1rem;
+  gap: 1rem;
+  padding: 1.3rem;
   background: var(--bg-dark);
   border-top: 1px solid var(--color-gray-600);
 }
@@ -92,16 +147,16 @@
   position: fixed;
   background: var(--bg);
   bottom: 60px;
-  right: 1rem; /* sorgt für Rechtsbündigkeit */
-  padding: 0.4rem 1rem;
+  right: 0.8rem; /* sorgt für Rechtsbündigkeit */
+  padding: 0.8rem 1.5rem;
   border-radius: 12px;
   box-shadow: 0 0 10px rgba(0,0,0,0.5);
   display: none;
   grid-template-columns: repeat(2, 1fr);
-  gap: 1.1rem;
+  gap: 1.5rem;
   z-index: 999;
-  row-gap: 0.6rem;
-  column-gap: 1.6rem;
+  row-gap: 1.5rem;
+  column-gap: 2.1rem;
 }
 
 .menu-popup.active {
@@ -115,7 +170,7 @@
   font-size: 0.9rem;
   text-decoration: none;
   color: var(--text);
-  padding: 0.3rem;
+  padding: 0.8rem;
   border-radius: 6px;
   background: var(--bg);
   transition: background 0.2s ease;
@@ -123,7 +178,7 @@
 
 .menu-item i {
   font-size: 1.5rem;
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.5rem;
 }
 
 .menu-item span {
@@ -132,11 +187,405 @@
 }
 
 .menu-popup .menu-item i {
-  font-size: 1.3rem;
-  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+  margin-bottom: 0.9rem;
 }
 
 .menu-popup .menu-item:hover {
   background: var(--color-gray-600);
   color: var(--color-red-300);
+}
+
+/* ----------- index.html -----------
+
+/* ====================================================================
+   Nächster Abend & Calender der
+   index.html
+   ==================================================================== */
+
+.calendar-box {
+  background: var(--table-bg);
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  margin-bottom: 1.5rem;
+}
+
+.calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.5rem;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.calendar-header {
+  grid-column: span 7;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.calendar-day {
+  color: var(--text);
+  opacity: 0.6;
+}
+
+.calendar-cell {
+  padding: 0.4rem 0;
+  border-radius: 0.3rem;
+}
+
+.event-card {
+  background: var(--table-bg);
+  border-radius: 10px;
+  padding: 1rem 1.2rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.event {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* Abstand zwischen dem Home/uhr Symbol und dem Text*/
+.event i {
+  margin-right: 0.5rem;
+}
+/* Formatierung der Gelddart und Oscardart Symbole */
+.abend-icons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.8rem;
+}
+
+.abend-icons .active {
+  color: gold;
+}
+
+.abend-icons .inactive {
+  color: var(--color-gray-400);
+  opacity: 0.4;
+}
+
+/* ----------- spieltag.html -----------
+
+/* ====================================================================
+   Spieltag - Block von einem Spiel im Spieltag
+   spieltag.html
+   ==================================================================== */
+
+/* Block von einem Spiel aus dem Spieltag */
+.spiel-block {
+  background: var(--color-gray-600);
+  border-radius: 0px;
+  padding: 1rem 1.2rem;
+  margin-bottom: 0.3rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.4rem; /* kleinerer Abstand zwischen den Blöcken */
+  font-size: 1rem;
+  cursor: pointer;
+  border: 1px solid var(--border-color);
+  /*border: 1px solid transparent;*/
+}
+
+.spiel-block:hover {
+  background-color: var(--color-gray-700);
+  border-color: var(--color-gray-300);
+}
+
+/* Spieler in der Spieltagsanzeige; Position */
+.spieler-spieltag {
+  flex: 1;
+  color: var(--text);
+  font-weight: 500;
+  font-size: 1em;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Linker-Spieler in der Spieltagsanzeige; Position */
+.spieler-spieltag.links {
+  justify-content: flex-end;
+  padding-right: 0.1em;  /* Name näher an Score */
+}
+
+/* Rechter-Spieler in der Spieltagsanzeige; Position */
+.spieler-spieltag.rechts {
+  justify-content: flex-start;
+  padding-left: 0.1em;  /* Name näher an Score */
+}
+
+/* Average in Spiel-block */
+.avg-spieltag {
+  width: 45px;
+  text-align: center;
+}
+
+.avg-spieltag.links {
+  text-align: left;
+  color: var(--color-gray-300);
+  font-size: 0.8em;
+}
+
+.avg-spieltag.rechts {
+  text-align: right;
+  color: var(--color-gray-300);
+  font-size: 0.8em;
+}
+
+/* ====================================================================
+   Score-Box für die Spieltage Winner(Grün)/Loser(Rot) spieltag.html
+   Box für die Check Darts unter spiel_details.html
+==================================================================== */
+
+/* Score-Box Style, Form etc. */
+.score-box {
+  padding: 0.1em 0.4em;
+  border-radius: 0.25em;
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0.1em;  /* Horizontaler Abstand */
+  min-width: 16px;  /* Mindestbreite, damit die Zahlen nicht zu schmal wirken */
+  min-height: 20px; /* Mindesthöhe */
+  font-size: 1em;
+  line-height: 1;
+}
+
+/* Farben für den Gewinner & CD (CheckDarts) */
+.winner {
+  background-color: var(--color-green-200);
+  color: var(--color-white);
+}
+
+/* Farben für den Verlierer */
+.loser {
+  background-color: var(--color-red-200);
+  color: var(--color-white);
+}
+
+/* ----------- spiel_details.html -----------
+
+/* ====================================================================
+   stats-table
+   spiel_details.html
+   ==================================================================== */
+
+.stats-table {
+  width: var(--width-table);
+  border-collapse: collapse;
+  margin-top: 1rem;
+  margin: 1rem auto;
+}
+
+.stats-table th,
+.stats-table td {
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--border-color);
+}
+
+.stats-table th {
+  background-color: var(--table-header-bg);
+  color: var(--color-red-300);
+  text-align: center;
+}
+
+/*Spalte 1 der Stats*/
+.stats-table td:nth-child(1) {
+  width: 32%;
+}
+
+/*Spalte 3 der Stats*/
+.stats-table td:nth-child(3) {
+  width: 32%;
+}
+
+/* ====================================================================
+   Leg Darstellung
+   spiel_details.html
+   ==================================================================== */
+
+/* Überschrift der Legs; Leg 1-5 */
+.leg-count {
+  text-align: center;
+  color: var(--heading-primary);
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.leg-table {
+  width: var(--width-table);
+  border-collapse: collapse;
+  margin-top: 1rem;
+  margin: 1rem auto;
+}
+
+.leg-table th,
+.leg-table td {
+  padding: 0.5rem 1rem;
+  border: 1px solid #292929;
+}
+
+.leg-table th {
+  background-color: var(--table-header-bg);
+  color: var(--color-red-300);
+  text-align: center;
+}
+
+.leg-table td:nth-child(1),
+.leg-table td:nth-child(3)   {
+  text-align: center;
+}
+
+/*Spalte 2 der Legs Score*/
+.leg-table td:nth-child(2) {
+  font-weight: bold;
+}
+
+/*Spalte 5 der Legs Score*/
+.leg-table td:nth-child(5) {
+  font-weight: bold;
+}
+
+/*Hintergrund Darts/Rounds spalte in der Mitte*/
+.leg-table td:nth-child(3) {
+  background-color: var(--table-header-bg);
+  color: var(--color-gray-300);
+  font-weight: 600;
+}
+
+/* Line Size und padding der Summary Line unter jedem Leg */
+.leg-summary-line {
+  margin: 4px 0;
+  font-size: 0.9rem;
+  padding-left: 5%;
+}
+
+/* zurück zum Spieltag */
+.leg_backbutton {
+  display: block;
+  margin: 1rem auto;
+  text-align: center;
+  color: var(--color-red-200);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+/* ====================================================================
+   Formatierung der Rekorde.html
+   ==================================================================== */
+
+/* Rekorde-Tabellenstruktur */
+.rekord-section {
+  margin: 0 auto 2rem auto;
+  padding: 0 1rem;
+}
+
+.rekord-section h3 {
+  border-bottom: 2px solid var(--color-gray-500);
+  padding-bottom: 0.3rem;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  color: var(--color-gray-200);
+}
+
+.rekord-table {
+  width: var(--width-table);
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+
+/* Tabellenzellen */
+.rekord-table th,
+.rekord-table td {
+  padding: 0.5rem 0.7rem;
+  border: 1px solid var(--border-color);
+  text-align: left;
+}
+
+/* Kopfzeile */
+.rekord-table th {
+  background-color: var(--table-header-bg);
+  color: var(--color-red-300);
+}
+
+/* Kopfzeile Wert spalte 2*/
+.rekord-table th:nth-child(2) {
+  background-color: var(--table-header-bg);
+  color: var(--color-red-300);
+  text-align: center;
+}
+
+/* Spaltenstyling */
+.rekord-table td {
+  color: var(--color-white);
+}
+
+/* Spalte 1: Rekord */
+.rekord-table td:nth-child(1) {
+  font-weight: normal;
+  width: 55%;
+}
+
+/* Spalte 2: Wert (rechtsbündig, */
+.rekord-table td:nth-child(2) {
+  text-align: center;
+  font-weight: bold;
+  color: var(--color-white);
+  width: 15%;
+}
+
+/* Spalte 3: Name */
+.rekord-table td:nth-child(3) {
+  font-weight: normal;
+  font-size: 1rem;
+  width: 15%;
+}
+
+/* Spalte 4: Datum */
+.rekord-table td:nth-child(4) {
+  font-weight: normal;
+  font-size: 0.7rem;
+  width: 15%;
+}
+
+.rekord-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 1rem 0 1rem; /* Abstand oben + links/rechts */
+  margin-bottom: 2rem;
+}
+
+.rekord-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--color-white);
+  margin: 0;
+}
+
+.rekord-logo {
+  height: 100px;
+  width: auto;
 }

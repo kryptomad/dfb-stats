@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="css/components.css" />
   <link rel="stylesheet" href="css/layout.css" />
   <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/utilities.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <title>DFB Stats – Spiel-Details</title>
 </head>
@@ -66,12 +67,8 @@
       });
 
       const statsTable = `
-        <h2 class="match-title">
-        <span class="player-name">${p1}</span>
-        <span class="vs">vs</span>
-        <span class="player-name">${p2}</span>
-         </h2>
-        <table class="standard-table">
+        <p class="header-center-big-primary">${p1} vs ${p2}<p>
+        <table class="stats-table">
           <tr><th>${p1}</th><th>Stats</th><th>${p2}</th></tr>
           <tr><td>${game.legs1}</td><td>Legs Won</td><td>${game.legs2}</td></tr>
           ${filteredStats.map(row => `
@@ -114,7 +111,7 @@
 
         return `
           <div>
-            <h3 class="leg-count">Leg ${i + 1}</h3>
+            <h3 class="header-center-big-primary">Leg ${i + 1}</h3>
             <table class="leg-table">
               <thead>
                 <tr>
@@ -134,9 +131,9 @@
               ${
                 leg.rounds && leg.rounds.length
                   ? leg.rounds[leg.rounds.length - 1].p1_score < 0
-                    ? `<span class="text-left bold">${leg.p1_darts_leg}</span> <span>Darts</span><span class="text-left text-red"> | </span><span class="text-left bold">${leg.p1_avg_leg?.toFixed(2)}</span> <span>3DA</span>`
+                    ? `<span class="text-left bold">${leg.p1_darts_leg}</span> <span>Darts</span><span class="text-red"> | </span><span class="text-left bold">${leg.p1_avg_leg?.toFixed(2)}</span> <span>3DA</span>`
                     : leg.rounds[leg.rounds.length - 1].p2_score < 0
-                      ? `<span class="text-left bold">${leg.p2_darts_leg}</span> <span>Darts</span><span class="text-left text-red"> | </span><span class="text-left bold">${leg.p2_avg_leg?.toFixed(2)}</span> <span>3DA</span>`
+                      ? `<span class="text-left bold">${leg.p2_darts_leg}</span> <span>Darts</span><span class="text-red"> | </span><span class="text-left bold">${leg.p2_avg_leg?.toFixed(2)}</span> <span>3DA</span>`
                       : ''
                   : ''
               }
@@ -147,7 +144,7 @@
 
 
       document.querySelector('.content').innerHTML =
-        statsTable + legBlocks + `<a class="leg_backbutton" href="spieltag.html">⇦ Zurück zum Spieltag</a>`;
+        statsTable + legBlocks + `<a class="leg_backbutton" href="spieltag.html">⏴ Zurück zum Spieltag</a>`;
     }
 
     // Seite initial laden

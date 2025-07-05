@@ -1,0 +1,84 @@
+/* ====================================================================
+  Textverarbeitung
+   ==================================================================== */
+
+/* === Textausrichtung === */
+.text-left    { text-align: left; }
+.text-center  { text-align: center; }
+.text-right   { text-align: right; }
+
+/* === Stil === */
+.bold         { font-weight: bold; }
+.italic       { font-style: italic; }
+
+/* === Groß-/Kleinschreibung === */
+.uppercase    { text-transform: uppercase; }
+.lowercase    { text-transform: lowercase; }
+
+/* === Farben === */
+.text-red         { color: var(--color-red-200); }       /* Primärrot DFB-Stil */
+.text-gray        { color: var(--color-gray-300); }      /* Dezent, für Kommentare/Meta */
+.text-darkgray    { color: var(--color-gray-400); }      /* Für Labels, weniger dominant */
+
+/* === Größen (Überschriften & Reduzierung) === */
+.supersmall  { font-size: 0.7rem; }   /* kleiner Text, z. B. Fußzeile */
+.small       { font-size: 0.85rem; }  /* kleiner Text, z. B. Fußzeile */
+.medium      { font-size: 1rem; }     /* Standard */
+.large       { font-size: 1.25rem; }  /* größer, z. B. Sub-Heading */
+.xl          { font-size: 1.5rem; }  /* größer, z. B. Heading */
+.xxl         { font-size: 1.25rem; }  /* größer, z. B. Sub-Heading */
+
+/* ====================================================================
+   Header
+   ==================================================================== */
+
+.header-left-big-primary {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  text-align: left;
+  color: var(--color-red-200);
+}
+
+.header-center-big-primary {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  text-align: center;
+  color: var(--color-red-200);
+}
+
+.header-left-big-secondary {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  text-align: left;
+  color: var(--color-gray-200);
+}
+
+.header-center-big-secondary {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  text-align: center;
+  color: var(--color-gray-200);
+}
+
+.subline-left-gray {
+  text-align: left;
+  font-size: 0.8rem;
+  color: var(--color-gray-300);
+  font-weight: 400;
+  margin-top: 0.2rem;
+}
+
+.subline-center-gray {
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--color-gray-300);
+  margin-top: 0.0rem;
+}
