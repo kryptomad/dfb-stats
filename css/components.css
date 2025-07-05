@@ -289,7 +289,7 @@
 .spiel-block {
   background: var(--color-gray-600);
   border-radius: 0px;
-  padding: 1rem 1.2rem;
+  padding: 0.6rem 1rem; /*beeinflusst wie schmal das Feld ist */
   margin-bottom: 0.3rem;
   box-shadow: 0 0 10px rgba(0,0,0,0.3);
   display: flex;
@@ -357,7 +357,7 @@
 
 /* Score-Box Style, Form etc. */
 .score-box {
-  padding: 0.1em 0.4em;
+  padding: 0.1em 0.3em;
   border-radius: 0.25em;
   font-weight: bold;
   display: inline-flex;
@@ -588,4 +588,79 @@
 .rekord-logo {
   height: 100px;
   width: auto;
+}
+
+/* ----------- spiele.html -----------
+
+/* ====================================================================
+   Formatierung der Rekorde.html
+   ==================================================================== */
+
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+.filter-dropdown {
+  padding: 10px 17px;
+  border: 1px solid var(--border-color);
+  background: var(--bg);
+  border-radius: 0px;
+  color: var(--text);
+  min-width: 120px;
+}
+.reset-btn {
+  margin-left: auto;
+  padding: 6px 10px;
+  background: var(--danger);
+  border: 1px solid var(--color-red-200);
+  color: var(--color-red-200);
+  border-radius: 0px;
+  cursor: pointer;
+}
+
+.reset-btn:hover {
+  background-color: var(--color-red-300);
+  color: var(--color-white);
+}
+
+.filter-tag {
+  display: inline-flex;
+  align-items: center;
+  background-color: #111;
+  color: white;
+  border: 1px solid var(--color-gray-300);
+  border-radius: 0px;
+  padding: 6px 10px;
+  margin: 5px 8px 5px 0;
+  font-size: 0.9rem;
+  cursor: pointer; /* wichtig! */
+  transition: background-color 0.2s ease;
+}
+
+.filter-tag:hover {
+  background-color: var(--color-gray-500);
+}
+
+.filter-tag .remove-tag {
+  margin-left: 8px;
+  font-weight: bold;
+  color: var(--color-red-300);
+}
+
+.aktive-filter {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center; /* <– verhindert Höhen-Stretch */
+  gap: 0.5rem;          /* <– saubere horizontale + vertikale Abstände */
+  margin-top: 12px;
+  margin-bottom: 16px;
+}
+
+.filter-dropdown,
+.filter-tag 
+.reset-btn {
+  height: 37px;
+  line-height: 37px;
 }

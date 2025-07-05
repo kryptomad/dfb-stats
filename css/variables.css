@@ -7,7 +7,7 @@
   --text: var(--color-white);   /* zentrale Textfarbe */
   --heading-primary: var(--color-red-200);
   --heading-secondary: var(--color-gray-400); /* not in use */
-  --footer-bg: var(--color-red-500); /*footer background*/
+  --footer-bg: var(--color-red-400); /*footer background*/
 
   /* Grautöne */
   --color-gray-100: #f0f0f0; /* sehr hell */
@@ -23,7 +23,7 @@
   --color-red-100: #ffb3b3; /* helles Rot */
   --color-red-200: #ff4c42; /* dein loser-Rot / Überschriften /text-red*/
   --color-red-300: #e74c3c; /* Header in Tables */
-  --color-red-500: #d70000; /* dunkles Rot (optional) */
+  --color-red-400: #d70000; /* dunkles Rot (optional) */
   --color-red-500: #b80000; /* dunkles Rot (optional) */
 
   /* Grüntöne */

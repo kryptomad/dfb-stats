@@ -143,8 +143,23 @@
 
 
 
+      function buildBackUrl() {
+        const back = getParam('back') || 'spieltag';
+        const keys = ['jahrFilter', 'spieltagFilter', 'spielerFilter', 'gegnerFilter', 'ergebnisFilter'];
+        const params = new URLSearchParams();
+
+        keys.forEach(key => {
+          const val = getParam(key);
+          if (val) params.set(key, val);
+        });
+
+        return `${back}.html${params.toString() ? '?' + params.toString() : ''}`;
+      }
+
+      const backTarget = buildBackUrl();
       document.querySelector('.content').innerHTML =
-        statsTable + legBlocks + `<a class="leg_backbutton" href="spieltag.html">⏴ Zurück zum Spieltag</a>`;
+        statsTable + legBlocks + `<a class="leg_backbutton" href="${backTarget}">⏴ Zurück</a>`;
+
     }
 
     // Seite initial laden
