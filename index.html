@@ -13,32 +13,129 @@
 <body>
     <!-- content -->
   <div id="content" class="content">
-  <br>
-  <div class="content">
-    <div class="event-card">
-      <div class="event">
-        <h2>Nächster Abend</h2>
-        <div><i class="fas fa-home"></i> Franz-Josef</div>
-        <div><i class="fas fa-clock"></i> 19:30 Uhr</div>
-      </div>
-      <div class="abend-icons">
-        <i class="fas fa-coins active" title="Geldabend"></i>
-        <i class="fas fa-trophy inactive" title="Oskarabend"></i>
-      </div>
-    </div>
-
-    <div class="calendar-box">
-      <div class="calendar">
-        <div class="calendar-header">Juli 2025</div>
-        <div class="calendar-day">MO</div><div class="calendar-day">DI</div><div class="calendar-day">MI</div><div class="calendar-day">DO</div><div class="calendar-day">FR</div><div class="calendar-day">SA</div><div class="calendar-day">SO</div>
-        <div></div><div></div><div></div><div></div><div class="calendar-cell">4</div><div class="calendar-cell">5</div><div class="calendar-cell">6</div>
-        <div class="calendar-cell">7</div><div class="calendar-cell">8</div><div class="calendar-cell">9</div><div class="calendar-cell">10</div><div class="calendar-cell">11</div><div class="calendar-cell">12</div><div class="calendar-cell">13</div>
-        <div class="calendar-cell">14</div><div class="calendar-cell">15</div><div class="calendar-cell">16</div><div class="calendar-cell">17</div><div class="calendar-cell loser bold">18</div><div class="calendar-cell">19</div><div class="calendar-cell">20</div>
-        <div class="calendar-cell">21</div><div class="calendar-cell">22</div><div class="calendar-cell">23</div><div class="calendar-cell">24</div><div class="calendar-cell">25</div><div class="calendar-cell">26</div><div class="calendar-cell">27</div>
-        <div class="calendar-cell">28</div><div class="calendar-cell">29</div><div class="calendar-cell">30</div><div class="calendar-cell">31</div>
-      </div>
-    </div>
+    <p class="header-center-big-primary">Nächster Abend</p>
+<table class="standard-table" style="margin-bottom: 5px;">
+  <thead>
+    <tr>
+      <th>Gastgeber</th>
+      <th>Datum</th>
+      <th>Uhrzeit</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Franz-Josef</td>
+      <td>Freitag, 18. Juli 2025</td>
+      <td>19:30 Uhr</td>
+    </tr>
+  </tbody>
+</table>
+<!-- Symbol-Tabelle darunter -->
+  <table class="standard-table" style="margin-top: 0px;">
+    <tbody>
+      <tr>
+        <td style="text-align: center;">
+  <div class="symbol-inline">
+    <span class="inactive">Oskardarten </span>
+    <i class="fas fa-trophy inactive" title="Oskarabend"></i>
   </div>
+        </td>
+        <td style="text-align: center;">
+  <div class="symbol-inline">
+    <span class="inactive?">Gelddarten </span>
+    <i class="fas fa-coins active" title="Oskarabend"></i>
+  </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+  <hr class="section-divider width-table">
+<h2 class="header-center-big-primary">Highlights letzter Spieltag</h2>
+<table class="standard-table" id="lastStatsTable">
+  <thead>
+    <tr>
+      <th>Kategorie</th>
+      <th>Wert</th>
+      <th>Spieler</th>
+    </tr>
+  </thead>
+  <tbody></tbody>
+</table>
+
+<script>
+fetch("dumps/last_stats.json")
+  .then(res => res.json())
+  .then(data => {
+    const tbody = document.querySelector("#lastStatsTable tbody");
+
+    data.forEach(entry => {
+      const tr = document.createElement("tr");
+
+      const tdKategorie = document.createElement("td");
+      tdKategorie.textContent = entry.kategorie;
+
+      const tdWert = document.createElement("td");
+      tdWert.textContent = entry.wert;
+
+      const tdSpieler = document.createElement("td");
+      tdSpieler.textContent = Array.isArray(entry.spieler)
+        ? entry.spieler.join(", ")
+        : entry.spieler;
+
+      tr.appendChild(tdKategorie);
+      tr.appendChild(tdWert);
+      tr.appendChild(tdSpieler);
+
+      tbody.appendChild(tr);
+    });
+  })
+  .catch(err => {
+    console.error("Fehler beim Laden der last_stats.json:", err);
+  });
+</script>
+<hr class="section-divider">
+<!-- nächster oskarabend info -->
+ <h2 class="header-center-big-primary">Nächster Oskarabend – Spieltag <span id="matchday-title"></span></h2>
+
+<table class="next-table" id="oskar-tabelle">
+  <thead>
+    <tr>
+      <th>Schreiber</th>
+      <th>Spieler 1</th>
+      <th>Spieler 2</th>
+    </tr>
+  </thead>
+  <tbody></tbody>
+</table>
+
+<script>
+async function ladeOskarTabelle(spieltagNummer = 5) {
+  const res = await fetch("dumps/next_matchdays.json");
+  const daten = await res.json();
+
+  const spieltag = daten.find(e => e.matchday === spieltagNummer);
+  if (!spieltag) return;
+
+  document.getElementById("matchday-title").textContent = spieltag.matchday;
+
+  const tbody = document.querySelector("#oskar-tabelle tbody");
+  tbody.innerHTML = "";
+
+  spieltag.games.forEach(game => {
+    const tr = document.createElement("tr");
+    tr.innerHTML = `
+      <td class="writer-gray">${game.writer}</td>
+      <td>${game.player1}</td>
+      <td>${game.player2}</td>
+    `;
+    tbody.appendChild(tr);
+  });
+}
+
+ladeOskarTabelle(); // Standardmäßig Spieltag 5 – du kannst das ändern!
+</script>
+
 
 <!-- Menu -->
 <div id="menu-placeholder"></div>

@@ -236,48 +236,69 @@
   border-radius: 0.3rem;
 }
 
-.event-card {
-  background: var(--table-bg);
-  border-radius: 10px;
-  padding: 1rem 1.2rem;
-  margin-bottom: 1.5rem;
-  box-shadow: 0 0 10px rgba(0,0,0,0.3);
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+/* neues CSS für den nächsten abend*/
+.symbol-inline {
+  display: inline-flex;
   align-items: center;
+  justify-content: center;
+  gap: 8px; /* Abstand zwischen Text und Icon */
 }
 
-.event {
-  font-size: 1.1rem;
-  opacity: 0.9;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
+.symbol-cell {
+  text-align: center;
+  font-size: 1rem;
+  padding: 12px;
 }
 
-/* Abstand zwischen dem Home/uhr Symbol und dem Text*/
-.event i {
-  margin-right: 0.5rem;
-}
-/* Formatierung der Gelddart und Oscardart Symbole */
-.abend-icons {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-  font-size: 1.8rem;
+.symbol-inline i {
+  font-size: 1.2rem;
 }
 
-.abend-icons .active {
+.active {
   color: gold;
 }
-
-.abend-icons .inactive {
-  color: var(--color-gray-400);
-  opacity: 0.4;
+.inactive {
+  color: #555;
 }
 
+/* nächster Oskarabend */ 
+
+
+.next-table {
+  width: var(--width-table);
+  border-collapse: collapse;
+  margin-top: 1rem;
+  margin: 1rem auto;
+}
+
+.next-table th,
+.next-table td {
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--border-color);
+}
+
+.next-table th {
+  background-color: var(--table-header-bg);
+  color: var(--color-red-300);
+  text-align: center;
+}
+
+.next-table td:nth-child(2) {
+  text-align: center;
+  font-weight: 600;
+}
+ 
+.next-table td:nth-child(3)  {
+  text-align: center;
+  font-weight: 600;
+}
+
+.writer-gray {
+  text-align: center;
+  color: var(--color-gray-300);
+  font-size: 0.8rem;
+  margin-top: 0.0rem;
+}
 /* ----------- spieltag.html -----------
 
 /* ====================================================================
@@ -511,9 +532,10 @@
 }
 
 .rekord-table {
-  width: var(--width-table);
-  border-collapse: collapse;
-  margin: 0 auto;
+  width: 100%;
+  max-width: none; /* falls irgendwo ein Limit greift */
+  padding: 0 1rem;
+  margin: 0 auto 2rem auto;
 }
 
 /* Tabellenzellen */
@@ -543,11 +565,11 @@
 }
 
 /* Spalte 1: Rekord */
-.rekord-table td:nth-child(1) {
+/*.rekord-table td:nth-child(1) {
   font-weight: normal;
-  width: 55%;
+  width: 50%;
 }
-
+*/
 /* Spalte 2: Wert (rechtsbündig, */
 .rekord-table td:nth-child(2) {
   text-align: center;

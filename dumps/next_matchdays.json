@@ -1,0 +1,557 @@
+[
+  {
+    "season": "2024/2025",
+    "matchday": 1,
+    "games": [
+      {
+        "writer": "Uwe",
+        "player1": "Martin",
+        "player2": "Franz-Josef"
+      },
+      {
+        "writer": "Franz-Josef",
+        "player1": "Heiner",
+        "player2": "Frank"
+      },
+      {
+        "writer": "Frank",
+        "player1": "Uwe",
+        "player2": "Martin"
+      },
+      {
+        "writer": "Martin",
+        "player1": "Heiner",
+        "player2": "Franz-Josef"
+      },
+      {
+        "writer": "Heiner",
+        "player1": "Frank",
+        "player2": "Martin"
+      },
+      {
+        "writer": "Uwe",
+        "player1": "Franz-Josef",
+        "player2": "Uwe"
+      },
+      {
+        "writer": "Martin",
+        "player1": "Frank",
+        "player2": "Heiner"
+      },
+      {
+        "writer": "Frank",
+        "player1": "Franz-Josef",
+        "player2": "Uwe"
+      },
+      {
+        "writer": "Heiner",
+        "player1": "Frank",
+        "player2": "Uwe"
+      },
+      {
+        "writer": "Franz-Josef",
+        "player1": "Martin",
+        "player2": "Heiner"
+      }
+    ]
+  },
+  {
+    "season": "2024/2025",
+    "matchday": 2,
+    "games": [
+      {
+        "writer": "Frank",
+        "player1": "Martin",
+        "player2": "Uwe"
+      },
+      {
+        "writer": "Uwe",
+        "player1": "Franz-Josef",
+        "player2": "Heiner"
+      },
+      {
+        "writer": "Heiner",
+        "player1": "Frank",
+        "player2": "Martin"
+      },
+      {
+        "writer": "Martin",
+        "player1": "Franz-Josef",
+        "player2": "Uwe"
+      },
+      {
+        "writer": "Franz-Josef",
+        "player1": "Frank",
+        "player2": "Heiner"
+      },
+      {
+        "writer": "Frank",
+        "player1": "Heiner",
+        "player2": "Uwe"
+      },
+      {
+        "writer": "Uwe",
+        "player1": "Frank",
+        "player2": "Franz-Josef"
+      },
+      {
+        "writer": "Franz-Josef",
+        "player1": "Martin",
+        "player2": "Heiner"
+      },
+      {
+        "writer": "Martin",
+        "player1": "Frank",
+        "player2": "Heiner"
+      },
+      {
+        "writer": "Heiner",
+        "player1": "Franz-Josef",
+        "player2": "Martin"
+      }
+    ]
+  },
+  {
+    "season": "2024/2025",
+    "matchday": 3,
+    "games": [
+      {
+        "writer": "Heiner",
+        "player1": "Uwe",
+        "player2": "Franz-Josef"
+      },
+      {
+        "writer": "Franz-Josef",
+        "player1": "Frank",
+        "player2": "Martin"
+      },
+      {
+        "writer": "Martin",
+        "player1": "Heiner",
+        "player2": "Uwe"
+      },
+      {
+        "writer": "Uwe",
+        "player1": "Frank",
+        "player2": "Franz-Josef"
+      },
+      {
+        "writer": "Frank",
+        "player1": "Heiner",
+        "player2": "Martin"
+      },
+      {
+        "writer": "Heiner",
+        "player1": "Martin",
+        "player2": "Franz-Josef"
+      },
+      {
+        "writer": "Franz-Josef",
+        "player1": "Heiner",
+        "player2": "Uwe"
+      },
+      {
+        "writer": "Uwe",
+        "player1": "Frank",
+        "player2": "Uwe"
+      },
+      {
+        "writer": "Martin",
+        "player1": "Frank",
+        "player2": "Uwe"
+      },
+      {
+        "writer": "Frank",
+        "player1": "Martin",
+        "player2": "Heiner"
+      }
+    ]
+  },
+  {
+    "season": "2024/2025",
+    "matchday": 4,
+    "games": [
+      {
+        "writer": "Franz-Josef",
+        "player1": "Heiner",
+        "player2": "Uwe"
+      },
+      {
+        "writer": "Uwe",
+        "player1": "Martin",
+        "player2": "Frank"
+      },
+      {
+        "writer": "Frank",
+        "player1": "Franz-Josef",
+        "player2": "Heiner"
+      },
+      {
+        "writer": "Heiner",
+        "player1": "Martin",
+        "player2": "Uwe"
+      },
+      {
+        "writer": "Martin",
+        "player1": "Franz-Josef",
+        "player2": "Frank"
+      },
+      {
+        "writer": "Franz-Josef",
+        "player1": "Frank",
+        "player2": "Uwe"
+      },
+      {
+        "writer": "Uwe",
+        "player1": "Franz-Josef",
+        "player2": "Martin"
+      },
+      {
+        "writer": "Martin",
+        "player1": "Heiner",
+        "player2": "Frank"
+      },
+      {
+        "writer": "Heiner",
+        "player1": "Martin",
+        "player2": "Heiner"
+      },
+      {
+        "writer": "Frank",
+        "player1": "Martin",
+        "player2": "Frank"
+      }
+    ]
+  },
+  {
+    "season": "2024/2025",
+    "matchday": 5,
+    "games": [
+      {
+        "writer": "Frank",
+        "player1": "Heiner",
+        "player2": "Uwe"
+      },
+      {
+        "writer": "Uwe",
+        "player1": "Martin",
+        "player2": "Franz-Josef"
+      },
+      {
+        "writer": "Franz-Josef",
+        "player1": "Frank",
+        "player2": "Heiner"
+      },
+      {
+        "writer": "Heiner",
+        "player1": "Martin",
+        "player2": "Uwe"
+      },
+      {
+        "writer": "Martin",
+        "player1": "Frank",
+        "player2": "Franz-Josef"
+      },
+      {
+        "writer": "Frank",
+        "player1": "Franz-Josef",
+        "player2": "Uwe"
+      },
+      {
+        "writer": "Uwe",
+        "player1": "Frank",
+        "player2": "Martin"
+      },
+      {
+        "writer": "Franz-Josef",
+        "player1": "Heiner",
+        "player2": "Franz-Josef"
+      },
+      {
+        "writer": "Martin",
+        "player1": "Heiner",
+        "player2": "Martin"
+      },
+      {
+        "writer": "Heiner",
+        "player1": "Frank",
+        "player2": "Uwe"
+      }
+    ]
+  },
+  {
+    "season": "2024/2025",
+    "matchday": 6,
+    "games": [
+      {
+        "writer": "Uwe",
+        "player1": "Frank",
+        "player2": "Franz-Josef"
+      },
+      {
+        "writer": "Franz-Josef",
+        "player1": "Martin",
+        "player2": "Heiner"
+      },
+      {
+        "writer": "Heiner",
+        "player1": "Uwe",
+        "player2": "Frank"
+      },
+      {
+        "writer": "Frank",
+        "player1": "Martin",
+        "player2": "Franz-Josef"
+      },
+      {
+        "writer": "Martin",
+        "player1": "Uwe",
+        "player2": "Heiner"
+      },
+      {
+        "writer": "Uwe",
+        "player1": "Heiner",
+        "player2": "Franz-Josef"
+      },
+      {
+        "writer": "Franz-Josef",
+        "player1": "Uwe",
+        "player2": "Martin"
+      },
+      {
+        "writer": "Martin",
+        "player1": "Heiner",
+        "player2": "Frank"
+      },
+      {
+        "writer": "Frank",
+        "player1": "Uwe",
+        "player2": "Franz-Josef"
+      },
+      {
+        "writer": "Heiner",
+        "player1": "Martin",
+        "player2": "Frank"
+      }
+    ]
+  },
+  {
+    "season": "2024/2025",
+    "matchday": 7,
+    "games": [
+      {
+        "writer": "Martin",
+        "player1": "Frank",
+        "player2": "Heiner"
+      },
+      {
+        "writer": "Heiner",
+        "player1": "Uwe",
+        "player2": "Franz-Josef"
+      },
+      {
+        "writer": "Franz-Josef",
+        "player1": "Martin",
+        "player2": "Frank"
+      },
+      {
+        "writer": "Frank",
+        "player1": "Uwe",
+        "player2": "Heiner"
+      },
+      {
+        "writer": "Uwe",
+        "player1": "Martin",
+        "player2": "Franz-Josef"
+      },
+      {
+        "writer": "Martin",
+        "player1": "Franz-Josef",
+        "player2": "Heiner"
+      },
+      {
+        "writer": "Heiner",
+        "player1": "Martin",
+        "player2": "Uwe"
+      },
+      {
+        "writer": "Frank",
+        "player1": "Heiner",
+        "player2": "Uwe"
+      },
+      {
+        "writer": "Martin",
+        "player1": "Frank",
+        "player2": "Heiner"
+      },
+      {
+        "writer": "Franz-Josef",
+        "player1": "Uwe",
+        "player2": "Frank"
+      }
+    ]
+  },
+  {
+    "season": "2024/2025",
+    "matchday": 8,
+    "games": [
+      {
+        "writer": "Martin",
+        "player1": "Franz-Josef",
+        "player2": "Uwe"
+      },
+      {
+        "writer": "Uwe",
+        "player1": "Frank",
+        "player2": "Martin"
+      },
+      {
+        "writer": "Heiner",
+        "player1": "Martin",
+        "player2": "Franz-Josef"
+      },
+      {
+        "writer": "Franz-Josef",
+        "player1": "Frank",
+        "player2": "Uwe"
+      },
+      {
+        "writer": "Frank",
+        "player1": "Martin",
+        "player2": "Heiner"
+      },
+      {
+        "writer": "Martin",
+        "player1": "Heiner",
+        "player2": "Uwe"
+      },
+      {
+        "writer": "Uwe",
+        "player1": "Martin",
+        "player2": "Frank"
+      },
+      {
+        "writer": "Franz-Josef",
+        "player1": "Franz-Josef",
+        "player2": "Heiner"
+      },
+      {
+        "writer": "Martin",
+        "player1": "Martin",
+        "player2": "Uwe"
+      },
+      {
+        "writer": "Heiner",
+        "player1": "Frank",
+        "player2": "Franz-Josef"
+      }
+    ]
+  },
+  {
+    "season": "2024/2025",
+    "matchday": 9,
+    "games": [
+      {
+        "writer": "Frank",
+        "player1": "Uwe",
+        "player2": "Heiner"
+      },
+      {
+        "writer": "Heiner",
+        "player1": "Martin",
+        "player2": "Franz-Josef"
+      },
+      {
+        "writer": "Franz-Josef",
+        "player1": "Frank",
+        "player2": "Uwe"
+      },
+      {
+        "writer": "Martin",
+        "player1": "Martin",
+        "player2": "Heiner"
+      },
+      {
+        "writer": "Frank",
+        "player1": "Frank",
+        "player2": "Franz-Josef"
+      },
+      {
+        "writer": "Heiner",
+        "player1": "Franz-Josef",
+        "player2": "Heiner"
+      },
+      {
+        "writer": "Martin",
+        "player1": "Frank",
+        "player2": "Heiner"
+      },
+      {
+        "writer": "Uwe",
+        "player1": "Martin",
+        "player2": "Franz-Josef"
+      },
+      {
+        "writer": "Franz-Josef",
+        "player1": "Martin",
+        "player2": "Heiner"
+      }
+    ]
+  },
+  {
+    "season": "2024/2025",
+    "matchday": 10,
+    "games": [
+      {
+        "writer": "Heiner",
+        "player1": "Franz-Josef",
+        "player2": "Uwe"
+      },
+      {
+        "writer": "Martin",
+        "player1": "Martin",
+        "player2": "Frank"
+      },
+      {
+        "writer": "Frank",
+        "player1": "Heiner",
+        "player2": "Franz-Josef"
+      },
+      {
+        "writer": "Franz-Josef",
+        "player1": "Martin",
+        "player2": "Heiner"
+      },
+      {
+        "writer": "Martin",
+        "player1": "Heiner",
+        "player2": "Frank"
+      },
+      {
+        "writer": "Heiner",
+        "player1": "Frank",
+        "player2": "Uwe"
+      },
+      {
+        "writer": "Uwe",
+        "player1": "Heiner",
+        "player2": "Martin"
+      },
+      {
+        "writer": "Martin",
+        "player1": "Franz-Josef",
+        "player2": "Frank"
+      },
+      {
+        "writer": "Franz-Josef",
+        "player1": "Frank",
+        "player2": "Uwe"
+      },
+      {
+        "writer": "Frank",
+        "player1": "Martin",
+        "player2": "Franz-Josef"
+      }
+    ]
+  }
+]
