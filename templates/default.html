@@ -1,0 +1,122 @@
+<p class="header-center-big-primary">Nächster Abend</p>
+<table class="standard-table" style="margin-bottom: 5px;">
+    <thead>
+    <tr>
+        <th>Gastgeber</th>
+        <th>Datum</th>
+        <th>Uhrzeit</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>Franz-Josef</td>
+        <td>Freitag, 18. Juli 2025</td>
+        <td>19:30 Uhr</td>
+    </tr>
+    </tbody>
+</table>
+<!-- Symbol-Tabelle darunter -->
+<table class="standard-table" style="margin-top: 0px;">
+    <tbody>
+    <tr>
+        <td style="text-align: center;">
+            <div class="symbol-inline">
+                <span class="inactive">Oskardarten </span>
+                <i class="fas fa-trophy inactive" title="Oskarabend"></i>
+            </div>
+        </td>
+        <td style="text-align: center;">
+            <div class="symbol-inline">
+                <span class="inactive?">Gelddarten </span>
+                <i class="fas fa-coins active" title="Oskarabend"></i>
+            </div>
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+<hr class="section-divider width-table">
+<h2 class="header-center-big-primary">Highlights letzter Spieltag</h2>
+<table class="standard-table" id="lastStatsTable">
+    <thead>
+    <tr>
+        <th>Kategorie</th>
+        <th>Wert</th>
+        <th>Spieler</th>
+    </tr>
+    </thead>
+    <tbody></tbody>
+</table>
+
+<script>
+    fetch("dumps/last_stats.json")
+        .then(res => res.json())
+        .then(data => {
+            const tbody = document.querySelector("#lastStatsTable tbody");
+
+            data.forEach(entry => {
+                const tr = document.createElement("tr");
+
+                const tdKategorie = document.createElement("td");
+                tdKategorie.textContent = entry.kategorie;
+
+                const tdWert = document.createElement("td");
+                tdWert.textContent = entry.wert;
+
+                const tdSpieler = document.createElement("td");
+                tdSpieler.textContent = Array.isArray(entry.spieler)
+                    ? entry.spieler.join(", ")
+                    : entry.spieler;
+
+                tr.appendChild(tdKategorie);
+                tr.appendChild(tdWert);
+                tr.appendChild(tdSpieler);
+
+                tbody.appendChild(tr);
+            });
+        })
+        .catch(err => {
+            console.error("Fehler beim Laden der last_stats.json:", err);
+        });
+</script>
+<hr class="section-divider">
+<!-- nächster oskarabend info -->
+<h2 class="header-center-big-primary">Nächster Oskarabend – Spieltag <span id="matchday-title"></span></h2>
+
+<table class="next-table" id="oskar-tabelle">
+    <thead>
+    <tr>
+        <th>Schreiber</th>
+        <th>Spieler 1</th>
+        <th>Spieler 2</th>
+    </tr>
+    </thead>
+    <tbody></tbody>
+</table>
+
+<script>
+    async function ladeOskarTabelle(spieltagNummer = 5) {
+        const res = await fetch("dumps/next_matchdays.json");
+        const daten = await res.json();
+
+        const spieltag = daten.find(e => e.matchday === spieltagNummer);
+        if (!spieltag) return;
+
+        document.getElementById("matchday-title").textContent = spieltag.matchday;
+
+        const tbody = document.querySelector("#oskar-tabelle tbody");
+        tbody.innerHTML = "";
+
+        spieltag.games.forEach(game => {
+            const tr = document.createElement("tr");
+            tr.innerHTML = `
+              <td class="writer-gray">${game.writer}</td>
+              <td>${game.player1}</td>
+              <td>${game.player2}</td>
+            `;
+            tbody.appendChild(tr);
+        });
+    }
+
+    ladeOskarTabelle(); // Standardmäßig Spieltag 5 – du kannst das ändern!
+</script>

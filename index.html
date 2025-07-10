@@ -1,147 +1,38 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="css/components.css" />
-  <link rel="stylesheet" href="css/layout.css" />
-  <link rel="stylesheet" href="css/variables.css" />
-  <link rel="stylesheet" href="css/utilities.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <title>DFB Stats</title>
- </head>
+    <meta charset="UTF-8"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <link href="css/components.css" rel="stylesheet"/>
+    <link href="css/layout.css" rel="stylesheet"/>
+    <link href="css/variables.css" rel="stylesheet"/>
+    <link href="css/utilities.css" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <title>DFB Stats</title>
+    <script src="assets/js/common.js"></script>
+    <script>
+        window.onload = loadTemplate('default.html');
+    </script>
+</head>
 <body>
-    <!-- content -->
-  <div id="content" class="content">
-    <p class="header-center-big-primary">Nächster Abend</p>
-<table class="standard-table" style="margin-bottom: 5px;">
-  <thead>
-    <tr>
-      <th>Gastgeber</th>
-      <th>Datum</th>
-      <th>Uhrzeit</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Franz-Josef</td>
-      <td>Freitag, 18. Juli 2025</td>
-      <td>19:30 Uhr</td>
-    </tr>
-  </tbody>
-</table>
-<!-- Symbol-Tabelle darunter -->
-  <table class="standard-table" style="margin-top: 0px;">
-    <tbody>
-      <tr>
-        <td style="text-align: center;">
-  <div class="symbol-inline">
-    <span class="inactive">Oskardarten </span>
-    <i class="fas fa-trophy inactive" title="Oskarabend"></i>
-  </div>
-        </td>
-        <td style="text-align: center;">
-  <div class="symbol-inline">
-    <span class="inactive?">Gelddarten </span>
-    <i class="fas fa-coins active" title="Oskarabend"></i>
-  </div>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+<!-- content -->
+<div class="content" id="content">
+
 </div>
-  <hr class="section-divider width-table">
-<h2 class="header-center-big-primary">Highlights letzter Spieltag</h2>
-<table class="standard-table" id="lastStatsTable">
-  <thead>
-    <tr>
-      <th>Kategorie</th>
-      <th>Wert</th>
-      <th>Spieler</th>
-    </tr>
-  </thead>
-  <tbody></tbody>
-</table>
 
-<script>
-fetch("dumps/last_stats.json")
-  .then(res => res.json())
-  .then(data => {
-    const tbody = document.querySelector("#lastStatsTable tbody");
-
-    data.forEach(entry => {
-      const tr = document.createElement("tr");
-
-      const tdKategorie = document.createElement("td");
-      tdKategorie.textContent = entry.kategorie;
-
-      const tdWert = document.createElement("td");
-      tdWert.textContent = entry.wert;
-
-      const tdSpieler = document.createElement("td");
-      tdSpieler.textContent = Array.isArray(entry.spieler)
-        ? entry.spieler.join(", ")
-        : entry.spieler;
-
-      tr.appendChild(tdKategorie);
-      tr.appendChild(tdWert);
-      tr.appendChild(tdSpieler);
-
-      tbody.appendChild(tr);
-    });
-  })
-  .catch(err => {
-    console.error("Fehler beim Laden der last_stats.json:", err);
-  });
-</script>
-<hr class="section-divider">
-<!-- nächster oskarabend info -->
- <h2 class="header-center-big-primary">Nächster Oskarabend – Spieltag <span id="matchday-title"></span></h2>
-
-<table class="next-table" id="oskar-tabelle">
-  <thead>
-    <tr>
-      <th>Schreiber</th>
-      <th>Spieler 1</th>
-      <th>Spieler 2</th>
-    </tr>
-  </thead>
-  <tbody></tbody>
-</table>
-
-<script>
-async function ladeOskarTabelle(spieltagNummer = 5) {
-  const res = await fetch("dumps/next_matchdays.json");
-  const daten = await res.json();
-
-  const spieltag = daten.find(e => e.matchday === spieltagNummer);
-  if (!spieltag) return;
-
-  document.getElementById("matchday-title").textContent = spieltag.matchday;
-
-  const tbody = document.querySelector("#oskar-tabelle tbody");
-  tbody.innerHTML = "";
-
-  spieltag.games.forEach(game => {
-    const tr = document.createElement("tr");
-    tr.innerHTML = `
-      <td class="writer-gray">${game.writer}</td>
-      <td>${game.player1}</td>
-      <td>${game.player2}</td>
-    `;
-    tbody.appendChild(tr);
-  });
-}
-
-ladeOskarTabelle(); // Standardmäßig Spieltag 5 – du kannst das ändern!
-</script>
-
-
-<!-- Menu -->
-<div id="menu-placeholder"></div>
-
-<!-- Common Scripts -->
-<script src="assets/js/common.js"></script>
-
+<div class="bottom-bar">
+    <img alt="Borchen Logo" src="assets/logo.svg">
+    <button class="menu-btn" onclick="toggleMenu()">
+        <i class="fas fa-bars"></i>
+    </button>
+    <div class="menu-popup">
+        <a class="menu-item" onclick="loadTemplate('default.html')"><i class="fas fa-home"></i><span>Start</span></a>
+        <a class="menu-item" onclick="loadTemplate('rekorde.html')"><i class="fas fa-trophy"></i><span>Rekorde</span></a>
+        <a class="menu-item" onclick="loadTemplate('statistiken.html')"><i class="fas fa-chart-bar"></i><span>Statistiken</span></a>
+        <a class="menu-item" onclick="loadTemplate('spieler.html')"><i class="fas fa-user"></i><span>Spieler</span></a>
+        <a class="menu-item" onclick="loadTemplate('spiele.html')"><i class="fas fa-bullseye"></i><span>Spiele</span></a>
+        <a class="menu-item" onclick="loadTemplate('spieltag.html')"><i class="fas fa-calendar-alt"></i><span>Spieltag</span></a>
+    </div>
+</div>
 </body>
 </html>

@@ -1,21 +1,22 @@
-// common.js
-
-// Lade das Menü (HTML-Snippet)
-async function loadMenu() {
-  try {
-    const res = await fetch('menu.html');
-    const html = await res.text();
-    document.getElementById('menu-placeholder').innerHTML = html;
-  } catch (err) {
-    console.error('Fehler beim Laden des Menüs:', err);
-  }
-}
-loadMenu();
-
-// Menü-Toggle
 function toggleMenu() {
-  const menu = document.querySelector('.menu-popup');
-  if (menu) {
-    menu.classList.toggle('active');
-  }
+    const menu = document.querySelector('.menu-popup');
+    if (menu) {
+        menu.classList.toggle('active');
+    }
+}
+
+async function loadTemplate(template) {
+    console.log("loading " + template);
+    try {
+        const response = await fetch(`templates/${template}`);
+        console.log(response);
+
+        if (!response.ok) {
+            throw new Error('Netzwerkantwort war nicht ok');
+        }
+
+        document.getElementById('content').innerHTML = await response.text();
+    } catch (error) {
+        console.error('Fehler beim Laden des Templates:', error);
+    }
 }
