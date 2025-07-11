@@ -1,3 +1,5 @@
+const cache = {}
+
 function toggleMenu() {
     const menu = document.querySelector('.menu-popup');
     if (menu) {
@@ -6,17 +8,16 @@ function toggleMenu() {
 }
 
 async function loadTemplate(template) {
-    console.log("loading " + template);
-    try {
-        const response = await fetch(`templates/${template}`);
-        console.log(response);
+    fetchContent(template).then(content => document.getElementById('content').innerHTML = content);
+}
 
-        if (!response.ok) {
-            throw new Error('Netzwerkantwort war nicht ok');
-        }
-
-        document.getElementById('content').innerHTML = await response.text();
-    } catch (error) {
-        console.error('Fehler beim Laden des Templates:', error);
+async function fetchContent(template) {
+    if (cache[template]) {
+        return Promise.resolve(cache[template]);
     }
+
+    return fetch(`templates/${template}`)
+        .then(res => res.text())
+        .then(value => cache[template] = value)
+        .finally(() => console.log('Template loaded'));
 }
