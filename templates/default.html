@@ -1,5 +1,5 @@
 <p class="header-center-big-primary">Nächster Abend</p>
-<table class="standard-table" style="margin-bottom: 5px;">
+<table class="standard-table">
     <thead>
     <tr>
         <th>Gastgeber</th>
@@ -9,33 +9,33 @@
     </thead>
     <tbody>
     <tr>
-        <td>Franz-Josef</td>
-        <td>Freitag, 18. Juli 2025</td>
-        <td>19:30 Uhr</td>
+        <td class="center">Franz-Josef</td>
+        <td class="center">Freitag, 18. Juli 2025</td>
+        <td class="center">19:30 Uhr</td>
     </tr>
     </tbody>
 </table>
-<!-- Symbol-Tabelle darunter -->
-<table class="standard-table" style="margin-top: 0px;">
+
+<table class="standard-table">
     <tbody>
     <tr>
-        <td style="text-align: center;">
+        <td>
             <div class="symbol-inline">
-                <span class="inactive">Oskardarten </span>
+                <span class="inactive">Oskardarten</span>
                 <i class="fas fa-trophy inactive" title="Oskarabend"></i>
             </div>
         </td>
-        <td style="text-align: center;">
+        <td>
             <div class="symbol-inline">
-                <span class="inactive?">Gelddarten </span>
-                <i class="fas fa-coins active" title="Oskarabend"></i>
+                <span class="inactive?">Gelddarten</span>
+                <i class="fas fa-coins active" title="Gelddarten"></i>
             </div>
         </td>
     </tr>
     </tbody>
 </table>
 
-<hr class="section-divider width-table">
+<hr class="section-divider">
 <h2 class="header-center-big-primary">Highlights letzter Spieltag</h2>
 <table class="standard-table" id="lastStatsTable">
     <thead>
@@ -49,41 +49,11 @@
 </table>
 
 <script>
-    fetch("dumps/last_stats.json")
-        .then(res => res.json())
-        .then(data => {
-            const tbody = document.querySelector("#lastStatsTable tbody");
-
-            data.forEach(entry => {
-                const tr = document.createElement("tr");
-
-                const tdKategorie = document.createElement("td");
-                tdKategorie.textContent = entry.kategorie;
-
-                const tdWert = document.createElement("td");
-                tdWert.textContent = entry.wert;
-
-                const tdSpieler = document.createElement("td");
-                tdSpieler.textContent = Array.isArray(entry.spieler)
-                    ? entry.spieler.join(", ")
-                    : entry.spieler;
-
-                tr.appendChild(tdKategorie);
-                tr.appendChild(tdWert);
-                tr.appendChild(tdSpieler);
-
-                tbody.appendChild(tr);
-            });
-        })
-        .catch(err => {
-            console.error("Fehler beim Laden der last_stats.json:", err);
-        });
 </script>
 <hr class="section-divider">
-<!-- nächster oskarabend info -->
 <h2 class="header-center-big-primary">Nächster Oskarabend – Spieltag <span id="matchday-title"></span></h2>
 
-<table class="next-table" id="oskar-tabelle">
+<table class="standard-table" id="oskar-tabelle">
     <thead>
     <tr>
         <th>Schreiber</th>
@@ -93,30 +63,7 @@
     </thead>
     <tbody></tbody>
 </table>
-
 <script>
-    async function ladeOskarTabelle(spieltagNummer = 5) {
-        const res = await fetch("dumps/next_matchdays.json");
-        const daten = await res.json();
-
-        const spieltag = daten.find(e => e.matchday === spieltagNummer);
-        if (!spieltag) return;
-
-        document.getElementById("matchday-title").textContent = spieltag.matchday;
-
-        const tbody = document.querySelector("#oskar-tabelle tbody");
-        tbody.innerHTML = "";
-
-        spieltag.games.forEach(game => {
-            const tr = document.createElement("tr");
-            tr.innerHTML = `
-              <td class="writer-gray">${game.writer}</td>
-              <td>${game.player1}</td>
-              <td>${game.player2}</td>
-            `;
-            tbody.appendChild(tr);
-        });
-    }
-
-    ladeOskarTabelle(); // Standardmäßig Spieltag 5 – du kannst das ändern!
+    loadNextMatchdays(5);
+    loadLastStats();
 </script>

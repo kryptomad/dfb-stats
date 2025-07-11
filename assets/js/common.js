@@ -9,6 +9,7 @@ function toggleMenu() {
 
 async function loadTemplate(template) {
     fetchContent(template).then(content => setInnerHTML(document.getElementById('content'), content));
+    toggleMenu();
 }
 
 async function fetchContent(template) {
@@ -26,10 +27,10 @@ function setInnerHTML(elm, html) {
     elm.innerHTML = html;
 
     Array.from(elm.querySelectorAll('script'))
-        .forEach( oldScriptEl => {
+        .forEach(oldScriptEl => {
             const newScriptEl = document.createElement('script');
 
-            Array.from(oldScriptEl.attributes).forEach( attr => {
+            Array.from(oldScriptEl.attributes).forEach(attr => {
                 newScriptEl.setAttribute(attr.name, attr.value)
             });
 
@@ -38,4 +39,9 @@ function setInnerHTML(elm, html) {
 
             oldScriptEl.parentNode.replaceChild(newScriptEl, oldScriptEl);
         });
+}
+
+async function loadDump(dump) {
+    return fetch(`dumps/${dump}`)
+        .then(res => res.json());
 }

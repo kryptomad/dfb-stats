@@ -261,40 +261,7 @@
   color: #555;
 }
 
-/* nächster Oskarabend */ 
-
-
-.next-table {
-  width: var(--width-table);
-  border-collapse: collapse;
-  margin-top: 1rem;
-  margin: 1rem auto;
-}
-
-.next-table th,
-.next-table td {
-  padding: 0.5rem 1rem;
-  border: 1px solid var(--border-color);
-}
-
-.next-table th {
-  background-color: var(--table-header-bg);
-  color: var(--color-red-300);
-  text-align: center;
-}
-
-.next-table td:nth-child(2) {
-  text-align: center;
-  font-weight: 600;
-}
- 
-.next-table td:nth-child(3)  {
-  text-align: center;
-  font-weight: 600;
-}
-
 .writer-gray {
-  text-align: center;
   color: var(--color-gray-300);
   font-size: 0.8rem;
   margin-top: 0.0rem;

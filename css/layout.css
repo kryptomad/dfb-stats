@@ -2,97 +2,85 @@
    Basiscs
    ==================================================================== */
 body {
-  margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background: var(--bg);
-  color: var(--text);
-  position: relative;
-  min-height: 100vh;
-  padding-bottom: 60px; /* Platz für Bottom Bar */
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: url('../assets/logo.svg') no-repeat center center;
+        background-size: 80%;
+        opacity: 0.03;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 0;
+    }
+
+    .content {
+        position: relative;
+        z-index: 1;
+        padding: 0 1rem;
+        width: clamp(320px, 90%, 1000px);
+        margin: 0 auto 50px auto;
+
+        .standard-table {
+            width: var(--width-table);
+            border-collapse: collapse;
+            margin: 1rem auto;
+
+            th {
+                padding: 0.5rem 1rem;
+                border: 1px solid var(--border-color);
+                background-color: var(--table-header-bg);
+                color: var(--color-red-300);
+                text-align: center;
+            }
+
+            td {
+                border: 1px solid var(--border-color);
+                padding: 8px;
+
+                &.center {
+                    text-align: center;
+                }
+            }
+        }
+    }
 }
 
-body::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  z-index: 1;
-  transform: translate(-50%, -50%);
-  background: url('../assets/logo.svg') no-repeat center center;
-  background-size: 80%;
-  opacity: 0.03;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  z-index: 0;
-}
-/*Tabellenbreite/Content breite*/
-.content {
-  position: relative;
-  z-index: 1;
-  padding: 0 1rem;
-  width: clamp(320px, 90%, 1000px);
-  margin: 0 auto;
-}
+/**
 
 table {
-  width: 100%;
-  border-collapse: collapse;
-  background: var(--table-bg);
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 0 10px rgba(0,0,0,0.7);
-  margin-bottom: 3rem;
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--table-bg);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+    margin-bottom: 3rem;
 }
 
 th, td {
-  padding: 12px 15px;
-  border: 1px solid var(--border-color);
-  text-align: center;
+    padding: 12px 15px;
+    border: 1px solid var(--border-color);
+    text-align: center;
 }
 
 th {
-  background: var(--table-header-bg);
-  font-weight: 600;
-  font-size: 1rem;
-  color: var(--table-header-text);
+    background: var(--table-header-bg);
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--table-header-text);
 }
 
 td {
-  font-size: 0.95rem;
-  color: var(--text);
+    font-size: 0.95rem;
+    color: var(--text);
 }
-
-/*.content h2 {
-  margin: 0 0 0.5rem;
-}
-  */
-
-
-/* ====================================================================
-   Standardtabelle
-   ==================================================================== */
-
-.standard-table {
-  width: var(--width-table);
-  border-collapse: collapse;
-  margin-top: 1rem;
-  margin: 1rem auto;
-}
-
-.standard-table th,
-.standard-table td {
-  padding: 0.5rem 1rem;
-  border: 1px solid var(--border-color);
-}
-
-.standard-table th {
-  background-color: var(--table-header-bg);
-  color: var(--color-red-300);
-  text-align: center;
-}
-
-.standard-table td:nth-child(1), 
-.standard-table td:nth-child(3)  {
-  text-align: center;
-}
+ */
