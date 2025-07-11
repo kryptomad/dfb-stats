@@ -18,7 +18,7 @@ body::before {
   left: 50%;
   z-index: 1;
   transform: translate(-50%, -50%);
-  background: url('assets/logo.svg') no-repeat center center;
+  background: url('../assets/logo.svg') no-repeat center center;
   background-size: 80%;
   opacity: 0.03;
   width: 100%;
