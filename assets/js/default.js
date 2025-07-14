@@ -52,3 +52,15 @@ async function loadLastStats() {
             console.error("Fehler beim Laden der last_stats.json:", err);
         });
 }
+
+function loadNextMatchday() {
+    loadDump('nextMatchday.json')
+        .then(data => {
+            document.querySelector(".nextMatchday .gastgeber").innerHTML = data.gastgeber;
+            document.querySelector(".nextMatchday .datum").innerHTML = data.datum;
+            document.querySelector(".nextMatchday .zeit").innerHTML = data.zeit;
+
+            document.querySelector(".nextMatchday .oskardarten > i")?.classList.add(data.oskardarten ? 'active' : 'inactive');
+            document.querySelector(".nextMatchday .gelddarten > i")?.classList.add(data.gelddarten ? 'active' : 'inactive');
+        })
+}

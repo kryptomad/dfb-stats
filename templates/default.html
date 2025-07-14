@@ -1,39 +1,41 @@
 <p class="header-center-big-primary">Nächster Abend</p>
-<table class="standard-table">
-    <thead>
-    <tr>
-        <th>Gastgeber</th>
-        <th>Datum</th>
-        <th>Uhrzeit</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr>
-        <td class="center">Franz-Josef</td>
-        <td class="center">Freitag, 18. Juli 2025</td>
-        <td class="center">19:30 Uhr</td>
-    </tr>
-    </tbody>
-</table>
+<div class="nextMatchday">
+    <table class="standard-table">
+        <thead>
+        <tr>
+            <th>Gastgeber</th>
+            <th>Datum</th>
+            <th>Uhrzeit</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td class="gastgeber center">undefined</td>
+            <td class="datum center">undefined</td>
+            <td class="zeit center">undefined</td>
+        </tr>
+        </tbody>
+    </table>
 
-<table class="standard-table">
-    <tbody>
-    <tr>
-        <td>
-            <div class="symbol-inline">
-                <span class="inactive">Oskardarten</span>
-                <i class="fas fa-trophy inactive" title="Oskarabend"></i>
-            </div>
-        </td>
-        <td>
-            <div class="symbol-inline">
-                <span class="inactive?">Gelddarten</span>
-                <i class="fas fa-coins active" title="Gelddarten"></i>
-            </div>
-        </td>
-    </tr>
-    </tbody>
-</table>
+    <table class="standard-table">
+        <tbody>
+        <tr>
+            <td>
+                <div class="oskardarten">
+                    <span>Oskardarten</span>
+                    <i class="fas fa-trophy" title="Oskarabend"></i>
+                </div>
+            </td>
+            <td>
+                <div class="gelddarten">
+                    <span>Gelddarten</span>
+                    <i class="fas fa-coins" title="Gelddarten"></i>
+                </div>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
 
 <hr class="section-divider">
 <h2 class="header-center-big-primary">Highlights letzter Spieltag</h2>
@@ -64,6 +66,7 @@
     <tbody></tbody>
 </table>
 <script>
+    loadNextMatchday();
     loadNextMatchdays(5);
     loadLastStats();
 </script>
