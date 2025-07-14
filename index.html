@@ -16,22 +16,41 @@
     </script>
 </head>
 <body>
-<div class="content" id="content">
+<div class="container">
+    <div class="content" id="content">
 
-</div>
-
-<div class="bottom-bar">
-    <img alt="Borchen Logo" src="assets/logo.svg">
-    <button class="menu-btn" onclick="toggleMenu()">
-        <i class="fas fa-bars"></i>
-    </button>
-    <div class="menu-popup">
-        <a class="menu-item" onclick="loadTemplate('default.html')"><i class="fas fa-home"></i><span>Start</span></a>
-        <a class="menu-item" onclick="loadTemplate('rekorde.html')"><i class="fas fa-trophy"></i><span>Rekorde</span></a>
-        <a class="menu-item" onclick="loadTemplate('statistiken.html')"><i class="fas fa-chart-bar"></i><span>Statistiken</span></a>
-        <a class="menu-item" onclick="loadTemplate('spieler.html')"><i class="fas fa-user"></i><span>Spieler</span></a>
-        <a class="menu-item" onclick="loadTemplate('spiele.html')"><i class="fas fa-bullseye"></i><span>Spiele</span></a>
-        <a class="menu-item" onclick="loadTemplate('spieltag.html')"><i class="fas fa-calendar-alt"></i><span>Spieltag</span></a>
+    </div>
+    <div class="footer">
+        <img alt="Borchen Logo" src="assets/logo.svg">
+        <button onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="menu-popup">
+            <a onclick="loadTemplate('default.html')">
+                <i class="fas fa-home"></i>
+                <span>Start</span>
+            </a>
+            <a onclick="loadTemplate('rekorde.html')">
+                <i class="fas fa-trophy"></i>
+                <span>Rekorde</span>
+            </a>
+            <a onclick="loadTemplate('statistiken.html')">
+                <i class="fas fa-chart-bar"></i>
+                <span>Statistiken</span>
+            </a>
+            <a onclick="loadTemplate('spieler.html')">
+                <i class="fas fa-user"></i>
+                <span>Spieler</span>
+            </a>
+            <a onclick="loadTemplate('spiele.html')">
+                <i class="fas fa-bullseye"></i>
+                <span>Spiele</span>
+            </a>
+            <a onclick="loadTemplate('spieltag.html')">
+                <i class="fas fa-calendar-alt"></i>
+                <span>Spieltag</span>
+            </a>
+        </div>
     </div>
 </div>
 </body>
