@@ -1,10 +1,7 @@
 const cache = {}
 
 function toggleMenu() {
-    const menu = document.querySelector('.menu-popup');
-    if (menu) {
-        menu.classList.toggle('active');
-    }
+    document.querySelector('.menu-popup')?.classList.toggle('active');
 }
 
 async function loadTemplate(template) {
