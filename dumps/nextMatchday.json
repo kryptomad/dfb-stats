@@ -2,6 +2,6 @@
   "gastgeber": "Franz Josef",
   "datum": "Freitag, 18. Juli 2025",
   "zeit": "19:30 Uhr",
-  "oskardarten": false,
+  "oskardarten": true,
   "gelddarten": false
 }
