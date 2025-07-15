@@ -1,3 +1,11 @@
+function createTd(data, classes = "center") {
+    const td = document.createElement("td");
+    td.textContent = Array.isArray(data) ? data.join(", ") : data;
+    td.className = classes;
+
+    return td;
+}
+
 async function loadNextMatchdays(spieltagNummer = 5) {
     loadDump('next_matchdays.json')
         .then(value => value.find(e => e.matchday === spieltagNummer))
@@ -5,21 +13,20 @@ async function loadNextMatchdays(spieltagNummer = 5) {
             document.getElementById("matchday-title").textContent = value.matchday;
 
             const tbody = document.querySelector("#oskar-tabelle tbody");
-            tbody.innerHTML = "";
 
             value.games.forEach(game => {
                 const tr = document.createElement("tr");
-                tr.innerHTML = `
-              <td class="center writer-gray">${game.writer}</td>
-              <td class="center">${game.player1}</td>
-              <td class="center">${game.player2}</td>
-            `;
+                tr.appendChild(createTd(game.writer, "center writer-gray"));
+                tr.appendChild(createTd(game.player1));
+                tr.appendChild(createTd(game.player2));
+
                 tbody.appendChild(tr);
             });
         })
 }
 
 async function loadLastStats() {
+
     loadDump('last_stats.json')
         .then(data => {
             const tbody = document.querySelector("#lastStatsTable tbody");
@@ -27,23 +34,9 @@ async function loadLastStats() {
             data.forEach(entry => {
                 const tr = document.createElement("tr");
 
-                const tdKategorie = document.createElement("td");
-                tdKategorie.textContent = entry.kategorie;
-                tdKategorie.className = "center";
-
-                const tdWert = document.createElement("td");
-                tdWert.textContent = entry.wert;
-                tdWert.className = "center";
-
-                const tdSpieler = document.createElement("td");
-                tdSpieler.textContent = Array.isArray(entry.spieler)
-                    ? entry.spieler.join(", ")
-                    : entry.spieler;
-                tdSpieler.className = "center";
-
-                tr.appendChild(tdKategorie);
-                tr.appendChild(tdWert);
-                tr.appendChild(tdSpieler);
+                tr.appendChild(createTd(entry.kategorie));
+                tr.appendChild(createTd(entry.wert));
+                tr.appendChild(createTd(entry.spieler));
 
                 tbody.appendChild(tr);
             });
