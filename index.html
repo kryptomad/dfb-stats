@@ -8,50 +8,131 @@
     <link href="css/variables.css" rel="stylesheet"/>
     <link href="css/utilities.css" rel="stylesheet"/>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
-    <title>DFB Stats</title>
+    <link rel="stylesheet" href="https://unpkg.com/primeicons/primeicons.css" />
+    <title>Dartfreunde Borchen</title>
     <script src="assets/js/common.js"></script>
     <script src="assets/js/default.js"></script>
-    <script>
+        <script>
         document.onreadystatechange = () => loadTemplate('default.html');
     </script>
 </head>
 <body>
-<div class="container">
-    <div class="content" id="content">
-
-    </div>
-    <div class="footer">
-        <img alt="Borchen Logo" src="assets/logo.svg">
-        <button onclick="toggleMenu()">
-            <i class="fas fa-bars"></i>
-        </button>
-        <div class="menu-popup">
-            <a onclick="loadTemplate('default.html')">
-                <i class="fas fa-home"></i>
-                <span>Start</span>
-            </a>
-            <a onclick="loadTemplate('rekorde.html')">
-                <i class="fas fa-trophy"></i>
-                <span>Rekorde</span>
-            </a>
-            <a onclick="loadTemplate('statistiken.html')">
-                <i class="fas fa-chart-bar"></i>
-                <span>Statistiken</span>
-            </a>
-            <a onclick="loadTemplate('spieler.html')">
-                <i class="fas fa-user"></i>
-                <span>Spieler</span>
-            </a>
-            <a onclick="loadTemplate('spiele.html')">
-                <i class="fas fa-bullseye"></i>
-                <span>Spiele</span>
-            </a>
-            <a onclick="loadTemplate('spieltag.html')">
-                <i class="fas fa-calendar-alt"></i>
-                <span>Spieltag</span>
-            </a>
-        </div>
-    </div>
+<div class="top-banner">Dartfreunde Borchen n.e.V.</div>
+<div class="header-bar">
+  <div class="header-left">
+    <img src="assets/logo.svg" alt="Logo" class="logo">
+<button class="kw-button update-button" title="Klick für Details">
+  <i class="pi pi-clock"></i>
+  <span id="last-update-text">last update: 18.07.2025</span>
+</button>
+  </div>
+  <div class="header-right">
+    <button class="header-btn theme-btn" title="Themes">
+      <i class="pi pi-cog"></i>
+    </button>
+    <button class="header-btn color-btn" title="Farben">
+      <i class="pi pi-palette"></i>
+    </button>
+<button class="header-btn" onclick="toggleMenu()" title="Menu" id="menu-toggle">
+  <i class="pi pi-bars"></i>
+    </button>
+  </div>
 </div>
+<div id="sidebar-menu" class="sidebar-menu hidden">
+  <div class="menu-section">
+    <a class="menu-title" onclick="loadTemplate('default.html')">
+    <i class="pi pi-home"></i>
+    <span>Start</span>
+    </a>
+    <div class="menu-item">Termin nächster Abend</div>
+    <div class="menu-item">Highlights letzter Spieltag</div>
+    <div class="menu-item">Nächster Oskarabend</div>
+  </div>
+    <div class="menu-section">
+    <a class="menu-title" onclick="loadTemplate('spieltag.html')">
+    <i class="pi pi-calendar"></i>
+    <span>Spieltag</span>
+    </a>
+  </div>
+    <div class="menu-section">
+    <a class="menu-title" onclick="loadTemplate('spiele.html')">
+    <i class="pi pi-bullseye"></i>
+    <span>Spiele</span>
+    </a>
+  </div>
+    <div class="menu-section">
+<a class="menu-title" onclick="loadTemplate('spieler.html')">
+  <i class="pi pi-user"></i>
+  <span>Spieler</span>
+</a>
+    <div class="menu-item">Bestleistungen</div>
+    <div class="menu-item">Spieler vs. Spieler</div>
+  </div>
+    <div class="menu-section">
+<a class="menu-title" onclick="loadTemplate('statistiken.html')">
+  <i class="pi pi-chart-bar"></i>
+  <span>Statistiken</span>
+</a>
+    <div class="menu-item">Matchstatistik</div>
+    <div class="menu-item">Saisonstatistik</div>
+    <div class="menu-item">Jahresstatistik</div>
+    <div class="menu-item">Diagramme</div>
+  </div>
+  <div class="menu-section">
+<a class="menu-title" onclick="loadTemplate('rekorde.html')">
+  <i class="pi pi-trophy"></i>
+  <span>Rekorde</span>
+</a>
+    <div class="menu-item">Gesamtwertungen</div>
+    <div class="menu-item">Jahreswertungen</div>
+    <div class="menu-item">Spieltagswertungen</div>
+    <div class="menu-item">Matchwertungen</div>
+  </div>
+  <div class="menu-section">
+<a class="menu-title" onclick="loadTemplate('regelwek.html')">
+  <i class="pi pi-book"></i>
+  <span>Regelwerk</span>
+</a>
+    <div class="menu-item">Spielregeln</div>
+    <div class="menu-item">Dartkasse</div>
+    <div class="menu-item">Vereinsregeln</div>
+  </div>
+</div>
+<div class="container">
+<div class="content" id="content"></div>
+<script>
+function toggleMenu() {
+  const menu = document.getElementById('sidebar-menu');
+  const btn = document.getElementById('menu-toggle');
+
+  menu.classList.toggle('visible');
+  btn.classList.toggle('active');
+}
+</script>
+<script>
+window.addEventListener('scroll', () => {
+  const header = document.querySelector('.header-bar');
+  if (window.scrollY > 0) {
+    header.classList.add('scrolled');
+  } else {
+    header.classList.remove('scrolled');
+  }
+});
+</script>
+<script>
+document.addEventListener('click', function (event) {
+  const sidebar = document.getElementById('sidebar-menu');
+  const toggleBtn = document.getElementById('menu-toggle');
+
+  const clickedInsideMenu = sidebar.contains(event.target);
+  const clickedToggleBtn = toggleBtn.contains(event.target);
+
+  if (!clickedInsideMenu && !clickedToggleBtn && sidebar.classList.contains('visible')) {
+    sidebar.classList.remove('visible');
+    toggleBtn.classList.remove('active');
+  }
+});
+</script>
+
 </body>
 </html>
