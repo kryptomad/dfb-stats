@@ -1,5 +1,5 @@
 :root {
-  --bg: var(--color-gray-700); /* zentrale Hintergrundfarbe */
+  --bg: var(--color-black); /* zentrale Hintergrundfarbe */
   --table-bg: var(--color-gray-600);
   --table-header-bg: var(--color-gray-700);
   --border-color: var(--color-gray-500);
@@ -35,6 +35,17 @@
   --color-white: #ffffff;
   --color-black: #000000;
 
+  /* Logo */
+  --accent-color: #3c8d7d; /* z. B. Türkis */
+
 /* Tabellengrößen */
    --width-table: 90%; /* Global Tabellenbreite*/
+}
+
+.logo-accent {
+  fill: var(--accent-color);
+}
+
+.dartboard-red {
+  fill: #c62828;
 }
