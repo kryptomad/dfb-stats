@@ -150,7 +150,11 @@ body {
                 }
             }
         }
-           
+
+html {
+  scroll-behavior: smooth;
+}
+
 /* ====================================================================
    new Header
    ==================================================================== */
@@ -324,6 +328,8 @@ body {
 }
 
 .menu-item {
+  display: block;  /* <- wichtig für Abstand + Hover-Fläche */
+  text-decoration: none;
   margin-left: 24px;
   padding: 4px 0;
   cursor: pointer;
@@ -355,7 +361,6 @@ body {
 #color-picker-toggle {
   background: transparent;
   border: none;
-  font-size: 1.2rem;
   cursor: pointer;
   color: white;
   border: 1px solid var(--accent-color);
@@ -364,14 +369,14 @@ body {
 
 .color-picker-menu {
   position: absolute;
-  top: 120%;
+  top: 130%;
   right: 0;
   border: 1px solid var(--color-gray-500);
   background-color: rgba(17, 17, 17, 0.6);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   border-radius: 10px;
-  padding: 12px;
+  padding: 16px;
   z-index: 996;
   min-width: 140px;
   backdrop-filter: blur(6px);
@@ -382,9 +387,9 @@ body {
 }
 
 .color-options {
-  display: flex;
+  flex-wrap: wrap; 
   gap: 8px;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .color-option {
@@ -394,6 +399,7 @@ body {
   cursor: pointer;
   border: 2px solid var(--color-gray-500);
   transition: transform 0.2s;
+  display: inline-block;
 }
 
 .color-option:hover {

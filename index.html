@@ -30,21 +30,12 @@
   <button id="color-picker-toggle" class="header-btn color-btn" title="Farben">
     <i class="pi pi-palette"></i>
   </button>
-  <div class="color-picker-menu hidden">
-    <div class="menu-title">Akzentfarbe</div>
-    <div class="color-options">
-<div class="color-option" data-color="#BC0000" style="background:#BC0000;"></div> <!-- Rot -->
-<div class="color-option" data-color="#e07731" style="background:#e07731;"></div> <!-- Orange -->
-<div class="color-option" data-color="#1a3f1e" style="background:#1a3f1e;"></div> <!-- Gelb (neu) -->
-<div class="color-option" data-color="#328546" style="background:#328546;"></div> <!-- Grün -->
-<div class="color-option" data-color="#3c8d7d" style="background:#3c8d7d;"></div> <!-- Türkis -->
-<div class="color-option" data-color="#383abb" style="background:#383abb;"></div> <!-- Blau -->
-<div class="color-option" data-color="#6c33d4" style="background:#6c33d4;"></div> <!-- Lila -->
-<div class="color-option" data-color="#f25ca2" style="background:#f25ca2;"></div> <!-- Pink -->
-<div class="color-option" data-color="#686868" style="background:#686868;"></div> <!-- Grau (optional) -->
-
-    </div>
-  </div>
+<div class="color-picker-menu hidden">
+  <div class="menu-title">Akzentfarbe</div>
+  <div class="color-options">
+    <!-- weitere Farben… -->
+     </div>
+</div>
 </div>
 <button class="header-btn" onclick="toggleMenu()" title="Menu" id="menu-toggle">
   <i class="pi pi-bars"></i>
@@ -57,15 +48,16 @@
     <i class="pi pi-home"></i>
     <span>Start</span>
     </a>
-    <div class="menu-item">Termin nächster Abend</div>
-    <div class="menu-item">Highlights letzter Spieltag</div>
-    <div class="menu-item">Nächster Oskarabend</div>
-  </div>
+    <a class="menu-item" onclick="loadAndScroll('default.html', '#naechster-abend')">Termin nächster Abend</a>
+    <a class="menu-item" onclick="loadAndScroll('default.html', '#letzter-spieltag')">Highlights letzter Spieltag</a>
+    <a class="menu-item" onclick="loadAndScroll('default.html', '#oskarabend')">Nächster Oskarabend</a>
+    </div>
     <div class="menu-section">
     <a class="menu-title" onclick="loadTemplate('spieltag.html')">
     <i class="pi pi-calendar"></i>
     <span>Spieltag</span>
     </a>
+        <a class="menu-item" onclick="loadAndScroll('spieltag.html', '#jahrestabelle')">Jahrestabelle</a>
   </div>
     <div class="menu-section">
     <a class="menu-title" onclick="loadTemplate('spiele.html')">
@@ -78,37 +70,37 @@
   <i class="pi pi-user"></i>
   <span>Spieler</span>
 </a>
-    <div class="menu-item">Bestleistungen</div>
-    <div class="menu-item">Spieler vs. Spieler</div>
+    <a href="#bestleistungen" class="menu-item">Bestleistungen</a>
+    <a href="#spieler-vs-spieler" class="menu-item">Spieler vs. Spieler</a>
   </div>
     <div class="menu-section">
 <a class="menu-title" onclick="loadTemplate('statistiken.html')">
   <i class="pi pi-chart-bar"></i>
   <span>Statistiken</span>
 </a>
-    <div class="menu-item">Matchstatistik</div>
-    <div class="menu-item">Saisonstatistik</div>
-    <div class="menu-item">Jahresstatistik</div>
-    <div class="menu-item">Diagramme</div>
+    <a class="menu-item" onclick="loadAndScroll('statistiken.html', '#matchstatistik')">Matchstatistik</a>
+    <a class="menu-item" onclick="loadAndScroll('statistiken.html', '#saisonstatistik')">Saisonstatistik</a>
+    <a class="menu-item" onclick="loadAndScroll('statistiken.html', '#jahresstatistik')">Jahresstatistik</a>
+    <a class="menu-item" onclick="loadAndScroll('statistiken.html', '#diagramme')">Diagramme</a>
   </div>
   <div class="menu-section">
 <a class="menu-title" onclick="loadTemplate('rekorde.html')">
   <i class="pi pi-trophy"></i>
   <span>Rekorde</span>
 </a>
-    <div class="menu-item">Gesamtwertungen</div>
-    <div class="menu-item">Jahreswertungen</div>
-    <div class="menu-item">Spieltagswertungen</div>
-    <div class="menu-item">Matchwertungen</div>
+    <a class="menu-item" onclick="loadAndScroll('rekorde.html', '#gesamtwertungen')">Gesamtwertungen</a>
+        <a class="menu-item" onclick="loadAndScroll('rekorde.html', '#jahreswertungen')">Jahreswertungen</a>
+    <a class="menu-item" onclick="loadAndScroll('rekorde.html', '#spieltagswertungen')">Spieltagswertungen</a>
+        <a class="menu-item" onclick="loadAndScroll('rekorde.html', '#matchwertungen')">Matchwertungen</a>
   </div>
   <div class="menu-section">
 <a class="menu-title" onclick="loadTemplate('regelwerk.html')">
   <i class="pi pi-book"></i>
   <span>Regelwerk</span>
 </a>
-    <div class="menu-item">Spielregeln</div>
-    <div class="menu-item">Dartkasse</div>
-    <div class="menu-item">Vereinsregeln</div>
+    <a href="#spielregeln" class="menu-item">Spielregeln</a>
+    <a href="#dartkasse" class="menu-item">Dartkasse</a>
+    <a href="#vereinsregeln" class="menu-item">Vereinsregeln</a>
   </div>
 </div>
 <div class="container">
