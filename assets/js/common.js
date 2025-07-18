@@ -6,7 +6,6 @@ function toggleMenu() {
 
 async function loadTemplate(template) {
     fetchContent(template).then(content => setInnerHTML(document.getElementById('content'), content));
-    toggleMenu();
 }
 
 async function fetchContent(template) {

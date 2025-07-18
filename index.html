@@ -12,7 +12,7 @@
     <title>Dartfreunde Borchen</title>
     <script src="assets/js/common.js"></script>
     <script src="assets/js/default.js"></script>
-        <script>
+    <script>
         document.onreadystatechange = () => loadTemplate('default.html');
     </script>
 </head>
@@ -100,15 +100,7 @@
 </div>
 <div class="container">
 <div class="content" id="content"></div>
-<script>
-function toggleMenu() {
-  const menu = document.getElementById('sidebar-menu');
-  const btn = document.getElementById('menu-toggle');
-
-  menu.classList.toggle('visible');
-  btn.classList.toggle('active');
-}
-</script>
+</div>
 <script>
 window.addEventListener('scroll', () => {
   const header = document.querySelector('.header-bar');

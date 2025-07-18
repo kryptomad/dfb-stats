@@ -4,6 +4,7 @@
 body {
     font-family: 'Segoe UI', sans-serif;
     background: var(--bg);
+    margin: 0;
     color: var(--text);
     margin: 0px;
     padding-top: 20px;
@@ -31,16 +32,14 @@ body {
 
         .content {
             flex: 1;
-            padding-top: 10px;
-            padding-right: 64px;
-            padding-bottom: 64px;
-            padding-left: 64px;
+            padding: 0 5% 20% 5%;
             overflow: auto;
 
 
             .standard-table {
                 width: 100%;
                 border-collapse: collapse;
+                background: var(--table-bg);
 
                 th {
                     padding: 0.5rem 1rem;
@@ -63,7 +62,7 @@ body {
 
         .footer {
             background: var(--footer-bg);
-            height: 60px;
+            height: 8%;
             display: flex;
             align-items: center;
             justify-content: space-between;
