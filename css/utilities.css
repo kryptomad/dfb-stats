@@ -38,7 +38,7 @@
   margin-bottom: 1rem;
   margin-top: 1rem;
   text-align: left;
-  color: var(--color-red-200);
+  color: var(--accent-color);
 }
 
 .header-center-big-primary {
@@ -47,7 +47,7 @@
   margin-bottom: 1rem;
   margin-top: 1rem;
   text-align: center;
-  color: var(--color-red-200);
+  color: var(--accent-color);
 }
 
 .header-left-big-secondary {

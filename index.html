@@ -20,25 +20,38 @@
 <div class="top-banner">Dartfreunde Borchen n.e.V.</div>
 <div class="header-bar">
   <div class="header-left">
-    <img src="assets/logo.svg" alt="Logo" class="logo">
-<button class="kw-button update-button" title="Klick für Details">
-  <i class="pi pi-clock"></i>
-  <span id="last-update-text">last update: 18.07.2025</span>
-</button>
+    <div id="logo-container"></div>
+    <div>
+<button class="update-button" title="Datenstand: 18.07.2025">
+  <i class="pi pi-refresh"></i> 18. Juli</button></div>
   </div>
   <div class="header-right">
-    <button class="header-btn theme-btn" title="Themes">
-      <i class="pi pi-cog"></i>
-    </button>
-    <button class="header-btn color-btn" title="Farben">
-      <i class="pi pi-palette"></i>
-    </button>
+<div class="color-picker-wrapper">
+  <button id="color-picker-toggle" class="header-btn color-btn" title="Farben">
+    <i class="pi pi-palette"></i>
+  </button>
+  <div class="color-picker-menu hidden">
+    <div class="menu-title">Akzentfarbe</div>
+    <div class="color-options">
+<div class="color-option" data-color="#BC0000" style="background:#BC0000;"></div> <!-- Rot -->
+<div class="color-option" data-color="#e07731" style="background:#e07731;"></div> <!-- Orange -->
+<div class="color-option" data-color="#1a3f1e" style="background:#1a3f1e;"></div> <!-- Gelb (neu) -->
+<div class="color-option" data-color="#328546" style="background:#328546;"></div> <!-- Grün -->
+<div class="color-option" data-color="#3c8d7d" style="background:#3c8d7d;"></div> <!-- Türkis -->
+<div class="color-option" data-color="#383abb" style="background:#383abb;"></div> <!-- Blau -->
+<div class="color-option" data-color="#6c33d4" style="background:#6c33d4;"></div> <!-- Lila -->
+<div class="color-option" data-color="#f25ca2" style="background:#f25ca2;"></div> <!-- Pink -->
+<div class="color-option" data-color="#686868" style="background:#686868;"></div> <!-- Grau (optional) -->
+
+    </div>
+  </div>
+</div>
 <button class="header-btn" onclick="toggleMenu()" title="Menu" id="menu-toggle">
   <i class="pi pi-bars"></i>
     </button>
   </div>
 </div>
-<div id="sidebar-menu" class="sidebar-menu hidden">
+<div id="sidebar-menu" class="sidebar-menu">
   <div class="menu-section">
     <a class="menu-title" onclick="loadTemplate('default.html')">
     <i class="pi pi-home"></i>
@@ -100,38 +113,117 @@
 </div>
 <div class="container">
 <div class="content" id="content"></div>
+<!-- ========================
+     1. Menü-Logik (☰ Button)
+     ======================== -->
 <script>
 function toggleMenu() {
   const menu = document.getElementById('sidebar-menu');
   const btn = document.getElementById('menu-toggle');
 
+  if (!menu || !btn) return; // Schutz vor DOM-Fehlern
+
   menu.classList.toggle('visible');
   btn.classList.toggle('active');
 }
+
+// Wenn dein Button im Template ist, NICHT hier per addEventListener anschließen.
+// Stattdessen: onclick="toggleMenu()" im HTML verwenden.
 </script>
+
+<!-- ===============================
+     2. Header-Scroll Effekt (graue Linie)
+     =============================== -->
 <script>
 window.addEventListener('scroll', () => {
   const header = document.querySelector('.header-bar');
-  if (window.scrollY > 0) {
-    header.classList.add('scrolled');
-  } else {
-    header.classList.remove('scrolled');
+  if (header) {
+    header.classList.toggle('scrolled', window.scrollY > 0);
   }
 });
 </script>
+
+<!-- ==========================================
+     3. Menü schließen beim Klick außerhalb (UX)
+     ========================================== -->
 <script>
 document.addEventListener('click', function (event) {
+  // Menü schließen
   const sidebar = document.getElementById('sidebar-menu');
-  const toggleBtn = document.getElementById('menu-toggle');
+  const menuToggleBtn = document.getElementById('menu-toggle');
 
-  const clickedInsideMenu = sidebar.contains(event.target);
-  const clickedToggleBtn = toggleBtn.contains(event.target);
+  const clickedInsideMenu = sidebar?.contains(event.target);
+  const clickedMenuToggle = menuToggleBtn?.contains(event.target);
 
-  if (!clickedInsideMenu && !clickedToggleBtn && sidebar.classList.contains('visible')) {
+  if (!clickedInsideMenu && !clickedMenuToggle && sidebar?.classList.contains('visible')) {
     sidebar.classList.remove('visible');
-    toggleBtn.classList.remove('active');
+    menuToggleBtn.classList.remove('active');
+  }
+
+  // Color Picker schließen
+  const colorMenu = document.querySelector('.color-picker-menu');
+  const colorToggleBtn = document.getElementById('color-picker-toggle');
+
+  const clickedInsideColor = colorMenu?.contains(event.target);
+  const clickedColorToggle = colorToggleBtn?.contains(event.target);
+
+  if (!clickedInsideColor && !clickedColorToggle && !colorMenu.classList.contains('hidden')) {
+    colorMenu.classList.add('hidden');
   }
 });
+</script>
+
+<!-- =============================
+     4. Color Picker (🎨 Farbauswahl)
+     ============================= -->
+<script>
+function setupColorPicker() {
+  const toggleBtn = document.getElementById('color-picker-toggle');
+  const menu = document.querySelector('.color-picker-menu');
+  const options = document.querySelectorAll('.color-option');
+
+  if (!toggleBtn || !menu) return;
+
+  toggleBtn.addEventListener('click', () => {
+    menu.classList.toggle('hidden');
+  });
+
+  options.forEach(opt => {
+    opt.addEventListener('click', () => {
+      const newColor = opt.dataset.color;
+      document.documentElement.style.setProperty('--accent-color', newColor);
+
+      const logo = document.querySelector('#logo-container svg');
+      if (logo) {
+        logo.classList.remove('logo-spin');
+        setTimeout(() => {
+          logo.classList.add('logo-spin');
+        }, 10);
+      }
+
+      menu.classList.add('hidden');
+    });
+  });
+}
+</script>
+
+<script>
+setupColorPicker();
+</script>
+
+
+<!-- ========================
+     5. SVG-Logo inline laden
+     ======================== -->
+<script>
+fetch('assets/logo.inline.svg')
+  .then(res => res.text())
+  .then(svg => {
+    const container = document.getElementById('logo-container');
+    if (container) {
+      container.innerHTML = svg;
+    }
+  });
 </script>
 
 </body>

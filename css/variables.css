@@ -5,8 +5,8 @@
   --border-color: var(--color-gray-500);
   --table-header-text: var(--color-red-200);
   --text: var(--color-white);   /* zentrale Textfarbe */
-  --heading-primary: var(--color-red-200);
-  --heading-secondary: var(--color-gray-400); /* not in use */
+  --heading-primary: var(--accent-color);
+  --heading-secondary: var(--color-gray-200); /* not in use */
   --footer-bg: var(--color-red-400); /*footer background*/
 
   /* Grautöne */
@@ -35,7 +35,7 @@
   --color-white: #ffffff;
   --color-black: #000000;
 
-  /* Logo */
+  /* Accent-Color */
   --accent-color: #3c8d7d; /* z. B. Türkis */
 
 /* Tabellengrößen */
@@ -44,8 +44,4 @@
 
 .logo-accent {
   fill: var(--accent-color);
-}
-
-.dartboard-red {
-  fill: #c62828;
 }

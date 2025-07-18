@@ -187,7 +187,7 @@
 /* Block von einem Spiel aus dem Spieltag */
 .spiel-block {
   background: var(--color-gray-600);
-  border-radius: 0px;
+  border-radius: 6px;
   padding: 0.6rem 1rem; /*beeinflusst wie schmal das Feld ist */
   margin-bottom: 0.3rem;
   box-shadow: 0 0 10px rgba(0,0,0,0.3);
