@@ -6,7 +6,7 @@
   --table-header-text: var(--color-red-200);
   --text: var(--color-white);   /* zentrale Textfarbe */
   --heading-primary: var(--accent-color);
-  --heading-secondary: var(--color-gray-200); /* not in use */
+  --heading-secondary: var(--color-gray-200);
   --footer-bg: var(--color-red-400); /*footer background*/
 
   /* Grautöne */

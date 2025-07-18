@@ -22,7 +22,7 @@ body {
         height: 100%;
         pointer-events: none;
         z-index: 0;
-        filter: grayscale(1) brightness(1.7); /* <-- das ist neu */
+        filter: grayscale(1) brightness(1.7);
         }
 
     .container {
@@ -50,7 +50,7 @@ body {
                     padding: 0.5rem 1rem;
                     border: 1px solid var(--border-color);
                     background-color: var(--table-header-bg);
-                    color: var(--color-red-300);
+                    color: var(--color-gray-200);
                     text-align: center;
                 }
 
