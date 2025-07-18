@@ -7,7 +7,6 @@
   --text: var(--color-white);   /* zentrale Textfarbe */
   --heading-primary: var(--accent-color);
   --heading-secondary: var(--color-gray-200);
-  --footer-bg: var(--color-red-400); /*footer background*/
 
   /* Grautöne */
   --color-gray-100: #f0f0f0; /* sehr hell */

@@ -102,7 +102,7 @@
     <div class="menu-item">Matchwertungen</div>
   </div>
   <div class="menu-section">
-<a class="menu-title" onclick="loadTemplate('regelwek.html')">
+<a class="menu-title" onclick="loadTemplate('regelwerk.html')">
   <i class="pi pi-book"></i>
   <span>Regelwerk</span>
 </a>
@@ -113,118 +113,5 @@
 </div>
 <div class="container">
 <div class="content" id="content"></div>
-<!-- ========================
-     1. Menü-Logik (☰ Button)
-     ======================== -->
-<script>
-function toggleMenu() {
-  const menu = document.getElementById('sidebar-menu');
-  const btn = document.getElementById('menu-toggle');
-
-  if (!menu || !btn) return; // Schutz vor DOM-Fehlern
-
-  menu.classList.toggle('visible');
-  btn.classList.toggle('active');
-}
-
-// Wenn dein Button im Template ist, NICHT hier per addEventListener anschließen.
-// Stattdessen: onclick="toggleMenu()" im HTML verwenden.
-</script>
-
-<!-- ===============================
-     2. Header-Scroll Effekt (graue Linie)
-     =============================== -->
-<script>
-window.addEventListener('scroll', () => {
-  const header = document.querySelector('.header-bar');
-  if (header) {
-    header.classList.toggle('scrolled', window.scrollY > 0);
-  }
-});
-</script>
-
-<!-- ==========================================
-     3. Menü schließen beim Klick außerhalb (UX)
-     ========================================== -->
-<script>
-document.addEventListener('click', function (event) {
-  // Menü schließen
-  const sidebar = document.getElementById('sidebar-menu');
-  const menuToggleBtn = document.getElementById('menu-toggle');
-
-  const clickedInsideMenu = sidebar?.contains(event.target);
-  const clickedMenuToggle = menuToggleBtn?.contains(event.target);
-
-  if (!clickedInsideMenu && !clickedMenuToggle && sidebar?.classList.contains('visible')) {
-    sidebar.classList.remove('visible');
-    menuToggleBtn.classList.remove('active');
-  }
-
-  // Color Picker schließen
-  const colorMenu = document.querySelector('.color-picker-menu');
-  const colorToggleBtn = document.getElementById('color-picker-toggle');
-
-  const clickedInsideColor = colorMenu?.contains(event.target);
-  const clickedColorToggle = colorToggleBtn?.contains(event.target);
-
-  if (!clickedInsideColor && !clickedColorToggle && !colorMenu.classList.contains('hidden')) {
-    colorMenu.classList.add('hidden');
-  }
-});
-</script>
-
-<!-- =============================
-     4. Color Picker (🎨 Farbauswahl)
-     ============================= -->
-<script>
-function setupColorPicker() {
-  const toggleBtn = document.getElementById('color-picker-toggle');
-  const menu = document.querySelector('.color-picker-menu');
-  const options = document.querySelectorAll('.color-option');
-
-  if (!toggleBtn || !menu) return;
-
-  toggleBtn.addEventListener('click', () => {
-    menu.classList.toggle('hidden');
-  });
-
-  options.forEach(opt => {
-    opt.addEventListener('click', () => {
-      const newColor = opt.dataset.color;
-      document.documentElement.style.setProperty('--accent-color', newColor);
-
-      const logo = document.querySelector('#logo-container svg');
-      if (logo) {
-        logo.classList.remove('logo-spin');
-        setTimeout(() => {
-          logo.classList.add('logo-spin');
-        }, 10);
-      }
-
-      menu.classList.add('hidden');
-    });
-  });
-}
-</script>
-
-<script>
-setupColorPicker();
-</script>
-
-
-<!-- ========================
-     5. SVG-Logo inline laden
-     ======================== -->
-<script>
-fetch('assets/logo.inline.svg')
-  .then(res => res.text())
-  .then(svg => {
-    const container = document.getElementById('logo-container');
-    if (container) {
-      container.innerHTML = svg;
-    }
-  });
-</script>
-
 </body>
 </html>
