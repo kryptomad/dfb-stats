@@ -4,6 +4,7 @@
 body {
     font-family: 'Segoe UI', sans-serif;
     background: var(--bg);
+    margin: 0;
     color: var(--text);
     margin: 0px;
     padding-top: 20px;
@@ -31,18 +32,58 @@ body {
 
         .content {
             flex: 1;
-            padding-top: 10px;
-            padding-right: 64px;
-            padding-bottom: 64px;
-            padding-left: 64px;
+            padding: 0 5% 20% 5%;
             overflow: auto;
 
-
             .standard-table {
+
             border-collapse: separate;
             border-spacing: 0;
             border-radius: 10px;
             overflow: hidden;
+
+                width: 100%;
+                border-collapse: collapse;
+                background: var(--table-bg);
+
+                th {
+                    padding: 0.5rem 1rem;
+                    border: 1px solid var(--border-color);
+                    background-color: var(--table-header-bg);
+                    color: var(--color-red-300);
+                    text-align: center;
+                }
+
+                td {
+                    border: 1px solid var(--border-color);
+                    padding: 8px;
+
+                    &.center {
+                        text-align: center;
+                    }
+                }
+            }
+        }
+
+        .footer {
+            background: var(--footer-bg);
+            height: 8%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 32px 0 16px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+
+            button {
+                font-size: 2rem;
+                background: none;
+                border: none;
+                color: var(--color-white);
+                cursor: pointer;
+                margin-right: 28px;
+
             }
 
             /* Tabellenkopf */
