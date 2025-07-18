@@ -35,6 +35,7 @@ body {
             .standard-table {
                 width: 100%;
                 border-collapse: collapse;
+                background: var(--table-bg);
 
                 th {
                     padding: 0.5rem 1rem;
