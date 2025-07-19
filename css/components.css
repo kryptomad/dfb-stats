@@ -1,6 +1,4 @@
-/* ====================================================================
-   Playercards used in Spieler.html
-   ==================================================================== */
+/* Playercards used in Spieler.html */
 
 .player-card {
   text-align: center;
@@ -35,9 +33,7 @@
   box-shadow: 0 0 3px var(--accent-color), 0 0 12px var(--accent-color);
 }
 
-/* ====================================================================
-   Spieler Bilder spieler.html und Hover effect
-   ==================================================================== */
+/* Spieler Bilder spieler.html und Hover effect */
 
 .player-gallery {
   display: flex;
@@ -89,83 +85,7 @@
   }
 
 
-/* ====================================================================
-   Verhalten und Optik der Bottom Bar und des Vereinslogos menu.html
-   ==================================================================== */
-
-/* ----------- menu.html -----------
-
-/* ====================================================================
-   Verhalten und Optik der Buttons im Menü menu.html
-   ==================================================================== */
-
-/* Menu grid - two rows */
-.menu.two-column {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
-  padding: 1.3rem;
-  background: var(--bg-dark);
-  border-top: 1px solid var(--color-gray-600);
-}
-
-/* ----------- index.html -----------
-
-/* ====================================================================
-   Nächster Abend & Calender der
-   index.html
-   ==================================================================== */
-
-.calendar-box {
-  background: var(--table-bg);
-  border-radius: 10px;
-  padding: 1rem;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  margin-bottom: 1.5rem;
-}
-
-.calendar {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  gap: 0.5rem;
-  text-align: center;
-  font-size: 0.9rem;
-}
-
-.calendar-header {
-  grid-column: span 7;
-  font-weight: bold;
-  text-align: center;
-  margin-bottom: 0.5rem;
-}
-
-.calendar-day {
-  color: var(--text);
-  opacity: 0.6;
-}
-
-.calendar-cell {
-  padding: 0.4rem 0;
-  border-radius: 0.3rem;
-}
-
-/* neues CSS für den nächsten abend*/
-.symbol-inline {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px; /* Abstand zwischen Text und Icon */
-}
-
-.symbol-cell {
-  text-align: center;
-  font-size: 1rem;
-  padding: 12px;
-}
-
-.symbol-inline i {
-  font-size: 1.2rem;
-}
+/* Oskar oder Gelddarten und Schreiber*/
 
 .active {
   color: gold;
@@ -177,12 +97,7 @@
 .writer-gray {
   color: var(--color-gray-300);
 }
-/* ----------- spieltag.html -----------
 
-/* ====================================================================
-   Spieltag - Block von einem Spiel im Spieltag
-   spieltag.html
-   ==================================================================== */
 
 /* Block von einem Spiel aus dem Spieltag */
 .spiel-block {
@@ -249,10 +164,7 @@
   font-size: 0.8em;
 }
 
-/* ====================================================================
-   Score-Box für die Spieltage Winner(Grün)/Loser(Rot) spieltag.html
-   Box für die Check Darts unter spiel_details.html
-==================================================================== */
+/* Score-Box für die Spieltage Winner(Grün)/Loser(Rot) & Box für die Check Darts */
 
 /* Score-Box Style, Form etc. */
 .score-box {
@@ -281,12 +193,7 @@
   color: var(--color-white);
 }
 
-/* ----------- spiel_details.html -----------
-
-/* ====================================================================
-   stats-table
-   spiel_details.html
-   ==================================================================== */
+/* stats-table */
 
 .stats-table {
   width: var(--width-table);
@@ -317,10 +224,7 @@
   width: 32%;
 }
 
-/* ====================================================================
-   Leg Darstellung
-   spiel_details.html
-   ==================================================================== */
+/* Leg Darstellung */
 
 /* Überschrift der Legs; Leg 1-5 */
 .leg-count {
@@ -390,10 +294,6 @@
   font-weight: 600;
   font-size: 1.1rem;
 }
-
-/* ====================================================================
-   Formatierung der Rekorde.html
-   ==================================================================== */
 
 /* Rekorde-Tabellenstruktur */
 .rekord-section {
@@ -470,11 +370,7 @@
   width: 15%;
 }
 
-/* ----------- spiele.html -----------
-
-/* ====================================================================
-   Formatierung der Rekorde.html
-   ==================================================================== */
+/* Formatierung der spiele.html */
 
 .filter-bar {
   display: flex;
@@ -543,4 +439,283 @@
 .reset-btn {
   height: 37px;
   line-height: 37px;
+}
+
+/* Banner */
+
+.top-banner {
+  width: 100%;
+  height: 20px;
+  background-color: var(--accent-color);
+  color: var(--text);
+  font-size: 12px;
+  font-family: 'JetBrains Mono', monospace;
+  letter-spacing: 0.5px;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+/* Header für menu */
+
+.header-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 0px;
+  background-color: rgba(0, 0, 0, 0.5); /* halbtransparentes Schwarz */
+  backdrop-filter: blur(6px);           /* optional: weicher Glas-Effekt */
+  -webkit-backdrop-filter: blur(6px);   /* Safari support */
+  color: var(--text);
+  position: sticky;
+  top: 20px; /* falls .top-banner existiert */
+  z-index: 998;
+  height: 40px;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.3s ease;
+}
+
+.header-bar.scrolled {
+  border-color: var(--color-gray-500);
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-left: 12px;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-right: 12px;
+}
+
+.logo {
+  height: 40px;
+  width: auto;
+}
+
+#logo-container svg {
+  width: 42px;
+  height: auto;
+  display: block;
+  transition: transform 0.6s ease-in-out;
+}
+
+#logo-container.rotate svg {
+  transform: rotate(360deg);
+}
+
+.logo-accent {
+  fill: var(--accent-color);
+}
+
+.header-btn {
+  background: none;
+  border: 1px solid var(--color-gray-500);
+  color: var(--color-white);
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 6px;
+  padding: 4px 8px;
+  transition: border-color 0.2s;
+}
+
+.header-btn:hover {
+  color: var(--accent-color);
+}
+
+.header-btn.active {
+  border-color: var(--accent-color);
+}
+
+/* refresh/update button */
+.update-button {
+  background: transparent;
+  border: 1px solid var(--color-gray-500);
+  color: var(--color-white);
+  padding: 4px 10px;
+  font-size: 13px;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: border-color 0.2s ease;
+}
+
+/* Nur Rahmen und Icon bei Hover farbig */
+.update-button:hover {
+  border-color: var(--accent-color);
+}
+
+.update-button:hover i {
+  color: var(--accent-color);
+  animation: spin-refresh 0.6s linear;
+}
+
+/* Update-Button Icon separat färben */
+.update-button i {
+  color: var(--color-white);
+  transition: color 0.2s ease;
+}
+
+@keyframes spin-refresh {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+/* Menü rechts */
+.sidebar-menu {
+  position: fixed;
+  top: 72px; /* unterhalb von top-banner + header-bar */
+  right: 0;
+  height: calc(100% - 64px);
+  width: 220px;
+  background-color: var(--bg);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: var(--color-white);
+  border-left: 1px solid var(--color-gray-500);
+  padding: 16px;
+  z-index: 997;
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+  box-shadow: -4px 0 8px rgba(0, 0, 0, 0.3);
+  overflow-y: auto;
+  max-height: calc(100vh - 72px); /* je nach Topbar-Höhe */
+}
+
+.sidebar-menu.visible {
+  transform: translateX(0);
+}
+
+.menu-section {
+  margin-bottom: 24px;
+}
+
+.menu-title {
+  color: var(--accent-color);
+  font-weight: bold;
+  font-size: 15px;
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.menu-item {
+  display: block;  /* <- wichtig für Abstand + Hover-Fläche */
+  text-decoration: none;
+  margin-left: 24px;
+  padding: 4px 0;
+  cursor: pointer;
+  font-size: 14px;
+  color: #bbb; /* oder #ccc je nach Kontrast */
+  transition: color 0.2s ease;
+}
+
+.menu-item:hover {
+  color: white;
+}
+
+.menu-title:hover {
+  color: white;
+}
+
+#menu-toggle {
+  z-index: 999;
+}
+
+/* Color Picker */
+
+.color-picker-wrapper {
+  position: relative;
+}
+
+#color-picker-toggle {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: white;
+  border: 1px solid var(--accent-color);
+  transition: border-color 0.2s ease;
+}
+
+.color-picker-menu {
+  position: absolute;
+  top: 130%;
+  right: 0;
+  border: 1px solid var(--color-gray-500);
+  background-color: rgba(17, 17, 17, 0.6);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 10px;
+  padding: 16px;
+  z-index: 996;
+  min-width: 140px;
+  backdrop-filter: blur(6px);
+}
+
+.color-picker-menu.hidden {
+  display: none;
+}
+
+.color-options {
+  flex-wrap: wrap; 
+  gap: 8px;
+  justify-content: flex-start;
+}
+
+.color-option {
+  width: 18px;
+  height: 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  border: 2px solid var(--color-gray-500);
+  transition: transform 0.2s;
+  display: inline-block;
+}
+
+.color-option:hover {
+  transform: scale(1.2);
+}
+
+.hidden {
+  display: none;
+}
+
+/* Logo-Spin Animation */
+
+/*.logo-spin {
+  animation: spin-logo 0.6s ease;
+}
+
+@keyframes spin-logo {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+/*
+
+/* Logo-Spin-3D Animation Flip */
+
+.logo-spin {
+  animation: spin-logo 0.5s ease;
+  transform-style: preserve-3d;
+
+}
+
+@keyframes spin-logo {
+  from { transform: rotateY(0deg); }
+  to   { transform: rotateY(360deg); }
 }

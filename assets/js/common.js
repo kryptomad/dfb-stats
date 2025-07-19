@@ -1,8 +1,8 @@
 const cache = {};
 
-// ==========================
-// 1. Menü-Logik (☰ Button)
-// ==========================
+
+// 1. Menü-Logik (Button)
+
 function toggleMenu() {
   const menu = document.getElementById('sidebar-menu');
   const btn = document.getElementById('menu-toggle');
@@ -13,9 +13,9 @@ function toggleMenu() {
   btn.classList.toggle('active');
 }
 
-// ================================
+
 // 2. Initialisierung nach DOM-Load
-// ================================
+
 document.addEventListener("DOMContentLoaded", () => {
   const menu = document.getElementById('sidebar-menu');
   const menuToggleBtn = document.getElementById('menu-toggle');
@@ -25,6 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const headerOffset = 75;
 
   // 2.1 Menüpunkt schließt Menü
+
   document.querySelectorAll('#sidebar-menu a').forEach(link => {
     link.addEventListener('click', () => {
       menu?.classList.remove('visible');
@@ -33,11 +34,13 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // 2.2 Scroll-Effekt Header (graue Linie)
+
   window.addEventListener('scroll', () => {
     header?.classList.toggle('scrolled', window.scrollY > 0);
   });
 
   // 2.3 Klick außerhalb von Menü & Color Picker schließt beide
+
   document.addEventListener('click', function (event) {
     const clickedInsideMenu = menu?.contains(event.target);
     const clickedMenuToggle = menuToggleBtn?.contains(event.target);
@@ -56,6 +59,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // 2.4 🎨 Color Picker Setup
+
   renderColorOptions();
   colorToggleBtn?.addEventListener('click', () => {
     colorMenu?.classList.toggle('hidden');
@@ -79,6 +83,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 // 2.5 Dynamische Farboptionen einfügen
+
 function renderColorOptions() {
   const colorMenu = document.querySelector('.color-picker-menu');
   if (!colorMenu) return;
@@ -105,6 +110,7 @@ function renderColorOptions() {
 }
 
   // 2.6 Anker-Sprung mit Offset (inkl. Direktaufruf per #)
+
   function scrollToHashWithOffset() {
     const hash = window.location.hash;
     if (hash) {
@@ -142,9 +148,9 @@ function renderColorOptions() {
   });
 });
 
-// =======================
+
 // 3. SVG-Logo inline laden
-// =======================
+
 fetch('assets/logo.inline.svg')
   .then(res => res.text())
   .then(svg => {
@@ -154,9 +160,9 @@ fetch('assets/logo.inline.svg')
     }
   });
 
-// =======================
+
 // 4. Template Handling
-// =======================
+
 async function loadTemplate(template) {
   fetchContent(template).then(content => setInnerHTML(document.getElementById('content'), content));
 }
