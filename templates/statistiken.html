@@ -1,2 +1,64 @@
-<h2>Seite in Arbeit</h2>
-<p>Diese Seite wird demnächst mit Inhalten gefüllt.</p>
+<!-- statistik.html Grundgerüst mit Accordions + Vergleichs-UI -->
+
+<div class="section">
+  <h1 class="header-center-big-primary">Statistiken</h1>
+
+<!-- Accordion: Allzeit-Bestleistungen -->
+<div class="accordion">
+<details id="accordion-records" class="accordion-item">
+  <summary class="accordion-header">Allzeit-Rekorde</summary>
+  <div class="accordion-content">
+    <div class="record-toggle-buttons">
+      <button class="record-btn" data-mode="match">Match</button>
+      <button class="record-btn" data-mode="session">Session</button>
+      <button class="record-btn" data-mode="season">Season</button>
+      <button class="record-btn" data-mode="overall">Overall</button>
+    </div>
+    <div id="records-output" class="best-records-grid fade-in"></div>
+  </div>
+</details>
+
+</div>
+<!-- Accordion: Jahresvergleich -->
+<details id="accordion-jahresvergleich" class="accordion-item">
+  <summary class="accordion-header">Jahresvergleich</summary>
+  <div class="accordion-content row-reverse">
+    <div class="year-sidebar">
+      <h3>Jahre wählen</h3>
+      <div id="year-picker">
+        <button class="year-btn" data-year="2024">2024</button>
+        <button class="year-btn" data-year="2023">2023</button>
+        <button class="year-btn" data-year="2022">2022</button>
+      </div>
+    </div>
+    <div class="comparison-output" id="comparison-output">
+      <p>Wähle zwei Jahre aus, um den Vergleich zu starten.</p>
+    </div>
+  </div>
+</details>
+
+<!-- Accordion: Trendverlauf -->
+<details id="accordion-trend" class="accordion-item">
+  <summary class="accordion-header">Trendverlauf</summary>
+  <div class="accordion-content">
+    <label for="trend-category">Kategorie auswählen:</label>
+    <select id="trend-category">
+      <option value="3DA">3 Dart Average</option>
+      <option value="First9">First 9 Average</option>
+      <option value="180s">180er</option>
+    </select>
+
+    <label for="trend-range">Zeitraum:</label>
+    <select id="trend-range">
+      <option value="3">Letzte 3 Jahre</option>
+      <option value="5">Letzte 5 Jahre</option>
+      <option value="all">Alle Jahre</option>
+    </select>
+
+    <canvas id="trend-chart"></canvas>
+  </div>
+</details>
+
+
+
+<script src="assets/js/statistiken.js"></script>

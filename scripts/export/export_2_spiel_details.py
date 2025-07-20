@@ -19,7 +19,7 @@ def export_spiele_details():
         c.execute("""
             SELECT player, sets_won, legs_played, darts_thrown, avg_darts, avg_3dart, avg_first9, best_leg, worst_leg, 
                    high_finish, score_100, score_100_plus, score_140, score_140_plus, score_180, keep_pct, keep_ratio, 
-                   break_pct, break_ratio 
+                   break_pct, break_ratio
             FROM stats WHERE game_id = ?
         """, (game_id,))
         rows = c.fetchall()
@@ -50,48 +50,48 @@ def export_spiele_details():
         all_rounds = c.fetchall()
 
         # Starter je leg holen
+        # Alle Legs für dieses Spiel holen inkl. Darts & Avg
+        c.execute("""
+            SELECT leg_number, p1_score, p1_left, p2_score, p2_left, 
+                   p1_darts_leg, p2_darts_leg, p1_avg_leg, p2_avg_leg
+            FROM legs 
+            WHERE game_id = ? 
+            ORDER BY id
+        """, (game_id,))
+        all_rounds = c.fetchall()
+
+        # Starter je Leg
         c.execute("""
             SELECT leg_number, starter FROM legs 
             WHERE game_id = ? AND round = 0
             ORDER BY id
         """, (game_id,))
-        starter_map = dict(c.fetchall())  # z.B. {1: 'p1', 2: 'p2', ...}
+        starter_map = dict(c.fetchall())
+
+        legs = []
+        leg = {}
+        current_leg_number = None
 
         def format_score(score):
             return "" if score is None else str(score)
 
-        legs = []
-        leg = {
-            "rounds": [], "p1_darts_leg": None, "p2_darts_leg": None,
-            "p1_avg_leg": None, "p2_avg_leg": None,
-            "leg_number": None, "starter": None
-        }
-        current_leg_number = None
-        current_leg_darts_p1 = None
-        current_leg_darts_p2 = None
-
         for row in all_rounds:
-            leg_number, p1_score, p1_left, p2_score, p2_left, p1_darts_leg, p2_darts_leg = row
+            (leg_number, p1_score, p1_left, p2_score, p2_left,
+             p1_darts_leg, p2_darts_leg, p1_avg_leg, p2_avg_leg) = row
 
-            if (current_leg_number is not None and leg_number != current_leg_number):
-                legs.append(leg)
+            if leg_number != current_leg_number:
+                if leg.get("rounds"):
+                    legs.append(leg)
                 leg = {
-                    "rounds": [], "p1_darts_leg": None, "p2_darts_leg": None,
-                    "p1_avg_leg": None, "p2_avg_leg": None,
-                    "leg_number": None, "starter": None
+                    "leg_number": leg_number,
+                    "starter": starter_map.get(leg_number),
+                    "p1_darts_leg": p1_darts_leg,
+                    "p2_darts_leg": p2_darts_leg,
+                    "p1_avg_leg": p1_avg_leg,
+                    "p2_avg_leg": p2_avg_leg,
+                    "rounds": []
                 }
-
-            current_leg_number = leg_number
-            current_leg_darts_p1 = p1_darts_leg
-            current_leg_darts_p2 = p2_darts_leg
-
-            leg["leg_number"] = leg_number
-            leg["starter"] = starter_map.get(leg_number)
-
-            leg["p1_darts_leg"] = p1_darts_leg
-            leg["p2_darts_leg"] = p2_darts_leg
-            leg["p1_avg_leg"] = round((3 * 501 / p1_darts_leg), 2) if p1_darts_leg else None
-            leg["p2_avg_leg"] = round((3 * 501 / p2_darts_leg), 2) if p2_darts_leg else None
+                current_leg_number = leg_number
 
             leg["rounds"].append({
                 "p1_score": format_score(p1_score),
@@ -101,7 +101,7 @@ def export_spiele_details():
             })
 
         # Letztes Leg anhängen
-        if leg["rounds"]:
+        if leg.get("rounds"):
             legs.append(leg)
 
         output.append({
