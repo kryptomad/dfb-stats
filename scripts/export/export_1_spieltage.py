@@ -12,7 +12,7 @@ def export_spieltage():
 
     # Neueste Spiele holen
     c.execute("""
-        SELECT game_date, player1, legs1, legs2, player2, season, matchday, p1_avg_3dart, p2_avg_3dart
+        SELECT game_date, player1, legs1, legs2, player2, season, matchday, p1_avg_3dart_match, p2_avg_3dart_match
         FROM games
         ORDER BY game_date DESC, game_time DESC
         LIMIT ?
@@ -30,8 +30,8 @@ def export_spieltage():
             "p2": row[4],
             "season": row[5],
             "matchday": row[6],
-            "p1_avg_3dart": row[7],
-            "p2_avg_3dart": row[8]
+            "p1_avg_3dart_match": row[7],
+            "p2_avg_3dart_match": row[8]
         })
 
     # Sicherstellen, dass Ordner existiert

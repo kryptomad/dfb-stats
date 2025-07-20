@@ -116,9 +116,9 @@
               ${
                 leg.rounds && leg.rounds.length
                   ? leg.rounds[leg.rounds.length - 1].p1_score < 0
-                    ? `<span class="text-left bold">${leg.p1_darts_leg}</span> <span>Darts</span><span class="text-red"> | </span><span class="text-left bold">${leg.p1_avg_leg?.toFixed(2)}</span> <span>3DA</span>`
+                    ? `<span class="text-left bold">${leg.p1_darts_leg}</span> <span>Darts</span><span class="text-red"> | </span><span class="text-left bold">${leg.p1_avg_3dart_match?.toFixed(2)}</span> <span>3DA</span>`
                     : leg.rounds[leg.rounds.length - 1].p2_score < 0
-                      ? `<span class="text-left bold">${leg.p2_darts_leg}</span> <span>Darts</span><span class="text-red"> | </span><span class="text-left bold">${leg.p2_avg_leg?.toFixed(2)}</span> <span>3DA</span>`
+                      ? `<span class="text-left bold">${leg.p2_darts_leg}</span> <span>Darts</span><span class="text-red"> | </span><span class="text-left bold">${leg.p2_avg_3dart_match?.toFixed(2)}</span> <span>3DA</span>`
                       : ''
                   : ''
               }

@@ -1,5 +1,4 @@
 # Ignoriere SQLite-Datenbank & lokale Daten
-db/
 data/csv/
 *.db
 __pycache__/

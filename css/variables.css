@@ -1,4 +1,5 @@
 :root {
+  --font-default: 'Inter', sans-serif;
   --bg: var(--color-black); /* zentrale Hintergrundfarbe */
   --table-bg: var(--color-gray-600);
   --table-header-bg: var(--color-gray-700);

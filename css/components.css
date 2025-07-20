@@ -719,3 +719,258 @@
   from { transform: rotateY(0deg); }
   to   { transform: rotateY(360deg); }
 }
+
+/* neue statistik seite */
+
+.comparison-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 12px 0;
+}
+
+.bar-container {
+  position: relative;
+  flex-grow: 1;
+  height: 12px;
+  background: #222;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.bar {
+  position: absolute;
+  top: 0;
+  height: 100%;
+}
+
+.bar-left {
+  left: 0;
+  background-color: var(--accent-left, #3c8d7d);
+}
+
+.bar-right {
+  right: 0;
+  background-color: var(--accent-right, #444);
+}
+
+.category-label {
+  position: absolute;
+  top: -22px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 12px;
+  color: #aaa;
+}
+
+.value {
+  width: 40px;
+  text-align: center;
+  font-weight: bold;
+}
+
+
+/* Accordion Wrapper */
+.accordion {
+  border-radius: 6px;
+  background-color: var(--bg);
+  font-family: inherit;
+}
+
+/* Accordion Item (Details-Block) */
+details.accordion-item {
+  margin-bottom: 1.5rem;
+  border: 0px solid var(--color-gray-500);
+  border-radius: 6px;
+  overflow: hidden;
+  transition: border-color 0.3s ease;
+}
+
+/* Header */
+summary.accordion-header {
+  padding: 1rem 1.2rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--color-gray-200);
+  background-color: var(--bg);
+  cursor: pointer;
+  position: relative;
+  padding-right: 2rem;
+  border: none;
+  outline: none;
+  list-style: none;
+  transition: background-color 0.2s ease;
+}
+
+summary.accordion-header:hover {
+  background-color: var(--bg);
+}
+
+/* Pfeil entfernen */
+summary.accordion-header::marker,
+summary.accordion-header::-webkit-details-marker {
+  display: none;
+}
+
+/* Pfeil-Icon rechts */
+summary.accordion-header::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 18px;
+  width: 6px;
+  height: 6px;
+  border: solid var(--color-gray-400);
+  border-width: 0 1px 1px 0;
+  display: inline-block;
+  padding: 3px;
+  transform-origin: center;
+  transform: translateY(-50%) rotate(45deg);
+  transition: transform 0.3s ease;
+}
+
+/* Accordion Grundstruktur */
+details.accordion-item {
+  margin-bottom: 1.5rem;
+  background-color: var(--bg);
+  font-family: inherit;
+  border-bottom: 1px solid #333; /* ⬅ Nur unten eine Trennlinie */
+}
+
+/* Pfeil rotiert bei geöffnetem Zustand */
+details[open] > summary.accordion-header::after {
+  transform: translateY(-50%) rotate(-135deg);
+}
+
+/* Accordion-Inhalt */
+.accordion-content {
+  padding: 1rem 1.5rem;
+  border-top: 1px solid var(--color-gray-200);
+  animation: fadeInUp 0.25s ease;
+}
+
+/* Subtile Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Pfeil dreht sich beim Öffnen */
+details[open] > .accordion-header::after {
+  transform: translateY(-50%) rotate(180deg);
+}
+
+/* Inhalt (wird automatisch sichtbar bei open) */
+.accordion-content {
+  padding: 1rem 1.5rem;
+  border-top: 1px solid var(--color-gray-500);
+  animation: fadeSlide 0.3s ease;
+}
+
+/* Einblendeffekt */
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Best Records Grid */
+
+.best-records-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.1rem;
+  padding: 1rem 0;
+}
+
+@media (min-width: 350px) {
+  .best-records-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.record-card {
+  flex: 1 1 200px;
+  background-color: var(--bg-table);
+  border: 1px solid #333;
+  border-radius: 6px;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.record-title {
+  font-size: 1rem;
+  color: var(--color-gray-400);
+  margin-bottom: 0.7rem;
+}
+
+.record-value {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--accent-color);
+  margin-top: 0.1rem;
+}
+
+.record-player {
+  font-size: 0.9rem;
+  color: var(--color-gray-300);
+  margin-top: 0.1rem;
+}
+
+.record-toggle-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 1.3rem 0;
+  flex-wrap: wrap;
+}
+
+.record-btn {
+  padding: 0.5rem 1.2rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  border-radius: 6px;
+  border: 1px solid var(--color-gray-500);
+  background-color: transparent;
+  color: var(--text);
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.record-btn.active {
+  background-color: var(--accent-color);
+  color: var(--text);
+}
+
+.record-btn:hover {
+  border-color: var(--accent-color);
+}
+
+.record-label {
+  font-size: 1rem;
+  color: var(--color-gray-400);
+  margin-bottom: 0.7rem;
+}
+
+/* Fade-in Animation (optional – kann bleiben) */
+.fade-in {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}

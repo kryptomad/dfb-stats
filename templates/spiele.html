@@ -206,11 +206,11 @@
                 : `<span class="score-box loser">${spiel.p2_legs}</span>`;
 
             block.innerHTML = `
-        <div class="avg-spieltag links">${spiel.p1_avg_3dart?.toFixed(2) ?? '-'}</div>
+        <div class="avg-spieltag links">${spiel.p1_avg_3dart_match?.toFixed(2) ?? '-'}</div>
         <div class="spieler-spieltag links">${spiel.p1}</div>
         <div>${p1Score} ${p2Score}</div>
         <div class="spieler-spieltag rechts">${spiel.p2}</div>
-        <div class="avg-spieltag rechts">${spiel.p2_avg_3dart?.toFixed(2) ?? '-'}</div>
+        <div class="avg-spieltag rechts">${spiel.p2_avg_3dart_match?.toFixed(2) ?? '-'}</div>
       `;
 
             const currentParams = new URLSearchParams(window.location.search);

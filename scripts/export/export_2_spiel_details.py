@@ -42,18 +42,10 @@ def export_spiele_details():
                 "p2": f"{p2_val:.2f}" if isinstance(p2_val, float) else p2_val
             })
 
-        # Alle Runden für dieses Spiel holen
-        c.execute("""
-            SELECT leg_number, p1_score, p1_left, p2_score, p2_left, p1_darts_leg, p2_darts_leg 
-            FROM legs WHERE game_id = ? ORDER BY id
-        """, (game_id,))
-        all_rounds = c.fetchall()
-
-        # Starter je leg holen
-        # Alle Legs für dieses Spiel holen inkl. Darts & Avg
+        # Alle Legs inkl. Runden und Darts
         c.execute("""
             SELECT leg_number, p1_score, p1_left, p2_score, p2_left, 
-                   p1_darts_leg, p2_darts_leg, p1_avg_leg, p2_avg_leg
+                   p1_darts_leg, p2_darts_leg, p1_avg_3dart_match, p2_avg_3dart_match, leg_winner
             FROM legs 
             WHERE game_id = ? 
             ORDER BY id
@@ -77,7 +69,7 @@ def export_spiele_details():
 
         for row in all_rounds:
             (leg_number, p1_score, p1_left, p2_score, p2_left,
-             p1_darts_leg, p2_darts_leg, p1_avg_leg, p2_avg_leg) = row
+             p1_darts_leg, p2_darts_leg, p1_avg_3dart_match, p2_avg_3dart_match, leg_winner) = row
 
             if leg_number != current_leg_number:
                 if leg.get("rounds"):
@@ -87,8 +79,9 @@ def export_spiele_details():
                     "starter": starter_map.get(leg_number),
                     "p1_darts_leg": p1_darts_leg,
                     "p2_darts_leg": p2_darts_leg,
-                    "p1_avg_leg": p1_avg_leg,
-                    "p2_avg_leg": p2_avg_leg,
+                    "p1_avg_3dart_match": p1_avg_3dart_match,
+                    "p2_avg_3dart_match": p2_avg_3dart_match,
+                    "leg_winner": leg_winner,
                     "rounds": []
                 }
                 current_leg_number = leg_number

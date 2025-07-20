@@ -1,6 +1,6 @@
 /* Basics */
 body {
-    font-family: 'Segoe UI', sans-serif;
+    font-family: var(--font-default);
     background: var(--bg);
     margin: 0;
     color: var(--text);
