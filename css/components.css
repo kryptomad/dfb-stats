@@ -960,7 +960,7 @@ details[open] > .accordion-header::after {
 
 .record-label {
   font-size: 1rem;
-  color: var(--color-gray-400);
+  color: var(--color-white);
   margin-bottom: 0.7rem;
 }
 

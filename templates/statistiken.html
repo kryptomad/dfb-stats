@@ -1,5 +1,12 @@
-<div class="header-center-big-primary">Statistiken</div>
+<script>
+  const isLocalhost = location.hostname === "localhost" || location.hostname === "127.0.0.1";
+  const base = document.createElement("base");
+  base.href = isLocalhost ? "/" : "/dfb-stats/";
+  document.head.appendChild(base);
+</script>
 
+
+<div class="header-center-big-primary">Statistiken</div>
 <details id="accordion-records" class="accordion-item">
   <summary class="accordion-header">Allzeit-Rekorde</summary>
   <div class="accordion-content">
@@ -10,7 +17,7 @@
       <button class="record-btn" data-mode="overall">Overall</button>
     </div>
     <div id="records-output" class="best-records-grid fade-in"></div>
-    <script type="module" src="../assets/js/statistiken.js"></script>
+    <script type="module" src="assets/js/statistiken.js"></script>
   </div>
 </details>
 
