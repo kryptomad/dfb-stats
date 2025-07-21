@@ -1,10 +1,5 @@
-<!-- statistik.html Grundgerüst mit Accordions + Vergleichs-UI -->
+<div class="header-center-big-primary">Statistiken</div>
 
-<div class="section">
-  <h1 class="header-center-big-primary">Statistiken</h1>
-
-<!-- Accordion: Allzeit-Bestleistungen -->
-<div class="accordion">
 <details id="accordion-records" class="accordion-item">
   <summary class="accordion-header">Allzeit-Rekorde</summary>
   <div class="accordion-content">
@@ -15,10 +10,10 @@
       <button class="record-btn" data-mode="overall">Overall</button>
     </div>
     <div id="records-output" class="best-records-grid fade-in"></div>
+    <script type="module" src="../assets/js/statistiken.js"></script>
   </div>
 </details>
 
-</div>
 <!-- Accordion: Jahresvergleich -->
 <details id="accordion-jahresvergleich" class="accordion-item">
   <summary class="accordion-header">Jahresvergleich</summary>
@@ -58,7 +53,3 @@
     <canvas id="trend-chart"></canvas>
   </div>
 </details>
-
-
-
-<script src="assets/js/statistiken.js"></script>
