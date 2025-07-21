@@ -796,10 +796,10 @@ summary.accordion-header {
   cursor: pointer;
   position: relative;
   padding-right: 2rem;
-  border: none;
   outline: none;
   list-style: none;
   transition: background-color 0.2s ease;
+  border-bottom: 1px solid #333; /* ⬅ Nur unten eine Trennlinie */
 }
 
 summary.accordion-header:hover {
@@ -834,7 +834,7 @@ details.accordion-item {
   margin-bottom: 1.5rem;
   background-color: var(--bg);
   font-family: inherit;
-  border-bottom: 1px solid #333; /* ⬅ Nur unten eine Trennlinie */
+  border-bottom: 0px solid #333; /* ⬅ Nur unten eine Trennlinie */
 }
 
 /* Pfeil rotiert bei geöffnetem Zustand */
@@ -842,35 +842,9 @@ details[open] > summary.accordion-header::after {
   transform: translateY(-50%) rotate(-135deg);
 }
 
-/* Accordion-Inhalt */
-.accordion-content {
-  padding: 1rem 1.5rem;
-  border-top: 1px solid var(--color-gray-200);
-  animation: fadeInUp 0.25s ease;
-}
-
-/* Subtile Animation */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(4px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 /* Pfeil dreht sich beim Öffnen */
 details[open] > .accordion-header::after {
   transform: translateY(-50%) rotate(180deg);
-}
-
-/* Inhalt (wird automatisch sichtbar bei open) */
-.accordion-content {
-  padding: 1rem 1.5rem;
-  border-top: 1px solid var(--color-gray-500);
-  animation: fadeSlide 0.3s ease;
 }
 
 /* Einblendeffekt */
@@ -974,4 +948,130 @@ details[open] > .accordion-header::after {
 .fade-in.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* Jahresvergleich */
+
+.year-comparison {
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.comparison-box {
+  background: var(--color-gray-700);
+  padding: 0.5rem;
+  border-radius: 6px;
+  margin-top: 17px;
+  text-align: center;
+  flex: 1;
+}
+
+.comparison-years {
+  display: flex;
+  justify-content: space-between;
+  color: var(--accent-color);
+  font-size: 1.2rem;
+  border: var(--color-gray-500);
+  font-weight: bold;
+
+  margin-bottom: 0.3rem;
+}
+
+.comparison-title {
+  font-size: 0.8rem;
+  font-weight: normal;
+  margin-bottom: 0.1rem;
+  margin-top: 7px;
+}
+
+.comparison-values {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  justify-content: space-between;
+}
+
+.value-left,
+.value-right {
+  font-weight: 600;
+  font-size: 1rem;
+    font-size: 0.9rem;
+  width: 3rem;
+}
+
+.comparison-bar {
+  flex: 1;
+  height: 6px;
+  background: #333;
+  border-radius: 4px;
+  display: flex;
+  overflow: hidden;
+}
+
+.bar-left {
+  background: var(--color-gray-400);
+}
+
+.bar-right {
+  background: var(--accent-color);
+}
+
+.year-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.comparison-btn {
+  font-size: 0.8rem;
+  font-weight: 500;
+  border-radius: 6px;
+  border: 1px solid var(--color-gray-500);
+  background-color: transparent;
+  color: var(--text);
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  display: inline-block;
+  width: fit-content;
+  padding: 0.4rem 0.6rem;
+}
+
+.comparison-btn.active {
+  background-color: var(--accent-color);
+  color: var(--text);
+}
+
+.comparison-btn:hover {
+  border-color: var(--accent-color);
+}
+
+
+/* Spieler Leistungsübersicht */
+
+.radar-section {
+  padding: 1rem;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.02);
+  margin: 1rem 0;
+}
+
+.radar-header {
+  font-weight: 600;
+  font-size: 1rem;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  color: var(--text); /* Optional: oder eine feste Farbe */
+}
+
+.radar-container {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.radar-container canvas {
+  width: 100% !important;
+  height: 300px !important;
 }

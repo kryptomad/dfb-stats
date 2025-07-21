@@ -230,3 +230,10 @@ function loadAndScroll(template, hash) {
     tryScroll();
   });
 }
+
+
+function ladeRadarProfil() {
+  loadTemplate('spielerprofil').then(() => {
+    initRadarChart();
+  });
+}

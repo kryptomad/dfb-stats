@@ -1,3 +1,7 @@
+
+<!-- Chart.js zuerst laden -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 <div class="player-profile">
     <!-- Sektion 1: Header mit Bild & Name -->
     <div class="player-header">
@@ -18,40 +22,75 @@
             <td>Monatsoskar</td>
             <td><span class="emoji">🥇</span> 4</td>
         </tr>
+    <tr></tr>    <tr></tr>    <tr></tr>
         <!-- Optional: weitere Zeilen -->
     </table>
+<div></div>
 
-    <!-- Sektion 3: Aufklappbare Statistiken -->
-    <div class="standard-table">
-        <div class="toggle-header" onclick="toggleBox(this)">Best of</div>
-        <div class="toggle-content">
-            <p>[Tabelle mit Jahresdaten]</p>
-        </div>
-    </div>
-    <div class="standard-table">
-        <div class="toggle-header" onclick="toggleBox(this)">Jahresstatistik 2025</div>
-        <div class="toggle-content">
-            <p>[Tabelle mit Jahresdaten]</p>
-        </div>
-    </div>
-    <div class="toggle-box">
-        <div class="toggle-header" onclick="toggleBox(this)">Monatsstatistik Juli</div>
-        <div class="toggle-content">
-            <p>[Tabelle mit Monatsdaten]</p>
-        </div>
-    </div>
-    <div class="toggle-box">
-        <div class="toggle-header" onclick="toggleBox(this)">Alle Spiele</div>
-        <div class="toggle-content">
-            <p>[Tabelle aller Spiele mit Gegner, Datum, Avg usw.]</p>
-        </div>
-    </div>
+<details id="accordion-records" class="accordion-item">
+  <summary class="accordion-header">Jahresvergleich</summary>
+</details>
+
+<!-- Accordion: Trendverlauf -->
+<details id="accordion-trend" class="accordion-item">
+  <summary class="accordion-header">Trendverlauf</summary>
+    <label for="trend-category">Kategorie auswählen:</label>
+    <select id="trend-category">
+      <option value="3DA">3 Dart Average</option>
+      <option value="First9">First 9 Average</option>
+      <option value="180s">180er</option>
+    </select>
+
+    <label for="trend-range">Zeitraum:</label>
+    <select id="trend-range">
+      <option value="3">Letzte 3 Jahre</option>
+      <option value="5">Letzte 5 Jahre</option>
+      <option value="all">Alle Jahre</option>
+    </select>
+</details>
+
+<div class="radar-section">
+  <div class="radar-header">Leistungsübersicht mad</div>
+  <div class="radar-container">
+    <canvas id="radarChart"></canvas>
+  </div>
 </div>
 
+
+<!-- Dann dein eigener Code -->
 <script>
-    function toggleBox(header) {
-        header.classList.toggle('open');
-        const content = header.nextElementSibling;
-        content.style.display = content.style.display === 'block' ? 'none' : 'block';
+function initRadarChart() {
+  const canvas = document.getElementById('radarChart');
+  if (!canvas) return console.warn('Kein Canvas gefunden');
+
+  const ctx = canvas.getContext('2d');
+  new Chart(ctx, {
+    type: 'radar',
+    data: {
+      labels: ['41+', '60+', '100+', '140+', '180', 'Best Leg'],
+      datasets: [{
+        label: 'Spielerprofil',
+        data: [12, 24, 40, 18, 4, 14],
+        backgroundColor: 'rgba(220, 20, 60, 0.4)',
+        borderColor: 'crimson',
+        borderWidth: 2,
+        pointBackgroundColor: 'white',
+      }]
+    },
+    options: {
+      scales: {
+        r: {
+          pointLabels: { color: '#ccc', font: { size: 12 } },
+          ticks: { beginAtZero: true, color: '#aaa', stepSize: 10, backdropColor: 'transparent' },
+          grid: { color: '#555' },
+          angleLines: { color: '#444' }
+        }
+      },
+      plugins: {
+        legend: { labels: { color: '#ccc' } }
+      }
     }
+  });
+}
+
 </script>
