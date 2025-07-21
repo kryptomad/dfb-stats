@@ -967,9 +967,10 @@ details[open] > .accordion-header::after {
 /* Fade-in Animation (optional – kann bleiben) */
 .fade-in {
   opacity: 0;
-  transform: translateY(10px);
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  transform: translateY(12px); /* etwas größerer Effekt */
+  transition: opacity 0.5s ease, transform 0.5s ease;
 }
+
 .fade-in.visible {
   opacity: 1;
   transform: translateY(0);
