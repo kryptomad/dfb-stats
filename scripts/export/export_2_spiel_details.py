@@ -42,10 +42,9 @@ def export_spiele_details():
                 "p2": f"{p2_val:.2f}" if isinstance(p2_val, float) else p2_val
             })
 
-        # Alle Legs inkl. Runden und Darts
+        # Alle Legs inkl. Runden und Scores
         c.execute("""
-            SELECT leg_number, p1_score, p1_left, p2_score, p2_left, 
-                   p1_darts_leg, p2_darts_leg, p1_avg_3dart_match, p2_avg_3dart_match, leg_winner
+            SELECT leg_number, p1_score, p1_left, p2_score, p2_left 
             FROM legs 
             WHERE game_id = ? 
             ORDER BY id
@@ -60,6 +59,24 @@ def export_spiele_details():
         """, (game_id,))
         starter_map = dict(c.fetchall())
 
+        # Zusatzdaten für jedes Leg (aus Finalrunde)
+        c.execute("""
+        SELECT leg_number, p1_darts_leg, p2_darts_leg,
+                p1_avg_3dart_leg, p2_avg_3dart_leg, leg_winner
+        FROM legs 
+        WHERE game_id = ? AND p1_darts_leg IS NOT NULL
+        """, (game_id,))
+        leg_stats_map = {
+            row[0]: {
+                "p1_darts_leg": row[1],
+                "p2_darts_leg": row[2],
+                "p1_avg_3dart_leg": row[3],
+                "p2_avg_3dart_leg": row[4],
+                "leg_winner": row[5]
+            }
+            for row in c.fetchall()
+        }
+
         legs = []
         leg = {}
         current_leg_number = None
@@ -68,20 +85,22 @@ def export_spiele_details():
             return "" if score is None else str(score)
 
         for row in all_rounds:
-            (leg_number, p1_score, p1_left, p2_score, p2_left,
-             p1_darts_leg, p2_darts_leg, p1_avg_3dart_match, p2_avg_3dart_match, leg_winner) = row
+            leg_number, p1_score, p1_left, p2_score, p2_left = row
 
             if leg_number != current_leg_number:
                 if leg.get("rounds"):
                     legs.append(leg)
+
+                stats = leg_stats_map.get(leg_number, {})
+
                 leg = {
                     "leg_number": leg_number,
                     "starter": starter_map.get(leg_number),
-                    "p1_darts_leg": p1_darts_leg,
-                    "p2_darts_leg": p2_darts_leg,
-                    "p1_avg_3dart_match": p1_avg_3dart_match,
-                    "p2_avg_3dart_match": p2_avg_3dart_match,
-                    "leg_winner": leg_winner,
+                    "p1_darts_leg": stats.get("p1_darts_leg"),
+                    "p2_darts_leg": stats.get("p2_darts_leg"),
+                    "p1_avg_3dart_leg": stats.get("p1_avg_3dart_leg"),
+                    "p2_avg_3dart_leg": stats.get("p2_avg_3dart_leg"),
+                    "leg_winner": stats.get("leg_winner"),
                     "rounds": []
                 }
                 current_leg_number = leg_number

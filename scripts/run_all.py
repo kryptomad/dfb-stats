@@ -8,7 +8,7 @@ def log(msg):
 
 # DB: Import & Berechnungen
 log("Step 0: Importiere CSV in SQLite")
-subprocess.run(["python", "db/db_1_import_csv.py"])
+subprocess.run(["python", "db/db_0_import_csv.py"])
 
 log("Step 1: Importiere CSV in SQLite")
 subprocess.run(["python", "db/db_1_prepare_legs.py"])
