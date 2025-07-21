@@ -1,5 +1,6 @@
 [
   {
+    "game_id": 540,
     "date": "2025-03-29",
     "p1": "Martin",
     "p1_legs": 3,
@@ -8,9 +9,10 @@
     "season": "2024/2025",
     "matchday": 4,
     "p1_avg_3dart_match": 36.363,
-    "p2_avg_3dart_match": 37.575
+    "p2_avg_3dart_match": 35.15
   },
   {
+    "game_id": 539,
     "date": "2025-03-28",
     "p1": "Uwe",
     "p1_legs": 1,
@@ -18,10 +20,11 @@
     "p2": "Franz-Josef",
     "season": "2024/2025",
     "matchday": 4,
-    "p1_avg_3dart_match": 34.751,
-    "p2_avg_3dart_match": 34.552
+    "p1_avg_3dart_match": 30.277,
+    "p2_avg_3dart_match": 34.517
   },
   {
+    "game_id": 538,
     "date": "2025-03-28",
     "p1": "Frank",
     "p1_legs": 3,
@@ -29,10 +32,11 @@
     "p2": "Heiner",
     "season": "2024/2025",
     "matchday": 4,
-    "p1_avg_3dart_match": 26.555,
-    "p2_avg_3dart_match": 26.649
+    "p1_avg_3dart_match": 26.502,
+    "p2_avg_3dart_match": 26.298
   },
   {
+    "game_id": 537,
     "date": "2025-03-28",
     "p1": "Martin",
     "p1_legs": 2,
@@ -40,10 +44,11 @@
     "p2": "Franz-Josef",
     "season": "2024/2025",
     "matchday": 4,
-    "p1_avg_3dart_match": 52.923,
-    "p2_avg_3dart_match": 52.923
+    "p1_avg_3dart_match": 51.866,
+    "p2_avg_3dart_match": 46.817
   },
   {
+    "game_id": 536,
     "date": "2025-03-28",
     "p1": "Uwe",
     "p1_legs": 3,
@@ -51,10 +56,11 @@
     "p2": "Frank",
     "season": "2024/2025",
     "matchday": 4,
-    "p1_avg_3dart_match": 50.1,
-    "p2_avg_3dart_match": 50.949
+    "p1_avg_3dart_match": 49.6,
+    "p2_avg_3dart_match": 46.703
   },
   {
+    "game_id": 535,
     "date": "2025-03-28",
     "p1": "Franz-Josef",
     "p1_legs": 3,
@@ -63,9 +69,10 @@
     "season": "2024/2025",
     "matchday": 4,
     "p1_avg_3dart_match": 49.549,
-    "p2_avg_3dart_match": 51.828
+    "p2_avg_3dart_match": 40.586
   },
   {
+    "game_id": 534,
     "date": "2025-03-28",
     "p1": "Martin",
     "p1_legs": 3,
@@ -74,9 +81,10 @@
     "season": "2024/2025",
     "matchday": 4,
     "p1_avg_3dart_match": 56.363,
-    "p2_avg_3dart_match": 57.808
+    "p2_avg_3dart_match": 42.269
   },
   {
+    "game_id": 533,
     "date": "2025-03-28",
     "p1": "Franz-Josef",
     "p1_legs": 3,
@@ -84,10 +92,11 @@
     "p2": "Heiner",
     "season": "2024/2025",
     "matchday": 4,
-    "p1_avg_3dart_match": 45.545,
-    "p2_avg_3dart_match": 46.969
+    "p1_avg_3dart_match": 44.782,
+    "p2_avg_3dart_match": 37.481
   },
   {
+    "game_id": 532,
     "date": "2025-03-28",
     "p1": "Martin",
     "p1_legs": 3,
@@ -96,9 +105,10 @@
     "season": "2024/2025",
     "matchday": 4,
     "p1_avg_3dart_match": 60.12,
-    "p2_avg_3dart_match": 62.625
+    "p2_avg_3dart_match": 38.042
   },
   {
+    "game_id": 531,
     "date": "2025-03-28",
     "p1": "Uwe",
     "p1_legs": 3,
@@ -106,10 +116,11 @@
     "p2": "Heiner",
     "season": "2024/2025",
     "matchday": 4,
-    "p1_avg_3dart_match": 40.622,
-    "p2_avg_3dart_match": 41.178
+    "p1_avg_3dart_match": 40.297,
+    "p2_avg_3dart_match": 34.541
   },
   {
+    "game_id": 530,
     "date": "2025-02-01",
     "p1": "Uwe",
     "p1_legs": 3,
@@ -117,10 +128,11 @@
     "p2": "Frank",
     "season": "2024/2025",
     "matchday": 3,
-    "p1_avg_3dart_match": 43.252,
-    "p2_avg_3dart_match": 42.638
+    "p1_avg_3dart_match": 42.561,
+    "p2_avg_3dart_match": 36.851
   },
   {
+    "game_id": 529,
     "date": "2025-02-01",
     "p1": "Franz-Josef",
     "p1_legs": 3,
@@ -129,9 +141,10 @@
     "season": "2024/2025",
     "matchday": 3,
     "p1_avg_3dart_match": 33.4,
-    "p2_avg_3dart_match": 34.159
+    "p2_avg_3dart_match": 32.386
   },
   {
+    "game_id": 528,
     "date": "2025-02-01",
     "p1": "Martin",
     "p1_legs": 3,
@@ -140,9 +153,10 @@
     "season": "2024/2025",
     "matchday": 3,
     "p1_avg_3dart_match": 50.1,
-    "p2_avg_3dart_match": 51.828
+    "p2_avg_3dart_match": 38.966
   },
   {
+    "game_id": 527,
     "date": "2025-02-01",
     "p1": "Frank",
     "p1_legs": 3,
@@ -150,10 +164,11 @@
     "p2": "Heiner",
     "season": "2024/2025",
     "matchday": 3,
-    "p1_avg_3dart_match": 32.852,
-    "p2_avg_3dart_match": 32.674
+    "p1_avg_3dart_match": 32.623,
+    "p2_avg_3dart_match": 32.071
   },
   {
+    "game_id": 526,
     "date": "2025-02-01",
     "p1": "Franz-Josef",
     "p1_legs": 1,
@@ -161,10 +176,11 @@
     "p2": "Martin",
     "season": "2024/2025",
     "matchday": 3,
-    "p1_avg_3dart_match": 45.893,
-    "p2_avg_3dart_match": 45.203
+    "p1_avg_3dart_match": 37.718,
+    "p2_avg_3dart_match": 45.158
   },
   {
+    "game_id": 525,
     "date": "2025-02-01",
     "p1": "Heiner",
     "p1_legs": 0,
@@ -172,10 +188,11 @@
     "p2": "Martin",
     "season": "2024/2025",
     "matchday": 3,
-    "p1_avg_3dart_match": 44.206,
+    "p1_avg_3dart_match": 37.971,
     "p2_avg_3dart_match": 44.644
   },
   {
+    "game_id": 524,
     "date": "2025-02-01",
     "p1": "Frank",
     "p1_legs": 1,
@@ -183,10 +200,11 @@
     "p2": "Franz-Josef",
     "season": "2024/2025",
     "matchday": 3,
-    "p1_avg_3dart_match": 47.339,
-    "p2_avg_3dart_match": 45.893
+    "p1_avg_3dart_match": 40.417,
+    "p2_avg_3dart_match": 45.802
   },
   {
+    "game_id": 523,
     "date": "2025-02-01",
     "p1": "Heiner",
     "p1_legs": 0,
@@ -194,10 +212,11 @@
     "p2": "Uwe",
     "season": "2024/2025",
     "matchday": 3,
-    "p1_avg_3dart_match": 31.312,
+    "p1_avg_3dart_match": 30.083,
     "p2_avg_3dart_match": 31.312
   },
   {
+    "game_id": 522,
     "date": "2025-02-01",
     "p1": "Martin",
     "p1_legs": 3,
@@ -206,9 +225,10 @@
     "season": "2024/2025",
     "matchday": 3,
     "p1_avg_3dart_match": 60.12,
-    "p2_avg_3dart_match": 62.625
+    "p2_avg_3dart_match": 43.125
   },
   {
+    "game_id": 521,
     "date": "2025-02-01",
     "p1": "Franz-Josef",
     "p1_legs": 3,
@@ -216,10 +236,11 @@
     "p2": "Uwe",
     "season": "2024/2025",
     "matchday": 3,
-    "p1_avg_3dart_match": 47.339,
-    "p2_avg_3dart_match": 46.969
+    "p1_avg_3dart_match": 47.008,
+    "p2_avg_3dart_match": 42.094
   },
   {
+    "game_id": 520,
     "date": "2024-10-12",
     "p1": "Franz-Josef",
     "p1_legs": 1,
@@ -227,10 +248,11 @@
     "p2": "Martin",
     "season": "2024/2025",
     "matchday": 2,
-    "p1_avg_3dart_match": 52.278,
-    "p2_avg_3dart_match": 52.737
+    "p1_avg_3dart_match": 44.504,
+    "p2_avg_3dart_match": 51.895
   },
   {
+    "game_id": 519,
     "date": "2024-10-11",
     "p1": "Uwe",
     "p1_legs": 1,
@@ -238,10 +260,11 @@
     "p2": "Frank",
     "season": "2024/2025",
     "matchday": 2,
-    "p1_avg_3dart_match": 33.587,
-    "p2_avg_3dart_match": 33.4
+    "p1_avg_3dart_match": 33.251,
+    "p2_avg_3dart_match": 32.733
   },
   {
+    "game_id": 518,
     "date": "2024-10-11",
     "p1": "Martin",
     "p1_legs": 3,
@@ -250,9 +273,10 @@
     "season": "2024/2025",
     "matchday": 2,
     "p1_avg_3dart_match": 58.558,
-    "p2_avg_3dart_match": 60.12
+    "p2_avg_3dart_match": 37.32
   },
   {
+    "game_id": 517,
     "date": "2024-10-11",
     "p1": "Frank",
     "p1_legs": 3,
@@ -260,10 +284,11 @@
     "p2": "Franz-Josef",
     "season": "2024/2025",
     "matchday": 2,
-    "p1_avg_3dart_match": 41.066,
-    "p2_avg_3dart_match": 41.983
+    "p1_avg_3dart_match": 38.984,
+    "p2_avg_3dart_match": 39.754
   },
   {
+    "game_id": 516,
     "date": "2024-10-11",
     "p1": "Heiner",
     "p1_legs": 0,
@@ -271,10 +296,11 @@
     "p2": "Uwe",
     "season": "2024/2025",
     "matchday": 2,
-    "p1_avg_3dart_match": 40.622,
+    "p1_avg_3dart_match": 39.946,
     "p2_avg_3dart_match": 40.991
   },
   {
+    "game_id": 515,
     "date": "2024-10-11",
     "p1": "Frank",
     "p1_legs": 3,
@@ -282,10 +308,11 @@
     "p2": "Heiner",
     "season": "2024/2025",
     "matchday": 2,
-    "p1_avg_3dart_match": 40.898,
-    "p2_avg_3dart_match": 41.462
+    "p1_avg_3dart_match": 38.898,
+    "p2_avg_3dart_match": 34.634
   },
   {
+    "game_id": 514,
     "date": "2024-10-11",
     "p1": "Uwe",
     "p1_legs": 2,
@@ -293,10 +320,11 @@
     "p2": "Franz-Josef",
     "season": "2024/2025",
     "matchday": 2,
-    "p1_avg_3dart_match": 37.388,
-    "p2_avg_3dart_match": 37.764
+    "p1_avg_3dart_match": 36.642,
+    "p2_avg_3dart_match": 37.01
   },
   {
+    "game_id": 513,
     "date": "2024-10-11",
     "p1": "Martin",
     "p1_legs": 3,
@@ -305,9 +333,10 @@
     "season": "2024/2025",
     "matchday": 2,
     "p1_avg_3dart_match": 47.968,
-    "p2_avg_3dart_match": 48.484
+    "p2_avg_3dart_match": 35.194
   },
   {
+    "game_id": 512,
     "date": "2024-10-11",
     "p1": "Heiner",
     "p1_legs": 1,
@@ -315,10 +344,11 @@
     "p2": "Franz-Josef",
     "season": "2024/2025",
     "matchday": 2,
-    "p1_avg_3dart_match": 40.622,
-    "p2_avg_3dart_match": 40.08
+    "p1_avg_3dart_match": 38.392,
+    "p2_avg_3dart_match": 39.96
   },
   {
+    "game_id": 511,
     "date": "2024-10-11",
     "p1": "Martin",
     "p1_legs": 3,
@@ -327,9 +357,10 @@
     "season": "2024/2025",
     "matchday": 2,
     "p1_avg_3dart_match": 62.625,
-    "p2_avg_3dart_match": 65.348
+    "p2_avg_3dart_match": 30.957
   },
   {
+    "game_id": 510,
     "date": "2024-07-19",
     "p1": "Martin",
     "p1_legs": 3,
@@ -338,9 +369,10 @@
     "season": "2024/2025",
     "matchday": 1,
     "p1_avg_3dart_match": 54.325,
-    "p2_avg_3dart_match": 57.808
+    "p2_avg_3dart_match": 36.423
   },
   {
+    "game_id": 509,
     "date": "2024-07-19",
     "p1": "Franz-Josef",
     "p1_legs": 3,
@@ -349,9 +381,10 @@
     "season": "2024/2025",
     "matchday": 1,
     "p1_avg_3dart_match": 47.463,
-    "p2_avg_3dart_match": 48.484
+    "p2_avg_3dart_match": 41.355
   },
   {
+    "game_id": 508,
     "date": "2024-07-19",
     "p1": "Martin",
     "p1_legs": 3,
@@ -360,9 +393,10 @@
     "season": "2024/2025",
     "matchday": 1,
     "p1_avg_3dart_match": 59.329,
-    "p2_avg_3dart_match": 62.625
+    "p2_avg_3dart_match": 41.917
   },
   {
+    "game_id": 507,
     "date": "2024-07-19",
     "p1": "Uwe",
     "p1_legs": 3,
@@ -370,10 +404,11 @@
     "p2": "Heiner",
     "season": "2024/2025",
     "matchday": 1,
-    "p1_avg_3dart_match": 27.081,
-    "p2_avg_3dart_match": 26.96
+    "p1_avg_3dart_match": 27.054,
+    "p2_avg_3dart_match": 26.543
   },
   {
+    "game_id": 506,
     "date": "2024-07-19",
     "p1": "Frank",
     "p1_legs": 0,
@@ -381,10 +416,11 @@
     "p2": "Franz-Josef",
     "season": "2024/2025",
     "matchday": 1,
-    "p1_avg_3dart_match": 50.1,
+    "p1_avg_3dart_match": 33.2,
     "p2_avg_3dart_match": 50.1
   },
   {
+    "game_id": 505,
     "date": "2024-07-19",
     "p1": "Uwe",
     "p1_legs": 3,
@@ -393,9 +429,10 @@
     "season": "2024/2025",
     "matchday": 1,
     "p1_avg_3dart_match": 36.659,
-    "p2_avg_3dart_match": 37.575
+    "p2_avg_3dart_match": 33.7
   },
   {
+    "game_id": 504,
     "date": "2024-07-19",
     "p1": "Heiner",
     "p1_legs": 2,
@@ -403,10 +440,11 @@
     "p2": "Franz-Josef",
     "season": "2024/2025",
     "matchday": 1,
-    "p1_avg_3dart_match": 43.692,
-    "p2_avg_3dart_match": 44.206
+    "p1_avg_3dart_match": 35.634,
+    "p2_avg_3dart_match": 44.135
   },
   {
+    "game_id": 503,
     "date": "2024-07-19",
     "p1": "Uwe",
     "p1_legs": 0,
@@ -414,10 +452,11 @@
     "p2": "Martin",
     "season": "2024/2025",
     "matchday": 1,
-    "p1_avg_3dart_match": 57.808,
+    "p1_avg_3dart_match": 48.154,
     "p2_avg_3dart_match": 58.558
   },
   {
+    "game_id": 502,
     "date": "2024-07-19",
     "p1": "Heiner",
     "p1_legs": 3,
@@ -426,9 +465,10 @@
     "season": "2024/2025",
     "matchday": 1,
     "p1_avg_3dart_match": 31.097,
-    "p2_avg_3dart_match": 31.312
+    "p2_avg_3dart_match": 30.979
   },
   {
+    "game_id": 501,
     "date": "2024-07-19",
     "p1": "Franz-Josef",
     "p1_legs": 0,
@@ -436,10 +476,11 @@
     "p2": "Martin",
     "season": "2024/2025",
     "matchday": 1,
-    "p1_avg_3dart_match": 60.12,
+    "p1_avg_3dart_match": 50.04,
     "p2_avg_3dart_match": 60.932
   },
   {
+    "game_id": 500,
     "date": "2024-03-28",
     "p1": "Martin",
     "p1_legs": 3,
@@ -448,9 +489,10 @@
     "season": "2023/2024",
     "matchday": 10,
     "p1_avg_3dart_match": 47.968,
-    "p2_avg_3dart_match": 50.1
+    "p2_avg_3dart_match": 47.267
   },
   {
+    "game_id": 499,
     "date": "2024-03-28",
     "p1": "Uwe",
     "p1_legs": 3,
@@ -458,10 +500,11 @@
     "p2": "Heiner",
     "season": "2023/2024",
     "matchday": 10,
-    "p1_avg_3dart_match": 33.966,
-    "p2_avg_3dart_match": 33.966
+    "p1_avg_3dart_match": 30.407,
+    "p2_avg_3dart_match": 31.203
   },
   {
+    "game_id": 498,
     "date": "2024-03-28",
     "p1": "Franz-Josef",
     "p1_legs": 3,
@@ -469,10 +512,11 @@
     "p2": "Frank",
     "season": "2023/2024",
     "matchday": 10,
-    "p1_avg_3dart_match": 44.533,
-    "p2_avg_3dart_match": 44.533
+    "p1_avg_3dart_match": 44.422,
+    "p2_avg_3dart_match": 39.244
   },
   {
+    "game_id": 497,
     "date": "2024-03-28",
     "p1": "Martin",
     "p1_legs": 3,
@@ -481,9 +525,10 @@
     "season": "2023/2024",
     "matchday": 10,
     "p1_avg_3dart_match": 44.206,
-    "p2_avg_3dart_match": 44.206
+    "p2_avg_3dart_match": 29.059
   },
   {
+    "game_id": 496,
     "date": "2024-03-28",
     "p1": "Frank",
     "p1_legs": 1,
@@ -491,10 +536,11 @@
     "p2": "Uwe",
     "season": "2023/2024",
     "matchday": 10,
-    "p1_avg_3dart_match": 34.354,
-    "p2_avg_3dart_match": 33.775
+    "p1_avg_3dart_match": 33.857,
+    "p2_avg_3dart_match": 33.607
   },
   {
+    "game_id": 495,
     "date": "2024-03-28",
     "p1": "Frank",
     "p1_legs": 3,
@@ -503,9 +549,10 @@
     "season": "2023/2024",
     "matchday": 10,
     "p1_avg_3dart_match": 30.06,
-    "p2_avg_3dart_match": 30.06
+    "p2_avg_3dart_match": 29.36
   },
   {
+    "game_id": 494,
     "date": "2024-03-28",
     "p1": "Martin",
     "p1_legs": 3,
@@ -514,9 +561,10 @@
     "season": "2023/2024",
     "matchday": 10,
     "p1_avg_3dart_match": 53.679,
-    "p2_avg_3dart_match": 57.808
+    "p2_avg_3dart_match": 43.269
   },
   {
+    "game_id": 493,
     "date": "2024-03-28",
     "p1": "Heiner",
     "p1_legs": 0,
@@ -524,10 +572,11 @@
     "p2": "Franz-Josef",
     "season": "2023/2024",
     "matchday": 10,
-    "p1_avg_3dart_match": 35.786,
+    "p1_avg_3dart_match": 27.69,
     "p2_avg_3dart_match": 36.363
   },
   {
+    "game_id": 492,
     "date": "2024-03-28",
     "p1": "Frank",
     "p1_legs": 0,
@@ -535,10 +584,11 @@
     "p2": "Martin",
     "season": "2023/2024",
     "matchday": 10,
-    "p1_avg_3dart_match": 38.538,
+    "p1_avg_3dart_match": 35.256,
     "p2_avg_3dart_match": 39.209
   },
   {
+    "game_id": 491,
     "date": "2024-03-28",
     "p1": "Uwe",
     "p1_legs": 0,
@@ -546,10 +596,11 @@
     "p2": "Franz-Josef",
     "season": "2023/2024",
     "matchday": 10,
-    "p1_avg_3dart_match": 45.545,
+    "p1_avg_3dart_match": 41.636,
     "p2_avg_3dart_match": 45.545
   },
   {
+    "game_id": 490,
     "date": "2024-02-16",
     "p1": "Martin",
     "p1_legs": 3,
@@ -558,9 +609,10 @@
     "season": "2023/2024",
     "matchday": 9,
     "p1_avg_3dart_match": 55.667,
-    "p2_avg_3dart_match": 57.808
+    "p2_avg_3dart_match": 41.192
   },
   {
+    "game_id": 489,
     "date": "2024-02-16",
     "p1": "Frank",
     "p1_legs": 1,
@@ -568,10 +620,11 @@
     "p2": "Heiner",
     "season": "2023/2024",
     "matchday": 9,
-    "p1_avg_3dart_match": 28.629,
-    "p2_avg_3dart_match": 28.766
+    "p1_avg_3dart_match": 28.371,
+    "p2_avg_3dart_match": 28.278
   },
   {
+    "game_id": 488,
     "date": "2024-02-16",
     "p1": "Franz-Josef",
     "p1_legs": 3,
@@ -580,9 +633,10 @@
     "season": "2023/2024",
     "matchday": 9,
     "p1_avg_3dart_match": 46.485,
-    "p2_avg_3dart_match": 48.484
+    "p2_avg_3dart_match": 41.258
   },
   {
+    "game_id": 487,
     "date": "2024-02-16",
     "p1": "Frank",
     "p1_legs": 0,
@@ -590,10 +644,11 @@
     "p2": "Martin",
     "season": "2023/2024",
     "matchday": 9,
-    "p1_avg_3dart_match": 50.1,
+    "p1_avg_3dart_match": 34.367,
     "p2_avg_3dart_match": 51.239
   },
   {
+    "game_id": 486,
     "date": "2024-02-16",
     "p1": "Heiner",
     "p1_legs": 1,
@@ -601,10 +656,11 @@
     "p2": "Franz-Josef",
     "season": "2023/2024",
     "matchday": 9,
-    "p1_avg_3dart_match": 45.545,
-    "p2_avg_3dart_match": 46.246
+    "p1_avg_3dart_match": 38.205,
+    "p2_avg_3dart_match": 46.154
   },
   {
+    "game_id": 485,
     "date": "2024-02-16",
     "p1": "Franz-Josef",
     "p1_legs": 3,
@@ -613,9 +669,10 @@
     "season": "2023/2024",
     "matchday": 9,
     "p1_avg_3dart_match": 43.777,
-    "p2_avg_3dart_match": 44.206
+    "p2_avg_3dart_match": 38.324
   },
   {
+    "game_id": 484,
     "date": "2024-02-16",
     "p1": "Martin",
     "p1_legs": 3,
@@ -624,9 +681,10 @@
     "season": "2023/2024",
     "matchday": 9,
     "p1_avg_3dart_match": 60.932,
-    "p2_avg_3dart_match": 62.625
+    "p2_avg_3dart_match": 40.708
   },
   {
+    "game_id": 483,
     "date": "2024-02-16",
     "p1": "Uwe",
     "p1_legs": 3,
@@ -635,9 +693,10 @@
     "season": "2023/2024",
     "matchday": 9,
     "p1_avg_3dart_match": 35.504,
-    "p2_avg_3dart_match": 36.659
+    "p2_avg_3dart_match": 33.098
   },
   {
+    "game_id": 482,
     "date": "2024-02-16",
     "p1": "Martin",
     "p1_legs": 3,
@@ -645,10 +704,11 @@
     "p2": "Franz-Josef",
     "season": "2023/2024",
     "matchday": 9,
-    "p1_avg_3dart_match": 46.246,
-    "p2_avg_3dart_match": 46.969
+    "p1_avg_3dart_match": 46.2,
+    "p2_avg_3dart_match": 43.477
   },
   {
+    "game_id": 481,
     "date": "2024-02-16",
     "p1": "Uwe",
     "p1_legs": 3,
@@ -657,9 +717,10 @@
     "season": "2023/2024",
     "matchday": 9,
     "p1_avg_3dart_match": 30.673,
-    "p2_avg_3dart_match": 31.312
+    "p2_avg_3dart_match": 30.438
   },
   {
+    "game_id": 480,
     "date": "2024-01-19",
     "p1": "Franz-Josef",
     "p1_legs": 3,
@@ -668,9 +729,10 @@
     "season": "2023/2024",
     "matchday": 8,
     "p1_avg_3dart_match": 48.484,
-    "p2_avg_3dart_match": 50.1
+    "p2_avg_3dart_match": 40.467
   },
   {
+    "game_id": 479,
     "date": "2024-01-19",
     "p1": "Uwe",
     "p1_legs": 0,
@@ -678,10 +740,11 @@
     "p2": "Martin",
     "season": "2023/2024",
     "matchday": 8,
-    "p1_avg_3dart_match": 60.12,
+    "p1_avg_3dart_match": 37.44,
     "p2_avg_3dart_match": 60.12
   },
   {
+    "game_id": 478,
     "date": "2024-01-19",
     "p1": "Franz-Josef",
     "p1_legs": 3,
@@ -690,9 +753,10 @@
     "season": "2023/2024",
     "matchday": 8,
     "p1_avg_3dart_match": 46.01,
-    "p2_avg_3dart_match": 46.969
+    "p2_avg_3dart_match": 43.75
   },
   {
+    "game_id": 477,
     "date": "2024-01-19",
     "p1": "Martin",
     "p1_legs": 3,
@@ -701,9 +765,10 @@
     "season": "2023/2024",
     "matchday": 8,
     "p1_avg_3dart_match": 55.667,
-    "p2_avg_3dart_match": 57.808
+    "p2_avg_3dart_match": 38.808
   },
   {
+    "game_id": 476,
     "date": "2024-01-19",
     "p1": "Uwe",
     "p1_legs": 3,
@@ -712,9 +777,10 @@
     "season": "2023/2024",
     "matchday": 8,
     "p1_avg_3dart_match": 36.659,
-    "p2_avg_3dart_match": 37.575
+    "p2_avg_3dart_match": 33.625
   },
   {
+    "game_id": 475,
     "date": "2024-01-19",
     "p1": "Martin",
     "p1_legs": 3,
@@ -723,9 +789,10 @@
     "season": "2023/2024",
     "matchday": 8,
     "p1_avg_3dart_match": 57.076,
-    "p2_avg_3dart_match": 57.808
+    "p2_avg_3dart_match": 35.885
   },
   {
+    "game_id": 474,
     "date": "2024-01-19",
     "p1": "Frank",
     "p1_legs": 3,
@@ -734,9 +801,10 @@
     "season": "2023/2024",
     "matchday": 8,
     "p1_avg_3dart_match": 31.097,
-    "p2_avg_3dart_match": 31.979
+    "p2_avg_3dart_match": 31.319
   },
   {
+    "game_id": 473,
     "date": "2024-01-19",
     "p1": "Martin",
     "p1_legs": 3,
@@ -745,9 +813,10 @@
     "season": "2023/2024",
     "matchday": 8,
     "p1_avg_3dart_match": 60.932,
-    "p2_avg_3dart_match": 65.348
+    "p2_avg_3dart_match": 48.826
   },
   {
+    "game_id": 472,
     "date": "2024-01-19",
     "p1": "Frank",
     "p1_legs": 3,
@@ -755,10 +824,11 @@
     "p2": "Heiner",
     "season": "2023/2024",
     "matchday": 8,
-    "p1_avg_3dart_match": 29.327,
-    "p2_avg_3dart_match": 29.616
+    "p1_avg_3dart_match": 29.298,
+    "p2_avg_3dart_match": 25.892
   },
   {
+    "game_id": 471,
     "date": "2024-01-19",
     "p1": "Uwe",
     "p1_legs": 0,
@@ -766,10 +836,11 @@
     "p2": "Franz-Josef",
     "season": "2023/2024",
     "matchday": 8,
-    "p1_avg_3dart_match": 40.622,
+    "p1_avg_3dart_match": 33.459,
     "p2_avg_3dart_match": 40.259
   },
   {
+    "game_id": 470,
     "date": "2024-01-06",
     "p1": "Uwe",
     "p1_legs": 3,
@@ -777,10 +848,11 @@
     "p2": "Frank",
     "season": "2023/2024",
     "matchday": 7,
-    "p1_avg_3dart_match": 36.436,
-    "p2_avg_3dart_match": 36.883
+    "p1_avg_3dart_match": 33.964,
+    "p2_avg_3dart_match": 32.337
   },
   {
+    "game_id": 469,
     "date": "2024-01-06",
     "p1": "Martin",
     "p1_legs": 3,
@@ -789,9 +861,10 @@
     "season": "2023/2024",
     "matchday": 7,
     "p1_avg_3dart_match": 60.932,
-    "p2_avg_3dart_match": 62.625
+    "p2_avg_3dart_match": 36.458
   },
   {
+    "game_id": 468,
     "date": "2024-01-06",
     "p1": "Frank",
     "p1_legs": 0,
@@ -799,10 +872,11 @@
     "p2": "Franz-Josef",
     "season": "2023/2024",
     "matchday": 7,
-    "p1_avg_3dart_match": 46.969,
+    "p1_avg_3dart_match": 30.5,
     "p2_avg_3dart_match": 46.01
   },
   {
+    "game_id": 467,
     "date": "2024-01-06",
     "p1": "Uwe",
     "p1_legs": 0,
@@ -810,10 +884,11 @@
     "p2": "Martin",
     "season": "2023/2024",
     "matchday": 7,
-    "p1_avg_3dart_match": 46.969,
+    "p1_avg_3dart_match": 40.0,
     "p2_avg_3dart_match": 46.969
   },
   {
+    "game_id": 466,
     "date": "2024-01-06",
     "p1": "Franz-Josef",
     "p1_legs": 3,
@@ -822,9 +897,10 @@
     "season": "2023/2024",
     "matchday": 7,
     "p1_avg_3dart_match": 46.969,
-    "p2_avg_3dart_match": 48.484
+    "p2_avg_3dart_match": 32.129
   },
   {
+    "game_id": 465,
     "date": "2024-01-06",
     "p1": "Martin",
     "p1_legs": 3,
@@ -833,9 +909,10 @@
     "season": "2023/2024",
     "matchday": 7,
     "p1_avg_3dart_match": 52.43,
-    "p2_avg_3dart_match": 53.679
+    "p2_avg_3dart_match": 36.5
   },
   {
+    "game_id": 464,
     "date": "2024-01-06",
     "p1": "Uwe",
     "p1_legs": 0,
@@ -843,10 +920,11 @@
     "p2": "Heiner",
     "season": "2023/2024",
     "matchday": 7,
-    "p1_avg_3dart_match": 34.159,
+    "p1_avg_3dart_match": 33.614,
     "p2_avg_3dart_match": 33.902
   },
   {
+    "game_id": 463,
     "date": "2024-01-06",
     "p1": "Martin",
     "p1_legs": 3,
@@ -855,9 +933,10 @@
     "season": "2023/2024",
     "matchday": 7,
     "p1_avg_3dart_match": 50.1,
-    "p2_avg_3dart_match": 51.828
+    "p2_avg_3dart_match": 36.103
   },
   {
+    "game_id": 462,
     "date": "2024-01-06",
     "p1": "Franz-Josef",
     "p1_legs": 3,
@@ -866,9 +945,10 @@
     "season": "2023/2024",
     "matchday": 7,
     "p1_avg_3dart_match": 44.206,
-    "p2_avg_3dart_match": 45.545
+    "p2_avg_3dart_match": 36.879
   },
   {
+    "game_id": 461,
     "date": "2024-01-06",
     "p1": "Frank",
     "p1_legs": 3,
@@ -877,9 +957,10 @@
     "season": "2023/2024",
     "matchday": 7,
     "p1_avg_3dart_match": 20.683,
-    "p2_avg_3dart_match": 20.875
+    "p2_avg_3dart_match": 20.583
   },
   {
+    "game_id": 460,
     "date": "2023-12-10",
     "p1": "Martin",
     "p1_legs": 3,
@@ -888,9 +969,10 @@
     "season": "2023/2024",
     "matchday": 6,
     "p1_avg_3dart_match": 41.367,
-    "p2_avg_3dart_match": 41.75
+    "p2_avg_3dart_match": 32.972
   },
   {
+    "game_id": 459,
     "date": "2023-12-09",
     "p1": "Franz-Josef",
     "p1_legs": 3,
@@ -898,10 +980,11 @@
     "p2": "Uwe",
     "season": "2023/2024",
     "matchday": 6,
-    "p1_avg_3dart_match": 45.545,
-    "p2_avg_3dart_match": 44.533
+    "p1_avg_3dart_match": 45.386,
+    "p2_avg_3dart_match": 38.778
   },
   {
+    "game_id": 458,
     "date": "2023-12-09",
     "p1": "Heiner",
     "p1_legs": 3,
@@ -909,10 +992,11 @@
     "p2": "Frank",
     "season": "2023/2024",
     "matchday": 6,
-    "p1_avg_3dart_match": 30.425,
-    "p2_avg_3dart_match": 30.799
+    "p1_avg_3dart_match": 29.781,
+    "p2_avg_3dart_match": 29.398
   },
   {
+    "game_id": 457,
     "date": "2023-12-09",
     "p1": "Martin",
     "p1_legs": 3,
@@ -921,9 +1005,10 @@
     "season": "2023/2024",
     "matchday": 6,
     "p1_avg_3dart_match": 65.348,
-    "p2_avg_3dart_match": 71.571
+    "p2_avg_3dart_match": 44.905
   },
   {
+    "game_id": 456,
     "date": "2023-12-09",
     "p1": "Heiner",
     "p1_legs": 1,
@@ -931,10 +1016,11 @@
     "p2": "Franz-Josef",
     "season": "2023/2024",
     "matchday": 6,
-    "p1_avg_3dart_match": 34.751,
-    "p2_avg_3dart_match": 34.751
+    "p1_avg_3dart_match": 32.913,
+    "p2_avg_3dart_match": 34.613
   },
   {
+    "game_id": 455,
     "date": "2023-12-09",
     "p1": "Uwe",
     "p1_legs": 3,
@@ -942,10 +1028,11 @@
     "p2": "Heiner",
     "season": "2023/2024",
     "matchday": 6,
-    "p1_avg_3dart_match": 30.518,
-    "p2_avg_3dart_match": 30.364
+    "p1_avg_3dart_match": 30.487,
+    "p2_avg_3dart_match": 28.091
   },
   {
+    "game_id": 454,
     "date": "2023-12-09",
     "p1": "Franz-Josef",
     "p1_legs": 1,
@@ -953,10 +1040,11 @@
     "p2": "Martin",
     "season": "2023/2024",
     "matchday": 6,
-    "p1_avg_3dart_match": 59.525,
-    "p2_avg_3dart_match": 60.12
+    "p1_avg_3dart_match": 43.426,
+    "p2_avg_3dart_match": 59.94
   },
   {
+    "game_id": 453,
     "date": "2023-12-09",
     "p1": "Frank",
     "p1_legs": 1,
@@ -964,10 +1052,11 @@
     "p2": "Uwe",
     "season": "2023/2024",
     "matchday": 6,
-    "p1_avg_3dart_match": 35.786,
-    "p2_avg_3dart_match": 36.0
+    "p1_avg_3dart_match": 34.143,
+    "p2_avg_3dart_match": 35.102
   },
   {
+    "game_id": 452,
     "date": "2023-12-09",
     "p1": "Martin",
     "p1_legs": 3,
@@ -976,9 +1065,10 @@
     "season": "2023/2024",
     "matchday": 6,
     "p1_avg_3dart_match": 46.485,
-    "p2_avg_3dart_match": 46.969
+    "p2_avg_3dart_match": 41.375
   },
   {
+    "game_id": 451,
     "date": "2023-12-09",
     "p1": "Franz-Josef",
     "p1_legs": 1,
@@ -986,10 +1076,11 @@
     "p2": "Frank",
     "season": "2023/2024",
     "matchday": 6,
-    "p1_avg_3dart_match": 42.042,
-    "p2_avg_3dart_match": 42.338
+    "p1_avg_3dart_match": 37.783,
+    "p2_avg_3dart_match": 41.493
   },
   {
+    "game_id": 450,
     "date": "2023-07-07",
     "p1": "Heiner",
     "p1_legs": 0,
@@ -997,10 +1088,11 @@
     "p2": "Martin",
     "season": "2023/2024",
     "matchday": 5,
-    "p1_avg_3dart_match": 71.571,
+    "p1_avg_3dart_match": 42.524,
     "p2_avg_3dart_match": 71.571
   },
   {
+    "game_id": 449,
     "date": "2023-07-07",
     "p1": "Uwe",
     "p1_legs": 3,
@@ -1008,10 +1100,11 @@
     "p2": "Frank",
     "season": "2023/2024",
     "matchday": 5,
-    "p1_avg_3dart_match": 44.467,
-    "p2_avg_3dart_match": 45.545
+    "p1_avg_3dart_match": 42.763,
+    "p2_avg_3dart_match": 42.4
   },
   {
+    "game_id": 448,
     "date": "2023-07-07",
     "p1": "Heiner",
     "p1_legs": 1,
@@ -1019,10 +1112,11 @@
     "p2": "Franz-Josef",
     "season": "2023/2024",
     "matchday": 5,
-    "p1_avg_3dart_match": 48.878,
-    "p2_avg_3dart_match": 48.878
+    "p1_avg_3dart_match": 41.805,
+    "p2_avg_3dart_match": 48.39
   },
   {
+    "game_id": 447,
     "date": "2023-07-07",
     "p1": "Martin",
     "p1_legs": 3,
@@ -1031,9 +1125,10 @@
     "season": "2023/2024",
     "matchday": 5,
     "p1_avg_3dart_match": 56.363,
-    "p2_avg_3dart_match": 57.808
+    "p2_avg_3dart_match": 45.077
   },
   {
+    "game_id": 446,
     "date": "2023-07-07",
     "p1": "Franz-Josef",
     "p1_legs": 3,
@@ -1042,9 +1137,10 @@
     "season": "2023/2024",
     "matchday": 5,
     "p1_avg_3dart_match": 40.259,
-    "p2_avg_3dart_match": 41.75
+    "p2_avg_3dart_match": 39.5
   },
   {
+    "game_id": 445,
     "date": "2023-07-07",
     "p1": "Franz-Josef",
     "p1_legs": 3,
@@ -1053,9 +1149,10 @@
     "season": "2023/2024",
     "matchday": 5,
     "p1_avg_3dart_match": 44.644,
-    "p2_avg_3dart_match": 45.545
+    "p2_avg_3dart_match": 34.0
   },
   {
+    "game_id": 444,
     "date": "2023-07-07",
     "p1": "Martin",
     "p1_legs": 3,
@@ -1064,9 +1161,10 @@
     "season": "2023/2024",
     "matchday": 5,
     "p1_avg_3dart_match": 47.463,
-    "p2_avg_3dart_match": 50.1
+    "p2_avg_3dart_match": 32.9
   },
   {
+    "game_id": 443,
     "date": "2023-07-07",
     "p1": "Frank",
     "p1_legs": 1,
@@ -1074,10 +1172,11 @@
     "p2": "Heiner",
     "season": "2023/2024",
     "matchday": 5,
-    "p1_avg_3dart_match": 30.364,
-    "p2_avg_3dart_match": 30.06
+    "p1_avg_3dart_match": 29.894,
+    "p2_avg_3dart_match": 29.985
   },
   {
+    "game_id": 442,
     "date": "2023-07-07",
     "p1": "Franz-Josef",
     "p1_legs": 0,
@@ -1085,10 +1184,11 @@
     "p2": "Martin",
     "season": "2023/2024",
     "matchday": 5,
-    "p1_avg_3dart_match": 57.808,
+    "p1_avg_3dart_match": 45.923,
     "p2_avg_3dart_match": 57.076
   },
   {
+    "game_id": 441,
     "date": "2023-07-07",
     "p1": "Uwe",
     "p1_legs": 0,
@@ -1096,10 +1196,11 @@
     "p2": "Heiner",
     "season": "2023/2024",
     "matchday": 5,
-    "p1_avg_3dart_match": 30.06,
+    "p1_avg_3dart_match": 28.9,
     "p2_avg_3dart_match": 29.861
   },
   {
+    "game_id": 440,
     "date": "2023-05-28",
     "p1": "Martin",
     "p1_legs": 3,
@@ -1108,9 +1209,10 @@
     "season": "2023/2024",
     "matchday": 4,
     "p1_avg_3dart_match": 42.943,
-    "p2_avg_3dart_match": 44.206
+    "p2_avg_3dart_match": 41.853
   },
   {
+    "game_id": 439,
     "date": "2023-05-27",
     "p1": "Franz-Josef",
     "p1_legs": 1,
@@ -1118,10 +1220,11 @@
     "p2": "Uwe",
     "season": "2023/2024",
     "matchday": 4,
-    "p1_avg_3dart_match": 42.042,
-    "p2_avg_3dart_match": 41.462
+    "p1_avg_3dart_match": 40.364,
+    "p2_avg_3dart_match": 40.634
   },
   {
+    "game_id": 438,
     "date": "2023-05-27",
     "p1": "Heiner",
     "p1_legs": 0,
@@ -1129,10 +1232,11 @@
     "p2": "Frank",
     "season": "2023/2024",
     "matchday": 4,
-    "p1_avg_3dart_match": 31.979,
+    "p1_avg_3dart_match": 30.574,
     "p2_avg_3dart_match": 31.979
   },
   {
+    "game_id": 437,
     "date": "2023-05-27",
     "p1": "Martin",
     "p1_legs": 3,
@@ -1141,9 +1245,10 @@
     "season": "2023/2024",
     "matchday": 4,
     "p1_avg_3dart_match": 50.663,
-    "p2_avg_3dart_match": 53.679
+    "p2_avg_3dart_match": 44.107
   },
   {
+    "game_id": 436,
     "date": "2023-05-27",
     "p1": "Uwe",
     "p1_legs": 3,
@@ -1151,10 +1256,11 @@
     "p2": "Frank",
     "season": "2023/2024",
     "matchday": 4,
-    "p1_avg_3dart_match": 40.403,
-    "p2_avg_3dart_match": 40.622
+    "p1_avg_3dart_match": 37.694,
+    "p2_avg_3dart_match": 39.389
   },
   {
+    "game_id": 435,
     "date": "2023-05-27",
     "p1": "Frank",
     "p1_legs": 1,
@@ -1162,10 +1268,11 @@
     "p2": "Franz-Josef",
     "season": "2023/2024",
     "matchday": 4,
-    "p1_avg_3dart_match": 40.898,
-    "p2_avg_3dart_match": 40.898
+    "p1_avg_3dart_match": 35.878,
+    "p2_avg_3dart_match": 40.184
   },
   {
+    "game_id": 434,
     "date": "2023-05-27",
     "p1": "Martin",
     "p1_legs": 3,
@@ -1174,9 +1281,10 @@
     "season": "2023/2024",
     "matchday": 4,
     "p1_avg_3dart_match": 43.777,
-    "p2_avg_3dart_match": 45.545
+    "p2_avg_3dart_match": 35.667
   },
   {
+    "game_id": 433,
     "date": "2023-05-27",
     "p1": "Franz-Josef",
     "p1_legs": 3,
@@ -1185,9 +1293,10 @@
     "season": "2023/2024",
     "matchday": 4,
     "p1_avg_3dart_match": 29.279,
-    "p2_avg_3dart_match": 29.471
+    "p2_avg_3dart_match": 27.647
   },
   {
+    "game_id": 432,
     "date": "2023-05-27",
     "p1": "Martin",
     "p1_legs": 2,
@@ -1196,9 +1305,10 @@
     "season": "2023/2024",
     "matchday": 4,
     "p1_avg_3dart_match": 55.667,
-    "p2_avg_3dart_match": 55.667
+    "p2_avg_3dart_match": 41.611
   },
   {
+    "game_id": 431,
     "date": "2023-05-27",
     "p1": "Uwe",
     "p1_legs": 3,
@@ -1207,9 +1317,10 @@
     "season": "2023/2024",
     "matchday": 4,
     "p1_avg_3dart_match": 41.75,
-    "p2_avg_3dart_match": 42.943
+    "p2_avg_3dart_match": 35.057
   },
   {
+    "game_id": 430,
     "date": "2023-04-15",
     "p1": "Franz-Josef",
     "p1_legs": 3,
@@ -1218,9 +1329,10 @@
     "season": "2023/2024",
     "matchday": 3,
     "p1_avg_3dart_match": 33.4,
-    "p2_avg_3dart_match": 34.159
+    "p2_avg_3dart_match": 29.0
   },
   {
+    "game_id": 429,
     "date": "2023-04-14",
     "p1": "Martin",
     "p1_legs": 3,
@@ -1229,9 +1341,10 @@
     "season": "2023/2024",
     "matchday": 3,
     "p1_avg_3dart_match": 66.309,
-    "p2_avg_3dart_match": 68.318
+    "p2_avg_3dart_match": 43.182
   },
   {
+    "game_id": 428,
     "date": "2023-04-14",
     "p1": "Martin",
     "p1_legs": 3,
@@ -1240,9 +1353,10 @@
     "season": "2023/2024",
     "matchday": 3,
     "p1_avg_3dart_match": 60.932,
-    "p2_avg_3dart_match": 62.625
+    "p2_avg_3dart_match": 47.625
   },
   {
+    "game_id": 427,
     "date": "2023-04-14",
     "p1": "Uwe",
     "p1_legs": 1,
@@ -1250,10 +1364,11 @@
     "p2": "Frank",
     "season": "2023/2024",
     "matchday": 3,
-    "p1_avg_3dart_match": 38.051,
-    "p2_avg_3dart_match": 38.293
+    "p1_avg_3dart_match": 34.899,
+    "p2_avg_3dart_match": 37.815
   },
   {
+    "game_id": 426,
     "date": "2023-04-14",
     "p1": "Martin",
     "p1_legs": 3,
@@ -1262,9 +1377,10 @@
     "season": "2023/2024",
     "matchday": 3,
     "p1_avg_3dart_match": 59.329,
-    "p2_avg_3dart_match": 62.625
+    "p2_avg_3dart_match": 40.833
   },
   {
+    "game_id": 425,
     "date": "2023-04-14",
     "p1": "Heiner",
     "p1_legs": 2,
@@ -1272,10 +1388,11 @@
     "p2": "Frank",
     "season": "2023/2024",
     "matchday": 3,
-    "p1_avg_3dart_match": 36.481,
-    "p2_avg_3dart_match": 36.838
+    "p1_avg_3dart_match": 32.825,
+    "p2_avg_3dart_match": 36.662
   },
   {
+    "game_id": 424,
     "date": "2023-04-14",
     "p1": "Frank",
     "p1_legs": 1,
@@ -1283,10 +1400,11 @@
     "p2": "Franz-Josef",
     "season": "2023/2024",
     "matchday": 3,
-    "p1_avg_3dart_match": 35.365,
-    "p2_avg_3dart_match": 35.786
+    "p1_avg_3dart_match": 33.0,
+    "p2_avg_3dart_match": 35.071
   },
   {
+    "game_id": 423,
     "date": "2023-04-14",
     "p1": "Uwe",
     "p1_legs": 1,
@@ -1294,10 +1412,11 @@
     "p2": "Heiner",
     "season": "2023/2024",
     "matchday": 3,
-    "p1_avg_3dart_match": 33.4,
-    "p2_avg_3dart_match": 33.4
+    "p1_avg_3dart_match": 31.45,
+    "p2_avg_3dart_match": 33.35
   },
   {
+    "game_id": 422,
     "date": "2023-04-14",
     "p1": "Martin",
     "p1_legs": 3,
@@ -1306,9 +1425,10 @@
     "season": "2023/2024",
     "matchday": 3,
     "p1_avg_3dart_match": 46.969,
-    "p2_avg_3dart_match": 48.484
+    "p2_avg_3dart_match": 32.645
   },
   {
+    "game_id": 421,
     "date": "2023-04-14",
     "p1": "Franz-Josef",
     "p1_legs": 3,
@@ -1316,10 +1436,11 @@
     "p2": "Uwe",
     "season": "2023/2024",
     "matchday": 3,
-    "p1_avg_3dart_match": 40.403,
-    "p2_avg_3dart_match": 39.762
+    "p1_avg_3dart_match": 37.952,
+    "p2_avg_3dart_match": 37.206
   },
   {
+    "game_id": 420,
     "date": "2023-02-18",
     "p1": "Uwe",
     "p1_legs": 3,
@@ -1327,10 +1448,11 @@
     "p2": "Frank",
     "season": "2023/2024",
     "matchday": 2,
-    "p1_avg_3dart_match": 40.349,
-    "p2_avg_3dart_match": 40.349
+    "p1_avg_3dart_match": 40.107,
+    "p2_avg_3dart_match": 38.859
   },
   {
+    "game_id": 419,
     "date": "2023-02-18",
     "p1": "Martin",
     "p1_legs": 3,
@@ -1339,9 +1461,10 @@
     "season": "2023/2024",
     "matchday": 2,
     "p1_avg_3dart_match": 57.076,
-    "p2_avg_3dart_match": 60.12
+    "p2_avg_3dart_match": 42.84
   },
   {
+    "game_id": 418,
     "date": "2023-02-17",
     "p1": "Heiner",
     "p1_legs": 2,
@@ -1349,10 +1472,11 @@
     "p2": "Frank",
     "season": "2023/2024",
     "matchday": 2,
-    "p1_avg_3dart_match": 39.973,
-    "p2_avg_3dart_match": 39.973
+    "p1_avg_3dart_match": 35.633,
+    "p2_avg_3dart_match": 39.814
   },
   {
+    "game_id": 417,
     "date": "2023-02-17",
     "p1": "Martin",
     "p1_legs": 1,
@@ -1360,10 +1484,11 @@
     "p2": "Franz-Josef",
     "season": "2023/2024",
     "matchday": 2,
-    "p1_avg_3dart_match": 61.347,
-    "p2_avg_3dart_match": 58.941
+    "p1_avg_3dart_match": 54.612,
+    "p2_avg_3dart_match": 50.765
   },
   {
+    "game_id": 416,
     "date": "2023-02-17",
     "p1": "Uwe",
     "p1_legs": 3,
@@ -1371,10 +1496,11 @@
     "p2": "Heiner",
     "season": "2023/2024",
     "matchday": 2,
-    "p1_avg_3dart_match": 37.02,
-    "p2_avg_3dart_match": 37.388
+    "p1_avg_3dart_match": 36.739,
+    "p2_avg_3dart_match": 34.493
   },
   {
+    "game_id": 415,
     "date": "2023-02-17",
     "p1": "Franz-Josef",
     "p1_legs": 3,
@@ -1382,10 +1508,11 @@
     "p2": "Frank",
     "season": "2023/2024",
     "matchday": 2,
-    "p1_avg_3dart_match": 36.883,
-    "p2_avg_3dart_match": 37.575
+    "p1_avg_3dart_match": 36.847,
+    "p2_avg_3dart_match": 34.237
   },
   {
+    "game_id": 414,
     "date": "2023-02-17",
     "p1": "Uwe",
     "p1_legs": 0,
@@ -1393,10 +1520,11 @@
     "p2": "Franz-Josef",
     "season": "2023/2024",
     "matchday": 2,
-    "p1_avg_3dart_match": 53.679,
+    "p1_avg_3dart_match": 43.25,
     "p2_avg_3dart_match": 54.325
   },
   {
+    "game_id": 413,
     "date": "2023-02-17",
     "p1": "Martin",
     "p1_legs": 3,
@@ -1405,9 +1533,10 @@
     "season": "2023/2024",
     "matchday": 2,
     "p1_avg_3dart_match": 54.988,
-    "p2_avg_3dart_match": 57.808
+    "p2_avg_3dart_match": 38.615
   },
   {
+    "game_id": 412,
     "date": "2023-02-17",
     "p1": "Franz-Josef",
     "p1_legs": 3,
@@ -1416,9 +1545,10 @@
     "season": "2023/2024",
     "matchday": 2,
     "p1_avg_3dart_match": 46.01,
-    "p2_avg_3dart_match": 46.969
+    "p2_avg_3dart_match": 40.781
   },
   {
+    "game_id": 411,
     "date": "2023-02-17",
     "p1": "Martin",
     "p1_legs": 3,
@@ -1427,9 +1557,10 @@
     "season": "2023/2024",
     "matchday": 2,
     "p1_avg_3dart_match": 54.988,
-    "p2_avg_3dart_match": 57.808
+    "p2_avg_3dart_match": 42.654
   },
   {
+    "game_id": 410,
     "date": "2023-01-07",
     "p1": "Franz-Josef",
     "p1_legs": 3,
@@ -1437,10 +1568,11 @@
     "p2": "Uwe",
     "season": "2023/2024",
     "matchday": 1,
-    "p1_avg_3dart_match": 50.777,
-    "p2_avg_3dart_match": 50.436
+    "p1_avg_3dart_match": 50.331,
+    "p2_avg_3dart_match": 43.55
   },
   {
+    "game_id": 409,
     "date": "2023-01-07",
     "p1": "Martin",
     "p1_legs": 3,
@@ -1449,9 +1581,10 @@
     "season": "2023/2024",
     "matchday": 1,
     "p1_avg_3dart_match": 59.329,
-    "p2_avg_3dart_match": 62.625
+    "p2_avg_3dart_match": 48.75
   },
   {
+    "game_id": 408,
     "date": "2023-01-06",
     "p1": "Uwe",
     "p1_legs": 3,
@@ -1459,10 +1592,11 @@
     "p2": "Frank",
     "season": "2023/2024",
     "matchday": 1,
-    "p1_avg_3dart_match": 38.737,
-    "p2_avg_3dart_match": 38.538
+    "p1_avg_3dart_match": 38.397,
+    "p2_avg_3dart_match": 32.231
   },
   {
+    "game_id": 407,
     "date": "2023-01-06",
     "p1": "Martin",
     "p1_legs": 3,
@@ -1471,9 +1605,10 @@
     "season": "2023/2024",
     "matchday": 1,
     "p1_avg_3dart_match": 58.558,
-    "p2_avg_3dart_match": 62.625
+    "p2_avg_3dart_match": 41.708
   },
   {
+    "game_id": 406,
     "date": "2023-01-06",
     "p1": "Frank",
     "p1_legs": 0,
@@ -1481,10 +1616,11 @@
     "p2": "Franz-Josef",
     "season": "2023/2024",
     "matchday": 1,
-    "p1_avg_3dart_match": 41.75,
+    "p1_avg_3dart_match": 38.944,
     "p2_avg_3dart_match": 42.538
   },
   {
+    "game_id": 405,
     "date": "2023-01-06",
     "p1": "Heiner",
     "p1_legs": 0,
@@ -1492,10 +1628,11 @@
     "p2": "Uwe",
     "season": "2023/2024",
     "matchday": 1,
-    "p1_avg_3dart_match": 40.622,
+    "p1_avg_3dart_match": 39.459,
     "p2_avg_3dart_match": 40.259
   },
   {
+    "game_id": 404,
     "date": "2023-01-06",
     "p1": "Franz-Josef",
     "p1_legs": 3,
@@ -1503,10 +1640,11 @@
     "p2": "Heiner",
     "season": "2023/2024",
     "matchday": 1,
-    "p1_avg_3dart_match": 52.737,
-    "p2_avg_3dart_match": 55.156
+    "p1_avg_3dart_match": 51.342,
+    "p2_avg_3dart_match": 43.239
   },
   {
+    "game_id": 403,
     "date": "2023-01-06",
     "p1": "Martin",
     "p1_legs": 3,
@@ -1515,9 +1653,10 @@
     "season": "2023/2024",
     "matchday": 1,
     "p1_avg_3dart_match": 54.988,
-    "p2_avg_3dart_match": 57.808
+    "p2_avg_3dart_match": 37.038
   },
   {
+    "game_id": 402,
     "date": "2023-01-06",
     "p1": "Frank",
     "p1_legs": 3,
@@ -1525,10 +1664,11 @@
     "p2": "Heiner",
     "season": "2023/2024",
     "matchday": 1,
-    "p1_avg_3dart_match": 24.439,
-    "p2_avg_3dart_match": 24.639
+    "p1_avg_3dart_match": 24.415,
+    "p2_avg_3dart_match": 24.492
   },
   {
+    "game_id": 401,
     "date": "2023-01-06",
     "p1": "Franz-Josef",
     "p1_legs": 0,
@@ -1536,10 +1676,11 @@
     "p2": "Martin",
     "season": "2023/2024",
     "matchday": 1,
-    "p1_avg_3dart_match": 50.1,
+    "p1_avg_3dart_match": 41.733,
     "p2_avg_3dart_match": 48.484
   },
   {
+    "game_id": 400,
     "date": "2022-12-04",
     "p1": "Frank",
     "p1_legs": 3,
@@ -1547,10 +1688,11 @@
     "p2": "Heiner",
     "season": "2021/2022",
     "matchday": 10,
-    "p1_avg_3dart_match": 38.737,
-    "p2_avg_3dart_match": 38.538
+    "p1_avg_3dart_match": 37.856,
+    "p2_avg_3dart_match": 36.4
   },
   {
+    "game_id": 399,
     "date": "2022-12-03",
     "p1": "Franz-Josef",
     "p1_legs": 2,
@@ -1558,10 +1700,11 @@
     "p2": "Martin",
     "season": "2021/2022",
     "matchday": 10,
-    "p1_avg_3dart_match": 52.923,
-    "p2_avg_3dart_match": 53.679
+    "p1_avg_3dart_match": 45.507,
+    "p2_avg_3dart_match": 53.036
   },
   {
+    "game_id": 398,
     "date": "2022-12-03",
     "p1": "Martin",
     "p1_legs": 3,
@@ -1570,9 +1713,10 @@
     "season": "2021/2022",
     "matchday": 10,
     "p1_avg_3dart_match": 55.667,
-    "p2_avg_3dart_match": 55.667
+    "p2_avg_3dart_match": 35.667
   },
   {
+    "game_id": 397,
     "date": "2022-12-03",
     "p1": "Franz-Josef",
     "p1_legs": 3,
@@ -1580,10 +1724,11 @@
     "p2": "Uwe",
     "season": "2021/2022",
     "matchday": 10,
-    "p1_avg_3dart_match": 45.203,
-    "p2_avg_3dart_match": 46.246
+    "p1_avg_3dart_match": 45.113,
+    "p2_avg_3dart_match": 41.285
   },
   {
+    "game_id": 396,
     "date": "2022-12-03",
     "p1": "Martin",
     "p1_legs": 3,
@@ -1592,9 +1737,10 @@
     "season": "2021/2022",
     "matchday": 10,
     "p1_avg_3dart_match": 56.363,
-    "p2_avg_3dart_match": 57.808
+    "p2_avg_3dart_match": 43.308
   },
   {
+    "game_id": 395,
     "date": "2022-12-03",
     "p1": "Heiner",
     "p1_legs": 0,
@@ -1602,10 +1748,11 @@
     "p2": "Uwe",
     "season": "2021/2022",
     "matchday": 10,
-    "p1_avg_3dart_match": 48.484,
+    "p1_avg_3dart_match": 37.194,
     "p2_avg_3dart_match": 46.969
   },
   {
+    "game_id": 394,
     "date": "2022-12-03",
     "p1": "Frank",
     "p1_legs": 1,
@@ -1613,10 +1760,11 @@
     "p2": "Uwe",
     "season": "2021/2022",
     "matchday": 10,
-    "p1_avg_3dart_match": 30.831,
-    "p2_avg_3dart_match": 30.99
+    "p1_avg_3dart_match": 30.462,
+    "p2_avg_3dart_match": 30.928
   },
   {
+    "game_id": 393,
     "date": "2022-12-03",
     "p1": "Franz-Josef",
     "p1_legs": 3,
@@ -1625,9 +1773,10 @@
     "season": "2021/2022",
     "matchday": 10,
     "p1_avg_3dart_match": 45.545,
-    "p2_avg_3dart_match": 46.969
+    "p2_avg_3dart_match": 41.562
   },
   {
+    "game_id": 392,
     "date": "2022-12-03",
     "p1": "Martin",
     "p1_legs": 3,
@@ -1636,9 +1785,10 @@
     "season": "2021/2022",
     "matchday": 10,
     "p1_avg_3dart_match": 44.206,
-    "p2_avg_3dart_match": 45.545
+    "p2_avg_3dart_match": 39.182
   },
   {
+    "game_id": 391,
     "date": "2022-12-03",
     "p1": "Frank",
     "p1_legs": 0,
@@ -1646,10 +1796,11 @@
     "p2": "Franz-Josef",
     "season": "2021/2022",
     "matchday": 10,
-    "p1_avg_3dart_match": 48.484,
+    "p1_avg_3dart_match": 34.871,
     "p2_avg_3dart_match": 47.463
   },
   {
+    "game_id": 390,
     "date": "2022-11-12",
     "p1": "Uwe",
     "p1_legs": 0,
@@ -1657,10 +1808,11 @@
     "p2": "Martin",
     "season": "2021/2022",
     "matchday": 9,
-    "p1_avg_3dart_match": 51.828,
+    "p1_avg_3dart_match": 33.241,
     "p2_avg_3dart_match": 50.1
   },
   {
+    "game_id": 389,
     "date": "2022-11-11",
     "p1": "Heiner",
     "p1_legs": 1,
@@ -1668,10 +1820,11 @@
     "p2": "Frank",
     "season": "2021/2022",
     "matchday": 9,
-    "p1_avg_3dart_match": 34.953,
-    "p2_avg_3dart_match": 34.751
+    "p1_avg_3dart_match": 31.552,
+    "p2_avg_3dart_match": 33.919
   },
   {
+    "game_id": 388,
     "date": "2022-11-11",
     "p1": "Frank",
     "p1_legs": 0,
@@ -1679,10 +1832,11 @@
     "p2": "Martin",
     "season": "2021/2022",
     "matchday": 9,
-    "p1_avg_3dart_match": 60.12,
+    "p1_avg_3dart_match": 40.52,
     "p2_avg_3dart_match": 60.12
   },
   {
+    "game_id": 387,
     "date": "2022-11-11",
     "p1": "Franz-Josef",
     "p1_legs": 3,
@@ -1691,9 +1845,10 @@
     "season": "2021/2022",
     "matchday": 9,
     "p1_avg_3dart_match": 46.969,
-    "p2_avg_3dart_match": 48.484
+    "p2_avg_3dart_match": 41.968
   },
   {
+    "game_id": 386,
     "date": "2022-11-11",
     "p1": "Frank",
     "p1_legs": 2,
@@ -1701,10 +1856,11 @@
     "p2": "Uwe",
     "season": "2021/2022",
     "matchday": 9,
-    "p1_avg_3dart_match": 35.616,
-    "p2_avg_3dart_match": 35.448
+    "p1_avg_3dart_match": 34.664,
+    "p2_avg_3dart_match": 33.934
   },
   {
+    "game_id": 385,
     "date": "2022-11-11",
     "p1": "Franz-Josef",
     "p1_legs": 2,
@@ -1712,10 +1868,11 @@
     "p2": "Martin",
     "season": "2021/2022",
     "matchday": 9,
-    "p1_avg_3dart_match": 59.173,
-    "p2_avg_3dart_match": 61.098
+    "p1_avg_3dart_match": 49.559,
+    "p2_avg_3dart_match": 60.415
   },
   {
+    "game_id": 384,
     "date": "2022-11-11",
     "p1": "Franz-Josef",
     "p1_legs": 3,
@@ -1724,9 +1881,10 @@
     "season": "2021/2022",
     "matchday": 9,
     "p1_avg_3dart_match": 32.439,
-    "p2_avg_3dart_match": 32.674
+    "p2_avg_3dart_match": 29.848
   },
   {
+    "game_id": 383,
     "date": "2022-11-11",
     "p1": "Martin",
     "p1_legs": 3,
@@ -1735,9 +1893,10 @@
     "season": "2021/2022",
     "matchday": 9,
     "p1_avg_3dart_match": 57.076,
-    "p2_avg_3dart_match": 57.808
+    "p2_avg_3dart_match": 38.0
   },
   {
+    "game_id": 382,
     "date": "2022-11-11",
     "p1": "Franz-Josef",
     "p1_legs": 3,
@@ -1746,9 +1905,10 @@
     "season": "2021/2022",
     "matchday": 9,
     "p1_avg_3dart_match": 31.754,
-    "p2_avg_3dart_match": 31.979
+    "p2_avg_3dart_match": 29.766
   },
   {
+    "game_id": 381,
     "date": "2022-11-11",
     "p1": "Uwe",
     "p1_legs": 3,
@@ -1756,10 +1916,11 @@
     "p2": "Heiner",
     "season": "2021/2022",
     "matchday": 9,
-    "p1_avg_3dart_match": 33.549,
-    "p2_avg_3dart_match": 34.005
+    "p1_avg_3dart_match": 33.388,
+    "p2_avg_3dart_match": 33.299
   },
   {
+    "game_id": 380,
     "date": "2022-10-02",
     "p1": "Franz-Josef",
     "p1_legs": 3,
@@ -1767,10 +1928,11 @@
     "p2": "Uwe",
     "season": "2021/2022",
     "matchday": 8,
-    "p1_avg_3dart_match": 49.279,
-    "p2_avg_3dart_match": 49.686
+    "p1_avg_3dart_match": 47.68,
+    "p2_avg_3dart_match": 44.653
   },
   {
+    "game_id": 379,
     "date": "2022-10-02",
     "p1": "Martin",
     "p1_legs": 3,
@@ -1779,9 +1941,10 @@
     "season": "2021/2022",
     "matchday": 8,
     "p1_avg_3dart_match": 48.484,
-    "p2_avg_3dart_match": 48.484
+    "p2_avg_3dart_match": 35.032
   },
   {
+    "game_id": 378,
     "date": "2022-10-02",
     "p1": "Frank",
     "p1_legs": 3,
@@ -1789,10 +1952,11 @@
     "p2": "Uwe",
     "season": "2021/2022",
     "matchday": 8,
-    "p1_avg_3dart_match": 36.13,
-    "p2_avg_3dart_match": 35.957
+    "p1_avg_3dart_match": 35.51,
+    "p2_avg_3dart_match": 32.871
   },
   {
+    "game_id": 377,
     "date": "2022-10-02",
     "p1": "Martin",
     "p1_legs": 3,
@@ -1801,9 +1965,10 @@
     "season": "2021/2022",
     "matchday": 8,
     "p1_avg_3dart_match": 57.076,
-    "p2_avg_3dart_match": 60.12
+    "p2_avg_3dart_match": 34.0
   },
   {
+    "game_id": 376,
     "date": "2022-10-02",
     "p1": "Frank",
     "p1_legs": 1,
@@ -1811,10 +1976,11 @@
     "p2": "Franz-Josef",
     "season": "2021/2022",
     "matchday": 8,
-    "p1_avg_3dart_match": 41.462,
-    "p2_avg_3dart_match": 40.898
+    "p1_avg_3dart_match": 36.766,
+    "p2_avg_3dart_match": 40.857
   },
   {
+    "game_id": 375,
     "date": "2022-10-02",
     "p1": "Heiner",
     "p1_legs": 0,
@@ -1822,10 +1988,11 @@
     "p2": "Uwe",
     "season": "2021/2022",
     "matchday": 8,
-    "p1_avg_3dart_match": 36.659,
+    "p1_avg_3dart_match": 35.293,
     "p2_avg_3dart_match": 36.659
   },
   {
+    "game_id": 374,
     "date": "2022-10-02",
     "p1": "Franz-Josef",
     "p1_legs": 3,
@@ -1834,9 +2001,10 @@
     "season": "2021/2022",
     "matchday": 8,
     "p1_avg_3dart_match": 35.786,
-    "p2_avg_3dart_match": 36.659
+    "p2_avg_3dart_match": 33.049
   },
   {
+    "game_id": 373,
     "date": "2022-10-02",
     "p1": "Martin",
     "p1_legs": 3,
@@ -1845,9 +2013,10 @@
     "season": "2021/2022",
     "matchday": 8,
     "p1_avg_3dart_match": 57.808,
-    "p2_avg_3dart_match": 62.625
+    "p2_avg_3dart_match": 42.542
   },
   {
+    "game_id": 372,
     "date": "2022-10-02",
     "p1": "Frank",
     "p1_legs": 3,
@@ -1855,10 +2024,11 @@
     "p2": "Heiner",
     "season": "2021/2022",
     "matchday": 8,
-    "p1_avg_3dart_match": 24.242,
-    "p2_avg_3dart_match": 24.32
+    "p1_avg_3dart_match": 23.961,
+    "p2_avg_3dart_match": 24.204
   },
   {
+    "game_id": 371,
     "date": "2022-10-02",
     "p1": "Martin",
     "p1_legs": 3,
@@ -1867,9 +2037,10 @@
     "season": "2021/2022",
     "matchday": 8,
     "p1_avg_3dart_match": 56.363,
-    "p2_avg_3dart_match": 57.808
+    "p2_avg_3dart_match": 55.269
   },
   {
+    "game_id": 370,
     "date": "2022-08-05",
     "p1": "Frank",
     "p1_legs": 2,
@@ -1877,10 +2048,11 @@
     "p2": "Uwe",
     "season": "2021/2022",
     "matchday": 7,
-    "p1_avg_3dart_match": 37.575,
-    "p2_avg_3dart_match": 38.147
+    "p1_avg_3dart_match": 34.605,
+    "p2_avg_3dart_match": 36.396
   },
   {
+    "game_id": 369,
     "date": "2022-08-05",
     "p1": "Martin",
     "p1_legs": 3,
@@ -1889,9 +2061,10 @@
     "season": "2021/2022",
     "matchday": 7,
     "p1_avg_3dart_match": 53.047,
-    "p2_avg_3dart_match": 55.667
+    "p2_avg_3dart_match": 36.444
   },
   {
+    "game_id": 368,
     "date": "2022-08-05",
     "p1": "Frank",
     "p1_legs": 0,
@@ -1899,10 +2072,11 @@
     "p2": "Martin",
     "season": "2021/2022",
     "matchday": 7,
-    "p1_avg_3dart_match": 46.969,
+    "p1_avg_3dart_match": 44.562,
     "p2_avg_3dart_match": 47.463
   },
   {
+    "game_id": 367,
     "date": "2022-08-05",
     "p1": "Franz-Josef",
     "p1_legs": 3,
@@ -1911,9 +2085,10 @@
     "season": "2021/2022",
     "matchday": 7,
     "p1_avg_3dart_match": 45.545,
-    "p2_avg_3dart_match": 45.545
+    "p2_avg_3dart_match": 38.424
   },
   {
+    "game_id": 366,
     "date": "2022-08-05",
     "p1": "Martin",
     "p1_legs": 3,
@@ -1922,9 +2097,10 @@
     "season": "2021/2022",
     "matchday": 7,
     "p1_avg_3dart_match": 60.932,
-    "p2_avg_3dart_match": 65.348
+    "p2_avg_3dart_match": 51.957
   },
   {
+    "game_id": 365,
     "date": "2022-08-05",
     "p1": "Frank",
     "p1_legs": 0,
@@ -1932,10 +2108,11 @@
     "p2": "Franz-Josef",
     "season": "2021/2022",
     "matchday": 7,
-    "p1_avg_3dart_match": 38.538,
+    "p1_avg_3dart_match": 34.923,
     "p2_avg_3dart_match": 38.871
   },
   {
+    "game_id": 364,
     "date": "2022-08-05",
     "p1": "Uwe",
     "p1_legs": 3,
@@ -1944,9 +2121,10 @@
     "season": "2021/2022",
     "matchday": 7,
     "p1_avg_3dart_match": 40.622,
-    "p2_avg_3dart_match": 41.75
+    "p2_avg_3dart_match": 41.111
   },
   {
+    "game_id": 363,
     "date": "2022-08-05",
     "p1": "Frank",
     "p1_legs": 2,
@@ -1954,10 +2132,11 @@
     "p2": "Heiner",
     "season": "2021/2022",
     "matchday": 7,
-    "p1_avg_3dart_match": 30.799,
-    "p2_avg_3dart_match": 30.673
+    "p1_avg_3dart_match": 30.566,
+    "p2_avg_3dart_match": 29.718
   },
   {
+    "game_id": 362,
     "date": "2022-08-05",
     "p1": "Martin",
     "p1_legs": 3,
@@ -1966,9 +2145,10 @@
     "season": "2021/2022",
     "matchday": 7,
     "p1_avg_3dart_match": 54.325,
-    "p2_avg_3dart_match": 55.667
+    "p2_avg_3dart_match": 52.037
   },
   {
+    "game_id": 361,
     "date": "2022-08-05",
     "p1": "Uwe",
     "p1_legs": 3,
@@ -1976,10 +2156,11 @@
     "p2": "Heiner",
     "season": "2021/2022",
     "matchday": 7,
-    "p1_avg_3dart_match": 31.81,
-    "p2_avg_3dart_match": 31.81
+    "p1_avg_3dart_match": 31.778,
+    "p2_avg_3dart_match": 26.889
   },
   {
+    "game_id": 360,
     "date": "2022-05-22",
     "p1": "Uwe",
     "p1_legs": 3,
@@ -1987,10 +2168,11 @@
     "p2": "Frank",
     "season": "2021/2022",
     "matchday": 6,
-    "p1_avg_3dart_match": 42.699,
-    "p2_avg_3dart_match": 42.943
+    "p1_avg_3dart_match": 42.392,
+    "p2_avg_3dart_match": 38.297
   },
   {
+    "game_id": 359,
     "date": "2022-05-22",
     "p1": "Heiner",
     "p1_legs": 1,
@@ -1998,10 +2180,11 @@
     "p2": "Franz-Josef",
     "season": "2021/2022",
     "matchday": 6,
-    "p1_avg_3dart_match": 35.365,
-    "p2_avg_3dart_match": 35.786
+    "p1_avg_3dart_match": 31.306,
+    "p2_avg_3dart_match": 35.75
   },
   {
+    "game_id": 358,
     "date": "2022-05-22",
     "p1": "Heiner",
     "p1_legs": 2,
@@ -2009,10 +2192,11 @@
     "p2": "Frank",
     "season": "2021/2022",
     "matchday": 6,
-    "p1_avg_3dart_match": 35.957,
-    "p2_avg_3dart_match": 35.786
+    "p1_avg_3dart_match": 34.651,
+    "p2_avg_3dart_match": 34.686
   },
   {
+    "game_id": 357,
     "date": "2022-05-21",
     "p1": "Franz-Josef",
     "p1_legs": 2,
@@ -2020,10 +2204,11 @@
     "p2": "Martin",
     "season": "2021/2022",
     "matchday": 6,
-    "p1_avg_3dart_match": 51.828,
-    "p2_avg_3dart_match": 52.923
+    "p1_avg_3dart_match": 50.566,
+    "p2_avg_3dart_match": 52.331
   },
   {
+    "game_id": 356,
     "date": "2022-05-21",
     "p1": "Uwe",
     "p1_legs": 3,
@@ -2031,10 +2216,11 @@
     "p2": "Heiner",
     "season": "2021/2022",
     "matchday": 6,
-    "p1_avg_3dart_match": 28.493,
-    "p2_avg_3dart_match": 28.225
+    "p1_avg_3dart_match": 28.209,
+    "p2_avg_3dart_match": 28.028
   },
   {
+    "game_id": 355,
     "date": "2022-05-21",
     "p1": "Frank",
     "p1_legs": 0,
@@ -2042,10 +2228,11 @@
     "p2": "Martin",
     "season": "2021/2022",
     "matchday": 6,
-    "p1_avg_3dart_match": 50.1,
+    "p1_avg_3dart_match": 40.433,
     "p2_avg_3dart_match": 50.1
   },
   {
+    "game_id": 354,
     "date": "2022-05-21",
     "p1": "Martin",
     "p1_legs": 3,
@@ -2054,9 +2241,10 @@
     "season": "2021/2022",
     "matchday": 6,
     "p1_avg_3dart_match": 55.667,
-    "p2_avg_3dart_match": 57.808
+    "p2_avg_3dart_match": 39.269
   },
   {
+    "game_id": 353,
     "date": "2022-05-21",
     "p1": "Frank",
     "p1_legs": 0,
@@ -2064,10 +2252,11 @@
     "p2": "Franz-Josef",
     "season": "2021/2022",
     "matchday": 6,
-    "p1_avg_3dart_match": 46.969,
+    "p1_avg_3dart_match": 42.344,
     "p2_avg_3dart_match": 47.463
   },
   {
+    "game_id": 352,
     "date": "2022-05-21",
     "p1": "Martin",
     "p1_legs": 3,
@@ -2076,9 +2265,10 @@
     "season": "2021/2022",
     "matchday": 6,
     "p1_avg_3dart_match": 40.259,
-    "p2_avg_3dart_match": 41.75
+    "p2_avg_3dart_match": 35.139
   },
   {
+    "game_id": 351,
     "date": "2022-05-21",
     "p1": "Uwe",
     "p1_legs": 1,
@@ -2086,10 +2276,11 @@
     "p2": "Franz-Josef",
     "season": "2021/2022",
     "matchday": 6,
-    "p1_avg_3dart_match": 36.0,
-    "p2_avg_3dart_match": 36.217
+    "p1_avg_3dart_match": 34.922,
+    "p2_avg_3dart_match": 35.964
   },
   {
+    "game_id": 350,
     "date": "2022-05-08",
     "p1": "Franz-Josef",
     "p1_legs": 3,
@@ -2097,10 +2288,11 @@
     "p2": "Uwe",
     "season": "2021/2022",
     "matchday": 5,
-    "p1_avg_3dart_match": 48.799,
-    "p2_avg_3dart_match": 49.441
+    "p1_avg_3dart_match": 47.318,
+    "p2_avg_3dart_match": 44.664
   },
   {
+    "game_id": 349,
     "date": "2022-05-07",
     "p1": "Heiner",
     "p1_legs": 0,
@@ -2108,10 +2300,11 @@
     "p2": "Martin",
     "season": "2021/2022",
     "matchday": 5,
-    "p1_avg_3dart_match": 60.12,
+    "p1_avg_3dart_match": 46.36,
     "p2_avg_3dart_match": 60.932
   },
   {
+    "game_id": 348,
     "date": "2022-05-07",
     "p1": "Franz-Josef",
     "p1_legs": 2,
@@ -2119,10 +2312,11 @@
     "p2": "Martin",
     "season": "2021/2022",
     "matchday": 5,
-    "p1_avg_3dart_match": 61.598,
-    "p2_avg_3dart_match": 62.107
+    "p1_avg_3dart_match": 54.787,
+    "p2_avg_3dart_match": 61.14
   },
   {
+    "game_id": 347,
     "date": "2022-05-07",
     "p1": "Frank",
     "p1_legs": 0,
@@ -2130,10 +2324,11 @@
     "p2": "Heiner",
     "season": "2021/2022",
     "matchday": 5,
-    "p1_avg_3dart_match": 30.673,
+    "p1_avg_3dart_match": 29.796,
     "p2_avg_3dart_match": 30.884
   },
   {
+    "game_id": 346,
     "date": "2022-05-07",
     "p1": "Uwe",
     "p1_legs": 0,
@@ -2141,10 +2336,11 @@
     "p2": "Martin",
     "season": "2021/2022",
     "matchday": 5,
-    "p1_avg_3dart_match": 53.679,
+    "p1_avg_3dart_match": 38.429,
     "p2_avg_3dart_match": 53.047
   },
   {
+    "game_id": 345,
     "date": "2022-05-07",
     "p1": "Frank",
     "p1_legs": 1,
@@ -2152,10 +2348,11 @@
     "p2": "Franz-Josef",
     "season": "2021/2022",
     "matchday": 5,
-    "p1_avg_3dart_match": 41.462,
-    "p2_avg_3dart_match": 41.462
+    "p1_avg_3dart_match": 39.062,
+    "p2_avg_3dart_match": 41.379
   },
   {
+    "game_id": 344,
     "date": "2022-05-07",
     "p1": "Uwe",
     "p1_legs": 3,
@@ -2163,10 +2360,11 @@
     "p2": "Frank",
     "season": "2021/2022",
     "matchday": 5,
-    "p1_avg_3dart_match": 45.271,
-    "p2_avg_3dart_match": 45.823
+    "p1_avg_3dart_match": 44.187,
+    "p2_avg_3dart_match": 43.079
   },
   {
+    "game_id": 343,
     "date": "2022-05-07",
     "p1": "Franz-Josef",
     "p1_legs": 3,
@@ -2175,9 +2373,10 @@
     "season": "2021/2022",
     "matchday": 5,
     "p1_avg_3dart_match": 47.968,
-    "p2_avg_3dart_match": 50.1
+    "p2_avg_3dart_match": 43.3
   },
   {
+    "game_id": 342,
     "date": "2022-05-07",
     "p1": "Martin",
     "p1_legs": 3,
@@ -2185,10 +2384,11 @@
     "p2": "Frank",
     "season": "2021/2022",
     "matchday": 5,
-    "p1_avg_3dart_match": 43.565,
-    "p2_avg_3dart_match": 43.883
+    "p1_avg_3dart_match": 43.522,
+    "p2_avg_3dart_match": 38.584
   },
   {
+    "game_id": 341,
     "date": "2022-05-07",
     "p1": "Uwe",
     "p1_legs": 3,
@@ -2196,10 +2396,11 @@
     "p2": "Heiner",
     "season": "2021/2022",
     "matchday": 5,
-    "p1_avg_3dart_match": 31.312,
-    "p2_avg_3dart_match": 31.642
+    "p1_avg_3dart_match": 31.188,
+    "p2_avg_3dart_match": 29.116
   },
   {
+    "game_id": 340,
     "date": "2022-03-13",
     "p1": "Franz-Josef",
     "p1_legs": 3,
@@ -2207,10 +2408,11 @@
     "p2": "Uwe",
     "season": "2021/2022",
     "matchday": 4,
-    "p1_avg_3dart_match": 45.823,
-    "p2_avg_3dart_match": 46.104
+    "p1_avg_3dart_match": 44.945,
+    "p2_avg_3dart_match": 41.043
   },
   {
+    "game_id": 339,
     "date": "2022-03-13",
     "p1": "Heiner",
     "p1_legs": 1,
@@ -2218,10 +2420,11 @@
     "p2": "Martin",
     "season": "2021/2022",
     "matchday": 4,
-    "p1_avg_3dart_match": 46.605,
-    "p2_avg_3dart_match": 46.246
+    "p1_avg_3dart_match": 37.628,
+    "p2_avg_3dart_match": 46.2
   },
   {
+    "game_id": 338,
     "date": "2022-03-12",
     "p1": "Uwe",
     "p1_legs": 3,
@@ -2229,10 +2432,11 @@
     "p2": "Heiner",
     "season": "2021/2022",
     "matchday": 4,
-    "p1_avg_3dart_match": 34.953,
-    "p2_avg_3dart_match": 35.786
+    "p1_avg_3dart_match": 34.758,
+    "p2_avg_3dart_match": 31.2
   },
   {
+    "game_id": 337,
     "date": "2022-03-12",
     "p1": "Frank",
     "p1_legs": 1,
@@ -2240,10 +2444,11 @@
     "p2": "Martin",
     "season": "2021/2022",
     "matchday": 4,
-    "p1_avg_3dart_match": 51.828,
-    "p2_avg_3dart_match": 50.949
+    "p1_avg_3dart_match": 42.879,
+    "p2_avg_3dart_match": 50.136
   },
   {
+    "game_id": 336,
     "date": "2022-03-12",
     "p1": "Franz-Josef",
     "p1_legs": 3,
@@ -2252,9 +2457,10 @@
     "season": "2021/2022",
     "matchday": 4,
     "p1_avg_3dart_match": 51.239,
-    "p2_avg_3dart_match": 53.679
+    "p2_avg_3dart_match": 42.25
   },
   {
+    "game_id": 335,
     "date": "2022-03-12",
     "p1": "Frank",
     "p1_legs": 0,
@@ -2262,10 +2468,11 @@
     "p2": "Uwe",
     "season": "2021/2022",
     "matchday": 4,
-    "p1_avg_3dart_match": 35.786,
+    "p1_avg_3dart_match": 34.548,
     "p2_avg_3dart_match": 36.072
   },
   {
+    "game_id": 334,
     "date": "2022-03-12",
     "p1": "Frank",
     "p1_legs": 1,
@@ -2273,10 +2480,11 @@
     "p2": "Franz-Josef",
     "season": "2021/2022",
     "matchday": 4,
-    "p1_avg_3dart_match": 48.096,
-    "p2_avg_3dart_match": 46.969
+    "p1_avg_3dart_match": 42.336,
+    "p2_avg_3dart_match": 43.43
   },
   {
+    "game_id": 333,
     "date": "2022-03-12",
     "p1": "Martin",
     "p1_legs": 3,
@@ -2284,10 +2492,11 @@
     "p2": "Uwe",
     "season": "2021/2022",
     "matchday": 4,
-    "p1_avg_3dart_match": 54.457,
-    "p2_avg_3dart_match": 56.082
+    "p1_avg_3dart_match": 53.848,
+    "p2_avg_3dart_match": 48.381
   },
   {
+    "game_id": 332,
     "date": "2022-03-12",
     "p1": "Frank",
     "p1_legs": 3,
@@ -2295,10 +2504,11 @@
     "p2": "Heiner",
     "season": "2021/2022",
     "matchday": 4,
-    "p1_avg_3dart_match": 23.952,
-    "p2_avg_3dart_match": 24.048
+    "p1_avg_3dart_match": 23.904,
+    "p2_avg_3dart_match": 23.376
   },
   {
+    "game_id": 331,
     "date": "2022-03-12",
     "p1": "Martin",
     "p1_legs": 3,
@@ -2306,10 +2516,11 @@
     "p2": "Franz-Josef",
     "season": "2021/2022",
     "matchday": 4,
-    "p1_avg_3dart_match": 54.065,
-    "p2_avg_3dart_match": 56.082
+    "p1_avg_3dart_match": 50.374,
+    "p2_avg_3dart_match": 50.799
   },
   {
+    "game_id": 330,
     "date": "2022-01-15",
     "p1": "Franz-Josef",
     "p1_legs": 3,
@@ -2317,10 +2528,11 @@
     "p2": "Frank",
     "season": "2021/2022",
     "matchday": 3,
-    "p1_avg_3dart_match": 29.184,
-    "p2_avg_3dart_match": 29.184
+    "p1_avg_3dart_match": 28.893,
+    "p2_avg_3dart_match": 29.083
   },
   {
+    "game_id": 329,
     "date": "2022-01-15",
     "p1": "Heiner",
     "p1_legs": 0,
@@ -2328,10 +2540,11 @@
     "p2": "Martin",
     "season": "2021/2022",
     "matchday": 3,
-    "p1_avg_3dart_match": 40.622,
+    "p1_avg_3dart_match": 34.108,
     "p2_avg_3dart_match": 41.367
   },
   {
+    "game_id": 328,
     "date": "2022-01-15",
     "p1": "Franz-Josef",
     "p1_legs": 3,
@@ -2339,10 +2552,11 @@
     "p2": "Martin",
     "season": "2021/2022",
     "matchday": 3,
-    "p1_avg_3dart_match": 48.173,
-    "p2_avg_3dart_match": 47.866
+    "p1_avg_3dart_match": 47.327,
+    "p2_avg_3dart_match": 44.866
   },
   {
+    "game_id": 327,
     "date": "2022-01-15",
     "p1": "Uwe",
     "p1_legs": 3,
@@ -2350,10 +2564,11 @@
     "p2": "Heiner",
     "season": "2021/2022",
     "matchday": 3,
-    "p1_avg_3dart_match": 46.246,
-    "p2_avg_3dart_match": 46.605
+    "p1_avg_3dart_match": 46.2,
+    "p2_avg_3dart_match": 38.977
   },
   {
+    "game_id": 326,
     "date": "2022-01-15",
     "p1": "Frank",
     "p1_legs": 0,
@@ -2361,10 +2576,11 @@
     "p2": "Martin",
     "season": "2021/2022",
     "matchday": 3,
-    "p1_avg_3dart_match": 38.538,
+    "p1_avg_3dart_match": 31.615,
     "p2_avg_3dart_match": 39.553
   },
   {
+    "game_id": 325,
     "date": "2022-01-15",
     "p1": "Franz-Josef",
     "p1_legs": 3,
@@ -2372,10 +2588,11 @@
     "p2": "Uwe",
     "season": "2021/2022",
     "matchday": 3,
-    "p1_avg_3dart_match": 42.943,
-    "p2_avg_3dart_match": 44.206
+    "p1_avg_3dart_match": 42.729,
+    "p2_avg_3dart_match": 38.801
   },
   {
+    "game_id": 324,
     "date": "2022-01-15",
     "p1": "Uwe",
     "p1_legs": 3,
@@ -2383,10 +2600,11 @@
     "p2": "Frank",
     "season": "2021/2022",
     "matchday": 3,
-    "p1_avg_3dart_match": 36.304,
-    "p2_avg_3dart_match": 36.304
+    "p1_avg_3dart_match": 35.609,
+    "p2_avg_3dart_match": 34.42
   },
   {
+    "game_id": 323,
     "date": "2022-01-15",
     "p1": "Franz-Josef",
     "p1_legs": 3,
@@ -2395,9 +2613,10 @@
     "season": "2021/2022",
     "matchday": 3,
     "p1_avg_3dart_match": 41.75,
-    "p2_avg_3dart_match": 42.943
+    "p2_avg_3dart_match": 33.886
   },
   {
+    "game_id": 322,
     "date": "2022-01-15",
     "p1": "Martin",
     "p1_legs": 3,
@@ -2406,9 +2625,10 @@
     "season": "2021/2022",
     "matchday": 3,
     "p1_avg_3dart_match": 53.047,
-    "p2_avg_3dart_match": 55.667
+    "p2_avg_3dart_match": 40.519
   },
   {
+    "game_id": 321,
     "date": "2022-01-15",
     "p1": "Heiner",
     "p1_legs": 3,
@@ -2416,10 +2636,11 @@
     "p2": "Frank",
     "season": "2021/2022",
     "matchday": 3,
-    "p1_avg_3dart_match": 30.926,
-    "p2_avg_3dart_match": 31.054
+    "p1_avg_3dart_match": 29.395,
+    "p2_avg_3dart_match": 30.198
   },
   {
+    "game_id": 320,
     "date": "2021-12-10",
     "p1": "Uwe",
     "p1_legs": 1,
@@ -2427,10 +2648,11 @@
     "p2": "Franz-Josef",
     "season": "2021/2022",
     "matchday": 2,
-    "p1_avg_3dart_match": 51.385,
-    "p2_avg_3dart_match": 51.385
+    "p1_avg_3dart_match": 44.179,
+    "p2_avg_3dart_match": 51.0
   },
   {
+    "game_id": 319,
     "date": "2021-12-10",
     "p1": "Martin",
     "p1_legs": 3,
@@ -2439,9 +2661,10 @@
     "season": "2021/2022",
     "matchday": 2,
     "p1_avg_3dart_match": 47.463,
-    "p2_avg_3dart_match": 48.484
+    "p2_avg_3dart_match": 38.774
   },
   {
+    "game_id": 318,
     "date": "2021-12-10",
     "p1": "Martin",
     "p1_legs": 3,
@@ -2450,9 +2673,10 @@
     "season": "2021/2022",
     "matchday": 2,
     "p1_avg_3dart_match": 60.12,
-    "p2_avg_3dart_match": 62.625
+    "p2_avg_3dart_match": 39.875
   },
   {
+    "game_id": 317,
     "date": "2021-12-10",
     "p1": "Frank",
     "p1_legs": 2,
@@ -2460,10 +2684,11 @@
     "p2": "Heiner",
     "season": "2021/2022",
     "matchday": 2,
-    "p1_avg_3dart_match": 27.228,
-    "p2_avg_3dart_match": 27.228
+    "p1_avg_3dart_match": 26.467,
+    "p2_avg_3dart_match": 26.511
   },
   {
+    "game_id": 316,
     "date": "2021-12-10",
     "p1": "Martin",
     "p1_legs": 2,
@@ -2471,10 +2696,11 @@
     "p2": "Franz-Josef",
     "season": "2021/2022",
     "matchday": 2,
-    "p1_avg_3dart_match": 58.711,
-    "p2_avg_3dart_match": 60.605
+    "p1_avg_3dart_match": 57.633,
+    "p2_avg_3dart_match": 52.089
   },
   {
+    "game_id": 315,
     "date": "2021-12-10",
     "p1": "Uwe",
     "p1_legs": 0,
@@ -2482,10 +2708,11 @@
     "p2": "Heiner",
     "season": "2021/2022",
     "matchday": 2,
-    "p1_avg_3dart_match": 31.979,
+    "p1_avg_3dart_match": 29.34,
     "p2_avg_3dart_match": 31.754
   },
   {
+    "game_id": 314,
     "date": "2021-12-10",
     "p1": "Franz-Josef",
     "p1_legs": 3,
@@ -2494,9 +2721,10 @@
     "season": "2021/2022",
     "matchday": 2,
     "p1_avg_3dart_match": 51.828,
-    "p2_avg_3dart_match": 53.679
+    "p2_avg_3dart_match": 41.5
   },
   {
+    "game_id": 313,
     "date": "2021-12-10",
     "p1": "Frank",
     "p1_legs": 2,
@@ -2504,10 +2732,11 @@
     "p2": "Uwe",
     "season": "2021/2022",
     "matchday": 2,
-    "p1_avg_3dart_match": 37.955,
-    "p2_avg_3dart_match": 38.147
+    "p1_avg_3dart_match": 35.167,
+    "p2_avg_3dart_match": 37.812
   },
   {
+    "game_id": 312,
     "date": "2021-12-10",
     "p1": "Martin",
     "p1_legs": 3,
@@ -2516,9 +2745,10 @@
     "season": "2021/2022",
     "matchday": 2,
     "p1_avg_3dart_match": 57.808,
-    "p2_avg_3dart_match": 60.12
+    "p2_avg_3dart_match": 40.16
   },
   {
+    "game_id": 311,
     "date": "2021-12-10",
     "p1": "Franz-Josef",
     "p1_legs": 3,
@@ -2527,9 +2757,10 @@
     "season": "2021/2022",
     "matchday": 2,
     "p1_avg_3dart_match": 41.75,
-    "p2_avg_3dart_match": 42.943
+    "p2_avg_3dart_match": 36.657
   },
   {
+    "game_id": 310,
     "date": "2021-09-18",
     "p1": "Martin",
     "p1_legs": 3,
@@ -2538,9 +2769,10 @@
     "season": "2021/2022",
     "matchday": 1,
     "p1_avg_3dart_match": 60.932,
-    "p2_avg_3dart_match": 62.625
+    "p2_avg_3dart_match": 40.875
   },
   {
+    "game_id": 309,
     "date": "2021-09-18",
     "p1": "Franz-Josef",
     "p1_legs": 3,
@@ -2549,9 +2781,10 @@
     "season": "2021/2022",
     "matchday": 1,
     "p1_avg_3dart_match": 42.14,
-    "p2_avg_3dart_match": 44.206
+    "p2_avg_3dart_match": 32.5
   },
   {
+    "game_id": 308,
     "date": "2021-09-18",
     "p1": "Franz-Josef",
     "p1_legs": 3,
@@ -2560,9 +2793,10 @@
     "season": "2021/2022",
     "matchday": 1,
     "p1_avg_3dart_match": 50.1,
-    "p2_avg_3dart_match": 51.828
+    "p2_avg_3dart_match": 42.448
   },
   {
+    "game_id": 307,
     "date": "2021-09-18",
     "p1": "Frank",
     "p1_legs": 0,
@@ -2570,10 +2804,11 @@
     "p2": "Uwe",
     "season": "2021/2022",
     "matchday": 1,
-    "p1_avg_3dart_match": 28.904,
+    "p1_avg_3dart_match": 27.788,
     "p2_avg_3dart_match": 29.09
   },
   {
+    "game_id": 306,
     "date": "2021-09-18",
     "p1": "Franz-Josef",
     "p1_legs": 0,
@@ -2581,10 +2816,11 @@
     "p2": "Martin",
     "season": "2021/2022",
     "matchday": 1,
-    "p1_avg_3dart_match": 62.625,
+    "p1_avg_3dart_match": 41.792,
     "p2_avg_3dart_match": 64.414
   },
   {
+    "game_id": 305,
     "date": "2021-09-18",
     "p1": "Frank",
     "p1_legs": 0,
@@ -2592,10 +2828,11 @@
     "p2": "Heiner",
     "season": "2021/2022",
     "matchday": 1,
-    "p1_avg_3dart_match": 36.659,
+    "p1_avg_3dart_match": 34.951,
     "p2_avg_3dart_match": 36.659
   },
   {
+    "game_id": 304,
     "date": "2021-09-18",
     "p1": "Martin",
     "p1_legs": 3,
@@ -2604,9 +2841,10 @@
     "season": "2021/2022",
     "matchday": 1,
     "p1_avg_3dart_match": 47.968,
-    "p2_avg_3dart_match": 48.484
+    "p2_avg_3dart_match": 37.065
   },
   {
+    "game_id": 303,
     "date": "2021-09-18",
     "p1": "Uwe",
     "p1_legs": 3,
@@ -2615,9 +2853,10 @@
     "season": "2021/2022",
     "matchday": 1,
     "p1_avg_3dart_match": 21.574,
-    "p2_avg_3dart_match": 21.783
+    "p2_avg_3dart_match": 21.391
   },
   {
+    "game_id": 302,
     "date": "2021-09-18",
     "p1": "Frank",
     "p1_legs": 0,
@@ -2625,10 +2864,11 @@
     "p2": "Franz-Josef",
     "season": "2021/2022",
     "matchday": 1,
-    "p1_avg_3dart_match": 42.943,
+    "p1_avg_3dart_match": 34.057,
     "p2_avg_3dart_match": 42.943
   },
   {
+    "game_id": 301,
     "date": "2021-09-18",
     "p1": "Martin",
     "p1_legs": 3,
@@ -2637,9 +2877,10 @@
     "season": "2021/2022",
     "matchday": 1,
     "p1_avg_3dart_match": 61.767,
-    "p2_avg_3dart_match": 65.348
+    "p2_avg_3dart_match": 36.826
   },
   {
+    "game_id": 300,
     "date": "2021-08-20",
     "p1": "Martin",
     "p1_legs": 3,
@@ -2648,9 +2889,10 @@
     "season": "2020/2021",
     "matchday": 10,
     "p1_avg_3dart_match": 53.047,
-    "p2_avg_3dart_match": 53.679
+    "p2_avg_3dart_match": 43.5
   },
   {
+    "game_id": 299,
     "date": "2021-08-20",
     "p1": "Franz-Josef",
     "p1_legs": 3,
@@ -2659,9 +2901,10 @@
     "season": "2020/2021",
     "matchday": 10,
     "p1_avg_3dart_match": 49.011,
-    "p2_avg_3dart_match": 50.1
+    "p2_avg_3dart_match": 40.633
   },
   {
+    "game_id": 298,
     "date": "2021-08-20",
     "p1": "Franz-Josef",
     "p1_legs": 0,
@@ -2669,10 +2912,11 @@
     "p2": "Martin",
     "season": "2020/2021",
     "matchday": 10,
-    "p1_avg_3dart_match": 68.318,
+    "p1_avg_3dart_match": 40.864,
     "p2_avg_3dart_match": 66.309
   },
   {
+    "game_id": 297,
     "date": "2021-08-20",
     "p1": "Uwe",
     "p1_legs": 3,
@@ -2680,10 +2924,11 @@
     "p2": "Heiner",
     "season": "2020/2021",
     "matchday": 10,
-    "p1_avg_3dart_match": 43.565,
-    "p2_avg_3dart_match": 43.565
+    "p1_avg_3dart_match": 43.174,
+    "p2_avg_3dart_match": 38.717
   },
   {
+    "game_id": 296,
     "date": "2021-08-20",
     "p1": "Franz-Josef",
     "p1_legs": 3,
@@ -2692,9 +2937,10 @@
     "season": "2020/2021",
     "matchday": 10,
     "p1_avg_3dart_match": 40.991,
-    "p2_avg_3dart_match": 41.75
+    "p2_avg_3dart_match": 35.222
   },
   {
+    "game_id": 295,
     "date": "2021-08-20",
     "p1": "Uwe",
     "p1_legs": 0,
@@ -2702,10 +2948,11 @@
     "p2": "Martin",
     "season": "2020/2021",
     "matchday": 10,
-    "p1_avg_3dart_match": 51.828,
+    "p1_avg_3dart_match": 39.828,
     "p2_avg_3dart_match": 53.679
   },
   {
+    "game_id": 294,
     "date": "2021-08-20",
     "p1": "Uwe",
     "p1_legs": 3,
@@ -2713,10 +2960,11 @@
     "p2": "Frank",
     "season": "2020/2021",
     "matchday": 10,
-    "p1_avg_3dart_match": 35.158,
-    "p2_avg_3dart_match": 35.158
+    "p1_avg_3dart_match": 34.491,
+    "p2_avg_3dart_match": 33.14
   },
   {
+    "game_id": 293,
     "date": "2021-08-20",
     "p1": "Martin",
     "p1_legs": 3,
@@ -2725,9 +2973,10 @@
     "season": "2020/2021",
     "matchday": 10,
     "p1_avg_3dart_match": 59.329,
-    "p2_avg_3dart_match": 62.625
+    "p2_avg_3dart_match": 35.958
   },
   {
+    "game_id": 292,
     "date": "2021-08-20",
     "p1": "Uwe",
     "p1_legs": 1,
@@ -2735,10 +2984,11 @@
     "p2": "Franz-Josef",
     "season": "2020/2021",
     "matchday": 10,
-    "p1_avg_3dart_match": 42.042,
-    "p2_avg_3dart_match": 41.462
+    "p1_avg_3dart_match": 38.979,
+    "p2_avg_3dart_match": 38.586
   },
   {
+    "game_id": 291,
     "date": "2021-08-20",
     "p1": "Frank",
     "p1_legs": 3,
@@ -2746,10 +2996,11 @@
     "p2": "Heiner",
     "season": "2020/2021",
     "matchday": 10,
-    "p1_avg_3dart_match": 27.963,
-    "p2_avg_3dart_match": 28.493
+    "p1_avg_3dart_match": 27.209,
+    "p2_avg_3dart_match": 26.502
   },
   {
+    "game_id": 290,
     "date": "2021-07-10",
     "p1": "Franz-Josef",
     "p1_legs": 3,
@@ -2758,9 +3009,10 @@
     "season": "2020/2021",
     "matchday": 9,
     "p1_avg_3dart_match": 49.011,
-    "p2_avg_3dart_match": 51.828
+    "p2_avg_3dart_match": 35.724
   },
   {
+    "game_id": 289,
     "date": "2021-07-10",
     "p1": "Martin",
     "p1_legs": 3,
@@ -2769,9 +3021,10 @@
     "season": "2020/2021",
     "matchday": 9,
     "p1_avg_3dart_match": 54.988,
-    "p2_avg_3dart_match": 55.667
+    "p2_avg_3dart_match": 48.0
   },
   {
+    "game_id": 288,
     "date": "2021-07-10",
     "p1": "Franz-Josef",
     "p1_legs": 3,
@@ -2780,9 +3033,10 @@
     "season": "2020/2021",
     "matchday": 9,
     "p1_avg_3dart_match": 41.367,
-    "p2_avg_3dart_match": 42.943
+    "p2_avg_3dart_match": 40.8
   },
   {
+    "game_id": 287,
     "date": "2021-07-10",
     "p1": "Martin",
     "p1_legs": 3,
@@ -2791,9 +3045,10 @@
     "season": "2020/2021",
     "matchday": 9,
     "p1_avg_3dart_match": 61.767,
-    "p2_avg_3dart_match": 65.348
+    "p2_avg_3dart_match": 28.043
   },
   {
+    "game_id": 286,
     "date": "2021-07-10",
     "p1": "Uwe",
     "p1_legs": 3,
@@ -2802,9 +3057,10 @@
     "season": "2020/2021",
     "matchday": 9,
     "p1_avg_3dart_match": 40.991,
-    "p2_avg_3dart_match": 41.75
+    "p2_avg_3dart_match": 35.694
   },
   {
+    "game_id": 285,
     "date": "2021-07-10",
     "p1": "Franz-Josef",
     "p1_legs": 3,
@@ -2813,9 +3069,10 @@
     "season": "2020/2021",
     "matchday": 9,
     "p1_avg_3dart_match": 54.988,
-    "p2_avg_3dart_match": 55.667
+    "p2_avg_3dart_match": 32.444
   },
   {
+    "game_id": 284,
     "date": "2021-07-10",
     "p1": "Frank",
     "p1_legs": 3,
@@ -2824,9 +3081,10 @@
     "season": "2020/2021",
     "matchday": 9,
     "p1_avg_3dart_match": 28.006,
-    "p2_avg_3dart_match": 28.358
+    "p2_avg_3dart_match": 25.774
   },
   {
+    "game_id": 283,
     "date": "2021-07-10",
     "p1": "Franz-Josef",
     "p1_legs": 0,
@@ -2834,10 +3092,11 @@
     "p2": "Martin",
     "season": "2020/2021",
     "matchday": 9,
-    "p1_avg_3dart_match": 60.12,
+    "p1_avg_3dart_match": 46.72,
     "p2_avg_3dart_match": 61.767
   },
   {
+    "game_id": 282,
     "date": "2021-07-10",
     "p1": "Uwe",
     "p1_legs": 3,
@@ -2845,10 +3104,11 @@
     "p2": "Heiner",
     "season": "2020/2021",
     "matchday": 9,
-    "p1_avg_3dart_match": 41.462,
-    "p2_avg_3dart_match": 42.042
+    "p1_avg_3dart_match": 41.255,
+    "p2_avg_3dart_match": 34.825
   },
   {
+    "game_id": 281,
     "date": "2021-07-10",
     "p1": "Martin",
     "p1_legs": 3,
@@ -2857,9 +3117,10 @@
     "season": "2020/2021",
     "matchday": 9,
     "p1_avg_3dart_match": 49.011,
-    "p2_avg_3dart_match": 50.1
+    "p2_avg_3dart_match": 33.233
   },
   {
+    "game_id": 280,
     "date": "2020-10-18",
     "p1": "Franz-Josef",
     "p1_legs": 3,
@@ -2867,10 +3128,11 @@
     "p2": "Martin",
     "season": "2020/2021",
     "matchday": 8,
-    "p1_avg_3dart_match": 58.256,
-    "p2_avg_3dart_match": 60.12
+    "p1_avg_3dart_match": 56.023,
+    "p2_avg_3dart_match": 56.52
   },
   {
+    "game_id": 279,
     "date": "2020-10-17",
     "p1": "Uwe",
     "p1_legs": 3,
@@ -2879,9 +3141,10 @@
     "season": "2020/2021",
     "matchday": 8,
     "p1_avg_3dart_match": 37.575,
-    "p2_avg_3dart_match": 38.538
+    "p2_avg_3dart_match": 32.872
   },
   {
+    "game_id": 278,
     "date": "2020-10-17",
     "p1": "Uwe",
     "p1_legs": 0,
@@ -2889,10 +3152,11 @@
     "p2": "Martin",
     "season": "2020/2021",
     "matchday": 8,
-    "p1_avg_3dart_match": 53.679,
+    "p1_avg_3dart_match": 41.214,
     "p2_avg_3dart_match": 51.828
   },
   {
+    "game_id": 277,
     "date": "2020-10-17",
     "p1": "Frank",
     "p1_legs": 3,
@@ -2901,9 +3165,10 @@
     "season": "2020/2021",
     "matchday": 8,
     "p1_avg_3dart_match": 31.531,
-    "p2_avg_3dart_match": 31.979
+    "p2_avg_3dart_match": 28.596
   },
   {
+    "game_id": 276,
     "date": "2020-10-17",
     "p1": "Uwe",
     "p1_legs": 2,
@@ -2911,10 +3176,11 @@
     "p2": "Franz-Josef",
     "season": "2020/2021",
     "matchday": 8,
-    "p1_avg_3dart_match": 50.1,
-    "p2_avg_3dart_match": 51.122
+    "p1_avg_3dart_match": 45.72,
+    "p2_avg_3dart_match": 50.306
   },
   {
+    "game_id": 275,
     "date": "2020-10-17",
     "p1": "Martin",
     "p1_legs": 3,
@@ -2923,9 +3189,10 @@
     "season": "2020/2021",
     "matchday": 8,
     "p1_avg_3dart_match": 60.932,
-    "p2_avg_3dart_match": 62.625
+    "p2_avg_3dart_match": 43.75
   },
   {
+    "game_id": 274,
     "date": "2020-10-17",
     "p1": "Frank",
     "p1_legs": 0,
@@ -2933,10 +3200,11 @@
     "p2": "Franz-Josef",
     "season": "2020/2021",
     "matchday": 8,
-    "p1_avg_3dart_match": 38.538,
+    "p1_avg_3dart_match": 34.564,
     "p2_avg_3dart_match": 38.538
   },
   {
+    "game_id": 273,
     "date": "2020-10-17",
     "p1": "Martin",
     "p1_legs": 3,
@@ -2945,9 +3213,10 @@
     "season": "2020/2021",
     "matchday": 8,
     "p1_avg_3dart_match": 55.667,
-    "p2_avg_3dart_match": 60.12
+    "p2_avg_3dart_match": 38.48
   },
   {
+    "game_id": 272,
     "date": "2020-10-17",
     "p1": "Uwe",
     "p1_legs": 1,
@@ -2955,10 +3224,11 @@
     "p2": "Frank",
     "season": "2020/2021",
     "matchday": 8,
-    "p1_avg_3dart_match": 40.349,
-    "p2_avg_3dart_match": 39.553
+    "p1_avg_3dart_match": 35.638,
+    "p2_avg_3dart_match": 36.336
   },
   {
+    "game_id": 271,
     "date": "2020-10-17",
     "p1": "Heiner",
     "p1_legs": 0,
@@ -2966,10 +3236,11 @@
     "p2": "Franz-Josef",
     "season": "2020/2021",
     "matchday": 8,
-    "p1_avg_3dart_match": 46.969,
+    "p1_avg_3dart_match": 39.531,
     "p2_avg_3dart_match": 47.463
   },
   {
+    "game_id": 270,
     "date": "2020-09-04",
     "p1": "Frank",
     "p1_legs": 0,
@@ -2977,10 +3248,11 @@
     "p2": "Uwe",
     "season": "2020/2021",
     "matchday": 7,
-    "p1_avg_3dart_match": 36.659,
+    "p1_avg_3dart_match": 35.78,
     "p2_avg_3dart_match": 36.072
   },
   {
+    "game_id": 269,
     "date": "2020-09-04",
     "p1": "Franz-Josef",
     "p1_legs": 0,
@@ -2988,10 +3260,11 @@
     "p2": "Martin",
     "season": "2020/2021",
     "matchday": 7,
-    "p1_avg_3dart_match": 57.808,
+    "p1_avg_3dart_match": 48.231,
     "p2_avg_3dart_match": 57.076
   },
   {
+    "game_id": 268,
     "date": "2020-09-04",
     "p1": "Franz-Josef",
     "p1_legs": 3,
@@ -3000,9 +3273,10 @@
     "season": "2020/2021",
     "matchday": 7,
     "p1_avg_3dart_match": 53.679,
-    "p2_avg_3dart_match": 55.667
+    "p2_avg_3dart_match": 41.815
   },
   {
+    "game_id": 267,
     "date": "2020-09-04",
     "p1": "Martin",
     "p1_legs": 3,
@@ -3011,9 +3285,10 @@
     "season": "2020/2021",
     "matchday": 7,
     "p1_avg_3dart_match": 53.047,
-    "p2_avg_3dart_match": 55.667
+    "p2_avg_3dart_match": 38.259
   },
   {
+    "game_id": 266,
     "date": "2020-09-04",
     "p1": "Uwe",
     "p1_legs": 2,
@@ -3021,10 +3296,11 @@
     "p2": "Franz-Josef",
     "season": "2020/2021",
     "matchday": 7,
-    "p1_avg_3dart_match": 46.389,
-    "p2_avg_3dart_match": 46.389
+    "p1_avg_3dart_match": 41.593,
+    "p2_avg_3dart_match": 43.648
   },
   {
+    "game_id": 265,
     "date": "2020-09-04",
     "p1": "Frank",
     "p1_legs": 3,
@@ -3033,9 +3309,10 @@
     "season": "2020/2021",
     "matchday": 7,
     "p1_avg_3dart_match": 22.322,
-    "p2_avg_3dart_match": 22.433
+    "p2_avg_3dart_match": 22.134
   },
   {
+    "game_id": 264,
     "date": "2020-09-04",
     "p1": "Heiner",
     "p1_legs": 0,
@@ -3043,10 +3320,11 @@
     "p2": "Uwe",
     "season": "2020/2021",
     "matchday": 7,
-    "p1_avg_3dart_match": 31.979,
+    "p1_avg_3dart_match": 30.362,
     "p2_avg_3dart_match": 32.674
   },
   {
+    "game_id": 263,
     "date": "2020-09-04",
     "p1": "Frank",
     "p1_legs": 2,
@@ -3054,10 +3332,11 @@
     "p2": "Martin",
     "season": "2020/2021",
     "matchday": 7,
-    "p1_avg_3dart_match": 45.823,
-    "p2_avg_3dart_match": 46.969
+    "p1_avg_3dart_match": 41.543,
+    "p2_avg_3dart_match": 46.725
   },
   {
+    "game_id": 262,
     "date": "2020-09-04",
     "p1": "Heiner",
     "p1_legs": 0,
@@ -3065,10 +3344,11 @@
     "p2": "Franz-Josef",
     "season": "2020/2021",
     "matchday": 7,
-    "p1_avg_3dart_match": 45.545,
+    "p1_avg_3dart_match": 41.333,
     "p2_avg_3dart_match": 46.485
   },
   {
+    "game_id": 261,
     "date": "2020-09-04",
     "p1": "Uwe",
     "p1_legs": 0,
@@ -3076,10 +3356,11 @@
     "p2": "Martin",
     "season": "2020/2021",
     "matchday": 7,
-    "p1_avg_3dart_match": 55.667,
+    "p1_avg_3dart_match": 43.481,
     "p2_avg_3dart_match": 54.988
   },
   {
+    "game_id": 260,
     "date": "2020-08-22",
     "p1": "Martin",
     "p1_legs": 3,
@@ -3087,10 +3368,11 @@
     "p2": "Frank",
     "season": "2020/2021",
     "matchday": 6,
-    "p1_avg_3dart_match": 49.686,
-    "p2_avg_3dart_match": 50.521
+    "p1_avg_3dart_match": 49.488,
+    "p2_avg_3dart_match": 41.924
   },
   {
+    "game_id": 259,
     "date": "2020-08-21",
     "p1": "Uwe",
     "p1_legs": 3,
@@ -3098,10 +3380,11 @@
     "p2": "Franz-Josef",
     "season": "2020/2021",
     "matchday": 6,
-    "p1_avg_3dart_match": 43.883,
-    "p2_avg_3dart_match": 43.883
+    "p1_avg_3dart_match": 42.219,
+    "p2_avg_3dart_match": 41.036
   },
   {
+    "game_id": 258,
     "date": "2020-08-21",
     "p1": "Uwe",
     "p1_legs": 1,
@@ -3109,10 +3392,11 @@
     "p2": "Martin",
     "season": "2020/2021",
     "matchday": 6,
-    "p1_avg_3dart_match": 51.385,
-    "p2_avg_3dart_match": 51.828
+    "p1_avg_3dart_match": 41.154,
+    "p2_avg_3dart_match": 51.569
   },
   {
+    "game_id": 257,
     "date": "2020-08-21",
     "p1": "Heiner",
     "p1_legs": 0,
@@ -3120,10 +3404,11 @@
     "p2": "Franz-Josef",
     "season": "2020/2021",
     "matchday": 6,
-    "p1_avg_3dart_match": 34.953,
+    "p1_avg_3dart_match": 33.698,
     "p2_avg_3dart_match": 34.953
   },
   {
+    "game_id": 256,
     "date": "2020-08-21",
     "p1": "Uwe",
     "p1_legs": 3,
@@ -3132,9 +3417,10 @@
     "season": "2020/2021",
     "matchday": 6,
     "p1_avg_3dart_match": 47.968,
-    "p2_avg_3dart_match": 48.484
+    "p2_avg_3dart_match": 36.871
   },
   {
+    "game_id": 255,
     "date": "2020-08-21",
     "p1": "Martin",
     "p1_legs": 3,
@@ -3142,10 +3428,11 @@
     "p2": "Heiner",
     "season": "2020/2021",
     "matchday": 6,
-    "p1_avg_3dart_match": 37.811,
-    "p2_avg_3dart_match": 38.538
+    "p1_avg_3dart_match": 37.774,
+    "p2_avg_3dart_match": 33.058
   },
   {
+    "game_id": 254,
     "date": "2020-08-21",
     "p1": "Frank",
     "p1_legs": 2,
@@ -3153,10 +3440,11 @@
     "p2": "Heiner",
     "season": "2020/2021",
     "matchday": 6,
-    "p1_avg_3dart_match": 24.639,
-    "p2_avg_3dart_match": 24.967
+    "p1_avg_3dart_match": 24.207,
+    "p2_avg_3dart_match": 24.927
   },
   {
+    "game_id": 253,
     "date": "2020-08-21",
     "p1": "Martin",
     "p1_legs": 3,
@@ -3164,10 +3452,11 @@
     "p2": "Franz-Josef",
     "season": "2020/2021",
     "matchday": 6,
-    "p1_avg_3dart_match": 60.727,
-    "p2_avg_3dart_match": 60.727
+    "p1_avg_3dart_match": 55.455,
+    "p2_avg_3dart_match": 47.909
   },
   {
+    "game_id": 252,
     "date": "2020-08-21",
     "p1": "Heiner",
     "p1_legs": 2,
@@ -3175,10 +3464,11 @@
     "p2": "Uwe",
     "season": "2020/2021",
     "matchday": 6,
-    "p1_avg_3dart_match": 41.75,
-    "p2_avg_3dart_match": 41.291
+    "p1_avg_3dart_match": 37.833,
+    "p2_avg_3dart_match": 41.093
   },
   {
+    "game_id": 251,
     "date": "2020-08-21",
     "p1": "Frank",
     "p1_legs": 0,
@@ -3186,10 +3476,11 @@
     "p2": "Franz-Josef",
     "season": "2020/2021",
     "matchday": 6,
-    "p1_avg_3dart_match": 42.943,
+    "p1_avg_3dart_match": 36.057,
     "p2_avg_3dart_match": 42.943
   },
   {
+    "game_id": 250,
     "date": "2020-07-24",
     "p1": "Martin",
     "p1_legs": 3,
@@ -3198,9 +3489,10 @@
     "season": "2020/2021",
     "matchday": 5,
     "p1_avg_3dart_match": 55.667,
-    "p2_avg_3dart_match": 57.808
+    "p2_avg_3dart_match": 38.462
   },
   {
+    "game_id": 249,
     "date": "2020-07-24",
     "p1": "Heiner",
     "p1_legs": 1,
@@ -3208,10 +3500,11 @@
     "p2": "Frank",
     "season": "2020/2021",
     "matchday": 5,
-    "p1_avg_3dart_match": 28.766,
-    "p2_avg_3dart_match": 28.629
+    "p1_avg_3dart_match": 28.105,
+    "p2_avg_3dart_match": 28.429
   },
   {
+    "game_id": 248,
     "date": "2020-07-24",
     "p1": "Heiner",
     "p1_legs": 2,
@@ -3219,10 +3512,11 @@
     "p2": "Uwe",
     "season": "2020/2021",
     "matchday": 5,
-    "p1_avg_3dart_match": 36.304,
-    "p2_avg_3dart_match": 36.13
+    "p1_avg_3dart_match": 34.957,
+    "p2_avg_3dart_match": 35.986
   },
   {
+    "game_id": 247,
     "date": "2020-07-24",
     "p1": "Frank",
     "p1_legs": 0,
@@ -3230,10 +3524,11 @@
     "p2": "Franz-Josef",
     "season": "2020/2021",
     "matchday": 5,
-    "p1_avg_3dart_match": 45.545,
+    "p1_avg_3dart_match": 42.576,
     "p2_avg_3dart_match": 46.01
   },
   {
+    "game_id": 246,
     "date": "2020-07-24",
     "p1": "Martin",
     "p1_legs": 3,
@@ -3242,9 +3537,10 @@
     "season": "2020/2021",
     "matchday": 5,
     "p1_avg_3dart_match": 50.663,
-    "p2_avg_3dart_match": 51.828
+    "p2_avg_3dart_match": 44.379
   },
   {
+    "game_id": 245,
     "date": "2020-07-24",
     "p1": "Franz-Josef",
     "p1_legs": 0,
@@ -3252,10 +3548,11 @@
     "p2": "Uwe",
     "season": "2020/2021",
     "matchday": 5,
-    "p1_avg_3dart_match": 44.206,
+    "p1_avg_3dart_match": 41.735,
     "p2_avg_3dart_match": 44.644
   },
   {
+    "game_id": 244,
     "date": "2020-07-24",
     "p1": "Martin",
     "p1_legs": 3,
@@ -3263,10 +3560,11 @@
     "p2": "Franz-Josef",
     "season": "2020/2021",
     "matchday": 5,
-    "p1_avg_3dart_match": 56.504,
-    "p2_avg_3dart_match": 57.808
+    "p1_avg_3dart_match": 55.692,
+    "p2_avg_3dart_match": 53.354
   },
   {
+    "game_id": 243,
     "date": "2020-07-24",
     "p1": "Uwe",
     "p1_legs": 3,
@@ -3274,10 +3572,11 @@
     "p2": "Frank",
     "season": "2020/2021",
     "matchday": 5,
-    "p1_avg_3dart_match": 49.768,
-    "p2_avg_3dart_match": 50.436
+    "p1_avg_3dart_match": 45.517,
+    "p2_avg_3dart_match": 38.356
   },
   {
+    "game_id": 242,
     "date": "2020-07-24",
     "p1": "Franz-Josef",
     "p1_legs": 3,
@@ -3286,9 +3585,10 @@
     "season": "2020/2021",
     "matchday": 5,
     "p1_avg_3dart_match": 41.75,
-    "p2_avg_3dart_match": 42.943
+    "p2_avg_3dart_match": 32.371
   },
   {
+    "game_id": 241,
     "date": "2020-07-24",
     "p1": "Frank",
     "p1_legs": 0,
@@ -3296,10 +3596,11 @@
     "p2": "Martin",
     "season": "2020/2021",
     "matchday": 5,
-    "p1_avg_3dart_match": 35.786,
+    "p1_avg_3dart_match": 28.738,
     "p2_avg_3dart_match": 36.072
   },
   {
+    "game_id": 240,
     "date": "2020-07-19",
     "p1": "Uwe",
     "p1_legs": 2,
@@ -3307,10 +3608,11 @@
     "p2": "Franz-Josef",
     "season": "2020/2021",
     "matchday": 4,
-    "p1_avg_3dart_match": 47.866,
-    "p2_avg_3dart_match": 47.866
+    "p1_avg_3dart_match": 44.446,
+    "p2_avg_3dart_match": 46.223
   },
   {
+    "game_id": 239,
     "date": "2020-07-18",
     "p1": "Martin",
     "p1_legs": 3,
@@ -3318,10 +3620,11 @@
     "p2": "Heiner",
     "season": "2020/2021",
     "matchday": 4,
-    "p1_avg_3dart_match": 49.279,
-    "p2_avg_3dart_match": 48.878
+    "p1_avg_3dart_match": 48.049,
+    "p2_avg_3dart_match": 44.439
   },
   {
+    "game_id": 238,
     "date": "2020-07-18",
     "p1": "Heiner",
     "p1_legs": 0,
@@ -3329,10 +3632,11 @@
     "p2": "Uwe",
     "season": "2020/2021",
     "matchday": 4,
-    "p1_avg_3dart_match": 36.659,
+    "p1_avg_3dart_match": 34.683,
     "p2_avg_3dart_match": 36.659
   },
   {
+    "game_id": 237,
     "date": "2020-07-18",
     "p1": "Martin",
     "p1_legs": 3,
@@ -3340,10 +3644,11 @@
     "p2": "Frank",
     "season": "2020/2021",
     "matchday": 4,
-    "p1_avg_3dart_match": 42.338,
-    "p2_avg_3dart_match": 42.338
+    "p1_avg_3dart_match": 42.169,
+    "p2_avg_3dart_match": 36.486
   },
   {
+    "game_id": 236,
     "date": "2020-07-18",
     "p1": "Franz-Josef",
     "p1_legs": 3,
@@ -3352,9 +3657,10 @@
     "season": "2020/2021",
     "matchday": 4,
     "p1_avg_3dart_match": 50.1,
-    "p2_avg_3dart_match": 51.828
+    "p2_avg_3dart_match": 35.586
   },
   {
+    "game_id": 235,
     "date": "2020-07-18",
     "p1": "Uwe",
     "p1_legs": 3,
@@ -3362,10 +3668,11 @@
     "p2": "Frank",
     "season": "2020/2021",
     "matchday": 4,
-    "p1_avg_3dart_match": 34.751,
-    "p2_avg_3dart_match": 35.574
+    "p1_avg_3dart_match": 34.717,
+    "p2_avg_3dart_match": 30.284
   },
   {
+    "game_id": 234,
     "date": "2020-07-18",
     "p1": "Franz-Josef",
     "p1_legs": 3,
@@ -3373,10 +3680,11 @@
     "p2": "Frank",
     "season": "2020/2021",
     "matchday": 4,
-    "p1_avg_3dart_match": 42.042,
-    "p2_avg_3dart_match": 42.943
+    "p1_avg_3dart_match": 41.979,
+    "p2_avg_3dart_match": 37.479
   },
   {
+    "game_id": 233,
     "date": "2020-07-18",
     "p1": "Martin",
     "p1_legs": 3,
@@ -3385,9 +3693,10 @@
     "season": "2020/2021",
     "matchday": 4,
     "p1_avg_3dart_match": 47.968,
-    "p2_avg_3dart_match": 50.1
+    "p2_avg_3dart_match": 35.9
   },
   {
+    "game_id": 232,
     "date": "2020-07-18",
     "p1": "Frank",
     "p1_legs": 0,
@@ -3395,10 +3704,11 @@
     "p2": "Heiner",
     "season": "2020/2021",
     "matchday": 4,
-    "p1_avg_3dart_match": 23.484,
+    "p1_avg_3dart_match": 23.344,
     "p2_avg_3dart_match": 23.607
   },
   {
+    "game_id": 231,
     "date": "2020-07-18",
     "p1": "Martin",
     "p1_legs": 3,
@@ -3407,9 +3717,10 @@
     "season": "2020/2021",
     "matchday": 4,
     "p1_avg_3dart_match": 51.828,
-    "p2_avg_3dart_match": 53.679
+    "p2_avg_3dart_match": 48.786
   },
   {
+    "game_id": 230,
     "date": "2020-03-15",
     "p1": "Martin",
     "p1_legs": 3,
@@ -3418,9 +3729,10 @@
     "season": "2020/2021",
     "matchday": 3,
     "p1_avg_3dart_match": 51.828,
-    "p2_avg_3dart_match": 53.679
+    "p2_avg_3dart_match": 43.571
   },
   {
+    "game_id": 229,
     "date": "2020-03-15",
     "p1": "Franz-Josef",
     "p1_legs": 3,
@@ -3429,9 +3741,10 @@
     "season": "2020/2021",
     "matchday": 3,
     "p1_avg_3dart_match": 47.968,
-    "p2_avg_3dart_match": 50.1
+    "p2_avg_3dart_match": 40.7
   },
   {
+    "game_id": 228,
     "date": "2020-03-15",
     "p1": "Heiner",
     "p1_legs": 1,
@@ -3439,10 +3752,11 @@
     "p2": "Frank",
     "season": "2020/2021",
     "matchday": 3,
-    "p1_avg_3dart_match": 32.852,
-    "p2_avg_3dart_match": 32.852
+    "p1_avg_3dart_match": 31.885,
+    "p2_avg_3dart_match": 32.23
   },
   {
+    "game_id": 227,
     "date": "2020-03-14",
     "p1": "Franz-Josef",
     "p1_legs": 3,
@@ -3450,10 +3764,11 @@
     "p2": "Uwe",
     "season": "2020/2021",
     "matchday": 3,
-    "p1_avg_3dart_match": 42.943,
-    "p2_avg_3dart_match": 44.206
+    "p1_avg_3dart_match": 42.9,
+    "p2_avg_3dart_match": 41.603
   },
   {
+    "game_id": 226,
     "date": "2020-03-14",
     "p1": "Martin",
     "p1_legs": 3,
@@ -3462,9 +3777,10 @@
     "season": "2020/2021",
     "matchday": 3,
     "p1_avg_3dart_match": 43.356,
-    "p2_avg_3dart_match": 44.206
+    "p2_avg_3dart_match": 37.235
   },
   {
+    "game_id": 225,
     "date": "2020-03-14",
     "p1": "Uwe",
     "p1_legs": 3,
@@ -3472,10 +3788,11 @@
     "p2": "Frank",
     "season": "2020/2021",
     "matchday": 3,
-    "p1_avg_3dart_match": 29.94,
-    "p2_avg_3dart_match": 30.181
+    "p1_avg_3dart_match": 28.363,
+    "p2_avg_3dart_match": 29.506
   },
   {
+    "game_id": 224,
     "date": "2020-03-14",
     "p1": "Uwe",
     "p1_legs": 0,
@@ -3483,10 +3800,11 @@
     "p2": "Martin",
     "season": "2020/2021",
     "matchday": 3,
-    "p1_avg_3dart_match": 60.12,
+    "p1_avg_3dart_match": 42.0,
     "p2_avg_3dart_match": 59.329
   },
   {
+    "game_id": 223,
     "date": "2020-03-14",
     "p1": "Franz-Josef",
     "p1_legs": 3,
@@ -3494,10 +3812,11 @@
     "p2": "Frank",
     "season": "2020/2021",
     "matchday": 3,
-    "p1_avg_3dart_match": 36.0,
-    "p2_avg_3dart_match": 36.436
+    "p1_avg_3dart_match": 35.946,
+    "p2_avg_3dart_match": 31.018
   },
   {
+    "game_id": 222,
     "date": "2020-03-14",
     "p1": "Uwe",
     "p1_legs": 3,
@@ -3506,9 +3825,10 @@
     "season": "2020/2021",
     "matchday": 3,
     "p1_avg_3dart_match": 31.979,
-    "p2_avg_3dart_match": 32.674
+    "p2_avg_3dart_match": 30.978
   },
   {
+    "game_id": 221,
     "date": "2020-03-14",
     "p1": "Martin",
     "p1_legs": 3,
@@ -3516,10 +3836,11 @@
     "p2": "Franz-Josef",
     "season": "2020/2021",
     "matchday": 3,
-    "p1_avg_3dart_match": 51.385,
-    "p2_avg_3dart_match": 52.278
+    "p1_avg_3dart_match": 50.872,
+    "p2_avg_3dart_match": 51.391
   },
   {
+    "game_id": 220,
     "date": "2020-02-02",
     "p1": "Uwe",
     "p1_legs": 3,
@@ -3527,10 +3848,11 @@
     "p2": "Heiner",
     "season": "2020/2021",
     "matchday": 2,
-    "p1_avg_3dart_match": 37.388,
-    "p2_avg_3dart_match": 37.955
+    "p1_avg_3dart_match": 37.0,
+    "p2_avg_3dart_match": 33.076
   },
   {
+    "game_id": 219,
     "date": "2020-02-02",
     "p1": "Frank",
     "p1_legs": 0,
@@ -3538,10 +3860,11 @@
     "p2": "Franz-Josef",
     "season": "2020/2021",
     "matchday": 2,
-    "p1_avg_3dart_match": 60.12,
+    "p1_avg_3dart_match": 38.16,
     "p2_avg_3dart_match": 59.329
   },
   {
+    "game_id": 218,
     "date": "2020-02-02",
     "p1": "Uwe",
     "p1_legs": 3,
@@ -3550,9 +3873,10 @@
     "season": "2020/2021",
     "matchday": 2,
     "p1_avg_3dart_match": 40.259,
-    "p2_avg_3dart_match": 41.75
+    "p2_avg_3dart_match": 37.306
   },
   {
+    "game_id": 217,
     "date": "2020-02-02",
     "p1": "Martin",
     "p1_legs": 3,
@@ -3560,10 +3884,11 @@
     "p2": "Franz-Josef",
     "season": "2020/2021",
     "matchday": 2,
-    "p1_avg_3dart_match": 68.945,
-    "p2_avg_3dart_match": 70.896
+    "p1_avg_3dart_match": 63.881,
+    "p2_avg_3dart_match": 59.264
   },
   {
+    "game_id": 216,
     "date": "2020-02-01",
     "p1": "Heiner",
     "p1_legs": 3,
@@ -3571,10 +3896,11 @@
     "p2": "Frank",
     "season": "2020/2021",
     "matchday": 2,
-    "p1_avg_3dart_match": 41.519,
-    "p2_avg_3dart_match": 41.75
+    "p1_avg_3dart_match": 40.674,
+    "p2_avg_3dart_match": 39.517
   },
   {
+    "game_id": 215,
     "date": "2020-02-01",
     "p1": "Martin",
     "p1_legs": 3,
@@ -3582,10 +3908,11 @@
     "p2": "Uwe",
     "season": "2020/2021",
     "matchday": 2,
-    "p1_avg_3dart_match": 50.436,
-    "p2_avg_3dart_match": 51.828
+    "p1_avg_3dart_match": 49.711,
+    "p2_avg_3dart_match": 45.29
   },
   {
+    "game_id": 214,
     "date": "2020-02-01",
     "p1": "Martin",
     "p1_legs": 3,
@@ -3594,9 +3921,10 @@
     "season": "2020/2021",
     "matchday": 2,
     "p1_avg_3dart_match": 60.12,
-    "p2_avg_3dart_match": 62.625
+    "p2_avg_3dart_match": 36.25
   },
   {
+    "game_id": 213,
     "date": "2020-02-01",
     "p1": "Uwe",
     "p1_legs": 2,
@@ -3604,10 +3932,11 @@
     "p2": "Franz-Josef",
     "season": "2020/2021",
     "matchday": 2,
-    "p1_avg_3dart_match": 47.563,
-    "p2_avg_3dart_match": 48.173
+    "p1_avg_3dart_match": 41.62,
+    "p2_avg_3dart_match": 47.038
   },
   {
+    "game_id": 212,
     "date": "2020-02-01",
     "p1": "Martin",
     "p1_legs": 3,
@@ -3615,10 +3944,11 @@
     "p2": "Frank",
     "season": "2020/2021",
     "matchday": 2,
-    "p1_avg_3dart_match": 52.278,
-    "p2_avg_3dart_match": 53.204
+    "p1_avg_3dart_match": 51.757,
+    "p2_avg_3dart_match": 40.327
   },
   {
+    "game_id": 211,
     "date": "2020-02-01",
     "p1": "Heiner",
     "p1_legs": 0,
@@ -3626,10 +3956,11 @@
     "p2": "Franz-Josef",
     "season": "2020/2021",
     "matchday": 2,
-    "p1_avg_3dart_match": 34.953,
+    "p1_avg_3dart_match": 31.163,
     "p2_avg_3dart_match": 34.685
   },
   {
+    "game_id": 210,
     "date": "2020-01-19",
     "p1": "Martin",
     "p1_legs": 3,
@@ -3638,9 +3969,10 @@
     "season": "2020/2021",
     "matchday": 1,
     "p1_avg_3dart_match": 47.463,
-    "p2_avg_3dart_match": 48.484
+    "p2_avg_3dart_match": 37.065
   },
   {
+    "game_id": 209,
     "date": "2020-01-18",
     "p1": "Uwe",
     "p1_legs": 0,
@@ -3648,10 +3980,11 @@
     "p2": "Franz-Josef",
     "season": "2020/2021",
     "matchday": 1,
-    "p1_avg_3dart_match": 48.484,
+    "p1_avg_3dart_match": 43.387,
     "p2_avg_3dart_match": 47.463
   },
   {
+    "game_id": 208,
     "date": "2020-01-18",
     "p1": "Franz-Josef",
     "p1_legs": 3,
@@ -3660,9 +3993,10 @@
     "season": "2020/2021",
     "matchday": 1,
     "p1_avg_3dart_match": 51.239,
-    "p2_avg_3dart_match": 53.679
+    "p2_avg_3dart_match": 40.929
   },
   {
+    "game_id": 207,
     "date": "2020-01-18",
     "p1": "Frank",
     "p1_legs": 1,
@@ -3670,10 +4004,11 @@
     "p2": "Uwe",
     "season": "2020/2021",
     "matchday": 1,
-    "p1_avg_3dart_match": 40.898,
-    "p2_avg_3dart_match": 41.178
+    "p1_avg_3dart_match": 38.531,
+    "p2_avg_3dart_match": 39.534
   },
   {
+    "game_id": 206,
     "date": "2020-01-18",
     "p1": "Martin",
     "p1_legs": 3,
@@ -3682,9 +4017,10 @@
     "season": "2020/2021",
     "matchday": 1,
     "p1_avg_3dart_match": 47.968,
-    "p2_avg_3dart_match": 48.484
+    "p2_avg_3dart_match": 45.065
   },
   {
+    "game_id": 205,
     "date": "2020-01-18",
     "p1": "Frank",
     "p1_legs": 3,
@@ -3692,10 +4028,11 @@
     "p2": "Heiner",
     "season": "2020/2021",
     "matchday": 1,
-    "p1_avg_3dart_match": 32.253,
-    "p2_avg_3dart_match": 32.253
+    "p1_avg_3dart_match": 32.176,
+    "p2_avg_3dart_match": 29.601
   },
   {
+    "game_id": 204,
     "date": "2020-01-18",
     "p1": "Martin",
     "p1_legs": 3,
@@ -3704,9 +4041,10 @@
     "season": "2020/2021",
     "matchday": 1,
     "p1_avg_3dart_match": 52.43,
-    "p2_avg_3dart_match": 55.667
+    "p2_avg_3dart_match": 45.37
   },
   {
+    "game_id": 203,
     "date": "2020-01-18",
     "p1": "Uwe",
     "p1_legs": 3,
@@ -3714,10 +4052,11 @@
     "p2": "Heiner",
     "season": "2020/2021",
     "matchday": 1,
-    "p1_avg_3dart_match": 43.252,
-    "p2_avg_3dart_match": 42.943
+    "p1_avg_3dart_match": 42.604,
+    "p2_avg_3dart_match": 38.7
   },
   {
+    "game_id": 202,
     "date": "2020-01-18",
     "p1": "Frank",
     "p1_legs": 0,
@@ -3725,10 +4064,11 @@
     "p2": "Franz-Josef",
     "season": "2020/2021",
     "matchday": 1,
-    "p1_avg_3dart_match": 51.828,
+    "p1_avg_3dart_match": 43.379,
     "p2_avg_3dart_match": 51.828
   },
   {
+    "game_id": 201,
     "date": "2020-01-18",
     "p1": "Martin",
     "p1_legs": 3,
@@ -3737,9 +4077,10 @@
     "season": "2020/2021",
     "matchday": 1,
     "p1_avg_3dart_match": 53.047,
-    "p2_avg_3dart_match": 55.667
+    "p2_avg_3dart_match": 39.741
   },
   {
+    "game_id": 200,
     "date": "2019-12-22",
     "p1": "Frank",
     "p1_legs": 3,
@@ -3747,10 +4088,11 @@
     "p2": "Heiner",
     "season": "2019",
     "matchday": 10,
-    "p1_avg_3dart_match": 34.552,
-    "p2_avg_3dart_match": 34.751
+    "p1_avg_3dart_match": 34.483,
+    "p2_avg_3dart_match": 31.942
   },
   {
+    "game_id": 199,
     "date": "2019-12-21",
     "p1": "Martin",
     "p1_legs": 3,
@@ -3759,9 +4101,10 @@
     "season": "2019",
     "matchday": 10,
     "p1_avg_3dart_match": 79.105,
-    "p2_avg_3dart_match": 83.5
+    "p2_avg_3dart_match": 38.111
   },
   {
+    "game_id": 198,
     "date": "2019-12-21",
     "p1": "Martin",
     "p1_legs": 3,
@@ -3770,9 +4113,10 @@
     "season": "2019",
     "matchday": 10,
     "p1_avg_3dart_match": 55.667,
-    "p2_avg_3dart_match": 55.667
+    "p2_avg_3dart_match": 32.593
   },
   {
+    "game_id": 197,
     "date": "2019-12-21",
     "p1": "Franz-Josef",
     "p1_legs": 3,
@@ -3780,10 +4124,11 @@
     "p2": "Uwe",
     "season": "2019",
     "matchday": 10,
-    "p1_avg_3dart_match": 38.293,
-    "p2_avg_3dart_match": 38.293
+    "p1_avg_3dart_match": 38.255,
+    "p2_avg_3dart_match": 33.65
   },
   {
+    "game_id": 196,
     "date": "2019-12-21",
     "p1": "Martin",
     "p1_legs": 3,
@@ -3791,10 +4136,11 @@
     "p2": "Frank",
     "season": "2019",
     "matchday": 10,
-    "p1_avg_3dart_match": 63.284,
-    "p2_avg_3dart_match": 62.625
+    "p1_avg_3dart_match": 62.021,
+    "p2_avg_3dart_match": 43.812
   },
   {
+    "game_id": 195,
     "date": "2019-12-21",
     "p1": "Franz-Josef",
     "p1_legs": 3,
@@ -3802,10 +4148,11 @@
     "p2": "Heiner",
     "season": "2019",
     "matchday": 10,
-    "p1_avg_3dart_match": 39.039,
-    "p2_avg_3dart_match": 38.538
+    "p1_avg_3dart_match": 38.182,
+    "p2_avg_3dart_match": 34.519
   },
   {
+    "game_id": 194,
     "date": "2019-12-21",
     "p1": "Franz-Josef",
     "p1_legs": 3,
@@ -3814,9 +4161,10 @@
     "season": "2019",
     "matchday": 10,
     "p1_avg_3dart_match": 50.1,
-    "p2_avg_3dart_match": 51.828
+    "p2_avg_3dart_match": 35.897
   },
   {
+    "game_id": 193,
     "date": "2019-12-21",
     "p1": "Uwe",
     "p1_legs": 3,
@@ -3825,9 +4173,10 @@
     "season": "2019",
     "matchday": 10,
     "p1_avg_3dart_match": 30.262,
-    "p2_avg_3dart_match": 30.673
+    "p2_avg_3dart_match": 25.388
   },
   {
+    "game_id": 192,
     "date": "2019-12-21",
     "p1": "Martin",
     "p1_legs": 3,
@@ -3835,10 +4184,11 @@
     "p2": "Franz-Josef",
     "season": "2019",
     "matchday": 10,
-    "p1_avg_3dart_match": 61.979,
-    "p2_avg_3dart_match": 63.284
+    "p1_avg_3dart_match": 60.062,
+    "p2_avg_3dart_match": 54.0
   },
   {
+    "game_id": 191,
     "date": "2019-12-21",
     "p1": "Frank",
     "p1_legs": 1,
@@ -3846,10 +4196,11 @@
     "p2": "Uwe",
     "season": "2019",
     "matchday": 10,
-    "p1_avg_3dart_match": 36.883,
-    "p2_avg_3dart_match": 36.436
+    "p1_avg_3dart_match": 36.0,
+    "p2_avg_3dart_match": 36.255
   },
   {
+    "game_id": 190,
     "date": "2019-12-07",
     "p1": "Uwe",
     "p1_legs": 3,
@@ -3857,10 +4208,11 @@
     "p2": "Heiner",
     "season": "2019",
     "matchday": 9,
-    "p1_avg_3dart_match": 39.815,
-    "p2_avg_3dart_match": 40.622
+    "p1_avg_3dart_match": 39.298,
+    "p2_avg_3dart_match": 32.98
   },
   {
+    "game_id": 189,
     "date": "2019-12-07",
     "p1": "Frank",
     "p1_legs": 0,
@@ -3868,10 +4220,11 @@
     "p2": "Martin",
     "season": "2019",
     "matchday": 9,
-    "p1_avg_3dart_match": 53.679,
+    "p1_avg_3dart_match": 46.821,
     "p2_avg_3dart_match": 53.047
   },
   {
+    "game_id": 188,
     "date": "2019-12-07",
     "p1": "Martin",
     "p1_legs": 3,
@@ -3880,9 +4233,10 @@
     "season": "2019",
     "matchday": 9,
     "p1_avg_3dart_match": 56.363,
-    "p2_avg_3dart_match": 57.808
+    "p2_avg_3dart_match": 44.385
   },
   {
+    "game_id": 187,
     "date": "2019-12-06",
     "p1": "Franz-Josef",
     "p1_legs": 3,
@@ -3890,10 +4244,11 @@
     "p2": "Frank",
     "season": "2019",
     "matchday": 9,
-    "p1_avg_3dart_match": 36.436,
-    "p2_avg_3dart_match": 36.883
+    "p1_avg_3dart_match": 36.255,
+    "p2_avg_3dart_match": 36.46
   },
   {
+    "game_id": 186,
     "date": "2019-12-06",
     "p1": "Martin",
     "p1_legs": 3,
@@ -3902,9 +4257,10 @@
     "season": "2019",
     "matchday": 9,
     "p1_avg_3dart_match": 43.356,
-    "p2_avg_3dart_match": 44.206
+    "p2_avg_3dart_match": 35.118
   },
   {
+    "game_id": 185,
     "date": "2019-12-06",
     "p1": "Franz-Josef",
     "p1_legs": 3,
@@ -3912,10 +4268,11 @@
     "p2": "Uwe",
     "season": "2019",
     "matchday": 9,
-    "p1_avg_3dart_match": 61.347,
-    "p2_avg_3dart_match": 60.727
+    "p1_avg_3dart_match": 59.816,
+    "p2_avg_3dart_match": 49.212
   },
   {
+    "game_id": 184,
     "date": "2019-12-06",
     "p1": "Franz-Josef",
     "p1_legs": 3,
@@ -3924,9 +4281,10 @@
     "season": "2019",
     "matchday": 9,
     "p1_avg_3dart_match": 40.991,
-    "p2_avg_3dart_match": 42.943
+    "p2_avg_3dart_match": 34.143
   },
   {
+    "game_id": 183,
     "date": "2019-12-06",
     "p1": "Uwe",
     "p1_legs": 1,
@@ -3934,10 +4292,11 @@
     "p2": "Frank",
     "season": "2019",
     "matchday": 9,
-    "p1_avg_3dart_match": 36.217,
-    "p2_avg_3dart_match": 36.217
+    "p1_avg_3dart_match": 34.193,
+    "p2_avg_3dart_match": 35.964
   },
   {
+    "game_id": 182,
     "date": "2019-12-06",
     "p1": "Franz-Josef",
     "p1_legs": 3,
@@ -3945,10 +4304,11 @@
     "p2": "Martin",
     "season": "2019",
     "matchday": 9,
-    "p1_avg_3dart_match": 61.098,
-    "p2_avg_3dart_match": 61.598
+    "p1_avg_3dart_match": 53.61,
+    "p2_avg_3dart_match": 58.918
   },
   {
+    "game_id": 181,
     "date": "2019-12-06",
     "p1": "Frank",
     "p1_legs": 3,
@@ -3956,10 +4316,11 @@
     "p2": "Heiner",
     "season": "2019",
     "matchday": 9,
-    "p1_avg_3dart_match": 29.355,
-    "p2_avg_3dart_match": 29.587
+    "p1_avg_3dart_match": 29.25,
+    "p2_avg_3dart_match": 29.421
   },
   {
+    "game_id": 180,
     "date": "2019-11-24",
     "p1": "Uwe",
     "p1_legs": 0,
@@ -3967,10 +4328,11 @@
     "p2": "Frank",
     "season": "2019",
     "matchday": 8,
-    "p1_avg_3dart_match": 31.312,
+    "p1_avg_3dart_match": 30.292,
     "p2_avg_3dart_match": 31.531
   },
   {
+    "game_id": 179,
     "date": "2019-11-24",
     "p1": "Heiner",
     "p1_legs": 0,
@@ -3978,10 +4340,11 @@
     "p2": "Martin",
     "season": "2019",
     "matchday": 8,
-    "p1_avg_3dart_match": 51.828,
+    "p1_avg_3dart_match": 40.759,
     "p2_avg_3dart_match": 50.1
   },
   {
+    "game_id": 178,
     "date": "2019-11-24",
     "p1": "Uwe",
     "p1_legs": 3,
@@ -3989,10 +4352,11 @@
     "p2": "Heiner",
     "season": "2019",
     "matchday": 8,
-    "p1_avg_3dart_match": 34.159,
-    "p2_avg_3dart_match": 33.966
+    "p1_avg_3dart_match": 33.051,
+    "p2_avg_3dart_match": 33.61
   },
   {
+    "game_id": 177,
     "date": "2019-11-23",
     "p1": "Martin",
     "p1_legs": 3,
@@ -4000,10 +4364,11 @@
     "p2": "Franz-Josef",
     "season": "2019",
     "matchday": 8,
-    "p1_avg_3dart_match": 52.552,
-    "p2_avg_3dart_match": 53.679
+    "p1_avg_3dart_match": 52.175,
+    "p2_avg_3dart_match": 49.179
   },
   {
+    "game_id": 176,
     "date": "2019-11-23",
     "p1": "Frank",
     "p1_legs": 3,
@@ -4012,9 +4377,10 @@
     "season": "2019",
     "matchday": 8,
     "p1_avg_3dart_match": 43.777,
-    "p2_avg_3dart_match": 45.545
+    "p2_avg_3dart_match": 37.909
   },
   {
+    "game_id": 175,
     "date": "2019-11-23",
     "p1": "Uwe",
     "p1_legs": 0,
@@ -4022,10 +4388,11 @@
     "p2": "Franz-Josef",
     "season": "2019",
     "matchday": 8,
-    "p1_avg_3dart_match": 45.545,
+    "p1_avg_3dart_match": 40.939,
     "p2_avg_3dart_match": 45.545
   },
   {
+    "game_id": 174,
     "date": "2019-11-23",
     "p1": "Frank",
     "p1_legs": 0,
@@ -4033,10 +4400,11 @@
     "p2": "Franz-Josef",
     "season": "2019",
     "matchday": 8,
-    "p1_avg_3dart_match": 36.659,
+    "p1_avg_3dart_match": 35.805,
     "p2_avg_3dart_match": 36.659
   },
   {
+    "game_id": 173,
     "date": "2019-11-23",
     "p1": "Martin",
     "p1_legs": 3,
@@ -4045,9 +4413,10 @@
     "season": "2019",
     "matchday": 8,
     "p1_avg_3dart_match": 51.239,
-    "p2_avg_3dart_match": 53.679
+    "p2_avg_3dart_match": 39.286
   },
   {
+    "game_id": 172,
     "date": "2019-11-23",
     "p1": "Franz-Josef",
     "p1_legs": 3,
@@ -4056,9 +4425,10 @@
     "season": "2019",
     "matchday": 8,
     "p1_avg_3dart_match": 30.262,
-    "p2_avg_3dart_match": 30.06
+    "p2_avg_3dart_match": 28.32
   },
   {
+    "game_id": 171,
     "date": "2019-11-23",
     "p1": "Martin",
     "p1_legs": 3,
@@ -4067,9 +4437,10 @@
     "season": "2019",
     "matchday": 8,
     "p1_avg_3dart_match": 49.549,
-    "p2_avg_3dart_match": 51.828
+    "p2_avg_3dart_match": 40.0
   },
   {
+    "game_id": 170,
     "date": "2019-09-01",
     "p1": "Martin",
     "p1_legs": 3,
@@ -4078,9 +4449,10 @@
     "season": "2019",
     "matchday": 7,
     "p1_avg_3dart_match": 53.679,
-    "p2_avg_3dart_match": 57.808
+    "p2_avg_3dart_match": 47.654
   },
   {
+    "game_id": 169,
     "date": "2019-09-01",
     "p1": "Franz-Josef",
     "p1_legs": 3,
@@ -4088,10 +4460,11 @@
     "p2": "Frank",
     "season": "2019",
     "matchday": 7,
-    "p1_avg_3dart_match": 40.898,
-    "p2_avg_3dart_match": 40.898
+    "p1_avg_3dart_match": 40.082,
+    "p2_avg_3dart_match": 36.592
   },
   {
+    "game_id": 168,
     "date": "2019-09-01",
     "p1": "Martin",
     "p1_legs": 3,
@@ -4099,10 +4472,11 @@
     "p2": "Franz-Josef",
     "season": "2019",
     "matchday": 7,
-    "p1_avg_3dart_match": 75.909,
-    "p2_avg_3dart_match": 78.281
+    "p1_avg_3dart_match": 64.667,
+    "p2_avg_3dart_match": 67.75
   },
   {
+    "game_id": 167,
     "date": "2019-08-31",
     "p1": "Frank",
     "p1_legs": 3,
@@ -4110,10 +4484,11 @@
     "p2": "Heiner",
     "season": "2019",
     "matchday": 7,
-    "p1_avg_3dart_match": 34.631,
-    "p2_avg_3dart_match": 34.953
+    "p1_avg_3dart_match": 34.424,
+    "p2_avg_3dart_match": 33.53
   },
   {
+    "game_id": 166,
     "date": "2019-08-31",
     "p1": "Franz-Josef",
     "p1_legs": 2,
@@ -4121,10 +4496,11 @@
     "p2": "Uwe",
     "season": "2019",
     "matchday": 7,
-    "p1_avg_3dart_match": 51.828,
-    "p2_avg_3dart_match": 52.923
+    "p1_avg_3dart_match": 50.793,
+    "p2_avg_3dart_match": 43.204
   },
   {
+    "game_id": 165,
     "date": "2019-08-31",
     "p1": "Martin",
     "p1_legs": 3,
@@ -4133,9 +4509,10 @@
     "season": "2019",
     "matchday": 7,
     "p1_avg_3dart_match": 57.076,
-    "p2_avg_3dart_match": 60.12
+    "p2_avg_3dart_match": 37.56
   },
   {
+    "game_id": 164,
     "date": "2019-08-31",
     "p1": "Heiner",
     "p1_legs": 2,
@@ -4143,10 +4520,11 @@
     "p2": "Uwe",
     "season": "2019",
     "matchday": 7,
-    "p1_avg_3dart_match": 34.472,
-    "p2_avg_3dart_match": 34.472
+    "p1_avg_3dart_match": 32.422,
+    "p2_avg_3dart_match": 34.266
   },
   {
+    "game_id": 163,
     "date": "2019-08-31",
     "p1": "Martin",
     "p1_legs": 3,
@@ -4155,9 +4533,10 @@
     "season": "2019",
     "matchday": 7,
     "p1_avg_3dart_match": 46.485,
-    "p2_avg_3dart_match": 48.484
+    "p2_avg_3dart_match": 39.613
   },
   {
+    "game_id": 162,
     "date": "2019-08-31",
     "p1": "Heiner",
     "p1_legs": 0,
@@ -4165,10 +4544,11 @@
     "p2": "Franz-Josef",
     "season": "2019",
     "matchday": 7,
-    "p1_avg_3dart_match": 48.484,
+    "p1_avg_3dart_match": 34.774,
     "p2_avg_3dart_match": 47.463
   },
   {
+    "game_id": 161,
     "date": "2019-08-31",
     "p1": "Frank",
     "p1_legs": 3,
@@ -4176,10 +4556,11 @@
     "p2": "Uwe",
     "season": "2019",
     "matchday": 7,
-    "p1_avg_3dart_match": 39.553,
-    "p2_avg_3dart_match": 39.973
+    "p1_avg_3dart_match": 39.126,
+    "p2_avg_3dart_match": 38.888
   },
   {
+    "game_id": 160,
     "date": "2019-07-20",
     "p1": "Heiner",
     "p1_legs": 3,
@@ -4188,9 +4569,10 @@
     "season": "2019",
     "matchday": 6,
     "p1_avg_3dart_match": 34.42,
-    "p2_avg_3dart_match": 34.953
+    "p2_avg_3dart_match": 32.698
   },
   {
+    "game_id": 159,
     "date": "2019-07-20",
     "p1": "Martin",
     "p1_legs": 3,
@@ -4198,10 +4580,11 @@
     "p2": "Uwe",
     "season": "2019",
     "matchday": 6,
-    "p1_avg_3dart_match": 55.667,
-    "p2_avg_3dart_match": 55.667
+    "p1_avg_3dart_match": 53.75,
+    "p2_avg_3dart_match": 46.611
   },
   {
+    "game_id": 158,
     "date": "2019-07-20",
     "p1": "Uwe",
     "p1_legs": 2,
@@ -4209,10 +4592,11 @@
     "p2": "Frank",
     "season": "2019",
     "matchday": 6,
-    "p1_avg_3dart_match": 39.762,
-    "p2_avg_3dart_match": 40.842
+    "p1_avg_3dart_match": 38.841,
+    "p2_avg_3dart_match": 39.783
   },
   {
+    "game_id": 157,
     "date": "2019-07-20",
     "p1": "Martin",
     "p1_legs": 3,
@@ -4221,9 +4605,10 @@
     "season": "2019",
     "matchday": 6,
     "p1_avg_3dart_match": 46.969,
-    "p2_avg_3dart_match": 48.484
+    "p2_avg_3dart_match": 44.323
   },
   {
+    "game_id": 156,
     "date": "2019-07-20",
     "p1": "Uwe",
     "p1_legs": 3,
@@ -4232,9 +4617,10 @@
     "season": "2019",
     "matchday": 6,
     "p1_avg_3dart_match": 29.861,
-    "p2_avg_3dart_match": 30.673
+    "p2_avg_3dart_match": 29.898
   },
   {
+    "game_id": 155,
     "date": "2019-07-20",
     "p1": "Franz-Josef",
     "p1_legs": 3,
@@ -4242,10 +4628,11 @@
     "p2": "Frank",
     "season": "2019",
     "matchday": 6,
-    "p1_avg_3dart_match": 54.655,
-    "p2_avg_3dart_match": 54.162
+    "p1_avg_3dart_match": 54.218,
+    "p2_avg_3dart_match": 43.378
   },
   {
+    "game_id": 154,
     "date": "2019-07-20",
     "p1": "Heiner",
     "p1_legs": 0,
@@ -4253,10 +4640,11 @@
     "p2": "Franz-Josef",
     "season": "2019",
     "matchday": 6,
-    "p1_avg_3dart_match": 55.667,
+    "p1_avg_3dart_match": 42.148,
     "p2_avg_3dart_match": 55.667
   },
   {
+    "game_id": 153,
     "date": "2019-07-20",
     "p1": "Martin",
     "p1_legs": 3,
@@ -4265,9 +4653,10 @@
     "season": "2019",
     "matchday": 6,
     "p1_avg_3dart_match": 44.206,
-    "p2_avg_3dart_match": 45.545
+    "p2_avg_3dart_match": 34.545
   },
   {
+    "game_id": 152,
     "date": "2019-07-20",
     "p1": "Uwe",
     "p1_legs": 0,
@@ -4275,10 +4664,11 @@
     "p2": "Franz-Josef",
     "season": "2019",
     "matchday": 6,
-    "p1_avg_3dart_match": 44.206,
+    "p1_avg_3dart_match": 40.294,
     "p2_avg_3dart_match": 44.206
   },
   {
+    "game_id": 151,
     "date": "2019-07-20",
     "p1": "Martin",
     "p1_legs": 3,
@@ -4287,9 +4677,10 @@
     "season": "2019",
     "matchday": 6,
     "p1_avg_3dart_match": 61.767,
-    "p2_avg_3dart_match": 65.348
+    "p2_avg_3dart_match": 46.174
   },
   {
+    "game_id": 150,
     "date": "2019-06-22",
     "p1": "Franz-Josef",
     "p1_legs": 3,
@@ -4298,9 +4689,10 @@
     "season": "2019",
     "matchday": 5,
     "p1_avg_3dart_match": 32.912,
-    "p2_avg_3dart_match": 33.4
+    "p2_avg_3dart_match": 32.533
   },
   {
+    "game_id": 149,
     "date": "2019-06-22",
     "p1": "Frank",
     "p1_legs": 0,
@@ -4308,10 +4700,11 @@
     "p2": "Martin",
     "season": "2019",
     "matchday": 5,
-    "p1_avg_3dart_match": 60.12,
+    "p1_avg_3dart_match": 44.52,
     "p2_avg_3dart_match": 59.329
   },
   {
+    "game_id": 148,
     "date": "2019-06-22",
     "p1": "Franz-Josef",
     "p1_legs": 3,
@@ -4320,9 +4713,10 @@
     "season": "2019",
     "matchday": 5,
     "p1_avg_3dart_match": 56.363,
-    "p2_avg_3dart_match": 57.808
+    "p2_avg_3dart_match": 41.577
   },
   {
+    "game_id": 147,
     "date": "2019-06-22",
     "p1": "Martin",
     "p1_legs": 3,
@@ -4331,9 +4725,10 @@
     "season": "2019",
     "matchday": 5,
     "p1_avg_3dart_match": 54.988,
-    "p2_avg_3dart_match": 57.808
+    "p2_avg_3dart_match": 47.038
   },
   {
+    "game_id": 146,
     "date": "2019-06-22",
     "p1": "Frank",
     "p1_legs": 3,
@@ -4341,10 +4736,11 @@
     "p2": "Heiner",
     "season": "2019",
     "matchday": 5,
-    "p1_avg_3dart_match": 38.293,
-    "p2_avg_3dart_match": 38.538
+    "p1_avg_3dart_match": 38.14,
+    "p2_avg_3dart_match": 37.346
   },
   {
+    "game_id": 145,
     "date": "2019-06-22",
     "p1": "Franz-Josef",
     "p1_legs": 3,
@@ -4353,9 +4749,10 @@
     "season": "2019",
     "matchday": 5,
     "p1_avg_3dart_match": 43.356,
-    "p2_avg_3dart_match": 44.206
+    "p2_avg_3dart_match": 40.971
   },
   {
+    "game_id": 144,
     "date": "2019-06-22",
     "p1": "Uwe",
     "p1_legs": 3,
@@ -4364,9 +4761,10 @@
     "season": "2019",
     "matchday": 5,
     "p1_avg_3dart_match": 34.685,
-    "p2_avg_3dart_match": 34.953
+    "p2_avg_3dart_match": 33.581
   },
   {
+    "game_id": 143,
     "date": "2019-06-22",
     "p1": "Martin",
     "p1_legs": 3,
@@ -4375,9 +4773,10 @@
     "season": "2019",
     "matchday": 5,
     "p1_avg_3dart_match": 39.903,
-    "p2_avg_3dart_match": 40.622
+    "p2_avg_3dart_match": 38.973
   },
   {
+    "game_id": 142,
     "date": "2019-06-22",
     "p1": "Uwe",
     "p1_legs": 3,
@@ -4385,10 +4784,11 @@
     "p2": "Frank",
     "season": "2019",
     "matchday": 5,
-    "p1_avg_3dart_match": 35.574,
-    "p2_avg_3dart_match": 35.786
+    "p1_avg_3dart_match": 35.485,
+    "p2_avg_3dart_match": 34.429
   },
   {
+    "game_id": 141,
     "date": "2019-06-22",
     "p1": "Martin",
     "p1_legs": 3,
@@ -4397,9 +4797,10 @@
     "season": "2019",
     "matchday": 5,
     "p1_avg_3dart_match": 50.663,
-    "p2_avg_3dart_match": 51.828
+    "p2_avg_3dart_match": 33.621
   },
   {
+    "game_id": 140,
     "date": "2019-06-08",
     "p1": "Martin",
     "p1_legs": 2,
@@ -4407,10 +4808,11 @@
     "p2": "Franz-Josef",
     "season": "2019",
     "matchday": 4,
-    "p1_avg_3dart_match": 64.784,
-    "p2_avg_3dart_match": 66.504
+    "p1_avg_3dart_match": 54.103,
+    "p2_avg_3dart_match": 60.186
   },
   {
+    "game_id": 139,
     "date": "2019-06-08",
     "p1": "Uwe",
     "p1_legs": 3,
@@ -4418,10 +4820,11 @@
     "p2": "Heiner",
     "season": "2019",
     "matchday": 4,
-    "p1_avg_3dart_match": 33.966,
-    "p2_avg_3dart_match": 33.587
+    "p1_avg_3dart_match": 33.864,
+    "p2_avg_3dart_match": 32.447
   },
   {
+    "game_id": 138,
     "date": "2019-06-08",
     "p1": "Uwe",
     "p1_legs": 2,
@@ -4429,10 +4832,11 @@
     "p2": "Martin",
     "season": "2019",
     "matchday": 4,
-    "p1_avg_3dart_match": 51.828,
-    "p2_avg_3dart_match": 52.188
+    "p1_avg_3dart_match": 49.717,
+    "p2_avg_3dart_match": 50.271
   },
   {
+    "game_id": 137,
     "date": "2019-06-08",
     "p1": "Frank",
     "p1_legs": 3,
@@ -4441,9 +4845,10 @@
     "season": "2019",
     "matchday": 4,
     "p1_avg_3dart_match": 30.884,
-    "p2_avg_3dart_match": 31.979
+    "p2_avg_3dart_match": 31.213
   },
   {
+    "game_id": 136,
     "date": "2019-06-08",
     "p1": "Franz-Josef",
     "p1_legs": 3,
@@ -4452,9 +4857,10 @@
     "season": "2019",
     "matchday": 4,
     "p1_avg_3dart_match": 49.011,
-    "p2_avg_3dart_match": 50.1
+    "p2_avg_3dart_match": 36.067
   },
   {
+    "game_id": 135,
     "date": "2019-06-08",
     "p1": "Martin",
     "p1_legs": 3,
@@ -4462,10 +4868,11 @@
     "p2": "Frank",
     "season": "2019",
     "matchday": 4,
-    "p1_avg_3dart_match": 53.679,
-    "p2_avg_3dart_match": 54.854
+    "p1_avg_3dart_match": 51.879,
+    "p2_avg_3dart_match": 44.803
   },
   {
+    "game_id": 134,
     "date": "2019-06-08",
     "p1": "Franz-Josef",
     "p1_legs": 3,
@@ -4474,9 +4881,10 @@
     "season": "2019",
     "matchday": 4,
     "p1_avg_3dart_match": 47.968,
-    "p2_avg_3dart_match": 50.1
+    "p2_avg_3dart_match": 40.1
   },
   {
+    "game_id": 133,
     "date": "2019-06-08",
     "p1": "Heiner",
     "p1_legs": 0,
@@ -4484,10 +4892,11 @@
     "p2": "Martin",
     "season": "2019",
     "matchday": 4,
-    "p1_avg_3dart_match": 46.969,
+    "p1_avg_3dart_match": 41.781,
     "p2_avg_3dart_match": 46.969
   },
   {
+    "game_id": 132,
     "date": "2019-06-08",
     "p1": "Frank",
     "p1_legs": 3,
@@ -4496,9 +4905,10 @@
     "season": "2019",
     "matchday": 4,
     "p1_avg_3dart_match": 37.891,
-    "p2_avg_3dart_match": 38.538
+    "p2_avg_3dart_match": 37.077
   },
   {
+    "game_id": 131,
     "date": "2019-06-08",
     "p1": "Franz-Josef",
     "p1_legs": 3,
@@ -4507,9 +4917,10 @@
     "season": "2019",
     "matchday": 4,
     "p1_avg_3dart_match": 42.538,
-    "p2_avg_3dart_match": 44.206
+    "p2_avg_3dart_match": 35.794
   },
   {
+    "game_id": 130,
     "date": "2019-03-03",
     "p1": "Frank",
     "p1_legs": 0,
@@ -4517,10 +4928,11 @@
     "p2": "Martin",
     "season": "2019",
     "matchday": 3,
-    "p1_avg_3dart_match": 38.538,
+    "p1_avg_3dart_match": 35.718,
     "p2_avg_3dart_match": 38.538
   },
   {
+    "game_id": 129,
     "date": "2019-03-02",
     "p1": "Heiner",
     "p1_legs": 1,
@@ -4528,10 +4940,11 @@
     "p2": "Franz-Josef",
     "season": "2019",
     "matchday": 3,
-    "p1_avg_3dart_match": 44.533,
-    "p2_avg_3dart_match": 44.533
+    "p1_avg_3dart_match": 39.511,
+    "p2_avg_3dart_match": 43.556
   },
   {
+    "game_id": 128,
     "date": "2019-03-02",
     "p1": "Franz-Josef",
     "p1_legs": 3,
@@ -4540,9 +4953,10 @@
     "season": "2019",
     "matchday": 3,
     "p1_avg_3dart_match": 56.363,
-    "p2_avg_3dart_match": 60.12
+    "p2_avg_3dart_match": 40.4
   },
   {
+    "game_id": 127,
     "date": "2019-03-02",
     "p1": "Heiner",
     "p1_legs": 0,
@@ -4550,10 +4964,11 @@
     "p2": "Uwe",
     "season": "2019",
     "matchday": 3,
-    "p1_avg_3dart_match": 48.484,
+    "p1_avg_3dart_match": 41.484,
     "p2_avg_3dart_match": 46.969
   },
   {
+    "game_id": 126,
     "date": "2019-03-02",
     "p1": "Franz-Josef",
     "p1_legs": 0,
@@ -4561,10 +4976,11 @@
     "p2": "Martin",
     "season": "2019",
     "matchday": 3,
-    "p1_avg_3dart_match": 57.808,
+    "p1_avg_3dart_match": 51.577,
     "p2_avg_3dart_match": 55.667
   },
   {
+    "game_id": 125,
     "date": "2019-03-02",
     "p1": "Frank",
     "p1_legs": 2,
@@ -4572,10 +4988,11 @@
     "p2": "Uwe",
     "season": "2019",
     "matchday": 3,
-    "p1_avg_3dart_match": 35.282,
-    "p2_avg_3dart_match": 35.448
+    "p1_avg_3dart_match": 34.085,
+    "p2_avg_3dart_match": 35.222
   },
   {
+    "game_id": 124,
     "date": "2019-03-02",
     "p1": "Martin",
     "p1_legs": 3,
@@ -4584,9 +5001,10 @@
     "season": "2019",
     "matchday": 3,
     "p1_avg_3dart_match": 58.558,
-    "p2_avg_3dart_match": 62.625
+    "p2_avg_3dart_match": 44.208
   },
   {
+    "game_id": 123,
     "date": "2019-03-02",
     "p1": "Heiner",
     "p1_legs": 0,
@@ -4594,10 +5012,11 @@
     "p2": "Frank",
     "season": "2019",
     "matchday": 3,
-    "p1_avg_3dart_match": 25.914,
+    "p1_avg_3dart_match": 25.19,
     "p2_avg_3dart_match": 26.064
   },
   {
+    "game_id": 122,
     "date": "2019-03-02",
     "p1": "Franz-Josef",
     "p1_legs": 3,
@@ -4605,10 +5024,11 @@
     "p2": "Uwe",
     "season": "2019",
     "matchday": 3,
-    "p1_avg_3dart_match": 44.206,
-    "p2_avg_3dart_match": 45.203
+    "p1_avg_3dart_match": 44.162,
+    "p2_avg_3dart_match": 36.947
   },
   {
+    "game_id": 121,
     "date": "2019-03-02",
     "p1": "Martin",
     "p1_legs": 3,
@@ -4617,9 +5037,10 @@
     "season": "2019",
     "matchday": 3,
     "p1_avg_3dart_match": 46.969,
-    "p2_avg_3dart_match": 48.484
+    "p2_avg_3dart_match": 37.323
   },
   {
+    "game_id": 120,
     "date": "2019-01-20",
     "p1": "Uwe",
     "p1_legs": 3,
@@ -4628,9 +5049,10 @@
     "season": "2019",
     "matchday": 2,
     "p1_avg_3dart_match": 36.959,
-    "p2_avg_3dart_match": 37.575
+    "p2_avg_3dart_match": 35.575
   },
   {
+    "game_id": 119,
     "date": "2019-01-20",
     "p1": "Martin",
     "p1_legs": 3,
@@ -4639,9 +5061,10 @@
     "season": "2019",
     "matchday": 2,
     "p1_avg_3dart_match": 57.808,
-    "p2_avg_3dart_match": 60.12
+    "p2_avg_3dart_match": 34.12
   },
   {
+    "game_id": 118,
     "date": "2019-01-19",
     "p1": "Uwe",
     "p1_legs": 3,
@@ -4649,10 +5072,11 @@
     "p2": "Heiner",
     "season": "2019",
     "matchday": 2,
-    "p1_avg_3dart_match": 36.13,
-    "p2_avg_3dart_match": 36.304
+    "p1_avg_3dart_match": 35.755,
+    "p2_avg_3dart_match": 33.232
   },
   {
+    "game_id": 117,
     "date": "2019-01-19",
     "p1": "Franz-Josef",
     "p1_legs": 2,
@@ -4660,10 +5084,11 @@
     "p2": "Martin",
     "season": "2019",
     "matchday": 2,
-    "p1_avg_3dart_match": 56.932,
-    "p2_avg_3dart_match": 58.711
+    "p1_avg_3dart_match": 50.273,
+    "p2_avg_3dart_match": 57.586
   },
   {
+    "game_id": 116,
     "date": "2019-01-19",
     "p1": "Franz-Josef",
     "p1_legs": 3,
@@ -4671,10 +5096,11 @@
     "p2": "Frank",
     "season": "2019",
     "matchday": 2,
-    "p1_avg_3dart_match": 49.118,
-    "p2_avg_3dart_match": 49.768
+    "p1_avg_3dart_match": 48.294,
+    "p2_avg_3dart_match": 39.338
   },
   {
+    "game_id": 115,
     "date": "2019-01-19",
     "p1": "Frank",
     "p1_legs": 3,
@@ -4682,10 +5108,11 @@
     "p2": "Heiner",
     "season": "2019",
     "matchday": 2,
-    "p1_avg_3dart_match": 32.817,
-    "p2_avg_3dart_match": 33.549
+    "p1_avg_3dart_match": 31.297,
+    "p2_avg_3dart_match": 33.201
   },
   {
+    "game_id": 114,
     "date": "2019-01-19",
     "p1": "Franz-Josef",
     "p1_legs": 3,
@@ -4694,9 +5121,10 @@
     "season": "2019",
     "matchday": 2,
     "p1_avg_3dart_match": 43.356,
-    "p2_avg_3dart_match": 44.206
+    "p2_avg_3dart_match": 38.176
   },
   {
+    "game_id": 113,
     "date": "2019-01-19",
     "p1": "Martin",
     "p1_legs": 3,
@@ -4705,9 +5133,10 @@
     "season": "2019",
     "matchday": 2,
     "p1_avg_3dart_match": 55.667,
-    "p2_avg_3dart_match": 57.808
+    "p2_avg_3dart_match": 34.846
   },
   {
+    "game_id": 112,
     "date": "2019-01-19",
     "p1": "Franz-Josef",
     "p1_legs": 3,
@@ -4715,10 +5144,11 @@
     "p2": "Heiner",
     "season": "2019",
     "matchday": 2,
-    "p1_avg_3dart_match": 34.953,
-    "p2_avg_3dart_match": 34.552
+    "p1_avg_3dart_match": 34.291,
+    "p2_avg_3dart_match": 32.466
   },
   {
+    "game_id": 111,
     "date": "2019-01-19",
     "p1": "Martin",
     "p1_legs": 3,
@@ -4727,9 +5157,10 @@
     "season": "2019",
     "matchday": 2,
     "p1_avg_3dart_match": 54.325,
-    "p2_avg_3dart_match": 57.808
+    "p2_avg_3dart_match": 43.0
   },
   {
+    "game_id": 110,
     "date": "2019-01-05",
     "p1": "Martin",
     "p1_legs": 3,
@@ -4738,9 +5169,10 @@
     "season": "2019",
     "matchday": 1,
     "p1_avg_3dart_match": 54.325,
-    "p2_avg_3dart_match": 57.808
+    "p2_avg_3dart_match": 52.462
   },
   {
+    "game_id": 109,
     "date": "2019-01-05",
     "p1": "Uwe",
     "p1_legs": 3,
@@ -4748,10 +5180,11 @@
     "p2": "Heiner",
     "season": "2019",
     "matchday": 1,
-    "p1_avg_3dart_match": 39.294,
-    "p2_avg_3dart_match": 39.039
+    "p1_avg_3dart_match": 38.745,
+    "p2_avg_3dart_match": 37.188
   },
   {
+    "game_id": 108,
     "date": "2019-01-05",
     "p1": "Martin",
     "p1_legs": 3,
@@ -4760,9 +5193,10 @@
     "season": "2019",
     "matchday": 1,
     "p1_avg_3dart_match": 58.558,
-    "p2_avg_3dart_match": 60.12
+    "p2_avg_3dart_match": 38.8
   },
   {
+    "game_id": 107,
     "date": "2019-01-05",
     "p1": "Uwe",
     "p1_legs": 3,
@@ -4770,10 +5204,11 @@
     "p2": "Frank",
     "season": "2019",
     "matchday": 1,
-    "p1_avg_3dart_match": 38.538,
-    "p2_avg_3dart_match": 39.141
+    "p1_avg_3dart_match": 36.754,
+    "p2_avg_3dart_match": 38.484
   },
   {
+    "game_id": 106,
     "date": "2019-01-05",
     "p1": "Heiner",
     "p1_legs": 0,
@@ -4781,10 +5216,11 @@
     "p2": "Franz-Josef",
     "season": "2019",
     "matchday": 1,
-    "p1_avg_3dart_match": 53.679,
+    "p1_avg_3dart_match": 37.714,
     "p2_avg_3dart_match": 53.047
   },
   {
+    "game_id": 105,
     "date": "2019-01-05",
     "p1": "Martin",
     "p1_legs": 3,
@@ -4793,9 +5229,10 @@
     "season": "2019",
     "matchday": 1,
     "p1_avg_3dart_match": 51.828,
-    "p2_avg_3dart_match": 55.667
+    "p2_avg_3dart_match": 41.222
   },
   {
+    "game_id": 104,
     "date": "2019-01-05",
     "p1": "Franz-Josef",
     "p1_legs": 3,
@@ -4803,10 +5240,11 @@
     "p2": "Frank",
     "season": "2019",
     "matchday": 1,
-    "p1_avg_3dart_match": 43.883,
-    "p2_avg_3dart_match": 44.533
+    "p1_avg_3dart_match": 42.679,
+    "p2_avg_3dart_match": 37.511
   },
   {
+    "game_id": 103,
     "date": "2019-01-05",
     "p1": "Martin",
     "p1_legs": 3,
@@ -4814,10 +5252,11 @@
     "p2": "Uwe",
     "season": "2019",
     "matchday": 1,
-    "p1_avg_3dart_match": 50.949,
-    "p2_avg_3dart_match": 50.1
+    "p1_avg_3dart_match": 50.441,
+    "p2_avg_3dart_match": 39.7
   },
   {
+    "game_id": 102,
     "date": "2019-01-05",
     "p1": "Frank",
     "p1_legs": 3,
@@ -4826,9 +5265,10 @@
     "season": "2019",
     "matchday": 1,
     "p1_avg_3dart_match": 36.363,
-    "p2_avg_3dart_match": 37.575
+    "p2_avg_3dart_match": 29.4
   },
   {
+    "game_id": 101,
     "date": "2019-01-05",
     "p1": "Uwe",
     "p1_legs": 2,
@@ -4836,10 +5276,11 @@
     "p2": "Franz-Josef",
     "season": "2019",
     "matchday": 1,
-    "p1_avg_3dart_match": 41.75,
-    "p2_avg_3dart_match": 42.458
+    "p1_avg_3dart_match": 40.883,
+    "p2_avg_3dart_match": 42.203
   },
   {
+    "game_id": 100,
     "date": "2018-11-25",
     "p1": "Frank",
     "p1_legs": 2,
@@ -4847,10 +5288,11 @@
     "p2": "Uwe",
     "season": "2018",
     "matchday": 10,
-    "p1_avg_3dart_match": 40.187,
-    "p2_avg_3dart_match": 40.622
+    "p1_avg_3dart_match": 39.529,
+    "p2_avg_3dart_match": 40.038
   },
   {
+    "game_id": 99,
     "date": "2018-11-24",
     "p1": "Martin",
     "p1_legs": 3,
@@ -4859,9 +5301,10 @@
     "season": "2018",
     "matchday": 10,
     "p1_avg_3dart_match": 54.988,
-    "p2_avg_3dart_match": 55.667
+    "p2_avg_3dart_match": 43.556
   },
   {
+    "game_id": 98,
     "date": "2018-11-24",
     "p1": "Frank",
     "p1_legs": 1,
@@ -4869,10 +5312,11 @@
     "p2": "Martin",
     "season": "2018",
     "matchday": 10,
-    "p1_avg_3dart_match": 58.369,
-    "p2_avg_3dart_match": 57.808
+    "p1_avg_3dart_match": 42.291,
+    "p2_avg_3dart_match": 56.827
   },
   {
+    "game_id": 97,
     "date": "2018-11-24",
     "p1": "Heiner",
     "p1_legs": 1,
@@ -4880,10 +5324,11 @@
     "p2": "Franz-Josef",
     "season": "2018",
     "matchday": 10,
-    "p1_avg_3dart_match": 51.828,
-    "p2_avg_3dart_match": 50.949
+    "p1_avg_3dart_match": 40.655,
+    "p2_avg_3dart_match": 50.898
   },
   {
+    "game_id": 96,
     "date": "2018-11-24",
     "p1": "Martin",
     "p1_legs": 3,
@@ -4891,10 +5336,11 @@
     "p2": "Uwe",
     "season": "2018",
     "matchday": 10,
-    "p1_avg_3dart_match": 52.278,
-    "p2_avg_3dart_match": 52.278
+    "p1_avg_3dart_match": 51.235,
+    "p2_avg_3dart_match": 39.652
   },
   {
+    "game_id": 95,
     "date": "2018-11-24",
     "p1": "Franz-Josef",
     "p1_legs": 3,
@@ -4902,10 +5348,11 @@
     "p2": "Frank",
     "season": "2018",
     "matchday": 10,
-    "p1_avg_3dart_match": 45.893,
-    "p2_avg_3dart_match": 47.339
+    "p1_avg_3dart_match": 45.71,
+    "p2_avg_3dart_match": 42.472
   },
   {
+    "game_id": 94,
     "date": "2018-11-24",
     "p1": "Uwe",
     "p1_legs": 0,
@@ -4913,10 +5360,11 @@
     "p2": "Franz-Josef",
     "season": "2018",
     "matchday": 10,
-    "p1_avg_3dart_match": 53.679,
+    "p1_avg_3dart_match": 44.929,
     "p2_avg_3dart_match": 54.325
   },
   {
+    "game_id": 93,
     "date": "2018-11-24",
     "p1": "Frank",
     "p1_legs": 3,
@@ -4925,9 +5373,10 @@
     "season": "2018",
     "matchday": 10,
     "p1_avg_3dart_match": 30.262,
-    "p2_avg_3dart_match": 31.312
+    "p2_avg_3dart_match": 30.771
   },
   {
+    "game_id": 92,
     "date": "2018-11-24",
     "p1": "Martin",
     "p1_legs": 1,
@@ -4935,10 +5384,11 @@
     "p2": "Franz-Josef",
     "season": "2018",
     "matchday": 10,
-    "p1_avg_3dart_match": 55.667,
-    "p2_avg_3dart_match": 55.667
+    "p1_avg_3dart_match": 49.222,
+    "p2_avg_3dart_match": 54.333
   },
   {
+    "game_id": 91,
     "date": "2018-11-24",
     "p1": "Heiner",
     "p1_legs": 1,
@@ -4946,10 +5396,11 @@
     "p2": "Uwe",
     "season": "2018",
     "matchday": 10,
-    "p1_avg_3dart_match": 34.552,
-    "p2_avg_3dart_match": 34.354
+    "p1_avg_3dart_match": 32.931,
+    "p2_avg_3dart_match": 34.149
   },
   {
+    "game_id": 90,
     "date": "2018-08-18",
     "p1": "Franz-Josef",
     "p1_legs": 1,
@@ -4957,10 +5408,11 @@
     "p2": "Uwe",
     "season": "2018",
     "matchday": 9,
-    "p1_avg_3dart_match": 48.096,
-    "p2_avg_3dart_match": 48.096
+    "p1_avg_3dart_match": 46.464,
+    "p2_avg_3dart_match": 47.808
   },
   {
+    "game_id": 89,
     "date": "2018-08-18",
     "p1": "Martin",
     "p1_legs": 3,
@@ -4969,9 +5421,10 @@
     "season": "2018",
     "matchday": 9,
     "p1_avg_3dart_match": 55.667,
-    "p2_avg_3dart_match": 55.667
+    "p2_avg_3dart_match": 45.778
   },
   {
+    "game_id": 88,
     "date": "2018-08-18",
     "p1": "Frank",
     "p1_legs": 2,
@@ -4979,10 +5432,11 @@
     "p2": "Franz-Josef",
     "season": "2018",
     "matchday": 9,
-    "p1_avg_3dart_match": 47.264,
-    "p2_avg_3dart_match": 48.173
+    "p1_avg_3dart_match": 41.075,
+    "p2_avg_3dart_match": 48.019
   },
   {
+    "game_id": 87,
     "date": "2018-08-18",
     "p1": "Martin",
     "p1_legs": 3,
@@ -4991,9 +5445,10 @@
     "season": "2018",
     "matchday": 9,
     "p1_avg_3dart_match": 44.206,
-    "p2_avg_3dart_match": 45.545
+    "p2_avg_3dart_match": 35.697
   },
   {
+    "game_id": 86,
     "date": "2018-08-18",
     "p1": "Uwe",
     "p1_legs": 3,
@@ -5001,10 +5456,11 @@
     "p2": "Frank",
     "season": "2018",
     "matchday": 9,
-    "p1_avg_3dart_match": 40.622,
-    "p2_avg_3dart_match": 40.622
+    "p1_avg_3dart_match": 39.876,
+    "p2_avg_3dart_match": 39.389
   },
   {
+    "game_id": 85,
     "date": "2018-08-18",
     "p1": "Franz-Josef",
     "p1_legs": 3,
@@ -5013,9 +5469,10 @@
     "season": "2018",
     "matchday": 9,
     "p1_avg_3dart_match": 46.969,
-    "p2_avg_3dart_match": 48.484
+    "p2_avg_3dart_match": 35.548
   },
   {
+    "game_id": 84,
     "date": "2018-08-18",
     "p1": "Uwe",
     "p1_legs": 3,
@@ -5024,9 +5481,10 @@
     "season": "2018",
     "matchday": 9,
     "p1_avg_3dart_match": 45.09,
-    "p2_avg_3dart_match": 46.969
+    "p2_avg_3dart_match": 40.844
   },
   {
+    "game_id": 83,
     "date": "2018-08-18",
     "p1": "Martin",
     "p1_legs": 3,
@@ -5035,9 +5493,10 @@
     "season": "2018",
     "matchday": 9,
     "p1_avg_3dart_match": 54.988,
-    "p2_avg_3dart_match": 57.808
+    "p2_avg_3dart_match": 48.577
   },
   {
+    "game_id": 82,
     "date": "2018-08-18",
     "p1": "Frank",
     "p1_legs": 3,
@@ -5046,9 +5505,10 @@
     "season": "2018",
     "matchday": 9,
     "p1_avg_3dart_match": 36.659,
-    "p2_avg_3dart_match": 37.575
+    "p2_avg_3dart_match": 34.5
   },
   {
+    "game_id": 81,
     "date": "2018-08-18",
     "p1": "Martin",
     "p1_legs": 3,
@@ -5057,9 +5517,10 @@
     "season": "2018",
     "matchday": 9,
     "p1_avg_3dart_match": 52.43,
-    "p2_avg_3dart_match": 53.679
+    "p2_avg_3dart_match": 44.929
   },
   {
+    "game_id": 80,
     "date": "2018-07-08",
     "p1": "Frank",
     "p1_legs": 2,
@@ -5067,10 +5528,11 @@
     "p2": "Heiner",
     "season": "2018",
     "matchday": 8,
-    "p1_avg_3dart_match": 32.817,
-    "p2_avg_3dart_match": 32.961
+    "p1_avg_3dart_match": 31.939,
+    "p2_avg_3dart_match": 32.408
   },
   {
+    "game_id": 79,
     "date": "2018-07-07",
     "p1": "Franz-Josef",
     "p1_legs": 3,
@@ -5078,10 +5540,11 @@
     "p2": "Uwe",
     "season": "2018",
     "matchday": 8,
-    "p1_avg_3dart_match": 50.436,
-    "p2_avg_3dart_match": 50.777
+    "p1_avg_3dart_match": 50.275,
+    "p2_avg_3dart_match": 43.297
   },
   {
+    "game_id": 78,
     "date": "2018-07-07",
     "p1": "Uwe",
     "p1_legs": 3,
@@ -5089,10 +5552,11 @@
     "p2": "Heiner",
     "season": "2018",
     "matchday": 8,
-    "p1_avg_3dart_match": 31.843,
-    "p2_avg_3dart_match": 31.843
+    "p1_avg_3dart_match": 31.665,
+    "p2_avg_3dart_match": 29.034
   },
   {
+    "game_id": 77,
     "date": "2018-07-07",
     "p1": "Martin",
     "p1_legs": 3,
@@ -5100,10 +5564,11 @@
     "p2": "Franz-Josef",
     "season": "2018",
     "matchday": 8,
-    "p1_avg_3dart_match": 48.878,
-    "p2_avg_3dart_match": 49.279
+    "p1_avg_3dart_match": 48.488,
+    "p2_avg_3dart_match": 45.025
   },
   {
+    "game_id": 76,
     "date": "2018-07-07",
     "p1": "Uwe",
     "p1_legs": 3,
@@ -5112,9 +5577,10 @@
     "season": "2018",
     "matchday": 8,
     "p1_avg_3dart_match": 24.639,
-    "p2_avg_3dart_match": 25.05
+    "p2_avg_3dart_match": 24.517
   },
   {
+    "game_id": 75,
     "date": "2018-07-07",
     "p1": "Martin",
     "p1_legs": 3,
@@ -5123,9 +5589,10 @@
     "season": "2018",
     "matchday": 8,
     "p1_avg_3dart_match": 54.325,
-    "p2_avg_3dart_match": 57.808
+    "p2_avg_3dart_match": 37.654
   },
   {
+    "game_id": 74,
     "date": "2018-07-07",
     "p1": "Martin",
     "p1_legs": 3,
@@ -5134,9 +5601,10 @@
     "season": "2018",
     "matchday": 8,
     "p1_avg_3dart_match": 43.356,
-    "p2_avg_3dart_match": 45.545
+    "p2_avg_3dart_match": 37.061
   },
   {
+    "game_id": 73,
     "date": "2018-07-07",
     "p1": "Franz-Josef",
     "p1_legs": 3,
@@ -5145,9 +5613,10 @@
     "season": "2018",
     "matchday": 8,
     "p1_avg_3dart_match": 49.549,
-    "p2_avg_3dart_match": 51.828
+    "p2_avg_3dart_match": 41.552
   },
   {
+    "game_id": 72,
     "date": "2018-07-07",
     "p1": "Martin",
     "p1_legs": 3,
@@ -5156,9 +5625,10 @@
     "season": "2018",
     "matchday": 8,
     "p1_avg_3dart_match": 55.667,
-    "p2_avg_3dart_match": 57.808
+    "p2_avg_3dart_match": 44.885
   },
   {
+    "game_id": 71,
     "date": "2018-07-07",
     "p1": "Franz-Josef",
     "p1_legs": 3,
@@ -5167,9 +5637,10 @@
     "season": "2018",
     "matchday": 8,
     "p1_avg_3dart_match": 57.808,
-    "p2_avg_3dart_match": 60.12
+    "p2_avg_3dart_match": 42.12
   },
   {
+    "game_id": 70,
     "date": "2018-04-28",
     "p1": "Martin",
     "p1_legs": 3,
@@ -5178,9 +5649,10 @@
     "season": "2018",
     "matchday": 7,
     "p1_avg_3dart_match": 62.625,
-    "p2_avg_3dart_match": 65.348
+    "p2_avg_3dart_match": 40.522
   },
   {
+    "game_id": 69,
     "date": "2018-04-28",
     "p1": "Franz-Josef",
     "p1_legs": 3,
@@ -5188,10 +5660,11 @@
     "p2": "Uwe",
     "season": "2018",
     "matchday": 7,
-    "p1_avg_3dart_match": 48.484,
-    "p2_avg_3dart_match": 49.118
+    "p1_avg_3dart_match": 46.723,
+    "p2_avg_3dart_match": 43.706
   },
   {
+    "game_id": 68,
     "date": "2018-04-28",
     "p1": "Franz-Josef",
     "p1_legs": 3,
@@ -5199,10 +5672,11 @@
     "p2": "Martin",
     "season": "2018",
     "matchday": 7,
-    "p1_avg_3dart_match": 52.923,
-    "p2_avg_3dart_match": 54.854
+    "p1_avg_3dart_match": 51.951,
+    "p2_avg_3dart_match": 50.409
   },
   {
+    "game_id": 67,
     "date": "2018-04-28",
     "p1": "Frank",
     "p1_legs": 1,
@@ -5210,10 +5684,11 @@
     "p2": "Uwe",
     "season": "2018",
     "matchday": 7,
-    "p1_avg_3dart_match": 34.159,
-    "p2_avg_3dart_match": 34.159
+    "p1_avg_3dart_match": 33.614,
+    "p2_avg_3dart_match": 34.057
   },
   {
+    "game_id": 66,
     "date": "2018-04-28",
     "p1": "Heiner",
     "p1_legs": 0,
@@ -5221,10 +5696,11 @@
     "p2": "Franz-Josef",
     "season": "2018",
     "matchday": 7,
-    "p1_avg_3dart_match": 50.1,
+    "p1_avg_3dart_match": 38.533,
     "p2_avg_3dart_match": 50.663
   },
   {
+    "game_id": 65,
     "date": "2018-04-28",
     "p1": "Frank",
     "p1_legs": 0,
@@ -5232,10 +5708,11 @@
     "p2": "Martin",
     "season": "2018",
     "matchday": 7,
-    "p1_avg_3dart_match": 39.553,
+    "p1_avg_3dart_match": 36.526,
     "p2_avg_3dart_match": 39.903
   },
   {
+    "game_id": 64,
     "date": "2018-04-28",
     "p1": "Heiner",
     "p1_legs": 0,
@@ -5243,10 +5720,11 @@
     "p2": "Frank",
     "season": "2018",
     "matchday": 7,
-    "p1_avg_3dart_match": 35.786,
+    "p1_avg_3dart_match": 32.452,
     "p2_avg_3dart_match": 36.363
   },
   {
+    "game_id": 63,
     "date": "2018-04-28",
     "p1": "Uwe",
     "p1_legs": 0,
@@ -5254,10 +5732,11 @@
     "p2": "Martin",
     "season": "2018",
     "matchday": 7,
-    "p1_avg_3dart_match": 62.625,
+    "p1_avg_3dart_match": 37.167,
     "p2_avg_3dart_match": 60.932
   },
   {
+    "game_id": 62,
     "date": "2018-04-28",
     "p1": "Franz-Josef",
     "p1_legs": 3,
@@ -5266,9 +5745,10 @@
     "season": "2018",
     "matchday": 7,
     "p1_avg_3dart_match": 43.777,
-    "p2_avg_3dart_match": 44.206
+    "p2_avg_3dart_match": 38.206
   },
   {
+    "game_id": 61,
     "date": "2018-04-28",
     "p1": "Uwe",
     "p1_legs": 3,
@@ -5277,9 +5757,10 @@
     "season": "2018",
     "matchday": 7,
     "p1_avg_3dart_match": 39.553,
-    "p2_avg_3dart_match": 40.622
+    "p2_avg_3dart_match": 35.351
   },
   {
+    "game_id": 60,
     "date": "2018-04-14",
     "p1": "Franz-Josef",
     "p1_legs": 3,
@@ -5288,9 +5769,10 @@
     "season": "2018",
     "matchday": 6,
     "p1_avg_3dart_match": 45.09,
-    "p2_avg_3dart_match": 46.969
+    "p2_avg_3dart_match": 42.375
   },
   {
+    "game_id": 59,
     "date": "2018-04-14",
     "p1": "Heiner",
     "p1_legs": 2,
@@ -5298,10 +5780,11 @@
     "p2": "Uwe",
     "season": "2018",
     "matchday": 6,
-    "p1_avg_3dart_match": 40.622,
-    "p2_avg_3dart_match": 40.622
+    "p1_avg_3dart_match": 38.773,
+    "p2_avg_3dart_match": 40.232
   },
   {
+    "game_id": 58,
     "date": "2018-04-14",
     "p1": "Heiner",
     "p1_legs": 1,
@@ -5309,10 +5792,11 @@
     "p2": "Frank",
     "season": "2018",
     "matchday": 6,
-    "p1_avg_3dart_match": 33.215,
-    "p2_avg_3dart_match": 33.215
+    "p1_avg_3dart_match": 32.47,
+    "p2_avg_3dart_match": 32.586
   },
   {
+    "game_id": 57,
     "date": "2018-04-14",
     "p1": "Martin",
     "p1_legs": 3,
@@ -5320,10 +5804,11 @@
     "p2": "Uwe",
     "season": "2018",
     "matchday": 6,
-    "p1_avg_3dart_match": 46.246,
-    "p2_avg_3dart_match": 46.969
+    "p1_avg_3dart_match": 46.015,
+    "p2_avg_3dart_match": 37.617
   },
   {
+    "game_id": 56,
     "date": "2018-04-14",
     "p1": "Heiner",
     "p1_legs": 0,
@@ -5331,10 +5816,11 @@
     "p2": "Franz-Josef",
     "season": "2018",
     "matchday": 6,
-    "p1_avg_3dart_match": 53.679,
+    "p1_avg_3dart_match": 39.5,
     "p2_avg_3dart_match": 54.325
   },
   {
+    "game_id": 55,
     "date": "2018-04-14",
     "p1": "Frank",
     "p1_legs": 0,
@@ -5342,10 +5828,11 @@
     "p2": "Martin",
     "season": "2018",
     "matchday": 6,
-    "p1_avg_3dart_match": 60.12,
+    "p1_avg_3dart_match": 40.08,
     "p2_avg_3dart_match": 59.329
   },
   {
+    "game_id": 54,
     "date": "2018-04-14",
     "p1": "Franz-Josef",
     "p1_legs": 1,
@@ -5353,10 +5840,11 @@
     "p2": "Martin",
     "season": "2018",
     "matchday": 6,
-    "p1_avg_3dart_match": 55.667,
-    "p2_avg_3dart_match": 55.156
+    "p1_avg_3dart_match": 47.639,
+    "p2_avg_3dart_match": 53.972
   },
   {
+    "game_id": 53,
     "date": "2018-04-14",
     "p1": "Frank",
     "p1_legs": 3,
@@ -5365,9 +5853,10 @@
     "season": "2018",
     "matchday": 6,
     "p1_avg_3dart_match": 46.485,
-    "p2_avg_3dart_match": 48.484
+    "p2_avg_3dart_match": 36.71
   },
   {
+    "game_id": 52,
     "date": "2018-04-14",
     "p1": "Martin",
     "p1_legs": 3,
@@ -5376,9 +5865,10 @@
     "season": "2018",
     "matchday": 6,
     "p1_avg_3dart_match": 56.363,
-    "p2_avg_3dart_match": 60.12
+    "p2_avg_3dart_match": 40.0
   },
   {
+    "game_id": 51,
     "date": "2018-04-14",
     "p1": "Uwe",
     "p1_legs": 0,
@@ -5386,10 +5876,11 @@
     "p2": "Franz-Josef",
     "season": "2018",
     "matchday": 6,
-    "p1_avg_3dart_match": 48.484,
+    "p1_avg_3dart_match": 36.968,
     "p2_avg_3dart_match": 47.968
   },
   {
+    "game_id": 50,
     "date": "2018-03-30",
     "p1": "Uwe",
     "p1_legs": 1,
@@ -5397,10 +5888,11 @@
     "p2": "Martin",
     "season": "2018",
     "matchday": 5,
-    "p1_avg_3dart_match": 50.1,
-    "p2_avg_3dart_match": 49.686
+    "p1_avg_3dart_match": 39.4,
+    "p2_avg_3dart_match": 49.587
   },
   {
+    "game_id": 49,
     "date": "2018-03-30",
     "p1": "Frank",
     "p1_legs": 3,
@@ -5408,10 +5900,11 @@
     "p2": "Heiner",
     "season": "2018",
     "matchday": 5,
-    "p1_avg_3dart_match": 39.346,
-    "p2_avg_3dart_match": 39.346
+    "p1_avg_3dart_match": 37.838,
+    "p2_avg_3dart_match": 35.969
   },
   {
+    "game_id": 48,
     "date": "2018-03-30",
     "p1": "Frank",
     "p1_legs": 0,
@@ -5419,10 +5912,11 @@
     "p2": "Martin",
     "season": "2018",
     "matchday": 5,
-    "p1_avg_3dart_match": 45.545,
+    "p1_avg_3dart_match": 39.697,
     "p2_avg_3dart_match": 46.01
   },
   {
+    "game_id": 47,
     "date": "2018-03-30",
     "p1": "Franz-Josef",
     "p1_legs": 3,
@@ -5431,9 +5925,10 @@
     "season": "2018",
     "matchday": 5,
     "p1_avg_3dart_match": 49.549,
-    "p2_avg_3dart_match": 51.828
+    "p2_avg_3dart_match": 41.276
   },
   {
+    "game_id": 46,
     "date": "2018-03-30",
     "p1": "Uwe",
     "p1_legs": 3,
@@ -5441,10 +5936,11 @@
     "p2": "Frank",
     "season": "2018",
     "matchday": 5,
-    "p1_avg_3dart_match": 37.575,
-    "p2_avg_3dart_match": 37.388
+    "p1_avg_3dart_match": 36.315,
+    "p2_avg_3dart_match": 36.537
   },
   {
+    "game_id": 45,
     "date": "2018-03-30",
     "p1": "Franz-Josef",
     "p1_legs": 1,
@@ -5452,10 +5948,11 @@
     "p2": "Martin",
     "season": "2018",
     "matchday": 5,
-    "p1_avg_3dart_match": 60.727,
-    "p2_avg_3dart_match": 61.347
+    "p1_avg_3dart_match": 50.455,
+    "p2_avg_3dart_match": 60.367
   },
   {
+    "game_id": 44,
     "date": "2018-03-30",
     "p1": "Franz-Josef",
     "p1_legs": 3,
@@ -5463,10 +5960,11 @@
     "p2": "Uwe",
     "season": "2018",
     "matchday": 5,
-    "p1_avg_3dart_match": 55.156,
-    "p2_avg_3dart_match": 56.717
+    "p1_avg_3dart_match": 55.018,
+    "p2_avg_3dart_match": 42.34
   },
   {
+    "game_id": 43,
     "date": "2018-03-30",
     "p1": "Martin",
     "p1_legs": 3,
@@ -5475,9 +5973,10 @@
     "season": "2018",
     "matchday": 5,
     "p1_avg_3dart_match": 50.663,
-    "p2_avg_3dart_match": 51.828
+    "p2_avg_3dart_match": 37.103
   },
   {
+    "game_id": 42,
     "date": "2018-03-30",
     "p1": "Franz-Josef",
     "p1_legs": 3,
@@ -5485,10 +5984,11 @@
     "p2": "Frank",
     "season": "2018",
     "matchday": 5,
-    "p1_avg_3dart_match": 38.538,
-    "p2_avg_3dart_match": 38.538
+    "p1_avg_3dart_match": 38.446,
+    "p2_avg_3dart_match": 31.785
   },
   {
+    "game_id": 41,
     "date": "2018-03-30",
     "p1": "Heiner",
     "p1_legs": 0,
@@ -5496,10 +5996,11 @@
     "p2": "Uwe",
     "season": "2018",
     "matchday": 5,
-    "p1_avg_3dart_match": 31.979,
+    "p1_avg_3dart_match": 30.106,
     "p2_avg_3dart_match": 31.979
   },
   {
+    "game_id": 40,
     "date": "2018-03-04",
     "p1": "Heiner",
     "p1_legs": 0,
@@ -5507,10 +6008,11 @@
     "p2": "Franz-Josef",
     "season": "2018",
     "matchday": 4,
-    "p1_avg_3dart_match": 39.553,
+    "p1_avg_3dart_match": 33.711,
     "p2_avg_3dart_match": 39.209
   },
   {
+    "game_id": 39,
     "date": "2018-03-03",
     "p1": "Frank",
     "p1_legs": 3,
@@ -5518,10 +6020,11 @@
     "p2": "Uwe",
     "season": "2018",
     "matchday": 4,
-    "p1_avg_3dart_match": 32.817,
-    "p2_avg_3dart_match": 33.252
+    "p1_avg_3dart_match": 29.528,
+    "p2_avg_3dart_match": 33.08
   },
   {
+    "game_id": 38,
     "date": "2018-03-03",
     "p1": "Uwe",
     "p1_legs": 3,
@@ -5530,9 +6033,10 @@
     "season": "2018",
     "matchday": 4,
     "p1_avg_3dart_match": 46.01,
-    "p2_avg_3dart_match": 46.969
+    "p2_avg_3dart_match": 38.938
   },
   {
+    "game_id": 37,
     "date": "2018-03-03",
     "p1": "Frank",
     "p1_legs": 0,
@@ -5540,10 +6044,11 @@
     "p2": "Martin",
     "season": "2018",
     "matchday": 4,
-    "p1_avg_3dart_match": 62.625,
+    "p1_avg_3dart_match": 40.5,
     "p2_avg_3dart_match": 62.625
   },
   {
+    "game_id": 36,
     "date": "2018-03-03",
     "p1": "Franz-Josef",
     "p1_legs": 3,
@@ -5552,9 +6057,10 @@
     "season": "2018",
     "matchday": 4,
     "p1_avg_3dart_match": 54.325,
-    "p2_avg_3dart_match": 55.667
+    "p2_avg_3dart_match": 45.889
   },
   {
+    "game_id": 35,
     "date": "2018-03-03",
     "p1": "Martin",
     "p1_legs": 3,
@@ -5563,9 +6069,10 @@
     "season": "2018",
     "matchday": 4,
     "p1_avg_3dart_match": 49.011,
-    "p2_avg_3dart_match": 51.828
+    "p2_avg_3dart_match": 39.207
   },
   {
+    "game_id": 34,
     "date": "2018-03-03",
     "p1": "Martin",
     "p1_legs": 3,
@@ -5574,9 +6081,10 @@
     "season": "2018",
     "matchday": 4,
     "p1_avg_3dart_match": 63.507,
-    "p2_avg_3dart_match": 65.348
+    "p2_avg_3dart_match": 53.826
   },
   {
+    "game_id": 33,
     "date": "2018-03-03",
     "p1": "Heiner",
     "p1_legs": 1,
@@ -5584,10 +6092,11 @@
     "p2": "Frank",
     "season": "2018",
     "matchday": 4,
-    "p1_avg_3dart_match": 29.762,
-    "p2_avg_3dart_match": 29.327
+    "p1_avg_3dart_match": 29.361,
+    "p2_avg_3dart_match": 29.268
   },
   {
+    "game_id": 32,
     "date": "2018-03-03",
     "p1": "Martin",
     "p1_legs": 3,
@@ -5595,10 +6104,11 @@
     "p2": "Uwe",
     "season": "2018",
     "matchday": 4,
-    "p1_avg_3dart_match": 42.638,
-    "p2_avg_3dart_match": 42.638
+    "p1_avg_3dart_match": 41.957,
+    "p2_avg_3dart_match": 38.468
   },
   {
+    "game_id": 31,
     "date": "2018-03-03",
     "p1": "Franz-Josef",
     "p1_legs": 3,
@@ -5606,10 +6116,11 @@
     "p2": "Frank",
     "season": "2018",
     "matchday": 4,
-    "p1_avg_3dart_match": 41.75,
-    "p2_avg_3dart_match": 42.338
+    "p1_avg_3dart_match": 41.688,
+    "p2_avg_3dart_match": 36.824
   },
   {
+    "game_id": 30,
     "date": "2018-02-03",
     "p1": "Martin",
     "p1_legs": 3,
@@ -5618,9 +6129,10 @@
     "season": "2018",
     "matchday": 3,
     "p1_avg_3dart_match": 34.685,
-    "p2_avg_3dart_match": 34.953
+    "p2_avg_3dart_match": 29.535
   },
   {
+    "game_id": 29,
     "date": "2018-02-03",
     "p1": "Franz-Josef",
     "p1_legs": 3,
@@ -5628,10 +6140,11 @@
     "p2": "Uwe",
     "season": "2018",
     "matchday": 3,
-    "p1_avg_3dart_match": 50.521,
-    "p2_avg_3dart_match": 50.949
+    "p1_avg_3dart_match": 49.513,
+    "p2_avg_3dart_match": 46.449
   },
   {
+    "game_id": 28,
     "date": "2018-02-03",
     "p1": "Martin",
     "p1_legs": 1,
@@ -5639,10 +6152,11 @@
     "p2": "Franz-Josef",
     "season": "2018",
     "matchday": 3,
-    "p1_avg_3dart_match": 49.279,
-    "p2_avg_3dart_match": 48.878
+    "p1_avg_3dart_match": 47.262,
+    "p2_avg_3dart_match": 48.439
   },
   {
+    "game_id": 27,
     "date": "2018-02-03",
     "p1": "Frank",
     "p1_legs": 1,
@@ -5650,10 +6164,11 @@
     "p2": "Uwe",
     "season": "2018",
     "matchday": 3,
-    "p1_avg_3dart_match": 39.039,
-    "p2_avg_3dart_match": 38.787
+    "p1_avg_3dart_match": 36.448,
+    "p2_avg_3dart_match": 38.4
   },
   {
+    "game_id": 26,
     "date": "2018-02-03",
     "p1": "Franz-Josef",
     "p1_legs": 3,
@@ -5662,9 +6177,10 @@
     "season": "2018",
     "matchday": 3,
     "p1_avg_3dart_match": 49.011,
-    "p2_avg_3dart_match": 50.1
+    "p2_avg_3dart_match": 36.1
   },
   {
+    "game_id": 25,
     "date": "2018-02-03",
     "p1": "Martin",
     "p1_legs": 3,
@@ -5673,9 +6189,10 @@
     "season": "2018",
     "matchday": 3,
     "p1_avg_3dart_match": 39.209,
-    "p2_avg_3dart_match": 40.622
+    "p2_avg_3dart_match": 33.432
   },
   {
+    "game_id": 24,
     "date": "2018-02-03",
     "p1": "Frank",
     "p1_legs": 3,
@@ -5684,9 +6201,10 @@
     "season": "2018",
     "matchday": 3,
     "p1_avg_3dart_match": 42.943,
-    "p2_avg_3dart_match": 44.206
+    "p2_avg_3dart_match": 33.853
   },
   {
+    "game_id": 23,
     "date": "2018-02-03",
     "p1": "Martin",
     "p1_legs": 3,
@@ -5695,9 +6213,10 @@
     "season": "2018",
     "matchday": 3,
     "p1_avg_3dart_match": 42.943,
-    "p2_avg_3dart_match": 44.206
+    "p2_avg_3dart_match": 40.206
   },
   {
+    "game_id": 22,
     "date": "2018-02-03",
     "p1": "Franz-Josef",
     "p1_legs": 3,
@@ -5706,9 +6225,10 @@
     "season": "2018",
     "matchday": 3,
     "p1_avg_3dart_match": 46.01,
-    "p2_avg_3dart_match": 46.969
+    "p2_avg_3dart_match": 34.938
   },
   {
+    "game_id": 21,
     "date": "2018-02-03",
     "p1": "Heiner",
     "p1_legs": 1,
@@ -5716,10 +6236,11 @@
     "p2": "Uwe",
     "season": "2018",
     "matchday": 3,
-    "p1_avg_3dart_match": 29.184,
-    "p2_avg_3dart_match": 29.043
+    "p1_avg_3dart_match": 28.893,
+    "p2_avg_3dart_match": 28.986
   },
   {
+    "game_id": 20,
     "date": "2018-01-21",
     "p1": "Uwe",
     "p1_legs": 3,
@@ -5727,10 +6248,11 @@
     "p2": "Frank",
     "season": "2018",
     "matchday": 2,
-    "p1_avg_3dart_match": 41.178,
-    "p2_avg_3dart_match": 41.462
+    "p1_avg_3dart_match": 40.767,
+    "p2_avg_3dart_match": 38.731
   },
   {
+    "game_id": 19,
     "date": "2018-01-20",
     "p1": "Franz-Josef",
     "p1_legs": 3,
@@ -5739,9 +6261,10 @@
     "season": "2018",
     "matchday": 2,
     "p1_avg_3dart_match": 38.871,
-    "p2_avg_3dart_match": 39.553
+    "p2_avg_3dart_match": 32.421
   },
   {
+    "game_id": 18,
     "date": "2018-01-20",
     "p1": "Franz-Josef",
     "p1_legs": 3,
@@ -5749,10 +6272,11 @@
     "p2": "Frank",
     "season": "2018",
     "matchday": 2,
-    "p1_avg_3dart_match": 48.878,
-    "p2_avg_3dart_match": 50.1
+    "p1_avg_3dart_match": 48.78,
+    "p2_avg_3dart_match": 39.8
   },
   {
+    "game_id": 17,
     "date": "2018-01-20",
     "p1": "Martin",
     "p1_legs": 3,
@@ -5761,9 +6285,10 @@
     "season": "2018",
     "matchday": 2,
     "p1_avg_3dart_match": 41.75,
-    "p2_avg_3dart_match": 42.943
+    "p2_avg_3dart_match": 34.886
   },
   {
+    "game_id": 16,
     "date": "2018-01-20",
     "p1": "Uwe",
     "p1_legs": 1,
@@ -5771,10 +6296,11 @@
     "p2": "Franz-Josef",
     "season": "2018",
     "matchday": 2,
-    "p1_avg_3dart_match": 48.096,
-    "p2_avg_3dart_match": 48.096
+    "p1_avg_3dart_match": 44.592,
+    "p2_avg_3dart_match": 47.712
   },
   {
+    "game_id": 15,
     "date": "2018-01-20",
     "p1": "Martin",
     "p1_legs": 3,
@@ -5783,9 +6309,10 @@
     "season": "2018",
     "matchday": 2,
     "p1_avg_3dart_match": 57.808,
-    "p2_avg_3dart_match": 60.12
+    "p2_avg_3dart_match": 42.6
   },
   {
+    "game_id": 14,
     "date": "2018-01-20",
     "p1": "Uwe",
     "p1_legs": 2,
@@ -5793,10 +6320,11 @@
     "p2": "Martin",
     "season": "2018",
     "matchday": 2,
-    "p1_avg_3dart_match": 54.854,
-    "p2_avg_3dart_match": 56.932
+    "p1_avg_3dart_match": 49.38,
+    "p2_avg_3dart_match": 54.091
   },
   {
+    "game_id": 13,
     "date": "2018-01-20",
     "p1": "Heiner",
     "p1_legs": 1,
@@ -5804,10 +6332,11 @@
     "p2": "Frank",
     "season": "2018",
     "matchday": 2,
-    "p1_avg_3dart_match": 23.857,
-    "p2_avg_3dart_match": 23.763
+    "p1_avg_3dart_match": 23.119,
+    "p2_avg_3dart_match": 23.739
   },
   {
+    "game_id": 12,
     "date": "2018-01-20",
     "p1": "Franz-Josef",
     "p1_legs": 0,
@@ -5815,10 +6344,11 @@
     "p2": "Martin",
     "season": "2018",
     "matchday": 2,
-    "p1_avg_3dart_match": 48.484,
+    "p1_avg_3dart_match": 40.161,
     "p2_avg_3dart_match": 49.011
   },
   {
+    "game_id": 11,
     "date": "2018-01-20",
     "p1": "Uwe",
     "p1_legs": 3,
@@ -5827,9 +6357,10 @@
     "season": "2018",
     "matchday": 2,
     "p1_avg_3dart_match": 26.68,
-    "p2_avg_3dart_match": 26.839
+    "p2_avg_3dart_match": 26.196
   },
   {
+    "game_id": 10,
     "date": "2018-01-07",
     "p1": "Martin",
     "p1_legs": 3,
@@ -5838,9 +6369,10 @@
     "season": "2018",
     "matchday": 1,
     "p1_avg_3dart_match": 43.356,
-    "p2_avg_3dart_match": 44.206
+    "p2_avg_3dart_match": 39.471
   },
   {
+    "game_id": 9,
     "date": "2018-01-06",
     "p1": "Uwe",
     "p1_legs": 1,
@@ -5848,10 +6380,11 @@
     "p2": "Franz-Josef",
     "season": "2018",
     "matchday": 1,
-    "p1_avg_3dart_match": 40.898,
-    "p2_avg_3dart_match": 40.898
+    "p1_avg_3dart_match": 35.122,
+    "p2_avg_3dart_match": 40.571
   },
   {
+    "game_id": 8,
     "date": "2018-01-06",
     "p1": "Franz-Josef",
     "p1_legs": 3,
@@ -5860,9 +6393,10 @@
     "season": "2018",
     "matchday": 1,
     "p1_avg_3dart_match": 60.12,
-    "p2_avg_3dart_match": 62.625
+    "p2_avg_3dart_match": 35.958
   },
   {
+    "game_id": 7,
     "date": "2018-01-06",
     "p1": "Frank",
     "p1_legs": 3,
@@ -5871,9 +6405,10 @@
     "season": "2018",
     "matchday": 1,
     "p1_avg_3dart_match": 42.943,
-    "p2_avg_3dart_match": 44.206
+    "p2_avg_3dart_match": 41.441
   },
   {
+    "game_id": 6,
     "date": "2018-01-06",
     "p1": "Franz-Josef",
     "p1_legs": 3,
@@ -5881,10 +6416,11 @@
     "p2": "Martin",
     "season": "2018",
     "matchday": 1,
-    "p1_avg_3dart_match": 41.983,
-    "p2_avg_3dart_match": 42.458
+    "p1_avg_3dart_match": 41.749,
+    "p2_avg_3dart_match": 41.797
   },
   {
+    "game_id": 5,
     "date": "2018-01-06",
     "p1": "Frank",
     "p1_legs": 1,
@@ -5892,10 +6428,11 @@
     "p2": "Heiner",
     "season": "2018",
     "matchday": 1,
-    "p1_avg_3dart_match": 37.811,
-    "p2_avg_3dart_match": 38.051
+    "p1_avg_3dart_match": 37.113,
+    "p2_avg_3dart_match": 37.367
   },
   {
+    "game_id": 4,
     "date": "2018-01-06",
     "p1": "Martin",
     "p1_legs": 3,
@@ -5903,10 +6440,11 @@
     "p2": "Frank",
     "season": "2018",
     "matchday": 1,
-    "p1_avg_3dart_match": 61.598,
-    "p2_avg_3dart_match": 62.107
+    "p1_avg_3dart_match": 59.336,
+    "p2_avg_3dart_match": 49.463
   },
   {
+    "game_id": 3,
     "date": "2018-01-06",
     "p1": "Heiner",
     "p1_legs": 3,
@@ -5915,9 +6453,10 @@
     "season": "2018",
     "matchday": 1,
     "p1_avg_3dart_match": 32.912,
-    "p2_avg_3dart_match": 34.159
+    "p2_avg_3dart_match": 28.045
   },
   {
+    "game_id": 2,
     "date": "2018-01-06",
     "p1": "Franz-Josef",
     "p1_legs": 3,
@@ -5926,9 +6465,10 @@
     "season": "2018",
     "matchday": 1,
     "p1_avg_3dart_match": 50.663,
-    "p2_avg_3dart_match": 53.679
+    "p2_avg_3dart_match": 41.929
   },
   {
+    "game_id": 1,
     "date": "2018-01-06",
     "p1": "Uwe",
     "p1_legs": 1,
@@ -5936,7 +6476,7 @@
     "p2": "Martin",
     "season": "2018",
     "matchday": 1,
-    "p1_avg_3dart_match": 48.878,
-    "p2_avg_3dart_match": 48.484
+    "p1_avg_3dart_match": 43.366,
+    "p2_avg_3dart_match": 47.516
   }
 ]

@@ -42,7 +42,7 @@ function renderStats(mode) {
     if (!eintrag) return "";
 
     const val = f.format ? f.format(eintrag) : `${eintrag.wert}`;
-    const name = f.format ? "" : eintrag.spieler;
+    const name = f.format ? "" : (Array.isArray(eintrag.spieler) ? eintrag.spieler.join(", ") : eintrag.spieler);
 
     return `
       <div class="record-card">
