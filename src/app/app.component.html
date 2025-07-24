@@ -1,7 +1,7 @@
 <main class="main">
   <div class="top-banner">Dartfreunde Borchen n.e.V.</div>
   <div class="header-bar">
-    <p-menubar [model]="menubarItems">
+    <p-menubar>
       <ng-template #start>
         <img
           ngSrc="../assets/logo.inline.svg"
@@ -16,8 +16,12 @@
         </a>
       </ng-template>
       <ng-template #end>
-        <p-button icon="pi pi-palette"></p-button>
-        <p-button icon="pi pi-bars"></p-button>
+        <p-menu #menu [model]="menuItems" [popup]="true">
+          <ng-template #submenuheader>
+            <hr />
+          </ng-template>
+        </p-menu>
+        <p-button (click)="menu.toggle($event)" icon="pi pi-bars" />
       </ng-template>
     </p-menubar>
   </div>
