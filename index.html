@@ -1,109 +1,188 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="de">
-<head>
-    <meta charset="UTF-8"/>
-    <meta content="width=device-width, initial-scale=1" name="viewport"/>
-    <link href="css/components.css" rel="stylesheet"/>
-    <link href="css/layout.css" rel="stylesheet"/>
-    <link href="css/variables.css" rel="stylesheet"/>
-    <link href="css/utilities.css" rel="stylesheet"/>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <link href="css/components.css" rel="stylesheet" />
+    <link href="css/layout.css" rel="stylesheet" />
+    <link href="css/variables.css" rel="stylesheet" />
+    <link href="css/utilities.css" rel="stylesheet" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="https://unpkg.com/primeicons/primeicons.css" />
     <title>Dartfreunde Borchen</title>
     <script src="assets/js/common.js"></script>
     <script src="assets/js/default.js"></script>
     <script>
-        document.onreadystatechange = () => loadTemplate('default.html');
+      document.onreadystatechange = () => loadTemplate("default.html");
     </script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-</head>
-<body>
-<div class="top-banner">Dartfreunde Borchen n.e.V.</div>
-<div class="header-bar">
-  <div class="header-left">
-    <div id="logo-container"></div>
-    <div>
-<button class="update-button" title="Datenstand: 18.07.2025">
-  <i class="pi pi-refresh"></i> 18. Juli</button></div>
-  </div>
-  <div class="header-right">
-<div class="color-picker-wrapper">
-  <button id="color-picker-toggle" class="header-btn color-btn" title="Farben">
-    <i class="pi pi-palette"></i>
-  </button>
-<div class="color-picker-menu hidden">
-  <div class="menu-title">Akzentfarbe</div>
-  <div class="color-options">
-    <!-- weitere Farben… -->
-     </div>
-</div>
-</div>
-<button class="header-btn" onclick="toggleMenu()" title="Menu" id="menu-toggle">
-  <i class="pi pi-bars"></i>
-    </button>
-  </div>
-</div>
-<div id="sidebar-menu" class="sidebar-menu">
-  <div class="menu-section">
-    <a class="menu-title" onclick="loadTemplate('default.html')">
-    <i class="pi pi-home"></i>
-    <span>Start</span>
-    </a>
-    <a class="menu-item" onclick="loadAndScroll('default.html', '#naechster-abend')">Termin nächster Abend</a>
-    <a class="menu-item" onclick="loadAndScroll('default.html', '#letzter-spieltag')">Highlights letzter Spieltag</a>
-    <a class="menu-item" onclick="loadAndScroll('default.html', '#oskarabend')">Nächster Oskarabend</a>
+  </head>
+  <body>
+    <div class="top-banner">Dartfreunde Borchen n.e.V.</div>
+    <div class="header-bar">
+      <div class="header-left">
+        <div id="logo-container"></div>
+        <div>
+          <button class="update-button" title="Datenstand: 18.07.2025">
+            <i class="pi pi-refresh"></i> 18. Juli
+          </button>
+        </div>
+      </div>
+      <div class="header-right">
+        <div class="color-picker-wrapper">
+          <button
+            id="color-picker-toggle"
+            class="header-btn color-btn"
+            title="Farben"
+          >
+            <i class="pi pi-palette"></i>
+          </button>
+          <div class="color-picker-menu hidden">
+            <div class="menu-title">Akzentfarbe</div>
+            <div class="color-options">
+              <!-- weitere Farben… -->
+            </div>
+          </div>
+        </div>
+        <button
+          class="header-btn"
+          onclick="toggleMenu()"
+          title="Menu"
+          id="menu-toggle"
+        >
+          <i class="pi pi-bars"></i>
+        </button>
+      </div>
     </div>
-    <div class="menu-section">
-    <a class="menu-title" onclick="loadTemplate('spieltag.html')">
-    <i class="pi pi-calendar"></i>
-    <span>Spieltag</span>
-    </a>
-        <a class="menu-item" onclick="loadAndScroll('spieltag.html', '#jahrestabelle')">Jahrestabelle</a>
-  </div>
-    <div class="menu-section">
-    <a class="menu-title" onclick="loadTemplate('spiele.html')">
-    <i class="pi pi-bullseye"></i>
-    <span>Spiele</span>
-    </a>
-  </div>
-    <div class="menu-section">
-<a class="menu-title" onclick="loadTemplate('spieler.html')">
-  <i class="pi pi-user"></i>
-  <span>Spieler</span>
-</a>
-    <a class="menu-item" onclick="loadAndScroll('spieler.html', '#bestleistungen')">Bestleistungen</a>
-    <a class="menu-item" onclick="loadAndScroll('spieler.html', '#spieler-vs-spieler')">Spieler vs. Spieler</a>
-  </div>
-    <div class="menu-section">
-<a class="menu-title" onclick="loadTemplate('statistiken.html')">
-  <i class="pi pi-chart-bar"></i>
-  <span>Statistiken</span>
-</a>
-    <a class="menu-item" onclick="loadAndScroll('statistiken.html', '#allzeit-rekorde')">Allzeit-Rekorde</a>
-    <a class="menu-item" onclick="loadAndScroll('statistiken.html', '#Jahresvergleich')">Jahresvergleich</a>
-    <a class="menu-item" onclick="loadAndScroll('statistiken.html', '#Trendverlauf')">Trendverlauf</a>
-  </div>
-  <div class="menu-section">
-<a class="menu-title" onclick="loadTemplate('rekorde.html')">
-  <i class="pi pi-trophy"></i>
-  <span>Rekorde</span>
-</a>
-    <a class="menu-item" onclick="loadAndScroll('rekorde.html', '#gesamtwertungen')">Gesamtwertungen</a>
-    <a class="menu-item" onclick="loadAndScroll('rekorde.html', '#jahreswertungen')">Jahreswertungen</a>
-    <a class="menu-item" onclick="loadAndScroll('rekorde.html', '#spieltagswertungen')">Spieltagswertungen</a>
-    <a class="menu-item" onclick="loadAndScroll('rekorde.html', '#matchwertungen')">Matchwertungen</a>
-  </div>
-  <div class="menu-section">
-<a class="menu-title" onclick="loadTemplate('regelwerk.html')">
-  <i class="pi pi-book"></i>
-  <span>Regelwerk</span>
-</a>
-    <a class="menu-item" onclick="loadAndScroll('regelwerk.html', '#spielregeln')">Spielregeln</a>
-    <a class="menu-item" onclick="loadAndScroll('regelwerk.html', '#dartkasse')">Dartkasse</a>
-    <a class="menu-item" onclick="loadAndScroll('regelwerk.html', '#vereinsregeln')">Vereinsregeln</a>
-  </div>
-</div>
-<div class="container">
-<div class="content" id="content"></div>
-</body>
+    <div id="sidebar-menu" class="sidebar-menu">
+      <div class="menu-section">
+        <a class="menu-title" onclick="loadTemplate('default.html')">
+          <i class="pi pi-home"></i>
+          <span>Start</span>
+        </a>
+        <a
+          class="menu-item"
+          onclick="loadAndScroll('default.html', '#naechster-abend')"
+          >Termin nächster Abend</a
+        >
+        <a
+          class="menu-item"
+          onclick="loadAndScroll('default.html', '#letzter-spieltag')"
+          >Highlights letzter Spieltag</a
+        >
+        <a
+          class="menu-item"
+          onclick="loadAndScroll('default.html', '#oskarabend')"
+          >Nächster Oskarabend</a
+        >
+      </div>
+      <div class="menu-section">
+        <a class="menu-title" onclick="loadTemplate('spieltag.html')">
+          <i class="pi pi-calendar"></i>
+          <span>Spieltag</span>
+        </a>
+        <a
+          class="menu-item"
+          onclick="loadAndScroll('spieltag.html', '#jahrestabelle')"
+          >Jahrestabelle</a
+        >
+      </div>
+      <div class="menu-section">
+        <a class="menu-title" onclick="loadTemplate('spiele.html')">
+          <i class="pi pi-bullseye"></i>
+          <span>Spiele</span>
+        </a>
+      </div>
+      <div class="menu-section">
+        <a class="menu-title" onclick="loadTemplate('spieler.html')">
+          <i class="pi pi-user"></i>
+          <span>Spieler</span>
+        </a>
+        <a
+          class="menu-item"
+          onclick="loadAndScroll('spieler.html', '#bestleistungen')"
+          >Bestleistungen</a
+        >
+        <a
+          class="menu-item"
+          onclick="loadAndScroll('spieler.html', '#spieler-vs-spieler')"
+          >Spieler vs. Spieler</a
+        >
+      </div>
+      <div class="menu-section">
+        <a class="menu-title" onclick="loadTemplate('statistiken.html')">
+          <i class="pi pi-chart-bar"></i>
+          <span>Statistiken</span>
+        </a>
+        <a
+          class="menu-item"
+          onclick="loadAndScroll('statistiken.html', '#allzeit-rekorde')"
+          >Allzeit-Rekorde</a
+        >
+        <a
+          class="menu-item"
+          onclick="loadAndScroll('statistiken.html', '#Jahresvergleich')"
+          >Jahresvergleich</a
+        >
+        <a
+          class="menu-item"
+          onclick="loadAndScroll('statistiken.html', '#Trendverlauf')"
+          >Trendverlauf</a
+        >
+      </div>
+      <div class="menu-section">
+        <a class="menu-title" onclick="loadTemplate('rekorde.html')">
+          <i class="pi pi-trophy"></i>
+          <span>Rekorde</span>
+        </a>
+        <a
+          class="menu-item"
+          onclick="loadAndScroll('rekorde.html', '#gesamtwertungen')"
+          >Gesamtwertungen</a
+        >
+        <a
+          class="menu-item"
+          onclick="loadAndScroll('rekorde.html', '#jahreswertungen')"
+          >Jahreswertungen</a
+        >
+        <a
+          class="menu-item"
+          onclick="loadAndScroll('rekorde.html', '#spieltagswertungen')"
+          >Spieltagswertungen</a
+        >
+        <a
+          class="menu-item"
+          onclick="loadAndScroll('rekorde.html', '#matchwertungen')"
+          >Matchwertungen</a
+        >
+      </div>
+      <div class="menu-section">
+        <a class="menu-title" onclick="loadTemplate('regelwerk.html')">
+          <i class="pi pi-book"></i>
+          <span>Regelwerk</span>
+        </a>
+        <a
+          class="menu-item"
+          onclick="loadAndScroll('regelwerk.html', '#spielregeln')"
+          >Spielregeln</a
+        >
+        <a
+          class="menu-item"
+          onclick="loadAndScroll('regelwerk.html', '#dartkasse')"
+          >Dartkasse</a
+        >
+        <a
+          class="menu-item"
+          onclick="loadAndScroll('regelwerk.html', '#vereinsregeln')"
+          >Vereinsregeln</a
+        >
+      </div>
+    </div>
+    <div class="container">
+      <div class="content" id="content"></div>
+    </div>
+  </body>
 </html>

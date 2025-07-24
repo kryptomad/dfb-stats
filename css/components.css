@@ -3,7 +3,9 @@
 .player-card {
   text-align: center;
   width: 150px;
-  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  transition:
+    box-shadow 0.3s ease,
+    transform 0.3s ease;
   border-radius: 12px;
   text-decoration: none;
   color: inherit;
@@ -30,7 +32,9 @@
 
 .player-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 0 3px var(--accent-color), 0 0 12px var(--accent-color);
+  box-shadow:
+    0 0 3px var(--accent-color),
+    0 0 12px var(--accent-color);
 }
 
 /* Spieler Bilder spieler.html und Hover effect */
@@ -43,47 +47,46 @@
   margin-top: 40px;
 }
 
-  .player-header {
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    gap: 1rem;
-    margin: 2rem 0 1.5rem;
-  }
+.player-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 1rem;
+  margin: 2rem 0 1.5rem;
+}
 
-  .player-image-rect {
-    width: 120px;
-    height: 160px;
-    object-fit: cover;
-    border: 2px solid var(--border-color);
-    border-radius: 4px;
-  }
+.player-image-rect {
+  width: 120px;
+  height: 160px;
+  object-fit: cover;
+  border: 2px solid var(--border-color);
+  border-radius: 4px;
+}
 
-  .player-info {
-    flex: 1;
-  }
+.player-info {
+  flex: 1;
+}
 
-  .player-info h1 {
-    margin: 0;
-    font-size: 1.5rem;
-  }
+.player-info h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
 
-  .player-info .subtext {
-    color: var(--color-gray-400);
-    font-size: 0.9rem;
-    margin-top: 0.3rem;
-  }
+.player-info .subtext {
+  color: var(--color-gray-400);
+  font-size: 0.9rem;
+  margin-top: 0.3rem;
+}
 
-  .honor-table td {
-    padding: 0.5rem 1rem;
-    border-bottom: 1px solid var(--color-gray-700);
-    color: var(--text);
-  }
+.honor-table td {
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid var(--color-gray-700);
+  color: var(--text);
+}
 
-  .emoji {
-    font-size: 1.2rem;
-  }
-
+.emoji {
+  font-size: 1.2rem;
+}
 
 /* Oskar oder Gelddarten und Schreiber*/
 
@@ -98,14 +101,13 @@
   color: var(--color-gray-300);
 }
 
-
 /* Block von einem Spiel aus dem Spieltag */
 .spiel-block {
   background: var(--color-gray-600);
   border-radius: 6px;
   padding: 0.6rem 1rem; /*beeinflusst wie schmal das Feld ist */
   margin-bottom: 0.3rem;
-  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -137,13 +139,13 @@
 /* Linker-Spieler in der Spieltagsanzeige; Position */
 .spieler-spieltag.links {
   justify-content: flex-end;
-  padding-right: 0.1em;  /* Name näher an Score */
+  padding-right: 0.1em; /* Name näher an Score */
 }
 
 /* Rechter-Spieler in der Spieltagsanzeige; Position */
 .spieler-spieltag.rechts {
   justify-content: flex-start;
-  padding-left: 0.1em;  /* Name näher an Score */
+  padding-left: 0.1em; /* Name näher an Score */
 }
 
 /* Average in Spiel-block */
@@ -174,8 +176,8 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  margin: 0 0.1em;  /* Horizontaler Abstand */
-  min-width: 16px;  /* Mindestbreite, damit die Zahlen nicht zu schmal wirken */
+  margin: 0 0.1em; /* Horizontaler Abstand */
+  min-width: 16px; /* Mindestbreite, damit die Zahlen nicht zu schmal wirken */
   min-height: 20px; /* Mindesthöhe */
   font-size: 1em;
   line-height: 1;
@@ -256,7 +258,7 @@
 }
 
 .leg-table td:nth-child(1),
-.leg-table td:nth-child(3)   {
+.leg-table td:nth-child(3) {
   text-align: center;
 }
 
@@ -429,14 +431,13 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center; /* <– verhindert Höhen-Stretch */
-  gap: 0.5rem;          /* <– saubere horizontale + vertikale Abstände */
+  gap: 0.5rem; /* <– saubere horizontale + vertikale Abstände */
   margin-top: 12px;
   margin-bottom: 16px;
 }
 
 .filter-dropdown,
-.filter-tag 
-.reset-btn {
+.filter-tag .reset-btn {
   height: 37px;
   line-height: 37px;
 }
@@ -449,7 +450,7 @@
   background-color: var(--accent-color);
   color: var(--text);
   font-size: 12px;
-  font-family: 'JetBrains Mono', monospace;
+  font-family: "JetBrains Mono", monospace;
   letter-spacing: 0.5px;
   font-weight: 500;
   display: flex;
@@ -469,8 +470,8 @@
   align-items: center;
   padding: 6px 0px;
   background-color: rgba(0, 0, 0, 0.5); /* halbtransparentes Schwarz */
-  backdrop-filter: blur(6px);           /* optional: weicher Glas-Effekt */
-  -webkit-backdrop-filter: blur(6px);   /* Safari support */
+  backdrop-filter: blur(6px); /* optional: weicher Glas-Effekt */
+  -webkit-backdrop-filter: blur(6px); /* Safari support */
   color: var(--text);
   position: sticky;
   top: 20px; /* falls .top-banner existiert */
@@ -569,8 +570,12 @@
 }
 
 @keyframes spin-refresh {
-  from { transform: rotate(0deg); }
-  to   { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 /* Menü rechts */
@@ -615,7 +620,7 @@
 }
 
 .menu-item {
-  display: block;  /* <- wichtig für Abstand + Hover-Fläche */
+  display: block; /* <- wichtig für Abstand + Hover-Fläche */
   text-decoration: none;
   margin-left: 24px;
   padding: 4px 0;
@@ -672,7 +677,7 @@
 }
 
 .color-options {
-  flex-wrap: wrap; 
+  flex-wrap: wrap;
   gap: 8px;
   justify-content: flex-start;
 }
@@ -712,12 +717,15 @@
 .logo-spin {
   animation: spin-logo 0.5s ease;
   transform-style: preserve-3d;
-
 }
 
 @keyframes spin-logo {
-  from { transform: rotateY(0deg); }
-  to   { transform: rotateY(360deg); }
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
 }
 
 /* neue statistik seite */
@@ -768,7 +776,6 @@
   text-align: center;
   font-weight: bold;
 }
-
 
 /* Accordion Wrapper */
 .accordion {
@@ -881,7 +888,7 @@ details[open] > .accordion-header::after {
   border-radius: 6px;
   padding: 1rem;
   text-align: center;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .record-title {
@@ -942,7 +949,9 @@ details[open] > .accordion-header::after {
 .fade-in {
   opacity: 0;
   transform: translateY(12px); /* etwas größerer Effekt */
-  transition: opacity 0.5s ease, transform 0.5s ease;
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s ease;
 }
 
 .fade-in.visible {
@@ -997,7 +1006,7 @@ details[open] > .accordion-header::after {
 .value-right {
   font-weight: 600;
   font-size: 1rem;
-    font-size: 0.9rem;
+  font-size: 0.9rem;
   width: 3rem;
 }
 
@@ -1046,7 +1055,6 @@ details[open] > .accordion-header::after {
 .comparison-btn:hover {
   border-color: var(--accent-color);
 }
-
 
 /* Spieler Leistungsübersicht */
 
