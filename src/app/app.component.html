@@ -16,11 +16,7 @@
         </a>
       </ng-template>
       <ng-template #end>
-        <p-menu #menu [model]="menuItems" [popup]="true">
-          <ng-template #submenuheader>
-            <hr />
-          </ng-template>
-        </p-menu>
+        <p-menu #menu [model]="menuItems" [popup]="true"> </p-menu>
         <p-button (click)="menu.toggle($event)" icon="pi pi-bars" />
       </ng-template>
     </p-menubar>

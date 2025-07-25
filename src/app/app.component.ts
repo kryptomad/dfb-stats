@@ -7,31 +7,38 @@ import { NgOptimizedImage } from '@angular/common';
 import { Button, ButtonModule } from 'primeng/button';
 import { AppModule } from './app.module';
 import { Menu } from 'primeng/menu';
+import { StartseiteComponent } from './content/startseite/startseite.component';
 
 @Component({
   selector: 'app-root',
-  standalone: true,
-  imports: [RouterOutlet, Menubar, NgOptimizedImage, AppModule, Menu, Button],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
+  standalone: false,
 })
 export class AppComponent {
   title = 'dfb-stats';
   menuItems: MenuItem[] = [
     {
       label: 'Start',
+      route: '',
       items: [
         {
           label: 'Termin nächster Abend',
           icon: 'pi pi-refresh',
+          routerLink: 'startseite',
+          fragment: 'naechster-spieltag',
         },
         {
           label: 'Highlights letzter Spieltag',
           icon: 'pi pi-upload',
+          routerLink: 'startseite',
+          fragment: 'highlights-letzter-spieltag',
         },
         {
           label: 'Nächster Oskarabend',
           icon: 'pi pi-upload',
+          routerLink: 'startseite',
+          fragment: 'naechster-oskarabend',
         },
       ],
     },
@@ -40,6 +47,7 @@ export class AppComponent {
       items: [
         {
           label: 'Jahrestabelle',
+          routerLink: 'spieltag/jahrestabelle',
         },
       ],
     },
