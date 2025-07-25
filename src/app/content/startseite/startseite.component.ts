@@ -1,5 +1,5 @@
-import { AfterViewInit, Component, OnInit } from '@angular/core';
-import { ActivatedRoute, ActivatedRouteSnapshot } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { NextMatchDayService } from '../../services/nextMatchDay.service';
 
 @Component({
   selector: 'app-startseite',
@@ -7,14 +7,6 @@ import { ActivatedRoute, ActivatedRouteSnapshot } from '@angular/router';
   styleUrl: './startseite.component.scss',
   standalone: false,
 })
-export class StartseiteComponent implements OnInit {
-  data?: string = '';
-
-  constructor(private route: ActivatedRoute) {}
-
-  ngOnInit(): void {
-    this.route.data.subscribe((v) => console.log(v));
-  }
-
-  ngAfterViewInit(): void {}
+export class StartseiteComponent {
+  constructor(public nextMatchdayService: NextMatchDayService) {}
 }

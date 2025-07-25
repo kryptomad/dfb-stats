@@ -1,1 +1,19 @@
-<p>startseite works! {{ data }}</p>
+<div id="naechster-abend">
+  <h2>Nächster Abend</h2>
+  <div *ngIf="nextMatchdayService.loadNextMatchDay() as nextMatchday">
+    <div>
+      <div>
+        Gastgeber: {{nextMatchday().gastgeber}}
+      </div>
+      <div>
+        Wann: {{nextMatchday().datum}} um {{nextMatchday().zeit}}
+      </div>
+      <div>
+        Gelddarten: {{nextMatchday().gelddarten}}
+      </div>
+      <div>
+        Oskardarten: {{nextMatchday().oskardarten}}
+      </div>
+    </div>
+  </div>
+</div>

@@ -7,14 +7,4 @@ import { ActivatedRoute, ActivatedRouteSnapshot } from '@angular/router';
   styleUrl: './spieltag.component.scss',
   standalone: false,
 })
-export class SpieltagComponent implements OnInit {
-  data?: string = '';
-
-  constructor(private route: ActivatedRoute) {}
-
-  ngOnInit(): void {
-    this.route.data.subscribe((v) => console.log(v));
-  }
-
-  ngAfterViewInit(): void {}
-}
+export class SpieltagComponent {}
