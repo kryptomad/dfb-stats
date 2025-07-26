@@ -1,19 +1,18 @@
-<div id="naechster-abend">
-  <h2>Nächster Abend</h2>
-  <div *ngIf="nextMatchdayService.loadNextMatchDay() as nextMatchday">
-    <div>
-      <div>
-        Gastgeber: {{nextMatchday().gastgeber}}
-      </div>
-      <div>
-        Wann: {{nextMatchday().datum}} um {{nextMatchday().zeit}}
-      </div>
-      <div>
-        Gelddarten: {{nextMatchday().gelddarten}}
-      </div>
-      <div>
-        Oskardarten: {{nextMatchday().oskardarten}}
-      </div>
+<h2 id="naechster-abend">Nächster Abend</h2>
+<div *ngIf="nextMatchdayService.loadNextMatchDay() as signal">
+  <div *ngIf="signal() as nextMatchday">
+    <div>Gastgeber: {{ nextMatchday.gastgeber }}</div>
+    <div>Wann: {{ nextMatchday.datum }} um {{ nextMatchday.zeit }}</div>
+    <div>Gelddarten: {{ nextMatchday.gelddarten }}</div>
+    <div>Oskardarten: {{ nextMatchday.oskardarten }}</div>
+  </div>
+</div>
+
+<h2 id="highlights-letzter-spieltag">Highlights letzter Spieltag</h2>
+<div *ngIf="lastStatsService.loadLastStats() as signal">
+  <div *ngIf="signal() as lastStats">
+    <div *ngFor="let lastStat of lastStats">
+      {{ lastStat.kategorie }}: {{ lastStat.spieler }} {{ lastStat.wert }}
     </div>
   </div>
 </div>
