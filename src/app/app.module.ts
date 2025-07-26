@@ -11,6 +11,9 @@ import { ButtonModule } from 'primeng/button';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { providePrimeNG } from 'primeng/config';
 import { NgOptimizedImage } from '@angular/common';
+import {NextMatchDayService} from "./services/nextMatchDay.service";
+import {LastStatsService} from "./services/lastStats.service";
+import {NextMatchDaysService} from "./services/nextMatchDays.service";
 
 @NgModule({
   declarations: [AppComponent],
@@ -29,6 +32,8 @@ import { NgOptimizedImage } from '@angular/common';
     provideRouter(routes),
     provideAnimationsAsync(),
     providePrimeNG({}),
+    NextMatchDayService, LastStatsService,
+    NextMatchDaysService
   ],
 })
 export class AppModule {}
