@@ -23,7 +23,9 @@ export class NextMatchDaysService {
   public loadNextMatchDay(matchday: number): Signal<NextMatchDay | undefined> {
     const dataObject = Object.create(data);
 
-    const nextMatchDay: NextMatchDay | undefined = dataObject.default.filter((value: any  ) => value.matchday === matchday)?.at(0);
+    const nextMatchDay: NextMatchDay | undefined = dataObject.default
+      .filter((value: any) => value.matchday === matchday)
+      ?.at(0);
 
     return signal<NextMatchDay | undefined>(nextMatchDay);
   }

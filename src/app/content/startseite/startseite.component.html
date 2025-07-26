@@ -21,20 +21,14 @@
 <div *ngIf="nextMatchdaysService.loadNextMatchDay(nextMatchday) as signal">
   <div *ngIf="signal() as nextMatchDay">
     <div>
-      Saison: {{nextMatchDay.season}} Spieltag {{nextMatchDay.matchday}}
+      Saison: {{ nextMatchDay.season }} Spieltag {{ nextMatchDay.matchday }}
     </div>
     <div>
       Spiele:
       <div *ngFor="let game of nextMatchDay.games">
-        <div>
-          Schreiber: {{game.writer}}
-        </div>
-        <div>
-          Spieler 1: {{game.player1}}
-        </div>
-        <div>
-          Spieler 2: {{game.player2}}
-        </div>
+        <div>Schreiber: {{ game.writer }}</div>
+        <div>Spieler 1: {{ game.player1 }}</div>
+        <div>Spieler 2: {{ game.player2 }}</div>
       </div>
     </div>
   </div>
