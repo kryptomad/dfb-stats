@@ -13,13 +13,16 @@ import { NgOptimizedImage } from '@angular/common';
 import { NextMatchDayService } from './services/nextMatchDay.service';
 import { LastStatsService } from './services/lastStats.service';
 import { NextMatchDaysService } from './services/nextMatchDays.service';
-import {MatchDaysService} from "./services/matchDay.service";
+import { MatchDaysService } from './services/matchDay.service';
+import Aura from '@primeng/themes/aura';
+import {LibsModule} from "./libs/libs.module";
 
 @NgModule({
   declarations: [AppComponent],
   imports: [
     BrowserModule,
     ContentModule,
+    LibsModule,
     RouterModule.forRoot(routes),
     ButtonModule,
     MenubarModule,
@@ -31,11 +34,18 @@ import {MatchDaysService} from "./services/matchDay.service";
   providers: [
     provideRouter(routes),
     provideAnimationsAsync(),
-    providePrimeNG({}),
+    providePrimeNG({
+      theme: {
+        preset: Aura,
+        options: {
+          darkModeSelector: '.p-dark'
+        },
+      },
+    }),
     NextMatchDayService,
     LastStatsService,
     NextMatchDaysService,
-    MatchDaysService
+    MatchDaysService,
   ],
 })
 export class AppModule {}

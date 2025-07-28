@@ -4,10 +4,11 @@ import { SpieltagComponent } from './spieltag/spieltag.component';
 import { CommonModule } from '@angular/common';
 import { DataViewModule } from 'primeng/dataview';
 import { ButtonModule } from 'primeng/button';
+import { Card } from 'primeng/card';
 
 @NgModule({
   declarations: [StartseiteComponent, SpieltagComponent],
-  imports: [CommonModule, DataViewModule, ButtonModule],
+  imports: [CommonModule, DataViewModule, ButtonModule, Card],
   exports: [StartseiteComponent, SpieltagComponent],
 })
 export class ContentModule {}

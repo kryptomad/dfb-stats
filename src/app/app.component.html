@@ -16,6 +16,7 @@
         </a>
       </ng-template>
       <ng-template #end>
+        <theme-switcher />
         <p-menu #menu [model]="menuItems" [popup]="true"> </p-menu>
         <p-button (click)="menu.toggle($event)" icon="pi pi-bars" />
       </ng-template>

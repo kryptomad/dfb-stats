@@ -33,22 +33,11 @@ export class MatchDaysService implements OnInit {
     this.data = dataObject.default;
   }
 
-  public loadMatchdays(): ModelSignal<Matchday[]> {
+  public loadMatchdays(): Signal<Matchday[]> {
     const result: Matchday[] = this.data.sort(
       (a, b) => a.matchday - b.matchday,
     );
 
-    return model<Matchday[]>(result);
-  }
-
-  public loadMatchday(
-    season: string,
-    matchday: number,
-  ): ModelSignal<Matchday | undefined> {
-    const result: Matchday | undefined = this.data
-      .filter((value) => value.season === season && value.matchday === matchday)
-      ?.at(0);
-
-    return model<Matchday | undefined>(result);
+    return signal<Matchday[]>(result);
   }
 }
