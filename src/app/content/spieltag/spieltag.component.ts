@@ -1,5 +1,5 @@
-import {Component, OnInit} from '@angular/core';
-import {MatchDaysService} from '../../services/matchDay.service';
+import { Component, OnInit } from '@angular/core';
+import { MatchDaysService } from '../../services/matchDay.service';
 
 @Component({
   selector: 'app-spieltag',
@@ -10,9 +10,7 @@ import {MatchDaysService} from '../../services/matchDay.service';
 export class SpieltagComponent implements OnInit {
   matchdays: { season: string; matchday: number }[] = [];
 
-  constructor(public matchdayService: MatchDaysService) {
-  }
+  constructor(public matchdayService: MatchDaysService) {}
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 }

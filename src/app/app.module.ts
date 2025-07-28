@@ -15,7 +15,7 @@ import { LastStatsService } from './services/lastStats.service';
 import { NextMatchDaysService } from './services/nextMatchDays.service';
 import { MatchDaysService } from './services/matchDay.service';
 import Aura from '@primeng/themes/aura';
-import {LibsModule} from "./libs/libs.module";
+import { LibsModule } from './libs/libs.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -38,7 +38,7 @@ import {LibsModule} from "./libs/libs.module";
       theme: {
         preset: Aura,
         options: {
-          darkModeSelector: '.p-dark'
+          darkModeSelector: '.p-dark',
         },
       },
     }),

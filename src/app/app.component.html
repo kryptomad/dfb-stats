@@ -16,15 +16,7 @@
         </a>
       </ng-template>
       <ng-template #end>
-        <div class="flex justify-end p-2 mb-4">
-          <ul class="flex list-none m-0 p-0 gap-4 items-center">
-            <theme-switcher/>
-            <li>
-              <p-menu #menu [model]="menuItems" [popup]="true"></p-menu>
-              <p-button (click)="menu.toggle($event)" icon="pi pi-bars"/>
-            </li>
-          </ul>
-        </div>
+        <theme-switcher [menuItems]="menuItems" />
       </ng-template>
     </p-menubar>
   </div>
@@ -32,4 +24,4 @@
   <div class="content"></div>
 </main>
 
-<router-outlet/>
+<router-outlet />

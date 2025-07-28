@@ -5,7 +5,7 @@ import { CommonModule } from '@angular/common';
 import { DataViewModule } from 'primeng/dataview';
 import { ButtonModule } from 'primeng/button';
 import { Card } from 'primeng/card';
-import {TableModule} from "primeng/table";
+import { TableModule } from 'primeng/table';
 
 @NgModule({
   declarations: [StartseiteComponent, SpieltagComponent],

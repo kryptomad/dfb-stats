@@ -1,6 +1,9 @@
 <h2 id="naechster-abend">Nächster Abend</h2>
 <div *ngIf="nextMatchdayService.loadNextMatchDay() as signal">
-  <div *ngIf="signal() as nextMatchday" class="flex flex-col sm:flex-row sm:items-center p-6 gap-4">
+  <div
+    *ngIf="signal() as nextMatchday"
+    class="flex flex-col sm:flex-row sm:items-center p-6 gap-4"
+  >
     <p-card header="Gastgeber">
       <span>{{ nextMatchday.gastgeber }}</span>
     </p-card>
@@ -8,17 +11,26 @@
       <span>{{ nextMatchday.datum }} um {{ nextMatchday.zeit }}</span>
     </p-card>
     <p-card header="Gelddarten">
-      <i class="pi pi-trophy" [ngClass]="{'inactive': nextMatchday.gelddarten}"></i>
+      <i
+        class="pi pi-trophy"
+        [ngClass]="{ inactive: nextMatchday.gelddarten }"
+      ></i>
     </p-card>
     <p-card header="Oskardarten">
-      <i class="pi pi-euro" [ngClass]="{'inactive': nextMatchday.oskardarten}"></i>
+      <i
+        class="pi pi-euro"
+        [ngClass]="{ inactive: nextMatchday.oskardarten }"
+      ></i>
     </p-card>
   </div>
 </div>
 
 <h2 id="highlights-letzter-spieltag">Highlights letzter Spieltag</h2>
 <div *ngIf="lastStatsService.loadLastStats() as signal">
-  <div *ngIf="signal() as lastStats" class="flex flex-col sm:flex-row sm:items-center p-6 gap-4">
+  <div
+    *ngIf="signal() as lastStats"
+    class="flex flex-col sm:flex-row sm:items-center p-6 gap-4"
+  >
     <div *ngFor="let lastStat of lastStats">
       <p-card
         [header]="lastStat.kategorie"

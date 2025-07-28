@@ -1,18 +1,27 @@
-import {Component, computed, effect, inject, PLATFORM_ID, signal} from '@angular/core';
+import {
+  Component,
+  computed,
+  effect,
+  inject,
+  Input,
+  PLATFORM_ID,
+  signal,
+} from '@angular/core';
 import Aura from '@primeng/themes/aura';
 import Lara from '@primeng/themes/lara';
 import Material from '@primeng/themes/material';
 import Nora from '@primeng/themes/nora';
-import {DOCUMENT, isPlatformBrowser} from "@angular/common";
-import {PrimeNG} from "primeng/config";
-import {updatePreset} from "@primeng/themes";
-import {$t, updateSurfacePalette} from "@primeuix/themes";
+import { DOCUMENT, isPlatformBrowser } from '@angular/common';
+import { PrimeNG } from 'primeng/config';
+import { updatePreset } from '@primeng/themes';
+import { $t, updateSurfacePalette } from '@primeuix/themes';
+import { MenuItem } from 'primeng/api';
 
 const presets = {
   Aura,
   Material,
   Lara,
-  Nora
+  Nora,
 };
 
 export interface ThemeState {
@@ -26,127 +35,138 @@ export interface ThemeState {
   selector: 'theme-switcher',
   standalone: false,
   template: `
-            <li>
-                <button type="button" class="inline-flex w-8 h-8 p-0 items-center justify-center surface-0 dark:surface-800 border border-surface-200 dark:border-surface-600 rounded" (click)="onThemeToggler()">
-                    <i [ngClass]="'pi ' + iconClass()" class="dark:text-white"></i>
-                </button>
-            </li>
-            <li class="relative">
-                <button
-                    pStyleClass="@next"
-                    enterFromClass="hidden"
-                    enterActiveClass="animate-scalein"
-                    leaveToClass="hidden"
-                    leaveActiveClass="animate-fadeout"
-                    [hideOnOutsideClick]="true"
+    <div class="flex justify-end p-2 mb-4">
+      <ul class="flex list-none m-0 p-0 gap-4 items-center">
+        <li>
+          <button
+            type="button"
+            class="inline-flex w-8 h-8 p-0 items-center justify-center surface-0 dark:surface-800 border border-surface-200 dark:border-surface-600 rounded"
+            (click)="onThemeToggler()"
+          >
+            <i [ngClass]="'pi ' + iconClass()" class="dark:text-white"></i>
+          </button>
+        </li>
+        <li class="relative">
+          <button
+            pStyleClass="@next"
+            enterFromClass="hidden"
+            enterActiveClass="animate-scalein"
+            leaveToClass="hidden"
+            leaveActiveClass="animate-fadeout"
+            [hideOnOutsideClick]="true"
+            type="button"
+            class="inline-flex w-8 h-8 p-0 items-center justify-center surface-0 dark:surface-800 border border-surface-200 dark:border-surface-600 rounded"
+          >
+            <i class="pi pi-palette dark:text-white"></i>
+          </button>
+          <div
+            class="absolute top-[2.5rem] right-0 hidden w-[18rem] p-3 bg-white dark:bg-surface-800 rounded-md shadow border border-surface-200 dark:border-surface-700 flex-col justify-start items-start gap-3.5 inline-flex origin-top z-10"
+          >
+            <div
+              class="flex-col justify-start items-start gap-2 inline-flex pr-4"
+            >
+              <span class="text-sm font-medium">Primary Colors</span>
+              <div
+                class="self-stretch justify-start items-start gap-2 inline-flex flex-wrap"
+              >
+                @for (
+                  primaryColor of primaryColors();
+                  track primaryColor.name
+                ) {
+                  <button
                     type="button"
-                    class="inline-flex w-8 h-8 p-0 items-center justify-center surface-0 dark:surface-800 border border-surface-200 dark:border-surface-600 rounded"
-                >
-                    <i class="pi pi-palette dark:text-white"></i>
-                </button>
-                <div class="absolute top-[2.5rem] right-0 hidden w-[18rem] p-3 bg-white dark:bg-surface-800 rounded-md shadow border border-surface-200 dark:border-surface-700 flex-col justify-start items-start gap-3.5 inline-flex origin-top z-10">
-                    <div class="flex-col justify-start items-start gap-2 inline-flex pr-4">
-                        <span class="text-sm font-medium">Primary Colors</span>
-                        <div class="self-stretch justify-start items-start gap-2 inline-flex flex-wrap">
-                            @for (primaryColor of primaryColors(); track primaryColor.name) {
-                                <button
-                                    type="button"
-                                    [title]="primaryColor.name"
-                                    (click)="updateColors($event, 'primary', primaryColor)"
-                                    class="outline outline-2 outline-offset-1 outline-transparent cursor-pointer p-0 rounded-[50%] w-5 h-5"
-                                    [ngStyle]="{
-                                        'background-color': primaryColor.name === 'noir' ? 'var(--text-color)' : paletteColor(primaryColor, '500'),
-                                        'outline-color': selectedPrimaryColor() === primaryColor.name ? 'var(--p-primary-color)' : ''
-                                    }"
-                                ></button>
-                            }
-                        </div>
-                    </div>
-                    <div class="flex-col justify-start items-start gap-2 inline-flex pr-2">
-                        <span class="text-sm font-medium">Surface Colors</span>
-                        <div class="self-stretch justify-start items-start gap-2 inline-flex">
-                            @for (surface of surfaces; track surface.name) {
-                                <button
-                                    type="button"
-                                    [title]="surface.name"
-                                    (click)="updateColors($event, 'surface', surface)"
-                                    class="outline outline-2 outline-offset-1 outline-transparent cursor-pointer p-0 rounded-[50%] w-5 h-5"
-                                    [ngStyle]="{
-                                        'background-color': surface.palette['500'],
-                                        'outline-color': selectedSurfaceColor() === surface.name ? 'var(--p-primary-color)' : ''
-                                    }"
-                                ></button>
-                            }
-                        </div>
-                    </div>
-                    <div class="flex-col justify-start items-start gap-2 inline-flex w-full">
-                        <span class="text-sm font-medium">Preset</span>
-                        <div class="inline-flex p-[0.28rem] items-start gap-[0.28rem] rounded-[0.71rem] border border-[#00000003] w-full">
-                          <p-selectbutton [options]="presets" [ngModel]="selectedPreset()" (ngModelChange)="onPresetChange($event)" [unselectable]="false" size="small"></p-selectbutton>
-                        </div>
-                    </div>
-                    <div class="inline-flex flex-col justify-start items-start gap-2 w-full pt-4 pb-2">
-                        <span class="text-sm font-medium m-0">Ripple Effect</span>
-                        <p-toggleswitch [(ngModel)]="ripple" />
-                    </div>
-                </div>
-            </li>
-            `
+                    [title]="primaryColor.name"
+                    (click)="updateColors($event, 'primary', primaryColor)"
+                    class="outline outline-2 outline-offset-1 outline-transparent cursor-pointer p-0 rounded-[50%] w-5 h-5"
+                    [ngStyle]="{
+                      'background-color':
+                        primaryColor.name === 'noir'
+                          ? 'var(--text-color)'
+                          : paletteColor(primaryColor, '500'),
+                      'outline-color':
+                        selectedPrimaryColor() === primaryColor.name
+                          ? 'var(--p-primary-color)'
+                          : '',
+                    }"
+                  ></button>
+                }
+              </div>
+            </div>
+            <div
+              class="flex-col justify-start items-start gap-2 inline-flex pr-2"
+            >
+              <span class="text-sm font-medium">Surface Colors</span>
+              <div
+                class="self-stretch justify-start items-start gap-2 inline-flex"
+              >
+                @for (surface of surfaces; track surface.name) {
+                  <button
+                    type="button"
+                    [title]="surface.name"
+                    (click)="updateColors($event, 'surface', surface)"
+                    class="outline outline-2 outline-offset-1 outline-transparent cursor-pointer p-0 rounded-[50%] w-5 h-5"
+                    [ngStyle]="{
+                      'background-color': surface.palette['500'],
+                      'outline-color':
+                        selectedSurfaceColor() === surface.name
+                          ? 'var(--p-primary-color)'
+                          : '',
+                    }"
+                  ></button>
+                }
+              </div>
+            </div>
+            <div
+              class="flex-col justify-start items-start gap-2 inline-flex w-full"
+            >
+              <span class="text-sm font-medium">Preset</span>
+              <div
+                class="inline-flex p-[0.28rem] items-start gap-[0.28rem] rounded-[0.71rem] border border-[#00000003] w-full"
+              >
+                <p-selectbutton
+                  [options]="presets"
+                  [ngModel]="selectedPreset()"
+                  (ngModelChange)="onPresetChange($event)"
+                  [unselectable]="false"
+                  size="small"
+                ></p-selectbutton>
+              </div>
+            </div>
+            <div
+              class="inline-flex flex-col justify-start items-start gap-2 w-full pt-4 pb-2"
+            >
+              <span class="text-sm font-medium m-0">Ripple Effect</span>
+              <p-toggleswitch [(ngModel)]="ripple" />
+            </div>
+          </div>
+        </li>
+        <li>
+          <p-menu #menu [model]="menuItems" [popup]="true"></p-menu>
+          <p-button (click)="menu.toggle($event)" icon="pi pi-bars" />
+        </li>
+      </ul>
+    </div>
+  `,
 })
 export class ThemeSwitcherComponent {
-  private readonly STORAGE_KEY = 'themeSwitcherState';
+  @Input()
+  menuItems: MenuItem[] = [];
 
   document = inject(DOCUMENT);
-
-  iconClass = computed(() =>
-    this.themeState()?.darkTheme ? 'pi-sun' : 'pi-moon'
-  );
-
   presets = Object.keys(presets);
-
   platformId = inject(PLATFORM_ID);
-
   config: PrimeNG = inject(PrimeNG);
-
   themeState = signal<ThemeState | undefined>(undefined);
-
+  iconClass = computed(() =>
+    this.themeState()?.darkTheme ? 'pi-sun' : 'pi-moon',
+  );
   theme = computed(() => (this.themeState()?.darkTheme ? 'dark' : 'light'));
-
   selectedPreset = computed(() => this.themeState()?.preset);
-
   selectedSurfaceColor = computed(() => this.themeState()?.surface);
-
   selectedPrimaryColor = computed(() => {
     return this.themeState()?.primary;
   });
-
-  constructor() {
-    this.themeState.set({ ...this.loadthemeState() });
-
-    effect(() => {
-      const state = this.themeState();
-
-      this.savethemeState(state);
-      this.handleDarkModeTransition(state);
-    });
-  }
-
-  ngOnInit() {
-    if (isPlatformBrowser(this.platformId)) {
-      this.onPresetChange(this.themeState()?.preset);
-    }
-  }
-
-  get ripple() {
-    return this.config.ripple();
-  }
-
-  set ripple(value: boolean) {
-    this.config.ripple.set(value);
-  }
-
   transitionComplete = signal<boolean>(false);
-
   primaryColors = computed(() => {
     // @ts-ignore
     const presetPalette = presets[this.themeState().preset].primitive;
@@ -179,7 +199,6 @@ export class ThemeSwitcherComponent {
 
     return palettes;
   });
-
   surfaces = [
     {
       name: 'slate',
@@ -318,6 +337,32 @@ export class ThemeSwitcherComponent {
       },
     },
   ];
+  private readonly STORAGE_KEY = 'themeSwitcherState';
+
+  constructor() {
+    this.themeState.set({ ...this.loadthemeState() });
+
+    effect(() => {
+      const state = this.themeState();
+
+      this.savethemeState(state);
+      this.handleDarkModeTransition(state);
+    });
+  }
+
+  get ripple() {
+    return this.config.ripple();
+  }
+
+  set ripple(value: boolean) {
+    this.config.ripple.set(value);
+  }
+
+  ngOnInit() {
+    if (isPlatformBrowser(this.platformId)) {
+      this.onPresetChange(this.themeState()?.preset);
+    }
+  }
 
   onThemeToggler() {
     this.themeState.update((state) => ({
@@ -328,7 +373,7 @@ export class ThemeSwitcherComponent {
 
   getPresetExt() {
     const color = this.primaryColors().find(
-      (c) => c.name === this.selectedPrimaryColor()
+      (c) => c.name === this.selectedPrimaryColor(),
     );
 
     if (color?.name === 'noir') {
@@ -556,7 +601,7 @@ export class ThemeSwitcherComponent {
     // @ts-ignore
     const preset = presets[event];
     const surfacePalette = this.surfaces.find(
-      (s) => s.name === this.selectedSurfaceColor()
+      (s) => s.name === this.selectedSurfaceColor(),
     )?.palette;
     if (this.themeState()?.preset === 'Material') {
       document.body.classList.add('material');
@@ -593,7 +638,10 @@ export class ThemeSwitcherComponent {
     }
   }
 
-  paletteColor(primaryColor: { name: string; palette: {} }, code: string): string {
+  paletteColor(
+    primaryColor: { name: string; palette: {} },
+    code: string,
+  ): string {
     // @ts-ignore
     return primaryColor.palette[code];
   }
