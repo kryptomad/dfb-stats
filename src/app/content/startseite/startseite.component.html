@@ -2,7 +2,7 @@
 <div *ngIf="nextMatchdayService.loadNextMatchDay() as signal">
   <div *ngIf="signal() as nextMatchday" class="flex flex-col sm:flex-row sm:items-center p-6 gap-4">
     <p-card header="Gastgeber">
-      <span>{{nextMatchday.gastgeber}}</span>
+      <span>{{ nextMatchday.gastgeber }}</span>
     </p-card>
     <p-card header="Wann">
       <span>{{ nextMatchday.datum }} um {{ nextMatchday.zeit }}</span>
@@ -36,13 +36,21 @@
     <div>
       Saison: {{ nextMatchDay.season }} Spieltag {{ nextMatchDay.matchday }}
     </div>
-    <div>
-      Spiele:
-      <div *ngFor="let game of nextMatchDay.games">
-        <div>Schreiber: {{ game.writer }}</div>
-        <div>Spieler 1: {{ game.player1 }}</div>
-        <div>Spieler 2: {{ game.player2 }}</div>
-      </div>
-    </div>
+    <p-table [value]="nextMatchDay.games">
+      <ng-template #header>
+        <tr>
+          <th>Schreiber</th>
+          <th>Spieler 1</th>
+          <th>Spieler 2</th>
+        </tr>
+      </ng-template>
+      <ng-template #body let-game>
+        <tr>
+          <td>{{ game.writer }}</td>
+          <td>{{ game.player1 }}</td>
+          <td>{{ game.player2 }}</td>
+        </tr>
+      </ng-template>
+    </p-table>
   </div>
 </div>
