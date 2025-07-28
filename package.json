@@ -22,6 +22,7 @@
     "@fortawesome/angular-fontawesome": "^1.0.0",
     "@fortawesome/fontawesome-free": "6.7.2",
     "@primeuix/themes": "^1.2.1",
+    "@primeng/themes": "v19-stable",
     "primeng": "v19-stable",
     "primeicons": "^7.0.0",
     "rxjs": "~7.8.0",
