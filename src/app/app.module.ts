@@ -3,7 +3,6 @@ import { AppComponent } from './app.component';
 import { provideRouter, RouterModule } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
 import { ContentModule } from './content/content.module';
-
 import { routes } from './app.routes';
 import { MenubarModule } from 'primeng/menubar';
 import { MenuModule } from 'primeng/menu';
@@ -14,6 +13,7 @@ import { NgOptimizedImage } from '@angular/common';
 import { NextMatchDayService } from './services/nextMatchDay.service';
 import { LastStatsService } from './services/lastStats.service';
 import { NextMatchDaysService } from './services/nextMatchDays.service';
+import {MatchDaysService} from "./services/matchDay.service";
 
 @NgModule({
   declarations: [AppComponent],
@@ -35,6 +35,7 @@ import { NextMatchDaysService } from './services/nextMatchDays.service';
     NextMatchDayService,
     LastStatsService,
     NextMatchDaysService,
+    MatchDaysService
   ],
 })
 export class AppModule {}

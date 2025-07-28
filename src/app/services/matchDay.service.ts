@@ -1,4 +1,11 @@
-import { Injectable, OnInit, signal, Signal } from '@angular/core';
+import {
+  Injectable,
+  model,
+  ModelSignal,
+  OnInit,
+  signal,
+  Signal,
+} from '@angular/core';
 import * as data from '../../assets/spieltage.json';
 
 export interface Matchday {
@@ -14,7 +21,9 @@ export interface Matchday {
   p2_avg_3dart_match: number;
 }
 
-@Injectable()
+@Injectable({
+  providedIn: 'root',
+})
 export class MatchDaysService implements OnInit {
   private data: Matchday[] = [];
 
@@ -24,14 +33,22 @@ export class MatchDaysService implements OnInit {
     this.data = dataObject.default;
   }
 
+  public loadMatchdays(): ModelSignal<Matchday[]> {
+    const result: Matchday[] = this.data.sort(
+      (a, b) => a.matchday - b.matchday,
+    );
+
+    return model<Matchday[]>(result);
+  }
+
   public loadMatchday(
     season: string,
     matchday: number,
-  ): Signal<Matchday | undefined> {
+  ): ModelSignal<Matchday | undefined> {
     const result: Matchday | undefined = this.data
       .filter((value) => value.season === season && value.matchday === matchday)
       ?.at(0);
 
-    return signal<Matchday | undefined>(result);
+    return model<Matchday | undefined>(result);
   }
 }

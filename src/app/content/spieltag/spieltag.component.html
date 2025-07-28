@@ -1,1 +1,11 @@
-spieltag!!
+{{matchdays | json}}
+<p-dataview #dv [value]="matchdays">
+  <ng-template #list let-items>
+    <div class="grid grid-cols-12 gap-4 grid-nogutter">
+      <div
+        class="col-span-12"
+        *ngFor="let item of items; let first = first">
+      </div>
+    </div>
+  </ng-template>
+</p-dataview>
