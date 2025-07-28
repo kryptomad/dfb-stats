@@ -24,19 +24,16 @@ export class AppComponent {
       items: [
         {
           label: 'Termin nächster Abend',
-          icon: 'pi pi-refresh',
           routerLink: 'startseite',
           fragment: 'naechster-spieltag',
         },
         {
           label: 'Highlights letzter Spieltag',
-          icon: 'pi pi-upload',
           routerLink: 'startseite',
           fragment: 'highlights-letzter-spieltag',
         },
         {
           label: 'Nächster Oskarabend',
-          icon: 'pi pi-upload',
           routerLink: 'startseite',
           fragment: 'naechster-oskarabend',
         },
