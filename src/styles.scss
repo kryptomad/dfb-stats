@@ -22,3 +22,18 @@
   --text-color: var(--p-surface-0);
   --overlay-background: var(--p-surface-900);
 }
+
+html {
+  font-size: 14px;
+}
+
+body {
+  margin: 0;
+  min-height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  background-color: var(--body-bg);
+  font-weight: normal;
+  color: var(--body-text-color);
+  padding: 1rem;
+}

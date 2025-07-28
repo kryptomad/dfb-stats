@@ -1,12 +1,12 @@
-
-import { Component, computed, effect, inject, PLATFORM_ID, signal } from '@angular/core';
-import { $t, updatePreset, updateSurfacePalette } from '@primeng/themes';
+import {Component, computed, effect, inject, PLATFORM_ID, signal} from '@angular/core';
 import Aura from '@primeng/themes/aura';
 import Lara from '@primeng/themes/lara';
 import Material from '@primeng/themes/material';
 import Nora from '@primeng/themes/nora';
-import { PrimeNG } from 'primeng/config';
-import { DOCUMENT, isPlatformBrowser } from '@angular/common';
+import {DOCUMENT, isPlatformBrowser} from "@angular/common";
+import {PrimeNG} from "primeng/config";
+import {updatePreset} from "@primeng/themes";
+import {$t, updateSurfacePalette} from "@primeuix/themes";
 
 const presets = {
   Aura,
@@ -25,8 +25,7 @@ export interface ThemeState {
 @Component({
   selector: 'theme-switcher',
   standalone: false,
-  template: ` <div class="card flex justify-end p-2 mb-4">
-        <ul class="flex list-none m-0 p-0 gap-2 items-center">
+  template: `
             <li>
                 <button type="button" class="inline-flex w-8 h-8 p-0 items-center justify-center surface-0 dark:surface-800 border border-surface-200 dark:border-surface-600 rounded" (click)="onThemeToggler()">
                     <i [ngClass]="'pi ' + iconClass()" class="dark:text-white"></i>
@@ -92,8 +91,7 @@ export interface ThemeState {
                     </div>
                 </div>
             </li>
-        </ul>
-    </div>`
+            `
 })
 export class ThemeSwitcherComponent {
   private readonly STORAGE_KEY = 'themeSwitcherState';
