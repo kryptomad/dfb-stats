@@ -5,6 +5,7 @@
   --text-color-secondary: var(--p-text-muted-color);
   --surface-border: var(--p-content-border-color);
   --surface-card: var(--p-content-background);
+  --surface-banner: var(--p-content-background), var(--banner-opacity);
   --surface-hover: var(--p-content-hover-background);
   --surface-overlay: var(--p-overlay-popover-background);
   --transition-duration: var(--p-transition-duration);
@@ -17,4 +18,5 @@
   --focus-ring-color: var(--p-focus-ring-color);
   --focus-ring-offset: var(--p-focus-ring-offset);
   --focus-ring-shadow: var(--p-focus-ring-shadow);
+  --banner-opacity: 0.8;
 }

@@ -11,6 +11,7 @@ import { LayoutService } from '../service/layout.service';
   standalone: true,
   imports: [RouterModule, CommonModule, StyleClassModule, AppConfigurator, NgOptimizedImage],
   template: `
+  <div>Dartfreunde Borchen n.e.V.</div>
     <div class="layout-topbar">
       <div class="layout-topbar-logo-container">
         <button
@@ -20,8 +21,7 @@ import { LayoutService } from '../service/layout.service';
           <i class="pi pi-bars"></i>
         </button>
         <a class="layout-topbar-logo" routerLink="/">
-          <img ngSrc="../../../assets/logo.inline.svg" alt="" height="32" width="32">
-          <span>Dartfreunde Borchen n.e.V.</span>
+          <img ngSrc="../../../assets/logo.inline.svg" alt="" height="38" width="38">
         </a>
       </div>
 

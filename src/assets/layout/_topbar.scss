@@ -8,10 +8,11 @@
   top: 0;
   width: 100%;
   padding: 0 2rem;
-  background-color: var(--surface-card);
+  background-color: var(--surface-banner);
   transition: left var(--layout-section-transition-duration);
   display: flex;
   align-items: center;
+  backdrop-filter: blur(22px);
 
   .layout-topbar-logo-container {
     width: 20rem;
@@ -23,8 +24,6 @@
     display: inline-flex;
     align-items: center;
     font-size: 1.5rem;
-    border-radius: var(--content-border-radius);
-    color: var(--text-color);
     font-weight: 500;
     gap: 0.5rem;
 
@@ -42,7 +41,7 @@
     justify-content: center;
     align-items: center;
     color: var(--text-color-secondary);
-    border-radius: 50%;
+    border-radius: var(--content-border-radius);
     width: 2.5rem;
     height: 2.5rem;
     color: var(--text-color);
