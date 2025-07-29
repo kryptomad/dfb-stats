@@ -7,7 +7,7 @@
         <div  class="profile-row">
           <p-chip 
             label="{{ nextMatchday.gastgeber }}" 
-            image="assets/Keller_Frank.png" 
+            image="assets/frank.png" 
             alt="Avatar image" 
             class="profile-chip" />
         </div>
@@ -15,13 +15,13 @@
       <div class="value">{{ nextMatchday.datum }} um {{ nextMatchday.zeit }}</div>
       <div class="label">Modus</div>
       <div class="icons">
-        <i class="pi pi-euro"></i>
-        <i class="pi pi-trophy ml-6"></i>
+        <i class="pi pi-euro" [ngClass]="{ inactive: nextMatchday.gelddarten }"></i>
+        <i class="pi pi-trophy ml-6" [ngClass]="{ inactive: nextMatchday.oskardarten }"></i>
       </div>
     </div>
     <div class="card-bgimg">
       <!-- Kann auch dynamisch pro Spielort geladen werden -->
-      <img src="assets/Keller_Frank.png" alt="Spielort" />
+      <img src="assets/location-frank.png" alt="Spielort" />
       <div class="gradient"></div>
     </div>
   </div>
@@ -31,14 +31,15 @@
 <div *ngIf="lastStatsService.loadLastStats() as signal">
   <div
     *ngIf="signal() as lastStats"
-    class="flex flex-col sm:flex-row sm:items-center p-6 gap-4"
+    class="grid gap-4 grid-cols-1 sm:grid-cols-3"
   >
     <div *ngFor="let lastStat of lastStats">
       <p-card
         [header]="lastStat.kategorie"
-        [subheader]="lastStat.spieler.join(', ')"
-      >
-        <span>{{ lastStat.wert }}</span>
+        [subheader]="lastStat.spieler.join(', ')">
+          <div class="stat-card-body">
+        <span class="stat-card-value">{{ lastStat.wert }}</span>
+              </div>
       </p-card>
     </div>
   </div>
@@ -47,9 +48,14 @@
 <h2 id="naechster-oskarabend">Nächster Oskarabend</h2>
 <div *ngIf="nextMatchdaysService.loadNextMatchDay(nextMatchday) as signal">
   <div *ngIf="signal() as nextMatchDay">
-    <div>
-      Saison: {{ nextMatchDay.season }} Spieltag {{ nextMatchDay.matchday }}
+    <div class="mb-4">
+      Saison:
+      <span class="text-primary-700">{{ nextMatchDay.season }}</span>
+      –
+      Spieltag:
+      <span class="text-primary-700">{{ nextMatchDay.matchday }}</span>
     </div>
+    <p-card>
     <p-table [value]="nextMatchDay.games">
       <ng-template #header>
         <tr>
@@ -60,11 +66,12 @@
       </ng-template>
       <ng-template #body let-game>
         <tr>
-          <td>{{ game.writer }}</td>
+          <td class="writer">{{ game.writer }}</td>
           <td>{{ game.player1 }}</td>
           <td>{{ game.player2 }}</td>
         </tr>
       </ng-template>
     </p-table>
+    </p-card>
   </div>
 </div>

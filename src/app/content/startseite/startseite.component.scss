@@ -7,7 +7,7 @@ min-height: 150px; // Höher, damit Bild besser wirkt!
 }
 .card-info {
 z-index: 2;
-padding: 0.5rem 1.5rem;
+padding: 0.5rem 0.5rem;
 display: flex;
 flex-direction: column;
 gap: 0.7rem;
@@ -76,3 +76,34 @@ background: linear-gradient(
     font-size: 2.15rem;
     color: var(--primary-color);
   }
+
+
+.stat-card-body {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: flex-end;
+  height: 100%;              /* füllt die Card aus */
+  min-height: 2.5rem;        /* sorgt für etwas Raum, kannst du anpassen */
+  padding: 0; 
+}
+
+.stat-card-value {
+  align-self: flex-end;
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  letter-spacing: 0.03em;
+  line-height: 1;
+}
+
+.writer {
+  font-weight: 300;
+  color: rgb(150, 150, 150);
+}
+
+
+.text-primary-700 {
+  color: var(--primary-color);
+  font-weight: 700;
+}

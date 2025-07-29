@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { MenuItem } from 'primeng/api';
 import { RouterModule } from '@angular/router';
 import {CommonModule, NgOptimizedImage} from '@angular/common';
@@ -11,7 +11,7 @@ import { LayoutService } from '../service/layout.service';
   standalone: true,
   imports: [RouterModule, CommonModule, StyleClassModule, AppConfigurator, NgOptimizedImage],
   template: `
-  <div>Dartfreunde Borchen n.e.V.</div>
+  <div class="layout-banner">Dartfreunde Borchen n.e.V.</div>
     <div class="layout-topbar">
       <div class="layout-topbar-logo-container">
         <button
@@ -80,5 +80,15 @@ export class AppTopbar {
       ...state,
       darkTheme: !state.darkTheme,
     }));
+  }
+
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    const topbar = document.querySelector('.layout-topbar');
+    if (window.scrollY > 8) {
+      topbar?.classList.add('scrolled');
+    } else {
+      topbar?.classList.remove('scrolled');
+    }
   }
 }

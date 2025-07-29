@@ -12,7 +12,7 @@ import { LayoutService } from '../service/layout.service';
       <p-button
         type="button"
         (onClick)="toggleDarkMode()"
-        [rounded]="true"
+        [rounded]="false"
         [icon]="isDarkTheme() ? 'pi pi-moon' : 'pi pi-sun'"
         severity="secondary"
       />
@@ -26,7 +26,7 @@ import { LayoutService } from '../service/layout.service';
           leaveActiveClass="animate-fadeout"
           [hideOnOutsideClick]="true"
           type="button"
-          rounded
+          false
         />
         <app-configurator />
       </div>
