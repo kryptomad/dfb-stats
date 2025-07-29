@@ -18,7 +18,7 @@ position: relative;
 flex: 1.5;                  // nimmt ~35% der Card ein, anpassen wie du willst
 min-width: 150px;
 max-width: 300px;
-height: 90%;
+height: 100%;
 display: flex;
 align-items: stretch;
 overflow: hidden;
@@ -27,11 +27,13 @@ img {
 width: 100%;
 height: 100%;
 object-fit: contain;      // Bild IMMER ganz sichtbar!
-opacity: 0.64;            // Bild leicht transparent, wirkt softer
+opacity: 0.79;            // Bild leicht transparent, wirkt softer
 position: relative;       // NICHT absolute, sonst springt das Bild
 z-index: 1;
+margin-right: 0;
 background: #f7fafd;      // oder passendes Card-Hintergrund
 display: block;
+border-radius: 8px;
 }
 .gradient {
 position: absolute;
@@ -67,16 +69,28 @@ background: linear-gradient(
       color: #333;
     }
   }
-  .value, .icons {
+
+  .date-time {
     font-size: 1.1rem;
     font-weight: 500;
+  }
+  .icons {
+    font-size: 1.1rem;
+    font-weight: 500;
+        color: gold;
   }
   .icons i {
     margin-right: 0.5rem;
     font-size: 2.15rem;
-    color: var(--primary-color);
+
   }
 
+  .active {
+    color: rgb(0, 119, 255);
+  }
+  .inactive {
+  color: rgb(150, 150, 150);
+  }
 
 .stat-card-body {
   display: flex;
@@ -90,7 +104,7 @@ background: linear-gradient(
 
 .stat-card-value {
   align-self: flex-end;
-  font-size: 3rem;
+  font-size: 3.3rem;
   font-weight: 700;
   color: var(--primary-color);
   letter-spacing: 0.03em;
@@ -107,3 +121,4 @@ background: linear-gradient(
   color: var(--primary-color);
   font-weight: 700;
 }
+

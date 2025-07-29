@@ -20,7 +20,7 @@ import { LayoutService } from '../service/layout.service';
         >
           <i class="pi pi-bars"></i>
         </button>
-        <a class="layout-topbar-logo" routerLink="/">
+        <a class="layout-topbar-logo ml-4" routerLink="/">
           <img ngSrc="../../../assets/logo.inline.svg" alt="" height="38" width="38">
         </a>
       </div>

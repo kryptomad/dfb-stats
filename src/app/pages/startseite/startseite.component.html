@@ -1,6 +1,6 @@
 <h2 id="naechster-abend">Nächster Abend</h2>
 <div *ngIf="nextMatchdayService.loadNextMatchDay() as signal">
-<p-card *ngIf="signal() as nextMatchday" class="flex flex-col sm:flex-row sm:items-center p-6 gap-4">
+<p-card *ngIf="signal() as nextMatchday" class="grid gap-4 grid-cols-1 sm:grid-cols-1">
   <div class="card-content">
     <div class="card-info">
       <div class="label">Gastgeber</div>
@@ -12,7 +12,7 @@
             class="profile-chip" />
         </div>
       <div class="label">Wann</div>
-      <div class="value">{{ nextMatchday.datum }} um {{ nextMatchday.zeit }}</div>
+      <div class="date-time">{{ nextMatchday.datum }} um {{ nextMatchday.zeit }}</div>
       <div class="label">Modus</div>
       <div class="icons">
         <i class="pi pi-euro" [ngClass]="{ inactive: nextMatchday.gelddarten }"></i>
@@ -20,7 +20,6 @@
       </div>
     </div>
     <div class="card-bgimg">
-      <!-- Kann auch dynamisch pro Spielort geladen werden -->
       <img src="assets/location-frank.png" alt="Spielort" />
       <div class="gradient"></div>
     </div>
@@ -31,7 +30,7 @@
 <div *ngIf="lastStatsService.loadLastStats() as signal">
   <div
     *ngIf="signal() as lastStats"
-    class="grid gap-4 grid-cols-1 sm:grid-cols-3"
+    class="grid gap-4 grid-cols-2 sm:grid-cols-3"
   >
     <div *ngFor="let lastStat of lastStats">
       <p-card

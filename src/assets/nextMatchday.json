@@ -2,6 +2,6 @@
   "gastgeber": "Frank",
   "datum": "TBD",
   "zeit": "19:30 Uhr",
-  "oskardarten": false,
-  "gelddarten": true
+  "oskardarten": true,
+  "gelddarten": false
 }
