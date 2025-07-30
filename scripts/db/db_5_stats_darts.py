@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 import sqlite3
-from db_utils import init_db, add_missing_columns
 
 DB_PATH = '../db/dfb_stats.db'
 
@@ -8,6 +7,7 @@ def calculate_stats_darts():
     conn = sqlite3.connect(DB_PATH)
     c = conn.cursor()
 
+    # 1) Alle Spielernamen sammeln
     players = set()
     for row in c.execute('SELECT player1 FROM games'):
         players.add(row[0])
@@ -15,49 +15,71 @@ def calculate_stats_darts():
         players.add(row[0])
 
     for player in players:
-        c.execute('SELECT id, player1, player2 FROM games WHERE player1 = ? OR player2 = ?', (player, player))
+        # 2) Games mit zugehörigen Player-IDs holen
+        c.execute('''
+            SELECT id, player1, player2, player1_id, player2_id
+            FROM games
+            WHERE player1 = ? OR player2 = ?
+        ''', (player, player))
         games = c.fetchall()
 
         for game in games:
-            game_id, p1, p2 = game
-            is_p1 = (player == p1)
+            game_id, p1, p2, p1_id, p2_id = game
+            is_p1     = (player == p1)
+            player_id = p1_id if is_p1 else p2_id
 
-            c.execute('SELECT p1_darts_leg, p2_darts_leg, leg_winner FROM legs WHERE game_id = ?', (game_id,))
+            # 3) Dart-Zahlen pro Leg & Winner-ID auslesen
+            c.execute('''
+                SELECT p1_darts_leg, p2_darts_leg, leg_winner_id
+                FROM legs
+                WHERE game_id = ?
+            ''', (game_id,))
             leg_rows = c.fetchall()
 
-            # Alle Darts aufsummieren
+            # 4) Summe aller geworfenen Darts
             darts_thrown = sum(
-                r[0] if is_p1 else r[1]
-                for r in leg_rows
-                if r[0 if is_p1 else 1] is not None
+                (p1_dl if is_p1 else p2_dl)
+                for p1_dl, p2_dl, _ in leg_rows
+                if (p1_dl if is_p1 else p2_dl) is not None
             )
 
-            # Nur gewonnene Legs für Best/Worst/Avg Darts
+            # 5) Nur die Darts aus gewonnenen Legs für Best/Worst/Avg
             won_darts = []
-            for p1_dl, p2_dl, winner in leg_rows:
-                if is_p1 and winner == 'p1' and p1_dl is not None:
-                    won_darts.append(p1_dl)
-                elif not is_p1 and winner == 'p2' and p2_dl is not None:
-                    won_darts.append(p2_dl)
+            for p1_dl, p2_dl, winner_id in leg_rows:
+                if winner_id == player_id:
+                    dl = p1_dl if is_p1 else p2_dl
+                    if dl is not None:
+                        won_darts.append(dl)
 
-
-            best_leg = min(won_darts) if won_darts else None
+            best_leg  = min(won_darts) if won_darts else None
             worst_leg = max(won_darts) if won_darts else None
             avg_darts = round(sum(won_darts) / len(won_darts), 2) if won_darts else 0.0
 
-            # Nur aktualisieren, wenn stats-Eintrag vorhanden ist
-            c.execute('SELECT COUNT(*) FROM stats WHERE game_id = ? AND player = ?', (game_id, player))
+            # 6) Sicherstellen, dass ein Stats-Eintrag existiert
+            c.execute(
+                'SELECT COUNT(*) FROM stats WHERE game_id = ? AND player_id = ?',
+                (game_id, player_id)
+            )
             if c.fetchone()[0] == 0:
-                print(f"[SKIP] Kein Stats-Eintrag für {player} (Game {game_id})")
+                print(f"[SKIP] Kein Stats-Eintrag für player_id={player_id} (Game {game_id})")
                 continue
 
+            # 7) Stats-Tabelle aktualisieren
             c.execute('''
-                UPDATE stats SET 
-                    darts_thrown = ?, best_leg = ?, worst_leg = ?, avg_darts = ?
-                WHERE game_id = ? AND player = ?
+                UPDATE stats
+                SET 
+                    darts_thrown = ?, 
+                    best_leg     = ?, 
+                    worst_leg    = ?, 
+                    avg_darts    = ?
+                WHERE game_id = ? AND player_id = ?
             ''', (
-                darts_thrown, best_leg, worst_leg, avg_darts,
-                game_id, player
+                darts_thrown, 
+                best_leg, 
+                worst_leg, 
+                avg_darts,
+                game_id, 
+                player_id
             ))
 
     conn.commit()

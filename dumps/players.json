@@ -1,0 +1,32 @@
+[
+  {
+    "player_id": 1,
+    "name": "Frank",
+    "nationality": "DE",
+    "nickname": null
+  },
+  {
+    "player_id": 2,
+    "name": "Franz-Josef",
+    "nationality": "DE",
+    "nickname": null
+  },
+  {
+    "player_id": 3,
+    "name": "Heiner",
+    "nationality": "DE",
+    "nickname": "TC"
+  },
+  {
+    "player_id": 4,
+    "name": "Martin",
+    "nationality": "DE",
+    "nickname": "mad"
+  },
+  {
+    "player_id": 5,
+    "name": "Uwe",
+    "nationality": "DE",
+    "nickname": null
+  }
+]

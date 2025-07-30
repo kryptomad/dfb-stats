@@ -1,7 +1,5 @@
 # -*- coding: utf-8 -*-
 
-from db_utils import init_db, add_missing_columns
-
 import sqlite3
 import os
 import csv
@@ -11,8 +9,97 @@ DB_PATH = '../db/dfb_stats.db'
 CSV_DIR = '../data/csv'
 
 conn = sqlite3.connect(DB_PATH)
-init_db(conn)
-add_missing_columns(conn)
+c = conn.cursor()
+
+# Tabellen anlegen (angepasste finale Struktur)
+c.execute('''
+CREATE TABLE IF NOT EXISTS players (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    player_id INTEGER UNIQUE,
+    name TEXT NOT NULL,
+    nationality TEXT,
+    nickname TEXT
+)
+''')
+
+c.execute('''
+CREATE TABLE IF NOT EXISTS games (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    game_id INTEGER,
+    season TEXT,
+    matchday INTEGER,
+    game_date TEXT,
+    game_time TEXT,
+    p1_avg_3dart_match REAL,
+    player1_id INTEGER,
+    player1 TEXT,
+    p1_legs_won INTEGER,
+    p2_legs_won INTEGER,
+    player2 TEXT,
+    player2_id INTEGER,
+    p2_avg_3dart_match REAL,
+    filename TEXT
+)
+''')
+
+c.execute('''
+CREATE TABLE IF NOT EXISTS legs (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    game_id INTEGER,
+    season TEXT,
+    matchday INTEGER,
+    leg_number INTEGER,
+    player1_id INTEGER,
+    p1_score INTEGER,
+    p1_left INTEGER,
+    round INTEGER,
+    p2_score INTEGER,
+    p2_left INTEGER,
+    player2_id INTEGER,
+    p1_darts_leg INTEGER,
+    p2_darts_leg INTEGER,
+    p1_avg_3dart_leg REAL,
+    p2_avg_3dart_leg REAL,
+    leg_winner_id INTEGER,
+    starter TEXT,
+    starter_id INTEGER
+)
+''')
+
+c.execute('''
+CREATE TABLE IF NOT EXISTS stats (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    game_id INTEGER,
+    season TEXT,
+    matchday INTEGER,
+    player_id INTEGER,
+    player1_id INTEGER,
+    player2_id INTEGER,
+    sets_won INTEGER,
+    legs_played INTEGER,
+    legs_won INTEGER,
+    legs_lost INTEGER,
+    darts_thrown INTEGER,
+    avg_darts REAL,
+    avg_3dart REAL,
+    avg_first9 REAL,
+    best_leg INTEGER,
+    worst_leg INTEGER,
+    high_finish INTEGER,
+    high_score INTEGER,
+    score_100 INTEGER,
+    score_100_plus INTEGER,
+    score_140 INTEGER,
+    score_140_plus INTEGER,
+    score_180 INTEGER,
+    keep_pct REAL,
+    keep_ratio TEXT,
+    break_pct REAL,
+    break_ratio TEXT
+)
+''')
+
+conn.commit()
 
 def parse_csv(file_path):
     with open(file_path, encoding='utf-8-sig', errors='replace') as f:
@@ -78,7 +165,6 @@ def parse_csv(file_path):
             ))
             continue
 
-
         # Echte Runde erkennen
         round_raw = row[0].strip()
         if not round_raw.isdigit():
@@ -100,9 +186,6 @@ def parse_csv(file_path):
             if p2_score == '501':
                 p2_score, p2_left = None, '501'
 
-#            print(f"DEBUG: p1_score={p1_score}, p1_left={p1_left}, p2_score={p2_score}, p2_left={p2_left}")
-
-
             rounds.append((
                 leg_number,
                 round_num,
@@ -118,10 +201,6 @@ def parse_csv(file_path):
         except ValueError:
             continue
 
-#    print("\n=== Parsed Rounds ===")
-#    for r in rounds:
-#        print(r)        
-
     return {
         'game_date': game_date,
         'game_time': game_time,
@@ -133,7 +212,6 @@ def parse_csv(file_path):
         'rounds': rounds
     }
 
-
 def import_csvs(conn):
     c = conn.cursor()
     for file in os.listdir(CSV_DIR):
@@ -141,8 +219,8 @@ def import_csvs(conn):
             path = os.path.join(CSV_DIR, file)
             data = parse_csv(path)
             try:
-                c.execute('INSERT INTO games (game_date, game_time, player1, player2, legs1, legs2, filename) VALUES (?, ?, ?, ?, ?, ?, ?)',
-                        (data['game_date'], data['game_time'], data['player1'], data['player2'], data['legs1'], data['legs2'], data['filename']))
+                c.execute('INSERT INTO games (game_date, game_time, player1, player2, p1_legs_won, p2_legs_won, filename) VALUES (?, ?, ?, ?, ?, ?, ?)',
+                          (data['game_date'], data['game_time'], data['player1'], data['player2'], data['legs1'], data['legs2'], data['filename']))
                 game_id = c.lastrowid
 
                 # 👇 Hier setzen wir game_id = id
@@ -158,8 +236,5 @@ def import_csvs(conn):
 
 if __name__ == "__main__":
     conn = sqlite3.connect(DB_PATH)
-    init_db(conn)
     import_csvs(conn)
     conn.close()
-
-
