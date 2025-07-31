@@ -35,17 +35,15 @@
 </p-card>
 
 <h2 id="highlights-letzter-spieltag">Highlights letzter Spieltag</h2>
-<div class="grid gap-4 grid-cols-2 sm:grid-cols-3">
-  <div *ngFor="let lastStat of lastStats()">
-    <p-card
-      [header]="lastStat.kategorie"
-      [subheader]="lastStat.spieler.join(', ')"
-    >
-      <div class="stat-card-body">
-        <span class="stat-card-value">{{ lastStat.wert }}</span>
-      </div>
-    </p-card>
-  </div>
+<div class="grid gap-4 grid-cols-2 sm:grid-cols-3" *ngFor="let lastStat of lastStats()">
+  <p-card
+    [header]="lastStat.kategorie"
+    [subheader]="lastStat.spieler.join(', ')"
+  >
+    <div class="stat-card-body">
+      <span class="stat-card-value">{{ lastStat.wert }}</span>
+    </div>
+  </p-card>
 </div>
 
 <h2 id="naechster-oskarabend">Nächster Oskarabend</h2>

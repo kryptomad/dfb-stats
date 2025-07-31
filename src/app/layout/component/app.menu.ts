@@ -77,15 +77,23 @@ export class AppMenu implements OnInit {
         items: [
           {
             label: 'Gesamtwertungen',
+            routerLink: 'pages/rekorde',
+            fragment: 'gesamtwertungen',
           },
           {
             label: 'Jahreswertungen',
+            routerLink: 'pages/rekorde',
+            fragment: 'jahreswertungen',
           },
           {
             label: 'Spieltagswertungen',
+            routerLink: 'pages/rekorde',
+            fragment: 'spieltagswertungen',
           },
           {
             label: 'Matchwertungen',
+            routerLink: 'pages/rekorde',
+            fragment: 'matchwertungen',
           },
         ],
       },

@@ -1,0 +1,59 @@
+<div class="subline-center-gray">ab 01.01.1996</div>
+
+<h2 id="gesamtwertungen" class="header-center-big-primary">Gesamtwertungen</h2>
+<div class="grid gap-4 grid-cols-2 sm:grid-cols-3" *ngFor="let rekord of gesamtwertungen">
+  <p-card
+    [header]="rekord.was"
+    [subheader]="rekord.wann"
+  >
+    <div>{{ rekord.wer }}</div>
+    <div>{{ rekord.count }}</div>
+  </p-card>
+</div>
+
+<h2 id="jahreswertungen" class="header-center-big-primary">Jahreswertungen</h2>
+<div class="grid gap-4 grid-cols-2 sm:grid-cols-3" *ngFor="let rekord of jahreswertungen">
+  <p-card
+    [header]="rekord.was"
+    [subheader]="rekord.wann"
+  >
+    <div>{{ rekord.wer }}</div>
+    <div>{{ rekord.count }}</div>
+  </p-card>
+</div>
+
+<h2 id="spieltagswertungen" class="header-center-big-primary">Spieltagswertungen</h2>
+<div class="grid gap-4 grid-cols-2 sm:grid-cols-3" *ngFor="let rekord of spieltagswertungen">
+  <p-card
+    [header]="rekord.was"
+    [subheader]="rekord.wann"
+  >
+    <div>{{ rekord.wer }}</div>
+    <div>{{ rekord.count }}</div>
+  </p-card>
+</div>
+
+<h2 id="matchwertungen" class="header-center-big-primary">Matchwertungen</h2>
+<div class="grid gap-4 grid-cols-2 sm:grid-cols-3" *ngFor="let rekord of matchwertungen">
+  <p-card
+    [header]="rekord.was"
+    [subheader]="rekord.wann"
+  >
+    <div>{{ rekord.wer }}</div>
+    <div>{{ rekord.count }}</div>
+  </p-card>
+</div>
+
+<p class="text-gray supersmall">
+  *) erst ab 2001<br/>
+  **) erst ab 2003<br/>
+  ***) ab 1994<br/>
+  ****) 2010 geändert, Streichung DD, TD, ab 2013 auch Short Game und RB<br/>
+  *****) 2017 geändert, 5 Spieler max. 40 Jahr / 14 Monat / Punkte Jahr max.
+  140<br/>
+  ******) erst ab 2018<br/>
+  *******) 2019 geändert, 5 Spieler max. 40 Jahr / 12 Monat / Punkte Jahr max.
+  120<br/>
+  ********) erst 2020/21 aufgenommen<br/><br/><br/>
+</p>
+<p class="subline-left-gray">Stand: 12.05.2024 – Version 1.0</p>
