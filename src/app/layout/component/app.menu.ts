@@ -31,12 +31,18 @@ export class AppMenu implements OnInit {
       {
         label: 'Startseite',
         items: [
-          { label: 'Startseite', icon: 'pi pi-fw pi-home', routerLink: '/' },
+          { label: 'Startseite',
+            icon: 'pi pi-fw pi-home',
+            routerLink: '/' },
         ],
       },
       {
         label: 'Spieltag',
         items: [
+          {
+            label: 'Aktueller Spieltag',
+            icon: 'pi pi-fw pi-clock',
+          },
           {
             label: 'Jahrestabelle',
             icon: 'pi pi-fw pi-table',
