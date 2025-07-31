@@ -77,21 +77,25 @@ export class AppMenu implements OnInit {
         items: [
           {
             label: 'Gesamtwertungen',
+            icon: 'pi pi-fw pi-trophy',
             routerLink: 'pages/rekorde',
             fragment: 'gesamtwertungen',
           },
           {
             label: 'Jahreswertungen',
+            icon: 'pi pi-fw pi-calendar',
             routerLink: 'pages/rekorde',
             fragment: 'jahreswertungen',
           },
           {
             label: 'Spieltagswertungen',
+            icon: 'pi pi-fw pi-flag',
             routerLink: 'pages/rekorde',
             fragment: 'spieltagswertungen',
           },
           {
             label: 'Matchwertungen',
+            icon: 'pi pi-fw pi-star',
             routerLink: 'pages/rekorde',
             fragment: 'matchwertungen',
           },
