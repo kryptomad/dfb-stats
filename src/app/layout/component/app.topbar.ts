@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { MenuItem } from 'primeng/api';
 import { RouterModule } from '@angular/router';
 import {CommonModule, NgOptimizedImage} from '@angular/common';
@@ -11,6 +11,7 @@ import { LayoutService } from '../service/layout.service';
   standalone: true,
   imports: [RouterModule, CommonModule, StyleClassModule, AppConfigurator, NgOptimizedImage],
   template: `
+  <div class="layout-banner">Dartfreunde Borchen n.e.V.</div>
     <div class="layout-topbar">
       <div class="layout-topbar-logo-container">
         <button
@@ -19,9 +20,8 @@ import { LayoutService } from '../service/layout.service';
         >
           <i class="pi pi-bars"></i>
         </button>
-        <a class="layout-topbar-logo" routerLink="/">
-          <img ngSrc="../../../assets/logo.inline.svg" alt="" height="32" width="32">
-          <span>Dartfreunde Borchen n.e.V.</span>
+        <a class="layout-topbar-logo ml-4" routerLink="/">
+          <img ngSrc="../../../assets/logo.inline.svg" alt="" height="38" width="38">
         </a>
       </div>
 
@@ -80,5 +80,15 @@ export class AppTopbar {
       ...state,
       darkTheme: !state.darkTheme,
     }));
+  }
+
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    const topbar = document.querySelector('.layout-topbar');
+    if (window.scrollY > 8) {
+      topbar?.classList.add('scrolled');
+    } else {
+      topbar?.classList.remove('scrolled');
+    }
   }
 }

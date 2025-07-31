@@ -59,7 +59,7 @@ declare type SurfacesType = {
               [ngClass]="{
                 'outline-primary': primaryColor.name === selectedPrimaryColor(),
               }"
-              class="border-none w-5 h-5 rounded-full p-0 cursor-pointer outline-none outline-offset-1"
+              class="border-none w-5 h-5 rounded-lg p-0 cursor-pointer outline-none outline-offset-1"
               [style]="{
                 'background-color':
                   primaryColor?.name === 'noir'
@@ -85,7 +85,7 @@ declare type SurfacesType = {
                     ? surface.name === 'zinc'
                     : surface.name === 'slate',
               }"
-              class="border-none w-5 h-5 rounded-full p-0 cursor-pointer outline-none outline-offset-1"
+              class="border-none w-5 h-5 rounded-lg p-0 cursor-pointer outline-none outline-offset-1"
               [style]="{
                 'background-color':
                   surface?.name === 'noir'
