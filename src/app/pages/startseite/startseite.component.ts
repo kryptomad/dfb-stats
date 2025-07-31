@@ -28,7 +28,7 @@ export class StartseiteComponent {
   games = computed(() => this._nextMatchday()?.games);
 
   private _lastStatsService = inject(LastStatsService);
-  private _lastStatts = this._lastStatsService.loadLastStats();
+  private _lastStats = this._lastStatsService.loadLastStats();
 
-  lastStats = computed(() => this._lastStatts());
+  lastStats = computed(() => this._lastStats());
 }
