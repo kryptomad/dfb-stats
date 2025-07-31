@@ -1,7 +1,7 @@
 import { Component, HostListener } from '@angular/core';
 import { MenuItem } from 'primeng/api';
 import { RouterModule } from '@angular/router';
-import {CommonModule, NgOptimizedImage} from '@angular/common';
+import { CommonModule, NgOptimizedImage } from '@angular/common';
 import { StyleClassModule } from 'primeng/styleclass';
 import { AppConfigurator } from './app.configurator';
 import { LayoutService } from '../service/layout.service';
@@ -9,61 +9,71 @@ import { LayoutService } from '../service/layout.service';
 @Component({
   selector: 'app-topbar',
   standalone: true,
-  imports: [RouterModule, CommonModule, StyleClassModule, AppConfigurator, NgOptimizedImage],
-  template: `
-  <div class="layout-banner">Dartfreunde Borchen n.e.V.</div>
+  imports: [
+    RouterModule,
+    CommonModule,
+    StyleClassModule,
+    AppConfigurator,
+    NgOptimizedImage,
+  ],
+  template: ` <div class="layout-banner">Dartfreunde Borchen n.e.V.</div>
     <div class="layout-topbar">
       <div class="layout-topbar-logo-container">
         <button
-            class="layout-menu-button layout-topbar-action"
-            (click)="layoutService.onMenuToggle()"
+          class="layout-menu-button layout-topbar-action"
+          (click)="layoutService.onMenuToggle()"
         >
           <i class="pi pi-bars"></i>
         </button>
         <a class="layout-topbar-logo ml-4" routerLink="/">
-          <img ngSrc="../../../assets/logo.inline.svg" alt="" height="38" width="38">
+          <img
+            ngSrc="../../../assets/logo.inline.svg"
+            alt=""
+            height="38"
+            width="38"
+          />
         </a>
       </div>
 
       <div class="layout-topbar-actions">
         <div class="layout-config-menu">
           <button
-              type="button"
-              class="layout-topbar-action"
-              (click)="toggleDarkMode()"
+            type="button"
+            class="layout-topbar-action"
+            (click)="toggleDarkMode()"
           >
             <i
-                [ngClass]="{
-              'pi ': true,
-              'pi-moon': layoutService.isDarkTheme(),
-              'pi-sun': !layoutService.isDarkTheme(),
-            }"
+              [ngClass]="{
+                'pi ': true,
+                'pi-moon': layoutService.isDarkTheme(),
+                'pi-sun': !layoutService.isDarkTheme(),
+              }"
             ></i>
           </button>
           <div class="relative">
             <button
-                class="layout-topbar-action layout-topbar-action-highlight"
-                pStyleClass="@next"
-                enterFromClass="hidden"
-                enterActiveClass="animate-scalein"
-                leaveToClass="hidden"
-                leaveActiveClass="animate-fadeout"
-                [hideOnOutsideClick]="true"
+              class="layout-topbar-action layout-topbar-action-highlight"
+              pStyleClass="@next"
+              enterFromClass="hidden"
+              enterActiveClass="animate-scalein"
+              leaveToClass="hidden"
+              leaveActiveClass="animate-fadeout"
+              [hideOnOutsideClick]="true"
             >
               <i class="pi pi-palette"></i>
             </button>
-            <app-configurator/>
+            <app-configurator />
           </div>
         </div>
 
         <button
-            class="layout-topbar-menu-button layout-topbar-action"
-            pStyleClass="@next"
-            enterFromClass="hidden"
-            enterActiveClass="animate-scalein"
-            leaveToClass="hidden"
-            leaveActiveClass="animate-fadeout"
-            [hideOnOutsideClick]="true"
+          class="layout-topbar-menu-button layout-topbar-action"
+          pStyleClass="@next"
+          enterFromClass="hidden"
+          enterActiveClass="animate-scalein"
+          leaveToClass="hidden"
+          leaveActiveClass="animate-fadeout"
+          [hideOnOutsideClick]="true"
         >
           <i class="pi pi-ellipsis-v"></i>
         </button>

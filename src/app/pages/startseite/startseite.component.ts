@@ -10,7 +10,7 @@ import { ChipModule } from 'primeng/chip';
 @Component({
   selector: 'app-startseite',
   templateUrl: './startseite.component.html',
-  styleUrls: ['../../content/startseite/startseite.component.scss'],
+  styleUrls: ['./startseite.component.scss'],
   standalone: true,
   imports: [TableModule, NgClass, Card, NgIf, NgForOf, ChipModule],
   providers: [NextMatchDaysService, NextMatchDayService, LastStatsService],
