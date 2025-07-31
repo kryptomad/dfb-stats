@@ -3,5 +3,7 @@
   "datum": "TBD",
   "zeit": "19:30 Uhr",
   "oskardarten": true,
-  "gelddarten": false
+  "gelddarten": false,
+  "season": "2024/2025",
+  "matchday": 5
 }

@@ -1,9 +1,8 @@
-import { Component, Input } from '@angular/core';
-import { NextMatchDayService } from '../../services/nextMatchDay.service';
+import { Component, computed, inject, Input, signal } from '@angular/core';
 import { LastStatsService } from '../../services/lastStats.service';
-import { NextMatchDaysService } from '../../services/nextMatchDays.service';
+import { NextMatchDayService } from '../../services/nextMatchDay.service';
 import { TableModule } from 'primeng/table';
-import { NgClass, NgForOf, NgIf } from '@angular/common';
+import { NgClass, NgForOf, NgIf, NgOptimizedImage } from '@angular/common';
 import { Card } from 'primeng/card';
 import { ChipModule } from 'primeng/chip';
 
@@ -12,16 +11,33 @@ import { ChipModule } from 'primeng/chip';
   templateUrl: './startseite.component.html',
   styleUrls: ['./startseite.component.scss'],
   standalone: true,
-  imports: [TableModule, NgClass, Card, NgIf, NgForOf, ChipModule],
-  providers: [NextMatchDaysService, NextMatchDayService, LastStatsService],
+  imports: [
+    TableModule,
+    NgClass,
+    Card,
+    NgIf,
+    NgForOf,
+    ChipModule,
+    NgOptimizedImage,
+  ],
+  providers: [NextMatchDayService, NextMatchDayService, LastStatsService],
 })
 export class StartseiteComponent {
-  @Input()
-  nextMatchday: number = 5;
 
-  constructor(
-    public nextMatchdayService: NextMatchDayService,
-    public lastStatsService: LastStatsService,
-    public nextMatchdaysService: NextMatchDaysService,
-  ) {}
+  private _nextMatchdayService = inject(NextMatchDayService);
+  private _nextMatchday = this._nextMatchdayService.loadNextMatchDay();
+
+  gastgeber = computed(() => this._nextMatchday()?.gastgeber);
+  datum = computed(() => this._nextMatchday()?.datum);
+  zeit = computed(() => this._nextMatchday()?.zeit);
+  gelddarten = computed(() => this._nextMatchday()?.gelddarten);
+  oskardarten = computed(() => this._nextMatchday()?.oskardarten);
+  season = computed(() => this._nextMatchday()?.season);
+  matchday = computed(() => this._nextMatchday()?.matchday);
+  games = computed(() => this._nextMatchday()?.games);
+
+  private _lastStatsService = inject(LastStatsService);
+  private _lastStatts = this._lastStatsService.loadLastStats();
+
+  lastStats = computed(() => this._lastStatts());
 }
