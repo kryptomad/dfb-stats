@@ -11,19 +11,10 @@ import { ChipModule } from 'primeng/chip';
   templateUrl: './startseite.component.html',
   styleUrls: ['./startseite.component.scss'],
   standalone: true,
-  imports: [
-    TableModule,
-    NgClass,
-    Card,
-    NgIf,
-    NgForOf,
-    ChipModule,
-    NgOptimizedImage,
-  ],
+  imports: [TableModule, NgClass, Card, NgForOf, ChipModule, NgOptimizedImage],
   providers: [NextMatchDayService, NextMatchDayService, LastStatsService],
 })
 export class StartseiteComponent {
-
   private _nextMatchdayService = inject(NextMatchDayService);
   private _nextMatchday = this._nextMatchdayService.loadNextMatchDay();
 

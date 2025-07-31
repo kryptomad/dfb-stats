@@ -5,6 +5,7 @@ import { CommonModule, NgOptimizedImage } from '@angular/common';
 import { StyleClassModule } from 'primeng/styleclass';
 import { AppConfigurator } from './app.configurator';
 import { LayoutService } from '../service/layout.service';
+import { AppLogo } from './app.logo';
 
 @Component({
   selector: 'app-topbar',
@@ -14,7 +15,7 @@ import { LayoutService } from '../service/layout.service';
     CommonModule,
     StyleClassModule,
     AppConfigurator,
-    NgOptimizedImage,
+    AppLogo,
   ],
   template: ` <div class="layout-banner">Dartfreunde Borchen n.e.V.</div>
     <div class="layout-topbar">
@@ -26,12 +27,7 @@ import { LayoutService } from '../service/layout.service';
           <i class="pi pi-bars"></i>
         </button>
         <a class="layout-topbar-logo ml-4" routerLink="/">
-          <img
-            ngSrc="../../../assets/logo.inline.svg"
-            alt=""
-            height="38"
-            width="38"
-          />
+          <app-logo></app-logo>
         </a>
       </div>
 
