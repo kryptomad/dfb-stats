@@ -1,6 +1,7 @@
 import {Component} from '@angular/core';
 import {Card} from 'primeng/card';
 import {NgForOf} from '@angular/common';
+import { FieldsetModule } from 'primeng/fieldset';
 
 export interface Rekord {
   was: string;
@@ -14,7 +15,7 @@ export interface Rekord {
   templateUrl: './rekorde.component.html',
   styleUrls: ['./rekorde.component.scss'],
   standalone: true,
-  imports: [Card, NgForOf],
+  imports: [Card, NgForOf, FieldsetModule],
   providers: [],
 })
 export class RekordeComponent {
