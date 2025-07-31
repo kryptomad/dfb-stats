@@ -39,36 +39,48 @@ export class AppMenu implements OnInit {
         items: [
           {
             label: 'Jahrestabelle',
+            icon: 'pi pi-fw pi-table',
             routerLink: 'spieltag/jahrestabelle',
           },
         ],
       },
       {
         label: 'Spiele',
-        items: [],
+        items: [         
+          {
+            label: 'Alle Spiele',
+            icon: 'pi pi-fw pi-list',
+          },
+        ],
       },
       {
         label: 'Spieler',
         items: [
           {
             label: 'Bestleistungen',
+            icon: 'pi pi-fw pi-bolt',
           },
           {
             label: 'Spieler vs. Spieler',
+            icon: 'pi pi-fw pi-users',
           },
         ],
       },
       {
         label: 'Statistiken',
+        icon: 'pi pi-fw pi-crown',
         items: [
           {
             label: 'Allzeit-Rekorde',
+            icon: 'pi pi-fw pi-crown'
           },
           {
             label: 'Jahresvergleich',
+            icon: 'pi pi-fw pi-chart-bar',
           },
           {
             label: 'Trendverlauf',
+            icon: 'pi pi-fw pi-chart-line',
           },
         ],
       },
@@ -106,12 +118,15 @@ export class AppMenu implements OnInit {
         items: [
           {
             label: 'Spielregeln',
+            icon: 'pi pi-fw pi-book',
           },
           {
             label: 'Dartkasse',
+            icon: 'pi pi-fw pi-wallet',
           },
           {
             label: 'Vereinsregeln',
+            icon: 'pi pi-fw pi-file',
           },
         ],
       },
