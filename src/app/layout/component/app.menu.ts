@@ -42,11 +42,12 @@ export class AppMenu implements OnInit {
           {
             label: 'Aktueller Spieltag',
             icon: 'pi pi-fw pi-clock',
+            routerLink: 'pages/spieltag',
           },
           {
             label: 'Jahrestabelle',
             icon: 'pi pi-fw pi-table',
-            routerLink: 'spieltag/jahrestabelle',
+            routerLink: 'pages/spieltag',
           },
         ],
       },
@@ -56,6 +57,7 @@ export class AppMenu implements OnInit {
           {
             label: 'Alle Spiele',
             icon: 'pi pi-fw pi-list',
+            routerLink: 'pages/spiele',
           },
         ],
       },
@@ -65,28 +67,34 @@ export class AppMenu implements OnInit {
           {
             label: 'Bestleistungen',
             icon: 'pi pi-fw pi-bolt',
+            routerLink: 'pages/spieler',
           },
           {
             label: 'Spieler vs. Spieler',
             icon: 'pi pi-fw pi-users',
+            routerLink: 'pages/spieler',
           },
         ],
       },
       {
         label: 'Statistiken',
         icon: 'pi pi-fw pi-crown',
+        routerLink: 'pages/statistiken',
         items: [
           {
             label: 'Allzeit-Rekorde',
-            icon: 'pi pi-fw pi-crown'
+            icon: 'pi pi-fw pi-crown',
+            routerLink: 'pages/statistiken',
           },
           {
             label: 'Jahresvergleich',
             icon: 'pi pi-fw pi-chart-bar',
+            routerLink: 'pages/statistiken',
           },
           {
             label: 'Trendverlauf',
             icon: 'pi pi-fw pi-chart-line',
+            routerLink: 'pages/statistiken',
           },
         ],
       },
@@ -125,14 +133,17 @@ export class AppMenu implements OnInit {
           {
             label: 'Spielregeln',
             icon: 'pi pi-fw pi-book',
+            routerLink: 'pages/regelwerk',
           },
           {
             label: 'Dartkasse',
             icon: 'pi pi-fw pi-wallet',
+            routerLink: 'pages/regelwerk',
           },
           {
             label: 'Vereinsregeln',
             icon: 'pi pi-fw pi-file',
+            routerLink: 'pages/regelwerk',
           },
         ],
       },
