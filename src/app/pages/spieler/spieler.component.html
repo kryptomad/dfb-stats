@@ -2,7 +2,7 @@
 <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
   <p-card class="cursor-pointer rounded-xl hover:scale-[1.04] transition-all duration-300 min-h-[260px] max-h-[300px] max-w-[300px]" *ngFor="let player of players()">
     <ng-template pTemplate="header">
-      <img [src]="'assets/' + player.image" [alt]="player.name" class="w-full h-48 object-cover rounded-t-xl transition duration-300 hover:brightness-90" />
+      <img [src]="'assets/player/' + player.image" [alt]="player.name" class="w-full h-48 object-cover rounded-t-xl transition duration-300 hover:brightness-90" />
     </ng-template>
     <ng-template pTemplate="title">{{ player.name }}</ng-template>
     <ng-template pTemplate="subtitle">
@@ -23,7 +23,7 @@
     <!-- Linke Advanced Card mit fixer Breite -->
     <div class="w-[130px] flex-shrink-0">
       <div class="rounded-xl shadow-md pb-4">
-        <img src="assets/martin.png" class="rounded-t-xl w-full object-cover h-[150px]" />
+        <img src="assets/player/martin.png" class="rounded-t-xl w-full object-cover h-[150px]" />
 <div class="p-2">
 <div class="font-bold text-base flex items-center gap-2">
   <div class="font-bold text-xl ">Martin</div>
