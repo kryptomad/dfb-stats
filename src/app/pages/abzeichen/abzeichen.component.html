@@ -1,4 +1,23 @@
-<div class="mb-6">
+
+<p-card>
+<div *ngFor="let player of leaderboardData" class="flex items-center gap-4 mb-4">
+  <div class="flex-1">
+        <p-chip
+          label="{{ player.name }}"
+          image="{{ player.avatar }}"
+          alt="Avatar image"
+          class="profile-chip"
+        />
+<p-progressbar [value]="player.points" [showValue]="false" [style]="{height: '24px'}">
+  <ng-template #content let-value>
+    <span class="text-white font-bold">{{ player.points }}/100</span>
+  </ng-template>
+</p-progressbar>
+  </div>
+</div>
+</p-card>
+
+<div class="mb-6 mt-6">
 <p-fieldset legend="Abzeichen-System – So funktioniert’s" [toggleable]="true">
   <p>
     Jeder Spieltag ist ein neues Rennen um unsere exklusiven Dart-Abzeichen!<br>
