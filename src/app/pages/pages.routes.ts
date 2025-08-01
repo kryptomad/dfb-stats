@@ -1,9 +1,19 @@
 import { Routes } from '@angular/router';
 import { StartseiteComponent } from './startseite/startseite.component';
 import { RekordeComponent } from './rekorde/rekorde.component';
+import { SpieltagComponent } from './spieltag/spieltag.component';
+import { RegelwerkComponent } from './regelwerk/regelwerk.component';
+import { StatistikenComponent } from './statistiken/statistiken.component';
+import { SpielerComponent } from './spieler/spieler.component';
+import { SpieleComponent } from './spiele/spiele.component';
 
 export default [
   { path: 'startseite', component: StartseiteComponent },
   { path: 'rekorde', component: RekordeComponent },
+  { path: 'spieltag', component: SpieltagComponent },
+  { path: 'regelwerk', component: RegelwerkComponent },
+  { path: 'statistiken', component: StatistikenComponent },
+  { path: 'spieler', component: SpielerComponent },
+  { path: 'spiele', component: SpieleComponent },
   { path: '**', redirectTo: '/notfound' },
 ] as Routes;
