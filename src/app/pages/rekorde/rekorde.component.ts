@@ -1,5 +1,5 @@
-import {Component} from '@angular/core';
-import {Card} from 'primeng/card';
+import { Component } from '@angular/core';
+import { Card } from 'primeng/card';
 import { FieldsetModule } from 'primeng/fieldset';
 import { TableModule } from 'primeng/table';
 
@@ -82,5 +82,4 @@ export class RekordeComponent {
       count,
     };
   }
-
 }

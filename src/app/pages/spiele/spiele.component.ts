@@ -5,8 +5,6 @@ import { Component } from '@angular/core';
   imports: [],
   templateUrl: './spiele.component.html',
   styleUrl: './spiele.component.scss',
-  standalone: true
+  standalone: true,
 })
-export class SpieleComponent {
-
-}
+export class SpieleComponent {}

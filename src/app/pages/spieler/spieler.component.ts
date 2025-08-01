@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {Card} from 'primeng/card';
+import { Card } from 'primeng/card';
 import { FieldsetModule } from 'primeng/fieldset';
 import { TagModule } from 'primeng/tag';
 import { TabsModule } from 'primeng/tabs';
@@ -9,8 +9,6 @@ import { TabsModule } from 'primeng/tabs';
   imports: [Card, FieldsetModule, TagModule, TabsModule],
   templateUrl: './spieler.component.html',
   styleUrl: './spieler.component.scss',
-  standalone: true
+  standalone: true,
 })
-export class SpielerComponent {
-
-}
+export class SpielerComponent {}

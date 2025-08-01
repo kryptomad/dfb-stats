@@ -6,8 +6,8 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  margin: 0 0.1em;  /* Horizontaler Abstand */
-  min-width: 25px;  /* Mindestbreite, damit die Zahlen nicht zu schmal wirken */
+  margin: 0 0.1em; /* Horizontaler Abstand */
+  min-width: 25px; /* Mindestbreite, damit die Zahlen nicht zu schmal wirken */
   min-height: 25px; /* Mindesthöhe */
 }
 
@@ -22,7 +22,6 @@
   background-color: #ff4c42;
   color: white;
 }
-
 
 hr.divider {
   border: none;

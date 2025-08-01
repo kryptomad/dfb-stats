@@ -31,9 +31,7 @@ export class AppMenu implements OnInit {
       {
         label: 'Startseite',
         items: [
-          { label: 'Startseite',
-            icon: 'pi pi-fw pi-home',
-            routerLink: '/' },
+          { label: 'Startseite', icon: 'pi pi-fw pi-home', routerLink: '/' },
         ],
       },
       {
@@ -53,7 +51,7 @@ export class AppMenu implements OnInit {
       },
       {
         label: 'Spiele',
-        items: [         
+        items: [
           {
             label: 'Alle Spiele',
             icon: 'pi pi-fw pi-list',

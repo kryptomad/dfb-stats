@@ -5,8 +5,6 @@ import { Component } from '@angular/core';
   imports: [],
   templateUrl: './regelwerk.component.html',
   styleUrl: './regelwerk.component.scss',
-  standalone: true
+  standalone: true,
 })
-export class RegelwerkComponent {
-
-}
+export class RegelwerkComponent {}
