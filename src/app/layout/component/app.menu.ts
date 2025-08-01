@@ -31,9 +31,7 @@ export class AppMenu implements OnInit {
       {
         label: 'Startseite',
         items: [
-          { label: 'Startseite',
-            icon: 'pi pi-fw pi-home',
-            routerLink: '/' },
+          { label: 'Startseite', icon: 'pi pi-fw pi-home', routerLink: '/' },
         ],
       },
       {
@@ -53,7 +51,7 @@ export class AppMenu implements OnInit {
       },
       {
         label: 'Spiele',
-        items: [         
+        items: [
           {
             label: 'Alle Spiele',
             icon: 'pi pi-fw pi-list',
@@ -64,7 +62,7 @@ export class AppMenu implements OnInit {
       {
         label: 'Spieler',
         items: [
-                    {
+          {
             label: 'Spieler',
             icon: 'pi pi-fw pi-user',
             routerLink: 'pages/spieler',
@@ -149,6 +147,16 @@ export class AppMenu implements OnInit {
             label: 'Vereinsregeln',
             icon: 'pi pi-fw pi-file',
             routerLink: 'pages/regelwerk',
+          },
+        ],
+      },
+      {
+        label: 'Abzeichen',
+        items: [
+          {
+            label: 'Abzeichen',
+            icon: 'pi pi-fw pi-shield',
+            routerLink: 'pages/abzeichen',
           },
         ],
       },
