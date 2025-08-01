@@ -1,4 +1,4 @@
-<div class="mt-5">
+<div id="gesamtwertungen" class="mt-5">
 <p-card header="Gesamtwertungen">
   <p-table [value]="gesamtwertungen">
     <ng-template pTemplate="header">
@@ -21,7 +21,7 @@
 </p-card>
 </div>
 
-<div class="mt-5">
+<div id="jahreswertungen" class="mt-5">
 <p-card header="Jahreswertungen">
   <p-table [value]="jahreswertungen">
     <ng-template pTemplate="header">
@@ -44,7 +44,7 @@
 </p-card>
 </div>
 
-<div class="mt-5">
+<div id="spieltagswertungen" class="mt-5">
 <p-card header="Spieltagswertungen">
   <p-table [value]="spieltagswertungen">
     <ng-template pTemplate="header">
@@ -67,30 +67,7 @@
 </p-card>
 </div>
 
-<div class="mt-5">
-<p-card header="Spieltagswertungen">
-  <p-table [value]="spieltagswertungen">
-    <ng-template pTemplate="header">
-      <tr>
-        <th>Rekord</th>
-        <th>Wert</th>
-        <th>Name</th>
-        <th>Datum</th>
-      </tr>
-    </ng-template>
-    <ng-template pTemplate="body" let-rekord>
-      <tr>
-        <td>{{ rekord.was }}</td>
-        <td>{{ rekord.count }}</td>
-        <td>{{ rekord.wer }}</td>
-        <td>{{ rekord.wann }}</td>
-      </tr>
-    </ng-template>
-  </p-table>
-</p-card>
-</div>
-
-<div class="mt-5">
+<div id="matchwertungen" class="mt-5">
 <p-card header="Matchwertungen [6]">
   <p-table [value]="matchwertungen">
     <ng-template pTemplate="header">
