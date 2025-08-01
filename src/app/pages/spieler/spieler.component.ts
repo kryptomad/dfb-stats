@@ -1,14 +1,22 @@
-import { Component } from '@angular/core';
+import { Component, inject, computed } from '@angular/core';
+import { PlayersService, Player } from '../../services/players.service';
 import { Card } from 'primeng/card';
 import { FieldsetModule } from 'primeng/fieldset';
 import { TagModule } from 'primeng/tag';
 import { TabsModule } from 'primeng/tabs';
+import { NgForOf, NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-spieler',
-  imports: [Card, FieldsetModule, TagModule, TabsModule],
+  imports: [NgForOf, NgIf, Card, FieldsetModule, TagModule, TabsModule],
+  providers: [PlayersService],
   templateUrl: './spieler.component.html',
   styleUrl: './spieler.component.scss',
   standalone: true,
 })
-export class SpielerComponent {}
+export class SpielerComponent {
+  private _playersService = inject(PlayersService);
+  private _players = this._playersService.loadPlayers();
+
+  players = computed(() => this._players());
+}

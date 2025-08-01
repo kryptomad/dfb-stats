@@ -3,6 +3,35 @@ import { Component } from '@angular/core';
 @Component({
   standalone: true,
   selector: 'app-footer',
-  template: `<div class="layout-footer"></div>`,
+  template: `
+    <footer class="app-footer">
+      <div>© {{ year }} Dartfreunde Borchen n.e.V.</div>
+      <div>
+        <a href="/impressum">Impressum</a> ·
+        <a href="/datenschutz">Datenschutz</a>
+      </div>
+    </footer>
+  `,
+  styles: [
+    `
+      .app-footer {
+        text-align: center;
+        color: var(--text-color-secondary);
+        padding: 1rem 0;
+        font-size: 0.95rem;
+      }
+      .app-footer a {
+        color: var(--text-color-secondary);
+        opacity: 0.7;
+        text-decoration: underline;
+        margin: 0 0.4em;
+      }
+      .app-footer a:hover {
+        opacity: 1;
+      }
+    `,
+  ],
 })
-export class AppFooter {}
+export class AppFooter {
+  year: number = new Date().getFullYear();
+}

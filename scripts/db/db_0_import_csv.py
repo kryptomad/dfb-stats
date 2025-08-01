@@ -18,7 +18,10 @@ CREATE TABLE IF NOT EXISTS players (
     player_id INTEGER UNIQUE,
     name TEXT NOT NULL,
     nationality TEXT,
-    nickname TEXT
+    nickname TEXT,
+    image TEXT,
+    memberSince INTEGER,
+    isFounder INTEGER
 )
 ''')
 

@@ -63,6 +63,11 @@ export class AppMenu implements OnInit {
         label: 'Spieler',
         items: [
           {
+            label: 'Spieler',
+            icon: 'pi pi-fw pi-user',
+            routerLink: 'pages/spieler',
+          },
+          {
             label: 'Bestleistungen',
             icon: 'pi pi-fw pi-bolt',
             routerLink: 'pages/spieler',
