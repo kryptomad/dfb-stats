@@ -1,3 +1,16 @@
+
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+  <p-card *ngFor="let player of players()">
+    <ng-template pTemplate="header">
+      <img [src]="player.image" [alt]="player.name" class="w-full h-48 object-cover" />
+    </ng-template>
+    <ng-template pTemplate="title">{{ player.name }}</ng-template>
+    <ng-template pTemplate="subtitle">{{ player.nickname }}</ng-template>
+    <p>Mitglied seit {{ player.memberSince }}</p>
+  </p-card>
+</div>
+
+
 <p-card class="p-6">
   <div class="flex flex-row gap-6 items-start">
     <!-- Linke Advanced Card mit fixer Breite -->
