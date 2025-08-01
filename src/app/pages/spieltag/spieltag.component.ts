@@ -5,7 +5,8 @@ import {Card} from 'primeng/card';
   selector: 'app-spieltag',
   imports: [Card],
   templateUrl: './spieltag.component.html',
-  styleUrl: './spieltag.component.scss'
+  styleUrl: './spieltag.component.scss',
+  standalone: true
 })
 export class SpieltagComponent {
 

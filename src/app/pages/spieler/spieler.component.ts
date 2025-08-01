@@ -8,7 +8,8 @@ import { TabsModule } from 'primeng/tabs';
   selector: 'app-spieler',
   imports: [Card, FieldsetModule, TagModule, TabsModule],
   templateUrl: './spieler.component.html',
-  styleUrl: './spieler.component.scss'
+  styleUrl: './spieler.component.scss',
+  standalone: true
 })
 export class SpielerComponent {
 
