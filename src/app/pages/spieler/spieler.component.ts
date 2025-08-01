@@ -4,11 +4,11 @@ import {Card} from 'primeng/card';
 import { FieldsetModule } from 'primeng/fieldset';
 import { TagModule } from 'primeng/tag';
 import { TabsModule } from 'primeng/tabs';
-import { NgForOf } from '@angular/common';
+import { NgForOf, NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-spieler',
-  imports: [NgForOf, Card, FieldsetModule, TagModule, TabsModule],
+  imports: [NgForOf, NgIf, Card, FieldsetModule, TagModule, TabsModule],
   providers: [PlayersService],
   templateUrl: './spieler.component.html',
   styleUrl: './spieler.component.scss'
