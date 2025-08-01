@@ -16,13 +16,16 @@ def export_players(limit=None):
     conn.row_factory = sqlite3.Row
     cursor = conn.cursor()
 
-    # Daten abfragen
+    # Daten abfragen, jetzt mit neuen Spalten
     query = f"""
         SELECT
             id   AS player_id,
             name,
             nationality,
-            nickname
+            nickname,
+            image,
+            memberSince,
+            isFounder
         FROM players
         ORDER BY id
         {"LIMIT :limit" if limit else ""}
@@ -38,7 +41,10 @@ def export_players(limit=None):
             "player_id": row["player_id"],
             "name": row["name"],
             "nationality": row["nationality"],
-            "nickname": row["nickname"]
+            "nickname": row["nickname"],
+            "image": row["image"],
+            "memberSince": row["memberSince"],
+            "isFounder": bool(row["isFounder"])  # 0/1 -> True/False
         })
 
     # Sicherstellen, dass Ausgabeverzeichnis existiert
