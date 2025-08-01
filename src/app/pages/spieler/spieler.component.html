@@ -1,1 +1,120 @@
-<p>spieler works!</p>
+<p-card class="p-6">
+  <div class="flex flex-row gap-6 items-start">
+    <!-- Linke Advanced Card mit fixer Breite -->
+    <div class="w-[130px] flex-shrink-0">
+      <div class="rounded-xl shadow-md pb-4">
+        <img src="assets/frank.png" class="rounded-t-xl w-full object-cover h-[150px]" />
+<div class="p-2">
+<div class="font-bold text-base flex items-center gap-2">
+  <div class="font-bold text-xl ">Martin</div>
+</div>
+  <div class="text-xl">mad</div>
+  <div class="text-xs text-gray-400 mb-2">Mitglied seit 2007</div>
+</div>
+        <div class="flex gap-1 px-2">
+          <button pButton label="Jahr" class="p-button-sm"></button>
+          <button pButton label="Saison" class="p-button-outlined p-button-sm"></button>
+          <button pButton label="Matchday" class="p-button-outlined p-button-sm"></button>
+        </div>
+      </div>
+    </div>
+    <!-- Rechter Bereich: Mini-Cards, eigene Spalte -->
+    <div class="flex-1 w-full">
+      <div class="grid grid-cols-2 sm:grid-cols-3 gap-2">
+        <!-- Card 1 -->
+        <p-card>
+          <div class="stats-mini">
+            <div class="text-s font-semibold mb-1">Checkout</div>
+            <div class="stat-card-value">99</div>
+          </div>
+        </p-card>
+        <!-- Card 2 -->
+        <p-card>
+          <div class="stats-mini">
+            <div class="text-s font-semibold mb-1">Best Leg</div>
+            <div class="stat-card-value">19</div>
+          </div>
+        </p-card>
+        <!-- Card 3 -->
+        <p-card>
+          <div class="stats-mini">
+            <div class="text-s font-semibold mb-1">3DA</div>
+            <div class="stat-card-value">60.12</div>
+          </div>
+        </p-card>
+        <!-- Card 4 -->
+        <p-card>
+          <div class="stats-mini">
+            <div class="text-s font-semibold mb-1">First 9</div>
+            <div class="stat-card-value">73.11</div>
+          </div>
+        </p-card>
+        <!-- Card 5 -->
+        <p-card>
+          <div class="stats-mini">
+            <div class="text-s font-semibold mb-1">140s</div>
+            <div class="stat-card-value">2</div>
+          </div>
+        </p-card>
+        <!-- Card 6 -->
+        <p-card>
+          <div class="stats-mini">
+            <div class="text-s font-semibold mb-1">180s</div>
+            <div class="stat-card-value">1</div>
+          </div>
+        </p-card>
+      </div>
+    </div>
+  </div>
+  <!-- Neuer Block: Badges -->
+<p-card class="p-4">
+  <p-fieldset legend="Badges" [toggleable]="true" [collapsed]="false">
+      <div class="grid grid-cols-2 sm:grid-cols-3 gap-2">
+      <p-tag severity="warn" icon="pi pi-exclamation-triangle" value="Ton-Maschine"></p-tag>
+      <p-tag severity="danger" icon="pi pi-times" value="Clutch King"></p-tag>
+      <p-tag severity="info" icon="pi pi-cog" value="180-Gott"></p-tag>
+      <p-tag severity="success" icon="pi pi-check" value="Checkout Monster"></p-tag>
+      <!-- ...mehr Badges... -->
+    </div>
+  </p-fieldset>
+</p-card>
+
+
+<p-tabs value="0">
+    <p-tablist>
+        <p-tab value="0">Jahresvergleich</p-tab>
+        <p-tab value="1">Trendverlauf</p-tab>
+        <p-tab value="2">Stats</p-tab>
+    </p-tablist>
+    <p-tabpanels>
+        <p-tabpanel value="0">
+            <p class="m-0">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+                ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+                anim id est laborum.
+            </p>
+        </p-tabpanel>
+        <p-tabpanel value="1">
+            <p class="m-0">
+                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
+                aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+                Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni
+                dolores eos qui ratione voluptatem sequi nesciunt. Consectetur, adipisci velit, sed quia non numquam eius
+                modi.
+            </p>
+        </p-tabpanel>
+        <p-tabpanel value="2">
+            <p class="m-0">
+                At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti
+                atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique
+                sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum
+                facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil
+                impedit quo minus.
+            </p>
+        </p-tabpanel>
+    </p-tabpanels>
+</p-tabs>
+</p-card>
+
