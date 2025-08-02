@@ -32,4 +32,10 @@ export class PlayersService {
 
     return signal<Player[]>(players);
   }
+
+  // >>> HIER NEU <<<
+  getPlayerById(id: number): Player | undefined {
+    const players = this.loadPlayers()();
+    return players.find((p) => p.id === id);
+  }
 }

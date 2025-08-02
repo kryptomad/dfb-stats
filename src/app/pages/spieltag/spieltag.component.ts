@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RouterModule } from '@angular/router';
 import { GamesService } from '../../services/games.service';
 import { NgForOf, NgIf } from '@angular/common';
 import { Card } from 'primeng/card';
@@ -7,7 +8,7 @@ import { TableModule } from 'primeng/table';
 
 @Component({
   selector: 'app-spieltag',
-  imports: [Card, NgForOf, NgIf, ChartModule, TableModule],
+  imports: [Card, NgForOf, NgIf, ChartModule, TableModule, RouterModule],
   providers: [GamesService],
   templateUrl: './spieltag.component.html',
   styleUrl: './spieltag.component.scss',

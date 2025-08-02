@@ -18,6 +18,6 @@ export default [
   { path: 'spieler', component: SpielerComponent },
   { path: 'spiele', component: SpieleComponent },
   { path: 'abzeichen', component: AbzeichenComponent },
-  { path: 'legs', component: LegsComponent },
+  { path: 'legs/:game_id', component: LegsComponent },
   { path: '**', redirectTo: '/notfound' },
 ] as Routes;
