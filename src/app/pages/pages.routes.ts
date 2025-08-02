@@ -7,6 +7,7 @@ import { StatistikenComponent } from './statistiken/statistiken.component';
 import { SpielerComponent } from './spieler/spieler.component';
 import { SpieleComponent } from './spiele/spiele.component';
 import { AbzeichenComponent } from './abzeichen/abzeichen.component';
+import { LegsComponent } from './legs/legs.component';
 
 export default [
   { path: 'startseite', component: StartseiteComponent },
@@ -17,5 +18,6 @@ export default [
   { path: 'spieler', component: SpielerComponent },
   { path: 'spiele', component: SpieleComponent },
   { path: 'abzeichen', component: AbzeichenComponent },
+  { path: 'legs', component: LegsComponent },
   { path: '**', redirectTo: '/notfound' },
 ] as Routes;
