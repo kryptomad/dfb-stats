@@ -1,0 +1,123 @@
+<p-card class="p-6">
+  <div class="flex flex-row gap-6 items-start">
+    <div class="w-[140px] flex-shrink-0">
+      <div class="rounded-xl shadow-md pb-4">
+        <img [src]="'assets/players/' + player?.image" [alt]="player?.name" class="rounded-t-xl w-full object-cover h-[140px]" />
+<div class="p-2">
+<div class="font-bold text-base flex items-center gap-2">
+  <div class="font-bold text-xl ">{{ player?.name }}</div>
+</div>
+  <div class="nickname text-xl">{{ player?.nickname }}</div>
+<div class="text-l mt-2">
+  <p-tag *ngIf="player?.isFounder; else memberSinceTpl" severity="primary" value="Gründer"></p-tag>
+<ng-template #memberSinceTpl>
+  <span class="mitglied">Mitglied seit {{ player?.memberSince }}</span>
+</ng-template>
+</div>
+<div class="flex flex-col gap-2 mt-3">
+<div class="custom-badge">
+  <span class="label">Jahresoskar</span>
+  <span class="count">xx</span>
+</div>
+<div class="custom-badge">
+  <span class="label">Monatoskar</span>
+  <span class="count">xx</span>
+</div>
+</div>
+    </div>
+    </div>
+    </div>
+    <div class="flex-1 w-full">
+      <div class="grid grid-cols-2 sm:grid-cols-3 gap-2">
+
+        <p-card>
+          <div class="stats-mini">
+            <div class="text-s font-semibold mb-1">Checkout</div>
+            <div class="stat-card-value">99</div>
+          </div>
+        </p-card>
+
+        <p-card>
+          <div class="stats-mini">
+            <div class="text-s font-semibold mb-1">Best Leg</div>
+            <div class="stat-card-value">19</div>
+          </div>
+        </p-card>
+
+        <p-card>
+          <div class="stats-mini">
+            <div class="text-s font-semibold mb-1">3DA</div>
+            <div class="stat-card-value">60.12</div>
+          </div>
+        </p-card>
+
+        <p-card>
+          <div class="stats-mini">
+            <div class="text-s font-semibold mb-1">First 9</div>
+            <div class="stat-card-value">73.11</div>
+          </div>
+        </p-card>
+
+        <p-card>
+          <div class="stats-mini">
+            <div class="text-s font-semibold mb-1">140s</div>
+            <div class="stat-card-value">2</div>
+          </div>
+        </p-card>
+
+        <p-card>
+          <div class="stats-mini">
+            <div class="text-s font-semibold mb-1">180s</div>
+            <div class="stat-card-value">1</div>
+          </div>
+        </p-card>
+      </div>
+    </div>
+</div>
+
+  <!-- ABZEICHEN -->
+
+</p-card>
+<p-card class="p-4">
+  <p-fieldset legend="Abzeichen" [toggleable]="true" [collapsed]="false">
+    <p class="m-0">Das Abzeichen Feature ist noch im Aufbau!</p>
+  </p-fieldset>
+</p-card>
+
+
+<p-tabs value="0">
+    <p-tablist>
+        <p-tab value="0">Jahresvergleich</p-tab>
+        <p-tab value="1">Trendverlauf</p-tab>
+        <p-tab value="2">Stats</p-tab>
+    </p-tablist>
+    <p-tabpanels>
+        <p-tabpanel value="0">
+            <p class="m-0">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+                ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+                anim id est laborum.
+            </p>
+        </p-tabpanel>
+        <p-tabpanel value="1">
+            <p class="m-0">
+                Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
+                aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+                Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni
+                dolores eos qui ratione voluptatem sequi nesciunt. Consectetur, adipisci velit, sed quia non numquam eius
+                modi.
+            </p>
+        </p-tabpanel>
+        <p-tabpanel value="2">
+            <p class="m-0">
+                At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti
+                atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique
+                sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum
+                facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil
+                impedit quo minus.
+            </p>
+        </p-tabpanel>
+    </p-tabpanels>
+</p-tabs>

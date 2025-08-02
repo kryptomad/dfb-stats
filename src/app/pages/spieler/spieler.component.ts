@@ -5,13 +5,22 @@ import { FieldsetModule } from 'primeng/fieldset';
 import { TagModule } from 'primeng/tag';
 import { TabsModule } from 'primeng/tabs';
 import { NgForOf, NgIf } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-spieler',
-  imports: [NgForOf, NgIf, Card, FieldsetModule, TagModule, TabsModule],
+  imports: [
+    NgForOf,
+    NgIf,
+    Card,
+    FieldsetModule,
+    TagModule,
+    TabsModule,
+    RouterModule,
+  ],
   providers: [PlayersService],
   templateUrl: './spieler.component.html',
-  styleUrl: './spieler.component.scss'
+  styleUrl: './spieler.component.scss',
 })
 export class SpielerComponent {
   private _playersService = inject(PlayersService);
