@@ -50,9 +50,9 @@
 <h2 id="naechster-oskarabend">Nächster Oskarabend</h2>
 <div class="mb-4">
   Saison:
-  <span class="text-primary-700">{{ season() }}</span>
+  <span class="text-primary">{{ season() }}</span>
   – Spieltag:
-  <span class="text-primary-700">{{ matchday() }}</span>
+  <span class="text-primary">{{ matchday() }}</span>
 </div>
 <p-card>
   <p-table [value]="games() || []">
@@ -65,7 +65,7 @@
     </ng-template>
     <ng-template #body let-game>
       <tr>
-        <td class="writer">{{ game.writer }}</td>
+        <td class="schreiber">{{ game.writer }}</td>
         <td>{{ game.player1 }}</td>
         <td>{{ game.player2 }}</td>
       </tr>

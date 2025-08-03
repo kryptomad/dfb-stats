@@ -4,6 +4,7 @@ import { NgIf, NgFor } from '@angular/common';
 import { CommonModule } from '@angular/common';
 import { Card } from 'primeng/card';
 import { ButtonModule } from 'primeng/button';
+import { TableModule } from 'primeng/table';
 import { PlayersService, Player } from '../../services/players.service';
 import * as legsData from '../../../assets/legs.json';
 import * as statsData from '../../../assets/stats.json';
@@ -23,7 +24,7 @@ export const LEG_STATS_FIELDS = [
 
 @Component({
   selector: 'app-legs',
-  imports: [NgIf, NgFor, Card, ButtonModule, CommonModule],
+  imports: [NgIf, NgFor, Card, ButtonModule, CommonModule, TableModule],
   providers: [PlayersService],
   templateUrl: './legs.component.html',
   styleUrl: './legs.component.scss',
