@@ -68,14 +68,16 @@
             <span class="font-semibold">{{ abz.punkte }}</span>
           </td>
           <td>{{ abz.beschreibung }}</td>
-          <td class="flex items-center gap-2">
-  <p-overlay-badge [value]="abz.count" severity="info" class="inline-flex">
-    <p-avatar
-      [image]="getSpielerBild(abz.halterId)"
-      shape="circle"
-      size="large"
-    ></p-avatar>
-  </p-overlay-badge>
+<td>
+  <div class="flex items-center gap-2">
+    <p-overlay-badge [value]="abz.count" severity="info" class="inline-flex">
+      <p-avatar
+        [image]="getSpielerBild(abz.halterId)"
+        shape="circle"
+        size="large"
+      ></p-avatar>
+    </p-overlay-badge>
+  </div>
 </td>
         </tr>
       </ng-template>
