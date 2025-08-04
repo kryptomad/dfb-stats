@@ -1,6 +1,6 @@
 <h2 id="aktueller-spieltag">{{ letzteSpieltage[0]?.season }} – Spieltag {{ letzteSpieltage[0]?.matchday }}</h2>
 <p-card>
-<div *ngFor="let spieltag of letzteSpieltage" class="flex flex-col gap-2 w-full mb-2" [routerLink]="['/pages/legs', spieltag.game_id]">
+<div *ngFor="let spieltag of letzteSpieltage" class="flex flex-col gap-2 w-auto mb-2" [routerLink]="['/pages/legs', spieltag.game_id]">
   <!-- Einzelnes Spiel -->
   <div class="flex flex-row items-center justify-center gap-8 py-2 rounded-md transition-all duration-200 cursor-pointer hover:bg-slate-200 dark:hover:bg-slate-700 hover:bg-opacity-80">
     <!-- Spieler 1 -->

@@ -1,1 +1,139 @@
-<p>spiele works!</p>
+
+<div class="filter-bar flex flex-wrap gap-2 mb-4 mt-5">
+  <!-- Saison MultiSelect -->
+  <p-multiSelect
+    [options]="seasons"
+    [(ngModel)]="selectedSeasons"
+    placeholder="Saison wählen"
+    (onChange)="filterGames()"
+    display="chip"
+  />
+  <p-multiSelect
+    [options]="matchdays"
+    [(ngModel)]="selectedMatchdays"
+    placeholder="Spieltag wählen"
+    (onChange)="filterGames()"
+    display="chip"
+  />
+  <p-dropdown
+    [options]="players"
+    [(ngModel)]="selectedPlayer"
+    optionLabel="name"
+    placeholder="Spieler wählen"
+    (onChange)="filterGames()"
+    class="w-44"
+  />
+  <p-multiSelect
+    [options]="players"
+    [(ngModel)]="selectedOpponents"
+    optionLabel="name"
+    placeholder="Gegner wählen"
+    (onChange)="filterGames()"
+    display="chip"
+  />
+  <p-multiSelect
+    [options]="ergebnisOptions"
+    [(ngModel)]="selectedErgebnisse"
+    placeholder="Ergebnis wählen"
+    (onChange)="filterGames()"
+    display="chip"
+  />
+</div>
+
+<div class="filter-bar flex flex-wrap gap-2 mb-4">
+  <p-button
+    type="button"
+    class="reset-btn"
+    (click)="resetFilters()"
+  >
+    <i class="pi pi-times-circle mr-1"></i>
+    Alle Filter zurücksetzen
+  </p-button>
+</div>
+
+<div *ngIf="filteredSpiele.length === 0; else spieleListe" class="no-results mt-8">
+<div class="text-left text-mg text-gray-400">
+  <span>
+    Setze einen Filter (Saison, Spieler, etc.), um Spiele zu sehen.<br>
+  </span>
+  <br />
+  <span><span class="hinweis">Hinweis:</span><br> Der Gewinner steht immer links. Wenn dein gewählter Spieler verliert, findest du ihn rechts.</span>
+</div>
+</div>
+<ng-template #spieleListe>
+  <p-card class="mb-4">
+    <ng-container *ngFor="let spieltag of filteredSpiele; let last = last">
+      <ng-container *ngIf="getPlayersOrdered(spieltag) as players">
+        <div
+          class="flex flex-row items-center justify-center gap-8 py-2 rounded-md cursor-pointer hover:bg-slate-200 dark:hover:bg-slate-700 hover:bg-opacity-80"
+          [routerLink]="['/pages/legs', spieltag.game_id]"
+        >
+          <!-- Linker Spieler (Gewinner) -->
+          <div class="flex flex-col items-end min-w-[130px]">
+            <span
+              class="text-lg font-semibold"
+              [class.font-bold]="
+                selectedPlayer && selectedPlayer.name === players.left
+              "
+            >
+              {{ players.left }}
+            </span>
+            <span class="text-gray-400 text-sm">
+              {{
+                spieltag[
+                  players.left === spieltag.player1
+                    ? 'p1_avg_3dart_match'
+                    : 'p2_avg_3dart_match'
+                ]
+              }}
+            </span>
+          </div>
+
+          <!-- Scores -->
+          <div class="flex flex-row items-center gap-2">
+            <span class="score-box winner">
+              {{
+                spieltag[
+                  players.left === spieltag.player1
+                    ? 'p1_legs_won'
+                    : 'p2_legs_won'
+                ]
+              }}
+            </span>
+            <span class="score-box loser">
+              {{
+                spieltag[
+                  players.right === spieltag.player1
+                    ? 'p1_legs_won'
+                    : 'p2_legs_won'
+                ]
+              }}
+            </span>
+          </div>
+
+          <!-- Rechter Spieler (Verlierer) -->
+          <div class="flex flex-col items-start min-w-[130px]">
+            <span
+              class="text-lg font-semibold"
+              [class.font-bold]="
+                selectedPlayer && selectedPlayer.name === players.right
+              "
+            >
+              {{ players.right }}
+            </span>
+            <span class="text-gray-400 text-sm">
+              {{
+                spieltag[
+                  players.right === spieltag.player1
+                    ? 'p1_avg_3dart_match'
+                    : 'p2_avg_3dart_match'
+                ]
+              }}
+            </span>
+          </div>
+        </div>
+        <hr *ngIf="!last" class="divider" />
+      </ng-container>
+    </ng-container>
+  </p-card>
+</ng-template>

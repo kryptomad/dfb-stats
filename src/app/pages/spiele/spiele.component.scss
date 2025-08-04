@@ -1,0 +1,38 @@
+/* Score-Box Style, Form etc. */
+.score-box {
+  padding: 0.1em 0.3em;
+  border-radius: 0.4em;
+  font-weight: 800;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0.1em;  /* Horizontaler Abstand */
+  min-width: 25px;  /* Mindestbreite, damit die Zahlen nicht zu schmal wirken */
+  min-height: 25px; /* Mindesthöhe */
+}
+
+/* Farben für den Gewinner & CD (CheckDarts) */
+.winner {
+  background-color: #309f6a;
+  color: white;
+}
+
+/* Farben für den Verlierer */
+.loser {
+  background-color: #ff4c42;
+  color: white;
+}
+
+
+hr.divider {
+  border: none;
+  border-top: 1px solid var(--surface-border, #e5e7eb); /* Hellgrau, wie Tailwind */
+  margin: 0; /* oder ein bisschen vertical spacing falls nötig */
+}
+
+.hinweis {
+  color: var(--primary-color);
+  margin: 0;
+  padding: 0;
+}
+
