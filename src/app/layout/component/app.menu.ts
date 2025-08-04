@@ -58,6 +58,7 @@ export class AppMenu implements OnInit {
             label: 'Alle Spiele',
             icon: 'pi pi-fw pi-list',
             routerLink: 'pages/spiele',
+            fragment: 'alle-spiele',
           },
         ],
       },

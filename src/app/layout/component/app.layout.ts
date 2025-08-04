@@ -1,4 +1,4 @@
-import { Component, Renderer2, ViewChild } from '@angular/core';
+import { Component, Renderer2, ViewChild, AfterViewInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NavigationEnd, Router, RouterModule } from '@angular/router';
 import { filter, Subscription } from 'rxjs';
@@ -23,7 +23,7 @@ import { LayoutService } from '../service/layout.service';
     <div class="layout-mask animate-fadein"></div>
   </div> `,
 })
-export class AppLayout {
+export class AppLayout implements AfterViewInit {
   overlayMenuOpenSubscription: Subscription;
 
   menuOutsideClickListener: any;
@@ -135,5 +135,28 @@ export class AppLayout {
     if (this.menuOutsideClickListener) {
       this.menuOutsideClickListener();
     }
+  }
+
+  ngAfterViewInit() {
+    const adjustScrollOffset = () => {
+      if (window.location.hash) {
+        setTimeout(() => {
+          window.scrollBy(0, -80);
+        }, 200);
+      }
+    };
+
+    // Beim initialen Laden (1x)
+    window.addEventListener('load', adjustScrollOffset);
+
+    // Beim Fragmentwechsel (z.B. user klickt #id)
+    window.addEventListener('hashchange', adjustScrollOffset);
+
+    // Beim Angular-Routenwechsel (mehrmals)
+    this.router.events
+      .pipe(filter((event) => event instanceof NavigationEnd))
+      .subscribe(() => {
+        adjustScrollOffset();
+      });
   }
 }
