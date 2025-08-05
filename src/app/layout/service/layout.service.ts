@@ -26,13 +26,20 @@ interface MenuChangeEvent {
   providedIn: 'root',
 })
 export class LayoutService {
-  _config: layoutConfig = {
-    preset: 'Aura',
-    primary: 'rose',
-    surface: null,
-    darkTheme: false,
-    menuMode: 'static',
-  };
+
+  private loadLayoutConfig(): layoutConfig {
+    const defaultLayoutConfig: layoutConfig = {
+      preset: 'Aura',
+          primary: 'rose',
+        surface: null,
+        darkTheme: false,
+        menuMode: 'static',
+    }
+    const layoutConfig = localStorage.getItem('layoutConfig');
+    return layoutConfig ? JSON.parse(layoutConfig) : defaultLayoutConfig;
+  }
+
+  _config: layoutConfig = this.loadLayoutConfig();
 
   _state: LayoutState = {
     staticMenuDesktopInactive: false,
@@ -99,6 +106,10 @@ export class LayoutService {
       }
 
       this.handleDarkModeTransition(config);
+    });
+
+    this.configUpdate.subscribe(value => {
+      localStorage.setItem('layoutConfig', JSON.stringify(value));
     });
   }
 
