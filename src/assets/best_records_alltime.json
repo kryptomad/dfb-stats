@@ -1,0 +1,107 @@
+[
+  {
+    "modus": "match",
+    "einträge": [
+      {
+        "kategorie": "Highest Checkout",
+        "wert": 156,
+        "spieler": "Uwe"
+      },
+      {
+        "kategorie": "Best 3 Dart Average",
+        "wert": 79.11,
+        "spieler": "Martin"
+      },
+      {
+        "kategorie": "Most TONs",
+        "wert": 8,
+        "spieler": "Martin"
+      },
+      {
+        "kategorie": "Most 140s",
+        "wert": 3,
+        "spieler": ["Franz-Josef", "Martin"]
+      },
+      {
+        "kategorie": "Most 180s",
+        "wert": 1,
+        "spieler": ["Frank", "Franz-Josef", "Martin", "Uwe"]
+      }
+    ]
+  },
+  {
+    "modus": "session",
+    "einträge": [
+      {
+        "kategorie": "Best 3 Dart Average",
+        "wert": 79.11,
+        "spieler": "Martin"
+      },
+      {
+        "kategorie": "Most TONs",
+        "wert": 55,
+        "spieler": "Martin"
+      },
+      {
+        "kategorie": "Most 140s",
+        "wert": 23,
+        "spieler": "Martin"
+      },
+      {
+        "kategorie": "Most 180s",
+        "wert": 3,
+        "spieler": "Martin"
+      }
+    ]
+  },
+  {
+    "modus": "season",
+    "einträge": [
+      {
+        "kategorie": "Best 3 Dart Average",
+        "wert": 53.94,
+        "spieler": "Martin"
+      },
+      {
+        "kategorie": "Most TONs",
+        "wert": 99,
+        "spieler": "Martin"
+      },
+      {
+        "kategorie": "Most 140s",
+        "wert": 30,
+        "spieler": "Martin"
+      },
+      {
+        "kategorie": "Most 180s",
+        "wert": 4,
+        "spieler": "Martin"
+      }
+    ]
+  },
+  {
+    "modus": "overall",
+    "einträge": [
+      {
+        "kategorie": "Best 3 Dart Average",
+        "wert": 52.98,
+        "spieler": "Martin"
+      },
+      {
+        "kategorie": "Most TONs",
+        "wert": 486,
+        "spieler": "Martin"
+      },
+      {
+        "kategorie": "Most 140s",
+        "wert": 139,
+        "spieler": "Martin"
+      },
+      {
+        "kategorie": "Most 180s",
+        "wert": 14,
+        "spieler": "Martin"
+      }
+    ]
+  }
+]

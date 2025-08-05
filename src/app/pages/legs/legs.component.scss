@@ -1,0 +1,149 @@
+.stats-table {
+  width: 100%;
+  border-collapse: collapse;
+
+  th, td {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border-bottom: 1px solid var(--surface-border, #fd0277);
+  }
+
+  th {
+    background: var(--surface-card);
+    color: var(--primary-color, #fff);
+    font-weight: bold;
+    font-size: 1.1rem;
+  }
+
+  // Erste Spalte (linke Werte): immer rechtsbündig
+  th:first-child,
+  td:first-child {
+    text-align: right;
+    width: 30%;
+  }
+
+  // Mittlere Spalte (Label) mittig
+  td:nth-child(2), th:nth-child(2) {
+    text-align: center;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+        width: 40%;
+  }
+
+  th:last-child,
+  td:last-child {
+    text-align: left;
+        width: 30%;
+}
+
+  // Unterste Zeile kein Border
+  tr:last-child td {
+    border-bottom: none;
+  }
+
+    // Oberste Zeile border dick
+  tr:first-child th {
+     border-bottom: 2px solid var(--surface-border)
+  }
+}
+
+/* LEGS TABLE */
+.legs-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1.1rem;
+
+}
+
+/* Basis-Style für Zellen */
+.legs-table th {
+  text-align: center;
+  padding: 0.5rem 0.7rem;
+}
+
+
+.legs-table td {
+  text-align: center;
+  padding: 0.5rem 0.7rem;
+  /*border-bottom: 1px solid var(--surface-border);*/  
+}
+
+
+/* SPALTENBREITEN individuell steuerbar */
+.legs-table th:nth-child(1),
+.legs-table td:nth-child(1) { width: 20%; }
+.legs-table th:nth-child(2),
+.legs-table td:nth-child(2) { width: 18%; }
+.legs-table th:nth-child(3),
+.legs-table td:nth-child(3) { width: 13%; }
+.legs-table th:nth-child(4),
+.legs-table td:nth-child(4) { width: 20%; }
+.legs-table th:nth-child(5),
+.legs-table td:nth-child(5) { width: 18%; }
+
+.legs-table td:nth-child(3) {
+  background: rgba(110, 110, 110, 0.07); /* leicht dunkler, auch auf hellen Cards */
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+.legs-table td:nth-child(1),
+.legs-table td:nth-child(4) {
+  border-right: 1px solid var(--surface-border)
+}
+
+@media (prefers-color-scheme: dark) {
+  .legs-table thead tr:nth-child(2) th {
+    background: rgba(128, 128, 128, 0.12); /* im Darkmode ganz leicht hell drüber */
+    color: var(--primary-color);
+  }
+}
+
+.header-row {
+  background: rgba(110, 110, 110, 0.07); /* leicht dunkler, auch auf hellen Cards */
+  color: var(--primary-color);
+  font-weight: bold;
+  border-bottom: 2px solid var(--surface-border)
+}
+
+
+
+.starter-badge-mini {
+  margin-left: 0.4em;
+  padding: 0 0.7em;
+  font-size: 0.5em;
+  background: #fd0277;
+  color: #fff;
+  border-radius: 0.9em;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  line-height: 1.5;
+  display: inline-block;
+}
+
+.leg-counter {
+  display: block;
+  text-align: center;
+}
+
+.score-box.winner {
+  display: inline-block;
+  background: #309f6a;
+  color: #fff;
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 0.9em;
+  padding: 4px 7px;
+  margin: 0 4px;
+  letter-spacing: 0.05em;
+    white-space: nowrap;   /* <--- DAS verhindert Zeilenumbruch! */
+}
+
+.stats-divider {
+  color: var(--primary-color);
+  font-weight: 400;
+  padding: 0 2px;
+  font-size: 1.2em;
+  line-height: 1;
+  vertical-align: middle;
+}

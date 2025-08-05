@@ -1,0 +1,9 @@
+.hinweis {
+  color: var(--primary-color);
+  margin: 0;
+  padding: 0;
+}
+
+::ng-deep p-table thead tr:first-child th {
+  border-bottom-width: 2px !important;
+}

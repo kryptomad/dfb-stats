@@ -1,0 +1,1085 @@
+/* Playercards used in Spieler.html */
+
+.player-card {
+  text-align: center;
+  width: 150px;
+  transition:
+    box-shadow 0.3s ease,
+    transform 0.3s ease;
+  border-radius: 12px;
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+}
+
+.player-card img {
+  width: 100%;
+  max-height: 180px; /* oder passend für dein Layout */
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+
+.player-card p {
+  margin-top: 8px;
+  font-weight: bold;
+  color: var(--text);
+}
+
+.player-card.solo {
+  width: 150px;
+}
+
+.player-card:hover {
+  transform: translateY(-4px);
+  box-shadow:
+    0 0 3px var(--accent-color),
+    0 0 12px var(--accent-color);
+}
+
+/* Spieler Bilder spieler.html und Hover effect */
+
+.player-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.player-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 1rem;
+  margin: 2rem 0 1.5rem;
+}
+
+.player-image-rect {
+  width: 120px;
+  height: 160px;
+  object-fit: cover;
+  border: 2px solid var(--border-color);
+  border-radius: 4px;
+}
+
+.player-info {
+  flex: 1;
+}
+
+.player-info h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.player-info .subtext {
+  color: var(--color-gray-400);
+  font-size: 0.9rem;
+  margin-top: 0.3rem;
+}
+
+.honor-table td {
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid var(--color-gray-700);
+  color: var(--text);
+}
+
+.emoji {
+  font-size: 1.2rem;
+}
+
+/* Oskar oder Gelddarten und Schreiber*/
+
+.active {
+  color: gold;
+}
+.inactive {
+  color: #555;
+}
+
+.writer-gray {
+  color: var(--color-gray-300);
+}
+
+/* Block von einem Spiel aus dem Spieltag */
+.spiel-block {
+  background: var(--color-gray-600);
+  border-radius: 6px;
+  padding: 0.6rem 1rem; /*beeinflusst wie schmal das Feld ist */
+  margin-bottom: 0.3rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.4rem; /* kleinerer Abstand zwischen den Blöcken */
+  font-size: 1rem;
+  cursor: pointer;
+  border: 1px solid var(--border-color);
+  /*border: 1px solid transparent;*/
+}
+
+.spiel-block:hover {
+  background-color: var(--color-gray-700);
+  border-color: var(--color-gray-300);
+}
+
+/* Spieler in der Spieltagsanzeige; Position */
+.spieler-spieltag {
+  flex: 1;
+  color: var(--text);
+  font-weight: 500;
+  font-size: 1em;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Linker-Spieler in der Spieltagsanzeige; Position */
+.spieler-spieltag.links {
+  justify-content: flex-end;
+  padding-right: 0.1em; /* Name näher an Score */
+}
+
+/* Rechter-Spieler in der Spieltagsanzeige; Position */
+.spieler-spieltag.rechts {
+  justify-content: flex-start;
+  padding-left: 0.1em; /* Name näher an Score */
+}
+
+/* Average in Spiel-block */
+.avg-spieltag {
+  width: 45px;
+  text-align: center;
+}
+
+.avg-spieltag.links {
+  text-align: left;
+  color: var(--color-gray-300);
+  font-size: 0.8em;
+}
+
+.avg-spieltag.rechts {
+  text-align: right;
+  color: var(--color-gray-300);
+  font-size: 0.8em;
+}
+
+/* Score-Box für die Spieltage Winner(Grün)/Loser(Rot) & Box für die Check Darts */
+
+/* Score-Box Style, Form etc. */
+.score-box {
+  padding: 0.1em 0.3em;
+  border-radius: 0.25em;
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0.1em; /* Horizontaler Abstand */
+  min-width: 16px; /* Mindestbreite, damit die Zahlen nicht zu schmal wirken */
+  min-height: 20px; /* Mindesthöhe */
+  font-size: 1em;
+  line-height: 1;
+}
+
+/* Farben für den Gewinner & CD (CheckDarts) */
+.winner {
+  background-color: var(--color-green-200);
+  color: var(--color-white);
+}
+
+/* Farben für den Verlierer */
+.loser {
+  background-color: var(--color-red-200);
+  color: var(--color-white);
+}
+
+/* stats-table */
+
+.stats-table {
+  width: var(--width-table);
+  border-collapse: collapse;
+  margin-top: 1rem;
+  margin: 1rem auto;
+}
+
+.stats-table th,
+.stats-table td {
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--border-color);
+}
+
+.stats-table th {
+  background-color: var(--table-header-bg);
+  color: var(--color-red-300);
+  text-align: center;
+}
+
+/*Spalte 1 der Stats*/
+.stats-table td:nth-child(1) {
+  width: 32%;
+}
+
+/*Spalte 3 der Stats*/
+.stats-table td:nth-child(3) {
+  width: 32%;
+}
+
+/* Leg Darstellung */
+
+/* Überschrift der Legs; Leg 1-5 */
+.leg-count {
+  text-align: center;
+  color: var(--heading-primary);
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.leg-table {
+  width: var(--width-table);
+  border-collapse: collapse;
+  margin-top: 1rem;
+  margin: 1rem auto;
+}
+
+.leg-table th,
+.leg-table td {
+  padding: 0.5rem 1rem;
+  border: 1px solid #292929;
+}
+
+.leg-table th {
+  background-color: var(--table-header-bg);
+  color: var(--color-red-300);
+  text-align: center;
+}
+
+.leg-table td:nth-child(1),
+.leg-table td:nth-child(3) {
+  text-align: center;
+}
+
+/*Spalte 2 der Legs Score*/
+.leg-table td:nth-child(2) {
+  font-weight: bold;
+}
+
+/*Spalte 5 der Legs Score*/
+.leg-table td:nth-child(5) {
+  font-weight: bold;
+}
+
+/*Hintergrund Darts/Rounds spalte in der Mitte*/
+.leg-table td:nth-child(3) {
+  background-color: var(--table-header-bg);
+  color: var(--color-gray-300);
+  font-weight: 600;
+}
+
+/* Line Size und padding der Summary Line unter jedem Leg */
+.leg-summary-line {
+  margin: 4px 0;
+  font-size: 0.9rem;
+  padding-left: 5%;
+}
+
+/* zurück zum Spieltag */
+.leg_backbutton {
+  display: block;
+  margin: 1rem auto;
+  text-align: center;
+  color: var(--color-red-200);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+/* Rekorde-Tabellenstruktur */
+.rekord-section {
+  margin: 0 auto 2rem auto;
+  padding: 0 1rem;
+}
+
+.rekord-section h3 {
+  border-bottom: 1px solid var(--color-gray-500);
+  padding-bottom: 0.3rem;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  color: var(--color-gray-200);
+}
+
+.rekord-table {
+  width: 100%;
+  max-width: none; /* falls irgendwo ein Limit greift */
+  padding: 0 1rem;
+  margin: 0 auto 2rem auto;
+}
+
+/* Tabellenzellen */
+.rekord-table th,
+.rekord-table td {
+  padding: 0.5rem 0.7rem;
+  border: 1px solid var(--border-color);
+  text-align: left;
+}
+
+/* Kopfzeile */
+.rekord-table th {
+  background-color: var(--table-header-bg);
+  color: var(--color-red-300);
+}
+
+/* Kopfzeile Wert spalte 2*/
+.rekord-table th:nth-child(2) {
+  background-color: var(--table-header-bg);
+  color: var(--color-red-300);
+  text-align: center;
+}
+
+/* Spaltenstyling */
+.rekord-table td {
+  color: var(--color-white);
+}
+
+/* Spalte 1: Rekord */
+/*.rekord-table td:nth-child(1) {
+  font-weight: normal;
+  width: 50%;
+}
+*/
+/* Spalte 2: Wert (rechtsbündig, */
+.rekord-table td:nth-child(2) {
+  text-align: center;
+  font-weight: bold;
+  color: var(--color-white);
+  width: 15%;
+}
+
+/* Spalte 3: Name */
+.rekord-table td:nth-child(3) {
+  font-weight: normal;
+  font-size: 1rem;
+  width: 15%;
+}
+
+/* Spalte 4: Datum */
+.rekord-table td:nth-child(4) {
+  font-weight: normal;
+  font-size: 0.7rem;
+  width: 15%;
+}
+
+/* Formatierung der spiele.html */
+
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+.filter-dropdown {
+  padding: 10px 17px;
+  border: 1px solid var(--border-color);
+  background: var(--bg);
+  border-radius: 0px;
+  color: var(--text);
+  min-width: 120px;
+}
+.reset-btn {
+  margin-left: auto;
+  padding: 6px 10px;
+  background: var(--danger);
+  border: 1px solid var(--color-red-200);
+  color: var(--color-red-200);
+  border-radius: 0px;
+  cursor: pointer;
+}
+
+.reset-btn:hover {
+  background-color: var(--color-red-300);
+  color: var(--color-white);
+}
+
+.filter-tag {
+  display: inline-flex;
+  align-items: center;
+  background-color: #111;
+  color: white;
+  border: 1px solid var(--color-gray-300);
+  border-radius: 0px;
+  padding: 6px 10px;
+  margin: 5px 8px 5px 0;
+  font-size: 0.9rem;
+  cursor: pointer; /* wichtig! */
+  transition: background-color 0.2s ease;
+}
+
+.filter-tag:hover {
+  background-color: var(--color-gray-500);
+}
+
+.filter-tag .remove-tag {
+  margin-left: 8px;
+  font-weight: bold;
+  color: var(--color-red-300);
+}
+
+.aktive-filter {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center; /* <– verhindert Höhen-Stretch */
+  gap: 0.5rem; /* <– saubere horizontale + vertikale Abstände */
+  margin-top: 12px;
+  margin-bottom: 16px;
+}
+
+.filter-dropdown,
+.filter-tag .reset-btn {
+  height: 37px;
+  line-height: 37px;
+}
+
+/* Banner */
+
+.top-banner {
+  width: 100%;
+  height: 20px;
+  background-color: var(--accent-color);
+  color: var(--text);
+  font-size: 12px;
+  font-family: "JetBrains Mono", monospace;
+  letter-spacing: 0.5px;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+/* Header für menu */
+
+.header-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 0px;
+  background-color: rgba(0, 0, 0, 0.5); /* halbtransparentes Schwarz */
+  backdrop-filter: blur(6px); /* optional: weicher Glas-Effekt */
+  -webkit-backdrop-filter: blur(6px); /* Safari support */
+  color: var(--text);
+  position: sticky;
+  top: 20px; /* falls .top-banner existiert */
+  z-index: 998;
+  height: 40px;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.3s ease;
+}
+
+.header-bar.scrolled {
+  border-color: var(--color-gray-500);
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-left: 12px;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-right: 12px;
+}
+
+.logo {
+  height: 40px;
+  width: auto;
+}
+
+#logo-container svg {
+  width: 42px;
+  height: auto;
+  display: block;
+  transition: transform 0.6s ease-in-out;
+}
+
+#logo-container.rotate svg {
+  transform: rotate(360deg);
+}
+
+.logo-accent {
+  fill: var(--accent-color);
+}
+
+.header-btn {
+  background: none;
+  border: 1px solid var(--color-gray-500);
+  color: var(--color-white);
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 6px;
+  padding: 4px 8px;
+  transition: border-color 0.2s;
+}
+
+.header-btn:hover {
+  color: var(--accent-color);
+}
+
+.header-btn.active {
+  border-color: var(--accent-color);
+}
+
+/* refresh/update button */
+.update-button {
+  background: transparent;
+  border: 1px solid var(--color-gray-500);
+  color: var(--color-white);
+  padding: 4px 10px;
+  font-size: 13px;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: border-color 0.2s ease;
+}
+
+/* Nur Rahmen und Icon bei Hover farbig */
+.update-button:hover {
+  border-color: var(--accent-color);
+}
+
+.update-button:hover i {
+  color: var(--accent-color);
+  animation: spin-refresh 0.6s linear;
+}
+
+/* Update-Button Icon separat färben */
+.update-button i {
+  color: var(--color-white);
+  transition: color 0.2s ease;
+}
+
+@keyframes spin-refresh {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Menü rechts */
+.sidebar-menu {
+  position: fixed;
+  top: 72px; /* unterhalb von top-banner + header-bar */
+  right: 0;
+  height: calc(100% - 64px);
+  width: 220px;
+  background-color: var(--bg);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: var(--color-white);
+  border-left: 1px solid var(--color-gray-500);
+  padding: 16px;
+  z-index: 997;
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+  box-shadow: -4px 0 8px rgba(0, 0, 0, 0.3);
+  overflow-y: auto;
+  max-height: calc(100vh - 72px); /* je nach Topbar-Höhe */
+}
+
+.sidebar-menu.visible {
+  transform: translateX(0);
+}
+
+.menu-section {
+  margin-bottom: 24px;
+}
+
+.menu-title {
+  color: var(--accent-color);
+  font-weight: bold;
+  font-size: 15px;
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.menu-item {
+  display: block; /* <- wichtig für Abstand + Hover-Fläche */
+  text-decoration: none;
+  margin-left: 24px;
+  padding: 4px 0;
+  cursor: pointer;
+  font-size: 14px;
+  color: #bbb; /* oder #ccc je nach Kontrast */
+  transition: color 0.2s ease;
+}
+
+.menu-item:hover {
+  color: white;
+}
+
+.menu-title:hover {
+  color: white;
+}
+
+#menu-toggle {
+  z-index: 999;
+}
+
+/* Color Picker */
+
+.color-picker-wrapper {
+  position: relative;
+}
+
+#color-picker-toggle {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: white;
+  border: 1px solid var(--accent-color);
+  transition: border-color 0.2s ease;
+}
+
+.color-picker-menu {
+  position: absolute;
+  top: 130%;
+  right: 0;
+  border: 1px solid var(--color-gray-500);
+  background-color: rgba(17, 17, 17, 0.6);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 10px;
+  padding: 16px;
+  z-index: 996;
+  min-width: 140px;
+  backdrop-filter: blur(6px);
+}
+
+.color-picker-menu.hidden {
+  display: none;
+}
+
+.color-options {
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: flex-start;
+}
+
+.color-option {
+  width: 18px;
+  height: 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  border: 2px solid var(--color-gray-500);
+  transition: transform 0.2s;
+  display: inline-block;
+}
+
+.color-option:hover {
+  transform: scale(1.2);
+}
+
+.hidden {
+  display: none;
+}
+
+/* Logo-Spin Animation */
+
+/*.logo-spin {
+  animation: spin-logo 0.6s ease;
+}
+
+@keyframes spin-logo {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+/*
+
+/* Logo-Spin-3D Animation Flip */
+
+.logo-spin {
+  animation: spin-logo 0.5s ease;
+  transform-style: preserve-3d;
+}
+
+@keyframes spin-logo {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+/* neue statistik seite */
+
+.comparison-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 12px 0;
+}
+
+.bar-container {
+  position: relative;
+  flex-grow: 1;
+  height: 12px;
+  background: #222;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.bar {
+  position: absolute;
+  top: 0;
+  height: 100%;
+}
+
+.bar-left {
+  left: 0;
+  background-color: var(--accent-left, #3c8d7d);
+}
+
+.bar-right {
+  right: 0;
+  background-color: var(--accent-right, #444);
+}
+
+.category-label {
+  position: absolute;
+  top: -22px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 12px;
+  color: #aaa;
+}
+
+.value {
+  width: 40px;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Accordion Wrapper */
+.accordion {
+  border-radius: 6px;
+  background-color: var(--bg);
+  font-family: inherit;
+}
+
+/* Accordion Item (Details-Block) */
+details.accordion-item {
+  margin-bottom: 1.5rem;
+  border: 0px solid var(--color-gray-500);
+  border-radius: 6px;
+  overflow: hidden;
+  transition: border-color 0.3s ease;
+}
+
+/* Header */
+summary.accordion-header {
+  padding: 1rem 1.2rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--color-gray-200);
+  background-color: var(--bg);
+  cursor: pointer;
+  position: relative;
+  padding-right: 2rem;
+  outline: none;
+  list-style: none;
+  transition: background-color 0.2s ease;
+  border-bottom: 1px solid #333; /* ⬅ Nur unten eine Trennlinie */
+}
+
+summary.accordion-header:hover {
+  background-color: var(--bg);
+}
+
+/* Pfeil entfernen */
+summary.accordion-header::marker,
+summary.accordion-header::-webkit-details-marker {
+  display: none;
+}
+
+/* Pfeil-Icon rechts */
+summary.accordion-header::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 18px;
+  width: 6px;
+  height: 6px;
+  border: solid var(--color-gray-400);
+  border-width: 0 1px 1px 0;
+  display: inline-block;
+  padding: 3px;
+  transform-origin: center;
+  transform: translateY(-50%) rotate(45deg);
+  transition: transform 0.3s ease;
+}
+
+/* Accordion Grundstruktur */
+details.accordion-item {
+  margin-bottom: 1.5rem;
+  background-color: var(--bg);
+  font-family: inherit;
+  border-bottom: 0px solid #333; /* ⬅ Nur unten eine Trennlinie */
+}
+
+/* Pfeil rotiert bei geöffnetem Zustand */
+details[open] > summary.accordion-header::after {
+  transform: translateY(-50%) rotate(-135deg);
+}
+
+/* Pfeil dreht sich beim Öffnen */
+details[open] > .accordion-header::after {
+  transform: translateY(-50%) rotate(180deg);
+}
+
+/* Einblendeffekt */
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Best Records Grid */
+
+.best-records-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.1rem;
+  padding: 1rem 0;
+}
+
+@media (min-width: 350px) {
+  .best-records-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.record-card {
+  flex: 1 1 200px;
+  background-color: var(--bg-table);
+  border: 1px solid #333;
+  border-radius: 6px;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.record-title {
+  font-size: 1rem;
+  color: var(--color-gray-400);
+  margin-bottom: 0.7rem;
+}
+
+.record-value {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--accent-color);
+  margin-top: 0.1rem;
+}
+
+.record-player {
+  font-size: 0.9rem;
+  color: var(--color-gray-300);
+  margin-top: 0.1rem;
+}
+
+.record-toggle-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 1.3rem 0;
+  flex-wrap: wrap;
+}
+
+.record-btn {
+  padding: 0.5rem 1.2rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  border-radius: 6px;
+  border: 1px solid var(--color-gray-500);
+  background-color: transparent;
+  color: var(--text);
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.record-btn.active {
+  background-color: var(--accent-color);
+  color: var(--text);
+}
+
+.record-btn:hover {
+  border-color: var(--accent-color);
+}
+
+.record-label {
+  font-size: 1rem;
+  color: var(--color-white);
+  margin-bottom: 0.7rem;
+}
+
+/* Fade-in Animation (optional – kann bleiben) */
+.fade-in {
+  opacity: 0;
+  transform: translateY(12px); /* etwas größerer Effekt */
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Jahresvergleich */
+
+.year-comparison {
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.comparison-box {
+  background: var(--color-gray-700);
+  padding: 0.5rem;
+  border-radius: 6px;
+  margin-top: 17px;
+  text-align: center;
+  flex: 1;
+}
+
+.comparison-years {
+  display: flex;
+  justify-content: space-between;
+  color: var(--accent-color);
+  font-size: 1.2rem;
+  border: var(--color-gray-500);
+  font-weight: bold;
+
+  margin-bottom: 0.3rem;
+}
+
+.comparison-title {
+  font-size: 0.8rem;
+  font-weight: normal;
+  margin-bottom: 0.1rem;
+  margin-top: 7px;
+}
+
+.comparison-values {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  justify-content: space-between;
+}
+
+.value-left,
+.value-right {
+  font-weight: 600;
+  font-size: 1rem;
+  font-size: 0.9rem;
+  width: 3rem;
+}
+
+.comparison-bar {
+  flex: 1;
+  height: 6px;
+  background: #333;
+  border-radius: 4px;
+  display: flex;
+  overflow: hidden;
+}
+
+.bar-left {
+  background: var(--color-gray-400);
+}
+
+.bar-right {
+  background: var(--accent-color);
+}
+
+.year-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.comparison-btn {
+  font-size: 0.8rem;
+  font-weight: 500;
+  border-radius: 6px;
+  border: 1px solid var(--color-gray-500);
+  background-color: transparent;
+  color: var(--text);
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  display: inline-block;
+  width: fit-content;
+  padding: 0.4rem 0.6rem;
+}
+
+.comparison-btn.active {
+  background-color: var(--accent-color);
+  color: var(--text);
+}
+
+.comparison-btn:hover {
+  border-color: var(--accent-color);
+}
+
+/* Spieler Leistungsübersicht */
+
+.radar-section {
+  padding: 1rem;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.02);
+  margin: 1rem 0;
+}
+
+.radar-header {
+  font-weight: 600;
+  font-size: 1rem;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  color: var(--text); /* Optional: oder eine feste Farbe */
+}
+
+.radar-container {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.radar-container canvas {
+  width: 100% !important;
+  height: 300px !important;
+}

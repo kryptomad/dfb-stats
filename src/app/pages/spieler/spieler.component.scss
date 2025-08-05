@@ -1,0 +1,25 @@
+.nickname {
+  color: var(--primary-color);
+}
+
+.mitglied {
+  color: var(--text-color-secondary);
+}
+
+.stats-mini {
+  align-self: flex-end;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--primary-text);
+  letter-spacing: 0.03em;
+  line-height: 1;
+}
+
+.stat-card-value {
+  align-self: flex-end;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  letter-spacing: 0.03em;
+  line-height: 1;
+}

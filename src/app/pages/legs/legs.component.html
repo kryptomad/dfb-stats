@@ -1,0 +1,129 @@
+<div *ngIf="game && player1 && player2; else notfound">
+  <!-- Header -->
+  <div class="text-center mb-6">
+    <span class="text-2xl font-bold">{{ player1.name }}</span>
+    <span class="text-xl font-light mx-2">vs</span>
+    <span class="text-2xl font-bold">{{ player2.name }}</span>
+    <div class="text-gray-400 mt-2">
+      Saison {{ game.season }} – Spieltag {{ game.matchday }}
+    </div>
+  </div>
+
+
+<!-- Stats-Tabelle -->
+
+<p-card>
+<table class="stats-table">
+  <tr>
+    <th>{{ player1.name }}</th>
+    <th>Stats</th>
+    <th>{{ player2.name }}</th>
+  </tr>
+  <tr *ngFor="let s of LEG_STATS_FIELDS">
+    <td>
+      <ng-container *ngIf="s.digits; else plain1">
+        {{ statsP1[s.field] | number:s.digits }}
+      </ng-container>
+      <ng-template #plain1>{{ statsP1[s.field] }}</ng-template>
+    </td>
+    <td>{{ s.label }}</td>
+    <td>
+      <ng-container *ngIf="s.digits; else plain2">
+        {{ statsP2[s.field] | number:s.digits }}
+      </ng-container>
+      <ng-template #plain2>{{ statsP2[s.field] }}</ng-template>
+    </td>
+  </tr>
+</table>
+</p-card>
+
+  <!-- Alle Legs -->
+   <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4 mt-10">
+<p-card *ngFor="let leg of game.legs; let i = index">
+  <div>
+    <div class="legs-counter">
+      <span class="block text-center text-2xl font-bold text-primary mt-2 mb-4">Leg {{ leg.leg_number }}</span>
+    </div>
+    <table class="min-w-full text-xs legs-table">
+      <thead>
+<tr>
+  <th colspan="2" class="py-1">
+    {{ player1.name }}
+    <span *ngIf="leg.starter_id === game.player1_id" class="starter-badge-mini">FIRST</span>
+  </th>
+  <th class="py-1"></th>
+  <th colspan="2" class="py-1">
+    {{ player2.name }}
+    <span *ngIf="leg.starter_id === game.player2_id" class="starter-badge-mini">FIRST</span>
+  </th>
+</tr>
+      </thead>
+            <thead>
+        <tr class="header-row">
+          <th>Turn</th>
+          <th class="py-1">Score</th>
+          <th>Darts</th>
+          <th class="py-1">Turn</th>
+          <th>Score</th>
+        </tr>
+      </thead>
+<tbody>
+<tr *ngFor="let round of leg.rounds">
+  <!-- PLAYER 1 -->
+<tr *ngFor="let round of leg.rounds">
+  <!-- Player 1 Score -->
+  <td>
+    <span *ngIf="round.p1_score < 0" class="score-box winner">
+      CD {{ abs(round.p1_score) }}
+    </span>
+    <span *ngIf="round.p1_score >= 0 || round.p1_score === 0">
+      {{ round.p1_score }}
+    </span>
+    <span *ngIf="round.p1_score === null || round.p1_score === undefined || round.p1_score === ''"></span>
+  </td>
+
+  <td>{{ round.p1_left }}</td>
+  <td>{{ round.round > 0 ? round.round * 3 : '' }}</td>
+
+  <!-- Player 2 Score -->
+  <td>
+    <span *ngIf="round.p2_score < 0" class="score-box winner">
+      CD {{ abs(round.p2_score) }}
+    </span>
+    <span *ngIf="round.p2_score >= 0 || round.p2_score === 0">
+      {{ round.p2_score }}
+    </span>
+    <span *ngIf="round.p2_score === null || round.p2_score === undefined || round.p2_score === ''"></span>
+  </td>
+
+  <td>{{ round.p2_left }}</td>
+</tr>
+</tbody>
+    </table>
+
+<div class="flex gap-2 items-center text-base mt-1">
+  <!-- Player 1 gewinnt -->
+  <ng-container *ngIf="leg.leg_winner_id == game.player1_id">
+    <span>Sieger:</span><b>{{ leg.p1_darts_leg }}</b> Darts
+    <span class="stats-divider">|</span>
+    <b>{{ leg.p1_avg_3dart_leg | number:'1.2-2' }}</b> 3DA
+  </ng-container>
+  <!-- Player 2 gewinnt -->
+  <ng-container *ngIf="leg.leg_winner_id == game.player2_id">
+    <b>{{ leg.p2_darts_leg }}</b> Darts
+    <span class="stats-divider">|</span>
+    <b>{{ leg.p2_avg_3dart_leg | number:'1.2-2' }}</b> 3DA
+  </ng-container>
+</div>
+  </div>
+ </p-card>
+</div>
+</div>
+<div class="mt-5" >
+<p-button (click)="goBack()">Zurück</p-button>
+</div>
+<ng-template #notfound>
+  <div class="text-center text-red-500 font-bold text-xl mt-10">
+    Spiel nicht gefunden!
+  </div>
+</ng-template>

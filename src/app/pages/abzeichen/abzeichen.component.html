@@ -1,0 +1,88 @@
+
+<p-card>
+<div *ngFor="let player of leaderboardData" class="flex items-center gap-4 mb-4">
+  <div class="flex-1">
+        <p-chip
+          label="{{ player.name }}"
+          image="{{ player.avatar }}"
+          alt="Avatar image"
+          class="profile-chip"
+        />
+<p-progressbar [value]="player.points" [showValue]="false" [style]="{height: '24px'}">
+  <ng-template #content let-value>
+    <span class="text-white font-bold">{{ player.points }}/100</span>
+  </ng-template>
+</p-progressbar>
+  </div>
+</div>
+</p-card>
+
+<div class="mb-6 mt-6">
+<p-fieldset legend="Abzeichen-System – So funktioniert’s" [toggleable]="true">
+  <p>
+    Jeder Spieltag ist ein neues Rennen um unsere exklusiven Dart-Abzeichen!<br>
+    Die Abzeichen werden <strong>nach jedem Spieltag neu vergeben</strong> –<br>
+    wer die beste Leistung in einer Kategorie zeigt, ist <em>Halter</em> des jeweiligen Abzeichens.
+  </p>
+  <p class="mt-2">
+    Für jedes gewonnene Abzeichen erhältst du Chips.<br>
+    <strong>Sobald ein Spieler 100 <i class="fa-solid fa-coins" aria-hidden="true" title="Punkte"></i> erreicht, gewinnt er einen kleinen Preis!</strong><br>
+    Danach werden alle Punkte zurückgesetzt – und das Sammeln beginnt von vorn.
+  </p>
+  <p class="hinweis"><strong>Hinweis:</strong></p>
+  <p>Klicke auf eine Kategorie unten, um die zugehörigen Abzeichen und aktuellen Halter anzuzeigen.<br>
+  Für bessere Übersicht empfehlen wir, die Seite im Landscape-Modus zu betrachten.</p>
+
+</p-fieldset>
+</div>
+
+<div class="grid grid-cols-1 md:grid-cols-1 gap-6">
+  <p-accordion [multiple]="true" class="mb-8">
+  <p-accordionTab *ngFor="let kat of kategorieNamen" [header]="kat.titel">
+  <p-card>
+    <p-table [value]="getAbzeichenForKategorie(kat.name)">
+      <ng-template pTemplate="header">
+        <tr>
+          <th>Abzeichen</th>
+          <th><i class="fa-solid fa-coins" aria-hidden="true" title="Punkte"></i></th>
+          <th>Beschreibung</th>
+          <th>Halter</th>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-abz>
+        <tr>
+          <td>
+<p-chip class="!py-0 !pl-0 !pr-4">
+  <span
+    [ngClass]="kategorieFarbe[abz.kategorie] +
+      ' rounded-full w-8 h-8 flex items-center justify-center'"
+  >
+    <i [class]="abz.icon"></i>
+  </span>
+  <span class="ml-2 font-medium">
+    {{ abz.name }}
+  </span>
+</p-chip>
+          </td>
+          <td>
+            <span class="font-semibold">{{ abz.punkte }}</span>
+          </td>
+          <td>{{ abz.beschreibung }}</td>
+<td>
+  <div class="flex items-center gap-2">
+    <p-overlay-badge [value]="abz.count" severity="info" class="inline-flex">
+      <p-avatar
+        [image]="getSpielerBild(abz.halterId)"
+        shape="circle"
+        size="large"
+      ></p-avatar>
+    </p-overlay-badge>
+  </div>
+</td>
+        </tr>
+      </ng-template>
+    </p-table>
+  </p-card>
+    </p-accordionTab>
+</p-accordion>
+</div>

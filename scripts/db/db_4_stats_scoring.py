@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 import sqlite3
-from db_utils import init_db
 
 DB_PATH = '../db/dfb_stats.db'
 
@@ -8,7 +7,7 @@ def calculate_stats_scoring():
     conn = sqlite3.connect(DB_PATH)
     c = conn.cursor()
 
-    # Alle Spieler ermitteln
+    # 1) Alle Spieler ermitteln
     players = set()
     for row in c.execute('SELECT player1 FROM games'):
         players.add(row[0])
@@ -16,14 +15,20 @@ def calculate_stats_scoring():
         players.add(row[0])
 
     for player in players:
-        c.execute('SELECT id, player1, player2 FROM games WHERE player1 = ? OR player2 = ?', (player, player))
+        # 2) Hol dir neben den Namen jetzt auch die IDs
+        c.execute('''
+            SELECT id, player1, player2, player1_id, player2_id
+            FROM games
+            WHERE player1 = ? OR player2 = ?
+        ''', (player, player))
         games = c.fetchall()
 
         for game in games:
-            game_id, p1, p2 = game
-            is_p1 = (player == p1)
+            game_id, p1, p2, p1_id, p2_id = game
+            is_p1    = (player == p1)
+            player_id = p1_id if is_p1 else p2_id
 
-            # TON-Statistiken zählen
+            # 3) TON-Statistiken zählen
             c.execute('''
                 SELECT round, p1_score, p2_score
                 FROM legs
@@ -47,15 +52,17 @@ def calculate_stats_scoring():
                 elif 100 < score < 140:
                     count_100_plus += 1
 
-            # High Score
+            # 4) High Score
             c.execute(f'''
-                SELECT MAX(CASE WHEN ? THEN p1_score ELSE p2_score END)
+                SELECT MAX(
+                    CASE WHEN ? THEN p1_score ELSE p2_score END
+                )
                 FROM legs
-                WHERE game_id = ? AND (? OR ?)
-            ''', (is_p1, game_id, is_p1, not is_p1))
+                WHERE game_id = ?
+            ''', (is_p1, game_id))
             high_score = c.fetchone()[0] or 0
 
-            # High Finish (Checkout <= 170)
+            # 5) High Finish (Checkout ≤ 170)
             c.execute('''
                 SELECT id, leg_number, p1_score, p1_left, p2_score, p2_left
                 FROM legs
@@ -76,26 +83,33 @@ def calculate_stats_scoring():
 
             high_finish = max(leg_last_left.values()) if leg_last_left else 0
 
-            # Nur aktualisieren, wenn stats-Eintrag vorhanden
-            c.execute('SELECT COUNT(*) FROM stats WHERE game_id = ? AND player = ?', (game_id, player))
+            # 6) Nur aktualisieren, wenn stats-Eintrag vorhanden
+            c.execute('SELECT COUNT(*) FROM stats WHERE game_id = ? AND player_id = ?', (game_id, player_id))
             if c.fetchone()[0] == 0:
-                print(f"[SKIP] Kein Stats-Eintrag für {player} (Game {game_id})")
+                print(f"[SKIP] Kein Stats-Eintrag für player_id={player_id} (Game {game_id})")
                 continue
 
-            # Update stats
+            # 7) Update stats
             c.execute('''
                 UPDATE stats
-                SET high_finish = ?, high_score = ?, 
-                    score_100 = ?, score_100_plus = ?, 
-                    score_140 = ?, score_140_plus = ?, 
-                    score_180 = ?
-                WHERE game_id = ? AND player = ?
+                SET high_finish     = ?,
+                    high_score      = ?,
+                    score_100       = ?,
+                    score_100_plus  = ?,
+                    score_140       = ?,
+                    score_140_plus  = ?,
+                    score_180       = ?
+                WHERE game_id = ? AND player_id = ?
             ''', (
-                high_finish, high_score,
-                count_100, count_100_plus,
-                count_140, count_140_plus,
+                high_finish,
+                high_score,
+                count_100,
+                count_100_plus,
+                count_140,
+                count_140_plus,
                 count_180,
-                game_id, player
+                game_id,
+                player_id
             ))
 
     conn.commit()

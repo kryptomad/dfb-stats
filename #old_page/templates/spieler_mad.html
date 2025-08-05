@@ -1,0 +1,105 @@
+<div class="player-profile">
+  <!-- Sektion 1: Header mit Bild & Name -->
+  <div class="player-header">
+    <div class="player-info">
+      <h1>Martin 'mad'</h1>
+      <p class="subtext">Mitglied • Seit 2007</p>
+    </div>
+    <img
+      alt="Martin 'mad'"
+      class="player-image-rect"
+      src="../assets/players/dummy.png"
+    />
+  </div>
+
+  <!-- Sektion 2: Mini-Honors-Tabelle -->
+  <table class="standard-table">
+    <tr>
+      <td>Jahresoskar</td>
+      <td><span class="emoji">🌟</span> 2</td>
+    </tr>
+    <tr>
+      <td>Monatsoskar</td>
+      <td><span class="emoji">🥇</span> 4</td>
+    </tr>
+    <tr></tr>
+    <tr></tr>
+    <tr></tr>
+    <!-- Optional: weitere Zeilen -->
+  </table>
+  <div></div>
+
+  <details class="accordion-item" id="accordion-records">
+    <summary class="accordion-header">Jahresvergleich</summary>
+  </details>
+
+  <!-- Accordion: Trendverlauf -->
+  <details class="accordion-item" id="accordion-trend">
+    <summary class="accordion-header">Trendverlauf</summary>
+    <label for="trend-category">Kategorie auswählen:</label>
+    <select id="trend-category">
+      <option value="3DA">3 Dart Average</option>
+      <option value="First9">First 9 Average</option>
+      <option value="180s">180er</option>
+    </select>
+
+    <label for="trend-range">Zeitraum:</label>
+    <select id="trend-range">
+      <option value="3">Letzte 3 Jahre</option>
+      <option value="5">Letzte 5 Jahre</option>
+      <option value="all">Alle Jahre</option>
+    </select>
+  </details>
+
+  <div class="radar-section">
+    <div class="radar-header">Leistungsübersicht mad</div>
+    <div class="radar-container">
+      <canvas id="radarChart"></canvas>
+    </div>
+  </div>
+
+  <!-- Dann dein eigener Code -->
+  <script>
+    function initRadarChart() {
+      const canvas = document.getElementById("radarChart");
+
+      const ctx = canvas.getContext("2d");
+      new Chart(ctx, {
+        type: "radar",
+        data: {
+          labels: ["41+", "60+", "100+", "140+", "180", "Best Leg"],
+          datasets: [
+            {
+              label: "Spielerprofil",
+              data: [12, 24, 40, 18, 4, 14],
+              backgroundColor: "rgba(220, 20, 60, 0.4)",
+              borderColor: "crimson",
+              borderWidth: 2,
+              pointBackgroundColor: "white",
+            },
+          ],
+        },
+        options: {
+          scales: {
+            r: {
+              pointLabels: { color: "#ccc", font: { size: 12 } },
+              ticks: {
+                beginAtZero: true,
+                color: "#aaa",
+                stepSize: 10,
+                backdropColor: "transparent",
+              },
+              grid: { color: "#555" },
+              angleLines: { color: "#444" },
+            },
+          },
+          plugins: {
+            legend: { labels: { color: "#ccc" } },
+          },
+        },
+      });
+    }
+
+    initRadarChart();
+  </script>
+</div>

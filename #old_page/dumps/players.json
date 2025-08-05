@@ -1,0 +1,47 @@
+[
+  {
+    "player_id": 1,
+    "name": "Frank",
+    "nationality": "DE",
+    "nickname": null,
+    "image": "frank.png",
+    "memberSince": 1993,
+    "isFounder": true
+  },
+  {
+    "player_id": 2,
+    "name": "Franz-Josef",
+    "nationality": "DE",
+    "nickname": null,
+    "image": "franz.png",
+    "memberSince": 1993,
+    "isFounder": true
+  },
+  {
+    "player_id": 3,
+    "name": "Heiner",
+    "nationality": "DE",
+    "nickname": "TC",
+    "image": "heiner.png",
+    "memberSince": 1996,
+    "isFounder": false
+  },
+  {
+    "player_id": 4,
+    "name": "Martin",
+    "nationality": "DE",
+    "nickname": "mad",
+    "image": "martin.png",
+    "memberSince": 2018,
+    "isFounder": false
+  },
+  {
+    "player_id": 5,
+    "name": "Uwe",
+    "nationality": "DE",
+    "nickname": null,
+    "image": "uwe.png",
+    "memberSince": 1993,
+    "isFounder": true
+  }
+]
