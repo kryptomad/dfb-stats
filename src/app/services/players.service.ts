@@ -15,7 +15,6 @@ export class PlayersService {
   public loadPlayers(): Signal<Player[]> {
     const dataObject = Object.create(playersData);
 
-    // Map zuerst
     const players: Player[] = dataObject.default.map((p: any) => ({
       id: p.player_id,
       name: p.name,
@@ -25,14 +24,18 @@ export class PlayersService {
       isFounder: p.isFounder,
     }));
 
-    // Dann sortieren:
     players.sort((a, b) => {
-      // Falls memberSince ein Datum (string) ist, ggf. in Date umwandeln:
       return (
         new Date(a.memberSince).getTime() - new Date(b.memberSince).getTime()
       );
     });
 
     return signal<Player[]>(players);
+  }
+
+  // >>> HIER NEU <<<
+  getPlayerById(id: number): Player | undefined {
+    const players = this.loadPlayers()();
+    return players.find((p) => p.id === id);
   }
 }

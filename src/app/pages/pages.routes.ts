@@ -6,6 +6,9 @@ import { RegelwerkComponent } from './regelwerk/regelwerk.component';
 import { StatistikenComponent } from './statistiken/statistiken.component';
 import { SpielerComponent } from './spieler/spieler.component';
 import { SpieleComponent } from './spiele/spiele.component';
+import { AbzeichenComponent } from './abzeichen/abzeichen.component';
+import { LegsComponent } from './legs/legs.component';
+import { ProfilComponent } from './profil/profil.component';
 
 export default [
   { path: 'startseite', component: StartseiteComponent },
@@ -15,5 +18,8 @@ export default [
   { path: 'statistiken', component: StatistikenComponent },
   { path: 'spieler', component: SpielerComponent },
   { path: 'spiele', component: SpieleComponent },
+  { path: 'abzeichen', component: AbzeichenComponent },
+  { path: 'legs/:game_id', component: LegsComponent },
+  { path: 'profil/:id', component: ProfilComponent },
   { path: '**', redirectTo: '/notfound' },
 ] as Routes;

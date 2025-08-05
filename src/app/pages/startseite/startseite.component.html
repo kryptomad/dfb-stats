@@ -6,7 +6,7 @@
       <div class="profile-row">
         <p-chip
           label="{{ gastgeber() }}"
-          image="assets/frank.png"
+          image="assets/players/frank.png"
           alt="Avatar image"
           class="profile-chip"
         />
@@ -15,16 +15,16 @@
       <div class="date-time">{{ datum() }} um {{ zeit() }}</div>
       <div class="label">Modus</div>
       <div class="icons">
-        <i class="pi pi-euro" [ngClass]="{ inactive: gelddarten() }"></i>
+        <i class="fa fa-coins" [ngClass]="{ inactive: gelddarten() }"></i>
         <i
-          class="pi pi-trophy ml-6"
+          class="fa fa-trophy ml-6"
           [ngClass]="{ inactive: oskardarten() }"
         ></i>
       </div>
     </div>
     <div class="card-bgimg">
       <img
-        ngSrc="assets/location-frank.png"
+        ngSrc="assets/locations/location-frank.png"
         alt="Spielort"
         height="749"
         width="526"
@@ -50,9 +50,9 @@
 <h2 id="naechster-oskarabend">Nächster Oskarabend</h2>
 <div class="mb-4">
   Saison:
-  <span class="text-primary-700">{{ season() }}</span>
+  <span class="text-primary">{{ season() }}</span>
   – Spieltag:
-  <span class="text-primary-700">{{ matchday() }}</span>
+  <span class="text-primary">{{ matchday() }}</span>
 </div>
 <p-card>
   <p-table [value]="games() || []">
@@ -65,7 +65,7 @@
     </ng-template>
     <ng-template #body let-game>
       <tr>
-        <td class="writer">{{ game.writer }}</td>
+        <td class="schreiber">{{ game.writer }}</td>
         <td>{{ game.player1 }}</td>
         <td>{{ game.player2 }}</td>
       </tr>

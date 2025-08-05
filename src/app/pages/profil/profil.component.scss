@@ -1,0 +1,54 @@
+.nickname {
+  color: var(--primary-color);
+}
+
+.mitglied {
+  color: var(--text-color-secondary);
+}
+
+.stats-mini {
+  align-self: flex-end;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--primary-text);
+  letter-spacing: 0.03em;
+  line-height: 1;
+}
+
+.stat-card-value {
+  align-self: flex-end;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  letter-spacing: 0.03em;
+  line-height: 1;
+}
+
+.custom-badge {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: 9999px; /* Full round */
+  font-weight: 700;
+  margin-bottom: 0.2rem;
+  width: fit-content;
+  min-width: 80px; /* optional, für konsistente Größe */
+}
+
+.label {
+  margin-right: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.count {
+  background: white;
+  color: var(--primary-color);
+  padding: 0 0.5rem;
+  border-radius: 9999px;
+  font-weight: 700;
+  min-width: 20px;
+  text-align: center;
+}

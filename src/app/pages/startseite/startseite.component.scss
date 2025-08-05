@@ -54,7 +54,8 @@
 }
 
 .label {
-  color: #7d8ca7;
+  /*color: #7d8ca7;*/
+  color: var(--text-color-secondary);
   font-size: 0.97rem;
   margin-bottom: 0.1rem;
 }
@@ -94,12 +95,8 @@
   font-size: 2.15rem;
 }
 
-.active {
-  color: rgb(0, 119, 255);
-}
-
 .inactive {
-  color: rgb(150, 150, 150);
+  color: var(--text-color-secondary);
 }
 
 .stat-card-body {
@@ -114,19 +111,18 @@
 
 .stat-card-value {
   align-self: flex-end;
-  font-size: 3.3rem;
+  font-size: 3rem;
   font-weight: 700;
   color: var(--primary-color);
   letter-spacing: 0.03em;
   line-height: 1;
 }
 
-.writer {
+.schreiber {
   font-weight: 300;
-  color: rgb(150, 150, 150);
+  color: var(text-color-secondary);
 }
 
-.text-primary-700 {
-  color: var(--primary-color);
-  font-weight: 700;
+::ng-deep p-table thead tr:first-child th {
+  border-bottom-width: 2px !important;
 }

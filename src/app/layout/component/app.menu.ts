@@ -41,11 +41,13 @@ export class AppMenu implements OnInit {
             label: 'Aktueller Spieltag',
             icon: 'pi pi-fw pi-clock',
             routerLink: 'pages/spieltag',
+            fragment: 'aktueller-spieltag',
           },
           {
             label: 'Jahrestabelle',
             icon: 'pi pi-fw pi-table',
             routerLink: 'pages/spieltag',
+            fragment: 'jahrestabelle',
           },
         ],
       },
@@ -56,6 +58,7 @@ export class AppMenu implements OnInit {
             label: 'Alle Spiele',
             icon: 'pi pi-fw pi-list',
             routerLink: 'pages/spiele',
+            fragment: 'alle-spiele',
           },
         ],
       },
@@ -147,6 +150,16 @@ export class AppMenu implements OnInit {
             label: 'Vereinsregeln',
             icon: 'pi pi-fw pi-file',
             routerLink: 'pages/regelwerk',
+          },
+        ],
+      },
+      {
+        label: 'Abzeichen',
+        items: [
+          {
+            label: 'Abzeichen',
+            icon: 'pi pi-fw pi-shield',
+            routerLink: 'pages/abzeichen',
           },
         ],
       },
