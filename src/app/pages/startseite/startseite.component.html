@@ -38,11 +38,12 @@
 <div class="grid gap-4 grid-cols-2 sm:grid-cols-3">
   <p-card
     *ngFor="let lastStat of lastStats()"
-    [header]="lastStat.kategorie"
-    [subheader]="lastStat.spieler.join(', ')"
-  >
-    <div class="stat-card-body">
-      <span class="stat-card-value">{{ lastStat.wert }}</span>
+    [header]="lastStat.kategorie">
+    <div>
+      <span class="card-value">{{ lastStat.wert }}</span>
+      <div class="card-names">
+        {{ lastStat.spieler.join(', ') }}
+      </div>
     </div>
   </p-card>
 </div>
