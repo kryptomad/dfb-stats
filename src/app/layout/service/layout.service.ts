@@ -30,11 +30,11 @@ export class LayoutService {
   private loadLayoutConfig(): layoutConfig {
     const defaultLayoutConfig: layoutConfig = {
       preset: 'Aura',
-          primary: 'rose',
-        surface: null,
-        darkTheme: false,
-        menuMode: 'static',
-    }
+      primary: 'rose',
+      surface: null,
+      darkTheme: false,
+      menuMode: 'static',
+    };
     const layoutConfig = localStorage.getItem('layoutConfig');
     return layoutConfig ? JSON.parse(layoutConfig) : defaultLayoutConfig;
   }
