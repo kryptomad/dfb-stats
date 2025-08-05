@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, forkJoin } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { map, tap } from 'rxjs/operators';
 
 @Injectable({ providedIn: 'root' })
 export class StatsService {
@@ -11,20 +11,21 @@ export class StatsService {
     this.loadEnrichedStats(); // Lädt die Daten beim Start
   }
 
-  loadEnrichedStats() {
-    forkJoin({
+  loadEnrichedStats(): Observable<any> {
+    return forkJoin({
       stats: this.http.get<any[]>('../../assets/stats.json'),
-      players: this.http.get<any[]>('../../assets/players.json')
+      players: this.http.get<any[]>('../../assets/players.json'),
     }).pipe(
       map(({ stats, players }) =>
-        stats.map(stat => ({
+        stats.map((stat) => ({
           ...stat,
-          playerName: players.find(p => p.player_id === stat.player_id)?.name ?? `ID ${stat.player_id}`
-        }))
-      )
-    ).subscribe(data => {
-      this.enrichedStats = data;
-    });
+          playerName:
+            players.find((p) => p.player_id === stat.player_id)?.name ??
+            `ID ${stat.player_id}`,
+        })),
+      ),
+      tap((data) => (this.enrichedStats = data)),
+    );
   }
 
   /**
@@ -32,18 +33,25 @@ export class StatsService {
    * die einen Bestwert (min/max eines Feldes) in einem Match erreicht haben.
    * Optional kann ein Filter (z.B. nur Sieger) übergeben werden.
    */
-  getAllWithBestValue(field: string, comparator: 'min' | 'max', filterFn?: (s: any) => boolean) {
+  getAllWithBestValue(
+    field: string,
+    comparator: 'min' | 'max',
+    filterFn?: (s: any) => boolean,
+  ) {
     if (!this.enrichedStats.length) return [];
-    let filtered = this.enrichedStats.filter(s => s[field] !== undefined && s[field] !== null && s[field] > 0);
+    let filtered = this.enrichedStats.filter(
+      (s) => s[field] !== undefined && s[field] !== null && s[field] > 0,
+    );
     if (filterFn) filtered = filtered.filter(filterFn);
     if (!filtered.length) return [];
-    const bestValue = comparator === 'min'
-      ? Math.min(...filtered.map(s => s[field]))
-      : Math.max(...filtered.map(s => s[field]));
-    const bestStats = filtered.filter(s => s[field] === bestValue);
+    const bestValue =
+      comparator === 'min'
+        ? Math.min(...filtered.map((s) => s[field]))
+        : Math.max(...filtered.map((s) => s[field]));
+    const bestStats = filtered.filter((s) => s[field] === bestValue);
     // Einmal pro Spieler!
     const uniquePlayers = new Map();
-    bestStats.forEach(stat => {
+    bestStats.forEach((stat) => {
       if (!uniquePlayers.has(stat.player_id)) {
         uniquePlayers.set(stat.player_id, stat);
       }
@@ -55,7 +63,7 @@ export class StatsService {
 
   // Best Leg (nur gewonnene Spiele)
   getBestLegMatch() {
-    return this.getAllWithBestValue('best_leg', 'min', s => s.legs_won > 0);
+    return this.getAllWithBestValue('best_leg', 'min', (s) => s.legs_won > 0);
   }
   // Highest Checkout (alle)
   getHighestCheckoutMatch() {
@@ -75,10 +83,46 @@ export class StatsService {
   }
   // Best 3 Dart Average (nur Sieger, legs_won == 3)
   getBest3DAMatch() {
-    return this.getAllWithBestValue('avg_3dart', 'max', s => s.legs_won === 3);
+    return this.getAllWithBestValue(
+      'avg_3dart',
+      'max',
+      (s) => s.legs_won === 3,
+    );
   }
   // Best First 9 Average (alle)
   getBestFirst9Match() {
     return this.getAllWithBestValue('avg_first9', 'max');
+  }
+
+  getFormkurveData(): any {
+    if (!this.enrichedStats.length) return { labels: [], datasets: [] };
+
+    // Alle Seasons, aufsteigend sortiert
+    const seasons = Array.from(
+      new Set(this.enrichedStats.map((s) => s.season)),
+    ).sort();
+
+    // Alle Spieler (Namen, um Farben/Legende schöner zu haben)
+    const playerNames = Array.from(
+      new Set(this.enrichedStats.map((s) => s.playerName)),
+    );
+
+    const datasets = playerNames.map((player) => {
+      return {
+        label: player,
+        data: seasons.map((season) =>
+          this.enrichedStats
+            .filter((s) => s.season === season && s.playerName === player)
+            .reduce((sum, s) => sum + (s.legs_won || 0), 0),
+        ),
+        fill: false, // Nur Linie, keine Fläche
+        tension: 0.2, // Etwas smooth
+      };
+    });
+
+    return {
+      labels: seasons.map((s) => s.toString()), // z.B. ['2018', '2019', ...]
+      datasets,
+    };
   }
 }

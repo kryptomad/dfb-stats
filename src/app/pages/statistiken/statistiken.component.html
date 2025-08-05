@@ -1,4 +1,4 @@
-<h2>Allzeit-Rekorde</h2>
+<h2 id="allzeit-rekorde">Allzeit-Rekorde</h2>
 
 <!-- Button -->
 <div class="grid grid-cols-3 gap-8 mb-4 w-full">
@@ -150,3 +150,8 @@
   </ng-template>
 </p-card>
 </div>
+
+
+<h2 id="trendverlauf">Trendverlauf</h2>
+<h5>Punkteentwicklung Gesamtwertung 2018 - Heute</h5>
+<p-chart type="line" [data]="formkurveData" [options]="formkurveOptions"></p-chart>

@@ -91,6 +91,7 @@ export class AppMenu implements OnInit {
             label: 'Allzeit-Rekorde',
             icon: 'pi pi-fw pi-crown',
             routerLink: 'pages/statistiken',
+            fragment: 'allzeit-rekorde',
           },
           {
             label: 'Jahresvergleich',
@@ -101,6 +102,7 @@ export class AppMenu implements OnInit {
             label: 'Trendverlauf',
             icon: 'pi pi-fw pi-chart-line',
             routerLink: 'pages/statistiken',
+            fragment: 'trendverlauf',
           },
         ],
       },
