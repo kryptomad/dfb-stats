@@ -127,8 +127,8 @@
   border-bottom-width: 2px !important;
 }
 
-:host ::ng-deep .p-card {
-text-align: center;
+:host ::ng-deep .stats-cards .p-card {
+  text-align: center;
 }
 
 .card-value {
