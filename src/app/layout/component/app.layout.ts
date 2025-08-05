@@ -1,11 +1,12 @@
-import { Component, Renderer2, ViewChild, AfterViewInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { NavigationEnd, Router, RouterModule } from '@angular/router';
+import {Component, Renderer2, ViewChild, OnDestroy} from '@angular/core';
+import { CommonModule, ViewportScroller } from '@angular/common';
+import { NavigationEnd, Router, RouterModule, Scroll } from '@angular/router';
 import { filter, Subscription } from 'rxjs';
 import { AppTopbar } from './app.topbar';
 import { AppSidebar } from './app.sidebar';
 import { AppFooter } from './app.footer';
 import { LayoutService } from '../service/layout.service';
+import { map } from "rxjs/operators";
 
 @Component({
   selector: 'app-layout',
@@ -23,7 +24,7 @@ import { LayoutService } from '../service/layout.service';
     <div class="layout-mask animate-fadein"></div>
   </div> `,
 })
-export class AppLayout implements AfterViewInit {
+export class AppLayout implements OnDestroy {
   overlayMenuOpenSubscription: Subscription;
 
   menuOutsideClickListener: any;
@@ -36,6 +37,7 @@ export class AppLayout implements AfterViewInit {
     public layoutService: LayoutService,
     public renderer: Renderer2,
     public router: Router,
+    public viewScroller: ViewportScroller
   ) {
     this.overlayMenuOpenSubscription =
       this.layoutService.overlayOpen$.subscribe(() => {
@@ -61,6 +63,14 @@ export class AppLayout implements AfterViewInit {
       .subscribe(() => {
         this.hideMenu();
       });
+
+    this.router.events.pipe(
+      filter((event): event is Scroll => event instanceof Scroll),
+      map((event: Scroll) => event.anchor),
+    ).subscribe(value => {
+      this.viewScroller.setOffset([0, 80]);
+      this.viewScroller.scrollToAnchor(value || '')
+    })
   }
 
   isOutsideClicked(event: MouseEvent) {
@@ -135,28 +145,5 @@ export class AppLayout implements AfterViewInit {
     if (this.menuOutsideClickListener) {
       this.menuOutsideClickListener();
     }
-  }
-
-  ngAfterViewInit() {
-    const adjustScrollOffset = () => {
-      if (window.location.hash) {
-        setTimeout(() => {
-          window.scrollBy(0, -80);
-        }, 200);
-      }
-    };
-
-    // Beim initialen Laden (1x)
-    window.addEventListener('load', adjustScrollOffset);
-
-    // Beim Fragmentwechsel (z.B. user klickt #id)
-    window.addEventListener('hashchange', adjustScrollOffset);
-
-    // Beim Angular-Routenwechsel (mehrmals)
-    this.router.events
-      .pipe(filter((event) => event instanceof NavigationEnd))
-      .subscribe(() => {
-        adjustScrollOffset();
-      });
   }
 }
