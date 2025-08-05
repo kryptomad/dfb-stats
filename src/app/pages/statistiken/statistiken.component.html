@@ -1,1 +1,130 @@
-<p>statistiken works!</p>
+<h2>Allzeit-Rekorde</h2>
+<div class="grid gap-4 grid-cols-2 sm:grid-cols-3">
+
+<!-- Best Leg -->
+<p-card header="Best Leg">
+  <ng-container *ngIf="bestLegs && bestLegs.length > 0; else noBestLeg">
+    <b>{{ bestLegs[0]?.best_leg }}</b><br />
+    <ng-container *ngIf="bestLegs.length === 1">
+      {{ bestLegs[0]?.playerName }}
+    </ng-container>
+    <ng-container *ngIf="bestLegs.length > 1">
+      <span *ngFor="let leg of bestLegs; let last = last">
+        {{ leg.playerName }}<span *ngIf="!last">, </span>
+      </span>
+    </ng-container>
+  </ng-container>
+  <ng-template #noBestLeg>
+    <span style="color: #aaa;">Noch kein Best Leg</span>
+  </ng-template>
+</p-card>
+
+<!-- Highest Checkout -->
+<p-card header="Highest Checkout">
+  <ng-container *ngIf="highestCheckout && highestCheckout.length > 0; else noHighCheckout">
+    <b>{{ highestCheckout[0]?.high_finish }}</b><br />
+    <ng-container *ngIf="highestCheckout.length === 1">
+      {{ highestCheckout[0]?.playerName }}
+    </ng-container>
+    <ng-container *ngIf="highestCheckout.length > 1">
+      <span *ngFor="let entry of highestCheckout; let last = last">
+        {{ entry.playerName }}<span *ngIf="!last">, </span>
+      </span>
+    </ng-container>
+  </ng-container>
+  <ng-template #noHighCheckout>
+    <span style="color: #aaa;">Noch kein High Finish</span>
+  </ng-template>
+</p-card>
+
+<!-- 3 Dart Avg -->
+<p-card header="3 Dart Avg">
+  <ng-container *ngIf="best3DA && best3DA.length > 0; else no3DA">
+    <b>{{ best3DA[0]?.avg_3dart | number:'1.2-2' }}</b><br />
+    <ng-container *ngIf="best3DA.length === 1">
+      {{ best3DA[0]?.playerName }}
+    </ng-container>
+    <ng-container *ngIf="best3DA.length > 1">
+      <span *ngFor="let entry of best3DA; let last = last">
+        {{ entry.playerName }}<span *ngIf="!last">, </span>
+      </span>
+    </ng-container>
+  </ng-container>
+  <ng-template #no3DA>
+    <span style="color: #aaa;">Noch kein Bestwert</span>
+  </ng-template>
+</p-card>
+
+<!-- First 9 Avg -->
+<p-card header="First 9 Avg">
+  <ng-container *ngIf="bestFirst9 && bestFirst9.length > 0; else noFirst9">
+    <b>{{ bestFirst9[0]?.avg_first9 | number:'1.2-2' }}</b><br />
+    <ng-container *ngIf="bestFirst9.length === 1">
+      {{ bestFirst9[0]?.playerName }}
+    </ng-container>
+    <ng-container *ngIf="bestFirst9.length > 1">
+      <span *ngFor="let entry of bestFirst9; let last = last">
+        {{ entry.playerName }}<span *ngIf="!last">, </span>
+      </span>
+    </ng-container>
+  </ng-container>
+  <ng-template #noFirst9>
+    <span style="color: #aaa;">Noch kein Bestwert</span>
+  </ng-template>
+</p-card>
+
+<!-- Most TONs -->
+<p-card header="Most TONs">
+  <ng-container *ngIf="mostTONs && mostTONs.length > 0; else noTONs">
+    <b>{{ mostTONs[0]?.score_100 }}</b><br />
+    <ng-container *ngIf="mostTONs.length === 1">
+      {{ mostTONs[0]?.playerName }}
+    </ng-container>
+    <ng-container *ngIf="mostTONs.length > 1">
+      <span *ngFor="let entry of mostTONs; let last = last">
+        {{ entry.playerName }}<span *ngIf="!last">, </span>
+      </span>
+    </ng-container>
+  </ng-container>
+  <ng-template #noTONs>
+    <span style="color: #aaa;">Noch kein Wert</span>
+  </ng-template>
+</p-card>
+
+<!-- Most 140s -->
+<p-card header="Most 140">
+  <ng-container *ngIf="most140s && most140s.length > 0; else no140s">
+    <b>{{ most140s[0]?.score_140 }}</b><br />
+    <ng-container *ngIf="most140s.length === 1">
+      {{ most140s[0]?.playerName }}
+    </ng-container>
+    <ng-container *ngIf="most140s.length > 1">
+      <span *ngFor="let entry of most140s; let last = last">
+        {{ entry.playerName }}<span *ngIf="!last">, </span>
+      </span>
+    </ng-container>
+  </ng-container>
+  <ng-template #no140s>
+    <span style="color: #aaa;">Noch kein Wert</span>
+  </ng-template>
+</p-card>
+
+<!-- Most 180s -->
+<p-card header="Most 180">
+  <ng-container *ngIf="most180s && most180s.length > 0; else no180s">
+    <b>{{ most180s[0]?.score_180 }}</b><br />
+    <ng-container *ngIf="most180s.length === 1">
+      {{ most180s[0]?.playerName }}
+    </ng-container>
+    <ng-container *ngIf="most180s.length > 1">
+      <span *ngFor="let entry of most180s; let last = last">
+        {{ entry.playerName }}<span *ngIf="!last">, </span>
+      </span>
+    </ng-container>
+  </ng-container>
+  <ng-template #no180s>
+    <span style="color: #aaa;">Noch kein Wert</span>
+  </ng-template>
+</p-card>
+
+</div>
