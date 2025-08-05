@@ -1,6 +1,15 @@
 <h2>Allzeit-Rekorde</h2>
-<div class="grid gap-4 grid-cols-2 sm:grid-cols-3">
 
+<!-- Button -->
+<div class="grid grid-cols-3 gap-8 mb-4 w-full">
+  <p-button label="Spiel" styleClass="w-full"></p-button>
+  <p-button label="Spieltag" styleClass="w-full"></p-button>
+  <p-button label="Jahr" styleClass="w-full"></p-button>
+</div>
+
+
+
+<div class="grid gap-4 grid-cols-2 sm:grid-cols-3">
 <!-- Best Leg -->
 <p-card header="Best Leg">
   <ng-container *ngIf="bestLegs && bestLegs.length > 0; else noBestLeg">
