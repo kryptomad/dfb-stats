@@ -4,8 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-regelwerk',
   imports: [],
   templateUrl: './regelwerk.component.html',
-  styleUrl: './regelwerk.component.scss'
+  styleUrl: './regelwerk.component.scss',
+  standalone: true,
 })
-export class RegelwerkComponent {
-
-}
+export class RegelwerkComponent {}

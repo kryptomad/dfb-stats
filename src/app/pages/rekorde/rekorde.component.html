@@ -1,111 +1,119 @@
 <div id="gesamtwertungen" class="mt-5">
-<p-card header="Gesamtwertungen">
-  <p-table [value]="gesamtwertungen">
-    <ng-template pTemplate="header">
-      <tr>
-        <th>Rekord</th>
-        <th>Wert</th>
-        <th>Name</th>
-        <th>Datum</th>
-      </tr>
-    </ng-template>
-    <ng-template pTemplate="body" let-rekord>
-      <tr>
-        <td>{{ rekord.was }}</td>
-        <td>{{ rekord.count }}</td>
-        <td>{{ rekord.wer }}</td>
-        <td>{{ rekord.wann }}</td>
-      </tr>
-    </ng-template>
-  </p-table>
-</p-card>
+  <p-card header="Gesamtwertungen">
+    <p-table [value]="gesamtwertungen">
+      <ng-template pTemplate="header">
+        <tr>
+          <th>Rekord</th>
+          <th>Wert</th>
+          <th>Name</th>
+          <th>Datum</th>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-rekord>
+        <tr>
+          <td>{{ rekord.was }}</td>
+          <td>{{ rekord.count }}</td>
+          <td>{{ rekord.wer }}</td>
+          <td>{{ rekord.wann }}</td>
+        </tr>
+      </ng-template>
+    </p-table>
+  </p-card>
 </div>
 
 <div id="jahreswertungen" class="mt-5">
-<p-card header="Jahreswertungen">
-  <p-table [value]="jahreswertungen">
-    <ng-template pTemplate="header">
-      <tr>
-        <th>Rekord</th>
-        <th>Wert</th>
-        <th>Name</th>
-        <th>Datum</th>
-      </tr>
-    </ng-template>
-    <ng-template pTemplate="body" let-rekord>
-      <tr>
-        <td>{{ rekord.was }}</td>
-        <td>{{ rekord.count }}</td>
-        <td>{{ rekord.wer }}</td>
-        <td>{{ rekord.wann }}</td>
-      </tr>
-    </ng-template>
-  </p-table>
-</p-card>
+  <p-card header="Jahreswertungen">
+    <p-table [value]="jahreswertungen">
+      <ng-template pTemplate="header">
+        <tr>
+          <th>Rekord</th>
+          <th>Wert</th>
+          <th>Name</th>
+          <th>Datum</th>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-rekord>
+        <tr>
+          <td>{{ rekord.was }}</td>
+          <td>{{ rekord.count }}</td>
+          <td>{{ rekord.wer }}</td>
+          <td>{{ rekord.wann }}</td>
+        </tr>
+      </ng-template>
+    </p-table>
+  </p-card>
 </div>
 
 <div id="spieltagswertungen" class="mt-5">
-<p-card header="Spieltagswertungen">
-  <p-table [value]="spieltagswertungen">
-    <ng-template pTemplate="header">
-      <tr>
-        <th>Rekord</th>
-        <th>Wert</th>
-        <th>Name</th>
-        <th>Datum</th>
-      </tr>
-    </ng-template>
-    <ng-template pTemplate="body" let-rekord>
-      <tr>
-        <td>{{ rekord.was }}</td>
-        <td>{{ rekord.count }}</td>
-        <td>{{ rekord.wer }}</td>
-        <td>{{ rekord.wann }}</td>
-      </tr>
-    </ng-template>
-  </p-table>
-</p-card>
+  <p-card header="Spieltagswertungen">
+    <p-table [value]="spieltagswertungen">
+      <ng-template pTemplate="header">
+        <tr>
+          <th>Rekord</th>
+          <th>Wert</th>
+          <th>Name</th>
+          <th>Datum</th>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-rekord>
+        <tr>
+          <td>{{ rekord.was }}</td>
+          <td>{{ rekord.count }}</td>
+          <td>{{ rekord.wer }}</td>
+          <td>{{ rekord.wann }}</td>
+        </tr>
+      </ng-template>
+    </p-table>
+  </p-card>
 </div>
 
 <div id="matchwertungen" class="mt-5">
-<p-card header="Matchwertungen [6]">
-  <p-table [value]="matchwertungen">
-    <ng-template pTemplate="header">
-      <tr>
-        <th>Rekord</th>
-        <th>Wert</th>
-        <th>Name</th>
-        <th>Datum</th>
-      </tr>
-    </ng-template>
-    <ng-template pTemplate="body" let-rekord>
-      <tr>
-        <td>{{ rekord.was }}</td>
-        <td>{{ rekord.count }}</td>
-        <td>{{ rekord.wer }}</td>
-        <td>{{ rekord.wann }}</td>
-      </tr>
-    </ng-template>
-  </p-table>
-</p-card>
+  <p-card header="Matchwertungen [6]">
+    <p-table [value]="matchwertungen">
+      <ng-template pTemplate="header">
+        <tr>
+          <th>Rekord</th>
+          <th>Wert</th>
+          <th>Name</th>
+          <th>Datum</th>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-rekord>
+        <tr>
+          <td>{{ rekord.was }}</td>
+          <td>{{ rekord.count }}</td>
+          <td>{{ rekord.wer }}</td>
+          <td>{{ rekord.wann }}</td>
+        </tr>
+      </ng-template>
+    </p-table>
+  </p-card>
 </div>
 
 <div class="mt-5">
-<p-card>
-<p-fieldset legend="Regel- und Wertungsänderungen" [toggleable]="true">
-  <ol class="list-decimal pl-5">
-    <li>erst ab 2001</li>
-    <li>erst ab 2003</li>
-    <li>ab 1994</li>
-    <li>2010 geändert, Streichung DD, TD, ab 2013 auch Short Game und RB</li>
-    <li>2017 geändert, 5 Spieler max. 40 Jahr / 14 Monat / Punkte Jahr max. 140</li>
-    <li>erst ab 2018</li>
-    <li>2019 geändert, 5 Spieler max. 40 Jahr / 12 Monat / Punkte Jahr max. 120</li>
-    <li>erst 2020/21 aufgenommen</li>
-  </ol>
-</p-fieldset>
-</p-card>
+  <p-card>
+    <p-fieldset legend="Regel- und Wertungsänderungen" [toggleable]="true">
+      <ol class="list-decimal pl-5">
+        <li>erst ab 2001</li>
+        <li>erst ab 2003</li>
+        <li>ab 1994</li>
+        <li>
+          2010 geändert, Streichung DD, TD, ab 2013 auch Short Game und RB
+        </li>
+        <li>
+          2017 geändert, 5 Spieler max. 40 Jahr / 14 Monat / Punkte Jahr max.
+          140
+        </li>
+        <li>erst ab 2018</li>
+        <li>
+          2019 geändert, 5 Spieler max. 40 Jahr / 12 Monat / Punkte Jahr max.
+          120
+        </li>
+        <li>erst 2020/21 aufgenommen</li>
+      </ol>
+    </p-fieldset>
+  </p-card>
 </div>
 <div class="mt-5">
-<p>ab 01.01.1996 - aktueller Stand: 12.05.2024</p>
+  <p>ab 01.01.1996 - aktueller Stand: 12.05.2024</p>
 </div>
