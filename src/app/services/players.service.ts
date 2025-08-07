@@ -15,14 +15,16 @@ export class PlayersService {
   public loadPlayers(): Signal<Player[]> {
     const dataObject = Object.create(playersData);
 
-    const players: Player[] = dataObject.default.map((p: any) => ({
-      id: p.player_id,
-      name: p.name,
-      nickname: p.nickname,
-      image: p.image,
-      memberSince: p.memberSince,
-      isFounder: p.isFounder,
-    }));
+    const players: Player[] = dataObject.default
+      .filter((p: any) => p.isActive)
+      .map((p: any) => ({
+        id: p.player_id,
+        name: p.name,
+        nickname: p.nickname,
+        image: p.image,
+        memberSince: p.memberSince,
+        isFounder: p.isFounder,
+      }));
 
     players.sort((a, b) => {
       return (
@@ -33,9 +35,12 @@ export class PlayersService {
     return signal<Player[]>(players);
   }
 
-  // >>> HIER NEU <<<
   getPlayerById(id: number): Player | undefined {
     const players = this.loadPlayers()();
     return players.find((p) => p.id === id);
+  }
+
+  getPlayerNameById(id: number): string {
+    return this.getPlayerById(id)?.name ?? `ID ${id}`;
   }
 }

@@ -2,26 +2,23 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, forkJoin } from 'rxjs';
 import { map, tap } from 'rxjs/operators';
+import { PlayersService } from './players.service';
 
 @Injectable({ providedIn: 'root' })
 export class StatsService {
   enrichedStats: any[] = [];
 
-  constructor(private http: HttpClient) {
-    this.loadEnrichedStats(); // Lädt die Daten beim Start
-  }
+  constructor(
+    private playersService: PlayersService,
+    private http: HttpClient,
+  ) {}
 
   loadEnrichedStats(): Observable<any> {
-    return forkJoin({
-      stats: this.http.get<any[]>('../../assets/stats.json'),
-      players: this.http.get<any[]>('../../assets/players.json'),
-    }).pipe(
-      map(({ stats, players }) =>
+    return this.http.get<any[]>('../../assets/stats.json').pipe(
+      map((stats) =>
         stats.map((stat) => ({
           ...stat,
-          playerName:
-            players.find((p) => p.player_id === stat.player_id)?.name ??
-            `ID ${stat.player_id}`,
+          playerName: this.playersService.getPlayerNameById(stat.player_id),
         })),
       ),
       tap((data) => (this.enrichedStats = data)),

@@ -6,7 +6,7 @@ import {
   signal,
   Signal,
 } from '@angular/core';
-import * as data from '../../assets/spieltage.json';
+import * as data from '../../assets/games.json';
 
 export interface Matchday {
   game_id: number;
