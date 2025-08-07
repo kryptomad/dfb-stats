@@ -6,12 +6,12 @@
     "game_date": "2025-03-29",
     "game_time": "00:38:25",
     "p1_avg_3dart_match": 36.36,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 35.15
   },
   {
@@ -21,12 +21,12 @@
     "game_date": "2025-03-28",
     "game_time": "23:58:59",
     "p1_avg_3dart_match": 30.28,
-    "player1_id": 5,
+    "player1_id": 1,
     "player1": "Uwe",
     "p1_legs_won": 1,
     "p2_legs_won": 3,
     "player2": "Franz-Josef",
-    "player2_id": 2,
+    "player2_id": 3,
     "p2_avg_3dart_match": 34.52
   },
   {
@@ -36,12 +36,12 @@
     "game_date": "2025-03-28",
     "game_time": "23:03:43",
     "p1_avg_3dart_match": 26.5,
-    "player1_id": 1,
+    "player1_id": 2,
     "player1": "Frank",
     "p1_legs_won": 3,
     "p2_legs_won": 2,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 26.3
   },
   {
@@ -51,12 +51,12 @@
     "game_date": "2025-03-28",
     "game_time": "22:33:00",
     "p1_avg_3dart_match": 51.87,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 2,
     "p2_legs_won": 3,
     "player2": "Franz-Josef",
-    "player2_id": 2,
+    "player2_id": 3,
     "p2_avg_3dart_match": 46.82
   },
   {
@@ -66,12 +66,12 @@
     "game_date": "2025-03-28",
     "game_time": "22:01:04",
     "p1_avg_3dart_match": 49.6,
-    "player1_id": 5,
+    "player1_id": 1,
     "player1": "Uwe",
     "p1_legs_won": 3,
     "p2_legs_won": 1,
     "player2": "Frank",
-    "player2_id": 1,
+    "player2_id": 2,
     "p2_avg_3dart_match": 46.7
   },
   {
@@ -81,12 +81,12 @@
     "game_date": "2025-03-28",
     "game_time": "21:39:52",
     "p1_avg_3dart_match": 49.55,
-    "player1_id": 2,
+    "player1_id": 3,
     "player1": "Franz-Josef",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Frank",
-    "player2_id": 1,
+    "player2_id": 2,
     "p2_avg_3dart_match": 40.59
   },
   {
@@ -96,12 +96,12 @@
     "game_date": "2025-03-28",
     "game_time": "21:23:37",
     "p1_avg_3dart_match": 56.36,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Uwe",
-    "player2_id": 5,
+    "player2_id": 1,
     "p2_avg_3dart_match": 42.27
   },
   {
@@ -111,12 +111,12 @@
     "game_date": "2025-03-28",
     "game_time": "20:43:41",
     "p1_avg_3dart_match": 44.78,
-    "player1_id": 2,
+    "player1_id": 3,
     "player1": "Franz-Josef",
     "p1_legs_won": 3,
     "p2_legs_won": 2,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 37.48
   },
   {
@@ -126,12 +126,12 @@
     "game_date": "2025-03-28",
     "game_time": "20:30:10",
     "p1_avg_3dart_match": 60.12,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Frank",
-    "player2_id": 1,
+    "player2_id": 2,
     "p2_avg_3dart_match": 38.04
   },
   {
@@ -141,12 +141,12 @@
     "game_date": "2025-03-28",
     "game_time": "19:56:23",
     "p1_avg_3dart_match": 40.3,
-    "player1_id": 5,
+    "player1_id": 1,
     "player1": "Uwe",
     "p1_legs_won": 3,
     "p2_legs_won": 1,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 34.54
   },
   {
@@ -156,12 +156,12 @@
     "game_date": "2025-02-01",
     "game_time": "22:49:56",
     "p1_avg_3dart_match": 42.56,
-    "player1_id": 5,
+    "player1_id": 1,
     "player1": "Uwe",
     "p1_legs_won": 3,
     "p2_legs_won": 1,
     "player2": "Frank",
-    "player2_id": 1,
+    "player2_id": 2,
     "p2_avg_3dart_match": 36.85
   },
   {
@@ -171,12 +171,12 @@
     "game_date": "2025-02-01",
     "game_time": "22:19:05",
     "p1_avg_3dart_match": 33.4,
-    "player1_id": 2,
+    "player1_id": 3,
     "player1": "Franz-Josef",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 32.39
   },
   {
@@ -186,12 +186,12 @@
     "game_date": "2025-02-01",
     "game_time": "22:01:26",
     "p1_avg_3dart_match": 50.1,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Uwe",
-    "player2_id": 5,
+    "player2_id": 1,
     "p2_avg_3dart_match": 38.97
   },
   {
@@ -201,12 +201,12 @@
     "game_date": "2025-02-01",
     "game_time": "21:24:52",
     "p1_avg_3dart_match": 32.62,
-    "player1_id": 1,
+    "player1_id": 2,
     "player1": "Frank",
     "p1_legs_won": 3,
     "p2_legs_won": 1,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 32.07
   },
   {
@@ -216,12 +216,12 @@
     "game_date": "2025-02-01",
     "game_time": "20:57:17",
     "p1_avg_3dart_match": 37.72,
-    "player1_id": 2,
+    "player1_id": 3,
     "player1": "Franz-Josef",
     "p1_legs_won": 1,
     "p2_legs_won": 3,
     "player2": "Martin",
-    "player2_id": 4,
+    "player2_id": 8,
     "p2_avg_3dart_match": 45.16
   },
   {
@@ -231,12 +231,12 @@
     "game_date": "2025-02-01",
     "game_time": "20:35:24",
     "p1_avg_3dart_match": 37.97,
-    "player1_id": 3,
+    "player1_id": 6,
     "player1": "Heiner",
     "p1_legs_won": 0,
     "p2_legs_won": 3,
     "player2": "Martin",
-    "player2_id": 4,
+    "player2_id": 8,
     "p2_avg_3dart_match": 44.64
   },
   {
@@ -246,12 +246,12 @@
     "game_date": "2025-02-01",
     "game_time": "20:08:39",
     "p1_avg_3dart_match": 40.42,
-    "player1_id": 1,
+    "player1_id": 2,
     "player1": "Frank",
     "p1_legs_won": 1,
     "p2_legs_won": 3,
     "player2": "Franz-Josef",
-    "player2_id": 2,
+    "player2_id": 3,
     "p2_avg_3dart_match": 45.8
   },
   {
@@ -261,12 +261,12 @@
     "game_date": "2025-02-01",
     "game_time": "19:35:45",
     "p1_avg_3dart_match": 30.08,
-    "player1_id": 3,
+    "player1_id": 6,
     "player1": "Heiner",
     "p1_legs_won": 0,
     "p2_legs_won": 3,
     "player2": "Uwe",
-    "player2_id": 5,
+    "player2_id": 1,
     "p2_avg_3dart_match": 31.31
   },
   {
@@ -276,12 +276,12 @@
     "game_date": "2025-02-01",
     "game_time": "19:20:13",
     "p1_avg_3dart_match": 60.12,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Frank",
-    "player2_id": 1,
+    "player2_id": 2,
     "p2_avg_3dart_match": 43.12
   },
   {
@@ -291,12 +291,12 @@
     "game_date": "2025-02-01",
     "game_time": "18:52:45",
     "p1_avg_3dart_match": 47.01,
-    "player1_id": 2,
+    "player1_id": 3,
     "player1": "Franz-Josef",
     "p1_legs_won": 3,
     "p2_legs_won": 1,
     "player2": "Uwe",
-    "player2_id": 5,
+    "player2_id": 1,
     "p2_avg_3dart_match": 42.09
   },
   {
@@ -306,12 +306,12 @@
     "game_date": "2024-10-12",
     "game_time": "00:05:25",
     "p1_avg_3dart_match": 44.5,
-    "player1_id": 2,
+    "player1_id": 3,
     "player1": "Franz-Josef",
     "p1_legs_won": 1,
     "p2_legs_won": 3,
     "player2": "Martin",
-    "player2_id": 4,
+    "player2_id": 8,
     "p2_avg_3dart_match": 51.89
   },
   {
@@ -321,12 +321,12 @@
     "game_date": "2024-10-11",
     "game_time": "23:29:29",
     "p1_avg_3dart_match": 33.25,
-    "player1_id": 5,
+    "player1_id": 1,
     "player1": "Uwe",
     "p1_legs_won": 1,
     "p2_legs_won": 3,
     "player2": "Frank",
-    "player2_id": 1,
+    "player2_id": 2,
     "p2_avg_3dart_match": 32.73
   },
   {
@@ -336,12 +336,12 @@
     "game_date": "2024-10-11",
     "game_time": "23:15:38",
     "p1_avg_3dart_match": 58.56,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 37.32
   },
   {
@@ -351,12 +351,12 @@
     "game_date": "2024-10-11",
     "game_time": "22:40:02",
     "p1_avg_3dart_match": 38.98,
-    "player1_id": 1,
+    "player1_id": 2,
     "player1": "Frank",
     "p1_legs_won": 3,
     "p2_legs_won": 2,
     "player2": "Franz-Josef",
-    "player2_id": 2,
+    "player2_id": 3,
     "p2_avg_3dart_match": 39.75
   },
   {
@@ -366,12 +366,12 @@
     "game_date": "2024-10-11",
     "game_time": "22:06:43",
     "p1_avg_3dart_match": 39.95,
-    "player1_id": 3,
+    "player1_id": 6,
     "player1": "Heiner",
     "p1_legs_won": 0,
     "p2_legs_won": 3,
     "player2": "Uwe",
-    "player2_id": 5,
+    "player2_id": 1,
     "p2_avg_3dart_match": 40.99
   },
   {
@@ -381,12 +381,12 @@
     "game_date": "2024-10-11",
     "game_time": "21:38:08",
     "p1_avg_3dart_match": 38.9,
-    "player1_id": 1,
+    "player1_id": 2,
     "player1": "Frank",
     "p1_legs_won": 3,
     "p2_legs_won": 1,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 34.63
   },
   {
@@ -396,12 +396,12 @@
     "game_date": "2024-10-11",
     "game_time": "20:55:40",
     "p1_avg_3dart_match": 36.64,
-    "player1_id": 5,
+    "player1_id": 1,
     "player1": "Uwe",
     "p1_legs_won": 2,
     "p2_legs_won": 3,
     "player2": "Franz-Josef",
-    "player2_id": 2,
+    "player2_id": 3,
     "p2_avg_3dart_match": 37.01
   },
   {
@@ -411,12 +411,12 @@
     "game_date": "2024-10-11",
     "game_time": "20:40:37",
     "p1_avg_3dart_match": 47.97,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Frank",
-    "player2_id": 1,
+    "player2_id": 2,
     "p2_avg_3dart_match": 35.19
   },
   {
@@ -426,12 +426,12 @@
     "game_date": "2024-10-11",
     "game_time": "20:11:07",
     "p1_avg_3dart_match": 38.39,
-    "player1_id": 3,
+    "player1_id": 6,
     "player1": "Heiner",
     "p1_legs_won": 1,
     "p2_legs_won": 3,
     "player2": "Franz-Josef",
-    "player2_id": 2,
+    "player2_id": 3,
     "p2_avg_3dart_match": 39.96
   },
   {
@@ -441,12 +441,12 @@
     "game_date": "2024-10-11",
     "game_time": "19:54:41",
     "p1_avg_3dart_match": 62.62,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Uwe",
-    "player2_id": 5,
+    "player2_id": 1,
     "p2_avg_3dart_match": 30.96
   },
   {
@@ -456,12 +456,12 @@
     "game_date": "2024-07-19",
     "game_time": "23:51:32",
     "p1_avg_3dart_match": 54.33,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 36.42
   },
   {
@@ -471,12 +471,12 @@
     "game_date": "2024-07-19",
     "game_time": "23:31:07",
     "p1_avg_3dart_match": 47.46,
-    "player1_id": 2,
+    "player1_id": 3,
     "player1": "Franz-Josef",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Uwe",
-    "player2_id": 5,
+    "player2_id": 1,
     "p2_avg_3dart_match": 41.35
   },
   {
@@ -486,12 +486,12 @@
     "game_date": "2024-07-19",
     "game_time": "23:10:42",
     "p1_avg_3dart_match": 59.33,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Frank",
-    "player2_id": 1,
+    "player2_id": 2,
     "p2_avg_3dart_match": 41.92
   },
   {
@@ -501,12 +501,12 @@
     "game_date": "2024-07-19",
     "game_time": "22:17:51",
     "p1_avg_3dart_match": 27.05,
-    "player1_id": 5,
+    "player1_id": 1,
     "player1": "Uwe",
     "p1_legs_won": 3,
     "p2_legs_won": 1,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 26.54
   },
   {
@@ -516,12 +516,12 @@
     "game_date": "2024-07-19",
     "game_time": "22:00:14",
     "p1_avg_3dart_match": 33.2,
-    "player1_id": 1,
+    "player1_id": 2,
     "player1": "Frank",
     "p1_legs_won": 0,
     "p2_legs_won": 3,
     "player2": "Franz-Josef",
-    "player2_id": 2,
+    "player2_id": 3,
     "p2_avg_3dart_match": 50.1
   },
   {
@@ -531,12 +531,12 @@
     "game_date": "2024-07-19",
     "game_time": "21:28:47",
     "p1_avg_3dart_match": 36.66,
-    "player1_id": 5,
+    "player1_id": 1,
     "player1": "Uwe",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Frank",
-    "player2_id": 1,
+    "player2_id": 2,
     "p2_avg_3dart_match": 33.7
   },
   {
@@ -546,12 +546,12 @@
     "game_date": "2024-07-19",
     "game_time": "20:53:26",
     "p1_avg_3dart_match": 35.63,
-    "player1_id": 3,
+    "player1_id": 6,
     "player1": "Heiner",
     "p1_legs_won": 2,
     "p2_legs_won": 3,
     "player2": "Franz-Josef",
-    "player2_id": 2,
+    "player2_id": 3,
     "p2_avg_3dart_match": 44.14
   },
   {
@@ -561,12 +561,12 @@
     "game_date": "2024-07-19",
     "game_time": "20:33:48",
     "p1_avg_3dart_match": 48.15,
-    "player1_id": 5,
+    "player1_id": 1,
     "player1": "Uwe",
     "p1_legs_won": 0,
     "p2_legs_won": 3,
     "player2": "Martin",
-    "player2_id": 4,
+    "player2_id": 8,
     "p2_avg_3dart_match": 58.56
   },
   {
@@ -576,12 +576,12 @@
     "game_date": "2024-07-19",
     "game_time": "20:09:46",
     "p1_avg_3dart_match": 31.1,
-    "player1_id": 3,
+    "player1_id": 6,
     "player1": "Heiner",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Frank",
-    "player2_id": 1,
+    "player2_id": 2,
     "p2_avg_3dart_match": 30.98
   },
   {
@@ -591,12 +591,12 @@
     "game_date": "2024-07-19",
     "game_time": "19:56:13",
     "p1_avg_3dart_match": 50.04,
-    "player1_id": 2,
+    "player1_id": 3,
     "player1": "Franz-Josef",
     "p1_legs_won": 0,
     "p2_legs_won": 3,
     "player2": "Martin",
-    "player2_id": 4,
+    "player2_id": 8,
     "p2_avg_3dart_match": 60.93
   },
   {
@@ -606,12 +606,12 @@
     "game_date": "2024-03-28",
     "game_time": "23:44:26",
     "p1_avg_3dart_match": 47.97,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Franz-Josef",
-    "player2_id": 2,
+    "player2_id": 3,
     "p2_avg_3dart_match": 47.27
   },
   {
@@ -621,12 +621,12 @@
     "game_date": "2024-03-28",
     "game_time": "23:06:03",
     "p1_avg_3dart_match": 30.41,
-    "player1_id": 5,
+    "player1_id": 1,
     "player1": "Uwe",
     "p1_legs_won": 3,
     "p2_legs_won": 1,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 31.2
   },
   {
@@ -636,12 +636,12 @@
     "game_date": "2024-03-28",
     "game_time": "22:34:25",
     "p1_avg_3dart_match": 44.42,
-    "player1_id": 2,
+    "player1_id": 3,
     "player1": "Franz-Josef",
     "p1_legs_won": 3,
     "p2_legs_won": 1,
     "player2": "Frank",
-    "player2_id": 1,
+    "player2_id": 2,
     "p2_avg_3dart_match": 39.24
   },
   {
@@ -651,12 +651,12 @@
     "game_date": "2024-03-28",
     "game_time": "22:15:34",
     "p1_avg_3dart_match": 44.21,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 29.06
   },
   {
@@ -666,12 +666,12 @@
     "game_date": "2024-03-28",
     "game_time": "21:41:10",
     "p1_avg_3dart_match": 33.86,
-    "player1_id": 1,
+    "player1_id": 2,
     "player1": "Frank",
     "p1_legs_won": 1,
     "p2_legs_won": 3,
     "player2": "Uwe",
-    "player2_id": 5,
+    "player2_id": 1,
     "p2_avg_3dart_match": 33.61
   },
   {
@@ -681,12 +681,12 @@
     "game_date": "2024-03-28",
     "game_time": "21:14:06",
     "p1_avg_3dart_match": 30.06,
-    "player1_id": 1,
+    "player1_id": 2,
     "player1": "Frank",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 29.36
   },
   {
@@ -696,12 +696,12 @@
     "game_date": "2024-03-28",
     "game_time": "20:56:24",
     "p1_avg_3dart_match": 53.68,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Uwe",
-    "player2_id": 5,
+    "player2_id": 1,
     "p2_avg_3dart_match": 43.27
   },
   {
@@ -711,12 +711,12 @@
     "game_date": "2024-03-28",
     "game_time": "20:24:55",
     "p1_avg_3dart_match": 27.69,
-    "player1_id": 3,
+    "player1_id": 6,
     "player1": "Heiner",
     "p1_legs_won": 0,
     "p2_legs_won": 3,
     "player2": "Franz-Josef",
-    "player2_id": 2,
+    "player2_id": 3,
     "p2_avg_3dart_match": 36.36
   },
   {
@@ -726,12 +726,12 @@
     "game_date": "2024-03-28",
     "game_time": "20:04:07",
     "p1_avg_3dart_match": 35.26,
-    "player1_id": 1,
+    "player1_id": 2,
     "player1": "Frank",
     "p1_legs_won": 0,
     "p2_legs_won": 3,
     "player2": "Martin",
-    "player2_id": 4,
+    "player2_id": 8,
     "p2_avg_3dart_match": 39.21
   },
   {
@@ -741,12 +741,12 @@
     "game_date": "2024-03-28",
     "game_time": "19:44:02",
     "p1_avg_3dart_match": 41.64,
-    "player1_id": 5,
+    "player1_id": 1,
     "player1": "Uwe",
     "p1_legs_won": 0,
     "p2_legs_won": 3,
     "player2": "Franz-Josef",
-    "player2_id": 2,
+    "player2_id": 3,
     "p2_avg_3dart_match": 45.55
   },
   {
@@ -756,12 +756,12 @@
     "game_date": "2024-02-16",
     "game_time": "23:47:12",
     "p1_avg_3dart_match": 55.67,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Uwe",
-    "player2_id": 5,
+    "player2_id": 1,
     "p2_avg_3dart_match": 41.19
   },
   {
@@ -771,12 +771,12 @@
     "game_date": "2024-02-16",
     "game_time": "23:07:38",
     "p1_avg_3dart_match": 28.37,
-    "player1_id": 1,
+    "player1_id": 2,
     "player1": "Frank",
     "p1_legs_won": 1,
     "p2_legs_won": 3,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 28.28
   },
   {
@@ -786,12 +786,12 @@
     "game_date": "2024-02-16",
     "game_time": "22:45:19",
     "p1_avg_3dart_match": 46.48,
-    "player1_id": 2,
+    "player1_id": 3,
     "player1": "Franz-Josef",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Uwe",
-    "player2_id": 5,
+    "player2_id": 1,
     "p2_avg_3dart_match": 41.26
   },
   {
@@ -801,12 +801,12 @@
     "game_date": "2024-02-16",
     "game_time": "22:32:28",
     "p1_avg_3dart_match": 34.37,
-    "player1_id": 1,
+    "player1_id": 2,
     "player1": "Frank",
     "p1_legs_won": 0,
     "p2_legs_won": 3,
     "player2": "Martin",
-    "player2_id": 4,
+    "player2_id": 8,
     "p2_avg_3dart_match": 51.24
   },
   {
@@ -816,12 +816,12 @@
     "game_date": "2024-02-16",
     "game_time": "22:04:58",
     "p1_avg_3dart_match": 38.2,
-    "player1_id": 3,
+    "player1_id": 6,
     "player1": "Heiner",
     "p1_legs_won": 1,
     "p2_legs_won": 3,
     "player2": "Franz-Josef",
-    "player2_id": 2,
+    "player2_id": 3,
     "p2_avg_3dart_match": 46.15
   },
   {
@@ -831,12 +831,12 @@
     "game_date": "2024-02-16",
     "game_time": "21:43:15",
     "p1_avg_3dart_match": 43.78,
-    "player1_id": 2,
+    "player1_id": 3,
     "player1": "Franz-Josef",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Frank",
-    "player2_id": 1,
+    "player2_id": 2,
     "p2_avg_3dart_match": 38.32
   },
   {
@@ -846,12 +846,12 @@
     "game_date": "2024-02-16",
     "game_time": "21:25:26",
     "p1_avg_3dart_match": 60.93,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 40.71
   },
   {
@@ -861,12 +861,12 @@
     "game_date": "2024-02-16",
     "game_time": "20:57:44",
     "p1_avg_3dart_match": 35.5,
-    "player1_id": 5,
+    "player1_id": 1,
     "player1": "Uwe",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Frank",
-    "player2_id": 1,
+    "player2_id": 2,
     "p2_avg_3dart_match": 33.1
   },
   {
@@ -876,12 +876,12 @@
     "game_date": "2024-02-16",
     "game_time": "20:31:44",
     "p1_avg_3dart_match": 46.2,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 1,
     "player2": "Franz-Josef",
-    "player2_id": 2,
+    "player2_id": 3,
     "p2_avg_3dart_match": 43.48
   },
   {
@@ -891,12 +891,12 @@
     "game_date": "2024-02-16",
     "game_time": "19:54:40",
     "p1_avg_3dart_match": 30.67,
-    "player1_id": 5,
+    "player1_id": 1,
     "player1": "Uwe",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 30.44
   },
   {
@@ -906,12 +906,12 @@
     "game_date": "2024-01-19",
     "game_time": "23:20:03",
     "p1_avg_3dart_match": 48.48,
-    "player1_id": 2,
+    "player1_id": 3,
     "player1": "Franz-Josef",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Frank",
-    "player2_id": 1,
+    "player2_id": 2,
     "p2_avg_3dart_match": 40.47
   },
   {
@@ -921,12 +921,12 @@
     "game_date": "2024-01-19",
     "game_time": "22:53:05",
     "p1_avg_3dart_match": 37.44,
-    "player1_id": 5,
+    "player1_id": 1,
     "player1": "Uwe",
     "p1_legs_won": 0,
     "p2_legs_won": 3,
     "player2": "Martin",
-    "player2_id": 4,
+    "player2_id": 8,
     "p2_avg_3dart_match": 60.12
   },
   {
@@ -936,12 +936,12 @@
     "game_date": "2024-01-19",
     "game_time": "22:34:15",
     "p1_avg_3dart_match": 46.01,
-    "player1_id": 2,
+    "player1_id": 3,
     "player1": "Franz-Josef",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 43.75
   },
   {
@@ -951,12 +951,12 @@
     "game_date": "2024-01-19",
     "game_time": "22:16:23",
     "p1_avg_3dart_match": 55.67,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Frank",
-    "player2_id": 1,
+    "player2_id": 2,
     "p2_avg_3dart_match": 38.81
   },
   {
@@ -966,12 +966,12 @@
     "game_date": "2024-01-19",
     "game_time": "21:51:29",
     "p1_avg_3dart_match": 36.66,
-    "player1_id": 5,
+    "player1_id": 1,
     "player1": "Uwe",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 33.62
   },
   {
@@ -981,12 +981,12 @@
     "game_date": "2024-01-19",
     "game_time": "21:36:38",
     "p1_avg_3dart_match": 57.08,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 35.88
   },
   {
@@ -996,12 +996,12 @@
     "game_date": "2024-01-19",
     "game_time": "21:10:18",
     "p1_avg_3dart_match": 31.1,
-    "player1_id": 1,
+    "player1_id": 2,
     "player1": "Frank",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Uwe",
-    "player2_id": 5,
+    "player2_id": 1,
     "p2_avg_3dart_match": 31.32
   },
   {
@@ -1011,12 +1011,12 @@
     "game_date": "2024-01-19",
     "game_time": "20:57:14",
     "p1_avg_3dart_match": 60.93,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Franz-Josef",
-    "player2_id": 2,
+    "player2_id": 3,
     "p2_avg_3dart_match": 48.83
   },
   {
@@ -1026,12 +1026,12 @@
     "game_date": "2024-01-19",
     "game_time": "20:21:33",
     "p1_avg_3dart_match": 29.3,
-    "player1_id": 1,
+    "player1_id": 2,
     "player1": "Frank",
     "p1_legs_won": 3,
     "p2_legs_won": 1,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 25.89
   },
   {
@@ -1041,12 +1041,12 @@
     "game_date": "2024-01-19",
     "game_time": "19:58:57",
     "p1_avg_3dart_match": 33.46,
-    "player1_id": 5,
+    "player1_id": 1,
     "player1": "Uwe",
     "p1_legs_won": 0,
     "p2_legs_won": 3,
     "player2": "Franz-Josef",
-    "player2_id": 2,
+    "player2_id": 3,
     "p2_avg_3dart_match": 40.26
   },
   {
@@ -1056,12 +1056,12 @@
     "game_date": "2024-01-06",
     "game_time": "23:01:08",
     "p1_avg_3dart_match": 33.96,
-    "player1_id": 5,
+    "player1_id": 1,
     "player1": "Uwe",
     "p1_legs_won": 3,
     "p2_legs_won": 1,
     "player2": "Frank",
-    "player2_id": 1,
+    "player2_id": 2,
     "p2_avg_3dart_match": 32.34
   },
   {
@@ -1071,12 +1071,12 @@
     "game_date": "2024-01-06",
     "game_time": "22:47:39",
     "p1_avg_3dart_match": 60.93,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 36.46
   },
   {
@@ -1086,12 +1086,12 @@
     "game_date": "2024-01-06",
     "game_time": "22:30:06",
     "p1_avg_3dart_match": 30.5,
-    "player1_id": 1,
+    "player1_id": 2,
     "player1": "Frank",
     "p1_legs_won": 0,
     "p2_legs_won": 3,
     "player2": "Franz-Josef",
-    "player2_id": 2,
+    "player2_id": 3,
     "p2_avg_3dart_match": 46.01
   },
   {
@@ -1101,12 +1101,12 @@
     "game_date": "2024-01-06",
     "game_time": "22:11:04",
     "p1_avg_3dart_match": 40.0,
-    "player1_id": 5,
+    "player1_id": 1,
     "player1": "Uwe",
     "p1_legs_won": 0,
     "p2_legs_won": 3,
     "player2": "Martin",
-    "player2_id": 4,
+    "player2_id": 8,
     "p2_avg_3dart_match": 46.97
   },
   {
@@ -1116,12 +1116,12 @@
     "game_date": "2024-01-06",
     "game_time": "21:52:40",
     "p1_avg_3dart_match": 46.97,
-    "player1_id": 2,
+    "player1_id": 3,
     "player1": "Franz-Josef",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 32.13
   },
   {
@@ -1131,12 +1131,12 @@
     "game_date": "2024-01-06",
     "game_time": "21:28:34",
     "p1_avg_3dart_match": 52.43,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Franz-Josef",
-    "player2_id": 2,
+    "player2_id": 3,
     "p2_avg_3dart_match": 36.5
   },
   {
@@ -1146,12 +1146,12 @@
     "game_date": "2024-01-06",
     "game_time": "21:01:32",
     "p1_avg_3dart_match": 33.61,
-    "player1_id": 5,
+    "player1_id": 1,
     "player1": "Uwe",
     "p1_legs_won": 0,
     "p2_legs_won": 3,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 33.9
   },
   {
@@ -1161,12 +1161,12 @@
     "game_date": "2024-01-06",
     "game_time": "20:46:55",
     "p1_avg_3dart_match": 50.1,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Frank",
-    "player2_id": 1,
+    "player2_id": 2,
     "p2_avg_3dart_match": 36.1
   },
   {
@@ -1176,12 +1176,12 @@
     "game_date": "2024-01-06",
     "game_time": "20:27:50",
     "p1_avg_3dart_match": 44.21,
-    "player1_id": 2,
+    "player1_id": 3,
     "player1": "Franz-Josef",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Uwe",
-    "player2_id": 5,
+    "player2_id": 1,
     "p2_avg_3dart_match": 36.88
   },
   {
@@ -1191,12 +1191,12 @@
     "game_date": "2024-01-06",
     "game_time": "19:20:05",
     "p1_avg_3dart_match": 20.68,
-    "player1_id": 1,
+    "player1_id": 2,
     "player1": "Frank",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 20.58
   },
   {
@@ -1206,12 +1206,12 @@
     "game_date": "2023-12-10",
     "game_time": "00:16:39",
     "p1_avg_3dart_match": 41.37,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Frank",
-    "player2_id": 1,
+    "player2_id": 2,
     "p2_avg_3dart_match": 32.97
   },
   {
@@ -1221,12 +1221,12 @@
     "game_date": "2023-12-09",
     "game_time": "23:49:43",
     "p1_avg_3dart_match": 45.39,
-    "player1_id": 2,
+    "player1_id": 3,
     "player1": "Franz-Josef",
     "p1_legs_won": 3,
     "p2_legs_won": 1,
     "player2": "Uwe",
-    "player2_id": 5,
+    "player2_id": 1,
     "p2_avg_3dart_match": 38.78
   },
   {
@@ -1236,12 +1236,12 @@
     "game_date": "2023-12-09",
     "game_time": "23:11:14",
     "p1_avg_3dart_match": 29.78,
-    "player1_id": 3,
+    "player1_id": 6,
     "player1": "Heiner",
     "p1_legs_won": 3,
     "p2_legs_won": 2,
     "player2": "Frank",
-    "player2_id": 1,
+    "player2_id": 2,
     "p2_avg_3dart_match": 29.4
   },
   {
@@ -1251,12 +1251,12 @@
     "game_date": "2023-12-09",
     "game_time": "22:56:53",
     "p1_avg_3dart_match": 65.35,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Uwe",
-    "player2_id": 5,
+    "player2_id": 1,
     "p2_avg_3dart_match": 44.9
   },
   {
@@ -1266,12 +1266,12 @@
     "game_date": "2023-12-09",
     "game_time": "22:21:21",
     "p1_avg_3dart_match": 32.91,
-    "player1_id": 3,
+    "player1_id": 6,
     "player1": "Heiner",
     "p1_legs_won": 1,
     "p2_legs_won": 3,
     "player2": "Franz-Josef",
-    "player2_id": 2,
+    "player2_id": 3,
     "p2_avg_3dart_match": 34.61
   },
   {
@@ -1281,12 +1281,12 @@
     "game_date": "2023-12-09",
     "game_time": "21:33:22",
     "p1_avg_3dart_match": 30.49,
-    "player1_id": 5,
+    "player1_id": 1,
     "player1": "Uwe",
     "p1_legs_won": 3,
     "p2_legs_won": 1,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 28.09
   },
   {
@@ -1296,12 +1296,12 @@
     "game_date": "2023-12-09",
     "game_time": "21:16:37",
     "p1_avg_3dart_match": 43.43,
-    "player1_id": 2,
+    "player1_id": 3,
     "player1": "Franz-Josef",
     "p1_legs_won": 1,
     "p2_legs_won": 3,
     "player2": "Martin",
-    "player2_id": 4,
+    "player2_id": 8,
     "p2_avg_3dart_match": 59.94
   },
   {
@@ -1311,12 +1311,12 @@
     "game_date": "2023-12-09",
     "game_time": "20:44:08",
     "p1_avg_3dart_match": 34.14,
-    "player1_id": 1,
+    "player1_id": 2,
     "player1": "Frank",
     "p1_legs_won": 1,
     "p2_legs_won": 3,
     "player2": "Uwe",
-    "player2_id": 5,
+    "player2_id": 1,
     "p2_avg_3dart_match": 35.1
   },
   {
@@ -1326,12 +1326,12 @@
     "game_date": "2023-12-09",
     "game_time": "20:17:18",
     "p1_avg_3dart_match": 46.48,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 41.38
   },
   {
@@ -1341,12 +1341,12 @@
     "game_date": "2023-12-09",
     "game_time": "19:45:25",
     "p1_avg_3dart_match": 37.78,
-    "player1_id": 2,
+    "player1_id": 3,
     "player1": "Franz-Josef",
     "p1_legs_won": 1,
     "p2_legs_won": 3,
     "player2": "Frank",
-    "player2_id": 1,
+    "player2_id": 2,
     "p2_avg_3dart_match": 41.49
   },
   {
@@ -1356,12 +1356,12 @@
     "game_date": "2023-07-07",
     "game_time": "23:40:43",
     "p1_avg_3dart_match": 42.52,
-    "player1_id": 3,
+    "player1_id": 6,
     "player1": "Heiner",
     "p1_legs_won": 0,
     "p2_legs_won": 3,
     "player2": "Martin",
-    "player2_id": 4,
+    "player2_id": 8,
     "p2_avg_3dart_match": 71.57
   },
   {
@@ -1371,12 +1371,12 @@
     "game_date": "2023-07-07",
     "game_time": "22:59:09",
     "p1_avg_3dart_match": 42.76,
-    "player1_id": 5,
+    "player1_id": 1,
     "player1": "Uwe",
     "p1_legs_won": 3,
     "p2_legs_won": 2,
     "player2": "Frank",
-    "player2_id": 1,
+    "player2_id": 2,
     "p2_avg_3dart_match": 42.4
   },
   {
@@ -1386,12 +1386,12 @@
     "game_date": "2023-07-07",
     "game_time": "22:33:13",
     "p1_avg_3dart_match": 41.8,
-    "player1_id": 3,
+    "player1_id": 6,
     "player1": "Heiner",
     "p1_legs_won": 1,
     "p2_legs_won": 3,
     "player2": "Franz-Josef",
-    "player2_id": 2,
+    "player2_id": 3,
     "p2_avg_3dart_match": 48.39
   },
   {
@@ -1401,12 +1401,12 @@
     "game_date": "2023-07-07",
     "game_time": "22:15:19",
     "p1_avg_3dart_match": 56.36,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Frank",
-    "player2_id": 1,
+    "player2_id": 2,
     "p2_avg_3dart_match": 45.08
   },
   {
@@ -1416,12 +1416,12 @@
     "game_date": "2023-07-07",
     "game_time": "21:49:59",
     "p1_avg_3dart_match": 40.26,
-    "player1_id": 2,
+    "player1_id": 3,
     "player1": "Franz-Josef",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Uwe",
-    "player2_id": 5,
+    "player2_id": 1,
     "p2_avg_3dart_match": 39.5
   },
   {
@@ -1431,12 +1431,12 @@
     "game_date": "2023-07-07",
     "game_time": "21:33:15",
     "p1_avg_3dart_match": 44.64,
-    "player1_id": 2,
+    "player1_id": 3,
     "player1": "Franz-Josef",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Frank",
-    "player2_id": 1,
+    "player2_id": 2,
     "p2_avg_3dart_match": 34.0
   },
   {
@@ -1446,12 +1446,12 @@
     "game_date": "2023-07-07",
     "game_time": "21:13:36",
     "p1_avg_3dart_match": 47.46,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Uwe",
-    "player2_id": 5,
+    "player2_id": 1,
     "p2_avg_3dart_match": 32.9
   },
   {
@@ -1461,12 +1461,12 @@
     "game_date": "2023-07-07",
     "game_time": "20:33:56",
     "p1_avg_3dart_match": 29.89,
-    "player1_id": 1,
+    "player1_id": 2,
     "player1": "Frank",
     "p1_legs_won": 1,
     "p2_legs_won": 3,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 29.98
   },
   {
@@ -1476,12 +1476,12 @@
     "game_date": "2023-07-07",
     "game_time": "20:20:03",
     "p1_avg_3dart_match": 45.92,
-    "player1_id": 2,
+    "player1_id": 3,
     "player1": "Franz-Josef",
     "p1_legs_won": 0,
     "p2_legs_won": 3,
     "player2": "Martin",
-    "player2_id": 4,
+    "player2_id": 8,
     "p2_avg_3dart_match": 57.08
   },
   {
@@ -1491,12 +1491,12 @@
     "game_date": "2023-07-07",
     "game_time": "19:46:33",
     "p1_avg_3dart_match": 28.9,
-    "player1_id": 5,
+    "player1_id": 1,
     "player1": "Uwe",
     "p1_legs_won": 0,
     "p2_legs_won": 3,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 29.86
   },
   {
@@ -1506,12 +1506,12 @@
     "game_date": "2023-05-28",
     "game_time": "00:03:11",
     "p1_avg_3dart_match": 42.94,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 41.85
   },
   {
@@ -1521,12 +1521,12 @@
     "game_date": "2023-05-27",
     "game_time": "23:23:32",
     "p1_avg_3dart_match": 40.36,
-    "player1_id": 2,
+    "player1_id": 3,
     "player1": "Franz-Josef",
     "p1_legs_won": 1,
     "p2_legs_won": 3,
     "player2": "Uwe",
-    "player2_id": 5,
+    "player2_id": 1,
     "p2_avg_3dart_match": 40.63
   },
   {
@@ -1536,12 +1536,12 @@
     "game_date": "2023-05-27",
     "game_time": "22:50:24",
     "p1_avg_3dart_match": 30.57,
-    "player1_id": 3,
+    "player1_id": 6,
     "player1": "Heiner",
     "p1_legs_won": 0,
     "p2_legs_won": 3,
     "player2": "Frank",
-    "player2_id": 1,
+    "player2_id": 2,
     "p2_avg_3dart_match": 31.98
   },
   {
@@ -1551,12 +1551,12 @@
     "game_date": "2023-05-27",
     "game_time": "22:35:16",
     "p1_avg_3dart_match": 50.66,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Franz-Josef",
-    "player2_id": 2,
+    "player2_id": 3,
     "p2_avg_3dart_match": 44.11
   },
   {
@@ -1566,12 +1566,12 @@
     "game_date": "2023-05-27",
     "game_time": "21:41:52",
     "p1_avg_3dart_match": 37.69,
-    "player1_id": 5,
+    "player1_id": 1,
     "player1": "Uwe",
     "p1_legs_won": 3,
     "p2_legs_won": 2,
     "player2": "Frank",
-    "player2_id": 1,
+    "player2_id": 2,
     "p2_avg_3dart_match": 39.39
   },
   {
@@ -1581,12 +1581,12 @@
     "game_date": "2023-05-27",
     "game_time": "21:14:14",
     "p1_avg_3dart_match": 35.88,
-    "player1_id": 1,
+    "player1_id": 2,
     "player1": "Frank",
     "p1_legs_won": 1,
     "p2_legs_won": 3,
     "player2": "Franz-Josef",
-    "player2_id": 2,
+    "player2_id": 3,
     "p2_avg_3dart_match": 40.18
   },
   {
@@ -1596,12 +1596,12 @@
     "game_date": "2023-05-27",
     "game_time": "20:49:03",
     "p1_avg_3dart_match": 43.78,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Uwe",
-    "player2_id": 5,
+    "player2_id": 1,
     "p2_avg_3dart_match": 35.67
   },
   {
@@ -1611,12 +1611,12 @@
     "game_date": "2023-05-27",
     "game_time": "20:20:36",
     "p1_avg_3dart_match": 29.28,
-    "player1_id": 2,
+    "player1_id": 3,
     "player1": "Franz-Josef",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 27.65
   },
   {
@@ -1626,12 +1626,12 @@
     "game_date": "2023-05-27",
     "game_time": "20:06:57",
     "p1_avg_3dart_match": 55.67,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 2,
     "p2_legs_won": 0,
     "player2": "Frank",
-    "player2_id": 1,
+    "player2_id": 2,
     "p2_avg_3dart_match": 41.61
   },
   {
@@ -1641,12 +1641,12 @@
     "game_date": "2023-05-27",
     "game_time": "19:40:55",
     "p1_avg_3dart_match": 41.75,
-    "player1_id": 5,
+    "player1_id": 1,
     "player1": "Uwe",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 35.06
   },
   {
@@ -1656,12 +1656,12 @@
     "game_date": "2023-04-15",
     "game_time": "00:04:04",
     "p1_avg_3dart_match": 33.4,
-    "player1_id": 2,
+    "player1_id": 3,
     "player1": "Franz-Josef",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 29.0
   },
   {
@@ -1671,12 +1671,12 @@
     "game_date": "2023-04-14",
     "game_time": "23:50:38",
     "p1_avg_3dart_match": 66.31,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Uwe",
-    "player2_id": 5,
+    "player2_id": 1,
     "p2_avg_3dart_match": 43.18
   },
   {
@@ -1686,12 +1686,12 @@
     "game_date": "2023-04-14",
     "game_time": "23:35:57",
     "p1_avg_3dart_match": 60.93,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 47.62
   },
   {
@@ -1701,12 +1701,12 @@
     "game_date": "2023-04-14",
     "game_time": "23:05:51",
     "p1_avg_3dart_match": 34.9,
-    "player1_id": 5,
+    "player1_id": 1,
     "player1": "Uwe",
     "p1_legs_won": 1,
     "p2_legs_won": 3,
     "player2": "Frank",
-    "player2_id": 1,
+    "player2_id": 2,
     "p2_avg_3dart_match": 37.82
   },
   {
@@ -1716,12 +1716,12 @@
     "game_date": "2023-04-14",
     "game_time": "22:51:12",
     "p1_avg_3dart_match": 59.33,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Franz-Josef",
-    "player2_id": 2,
+    "player2_id": 3,
     "p2_avg_3dart_match": 40.83
   },
   {
@@ -1731,12 +1731,12 @@
     "game_date": "2023-04-14",
     "game_time": "22:05:33",
     "p1_avg_3dart_match": 32.83,
-    "player1_id": 3,
+    "player1_id": 6,
     "player1": "Heiner",
     "p1_legs_won": 2,
     "p2_legs_won": 3,
     "player2": "Frank",
-    "player2_id": 1,
+    "player2_id": 2,
     "p2_avg_3dart_match": 36.66
   },
   {
@@ -1746,12 +1746,12 @@
     "game_date": "2023-04-14",
     "game_time": "21:35:16",
     "p1_avg_3dart_match": 33.0,
-    "player1_id": 1,
+    "player1_id": 2,
     "player1": "Frank",
     "p1_legs_won": 1,
     "p2_legs_won": 3,
     "player2": "Franz-Josef",
-    "player2_id": 2,
+    "player2_id": 3,
     "p2_avg_3dart_match": 35.07
   },
   {
@@ -1761,12 +1761,12 @@
     "game_date": "2023-04-14",
     "game_time": "20:54:02",
     "p1_avg_3dart_match": 31.45,
-    "player1_id": 5,
+    "player1_id": 1,
     "player1": "Uwe",
     "p1_legs_won": 1,
     "p2_legs_won": 3,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 33.35
   },
   {
@@ -1776,12 +1776,12 @@
     "game_date": "2023-04-14",
     "game_time": "20:35:20",
     "p1_avg_3dart_match": 46.97,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Frank",
-    "player2_id": 1,
+    "player2_id": 2,
     "p2_avg_3dart_match": 32.65
   },
   {
@@ -1791,12 +1791,12 @@
     "game_date": "2023-04-14",
     "game_time": "19:53:02",
     "p1_avg_3dart_match": 37.95,
-    "player1_id": 2,
+    "player1_id": 3,
     "player1": "Franz-Josef",
     "p1_legs_won": 3,
     "p2_legs_won": 2,
     "player2": "Uwe",
-    "player2_id": 5,
+    "player2_id": 1,
     "p2_avg_3dart_match": 37.21
   },
   {
@@ -1806,12 +1806,12 @@
     "game_date": "2023-02-18",
     "game_time": "00:21:17",
     "p1_avg_3dart_match": 40.11,
-    "player1_id": 5,
+    "player1_id": 1,
     "player1": "Uwe",
     "p1_legs_won": 3,
     "p2_legs_won": 1,
     "player2": "Frank",
-    "player2_id": 1,
+    "player2_id": 2,
     "p2_avg_3dart_match": 38.86
   },
   {
@@ -1821,12 +1821,12 @@
     "game_date": "2023-02-18",
     "game_time": "00:01:01",
     "p1_avg_3dart_match": 57.08,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 42.84
   },
   {
@@ -1836,12 +1836,12 @@
     "game_date": "2023-02-17",
     "game_time": "23:24:08",
     "p1_avg_3dart_match": 35.63,
-    "player1_id": 3,
+    "player1_id": 6,
     "player1": "Heiner",
     "p1_legs_won": 2,
     "p2_legs_won": 3,
     "player2": "Frank",
-    "player2_id": 1,
+    "player2_id": 2,
     "p2_avg_3dart_match": 39.81
   },
   {
@@ -1851,12 +1851,12 @@
     "game_date": "2023-02-17",
     "game_time": "23:03:33",
     "p1_avg_3dart_match": 54.61,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 1,
     "p2_legs_won": 3,
     "player2": "Franz-Josef",
-    "player2_id": 2,
+    "player2_id": 3,
     "p2_avg_3dart_match": 50.76
   },
   {
@@ -1866,12 +1866,12 @@
     "game_date": "2023-02-17",
     "game_time": "22:14:18",
     "p1_avg_3dart_match": 36.74,
-    "player1_id": 5,
+    "player1_id": 1,
     "player1": "Uwe",
     "p1_legs_won": 3,
     "p2_legs_won": 2,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 34.49
   },
   {
@@ -1881,12 +1881,12 @@
     "game_date": "2023-02-17",
     "game_time": "21:33:16",
     "p1_avg_3dart_match": 36.85,
-    "player1_id": 2,
+    "player1_id": 3,
     "player1": "Franz-Josef",
     "p1_legs_won": 3,
     "p2_legs_won": 1,
     "player2": "Frank",
-    "player2_id": 1,
+    "player2_id": 2,
     "p2_avg_3dart_match": 34.24
   },
   {
@@ -1896,12 +1896,12 @@
     "game_date": "2023-02-17",
     "game_time": "21:06:07",
     "p1_avg_3dart_match": 43.25,
-    "player1_id": 5,
+    "player1_id": 1,
     "player1": "Uwe",
     "p1_legs_won": 0,
     "p2_legs_won": 3,
     "player2": "Franz-Josef",
-    "player2_id": 2,
+    "player2_id": 3,
     "p2_avg_3dart_match": 54.33
   },
   {
@@ -1911,12 +1911,12 @@
     "game_date": "2023-02-17",
     "game_time": "20:48:43",
     "p1_avg_3dart_match": 54.99,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Frank",
-    "player2_id": 1,
+    "player2_id": 2,
     "p2_avg_3dart_match": 38.62
   },
   {
@@ -1926,12 +1926,12 @@
     "game_date": "2023-02-17",
     "game_time": "20:27:03",
     "p1_avg_3dart_match": 46.01,
-    "player1_id": 2,
+    "player1_id": 3,
     "player1": "Franz-Josef",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 40.78
   },
   {
@@ -1941,12 +1941,12 @@
     "game_date": "2023-02-17",
     "game_time": "19:20:17",
     "p1_avg_3dart_match": 54.99,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Uwe",
-    "player2_id": 5,
+    "player2_id": 1,
     "p2_avg_3dart_match": 42.65
   },
   {
@@ -1956,12 +1956,12 @@
     "game_date": "2023-01-07",
     "game_time": "00:25:09",
     "p1_avg_3dart_match": 50.33,
-    "player1_id": 2,
+    "player1_id": 3,
     "player1": "Franz-Josef",
     "p1_legs_won": 3,
     "p2_legs_won": 2,
     "player2": "Uwe",
-    "player2_id": 5,
+    "player2_id": 1,
     "p2_avg_3dart_match": 43.55
   },
   {
@@ -1971,12 +1971,12 @@
     "game_date": "2023-01-07",
     "game_time": "00:12:22",
     "p1_avg_3dart_match": 59.33,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Frank",
-    "player2_id": 1,
+    "player2_id": 2,
     "p2_avg_3dart_match": 48.75
   },
   {
@@ -1986,12 +1986,12 @@
     "game_date": "2023-01-06",
     "game_time": "23:34:24",
     "p1_avg_3dart_match": 38.4,
-    "player1_id": 5,
+    "player1_id": 1,
     "player1": "Uwe",
     "p1_legs_won": 3,
     "p2_legs_won": 2,
     "player2": "Frank",
-    "player2_id": 1,
+    "player2_id": 2,
     "p2_avg_3dart_match": 32.23
   },
   {
@@ -2001,12 +2001,12 @@
     "game_date": "2023-01-06",
     "game_time": "23:19:06",
     "p1_avg_3dart_match": 58.56,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 41.71
   },
   {
@@ -2016,12 +2016,12 @@
     "game_date": "2023-01-06",
     "game_time": "22:56:46",
     "p1_avg_3dart_match": 38.94,
-    "player1_id": 1,
+    "player1_id": 2,
     "player1": "Frank",
     "p1_legs_won": 0,
     "p2_legs_won": 3,
     "player2": "Franz-Josef",
-    "player2_id": 2,
+    "player2_id": 3,
     "p2_avg_3dart_match": 42.54
   },
   {
@@ -2031,12 +2031,12 @@
     "game_date": "2023-01-06",
     "game_time": "22:22:58",
     "p1_avg_3dart_match": 39.46,
-    "player1_id": 3,
+    "player1_id": 6,
     "player1": "Heiner",
     "p1_legs_won": 0,
     "p2_legs_won": 3,
     "player2": "Uwe",
-    "player2_id": 5,
+    "player2_id": 1,
     "p2_avg_3dart_match": 40.26
   },
   {
@@ -2046,12 +2046,12 @@
     "game_date": "2023-01-06",
     "game_time": "21:58:47",
     "p1_avg_3dart_match": 51.34,
-    "player1_id": 2,
+    "player1_id": 3,
     "player1": "Franz-Josef",
     "p1_legs_won": 3,
     "p2_legs_won": 1,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 43.24
   },
   {
@@ -2061,12 +2061,12 @@
     "game_date": "2023-01-06",
     "game_time": "21:41:28",
     "p1_avg_3dart_match": 54.99,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Uwe",
-    "player2_id": 5,
+    "player2_id": 1,
     "p2_avg_3dart_match": 37.04
   },
   {
@@ -2076,12 +2076,12 @@
     "game_date": "2023-01-06",
     "game_time": "20:56:41",
     "p1_avg_3dart_match": 24.41,
-    "player1_id": 1,
+    "player1_id": 2,
     "player1": "Frank",
     "p1_legs_won": 3,
     "p2_legs_won": 1,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 24.49
   },
   {
@@ -2091,12 +2091,12 @@
     "game_date": "2023-01-06",
     "game_time": "20:40:54",
     "p1_avg_3dart_match": 41.73,
-    "player1_id": 2,
+    "player1_id": 3,
     "player1": "Franz-Josef",
     "p1_legs_won": 0,
     "p2_legs_won": 3,
     "player2": "Martin",
-    "player2_id": 4,
+    "player2_id": 8,
     "p2_avg_3dart_match": 48.48
   },
   {
@@ -2106,12 +2106,12 @@
     "game_date": "2022-12-04",
     "game_time": "00:23:08",
     "p1_avg_3dart_match": 37.86,
-    "player1_id": 1,
+    "player1_id": 2,
     "player1": "Frank",
     "p1_legs_won": 3,
     "p2_legs_won": 2,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 36.4
   },
   {
@@ -2121,12 +2121,12 @@
     "game_date": "2022-12-03",
     "game_time": "23:50:46",
     "p1_avg_3dart_match": 45.51,
-    "player1_id": 2,
+    "player1_id": 3,
     "player1": "Franz-Josef",
     "p1_legs_won": 2,
     "p2_legs_won": 3,
     "player2": "Martin",
-    "player2_id": 4,
+    "player2_id": 8,
     "p2_avg_3dart_match": 53.04
   },
   {
@@ -2136,12 +2136,12 @@
     "game_date": "2022-12-03",
     "game_time": "23:31:17",
     "p1_avg_3dart_match": 55.67,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 35.67
   },
   {
@@ -2151,12 +2151,12 @@
     "game_date": "2022-12-03",
     "game_time": "22:43:03",
     "p1_avg_3dart_match": 45.11,
-    "player1_id": 2,
+    "player1_id": 3,
     "player1": "Franz-Josef",
     "p1_legs_won": 3,
     "p2_legs_won": 1,
     "player2": "Uwe",
-    "player2_id": 5,
+    "player2_id": 1,
     "p2_avg_3dart_match": 41.28
   },
   {
@@ -2166,12 +2166,12 @@
     "game_date": "2022-12-03",
     "game_time": "22:27:22",
     "p1_avg_3dart_match": 56.36,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Frank",
-    "player2_id": 1,
+    "player2_id": 2,
     "p2_avg_3dart_match": 43.31
   },
   {
@@ -2181,12 +2181,12 @@
     "game_date": "2022-12-03",
     "game_time": "21:53:30",
     "p1_avg_3dart_match": 37.19,
-    "player1_id": 3,
+    "player1_id": 6,
     "player1": "Heiner",
     "p1_legs_won": 0,
     "p2_legs_won": 3,
     "player2": "Uwe",
-    "player2_id": 5,
+    "player2_id": 1,
     "p2_avg_3dart_match": 46.97
   },
   {
@@ -2196,12 +2196,12 @@
     "game_date": "2022-12-03",
     "game_time": "20:59:46",
     "p1_avg_3dart_match": 30.46,
-    "player1_id": 1,
+    "player1_id": 2,
     "player1": "Frank",
     "p1_legs_won": 1,
     "p2_legs_won": 3,
     "player2": "Uwe",
-    "player2_id": 5,
+    "player2_id": 1,
     "p2_avg_3dart_match": 30.93
   },
   {
@@ -2211,12 +2211,12 @@
     "game_date": "2022-12-03",
     "game_time": "20:33:57",
     "p1_avg_3dart_match": 45.55,
-    "player1_id": 2,
+    "player1_id": 3,
     "player1": "Franz-Josef",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 41.56
   },
   {
@@ -2226,12 +2226,12 @@
     "game_date": "2022-12-03",
     "game_time": "20:13:37",
     "p1_avg_3dart_match": 44.21,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Uwe",
-    "player2_id": 5,
+    "player2_id": 1,
     "p2_avg_3dart_match": 39.18
   },
   {
@@ -2241,12 +2241,12 @@
     "game_date": "2022-12-03",
     "game_time": "19:53:12",
     "p1_avg_3dart_match": 34.87,
-    "player1_id": 1,
+    "player1_id": 2,
     "player1": "Frank",
     "p1_legs_won": 0,
     "p2_legs_won": 3,
     "player2": "Franz-Josef",
-    "player2_id": 2,
+    "player2_id": 3,
     "p2_avg_3dart_match": 47.46
   },
   {
@@ -2256,12 +2256,12 @@
     "game_date": "2022-11-12",
     "game_time": "00:29:50",
     "p1_avg_3dart_match": 33.24,
-    "player1_id": 5,
+    "player1_id": 1,
     "player1": "Uwe",
     "p1_legs_won": 0,
     "p2_legs_won": 3,
     "player2": "Martin",
-    "player2_id": 4,
+    "player2_id": 8,
     "p2_avg_3dart_match": 50.1
   },
   {
@@ -2271,12 +2271,12 @@
     "game_date": "2022-11-11",
     "game_time": "23:51:39",
     "p1_avg_3dart_match": 31.55,
-    "player1_id": 3,
+    "player1_id": 6,
     "player1": "Heiner",
     "p1_legs_won": 1,
     "p2_legs_won": 3,
     "player2": "Frank",
-    "player2_id": 1,
+    "player2_id": 2,
     "p2_avg_3dart_match": 33.92
   },
   {
@@ -2286,12 +2286,12 @@
     "game_date": "2022-11-11",
     "game_time": "23:38:01",
     "p1_avg_3dart_match": 40.52,
-    "player1_id": 1,
+    "player1_id": 2,
     "player1": "Frank",
     "p1_legs_won": 0,
     "p2_legs_won": 3,
     "player2": "Martin",
-    "player2_id": 4,
+    "player2_id": 8,
     "p2_avg_3dart_match": 60.12
   },
   {
@@ -2301,12 +2301,12 @@
     "game_date": "2022-11-11",
     "game_time": "23:17:58",
     "p1_avg_3dart_match": 46.97,
-    "player1_id": 2,
+    "player1_id": 3,
     "player1": "Franz-Josef",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 41.97
   },
   {
@@ -2316,12 +2316,12 @@
     "game_date": "2022-11-11",
     "game_time": "22:23:41",
     "p1_avg_3dart_match": 34.66,
-    "player1_id": 1,
+    "player1_id": 2,
     "player1": "Frank",
     "p1_legs_won": 2,
     "p2_legs_won": 3,
     "player2": "Uwe",
-    "player2_id": 5,
+    "player2_id": 1,
     "p2_avg_3dart_match": 33.93
   },
   {
@@ -2331,12 +2331,12 @@
     "game_date": "2022-11-11",
     "game_time": "21:55:53",
     "p1_avg_3dart_match": 49.56,
-    "player1_id": 2,
+    "player1_id": 3,
     "player1": "Franz-Josef",
     "p1_legs_won": 2,
     "p2_legs_won": 3,
     "player2": "Martin",
-    "player2_id": 4,
+    "player2_id": 8,
     "p2_avg_3dart_match": 60.41
   },
   {
@@ -2346,12 +2346,12 @@
     "game_date": "2022-11-11",
     "game_time": "21:17:49",
     "p1_avg_3dart_match": 32.44,
-    "player1_id": 2,
+    "player1_id": 3,
     "player1": "Franz-Josef",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Uwe",
-    "player2_id": 5,
+    "player2_id": 1,
     "p2_avg_3dart_match": 29.85
   },
   {
@@ -2361,12 +2361,12 @@
     "game_date": "2022-11-11",
     "game_time": "20:59:57",
     "p1_avg_3dart_match": 57.08,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 38.0
   },
   {
@@ -2376,12 +2376,12 @@
     "game_date": "2022-11-11",
     "game_time": "20:34:28",
     "p1_avg_3dart_match": 31.75,
-    "player1_id": 2,
+    "player1_id": 3,
     "player1": "Franz-Josef",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Frank",
-    "player2_id": 1,
+    "player2_id": 2,
     "p2_avg_3dart_match": 29.77
   },
   {
@@ -2391,12 +2391,12 @@
     "game_date": "2022-11-11",
     "game_time": "19:41:56",
     "p1_avg_3dart_match": 33.39,
-    "player1_id": 5,
+    "player1_id": 1,
     "player1": "Uwe",
     "p1_legs_won": 3,
     "p2_legs_won": 2,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 33.3
   },
   {
@@ -2406,12 +2406,12 @@
     "game_date": "2022-10-02",
     "game_time": "23:19:24",
     "p1_avg_3dart_match": 47.68,
-    "player1_id": 2,
+    "player1_id": 3,
     "player1": "Franz-Josef",
     "p1_legs_won": 3,
     "p2_legs_won": 1,
     "player2": "Uwe",
-    "player2_id": 5,
+    "player2_id": 1,
     "p2_avg_3dart_match": 44.65
   },
   {
@@ -2421,12 +2421,12 @@
     "game_date": "2022-10-02",
     "game_time": "22:59:43",
     "p1_avg_3dart_match": 48.48,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Frank",
-    "player2_id": 1,
+    "player2_id": 2,
     "p2_avg_3dart_match": 35.03
   },
   {
@@ -2436,12 +2436,12 @@
     "game_date": "2022-10-02",
     "game_time": "22:14:44",
     "p1_avg_3dart_match": 35.51,
-    "player1_id": 1,
+    "player1_id": 2,
     "player1": "Frank",
     "p1_legs_won": 3,
     "p2_legs_won": 2,
     "player2": "Uwe",
-    "player2_id": 5,
+    "player2_id": 1,
     "p2_avg_3dart_match": 32.87
   },
   {
@@ -2451,12 +2451,12 @@
     "game_date": "2022-10-02",
     "game_time": "21:58:27",
     "p1_avg_3dart_match": 57.08,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 34.0
   },
   {
@@ -2466,12 +2466,12 @@
     "game_date": "2022-10-02",
     "game_time": "21:28:38",
     "p1_avg_3dart_match": 36.77,
-    "player1_id": 1,
+    "player1_id": 2,
     "player1": "Frank",
     "p1_legs_won": 1,
     "p2_legs_won": 3,
     "player2": "Franz-Josef",
-    "player2_id": 2,
+    "player2_id": 3,
     "p2_avg_3dart_match": 40.86
   },
   {
@@ -2481,12 +2481,12 @@
     "game_date": "2022-10-02",
     "game_time": "20:47:17",
     "p1_avg_3dart_match": 35.29,
-    "player1_id": 3,
+    "player1_id": 6,
     "player1": "Heiner",
     "p1_legs_won": 0,
     "p2_legs_won": 3,
     "player2": "Uwe",
-    "player2_id": 5,
+    "player2_id": 1,
     "p2_avg_3dart_match": 36.66
   },
   {
@@ -2496,12 +2496,12 @@
     "game_date": "2022-10-02",
     "game_time": "20:19:36",
     "p1_avg_3dart_match": 35.79,
-    "player1_id": 2,
+    "player1_id": 3,
     "player1": "Franz-Josef",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 33.05
   },
   {
@@ -2511,12 +2511,12 @@
     "game_date": "2022-10-02",
     "game_time": "20:02:16",
     "p1_avg_3dart_match": 57.81,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Uwe",
-    "player2_id": 5,
+    "player2_id": 1,
     "p2_avg_3dart_match": 42.54
   },
   {
@@ -2526,12 +2526,12 @@
     "game_date": "2022-10-02",
     "game_time": "19:05:40",
     "p1_avg_3dart_match": 23.96,
-    "player1_id": 1,
+    "player1_id": 2,
     "player1": "Frank",
     "p1_legs_won": 3,
     "p2_legs_won": 2,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 24.2
   },
   {
@@ -2541,12 +2541,12 @@
     "game_date": "2022-10-02",
     "game_time": "18:46:49",
     "p1_avg_3dart_match": 56.36,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Franz-Josef",
-    "player2_id": 2,
+    "player2_id": 3,
     "p2_avg_3dart_match": 55.27
   },
   {
@@ -2556,12 +2556,12 @@
     "game_date": "2022-08-05",
     "game_time": "23:20:54",
     "p1_avg_3dart_match": 34.61,
-    "player1_id": 1,
+    "player1_id": 2,
     "player1": "Frank",
     "p1_legs_won": 2,
     "p2_legs_won": 3,
     "player2": "Uwe",
-    "player2_id": 5,
+    "player2_id": 1,
     "p2_avg_3dart_match": 36.4
   },
   {
@@ -2571,12 +2571,12 @@
     "game_date": "2022-08-05",
     "game_time": "23:02:39",
     "p1_avg_3dart_match": 53.05,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 36.44
   },
   {
@@ -2586,12 +2586,12 @@
     "game_date": "2022-08-05",
     "game_time": "22:48:32",
     "p1_avg_3dart_match": 44.56,
-    "player1_id": 1,
+    "player1_id": 2,
     "player1": "Frank",
     "p1_legs_won": 0,
     "p2_legs_won": 3,
     "player2": "Martin",
-    "player2_id": 4,
+    "player2_id": 8,
     "p2_avg_3dart_match": 47.46
   },
   {
@@ -2601,12 +2601,12 @@
     "game_date": "2022-08-05",
     "game_time": "22:25:42",
     "p1_avg_3dart_match": 45.55,
-    "player1_id": 2,
+    "player1_id": 3,
     "player1": "Franz-Josef",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 38.42
   },
   {
@@ -2616,12 +2616,12 @@
     "game_date": "2022-08-05",
     "game_time": "22:05:29",
     "p1_avg_3dart_match": 60.93,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Uwe",
-    "player2_id": 5,
+    "player2_id": 1,
     "p2_avg_3dart_match": 51.96
   },
   {
@@ -2631,12 +2631,12 @@
     "game_date": "2022-08-05",
     "game_time": "21:43:13",
     "p1_avg_3dart_match": 34.92,
-    "player1_id": 1,
+    "player1_id": 2,
     "player1": "Frank",
     "p1_legs_won": 0,
     "p2_legs_won": 3,
     "player2": "Franz-Josef",
-    "player2_id": 2,
+    "player2_id": 3,
     "p2_avg_3dart_match": 38.87
   },
   {
@@ -2646,12 +2646,12 @@
     "game_date": "2022-08-05",
     "game_time": "21:15:45",
     "p1_avg_3dart_match": 40.62,
-    "player1_id": 5,
+    "player1_id": 1,
     "player1": "Uwe",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Franz-Josef",
-    "player2_id": 2,
+    "player2_id": 3,
     "p2_avg_3dart_match": 41.11
   },
   {
@@ -2661,12 +2661,12 @@
     "game_date": "2022-08-05",
     "game_time": "20:30:09",
     "p1_avg_3dart_match": 30.57,
-    "player1_id": 1,
+    "player1_id": 2,
     "player1": "Frank",
     "p1_legs_won": 2,
     "p2_legs_won": 3,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 29.72
   },
   {
@@ -2676,12 +2676,12 @@
     "game_date": "2022-08-05",
     "game_time": "20:15:35",
     "p1_avg_3dart_match": 54.33,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Franz-Josef",
-    "player2_id": 2,
+    "player2_id": 3,
     "p2_avg_3dart_match": 52.04
   },
   {
@@ -2691,12 +2691,12 @@
     "game_date": "2022-08-05",
     "game_time": "19:35:03",
     "p1_avg_3dart_match": 31.78,
-    "player1_id": 5,
+    "player1_id": 1,
     "player1": "Uwe",
     "p1_legs_won": 3,
     "p2_legs_won": 1,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 26.89
   },
   {
@@ -2706,12 +2706,12 @@
     "game_date": "2022-05-22",
     "game_time": "01:16:37",
     "p1_avg_3dart_match": 42.39,
-    "player1_id": 5,
+    "player1_id": 1,
     "player1": "Uwe",
     "p1_legs_won": 3,
     "p2_legs_won": 2,
     "player2": "Frank",
-    "player2_id": 1,
+    "player2_id": 2,
     "p2_avg_3dart_match": 38.3
   },
   {
@@ -2721,12 +2721,12 @@
     "game_date": "2022-05-22",
     "game_time": "00:39:52",
     "p1_avg_3dart_match": 31.31,
-    "player1_id": 3,
+    "player1_id": 6,
     "player1": "Heiner",
     "p1_legs_won": 1,
     "p2_legs_won": 3,
     "player2": "Franz-Josef",
-    "player2_id": 2,
+    "player2_id": 3,
     "p2_avg_3dart_match": 35.75
   },
   {
@@ -2736,12 +2736,12 @@
     "game_date": "2022-05-22",
     "game_time": "00:00:24",
     "p1_avg_3dart_match": 34.65,
-    "player1_id": 3,
+    "player1_id": 6,
     "player1": "Heiner",
     "p1_legs_won": 2,
     "p2_legs_won": 3,
     "player2": "Frank",
-    "player2_id": 1,
+    "player2_id": 2,
     "p2_avg_3dart_match": 34.69
   },
   {
@@ -2751,12 +2751,12 @@
     "game_date": "2022-05-21",
     "game_time": "23:30:05",
     "p1_avg_3dart_match": 50.57,
-    "player1_id": 2,
+    "player1_id": 3,
     "player1": "Franz-Josef",
     "p1_legs_won": 2,
     "p2_legs_won": 3,
     "player2": "Martin",
-    "player2_id": 4,
+    "player2_id": 8,
     "p2_avg_3dart_match": 52.33
   },
   {
@@ -2766,12 +2766,12 @@
     "game_date": "2022-05-21",
     "game_time": "22:10:50",
     "p1_avg_3dart_match": 28.21,
-    "player1_id": 5,
+    "player1_id": 1,
     "player1": "Uwe",
     "p1_legs_won": 3,
     "p2_legs_won": 1,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 28.03
   },
   {
@@ -2781,12 +2781,12 @@
     "game_date": "2022-05-21",
     "game_time": "21:47:27",
     "p1_avg_3dart_match": 40.43,
-    "player1_id": 1,
+    "player1_id": 2,
     "player1": "Frank",
     "p1_legs_won": 0,
     "p2_legs_won": 3,
     "player2": "Martin",
-    "player2_id": 4,
+    "player2_id": 8,
     "p2_avg_3dart_match": 50.1
   },
   {
@@ -2796,12 +2796,12 @@
     "game_date": "2022-05-21",
     "game_time": "21:23:35",
     "p1_avg_3dart_match": 55.67,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Uwe",
-    "player2_id": 5,
+    "player2_id": 1,
     "p2_avg_3dart_match": 39.27
   },
   {
@@ -2811,12 +2811,12 @@
     "game_date": "2022-05-21",
     "game_time": "20:56:21",
     "p1_avg_3dart_match": 42.34,
-    "player1_id": 1,
+    "player1_id": 2,
     "player1": "Frank",
     "p1_legs_won": 0,
     "p2_legs_won": 3,
     "player2": "Franz-Josef",
-    "player2_id": 2,
+    "player2_id": 3,
     "p2_avg_3dart_match": 47.46
   },
   {
@@ -2826,12 +2826,12 @@
     "game_date": "2022-05-21",
     "game_time": "20:30:36",
     "p1_avg_3dart_match": 40.26,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 35.14
   },
   {
@@ -2841,12 +2841,12 @@
     "game_date": "2022-05-21",
     "game_time": "19:51:42",
     "p1_avg_3dart_match": 34.92,
-    "player1_id": 5,
+    "player1_id": 1,
     "player1": "Uwe",
     "p1_legs_won": 1,
     "p2_legs_won": 3,
     "player2": "Franz-Josef",
-    "player2_id": 2,
+    "player2_id": 3,
     "p2_avg_3dart_match": 35.96
   },
   {
@@ -2856,12 +2856,12 @@
     "game_date": "2022-05-08",
     "game_time": "00:14:49",
     "p1_avg_3dart_match": 47.32,
-    "player1_id": 2,
+    "player1_id": 3,
     "player1": "Franz-Josef",
     "p1_legs_won": 3,
     "p2_legs_won": 2,
     "player2": "Uwe",
-    "player2_id": 5,
+    "player2_id": 1,
     "p2_avg_3dart_match": 44.66
   },
   {
@@ -2871,12 +2871,12 @@
     "game_date": "2022-05-07",
     "game_time": "23:59:05",
     "p1_avg_3dart_match": 46.36,
-    "player1_id": 3,
+    "player1_id": 6,
     "player1": "Heiner",
     "p1_legs_won": 0,
     "p2_legs_won": 3,
     "player2": "Martin",
-    "player2_id": 4,
+    "player2_id": 8,
     "p2_avg_3dart_match": 60.93
   },
   {
@@ -2886,12 +2886,12 @@
     "game_date": "2022-05-07",
     "game_time": "23:17:21",
     "p1_avg_3dart_match": 54.79,
-    "player1_id": 2,
+    "player1_id": 3,
     "player1": "Franz-Josef",
     "p1_legs_won": 2,
     "p2_legs_won": 3,
     "player2": "Martin",
-    "player2_id": 4,
+    "player2_id": 8,
     "p2_avg_3dart_match": 61.14
   },
   {
@@ -2901,12 +2901,12 @@
     "game_date": "2022-05-07",
     "game_time": "22:45:53",
     "p1_avg_3dart_match": 29.8,
-    "player1_id": 1,
+    "player1_id": 2,
     "player1": "Frank",
     "p1_legs_won": 0,
     "p2_legs_won": 3,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 30.88
   },
   {
@@ -2916,12 +2916,12 @@
     "game_date": "2022-05-07",
     "game_time": "22:24:08",
     "p1_avg_3dart_match": 38.43,
-    "player1_id": 5,
+    "player1_id": 1,
     "player1": "Uwe",
     "p1_legs_won": 0,
     "p2_legs_won": 3,
     "player2": "Martin",
-    "player2_id": 4,
+    "player2_id": 8,
     "p2_avg_3dart_match": 53.05
   },
   {
@@ -2931,12 +2931,12 @@
     "game_date": "2022-05-07",
     "game_time": "21:49:04",
     "p1_avg_3dart_match": 39.06,
-    "player1_id": 1,
+    "player1_id": 2,
     "player1": "Frank",
     "p1_legs_won": 1,
     "p2_legs_won": 3,
     "player2": "Franz-Josef",
-    "player2_id": 2,
+    "player2_id": 3,
     "p2_avg_3dart_match": 41.38
   },
   {
@@ -2946,12 +2946,12 @@
     "game_date": "2022-05-07",
     "game_time": "21:12:11",
     "p1_avg_3dart_match": 44.19,
-    "player1_id": 5,
+    "player1_id": 1,
     "player1": "Uwe",
     "p1_legs_won": 3,
     "p2_legs_won": 2,
     "player2": "Frank",
-    "player2_id": 1,
+    "player2_id": 2,
     "p2_avg_3dart_match": 43.08
   },
   {
@@ -2961,12 +2961,12 @@
     "game_date": "2022-05-07",
     "game_time": "20:48:12",
     "p1_avg_3dart_match": 47.97,
-    "player1_id": 2,
+    "player1_id": 3,
     "player1": "Franz-Josef",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 43.3
   },
   {
@@ -2976,12 +2976,12 @@
     "game_date": "2022-05-07",
     "game_time": "20:23:08",
     "p1_avg_3dart_match": 43.52,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 1,
     "player2": "Frank",
-    "player2_id": 1,
+    "player2_id": 2,
     "p2_avg_3dart_match": 38.58
   },
   {
@@ -2991,12 +2991,12 @@
     "game_date": "2022-05-07",
     "game_time": "19:39:36",
     "p1_avg_3dart_match": 31.19,
-    "player1_id": 5,
+    "player1_id": 1,
     "player1": "Uwe",
     "p1_legs_won": 3,
     "p2_legs_won": 1,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 29.12
   },
   {
@@ -3006,12 +3006,12 @@
     "game_date": "2022-03-13",
     "game_time": "00:48:27",
     "p1_avg_3dart_match": 44.95,
-    "player1_id": 2,
+    "player1_id": 3,
     "player1": "Franz-Josef",
     "p1_legs_won": 3,
     "p2_legs_won": 2,
     "player2": "Uwe",
-    "player2_id": 5,
+    "player2_id": 1,
     "p2_avg_3dart_match": 41.04
   },
   {
@@ -3021,12 +3021,12 @@
     "game_date": "2022-03-13",
     "game_time": "00:19:00",
     "p1_avg_3dart_match": 37.63,
-    "player1_id": 3,
+    "player1_id": 6,
     "player1": "Heiner",
     "p1_legs_won": 1,
     "p2_legs_won": 3,
     "player2": "Martin",
-    "player2_id": 4,
+    "player2_id": 8,
     "p2_avg_3dart_match": 46.2
   },
   {
@@ -3036,12 +3036,12 @@
     "game_date": "2022-03-12",
     "game_time": "23:29:32",
     "p1_avg_3dart_match": 34.76,
-    "player1_id": 5,
+    "player1_id": 1,
     "player1": "Uwe",
     "p1_legs_won": 3,
     "p2_legs_won": 2,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 31.2
   },
   {
@@ -3051,12 +3051,12 @@
     "game_date": "2022-03-12",
     "game_time": "23:08:44",
     "p1_avg_3dart_match": 42.88,
-    "player1_id": 1,
+    "player1_id": 2,
     "player1": "Frank",
     "p1_legs_won": 1,
     "p2_legs_won": 3,
     "player2": "Martin",
-    "player2_id": 4,
+    "player2_id": 8,
     "p2_avg_3dart_match": 50.14
   },
   {
@@ -3066,12 +3066,12 @@
     "game_date": "2022-03-12",
     "game_time": "22:46:41",
     "p1_avg_3dart_match": 51.24,
-    "player1_id": 2,
+    "player1_id": 3,
     "player1": "Franz-Josef",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 42.25
   },
   {
@@ -3081,12 +3081,12 @@
     "game_date": "2022-03-12",
     "game_time": "22:19:06",
     "p1_avg_3dart_match": 34.55,
-    "player1_id": 1,
+    "player1_id": 2,
     "player1": "Frank",
     "p1_legs_won": 0,
     "p2_legs_won": 3,
     "player2": "Uwe",
-    "player2_id": 5,
+    "player2_id": 1,
     "p2_avg_3dart_match": 36.07
   },
   {
@@ -3096,12 +3096,12 @@
     "game_date": "2022-03-12",
     "game_time": "21:53:36",
     "p1_avg_3dart_match": 42.34,
-    "player1_id": 1,
+    "player1_id": 2,
     "player1": "Frank",
     "p1_legs_won": 1,
     "p2_legs_won": 3,
     "player2": "Franz-Josef",
-    "player2_id": 2,
+    "player2_id": 3,
     "p2_avg_3dart_match": 43.43
   },
   {
@@ -3111,12 +3111,12 @@
     "game_date": "2022-03-12",
     "game_time": "21:26:57",
     "p1_avg_3dart_match": 53.85,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 2,
     "player2": "Uwe",
-    "player2_id": 5,
+    "player2_id": 1,
     "p2_avg_3dart_match": 48.38
   },
   {
@@ -3126,12 +3126,12 @@
     "game_date": "2022-03-12",
     "game_time": "20:28:36",
     "p1_avg_3dart_match": 23.9,
-    "player1_id": 1,
+    "player1_id": 2,
     "player1": "Frank",
     "p1_legs_won": 3,
     "p2_legs_won": 1,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 23.38
   },
   {
@@ -3141,12 +3141,12 @@
     "game_date": "2022-03-12",
     "game_time": "20:04:16",
     "p1_avg_3dart_match": 50.37,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 2,
     "player2": "Franz-Josef",
-    "player2_id": 2,
+    "player2_id": 3,
     "p2_avg_3dart_match": 50.8
   },
   {
@@ -3156,12 +3156,12 @@
     "game_date": "2022-01-15",
     "game_time": "23:45:45",
     "p1_avg_3dart_match": 28.89,
-    "player1_id": 2,
+    "player1_id": 3,
     "player1": "Franz-Josef",
     "p1_legs_won": 3,
     "p2_legs_won": 1,
     "player2": "Frank",
-    "player2_id": 1,
+    "player2_id": 2,
     "p2_avg_3dart_match": 29.08
   },
   {
@@ -3171,12 +3171,12 @@
     "game_date": "2022-01-15",
     "game_time": "23:22:36",
     "p1_avg_3dart_match": 34.11,
-    "player1_id": 3,
+    "player1_id": 6,
     "player1": "Heiner",
     "p1_legs_won": 0,
     "p2_legs_won": 3,
     "player2": "Martin",
-    "player2_id": 4,
+    "player2_id": 8,
     "p2_avg_3dart_match": 41.37
   },
   {
@@ -3186,12 +3186,12 @@
     "game_date": "2022-01-15",
     "game_time": "22:48:20",
     "p1_avg_3dart_match": 47.33,
-    "player1_id": 2,
+    "player1_id": 3,
     "player1": "Franz-Josef",
     "p1_legs_won": 3,
     "p2_legs_won": 2,
     "player2": "Martin",
-    "player2_id": 4,
+    "player2_id": 8,
     "p2_avg_3dart_match": 44.87
   },
   {
@@ -3201,12 +3201,12 @@
     "game_date": "2022-01-15",
     "game_time": "22:15:05",
     "p1_avg_3dart_match": 46.2,
-    "player1_id": 5,
+    "player1_id": 1,
     "player1": "Uwe",
     "p1_legs_won": 3,
     "p2_legs_won": 1,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 38.98
   },
   {
@@ -3216,12 +3216,12 @@
     "game_date": "2022-01-15",
     "game_time": "21:56:19",
     "p1_avg_3dart_match": 31.62,
-    "player1_id": 1,
+    "player1_id": 2,
     "player1": "Frank",
     "p1_legs_won": 0,
     "p2_legs_won": 3,
     "player2": "Martin",
-    "player2_id": 4,
+    "player2_id": 8,
     "p2_avg_3dart_match": 39.55
   },
   {
@@ -3231,12 +3231,12 @@
     "game_date": "2022-01-15",
     "game_time": "21:20:25",
     "p1_avg_3dart_match": 42.73,
-    "player1_id": 2,
+    "player1_id": 3,
     "player1": "Franz-Josef",
     "p1_legs_won": 3,
     "p2_legs_won": 1,
     "player2": "Uwe",
-    "player2_id": 5,
+    "player2_id": 1,
     "p2_avg_3dart_match": 38.8
   },
   {
@@ -3246,12 +3246,12 @@
     "game_date": "2022-01-15",
     "game_time": "20:36:07",
     "p1_avg_3dart_match": 35.61,
-    "player1_id": 5,
+    "player1_id": 1,
     "player1": "Uwe",
     "p1_legs_won": 3,
     "p2_legs_won": 2,
     "player2": "Frank",
-    "player2_id": 1,
+    "player2_id": 2,
     "p2_avg_3dart_match": 34.42
   },
   {
@@ -3261,12 +3261,12 @@
     "game_date": "2022-01-15",
     "game_time": "20:13:54",
     "p1_avg_3dart_match": 41.75,
-    "player1_id": 2,
+    "player1_id": 3,
     "player1": "Franz-Josef",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 33.89
   },
   {
@@ -3276,12 +3276,12 @@
     "game_date": "2022-01-15",
     "game_time": "19:58:12",
     "p1_avg_3dart_match": 53.05,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Uwe",
-    "player2_id": 5,
+    "player2_id": 1,
     "p2_avg_3dart_match": 40.52
   },
   {
@@ -3291,12 +3291,12 @@
     "game_date": "2022-01-15",
     "game_time": "19:15:33",
     "p1_avg_3dart_match": 29.4,
-    "player1_id": 3,
+    "player1_id": 6,
     "player1": "Heiner",
     "p1_legs_won": 3,
     "p2_legs_won": 2,
     "player2": "Frank",
-    "player2_id": 1,
+    "player2_id": 2,
     "p2_avg_3dart_match": 30.2
   },
   {
@@ -3306,12 +3306,12 @@
     "game_date": "2021-12-10",
     "game_time": "23:50:27",
     "p1_avg_3dart_match": 44.18,
-    "player1_id": 5,
+    "player1_id": 1,
     "player1": "Uwe",
     "p1_legs_won": 1,
     "p2_legs_won": 3,
     "player2": "Franz-Josef",
-    "player2_id": 2,
+    "player2_id": 3,
     "p2_avg_3dart_match": 51.0
   },
   {
@@ -3321,12 +3321,12 @@
     "game_date": "2021-12-10",
     "game_time": "23:32:19",
     "p1_avg_3dart_match": 47.46,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Frank",
-    "player2_id": 1,
+    "player2_id": 2,
     "p2_avg_3dart_match": 38.77
   },
   {
@@ -3336,12 +3336,12 @@
     "game_date": "2021-12-10",
     "game_time": "23:19:54",
     "p1_avg_3dart_match": 60.12,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Uwe",
-    "player2_id": 5,
+    "player2_id": 1,
     "p2_avg_3dart_match": 39.88
   },
   {
@@ -3351,12 +3351,12 @@
     "game_date": "2021-12-10",
     "game_time": "22:27:15",
     "p1_avg_3dart_match": 26.47,
-    "player1_id": 1,
+    "player1_id": 2,
     "player1": "Frank",
     "p1_legs_won": 2,
     "p2_legs_won": 3,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 26.51
   },
   {
@@ -3366,12 +3366,12 @@
     "game_date": "2021-12-10",
     "game_time": "21:58:02",
     "p1_avg_3dart_match": 57.63,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 2,
     "p2_legs_won": 3,
     "player2": "Franz-Josef",
-    "player2_id": 2,
+    "player2_id": 3,
     "p2_avg_3dart_match": 52.09
   },
   {
@@ -3381,12 +3381,12 @@
     "game_date": "2021-12-10",
     "game_time": "21:27:16",
     "p1_avg_3dart_match": 29.34,
-    "player1_id": 5,
+    "player1_id": 1,
     "player1": "Uwe",
     "p1_legs_won": 0,
     "p2_legs_won": 3,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 31.75
   },
   {
@@ -3396,12 +3396,12 @@
     "game_date": "2021-12-10",
     "game_time": "21:10:45",
     "p1_avg_3dart_match": 51.83,
-    "player1_id": 2,
+    "player1_id": 3,
     "player1": "Franz-Josef",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 41.5
   },
   {
@@ -3411,12 +3411,12 @@
     "game_date": "2021-12-10",
     "game_time": "20:29:35",
     "p1_avg_3dart_match": 35.17,
-    "player1_id": 1,
+    "player1_id": 2,
     "player1": "Frank",
     "p1_legs_won": 2,
     "p2_legs_won": 3,
     "player2": "Uwe",
-    "player2_id": 5,
+    "player2_id": 1,
     "p2_avg_3dart_match": 37.81
   },
   {
@@ -3426,12 +3426,12 @@
     "game_date": "2021-12-10",
     "game_time": "20:16:34",
     "p1_avg_3dart_match": 57.81,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 40.16
   },
   {
@@ -3441,12 +3441,12 @@
     "game_date": "2021-12-10",
     "game_time": "19:55:41",
     "p1_avg_3dart_match": 41.75,
-    "player1_id": 2,
+    "player1_id": 3,
     "player1": "Franz-Josef",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Frank",
-    "player2_id": 1,
+    "player2_id": 2,
     "p2_avg_3dart_match": 36.66
   },
   {
@@ -3456,12 +3456,12 @@
     "game_date": "2021-09-18",
     "game_time": "23:36:51",
     "p1_avg_3dart_match": 60.93,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 40.88
   },
   {
@@ -3471,12 +3471,12 @@
     "game_date": "2021-09-18",
     "game_time": "23:14:39",
     "p1_avg_3dart_match": 42.14,
-    "player1_id": 2,
+    "player1_id": 3,
     "player1": "Franz-Josef",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Uwe",
-    "player2_id": 5,
+    "player2_id": 1,
     "p2_avg_3dart_match": 32.5
   },
   {
@@ -3486,12 +3486,12 @@
     "game_date": "2021-09-18",
     "game_time": "22:52:57",
     "p1_avg_3dart_match": 50.1,
-    "player1_id": 2,
+    "player1_id": 3,
     "player1": "Franz-Josef",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 42.45
   },
   {
@@ -3501,12 +3501,12 @@
     "game_date": "2021-09-18",
     "game_time": "22:23:19",
     "p1_avg_3dart_match": 27.79,
-    "player1_id": 1,
+    "player1_id": 2,
     "player1": "Frank",
     "p1_legs_won": 0,
     "p2_legs_won": 3,
     "player2": "Uwe",
-    "player2_id": 5,
+    "player2_id": 1,
     "p2_avg_3dart_match": 29.09
   },
   {
@@ -3516,12 +3516,12 @@
     "game_date": "2021-09-18",
     "game_time": "22:09:50",
     "p1_avg_3dart_match": 41.79,
-    "player1_id": 2,
+    "player1_id": 3,
     "player1": "Franz-Josef",
     "p1_legs_won": 0,
     "p2_legs_won": 3,
     "player2": "Martin",
-    "player2_id": 4,
+    "player2_id": 8,
     "p2_avg_3dart_match": 64.41
   },
   {
@@ -3531,12 +3531,12 @@
     "game_date": "2021-09-18",
     "game_time": "21:40:34",
     "p1_avg_3dart_match": 34.95,
-    "player1_id": 1,
+    "player1_id": 2,
     "player1": "Frank",
     "p1_legs_won": 0,
     "p2_legs_won": 3,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 36.66
   },
   {
@@ -3546,12 +3546,12 @@
     "game_date": "2021-09-18",
     "game_time": "21:25:02",
     "p1_avg_3dart_match": 47.97,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Frank",
-    "player2_id": 1,
+    "player2_id": 2,
     "p2_avg_3dart_match": 37.06
   },
   {
@@ -3561,12 +3561,12 @@
     "game_date": "2021-09-18",
     "game_time": "20:36:26",
     "p1_avg_3dart_match": 21.57,
-    "player1_id": 5,
+    "player1_id": 1,
     "player1": "Uwe",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 21.39
   },
   {
@@ -3576,12 +3576,12 @@
     "game_date": "2021-09-18",
     "game_time": "20:11:59",
     "p1_avg_3dart_match": 34.06,
-    "player1_id": 1,
+    "player1_id": 2,
     "player1": "Frank",
     "p1_legs_won": 0,
     "p2_legs_won": 3,
     "player2": "Franz-Josef",
-    "player2_id": 2,
+    "player2_id": 3,
     "p2_avg_3dart_match": 42.94
   },
   {
@@ -3591,12 +3591,12 @@
     "game_date": "2021-09-18",
     "game_time": "19:55:51",
     "p1_avg_3dart_match": 61.77,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Uwe",
-    "player2_id": 5,
+    "player2_id": 1,
     "p2_avg_3dart_match": 36.83
   },
   {
@@ -3606,12 +3606,12 @@
     "game_date": "2021-08-20",
     "game_time": "23:42:00",
     "p1_avg_3dart_match": 53.05,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Frank",
-    "player2_id": 1,
+    "player2_id": 2,
     "p2_avg_3dart_match": 43.5
   },
   {
@@ -3621,12 +3621,12 @@
     "game_date": "2021-08-20",
     "game_time": "23:18:38",
     "p1_avg_3dart_match": 49.01,
-    "player1_id": 2,
+    "player1_id": 3,
     "player1": "Franz-Josef",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 40.63
   },
   {
@@ -3636,12 +3636,12 @@
     "game_date": "2021-08-20",
     "game_time": "23:02:01",
     "p1_avg_3dart_match": 40.86,
-    "player1_id": 2,
+    "player1_id": 3,
     "player1": "Franz-Josef",
     "p1_legs_won": 0,
     "p2_legs_won": 3,
     "player2": "Martin",
-    "player2_id": 4,
+    "player2_id": 8,
     "p2_avg_3dart_match": 66.31
   },
   {
@@ -3651,12 +3651,12 @@
     "game_date": "2021-08-20",
     "game_time": "22:27:20",
     "p1_avg_3dart_match": 43.17,
-    "player1_id": 5,
+    "player1_id": 1,
     "player1": "Uwe",
     "p1_legs_won": 3,
     "p2_legs_won": 1,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 38.72
   },
   {
@@ -3666,12 +3666,12 @@
     "game_date": "2021-08-20",
     "game_time": "22:07:59",
     "p1_avg_3dart_match": 40.99,
-    "player1_id": 2,
+    "player1_id": 3,
     "player1": "Franz-Josef",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Frank",
-    "player2_id": 1,
+    "player2_id": 2,
     "p2_avg_3dart_match": 35.22
   },
   {
@@ -3681,12 +3681,12 @@
     "game_date": "2021-08-20",
     "game_time": "21:49:39",
     "p1_avg_3dart_match": 39.83,
-    "player1_id": 5,
+    "player1_id": 1,
     "player1": "Uwe",
     "p1_legs_won": 0,
     "p2_legs_won": 3,
     "player2": "Martin",
-    "player2_id": 4,
+    "player2_id": 8,
     "p2_avg_3dart_match": 53.68
   },
   {
@@ -3696,12 +3696,12 @@
     "game_date": "2021-08-20",
     "game_time": "21:13:55",
     "p1_avg_3dart_match": 34.49,
-    "player1_id": 5,
+    "player1_id": 1,
     "player1": "Uwe",
     "p1_legs_won": 3,
     "p2_legs_won": 1,
     "player2": "Frank",
-    "player2_id": 1,
+    "player2_id": 2,
     "p2_avg_3dart_match": 33.14
   },
   {
@@ -3711,12 +3711,12 @@
     "game_date": "2021-08-20",
     "game_time": "20:54:00",
     "p1_avg_3dart_match": 59.33,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 35.96
   },
   {
@@ -3726,12 +3726,12 @@
     "game_date": "2021-08-20",
     "game_time": "20:17:12",
     "p1_avg_3dart_match": 38.98,
-    "player1_id": 5,
+    "player1_id": 1,
     "player1": "Uwe",
     "p1_legs_won": 1,
     "p2_legs_won": 3,
     "player2": "Franz-Josef",
-    "player2_id": 2,
+    "player2_id": 3,
     "p2_avg_3dart_match": 38.59
   },
   {
@@ -3741,12 +3741,12 @@
     "game_date": "2021-08-20",
     "game_time": "19:38:04",
     "p1_avg_3dart_match": 27.21,
-    "player1_id": 1,
+    "player1_id": 2,
     "player1": "Frank",
     "p1_legs_won": 3,
     "p2_legs_won": 1,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 26.5
   },
   {
@@ -3756,12 +3756,12 @@
     "game_date": "2021-07-10",
     "game_time": "23:30:10",
     "p1_avg_3dart_match": 49.01,
-    "player1_id": 2,
+    "player1_id": 3,
     "player1": "Franz-Josef",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Frank",
-    "player2_id": 1,
+    "player2_id": 2,
     "p2_avg_3dart_match": 35.72
   },
   {
@@ -3771,12 +3771,12 @@
     "game_date": "2021-07-10",
     "game_time": "23:10:16",
     "p1_avg_3dart_match": 54.99,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Uwe",
-    "player2_id": 5,
+    "player2_id": 1,
     "p2_avg_3dart_match": 48.0
   },
   {
@@ -3786,12 +3786,12 @@
     "game_date": "2021-07-10",
     "game_time": "22:41:41",
     "p1_avg_3dart_match": 41.37,
-    "player1_id": 2,
+    "player1_id": 3,
     "player1": "Franz-Josef",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Uwe",
-    "player2_id": 5,
+    "player2_id": 1,
     "p2_avg_3dart_match": 40.8
   },
   {
@@ -3801,12 +3801,12 @@
     "game_date": "2021-07-10",
     "game_time": "22:27:00",
     "p1_avg_3dart_match": 61.77,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 28.04
   },
   {
@@ -3816,12 +3816,12 @@
     "game_date": "2021-07-10",
     "game_time": "21:59:58",
     "p1_avg_3dart_match": 40.99,
-    "player1_id": 5,
+    "player1_id": 1,
     "player1": "Uwe",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Frank",
-    "player2_id": 1,
+    "player2_id": 2,
     "p2_avg_3dart_match": 35.69
   },
   {
@@ -3831,12 +3831,12 @@
     "game_date": "2021-07-10",
     "game_time": "21:38:27",
     "p1_avg_3dart_match": 54.99,
-    "player1_id": 2,
+    "player1_id": 3,
     "player1": "Franz-Josef",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 32.44
   },
   {
@@ -3846,12 +3846,12 @@
     "game_date": "2021-07-10",
     "game_time": "21:08:16",
     "p1_avg_3dart_match": 28.01,
-    "player1_id": 1,
+    "player1_id": 2,
     "player1": "Frank",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 25.77
   },
   {
@@ -3861,12 +3861,12 @@
     "game_date": "2021-07-10",
     "game_time": "20:52:47",
     "p1_avg_3dart_match": 46.72,
-    "player1_id": 2,
+    "player1_id": 3,
     "player1": "Franz-Josef",
     "p1_legs_won": 0,
     "p2_legs_won": 3,
     "player2": "Martin",
-    "player2_id": 4,
+    "player2_id": 8,
     "p2_avg_3dart_match": 61.77
   },
   {
@@ -3876,12 +3876,12 @@
     "game_date": "2021-07-10",
     "game_time": "20:19:52",
     "p1_avg_3dart_match": 41.26,
-    "player1_id": 5,
+    "player1_id": 1,
     "player1": "Uwe",
     "p1_legs_won": 3,
     "p2_legs_won": 1,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 34.83
   },
   {
@@ -3891,12 +3891,12 @@
     "game_date": "2021-07-10",
     "game_time": "19:58:32",
     "p1_avg_3dart_match": 49.01,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Frank",
-    "player2_id": 1,
+    "player2_id": 2,
     "p2_avg_3dart_match": 33.23
   },
   {
@@ -3906,12 +3906,12 @@
     "game_date": "2020-10-18",
     "game_time": "00:08:39",
     "p1_avg_3dart_match": 56.02,
-    "player1_id": 2,
+    "player1_id": 3,
     "player1": "Franz-Josef",
     "p1_legs_won": 3,
     "p2_legs_won": 2,
     "player2": "Martin",
-    "player2_id": 4,
+    "player2_id": 8,
     "p2_avg_3dart_match": 56.52
   },
   {
@@ -3921,12 +3921,12 @@
     "game_date": "2020-10-17",
     "game_time": "23:38:50",
     "p1_avg_3dart_match": 37.58,
-    "player1_id": 5,
+    "player1_id": 1,
     "player1": "Uwe",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 32.87
   },
   {
@@ -3936,12 +3936,12 @@
     "game_date": "2020-10-17",
     "game_time": "23:19:12",
     "p1_avg_3dart_match": 41.21,
-    "player1_id": 5,
+    "player1_id": 1,
     "player1": "Uwe",
     "p1_legs_won": 0,
     "p2_legs_won": 3,
     "player2": "Martin",
-    "player2_id": 4,
+    "player2_id": 8,
     "p2_avg_3dart_match": 51.83
   },
   {
@@ -3951,12 +3951,12 @@
     "game_date": "2020-10-17",
     "game_time": "22:53:10",
     "p1_avg_3dart_match": 31.53,
-    "player1_id": 1,
+    "player1_id": 2,
     "player1": "Frank",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 28.6
   },
   {
@@ -3966,12 +3966,12 @@
     "game_date": "2020-10-17",
     "game_time": "22:05:00",
     "p1_avg_3dart_match": 45.72,
-    "player1_id": 5,
+    "player1_id": 1,
     "player1": "Uwe",
     "p1_legs_won": 2,
     "p2_legs_won": 3,
     "player2": "Franz-Josef",
-    "player2_id": 2,
+    "player2_id": 3,
     "p2_avg_3dart_match": 50.31
   },
   {
@@ -3981,12 +3981,12 @@
     "game_date": "2020-10-17",
     "game_time": "21:51:02",
     "p1_avg_3dart_match": 60.93,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Frank",
-    "player2_id": 1,
+    "player2_id": 2,
     "p2_avg_3dart_match": 43.75
   },
   {
@@ -3996,12 +3996,12 @@
     "game_date": "2020-10-17",
     "game_time": "21:24:43",
     "p1_avg_3dart_match": 34.56,
-    "player1_id": 1,
+    "player1_id": 2,
     "player1": "Frank",
     "p1_legs_won": 0,
     "p2_legs_won": 3,
     "player2": "Franz-Josef",
-    "player2_id": 2,
+    "player2_id": 3,
     "p2_avg_3dart_match": 38.54
   },
   {
@@ -4011,12 +4011,12 @@
     "game_date": "2020-10-17",
     "game_time": "21:08:02",
     "p1_avg_3dart_match": 55.67,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 38.48
   },
   {
@@ -4026,12 +4026,12 @@
     "game_date": "2020-10-17",
     "game_time": "20:34:55",
     "p1_avg_3dart_match": 35.64,
-    "player1_id": 5,
+    "player1_id": 1,
     "player1": "Uwe",
     "p1_legs_won": 1,
     "p2_legs_won": 3,
     "player2": "Frank",
-    "player2_id": 1,
+    "player2_id": 2,
     "p2_avg_3dart_match": 36.34
   },
   {
@@ -4041,12 +4041,12 @@
     "game_date": "2020-10-17",
     "game_time": "20:16:49",
     "p1_avg_3dart_match": 39.53,
-    "player1_id": 3,
+    "player1_id": 6,
     "player1": "Heiner",
     "p1_legs_won": 0,
     "p2_legs_won": 3,
     "player2": "Franz-Josef",
-    "player2_id": 2,
+    "player2_id": 3,
     "p2_avg_3dart_match": 47.46
   },
   {
@@ -4056,12 +4056,12 @@
     "game_date": "2020-09-04",
     "game_time": "23:33:04",
     "p1_avg_3dart_match": 35.78,
-    "player1_id": 1,
+    "player1_id": 2,
     "player1": "Frank",
     "p1_legs_won": 0,
     "p2_legs_won": 3,
     "player2": "Uwe",
-    "player2_id": 5,
+    "player2_id": 1,
     "p2_avg_3dart_match": 36.07
   },
   {
@@ -4071,12 +4071,12 @@
     "game_date": "2020-09-04",
     "game_time": "23:18:45",
     "p1_avg_3dart_match": 48.23,
-    "player1_id": 2,
+    "player1_id": 3,
     "player1": "Franz-Josef",
     "p1_legs_won": 0,
     "p2_legs_won": 3,
     "player2": "Martin",
-    "player2_id": 4,
+    "player2_id": 8,
     "p2_avg_3dart_match": 57.08
   },
   {
@@ -4086,12 +4086,12 @@
     "game_date": "2020-09-04",
     "game_time": "22:58:34",
     "p1_avg_3dart_match": 53.68,
-    "player1_id": 2,
+    "player1_id": 3,
     "player1": "Franz-Josef",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Frank",
-    "player2_id": 1,
+    "player2_id": 2,
     "p2_avg_3dart_match": 41.81
   },
   {
@@ -4101,12 +4101,12 @@
     "game_date": "2020-09-04",
     "game_time": "22:44:24",
     "p1_avg_3dart_match": 53.05,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 38.26
   },
   {
@@ -4116,12 +4116,12 @@
     "game_date": "2020-09-04",
     "game_time": "22:07:37",
     "p1_avg_3dart_match": 41.59,
-    "player1_id": 5,
+    "player1_id": 1,
     "player1": "Uwe",
     "p1_legs_won": 2,
     "p2_legs_won": 3,
     "player2": "Franz-Josef",
-    "player2_id": 2,
+    "player2_id": 3,
     "p2_avg_3dart_match": 43.65
   },
   {
@@ -4131,12 +4131,12 @@
     "game_date": "2020-09-04",
     "game_time": "21:34:09",
     "p1_avg_3dart_match": 22.32,
-    "player1_id": 1,
+    "player1_id": 2,
     "player1": "Frank",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 22.13
   },
   {
@@ -4146,12 +4146,12 @@
     "game_date": "2020-09-04",
     "game_time": "21:04:25",
     "p1_avg_3dart_match": 30.36,
-    "player1_id": 3,
+    "player1_id": 6,
     "player1": "Heiner",
     "p1_legs_won": 0,
     "p2_legs_won": 3,
     "player2": "Uwe",
-    "player2_id": 5,
+    "player2_id": 1,
     "p2_avg_3dart_match": 32.67
   },
   {
@@ -4161,12 +4161,12 @@
     "game_date": "2020-09-04",
     "game_time": "20:36:57",
     "p1_avg_3dart_match": 41.54,
-    "player1_id": 1,
+    "player1_id": 2,
     "player1": "Frank",
     "p1_legs_won": 2,
     "p2_legs_won": 3,
     "player2": "Martin",
-    "player2_id": 4,
+    "player2_id": 8,
     "p2_avg_3dart_match": 46.72
   },
   {
@@ -4176,12 +4176,12 @@
     "game_date": "2020-09-04",
     "game_time": "20:13:47",
     "p1_avg_3dart_match": 41.33,
-    "player1_id": 3,
+    "player1_id": 6,
     "player1": "Heiner",
     "p1_legs_won": 0,
     "p2_legs_won": 3,
     "player2": "Franz-Josef",
-    "player2_id": 2,
+    "player2_id": 3,
     "p2_avg_3dart_match": 46.48
   },
   {
@@ -4191,12 +4191,12 @@
     "game_date": "2020-09-04",
     "game_time": "19:55:50",
     "p1_avg_3dart_match": 43.48,
-    "player1_id": 5,
+    "player1_id": 1,
     "player1": "Uwe",
     "p1_legs_won": 0,
     "p2_legs_won": 3,
     "player2": "Martin",
-    "player2_id": 4,
+    "player2_id": 8,
     "p2_avg_3dart_match": 54.99
   },
   {
@@ -4206,12 +4206,12 @@
     "game_date": "2020-08-22",
     "game_time": "00:33:51",
     "p1_avg_3dart_match": 49.49,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 1,
     "player2": "Frank",
-    "player2_id": 1,
+    "player2_id": 2,
     "p2_avg_3dart_match": 41.92
   },
   {
@@ -4221,12 +4221,12 @@
     "game_date": "2020-08-21",
     "game_time": "23:59:49",
     "p1_avg_3dart_match": 42.22,
-    "player1_id": 5,
+    "player1_id": 1,
     "player1": "Uwe",
     "p1_legs_won": 3,
     "p2_legs_won": 1,
     "player2": "Franz-Josef",
-    "player2_id": 2,
+    "player2_id": 3,
     "p2_avg_3dart_match": 41.04
   },
   {
@@ -4236,12 +4236,12 @@
     "game_date": "2020-08-21",
     "game_time": "23:35:21",
     "p1_avg_3dart_match": 41.15,
-    "player1_id": 5,
+    "player1_id": 1,
     "player1": "Uwe",
     "p1_legs_won": 1,
     "p2_legs_won": 3,
     "player2": "Martin",
-    "player2_id": 4,
+    "player2_id": 8,
     "p2_avg_3dart_match": 51.57
   },
   {
@@ -4251,12 +4251,12 @@
     "game_date": "2020-08-21",
     "game_time": "23:11:18",
     "p1_avg_3dart_match": 33.7,
-    "player1_id": 3,
+    "player1_id": 6,
     "player1": "Heiner",
     "p1_legs_won": 0,
     "p2_legs_won": 3,
     "player2": "Franz-Josef",
-    "player2_id": 2,
+    "player2_id": 3,
     "p2_avg_3dart_match": 34.95
   },
   {
@@ -4266,12 +4266,12 @@
     "game_date": "2020-08-21",
     "game_time": "22:47:30",
     "p1_avg_3dart_match": 47.97,
-    "player1_id": 5,
+    "player1_id": 1,
     "player1": "Uwe",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Frank",
-    "player2_id": 1,
+    "player2_id": 2,
     "p2_avg_3dart_match": 36.87
   },
   {
@@ -4281,12 +4281,12 @@
     "game_date": "2020-08-21",
     "game_time": "22:19:29",
     "p1_avg_3dart_match": 37.77,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 1,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 33.06
   },
   {
@@ -4296,12 +4296,12 @@
     "game_date": "2020-08-21",
     "game_time": "21:21:42",
     "p1_avg_3dart_match": 24.21,
-    "player1_id": 1,
+    "player1_id": 2,
     "player1": "Frank",
     "p1_legs_won": 2,
     "p2_legs_won": 3,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 24.93
   },
   {
@@ -4311,12 +4311,12 @@
     "game_date": "2020-08-21",
     "game_time": "21:04:11",
     "p1_avg_3dart_match": 55.45,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 1,
     "player2": "Franz-Josef",
-    "player2_id": 2,
+    "player2_id": 3,
     "p2_avg_3dart_match": 47.91
   },
   {
@@ -4326,12 +4326,12 @@
     "game_date": "2020-08-21",
     "game_time": "20:22:30",
     "p1_avg_3dart_match": 37.83,
-    "player1_id": 3,
+    "player1_id": 6,
     "player1": "Heiner",
     "p1_legs_won": 2,
     "p2_legs_won": 3,
     "player2": "Uwe",
-    "player2_id": 5,
+    "player2_id": 1,
     "p2_avg_3dart_match": 41.09
   },
   {
@@ -4341,12 +4341,12 @@
     "game_date": "2020-08-21",
     "game_time": "20:03:34",
     "p1_avg_3dart_match": 36.06,
-    "player1_id": 1,
+    "player1_id": 2,
     "player1": "Frank",
     "p1_legs_won": 0,
     "p2_legs_won": 3,
     "player2": "Franz-Josef",
-    "player2_id": 2,
+    "player2_id": 3,
     "p2_avg_3dart_match": 42.94
   },
   {
@@ -4356,12 +4356,12 @@
     "game_date": "2020-07-24",
     "game_time": "23:45:51",
     "p1_avg_3dart_match": 55.67,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Uwe",
-    "player2_id": 5,
+    "player2_id": 1,
     "p2_avg_3dart_match": 38.46
   },
   {
@@ -4371,12 +4371,12 @@
     "game_date": "2020-07-24",
     "game_time": "23:09:35",
     "p1_avg_3dart_match": 28.11,
-    "player1_id": 3,
+    "player1_id": 6,
     "player1": "Heiner",
     "p1_legs_won": 1,
     "p2_legs_won": 3,
     "player2": "Frank",
-    "player2_id": 1,
+    "player2_id": 2,
     "p2_avg_3dart_match": 28.43
   },
   {
@@ -4386,12 +4386,12 @@
     "game_date": "2020-07-24",
     "game_time": "22:19:56",
     "p1_avg_3dart_match": 34.96,
-    "player1_id": 3,
+    "player1_id": 6,
     "player1": "Heiner",
     "p1_legs_won": 2,
     "p2_legs_won": 3,
     "player2": "Uwe",
-    "player2_id": 5,
+    "player2_id": 1,
     "p2_avg_3dart_match": 35.99
   },
   {
@@ -4401,12 +4401,12 @@
     "game_date": "2020-07-24",
     "game_time": "22:00:51",
     "p1_avg_3dart_match": 42.58,
-    "player1_id": 1,
+    "player1_id": 2,
     "player1": "Frank",
     "p1_legs_won": 0,
     "p2_legs_won": 3,
     "player2": "Franz-Josef",
-    "player2_id": 2,
+    "player2_id": 3,
     "p2_avg_3dart_match": 46.01
   },
   {
@@ -4416,12 +4416,12 @@
     "game_date": "2020-07-24",
     "game_time": "21:43:38",
     "p1_avg_3dart_match": 50.66,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 44.38
   },
   {
@@ -4431,12 +4431,12 @@
     "game_date": "2020-07-24",
     "game_time": "21:21:06",
     "p1_avg_3dart_match": 41.74,
-    "player1_id": 2,
+    "player1_id": 3,
     "player1": "Franz-Josef",
     "p1_legs_won": 0,
     "p2_legs_won": 3,
     "player2": "Uwe",
-    "player2_id": 5,
+    "player2_id": 1,
     "p2_avg_3dart_match": 44.64
   },
   {
@@ -4446,12 +4446,12 @@
     "game_date": "2020-07-24",
     "game_time": "20:53:35",
     "p1_avg_3dart_match": 55.69,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 2,
     "player2": "Franz-Josef",
-    "player2_id": 2,
+    "player2_id": 3,
     "p2_avg_3dart_match": 53.35
   },
   {
@@ -4461,12 +4461,12 @@
     "game_date": "2020-07-24",
     "game_time": "20:23:34",
     "p1_avg_3dart_match": 45.52,
-    "player1_id": 5,
+    "player1_id": 1,
     "player1": "Uwe",
     "p1_legs_won": 3,
     "p2_legs_won": 2,
     "player2": "Frank",
-    "player2_id": 1,
+    "player2_id": 2,
     "p2_avg_3dart_match": 38.36
   },
   {
@@ -4476,12 +4476,12 @@
     "game_date": "2020-07-24",
     "game_time": "20:03:09",
     "p1_avg_3dart_match": 41.75,
-    "player1_id": 2,
+    "player1_id": 3,
     "player1": "Franz-Josef",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 32.37
   },
   {
@@ -4491,12 +4491,12 @@
     "game_date": "2020-07-24",
     "game_time": "19:44:46",
     "p1_avg_3dart_match": 28.74,
-    "player1_id": 1,
+    "player1_id": 2,
     "player1": "Frank",
     "p1_legs_won": 0,
     "p2_legs_won": 3,
     "player2": "Martin",
-    "player2_id": 4,
+    "player2_id": 8,
     "p2_avg_3dart_match": 36.07
   },
   {
@@ -4506,12 +4506,12 @@
     "game_date": "2020-07-19",
     "game_time": "00:13:36",
     "p1_avg_3dart_match": 44.45,
-    "player1_id": 5,
+    "player1_id": 1,
     "player1": "Uwe",
     "p1_legs_won": 2,
     "p2_legs_won": 3,
     "player2": "Franz-Josef",
-    "player2_id": 2,
+    "player2_id": 3,
     "p2_avg_3dart_match": 46.22
   },
   {
@@ -4521,12 +4521,12 @@
     "game_date": "2020-07-18",
     "game_time": "23:42:54",
     "p1_avg_3dart_match": 48.05,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 1,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 44.44
   },
   {
@@ -4536,12 +4536,12 @@
     "game_date": "2020-07-18",
     "game_time": "23:11:09",
     "p1_avg_3dart_match": 34.68,
-    "player1_id": 3,
+    "player1_id": 6,
     "player1": "Heiner",
     "p1_legs_won": 0,
     "p2_legs_won": 3,
     "player2": "Uwe",
-    "player2_id": 5,
+    "player2_id": 1,
     "p2_avg_3dart_match": 36.66
   },
   {
@@ -4551,12 +4551,12 @@
     "game_date": "2020-07-18",
     "game_time": "22:47:41",
     "p1_avg_3dart_match": 42.17,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 1,
     "player2": "Frank",
-    "player2_id": 1,
+    "player2_id": 2,
     "p2_avg_3dart_match": 36.49
   },
   {
@@ -4566,12 +4566,12 @@
     "game_date": "2020-07-18",
     "game_time": "22:23:40",
     "p1_avg_3dart_match": 50.1,
-    "player1_id": 2,
+    "player1_id": 3,
     "player1": "Franz-Josef",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 35.59
   },
   {
@@ -4581,12 +4581,12 @@
     "game_date": "2020-07-18",
     "game_time": "21:41:30",
     "p1_avg_3dart_match": 34.72,
-    "player1_id": 5,
+    "player1_id": 1,
     "player1": "Uwe",
     "p1_legs_won": 3,
     "p2_legs_won": 1,
     "player2": "Frank",
-    "player2_id": 1,
+    "player2_id": 2,
     "p2_avg_3dart_match": 30.28
   },
   {
@@ -4596,12 +4596,12 @@
     "game_date": "2020-07-18",
     "game_time": "21:15:07",
     "p1_avg_3dart_match": 41.98,
-    "player1_id": 2,
+    "player1_id": 3,
     "player1": "Franz-Josef",
     "p1_legs_won": 3,
     "p2_legs_won": 1,
     "player2": "Frank",
-    "player2_id": 1,
+    "player2_id": 2,
     "p2_avg_3dart_match": 37.48
   },
   {
@@ -4611,12 +4611,12 @@
     "game_date": "2020-07-18",
     "game_time": "20:55:57",
     "p1_avg_3dart_match": 47.97,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Uwe",
-    "player2_id": 5,
+    "player2_id": 1,
     "p2_avg_3dart_match": 35.9
   },
   {
@@ -4626,12 +4626,12 @@
     "game_date": "2020-07-18",
     "game_time": "20:16:30",
     "p1_avg_3dart_match": 23.34,
-    "player1_id": 1,
+    "player1_id": 2,
     "player1": "Frank",
     "p1_legs_won": 0,
     "p2_legs_won": 3,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 23.61
   },
   {
@@ -4641,12 +4641,12 @@
     "game_date": "2020-07-18",
     "game_time": "19:58:31",
     "p1_avg_3dart_match": 51.83,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Franz-Josef",
-    "player2_id": 2,
+    "player2_id": 3,
     "p2_avg_3dart_match": 48.79
   },
   {
@@ -4656,12 +4656,12 @@
     "game_date": "2020-03-15",
     "game_time": "01:34:31",
     "p1_avg_3dart_match": 51.83,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Frank",
-    "player2_id": 1,
+    "player2_id": 2,
     "p2_avg_3dart_match": 43.57
   },
   {
@@ -4671,12 +4671,12 @@
     "game_date": "2020-03-15",
     "game_time": "01:15:28",
     "p1_avg_3dart_match": 47.97,
-    "player1_id": 2,
+    "player1_id": 3,
     "player1": "Franz-Josef",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 40.7
   },
   {
@@ -4686,12 +4686,12 @@
     "game_date": "2020-03-15",
     "game_time": "00:38:38",
     "p1_avg_3dart_match": 31.89,
-    "player1_id": 3,
+    "player1_id": 6,
     "player1": "Heiner",
     "p1_legs_won": 1,
     "p2_legs_won": 3,
     "player2": "Frank",
-    "player2_id": 1,
+    "player2_id": 2,
     "p2_avg_3dart_match": 32.23
   },
   {
@@ -4701,12 +4701,12 @@
     "game_date": "2020-03-14",
     "game_time": "23:59:59",
     "p1_avg_3dart_match": 42.9,
-    "player1_id": 2,
+    "player1_id": 3,
     "player1": "Franz-Josef",
     "p1_legs_won": 3,
     "p2_legs_won": 1,
     "player2": "Uwe",
-    "player2_id": 5,
+    "player2_id": 1,
     "p2_avg_3dart_match": 41.6
   },
   {
@@ -4716,12 +4716,12 @@
     "game_date": "2020-03-14",
     "game_time": "23:36:01",
     "p1_avg_3dart_match": 43.36,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 37.24
   },
   {
@@ -4731,12 +4731,12 @@
     "game_date": "2020-03-14",
     "game_time": "22:35:31",
     "p1_avg_3dart_match": 28.36,
-    "player1_id": 5,
+    "player1_id": 1,
     "player1": "Uwe",
     "p1_legs_won": 3,
     "p2_legs_won": 2,
     "player2": "Frank",
-    "player2_id": 1,
+    "player2_id": 2,
     "p2_avg_3dart_match": 29.51
   },
   {
@@ -4746,12 +4746,12 @@
     "game_date": "2020-03-14",
     "game_time": "22:15:29",
     "p1_avg_3dart_match": 42.0,
-    "player1_id": 5,
+    "player1_id": 1,
     "player1": "Uwe",
     "p1_legs_won": 0,
     "p2_legs_won": 3,
     "player2": "Martin",
-    "player2_id": 4,
+    "player2_id": 8,
     "p2_avg_3dart_match": 59.33
   },
   {
@@ -4761,12 +4761,12 @@
     "game_date": "2020-03-14",
     "game_time": "21:43:42",
     "p1_avg_3dart_match": 35.95,
-    "player1_id": 2,
+    "player1_id": 3,
     "player1": "Franz-Josef",
     "p1_legs_won": 3,
     "p2_legs_won": 1,
     "player2": "Frank",
-    "player2_id": 1,
+    "player2_id": 2,
     "p2_avg_3dart_match": 31.02
   },
   {
@@ -4776,12 +4776,12 @@
     "game_date": "2020-03-14",
     "game_time": "21:12:22",
     "p1_avg_3dart_match": 31.98,
-    "player1_id": 5,
+    "player1_id": 1,
     "player1": "Uwe",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 30.98
   },
   {
@@ -4791,12 +4791,12 @@
     "game_date": "2020-03-14",
     "game_time": "20:47:52",
     "p1_avg_3dart_match": 50.87,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 1,
     "player2": "Franz-Josef",
-    "player2_id": 2,
+    "player2_id": 3,
     "p2_avg_3dart_match": 51.39
   },
   {
@@ -4806,12 +4806,12 @@
     "game_date": "2020-02-02",
     "game_time": "01:01:23",
     "p1_avg_3dart_match": 37.0,
-    "player1_id": 5,
+    "player1_id": 1,
     "player1": "Uwe",
     "p1_legs_won": 3,
     "p2_legs_won": 2,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 33.08
   },
   {
@@ -4821,12 +4821,12 @@
     "game_date": "2020-02-02",
     "game_time": "00:45:29",
     "p1_avg_3dart_match": 38.16,
-    "player1_id": 1,
+    "player1_id": 2,
     "player1": "Frank",
     "p1_legs_won": 0,
     "p2_legs_won": 3,
     "player2": "Franz-Josef",
-    "player2_id": 2,
+    "player2_id": 3,
     "p2_avg_3dart_match": 59.33
   },
   {
@@ -4836,12 +4836,12 @@
     "game_date": "2020-02-02",
     "game_time": "00:23:45",
     "p1_avg_3dart_match": 40.26,
-    "player1_id": 5,
+    "player1_id": 1,
     "player1": "Uwe",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Frank",
-    "player2_id": 1,
+    "player2_id": 2,
     "p2_avg_3dart_match": 37.31
   },
   {
@@ -4851,12 +4851,12 @@
     "game_date": "2020-02-02",
     "game_time": "00:00:43",
     "p1_avg_3dart_match": 63.88,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 2,
     "player2": "Franz-Josef",
-    "player2_id": 2,
+    "player2_id": 3,
     "p2_avg_3dart_match": 59.26
   },
   {
@@ -4866,12 +4866,12 @@
     "game_date": "2020-02-01",
     "game_time": "23:20:18",
     "p1_avg_3dart_match": 40.67,
-    "player1_id": 3,
+    "player1_id": 6,
     "player1": "Heiner",
     "p1_legs_won": 3,
     "p2_legs_won": 2,
     "player2": "Frank",
-    "player2_id": 1,
+    "player2_id": 2,
     "p2_avg_3dart_match": 39.52
   },
   {
@@ -4881,12 +4881,12 @@
     "game_date": "2020-02-01",
     "game_time": "22:45:00",
     "p1_avg_3dart_match": 49.71,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 2,
     "player2": "Uwe",
-    "player2_id": 5,
+    "player2_id": 1,
     "p2_avg_3dart_match": 45.29
   },
   {
@@ -4896,12 +4896,12 @@
     "game_date": "2020-02-01",
     "game_time": "22:29:32",
     "p1_avg_3dart_match": 60.12,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 36.25
   },
   {
@@ -4911,12 +4911,12 @@
     "game_date": "2020-02-01",
     "game_time": "21:57:37",
     "p1_avg_3dart_match": 41.62,
-    "player1_id": 5,
+    "player1_id": 1,
     "player1": "Uwe",
     "p1_legs_won": 2,
     "p2_legs_won": 3,
     "player2": "Franz-Josef",
-    "player2_id": 2,
+    "player2_id": 3,
     "p2_avg_3dart_match": 47.04
   },
   {
@@ -4926,12 +4926,12 @@
     "game_date": "2020-02-01",
     "game_time": "21:28:27",
     "p1_avg_3dart_match": 51.76,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 1,
     "player2": "Frank",
-    "player2_id": 1,
+    "player2_id": 2,
     "p2_avg_3dart_match": 40.33
   },
   {
@@ -4941,12 +4941,12 @@
     "game_date": "2020-02-01",
     "game_time": "21:01:42",
     "p1_avg_3dart_match": 31.16,
-    "player1_id": 3,
+    "player1_id": 6,
     "player1": "Heiner",
     "p1_legs_won": 0,
     "p2_legs_won": 3,
     "player2": "Franz-Josef",
-    "player2_id": 2,
+    "player2_id": 3,
     "p2_avg_3dart_match": 34.68
   },
   {
@@ -4956,12 +4956,12 @@
     "game_date": "2020-01-19",
     "game_time": "00:18:04",
     "p1_avg_3dart_match": 47.46,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 37.06
   },
   {
@@ -4971,12 +4971,12 @@
     "game_date": "2020-01-18",
     "game_time": "23:58:32",
     "p1_avg_3dart_match": 43.39,
-    "player1_id": 5,
+    "player1_id": 1,
     "player1": "Uwe",
     "p1_legs_won": 0,
     "p2_legs_won": 3,
     "player2": "Franz-Josef",
-    "player2_id": 2,
+    "player2_id": 3,
     "p2_avg_3dart_match": 47.46
   },
   {
@@ -4986,12 +4986,12 @@
     "game_date": "2020-01-18",
     "game_time": "23:41:23",
     "p1_avg_3dart_match": 51.24,
-    "player1_id": 2,
+    "player1_id": 3,
     "player1": "Franz-Josef",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 40.93
   },
   {
@@ -5001,12 +5001,12 @@
     "game_date": "2020-01-18",
     "game_time": "23:12:09",
     "p1_avg_3dart_match": 38.53,
-    "player1_id": 1,
+    "player1_id": 2,
     "player1": "Frank",
     "p1_legs_won": 1,
     "p2_legs_won": 3,
     "player2": "Uwe",
-    "player2_id": 5,
+    "player2_id": 1,
     "p2_avg_3dart_match": 39.53
   },
   {
@@ -5016,12 +5016,12 @@
     "game_date": "2020-01-18",
     "game_time": "22:55:11",
     "p1_avg_3dart_match": 47.97,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Franz-Josef",
-    "player2_id": 2,
+    "player2_id": 3,
     "p2_avg_3dart_match": 45.06
   },
   {
@@ -5031,12 +5031,12 @@
     "game_date": "2020-01-18",
     "game_time": "22:17:20",
     "p1_avg_3dart_match": 32.18,
-    "player1_id": 1,
+    "player1_id": 2,
     "player1": "Frank",
     "p1_legs_won": 3,
     "p2_legs_won": 2,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 29.6
   },
   {
@@ -5046,12 +5046,12 @@
     "game_date": "2020-01-18",
     "game_time": "22:04:10",
     "p1_avg_3dart_match": 52.43,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Frank",
-    "player2_id": 1,
+    "player2_id": 2,
     "p2_avg_3dart_match": 45.37
   },
   {
@@ -5061,12 +5061,12 @@
     "game_date": "2020-01-18",
     "game_time": "21:34:11",
     "p1_avg_3dart_match": 42.6,
-    "player1_id": 5,
+    "player1_id": 1,
     "player1": "Uwe",
     "p1_legs_won": 3,
     "p2_legs_won": 1,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 38.7
   },
   {
@@ -5076,12 +5076,12 @@
     "game_date": "2020-01-18",
     "game_time": "21:16:48",
     "p1_avg_3dart_match": 43.38,
-    "player1_id": 1,
+    "player1_id": 2,
     "player1": "Frank",
     "p1_legs_won": 0,
     "p2_legs_won": 3,
     "player2": "Franz-Josef",
-    "player2_id": 2,
+    "player2_id": 3,
     "p2_avg_3dart_match": 51.83
   },
   {
@@ -5091,12 +5091,12 @@
     "game_date": "2020-01-18",
     "game_time": "20:58:31",
     "p1_avg_3dart_match": 53.05,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Uwe",
-    "player2_id": 5,
+    "player2_id": 1,
     "p2_avg_3dart_match": 39.74
   },
   {
@@ -5106,12 +5106,12 @@
     "game_date": "2019-12-22",
     "game_time": "00:16:08",
     "p1_avg_3dart_match": 34.48,
-    "player1_id": 1,
+    "player1_id": 2,
     "player1": "Frank",
     "p1_legs_won": 3,
     "p2_legs_won": 1,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 31.94
   },
   {
@@ -5121,12 +5121,12 @@
     "game_date": "2019-12-21",
     "game_time": "23:56:35",
     "p1_avg_3dart_match": 79.11,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Uwe",
-    "player2_id": 5,
+    "player2_id": 1,
     "p2_avg_3dart_match": 38.11
   },
   {
@@ -5136,12 +5136,12 @@
     "game_date": "2019-12-21",
     "game_time": "23:39:25",
     "p1_avg_3dart_match": 55.67,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 32.59
   },
   {
@@ -5151,12 +5151,12 @@
     "game_date": "2019-12-21",
     "game_time": "23:03:50",
     "p1_avg_3dart_match": 38.25,
-    "player1_id": 2,
+    "player1_id": 3,
     "player1": "Franz-Josef",
     "p1_legs_won": 3,
     "p2_legs_won": 1,
     "player2": "Uwe",
-    "player2_id": 5,
+    "player2_id": 1,
     "p2_avg_3dart_match": 33.65
   },
   {
@@ -5166,12 +5166,12 @@
     "game_date": "2019-12-21",
     "game_time": "22:49:55",
     "p1_avg_3dart_match": 62.02,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 1,
     "player2": "Frank",
-    "player2_id": 1,
+    "player2_id": 2,
     "p2_avg_3dart_match": 43.81
   },
   {
@@ -5181,12 +5181,12 @@
     "game_date": "2019-12-21",
     "game_time": "22:21:47",
     "p1_avg_3dart_match": 38.18,
-    "player1_id": 2,
+    "player1_id": 3,
     "player1": "Franz-Josef",
     "p1_legs_won": 3,
     "p2_legs_won": 1,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 34.52
   },
   {
@@ -5196,12 +5196,12 @@
     "game_date": "2019-12-21",
     "game_time": "22:05:58",
     "p1_avg_3dart_match": 50.1,
-    "player1_id": 2,
+    "player1_id": 3,
     "player1": "Franz-Josef",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Frank",
-    "player2_id": 1,
+    "player2_id": 2,
     "p2_avg_3dart_match": 35.9
   },
   {
@@ -5211,12 +5211,12 @@
     "game_date": "2019-12-21",
     "game_time": "21:35:20",
     "p1_avg_3dart_match": 30.26,
-    "player1_id": 5,
+    "player1_id": 1,
     "player1": "Uwe",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 25.39
   },
   {
@@ -5226,12 +5226,12 @@
     "game_date": "2019-12-21",
     "game_time": "21:18:38",
     "p1_avg_3dart_match": 60.06,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 1,
     "player2": "Franz-Josef",
-    "player2_id": 2,
+    "player2_id": 3,
     "p2_avg_3dart_match": 54.0
   },
   {
@@ -5241,12 +5241,12 @@
     "game_date": "2019-12-21",
     "game_time": "20:50:03",
     "p1_avg_3dart_match": 36.0,
-    "player1_id": 1,
+    "player1_id": 2,
     "player1": "Frank",
     "p1_legs_won": 1,
     "p2_legs_won": 3,
     "player2": "Uwe",
-    "player2_id": 5,
+    "player2_id": 1,
     "p2_avg_3dart_match": 36.25
   },
   {
@@ -5256,12 +5256,12 @@
     "game_date": "2019-12-07",
     "game_time": "00:58:20",
     "p1_avg_3dart_match": 39.3,
-    "player1_id": 5,
+    "player1_id": 1,
     "player1": "Uwe",
     "p1_legs_won": 3,
     "p2_legs_won": 1,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 32.98
   },
   {
@@ -5271,12 +5271,12 @@
     "game_date": "2019-12-07",
     "game_time": "00:43:55",
     "p1_avg_3dart_match": 46.82,
-    "player1_id": 1,
+    "player1_id": 2,
     "player1": "Frank",
     "p1_legs_won": 0,
     "p2_legs_won": 3,
     "player2": "Martin",
-    "player2_id": 4,
+    "player2_id": 8,
     "p2_avg_3dart_match": 53.05
   },
   {
@@ -5286,12 +5286,12 @@
     "game_date": "2019-12-07",
     "game_time": "00:24:18",
     "p1_avg_3dart_match": 56.36,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Uwe",
-    "player2_id": 5,
+    "player2_id": 1,
     "p2_avg_3dart_match": 44.38
   },
   {
@@ -5301,12 +5301,12 @@
     "game_date": "2019-12-06",
     "game_time": "23:48:33",
     "p1_avg_3dart_match": 36.25,
-    "player1_id": 2,
+    "player1_id": 3,
     "player1": "Franz-Josef",
     "p1_legs_won": 3,
     "p2_legs_won": 1,
     "player2": "Frank",
-    "player2_id": 1,
+    "player2_id": 2,
     "p2_avg_3dart_match": 36.46
   },
   {
@@ -5316,12 +5316,12 @@
     "game_date": "2019-12-06",
     "game_time": "23:28:17",
     "p1_avg_3dart_match": 43.36,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 35.12
   },
   {
@@ -5331,12 +5331,12 @@
     "game_date": "2019-12-06",
     "game_time": "23:00:05",
     "p1_avg_3dart_match": 59.82,
-    "player1_id": 2,
+    "player1_id": 3,
     "player1": "Franz-Josef",
     "p1_legs_won": 3,
     "p2_legs_won": 1,
     "player2": "Uwe",
-    "player2_id": 5,
+    "player2_id": 1,
     "p2_avg_3dart_match": 49.21
   },
   {
@@ -5346,12 +5346,12 @@
     "game_date": "2019-12-06",
     "game_time": "22:40:34",
     "p1_avg_3dart_match": 40.99,
-    "player1_id": 2,
+    "player1_id": 3,
     "player1": "Franz-Josef",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 34.14
   },
   {
@@ -5361,12 +5361,12 @@
     "game_date": "2019-12-06",
     "game_time": "22:06:00",
     "p1_avg_3dart_match": 34.19,
-    "player1_id": 5,
+    "player1_id": 1,
     "player1": "Uwe",
     "p1_legs_won": 1,
     "p2_legs_won": 3,
     "player2": "Frank",
-    "player2_id": 1,
+    "player2_id": 2,
     "p2_avg_3dart_match": 35.96
   },
   {
@@ -5376,12 +5376,12 @@
     "game_date": "2019-12-06",
     "game_time": "21:43:25",
     "p1_avg_3dart_match": 53.61,
-    "player1_id": 2,
+    "player1_id": 3,
     "player1": "Franz-Josef",
     "p1_legs_won": 3,
     "p2_legs_won": 2,
     "player2": "Martin",
-    "player2_id": 4,
+    "player2_id": 8,
     "p2_avg_3dart_match": 58.92
   },
   {
@@ -5391,12 +5391,12 @@
     "game_date": "2019-12-06",
     "game_time": "20:57:58",
     "p1_avg_3dart_match": 29.25,
-    "player1_id": 1,
+    "player1_id": 2,
     "player1": "Frank",
     "p1_legs_won": 3,
     "p2_legs_won": 2,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 29.42
   },
   {
@@ -5406,12 +5406,12 @@
     "game_date": "2019-11-24",
     "game_time": "01:20:37",
     "p1_avg_3dart_match": 30.29,
-    "player1_id": 5,
+    "player1_id": 1,
     "player1": "Uwe",
     "p1_legs_won": 0,
     "p2_legs_won": 3,
     "player2": "Frank",
-    "player2_id": 1,
+    "player2_id": 2,
     "p2_avg_3dart_match": 31.53
   },
   {
@@ -5421,12 +5421,12 @@
     "game_date": "2019-11-24",
     "game_time": "01:01:02",
     "p1_avg_3dart_match": 40.76,
-    "player1_id": 3,
+    "player1_id": 6,
     "player1": "Heiner",
     "p1_legs_won": 0,
     "p2_legs_won": 3,
     "player2": "Martin",
-    "player2_id": 4,
+    "player2_id": 8,
     "p2_avg_3dart_match": 50.1
   },
   {
@@ -5436,12 +5436,12 @@
     "game_date": "2019-11-24",
     "game_time": "00:01:16",
     "p1_avg_3dart_match": 33.05,
-    "player1_id": 5,
+    "player1_id": 1,
     "player1": "Uwe",
     "p1_legs_won": 3,
     "p2_legs_won": 1,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 33.61
   },
   {
@@ -5451,12 +5451,12 @@
     "game_date": "2019-11-23",
     "game_time": "23:29:11",
     "p1_avg_3dart_match": 52.17,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 2,
     "player2": "Franz-Josef",
-    "player2_id": 2,
+    "player2_id": 3,
     "p2_avg_3dart_match": 49.18
   },
   {
@@ -5466,12 +5466,12 @@
     "game_date": "2019-11-23",
     "game_time": "23:04:02",
     "p1_avg_3dart_match": 43.78,
-    "player1_id": 1,
+    "player1_id": 2,
     "player1": "Frank",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 37.91
   },
   {
@@ -5481,12 +5481,12 @@
     "game_date": "2019-11-23",
     "game_time": "22:31:40",
     "p1_avg_3dart_match": 40.94,
-    "player1_id": 5,
+    "player1_id": 1,
     "player1": "Uwe",
     "p1_legs_won": 0,
     "p2_legs_won": 3,
     "player2": "Franz-Josef",
-    "player2_id": 2,
+    "player2_id": 3,
     "p2_avg_3dart_match": 45.55
   },
   {
@@ -5496,12 +5496,12 @@
     "game_date": "2019-11-23",
     "game_time": "22:06:04",
     "p1_avg_3dart_match": 35.8,
-    "player1_id": 1,
+    "player1_id": 2,
     "player1": "Frank",
     "p1_legs_won": 0,
     "p2_legs_won": 3,
     "player2": "Franz-Josef",
-    "player2_id": 2,
+    "player2_id": 3,
     "p2_avg_3dart_match": 36.66
   },
   {
@@ -5511,12 +5511,12 @@
     "game_date": "2019-11-23",
     "game_time": "21:44:49",
     "p1_avg_3dart_match": 51.24,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Uwe",
-    "player2_id": 5,
+    "player2_id": 1,
     "p2_avg_3dart_match": 39.29
   },
   {
@@ -5526,12 +5526,12 @@
     "game_date": "2019-11-23",
     "game_time": "21:12:30",
     "p1_avg_3dart_match": 30.26,
-    "player1_id": 2,
+    "player1_id": 3,
     "player1": "Franz-Josef",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 28.32
   },
   {
@@ -5541,12 +5541,12 @@
     "game_date": "2019-11-23",
     "game_time": "20:53:48",
     "p1_avg_3dart_match": 49.55,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Frank",
-    "player2_id": 1,
+    "player2_id": 2,
     "p2_avg_3dart_match": 40.0
   },
   {
@@ -5556,12 +5556,12 @@
     "game_date": "2019-09-01",
     "game_time": "01:06:25",
     "p1_avg_3dart_match": 53.68,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Uwe",
-    "player2_id": 5,
+    "player2_id": 1,
     "p2_avg_3dart_match": 47.65
   },
   {
@@ -5571,12 +5571,12 @@
     "game_date": "2019-09-01",
     "game_time": "00:39:21",
     "p1_avg_3dart_match": 40.08,
-    "player1_id": 2,
+    "player1_id": 3,
     "player1": "Franz-Josef",
     "p1_legs_won": 3,
     "p2_legs_won": 1,
     "player2": "Frank",
-    "player2_id": 1,
+    "player2_id": 2,
     "p2_avg_3dart_match": 36.59
   },
   {
@@ -5586,12 +5586,12 @@
     "game_date": "2019-09-01",
     "game_time": "00:19:49",
     "p1_avg_3dart_match": 64.67,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 2,
     "player2": "Franz-Josef",
-    "player2_id": 2,
+    "player2_id": 3,
     "p2_avg_3dart_match": 67.75
   },
   {
@@ -5601,12 +5601,12 @@
     "game_date": "2019-08-31",
     "game_time": "23:34:53",
     "p1_avg_3dart_match": 34.42,
-    "player1_id": 1,
+    "player1_id": 2,
     "player1": "Frank",
     "p1_legs_won": 3,
     "p2_legs_won": 2,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 33.53
   },
   {
@@ -5616,12 +5616,12 @@
     "game_date": "2019-08-31",
     "game_time": "22:53:02",
     "p1_avg_3dart_match": 50.79,
-    "player1_id": 2,
+    "player1_id": 3,
     "player1": "Franz-Josef",
     "p1_legs_won": 2,
     "p2_legs_won": 3,
     "player2": "Uwe",
-    "player2_id": 5,
+    "player2_id": 1,
     "p2_avg_3dart_match": 43.2
   },
   {
@@ -5631,12 +5631,12 @@
     "game_date": "2019-08-31",
     "game_time": "22:38:18",
     "p1_avg_3dart_match": 57.08,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 37.56
   },
   {
@@ -5646,12 +5646,12 @@
     "game_date": "2019-08-31",
     "game_time": "21:37:55",
     "p1_avg_3dart_match": 32.42,
-    "player1_id": 3,
+    "player1_id": 6,
     "player1": "Heiner",
     "p1_legs_won": 2,
     "p2_legs_won": 3,
     "player2": "Uwe",
-    "player2_id": 5,
+    "player2_id": 1,
     "p2_avg_3dart_match": 34.27
   },
   {
@@ -5661,12 +5661,12 @@
     "game_date": "2019-08-31",
     "game_time": "21:18:26",
     "p1_avg_3dart_match": 46.48,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Frank",
-    "player2_id": 1,
+    "player2_id": 2,
     "p2_avg_3dart_match": 39.61
   },
   {
@@ -5676,12 +5676,12 @@
     "game_date": "2019-08-31",
     "game_time": "20:57:00",
     "p1_avg_3dart_match": 34.77,
-    "player1_id": 3,
+    "player1_id": 6,
     "player1": "Heiner",
     "p1_legs_won": 0,
     "p2_legs_won": 3,
     "player2": "Franz-Josef",
-    "player2_id": 2,
+    "player2_id": 3,
     "p2_avg_3dart_match": 47.46
   },
   {
@@ -5691,12 +5691,12 @@
     "game_date": "2019-08-31",
     "game_time": "20:13:46",
     "p1_avg_3dart_match": 39.13,
-    "player1_id": 1,
+    "player1_id": 2,
     "player1": "Frank",
     "p1_legs_won": 3,
     "p2_legs_won": 2,
     "player2": "Uwe",
-    "player2_id": 5,
+    "player2_id": 1,
     "p2_avg_3dart_match": 38.89
   },
   {
@@ -5706,12 +5706,12 @@
     "game_date": "2019-07-20",
     "game_time": "23:50:07",
     "p1_avg_3dart_match": 34.42,
-    "player1_id": 3,
+    "player1_id": 6,
     "player1": "Heiner",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Frank",
-    "player2_id": 1,
+    "player2_id": 2,
     "p2_avg_3dart_match": 32.7
   },
   {
@@ -5721,12 +5721,12 @@
     "game_date": "2019-07-20",
     "game_time": "22:57:35",
     "p1_avg_3dart_match": 53.75,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 1,
     "player2": "Uwe",
-    "player2_id": 5,
+    "player2_id": 1,
     "p2_avg_3dart_match": 46.61
   },
   {
@@ -5736,12 +5736,12 @@
     "game_date": "2019-07-20",
     "game_time": "22:17:19",
     "p1_avg_3dart_match": 38.84,
-    "player1_id": 5,
+    "player1_id": 1,
     "player1": "Uwe",
     "p1_legs_won": 2,
     "p2_legs_won": 3,
     "player2": "Frank",
-    "player2_id": 1,
+    "player2_id": 2,
     "p2_avg_3dart_match": 39.78
   },
   {
@@ -5751,12 +5751,12 @@
     "game_date": "2019-07-20",
     "game_time": "21:58:59",
     "p1_avg_3dart_match": 46.97,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Franz-Josef",
-    "player2_id": 2,
+    "player2_id": 3,
     "p2_avg_3dart_match": 44.32
   },
   {
@@ -5766,12 +5766,12 @@
     "game_date": "2019-07-20",
     "game_time": "21:25:24",
     "p1_avg_3dart_match": 29.86,
-    "player1_id": 5,
+    "player1_id": 1,
     "player1": "Uwe",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 29.9
   },
   {
@@ -5781,12 +5781,12 @@
     "game_date": "2019-07-20",
     "game_time": "21:06:28",
     "p1_avg_3dart_match": 54.22,
-    "player1_id": 2,
+    "player1_id": 3,
     "player1": "Franz-Josef",
     "p1_legs_won": 3,
     "p2_legs_won": 1,
     "player2": "Frank",
-    "player2_id": 1,
+    "player2_id": 2,
     "p2_avg_3dart_match": 43.38
   },
   {
@@ -5796,12 +5796,12 @@
     "game_date": "2019-07-20",
     "game_time": "20:43:55",
     "p1_avg_3dart_match": 42.15,
-    "player1_id": 3,
+    "player1_id": 6,
     "player1": "Heiner",
     "p1_legs_won": 0,
     "p2_legs_won": 3,
     "player2": "Franz-Josef",
-    "player2_id": 2,
+    "player2_id": 3,
     "p2_avg_3dart_match": 55.67
   },
   {
@@ -5811,12 +5811,12 @@
     "game_date": "2019-07-20",
     "game_time": "20:27:44",
     "p1_avg_3dart_match": 44.21,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Frank",
-    "player2_id": 1,
+    "player2_id": 2,
     "p2_avg_3dart_match": 34.55
   },
   {
@@ -5826,12 +5826,12 @@
     "game_date": "2019-07-20",
     "game_time": "20:06:13",
     "p1_avg_3dart_match": 40.29,
-    "player1_id": 5,
+    "player1_id": 1,
     "player1": "Uwe",
     "p1_legs_won": 0,
     "p2_legs_won": 3,
     "player2": "Franz-Josef",
-    "player2_id": 2,
+    "player2_id": 3,
     "p2_avg_3dart_match": 44.21
   },
   {
@@ -5841,12 +5841,12 @@
     "game_date": "2019-07-20",
     "game_time": "19:46:49",
     "p1_avg_3dart_match": 61.77,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 46.17
   },
   {
@@ -5856,12 +5856,12 @@
     "game_date": "2019-06-22",
     "game_time": "23:22:36",
     "p1_avg_3dart_match": 32.91,
-    "player1_id": 2,
+    "player1_id": 3,
     "player1": "Franz-Josef",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 32.53
   },
   {
@@ -5871,12 +5871,12 @@
     "game_date": "2019-06-22",
     "game_time": "23:07:52",
     "p1_avg_3dart_match": 44.52,
-    "player1_id": 1,
+    "player1_id": 2,
     "player1": "Frank",
     "p1_legs_won": 0,
     "p2_legs_won": 3,
     "player2": "Martin",
-    "player2_id": 4,
+    "player2_id": 8,
     "p2_avg_3dart_match": 59.33
   },
   {
@@ -5886,12 +5886,12 @@
     "game_date": "2019-06-22",
     "game_time": "22:53:36",
     "p1_avg_3dart_match": 56.36,
-    "player1_id": 2,
+    "player1_id": 3,
     "player1": "Franz-Josef",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Frank",
-    "player2_id": 1,
+    "player2_id": 2,
     "p2_avg_3dart_match": 41.58
   },
   {
@@ -5901,12 +5901,12 @@
     "game_date": "2019-06-22",
     "game_time": "22:29:41",
     "p1_avg_3dart_match": 54.99,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Uwe",
-    "player2_id": 5,
+    "player2_id": 1,
     "p2_avg_3dart_match": 47.04
   },
   {
@@ -5916,12 +5916,12 @@
     "game_date": "2019-06-22",
     "game_time": "21:56:49",
     "p1_avg_3dart_match": 38.14,
-    "player1_id": 1,
+    "player1_id": 2,
     "player1": "Frank",
     "p1_legs_won": 3,
     "p2_legs_won": 1,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 37.35
   },
   {
@@ -5931,12 +5931,12 @@
     "game_date": "2019-06-22",
     "game_time": "21:30:11",
     "p1_avg_3dart_match": 43.36,
-    "player1_id": 2,
+    "player1_id": 3,
     "player1": "Franz-Josef",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Uwe",
-    "player2_id": 5,
+    "player2_id": 1,
     "p2_avg_3dart_match": 40.97
   },
   {
@@ -5946,12 +5946,12 @@
     "game_date": "2019-06-22",
     "game_time": "21:01:25",
     "p1_avg_3dart_match": 34.68,
-    "player1_id": 5,
+    "player1_id": 1,
     "player1": "Uwe",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 33.58
   },
   {
@@ -5961,12 +5961,12 @@
     "game_date": "2019-06-22",
     "game_time": "20:36:45",
     "p1_avg_3dart_match": 39.9,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Franz-Josef",
-    "player2_id": 2,
+    "player2_id": 3,
     "p2_avg_3dart_match": 38.97
   },
   {
@@ -5976,12 +5976,12 @@
     "game_date": "2019-06-22",
     "game_time": "20:01:54",
     "p1_avg_3dart_match": 35.49,
-    "player1_id": 5,
+    "player1_id": 1,
     "player1": "Uwe",
     "p1_legs_won": 3,
     "p2_legs_won": 1,
     "player2": "Frank",
-    "player2_id": 1,
+    "player2_id": 2,
     "p2_avg_3dart_match": 34.43
   },
   {
@@ -5991,12 +5991,12 @@
     "game_date": "2019-06-22",
     "game_time": "19:45:10",
     "p1_avg_3dart_match": 50.66,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 33.62
   },
   {
@@ -6006,12 +6006,12 @@
     "game_date": "2019-06-08",
     "game_time": "23:51:54",
     "p1_avg_3dart_match": 54.1,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 2,
     "p2_legs_won": 3,
     "player2": "Franz-Josef",
-    "player2_id": 2,
+    "player2_id": 3,
     "p2_avg_3dart_match": 60.19
   },
   {
@@ -6021,12 +6021,12 @@
     "game_date": "2019-06-08",
     "game_time": "23:08:11",
     "p1_avg_3dart_match": 33.86,
-    "player1_id": 5,
+    "player1_id": 1,
     "player1": "Uwe",
     "p1_legs_won": 3,
     "p2_legs_won": 1,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 32.45
   },
   {
@@ -6036,12 +6036,12 @@
     "game_date": "2019-06-08",
     "game_time": "22:34:16",
     "p1_avg_3dart_match": 49.72,
-    "player1_id": 5,
+    "player1_id": 1,
     "player1": "Uwe",
     "p1_legs_won": 2,
     "p2_legs_won": 3,
     "player2": "Martin",
-    "player2_id": 4,
+    "player2_id": 8,
     "p2_avg_3dart_match": 50.27
   },
   {
@@ -6051,12 +6051,12 @@
     "game_date": "2019-06-08",
     "game_time": "22:08:09",
     "p1_avg_3dart_match": 30.88,
-    "player1_id": 1,
+    "player1_id": 2,
     "player1": "Frank",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 31.21
   },
   {
@@ -6066,12 +6066,12 @@
     "game_date": "2019-06-08",
     "game_time": "21:47:00",
     "p1_avg_3dart_match": 49.01,
-    "player1_id": 2,
+    "player1_id": 3,
     "player1": "Franz-Josef",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Uwe",
-    "player2_id": 5,
+    "player2_id": 1,
     "p2_avg_3dart_match": 36.07
   },
   {
@@ -6081,12 +6081,12 @@
     "game_date": "2019-06-08",
     "game_time": "21:20:33",
     "p1_avg_3dart_match": 51.88,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 2,
     "player2": "Frank",
-    "player2_id": 1,
+    "player2_id": 2,
     "p2_avg_3dart_match": 44.8
   },
   {
@@ -6096,12 +6096,12 @@
     "game_date": "2019-06-08",
     "game_time": "21:05:00",
     "p1_avg_3dart_match": 47.97,
-    "player1_id": 2,
+    "player1_id": 3,
     "player1": "Franz-Josef",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Frank",
-    "player2_id": 1,
+    "player2_id": 2,
     "p2_avg_3dart_match": 40.1
   },
   {
@@ -6111,12 +6111,12 @@
     "game_date": "2019-06-08",
     "game_time": "20:43:13",
     "p1_avg_3dart_match": 41.78,
-    "player1_id": 3,
+    "player1_id": 6,
     "player1": "Heiner",
     "p1_legs_won": 0,
     "p2_legs_won": 3,
     "player2": "Martin",
-    "player2_id": 4,
+    "player2_id": 8,
     "p2_avg_3dart_match": 46.97
   },
   {
@@ -6126,12 +6126,12 @@
     "game_date": "2019-06-08",
     "game_time": "20:19:21",
     "p1_avg_3dart_match": 37.89,
-    "player1_id": 1,
+    "player1_id": 2,
     "player1": "Frank",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Uwe",
-    "player2_id": 5,
+    "player2_id": 1,
     "p2_avg_3dart_match": 37.08
   },
   {
@@ -6141,12 +6141,12 @@
     "game_date": "2019-06-08",
     "game_time": "19:56:29",
     "p1_avg_3dart_match": 42.54,
-    "player1_id": 2,
+    "player1_id": 3,
     "player1": "Franz-Josef",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 35.79
   },
   {
@@ -6156,12 +6156,12 @@
     "game_date": "2019-03-03",
     "game_time": "00:32:40",
     "p1_avg_3dart_match": 35.72,
-    "player1_id": 1,
+    "player1_id": 2,
     "player1": "Frank",
     "p1_legs_won": 0,
     "p2_legs_won": 3,
     "player2": "Martin",
-    "player2_id": 4,
+    "player2_id": 8,
     "p2_avg_3dart_match": 38.54
   },
   {
@@ -6171,12 +6171,12 @@
     "game_date": "2019-03-02",
     "game_time": "23:59:45",
     "p1_avg_3dart_match": 39.51,
-    "player1_id": 3,
+    "player1_id": 6,
     "player1": "Heiner",
     "p1_legs_won": 1,
     "p2_legs_won": 3,
     "player2": "Franz-Josef",
-    "player2_id": 2,
+    "player2_id": 3,
     "p2_avg_3dart_match": 43.56
   },
   {
@@ -6186,12 +6186,12 @@
     "game_date": "2019-03-02",
     "game_time": "23:39:11",
     "p1_avg_3dart_match": 56.36,
-    "player1_id": 2,
+    "player1_id": 3,
     "player1": "Franz-Josef",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Frank",
-    "player2_id": 1,
+    "player2_id": 2,
     "p2_avg_3dart_match": 40.4
   },
   {
@@ -6201,12 +6201,12 @@
     "game_date": "2019-03-02",
     "game_time": "23:07:28",
     "p1_avg_3dart_match": 41.48,
-    "player1_id": 3,
+    "player1_id": 6,
     "player1": "Heiner",
     "p1_legs_won": 0,
     "p2_legs_won": 3,
     "player2": "Uwe",
-    "player2_id": 5,
+    "player2_id": 1,
     "p2_avg_3dart_match": 46.97
   },
   {
@@ -6216,12 +6216,12 @@
     "game_date": "2019-03-02",
     "game_time": "22:51:54",
     "p1_avg_3dart_match": 51.58,
-    "player1_id": 2,
+    "player1_id": 3,
     "player1": "Franz-Josef",
     "p1_legs_won": 0,
     "p2_legs_won": 3,
     "player2": "Martin",
-    "player2_id": 4,
+    "player2_id": 8,
     "p2_avg_3dart_match": 55.67
   },
   {
@@ -6231,12 +6231,12 @@
     "game_date": "2019-03-02",
     "game_time": "22:02:17",
     "p1_avg_3dart_match": 34.08,
-    "player1_id": 1,
+    "player1_id": 2,
     "player1": "Frank",
     "p1_legs_won": 2,
     "p2_legs_won": 3,
     "player2": "Uwe",
-    "player2_id": 5,
+    "player2_id": 1,
     "p2_avg_3dart_match": 35.22
   },
   {
@@ -6246,12 +6246,12 @@
     "game_date": "2019-03-02",
     "game_time": "21:23:45",
     "p1_avg_3dart_match": 58.56,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Uwe",
-    "player2_id": 5,
+    "player2_id": 1,
     "p2_avg_3dart_match": 44.21
   },
   {
@@ -6261,12 +6261,12 @@
     "game_date": "2019-03-02",
     "game_time": "20:43:36",
     "p1_avg_3dart_match": 25.19,
-    "player1_id": 3,
+    "player1_id": 6,
     "player1": "Heiner",
     "p1_legs_won": 0,
     "p2_legs_won": 3,
     "player2": "Frank",
-    "player2_id": 1,
+    "player2_id": 2,
     "p2_avg_3dart_match": 26.06
   },
   {
@@ -6276,12 +6276,12 @@
     "game_date": "2019-03-02",
     "game_time": "20:12:43",
     "p1_avg_3dart_match": 44.16,
-    "player1_id": 2,
+    "player1_id": 3,
     "player1": "Franz-Josef",
     "p1_legs_won": 3,
     "p2_legs_won": 1,
     "player2": "Uwe",
-    "player2_id": 5,
+    "player2_id": 1,
     "p2_avg_3dart_match": 36.95
   },
   {
@@ -6291,12 +6291,12 @@
     "game_date": "2019-03-02",
     "game_time": "19:55:32",
     "p1_avg_3dart_match": 46.97,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 37.32
   },
   {
@@ -6306,12 +6306,12 @@
     "game_date": "2019-01-20",
     "game_time": "00:53:14",
     "p1_avg_3dart_match": 36.96,
-    "player1_id": 5,
+    "player1_id": 1,
     "player1": "Uwe",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Frank",
-    "player2_id": 1,
+    "player2_id": 2,
     "p2_avg_3dart_match": 35.57
   },
   {
@@ -6321,12 +6321,12 @@
     "game_date": "2019-01-20",
     "game_time": "00:41:12",
     "p1_avg_3dart_match": 57.81,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 34.12
   },
   {
@@ -6336,12 +6336,12 @@
     "game_date": "2019-01-19",
     "game_time": "23:59:30",
     "p1_avg_3dart_match": 35.75,
-    "player1_id": 5,
+    "player1_id": 1,
     "player1": "Uwe",
     "p1_legs_won": 3,
     "p2_legs_won": 2,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 33.23
   },
   {
@@ -6351,12 +6351,12 @@
     "game_date": "2019-01-19",
     "game_time": "23:36:16",
     "p1_avg_3dart_match": 50.27,
-    "player1_id": 2,
+    "player1_id": 3,
     "player1": "Franz-Josef",
     "p1_legs_won": 2,
     "p2_legs_won": 3,
     "player2": "Martin",
-    "player2_id": 4,
+    "player2_id": 8,
     "p2_avg_3dart_match": 57.59
   },
   {
@@ -6366,12 +6366,12 @@
     "game_date": "2019-01-19",
     "game_time": "23:03:49",
     "p1_avg_3dart_match": 48.29,
-    "player1_id": 2,
+    "player1_id": 3,
     "player1": "Franz-Josef",
     "p1_legs_won": 3,
     "p2_legs_won": 2,
     "player2": "Frank",
-    "player2_id": 1,
+    "player2_id": 2,
     "p2_avg_3dart_match": 39.34
   },
   {
@@ -6381,12 +6381,12 @@
     "game_date": "2019-01-19",
     "game_time": "22:22:42",
     "p1_avg_3dart_match": 31.3,
-    "player1_id": 1,
+    "player1_id": 2,
     "player1": "Frank",
     "p1_legs_won": 3,
     "p2_legs_won": 2,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 33.2
   },
   {
@@ -6396,12 +6396,12 @@
     "game_date": "2019-01-19",
     "game_time": "22:01:29",
     "p1_avg_3dart_match": 43.36,
-    "player1_id": 2,
+    "player1_id": 3,
     "player1": "Franz-Josef",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Uwe",
-    "player2_id": 5,
+    "player2_id": 1,
     "p2_avg_3dart_match": 38.18
   },
   {
@@ -6411,12 +6411,12 @@
     "game_date": "2019-01-19",
     "game_time": "21:37:57",
     "p1_avg_3dart_match": 55.67,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Uwe",
-    "player2_id": 5,
+    "player2_id": 1,
     "p2_avg_3dart_match": 34.85
   },
   {
@@ -6426,12 +6426,12 @@
     "game_date": "2019-01-19",
     "game_time": "21:04:51",
     "p1_avg_3dart_match": 34.29,
-    "player1_id": 2,
+    "player1_id": 3,
     "player1": "Franz-Josef",
     "p1_legs_won": 3,
     "p2_legs_won": 1,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 32.47
   },
   {
@@ -6441,12 +6441,12 @@
     "game_date": "2019-01-19",
     "game_time": "20:52:01",
     "p1_avg_3dart_match": 54.33,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Frank",
-    "player2_id": 1,
+    "player2_id": 2,
     "p2_avg_3dart_match": 43.0
   },
   {
@@ -6456,12 +6456,12 @@
     "game_date": "2019-01-05",
     "game_time": "21:27:57",
     "p1_avg_3dart_match": 54.33,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Franz-Josef",
-    "player2_id": 2,
+    "player2_id": 3,
     "p2_avg_3dart_match": 52.46
   },
   {
@@ -6471,12 +6471,12 @@
     "game_date": "2019-01-05",
     "game_time": "20:54:04",
     "p1_avg_3dart_match": 38.75,
-    "player1_id": 5,
+    "player1_id": 1,
     "player1": "Uwe",
     "p1_legs_won": 3,
     "p2_legs_won": 1,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 37.19
   },
   {
@@ -6486,12 +6486,12 @@
     "game_date": "2019-01-05",
     "game_time": "20:40:02",
     "p1_avg_3dart_match": 58.56,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 38.8
   },
   {
@@ -6501,12 +6501,12 @@
     "game_date": "2019-01-05",
     "game_time": "20:00:51",
     "p1_avg_3dart_match": 36.75,
-    "player1_id": 5,
+    "player1_id": 1,
     "player1": "Uwe",
     "p1_legs_won": 3,
     "p2_legs_won": 2,
     "player2": "Frank",
-    "player2_id": 1,
+    "player2_id": 2,
     "p2_avg_3dart_match": 38.48
   },
   {
@@ -6516,12 +6516,12 @@
     "game_date": "2019-01-05",
     "game_time": "19:42:02",
     "p1_avg_3dart_match": 37.71,
-    "player1_id": 3,
+    "player1_id": 6,
     "player1": "Heiner",
     "p1_legs_won": 0,
     "p2_legs_won": 3,
     "player2": "Franz-Josef",
-    "player2_id": 2,
+    "player2_id": 3,
     "p2_avg_3dart_match": 53.05
   },
   {
@@ -6531,12 +6531,12 @@
     "game_date": "2019-01-05",
     "game_time": "19:21:25",
     "p1_avg_3dart_match": 51.83,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Frank",
-    "player2_id": 1,
+    "player2_id": 2,
     "p2_avg_3dart_match": 41.22
   },
   {
@@ -6546,12 +6546,12 @@
     "game_date": "2019-01-05",
     "game_time": "18:57:14",
     "p1_avg_3dart_match": 42.68,
-    "player1_id": 2,
+    "player1_id": 3,
     "player1": "Franz-Josef",
     "p1_legs_won": 3,
     "p2_legs_won": 1,
     "player2": "Frank",
-    "player2_id": 1,
+    "player2_id": 2,
     "p2_avg_3dart_match": 37.51
   },
   {
@@ -6561,12 +6561,12 @@
     "game_date": "2019-01-05",
     "game_time": "18:33:31",
     "p1_avg_3dart_match": 50.44,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 1,
     "player2": "Uwe",
-    "player2_id": 5,
+    "player2_id": 1,
     "p2_avg_3dart_match": 39.7
   },
   {
@@ -6576,12 +6576,12 @@
     "game_date": "2019-01-05",
     "game_time": "18:10:30",
     "p1_avg_3dart_match": 36.36,
-    "player1_id": 1,
+    "player1_id": 2,
     "player1": "Frank",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 29.4
   },
   {
@@ -6591,12 +6591,12 @@
     "game_date": "2019-01-05",
     "game_time": "17:20:08",
     "p1_avg_3dart_match": 40.88,
-    "player1_id": 5,
+    "player1_id": 1,
     "player1": "Uwe",
     "p1_legs_won": 2,
     "p2_legs_won": 3,
     "player2": "Franz-Josef",
-    "player2_id": 2,
+    "player2_id": 3,
     "p2_avg_3dart_match": 42.2
   },
   {
@@ -6606,12 +6606,12 @@
     "game_date": "2018-11-25",
     "game_time": "00:02:04",
     "p1_avg_3dart_match": 39.53,
-    "player1_id": 1,
+    "player1_id": 2,
     "player1": "Frank",
     "p1_legs_won": 2,
     "p2_legs_won": 3,
     "player2": "Uwe",
-    "player2_id": 5,
+    "player2_id": 1,
     "p2_avg_3dart_match": 40.04
   },
   {
@@ -6621,12 +6621,12 @@
     "game_date": "2018-11-24",
     "game_time": "23:44:51",
     "p1_avg_3dart_match": 54.99,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 43.56
   },
   {
@@ -6636,12 +6636,12 @@
     "game_date": "2018-11-24",
     "game_time": "23:27:36",
     "p1_avg_3dart_match": 42.29,
-    "player1_id": 1,
+    "player1_id": 2,
     "player1": "Frank",
     "p1_legs_won": 1,
     "p2_legs_won": 3,
     "player2": "Martin",
-    "player2_id": 4,
+    "player2_id": 8,
     "p2_avg_3dart_match": 56.83
   },
   {
@@ -6651,12 +6651,12 @@
     "game_date": "2018-11-24",
     "game_time": "22:59:33",
     "p1_avg_3dart_match": 40.66,
-    "player1_id": 3,
+    "player1_id": 6,
     "player1": "Heiner",
     "p1_legs_won": 1,
     "p2_legs_won": 3,
     "player2": "Franz-Josef",
-    "player2_id": 2,
+    "player2_id": 3,
     "p2_avg_3dart_match": 50.9
   },
   {
@@ -6666,12 +6666,12 @@
     "game_date": "2018-11-24",
     "game_time": "22:30:36",
     "p1_avg_3dart_match": 51.23,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 1,
     "player2": "Uwe",
-    "player2_id": 5,
+    "player2_id": 1,
     "p2_avg_3dart_match": 39.65
   },
   {
@@ -6681,12 +6681,12 @@
     "game_date": "2018-11-24",
     "game_time": "22:06:46",
     "p1_avg_3dart_match": 45.71,
-    "player1_id": 2,
+    "player1_id": 3,
     "player1": "Franz-Josef",
     "p1_legs_won": 3,
     "p2_legs_won": 1,
     "player2": "Frank",
-    "player2_id": 1,
+    "player2_id": 2,
     "p2_avg_3dart_match": 42.47
   },
   {
@@ -6696,12 +6696,12 @@
     "game_date": "2018-11-24",
     "game_time": "21:40:38",
     "p1_avg_3dart_match": 44.93,
-    "player1_id": 5,
+    "player1_id": 1,
     "player1": "Uwe",
     "p1_legs_won": 0,
     "p2_legs_won": 3,
     "player2": "Franz-Josef",
-    "player2_id": 2,
+    "player2_id": 3,
     "p2_avg_3dart_match": 54.33
   },
   {
@@ -6711,12 +6711,12 @@
     "game_date": "2018-11-24",
     "game_time": "21:07:24",
     "p1_avg_3dart_match": 30.26,
-    "player1_id": 1,
+    "player1_id": 2,
     "player1": "Frank",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 30.77
   },
   {
@@ -6726,12 +6726,12 @@
     "game_date": "2018-11-24",
     "game_time": "20:46:43",
     "p1_avg_3dart_match": 49.22,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 1,
     "p2_legs_won": 3,
     "player2": "Franz-Josef",
-    "player2_id": 2,
+    "player2_id": 3,
     "p2_avg_3dart_match": 54.33
   },
   {
@@ -6741,12 +6741,12 @@
     "game_date": "2018-11-24",
     "game_time": "20:10:07",
     "p1_avg_3dart_match": 32.93,
-    "player1_id": 3,
+    "player1_id": 6,
     "player1": "Heiner",
     "p1_legs_won": 1,
     "p2_legs_won": 3,
     "player2": "Uwe",
-    "player2_id": 5,
+    "player2_id": 1,
     "p2_avg_3dart_match": 34.15
   },
   {
@@ -6756,12 +6756,12 @@
     "game_date": "2018-08-18",
     "game_time": "23:37:35",
     "p1_avg_3dart_match": 46.46,
-    "player1_id": 2,
+    "player1_id": 3,
     "player1": "Franz-Josef",
     "p1_legs_won": 1,
     "p2_legs_won": 3,
     "player2": "Uwe",
-    "player2_id": 5,
+    "player2_id": 1,
     "p2_avg_3dart_match": 47.81
   },
   {
@@ -6771,12 +6771,12 @@
     "game_date": "2018-08-18",
     "game_time": "23:24:31",
     "p1_avg_3dart_match": 55.67,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Frank",
-    "player2_id": 1,
+    "player2_id": 2,
     "p2_avg_3dart_match": 45.78
   },
   {
@@ -6786,12 +6786,12 @@
     "game_date": "2018-08-18",
     "game_time": "22:50:14",
     "p1_avg_3dart_match": 41.08,
-    "player1_id": 1,
+    "player1_id": 2,
     "player1": "Frank",
     "p1_legs_won": 2,
     "p2_legs_won": 3,
     "player2": "Franz-Josef",
-    "player2_id": 2,
+    "player2_id": 3,
     "p2_avg_3dart_match": 48.02
   },
   {
@@ -6801,12 +6801,12 @@
     "game_date": "2018-08-18",
     "game_time": "22:30:19",
     "p1_avg_3dart_match": 44.21,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 35.7
   },
   {
@@ -6816,12 +6816,12 @@
     "game_date": "2018-08-18",
     "game_time": "21:43:16",
     "p1_avg_3dart_match": 39.88,
-    "player1_id": 5,
+    "player1_id": 1,
     "player1": "Uwe",
     "p1_legs_won": 3,
     "p2_legs_won": 2,
     "player2": "Frank",
-    "player2_id": 1,
+    "player2_id": 2,
     "p2_avg_3dart_match": 39.39
   },
   {
@@ -6831,12 +6831,12 @@
     "game_date": "2018-08-18",
     "game_time": "21:20:19",
     "p1_avg_3dart_match": 46.97,
-    "player1_id": 2,
+    "player1_id": 3,
     "player1": "Franz-Josef",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 35.55
   },
   {
@@ -6846,12 +6846,12 @@
     "game_date": "2018-08-18",
     "game_time": "20:53:04",
     "p1_avg_3dart_match": 45.09,
-    "player1_id": 5,
+    "player1_id": 1,
     "player1": "Uwe",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 40.84
   },
   {
@@ -6861,12 +6861,12 @@
     "game_date": "2018-08-18",
     "game_time": "20:38:10",
     "p1_avg_3dart_match": 54.99,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Franz-Josef",
-    "player2_id": 2,
+    "player2_id": 3,
     "p2_avg_3dart_match": 48.58
   },
   {
@@ -6876,12 +6876,12 @@
     "game_date": "2018-08-18",
     "game_time": "20:13:16",
     "p1_avg_3dart_match": 36.66,
-    "player1_id": 1,
+    "player1_id": 2,
     "player1": "Frank",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 34.5
   },
   {
@@ -6891,12 +6891,12 @@
     "game_date": "2018-08-18",
     "game_time": "19:53:43",
     "p1_avg_3dart_match": 52.43,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Uwe",
-    "player2_id": 5,
+    "player2_id": 1,
     "p2_avg_3dart_match": 44.93
   },
   {
@@ -6906,12 +6906,12 @@
     "game_date": "2018-07-08",
     "game_time": "00:24:21",
     "p1_avg_3dart_match": 31.94,
-    "player1_id": 1,
+    "player1_id": 2,
     "player1": "Frank",
     "p1_legs_won": 2,
     "p2_legs_won": 3,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 32.41
   },
   {
@@ -6921,12 +6921,12 @@
     "game_date": "2018-07-07",
     "game_time": "23:48:58",
     "p1_avg_3dart_match": 50.28,
-    "player1_id": 2,
+    "player1_id": 3,
     "player1": "Franz-Josef",
     "p1_legs_won": 3,
     "p2_legs_won": 2,
     "player2": "Uwe",
-    "player2_id": 5,
+    "player2_id": 1,
     "p2_avg_3dart_match": 43.3
   },
   {
@@ -6936,12 +6936,12 @@
     "game_date": "2018-07-07",
     "game_time": "22:53:59",
     "p1_avg_3dart_match": 31.67,
-    "player1_id": 5,
+    "player1_id": 1,
     "player1": "Uwe",
     "p1_legs_won": 3,
     "p2_legs_won": 2,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 29.03
   },
   {
@@ -6951,12 +6951,12 @@
     "game_date": "2018-07-07",
     "game_time": "22:14:15",
     "p1_avg_3dart_match": 48.49,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 1,
     "player2": "Franz-Josef",
-    "player2_id": 2,
+    "player2_id": 3,
     "p2_avg_3dart_match": 45.02
   },
   {
@@ -6966,12 +6966,12 @@
     "game_date": "2018-07-07",
     "game_time": "21:34:34",
     "p1_avg_3dart_match": 24.64,
-    "player1_id": 5,
+    "player1_id": 1,
     "player1": "Uwe",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Frank",
-    "player2_id": 1,
+    "player2_id": 2,
     "p2_avg_3dart_match": 24.52
   },
   {
@@ -6981,12 +6981,12 @@
     "game_date": "2018-07-07",
     "game_time": "21:18:15",
     "p1_avg_3dart_match": 54.33,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 37.65
   },
   {
@@ -6996,12 +6996,12 @@
     "game_date": "2018-07-07",
     "game_time": "20:56:10",
     "p1_avg_3dart_match": 43.36,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Frank",
-    "player2_id": 1,
+    "player2_id": 2,
     "p2_avg_3dart_match": 37.06
   },
   {
@@ -7011,12 +7011,12 @@
     "game_date": "2018-07-07",
     "game_time": "20:33:29",
     "p1_avg_3dart_match": 49.55,
-    "player1_id": 2,
+    "player1_id": 3,
     "player1": "Franz-Josef",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 41.55
   },
   {
@@ -7026,12 +7026,12 @@
     "game_date": "2018-07-07",
     "game_time": "20:13:51",
     "p1_avg_3dart_match": 55.67,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Uwe",
-    "player2_id": 5,
+    "player2_id": 1,
     "p2_avg_3dart_match": 44.88
   },
   {
@@ -7041,12 +7041,12 @@
     "game_date": "2018-07-07",
     "game_time": "20:00:13",
     "p1_avg_3dart_match": 57.81,
-    "player1_id": 2,
+    "player1_id": 3,
     "player1": "Franz-Josef",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Frank",
-    "player2_id": 1,
+    "player2_id": 2,
     "p2_avg_3dart_match": 42.12
   },
   {
@@ -7056,12 +7056,12 @@
     "game_date": "2018-04-28",
     "game_time": "23:48:20",
     "p1_avg_3dart_match": 62.62,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 40.52
   },
   {
@@ -7071,12 +7071,12 @@
     "game_date": "2018-04-28",
     "game_time": "23:04:29",
     "p1_avg_3dart_match": 46.72,
-    "player1_id": 2,
+    "player1_id": 3,
     "player1": "Franz-Josef",
     "p1_legs_won": 3,
     "p2_legs_won": 2,
     "player2": "Uwe",
-    "player2_id": 5,
+    "player2_id": 1,
     "p2_avg_3dart_match": 43.71
   },
   {
@@ -7086,12 +7086,12 @@
     "game_date": "2018-04-28",
     "game_time": "22:34:08",
     "p1_avg_3dart_match": 51.95,
-    "player1_id": 2,
+    "player1_id": 3,
     "player1": "Franz-Josef",
     "p1_legs_won": 3,
     "p2_legs_won": 2,
     "player2": "Martin",
-    "player2_id": 4,
+    "player2_id": 8,
     "p2_avg_3dart_match": 50.41
   },
   {
@@ -7101,12 +7101,12 @@
     "game_date": "2018-04-28",
     "game_time": "21:55:43",
     "p1_avg_3dart_match": 33.61,
-    "player1_id": 1,
+    "player1_id": 2,
     "player1": "Frank",
     "p1_legs_won": 1,
     "p2_legs_won": 3,
     "player2": "Uwe",
-    "player2_id": 5,
+    "player2_id": 1,
     "p2_avg_3dart_match": 34.06
   },
   {
@@ -7116,12 +7116,12 @@
     "game_date": "2018-04-28",
     "game_time": "21:36:30",
     "p1_avg_3dart_match": 38.53,
-    "player1_id": 3,
+    "player1_id": 6,
     "player1": "Heiner",
     "p1_legs_won": 0,
     "p2_legs_won": 3,
     "player2": "Franz-Josef",
-    "player2_id": 2,
+    "player2_id": 3,
     "p2_avg_3dart_match": 50.66
   },
   {
@@ -7131,12 +7131,12 @@
     "game_date": "2018-04-28",
     "game_time": "21:17:12",
     "p1_avg_3dart_match": 36.53,
-    "player1_id": 1,
+    "player1_id": 2,
     "player1": "Frank",
     "p1_legs_won": 0,
     "p2_legs_won": 3,
     "player2": "Martin",
-    "player2_id": 4,
+    "player2_id": 8,
     "p2_avg_3dart_match": 39.9
   },
   {
@@ -7146,12 +7146,12 @@
     "game_date": "2018-04-28",
     "game_time": "20:54:15",
     "p1_avg_3dart_match": 32.45,
-    "player1_id": 3,
+    "player1_id": 6,
     "player1": "Heiner",
     "p1_legs_won": 0,
     "p2_legs_won": 3,
     "player2": "Frank",
-    "player2_id": 1,
+    "player2_id": 2,
     "p2_avg_3dart_match": 36.36
   },
   {
@@ -7161,12 +7161,12 @@
     "game_date": "2018-04-28",
     "game_time": "20:39:19",
     "p1_avg_3dart_match": 37.17,
-    "player1_id": 5,
+    "player1_id": 1,
     "player1": "Uwe",
     "p1_legs_won": 0,
     "p2_legs_won": 3,
     "player2": "Martin",
-    "player2_id": 4,
+    "player2_id": 8,
     "p2_avg_3dart_match": 60.93
   },
   {
@@ -7176,12 +7176,12 @@
     "game_date": "2018-04-28",
     "game_time": "20:19:40",
     "p1_avg_3dart_match": 43.78,
-    "player1_id": 2,
+    "player1_id": 3,
     "player1": "Franz-Josef",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Frank",
-    "player2_id": 1,
+    "player2_id": 2,
     "p2_avg_3dart_match": 38.21
   },
   {
@@ -7191,12 +7191,12 @@
     "game_date": "2018-04-28",
     "game_time": "19:53:28",
     "p1_avg_3dart_match": 39.55,
-    "player1_id": 5,
+    "player1_id": 1,
     "player1": "Uwe",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 35.35
   },
   {
@@ -7206,12 +7206,12 @@
     "game_date": "2018-04-14",
     "game_time": "23:18:07",
     "p1_avg_3dart_match": 45.09,
-    "player1_id": 2,
+    "player1_id": 3,
     "player1": "Franz-Josef",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Frank",
-    "player2_id": 1,
+    "player2_id": 2,
     "p2_avg_3dart_match": 42.38
   },
   {
@@ -7221,12 +7221,12 @@
     "game_date": "2018-04-14",
     "game_time": "22:38:15",
     "p1_avg_3dart_match": 38.77,
-    "player1_id": 3,
+    "player1_id": 6,
     "player1": "Heiner",
     "p1_legs_won": 2,
     "p2_legs_won": 3,
     "player2": "Uwe",
-    "player2_id": 5,
+    "player2_id": 1,
     "p2_avg_3dart_match": 40.23
   },
   {
@@ -7236,12 +7236,12 @@
     "game_date": "2018-04-14",
     "game_time": "22:05:16",
     "p1_avg_3dart_match": 32.47,
-    "player1_id": 3,
+    "player1_id": 6,
     "player1": "Heiner",
     "p1_legs_won": 1,
     "p2_legs_won": 3,
     "player2": "Frank",
-    "player2_id": 1,
+    "player2_id": 2,
     "p2_avg_3dart_match": 32.59
   },
   {
@@ -7251,12 +7251,12 @@
     "game_date": "2018-04-14",
     "game_time": "21:41:25",
     "p1_avg_3dart_match": 46.02,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 1,
     "player2": "Uwe",
-    "player2_id": 5,
+    "player2_id": 1,
     "p2_avg_3dart_match": 37.62
   },
   {
@@ -7266,12 +7266,12 @@
     "game_date": "2018-04-14",
     "game_time": "21:20:58",
     "p1_avg_3dart_match": 39.5,
-    "player1_id": 3,
+    "player1_id": 6,
     "player1": "Heiner",
     "p1_legs_won": 0,
     "p2_legs_won": 3,
     "player2": "Franz-Josef",
-    "player2_id": 2,
+    "player2_id": 3,
     "p2_avg_3dart_match": 54.33
   },
   {
@@ -7281,12 +7281,12 @@
     "game_date": "2018-04-14",
     "game_time": "21:09:25",
     "p1_avg_3dart_match": 40.08,
-    "player1_id": 1,
+    "player1_id": 2,
     "player1": "Frank",
     "p1_legs_won": 0,
     "p2_legs_won": 3,
     "player2": "Martin",
-    "player2_id": 4,
+    "player2_id": 8,
     "p2_avg_3dart_match": 59.33
   },
   {
@@ -7296,12 +7296,12 @@
     "game_date": "2018-04-14",
     "game_time": "20:51:07",
     "p1_avg_3dart_match": 47.64,
-    "player1_id": 2,
+    "player1_id": 3,
     "player1": "Franz-Josef",
     "p1_legs_won": 1,
     "p2_legs_won": 3,
     "player2": "Martin",
-    "player2_id": 4,
+    "player2_id": 8,
     "p2_avg_3dart_match": 53.97
   },
   {
@@ -7311,12 +7311,12 @@
     "game_date": "2018-04-14",
     "game_time": "20:31:29",
     "p1_avg_3dart_match": 46.48,
-    "player1_id": 1,
+    "player1_id": 2,
     "player1": "Frank",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Uwe",
-    "player2_id": 5,
+    "player2_id": 1,
     "p2_avg_3dart_match": 36.71
   },
   {
@@ -7326,12 +7326,12 @@
     "game_date": "2018-04-14",
     "game_time": "20:12:51",
     "p1_avg_3dart_match": 56.36,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 40.0
   },
   {
@@ -7341,12 +7341,12 @@
     "game_date": "2018-04-14",
     "game_time": "19:51:09",
     "p1_avg_3dart_match": 36.97,
-    "player1_id": 5,
+    "player1_id": 1,
     "player1": "Uwe",
     "p1_legs_won": 0,
     "p2_legs_won": 3,
     "player2": "Franz-Josef",
-    "player2_id": 2,
+    "player2_id": 3,
     "p2_avg_3dart_match": 47.97
   },
   {
@@ -7356,12 +7356,12 @@
     "game_date": "2018-03-30",
     "game_time": "23:50:22",
     "p1_avg_3dart_match": 39.4,
-    "player1_id": 5,
+    "player1_id": 1,
     "player1": "Uwe",
     "p1_legs_won": 1,
     "p2_legs_won": 3,
     "player2": "Martin",
-    "player2_id": 4,
+    "player2_id": 8,
     "p2_avg_3dart_match": 49.59
   },
   {
@@ -7371,12 +7371,12 @@
     "game_date": "2018-03-30",
     "game_time": "23:12:38",
     "p1_avg_3dart_match": 37.84,
-    "player1_id": 1,
+    "player1_id": 2,
     "player1": "Frank",
     "p1_legs_won": 3,
     "p2_legs_won": 2,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 35.97
   },
   {
@@ -7386,12 +7386,12 @@
     "game_date": "2018-03-30",
     "game_time": "22:57:32",
     "p1_avg_3dart_match": 39.7,
-    "player1_id": 1,
+    "player1_id": 2,
     "player1": "Frank",
     "p1_legs_won": 0,
     "p2_legs_won": 3,
     "player2": "Martin",
-    "player2_id": 4,
+    "player2_id": 8,
     "p2_avg_3dart_match": 46.01
   },
   {
@@ -7401,12 +7401,12 @@
     "game_date": "2018-03-30",
     "game_time": "22:38:59",
     "p1_avg_3dart_match": 49.55,
-    "player1_id": 2,
+    "player1_id": 3,
     "player1": "Franz-Josef",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 41.28
   },
   {
@@ -7416,12 +7416,12 @@
     "game_date": "2018-03-30",
     "game_time": "21:56:02",
     "p1_avg_3dart_match": 36.31,
-    "player1_id": 5,
+    "player1_id": 1,
     "player1": "Uwe",
     "p1_legs_won": 3,
     "p2_legs_won": 2,
     "player2": "Frank",
-    "player2_id": 1,
+    "player2_id": 2,
     "p2_avg_3dart_match": 36.54
   },
   {
@@ -7431,12 +7431,12 @@
     "game_date": "2018-03-30",
     "game_time": "21:38:06",
     "p1_avg_3dart_match": 50.45,
-    "player1_id": 2,
+    "player1_id": 3,
     "player1": "Franz-Josef",
     "p1_legs_won": 1,
     "p2_legs_won": 3,
     "player2": "Martin",
-    "player2_id": 4,
+    "player2_id": 8,
     "p2_avg_3dart_match": 60.37
   },
   {
@@ -7446,12 +7446,12 @@
     "game_date": "2018-03-30",
     "game_time": "21:13:56",
     "p1_avg_3dart_match": 55.02,
-    "player1_id": 2,
+    "player1_id": 3,
     "player1": "Franz-Josef",
     "p1_legs_won": 3,
     "p2_legs_won": 1,
     "player2": "Uwe",
-    "player2_id": 5,
+    "player2_id": 1,
     "p2_avg_3dart_match": 42.34
   },
   {
@@ -7461,12 +7461,12 @@
     "game_date": "2018-03-30",
     "game_time": "20:55:37",
     "p1_avg_3dart_match": 50.66,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 37.1
   },
   {
@@ -7476,12 +7476,12 @@
     "game_date": "2018-03-30",
     "game_time": "20:21:48",
     "p1_avg_3dart_match": 38.45,
-    "player1_id": 2,
+    "player1_id": 3,
     "player1": "Franz-Josef",
     "p1_legs_won": 3,
     "p2_legs_won": 2,
     "player2": "Frank",
-    "player2_id": 1,
+    "player2_id": 2,
     "p2_avg_3dart_match": 31.78
   },
   {
@@ -7491,12 +7491,12 @@
     "game_date": "2018-03-30",
     "game_time": "19:51:36",
     "p1_avg_3dart_match": 30.11,
-    "player1_id": 3,
+    "player1_id": 6,
     "player1": "Heiner",
     "p1_legs_won": 0,
     "p2_legs_won": 3,
     "player2": "Uwe",
-    "player2_id": 5,
+    "player2_id": 1,
     "p2_avg_3dart_match": 31.98
   },
   {
@@ -7506,12 +7506,12 @@
     "game_date": "2018-03-04",
     "game_time": "00:05:17",
     "p1_avg_3dart_match": 33.71,
-    "player1_id": 3,
+    "player1_id": 6,
     "player1": "Heiner",
     "p1_legs_won": 0,
     "p2_legs_won": 3,
     "player2": "Franz-Josef",
-    "player2_id": 2,
+    "player2_id": 3,
     "p2_avg_3dart_match": 39.21
   },
   {
@@ -7521,12 +7521,12 @@
     "game_date": "2018-03-03",
     "game_time": "23:18:41",
     "p1_avg_3dart_match": 29.53,
-    "player1_id": 1,
+    "player1_id": 2,
     "player1": "Frank",
     "p1_legs_won": 3,
     "p2_legs_won": 2,
     "player2": "Uwe",
-    "player2_id": 5,
+    "player2_id": 1,
     "p2_avg_3dart_match": 33.08
   },
   {
@@ -7536,12 +7536,12 @@
     "game_date": "2018-03-03",
     "game_time": "22:54:07",
     "p1_avg_3dart_match": 46.01,
-    "player1_id": 5,
+    "player1_id": 1,
     "player1": "Uwe",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 38.94
   },
   {
@@ -7551,12 +7551,12 @@
     "game_date": "2018-03-03",
     "game_time": "22:36:37",
     "p1_avg_3dart_match": 40.5,
-    "player1_id": 1,
+    "player1_id": 2,
     "player1": "Frank",
     "p1_legs_won": 0,
     "p2_legs_won": 3,
     "player2": "Martin",
-    "player2_id": 4,
+    "player2_id": 8,
     "p2_avg_3dart_match": 62.62
   },
   {
@@ -7566,12 +7566,12 @@
     "game_date": "2018-03-03",
     "game_time": "22:18:42",
     "p1_avg_3dart_match": 54.33,
-    "player1_id": 2,
+    "player1_id": 3,
     "player1": "Franz-Josef",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Uwe",
-    "player2_id": 5,
+    "player2_id": 1,
     "p2_avg_3dart_match": 45.89
   },
   {
@@ -7581,12 +7581,12 @@
     "game_date": "2018-03-03",
     "game_time": "22:00:43",
     "p1_avg_3dart_match": 49.01,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 39.21
   },
   {
@@ -7596,12 +7596,12 @@
     "game_date": "2018-03-03",
     "game_time": "21:46:14",
     "p1_avg_3dart_match": 63.51,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Franz-Josef",
-    "player2_id": 2,
+    "player2_id": 3,
     "p2_avg_3dart_match": 53.83
   },
   {
@@ -7611,12 +7611,12 @@
     "game_date": "2018-03-03",
     "game_time": "21:04:25",
     "p1_avg_3dart_match": 29.36,
-    "player1_id": 3,
+    "player1_id": 6,
     "player1": "Heiner",
     "p1_legs_won": 1,
     "p2_legs_won": 3,
     "player2": "Frank",
-    "player2_id": 1,
+    "player2_id": 2,
     "p2_avg_3dart_match": 29.27
   },
   {
@@ -7626,12 +7626,12 @@
     "game_date": "2018-03-03",
     "game_time": "20:38:10",
     "p1_avg_3dart_match": 41.96,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 1,
     "player2": "Uwe",
-    "player2_id": 5,
+    "player2_id": 1,
     "p2_avg_3dart_match": 38.47
   },
   {
@@ -7641,12 +7641,12 @@
     "game_date": "2018-03-03",
     "game_time": "20:12:03",
     "p1_avg_3dart_match": 41.69,
-    "player1_id": 2,
+    "player1_id": 3,
     "player1": "Franz-Josef",
     "p1_legs_won": 3,
     "p2_legs_won": 1,
     "player2": "Frank",
-    "player2_id": 1,
+    "player2_id": 2,
     "p2_avg_3dart_match": 36.82
   },
   {
@@ -7656,12 +7656,12 @@
     "game_date": "2018-02-03",
     "game_time": "23:34:45",
     "p1_avg_3dart_match": 34.68,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 29.53
   },
   {
@@ -7671,12 +7671,12 @@
     "game_date": "2018-02-03",
     "game_time": "23:08:51",
     "p1_avg_3dart_match": 49.51,
-    "player1_id": 2,
+    "player1_id": 3,
     "player1": "Franz-Josef",
     "p1_legs_won": 3,
     "p2_legs_won": 1,
     "player2": "Uwe",
-    "player2_id": 5,
+    "player2_id": 1,
     "p2_avg_3dart_match": 46.45
   },
   {
@@ -7686,12 +7686,12 @@
     "game_date": "2018-02-03",
     "game_time": "22:41:22",
     "p1_avg_3dart_match": 47.26,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 1,
     "p2_legs_won": 3,
     "player2": "Franz-Josef",
-    "player2_id": 2,
+    "player2_id": 3,
     "p2_avg_3dart_match": 48.44
   },
   {
@@ -7701,12 +7701,12 @@
     "game_date": "2018-02-03",
     "game_time": "22:12:19",
     "p1_avg_3dart_match": 36.45,
-    "player1_id": 1,
+    "player1_id": 2,
     "player1": "Frank",
     "p1_legs_won": 1,
     "p2_legs_won": 3,
     "player2": "Uwe",
-    "player2_id": 5,
+    "player2_id": 1,
     "p2_avg_3dart_match": 38.4
   },
   {
@@ -7716,12 +7716,12 @@
     "game_date": "2018-02-03",
     "game_time": "21:51:40",
     "p1_avg_3dart_match": 49.01,
-    "player1_id": 2,
+    "player1_id": 3,
     "player1": "Franz-Josef",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 36.1
   },
   {
@@ -7731,12 +7731,12 @@
     "game_date": "2018-02-03",
     "game_time": "21:32:43",
     "p1_avg_3dart_match": 39.21,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Frank",
-    "player2_id": 1,
+    "player2_id": 2,
     "p2_avg_3dart_match": 33.43
   },
   {
@@ -7746,12 +7746,12 @@
     "game_date": "2018-02-03",
     "game_time": "21:10:11",
     "p1_avg_3dart_match": 42.94,
-    "player1_id": 1,
+    "player1_id": 2,
     "player1": "Frank",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 33.85
   },
   {
@@ -7761,12 +7761,12 @@
     "game_date": "2018-02-03",
     "game_time": "20:50:09",
     "p1_avg_3dart_match": 42.94,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Uwe",
-    "player2_id": 5,
+    "player2_id": 1,
     "p2_avg_3dart_match": 40.21
   },
   {
@@ -7776,12 +7776,12 @@
     "game_date": "2018-02-03",
     "game_time": "20:33:30",
     "p1_avg_3dart_match": 46.01,
-    "player1_id": 2,
+    "player1_id": 3,
     "player1": "Franz-Josef",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Frank",
-    "player2_id": 1,
+    "player2_id": 2,
     "p2_avg_3dart_match": 34.94
   },
   {
@@ -7791,12 +7791,12 @@
     "game_date": "2018-02-03",
     "game_time": "19:48:12",
     "p1_avg_3dart_match": 28.89,
-    "player1_id": 3,
+    "player1_id": 6,
     "player1": "Heiner",
     "p1_legs_won": 1,
     "p2_legs_won": 3,
     "player2": "Uwe",
-    "player2_id": 5,
+    "player2_id": 1,
     "p2_avg_3dart_match": 28.99
   },
   {
@@ -7806,12 +7806,12 @@
     "game_date": "2018-01-21",
     "game_time": "00:22:30",
     "p1_avg_3dart_match": 40.77,
-    "player1_id": 5,
+    "player1_id": 1,
     "player1": "Uwe",
     "p1_legs_won": 3,
     "p2_legs_won": 1,
     "player2": "Frank",
-    "player2_id": 1,
+    "player2_id": 2,
     "p2_avg_3dart_match": 38.73
   },
   {
@@ -7821,12 +7821,12 @@
     "game_date": "2018-01-20",
     "game_time": "23:52:35",
     "p1_avg_3dart_match": 38.87,
-    "player1_id": 2,
+    "player1_id": 3,
     "player1": "Franz-Josef",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 32.42
   },
   {
@@ -7836,12 +7836,12 @@
     "game_date": "2018-01-20",
     "game_time": "23:22:38",
     "p1_avg_3dart_match": 48.78,
-    "player1_id": 2,
+    "player1_id": 3,
     "player1": "Franz-Josef",
     "p1_legs_won": 3,
     "p2_legs_won": 1,
     "player2": "Frank",
-    "player2_id": 1,
+    "player2_id": 2,
     "p2_avg_3dart_match": 39.8
   },
   {
@@ -7851,12 +7851,12 @@
     "game_date": "2018-01-20",
     "game_time": "23:01:34",
     "p1_avg_3dart_match": 41.75,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 34.89
   },
   {
@@ -7866,12 +7866,12 @@
     "game_date": "2018-01-20",
     "game_time": "22:28:44",
     "p1_avg_3dart_match": 44.59,
-    "player1_id": 5,
+    "player1_id": 1,
     "player1": "Uwe",
     "p1_legs_won": 1,
     "p2_legs_won": 3,
     "player2": "Franz-Josef",
-    "player2_id": 2,
+    "player2_id": 3,
     "p2_avg_3dart_match": 47.71
   },
   {
@@ -7881,12 +7881,12 @@
     "game_date": "2018-01-20",
     "game_time": "22:08:18",
     "p1_avg_3dart_match": 57.81,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Frank",
-    "player2_id": 1,
+    "player2_id": 2,
     "p2_avg_3dart_match": 42.6
   },
   {
@@ -7896,12 +7896,12 @@
     "game_date": "2018-01-20",
     "game_time": "21:38:52",
     "p1_avg_3dart_match": 49.38,
-    "player1_id": 5,
+    "player1_id": 1,
     "player1": "Uwe",
     "p1_legs_won": 2,
     "p2_legs_won": 3,
     "player2": "Martin",
-    "player2_id": 4,
+    "player2_id": 8,
     "p2_avg_3dart_match": 54.09
   },
   {
@@ -7911,12 +7911,12 @@
     "game_date": "2018-01-20",
     "game_time": "20:52:21",
     "p1_avg_3dart_match": 23.12,
-    "player1_id": 3,
+    "player1_id": 6,
     "player1": "Heiner",
     "p1_legs_won": 1,
     "p2_legs_won": 3,
     "player2": "Frank",
-    "player2_id": 1,
+    "player2_id": 2,
     "p2_avg_3dart_match": 23.74
   },
   {
@@ -7926,12 +7926,12 @@
     "game_date": "2018-01-20",
     "game_time": "20:33:24",
     "p1_avg_3dart_match": 40.16,
-    "player1_id": 2,
+    "player1_id": 3,
     "player1": "Franz-Josef",
     "p1_legs_won": 0,
     "p2_legs_won": 3,
     "player2": "Martin",
-    "player2_id": 4,
+    "player2_id": 8,
     "p2_avg_3dart_match": 49.01
   },
   {
@@ -7941,12 +7941,12 @@
     "game_date": "2018-01-20",
     "game_time": "19:54:22",
     "p1_avg_3dart_match": 26.68,
-    "player1_id": 5,
+    "player1_id": 1,
     "player1": "Uwe",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 26.2
   },
   {
@@ -7956,12 +7956,12 @@
     "game_date": "2018-01-07",
     "game_time": "00:32:03",
     "p1_avg_3dart_match": 43.36,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 39.47
   },
   {
@@ -7971,12 +7971,12 @@
     "game_date": "2018-01-06",
     "game_time": "23:56:11",
     "p1_avg_3dart_match": 35.12,
-    "player1_id": 5,
+    "player1_id": 1,
     "player1": "Uwe",
     "p1_legs_won": 1,
     "p2_legs_won": 3,
     "player2": "Franz-Josef",
-    "player2_id": 2,
+    "player2_id": 3,
     "p2_avg_3dart_match": 40.57
   },
   {
@@ -7986,12 +7986,12 @@
     "game_date": "2018-01-06",
     "game_time": "23:33:25",
     "p1_avg_3dart_match": 60.12,
-    "player1_id": 2,
+    "player1_id": 3,
     "player1": "Franz-Josef",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 35.96
   },
   {
@@ -8001,12 +8001,12 @@
     "game_date": "2018-01-06",
     "game_time": "23:10:05",
     "p1_avg_3dart_match": 42.94,
-    "player1_id": 1,
+    "player1_id": 2,
     "player1": "Frank",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Uwe",
-    "player2_id": 5,
+    "player2_id": 1,
     "p2_avg_3dart_match": 41.44
   },
   {
@@ -8016,12 +8016,12 @@
     "game_date": "2018-01-06",
     "game_time": "22:39:07",
     "p1_avg_3dart_match": 41.75,
-    "player1_id": 2,
+    "player1_id": 3,
     "player1": "Franz-Josef",
     "p1_legs_won": 3,
     "p2_legs_won": 2,
     "player2": "Martin",
-    "player2_id": 4,
+    "player2_id": 8,
     "p2_avg_3dart_match": 41.8
   },
   {
@@ -8031,12 +8031,12 @@
     "game_date": "2018-01-06",
     "game_time": "22:03:16",
     "p1_avg_3dart_match": 37.11,
-    "player1_id": 1,
+    "player1_id": 2,
     "player1": "Frank",
     "p1_legs_won": 1,
     "p2_legs_won": 3,
     "player2": "Heiner",
-    "player2_id": 3,
+    "player2_id": 6,
     "p2_avg_3dart_match": 37.37
   },
   {
@@ -8046,12 +8046,12 @@
     "game_date": "2018-01-06",
     "game_time": "21:42:01",
     "p1_avg_3dart_match": 59.34,
-    "player1_id": 4,
+    "player1_id": 8,
     "player1": "Martin",
     "p1_legs_won": 3,
     "p2_legs_won": 2,
     "player2": "Frank",
-    "player2_id": 1,
+    "player2_id": 2,
     "p2_avg_3dart_match": 49.46
   },
   {
@@ -8061,12 +8061,12 @@
     "game_date": "2018-01-06",
     "game_time": "20:50:49",
     "p1_avg_3dart_match": 32.91,
-    "player1_id": 3,
+    "player1_id": 6,
     "player1": "Heiner",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Uwe",
-    "player2_id": 5,
+    "player2_id": 1,
     "p2_avg_3dart_match": 28.05
   },
   {
@@ -8076,12 +8076,12 @@
     "game_date": "2018-01-06",
     "game_time": "20:30:41",
     "p1_avg_3dart_match": 50.66,
-    "player1_id": 2,
+    "player1_id": 3,
     "player1": "Franz-Josef",
     "p1_legs_won": 3,
     "p2_legs_won": 0,
     "player2": "Frank",
-    "player2_id": 1,
+    "player2_id": 2,
     "p2_avg_3dart_match": 41.93
   },
   {
@@ -8091,12 +8091,12 @@
     "game_date": "2018-01-06",
     "game_time": "20:06:04",
     "p1_avg_3dart_match": 43.37,
-    "player1_id": 5,
+    "player1_id": 1,
     "player1": "Uwe",
     "p1_legs_won": 1,
     "p2_legs_won": 3,
     "player2": "Martin",
-    "player2_id": 4,
+    "player2_id": 8,
     "p2_avg_3dart_match": 47.52
   }
 ]

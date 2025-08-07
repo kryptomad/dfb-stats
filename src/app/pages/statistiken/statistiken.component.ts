@@ -3,12 +3,21 @@ import { CommonModule, NgForOf, NgIf } from '@angular/common';
 import { Card } from 'primeng/card';
 import { ButtonModule } from 'primeng/button';
 import { ChartModule } from 'primeng/chart';
+import { TimelineModule } from 'primeng/timeline';
 
 import { StatsService } from '../../services/stats.service';
 
 @Component({
   selector: 'app-statistiken',
-  imports: [CommonModule, NgForOf, NgIf, Card, ButtonModule, ChartModule],
+  imports: [
+    CommonModule,
+    NgForOf,
+    NgIf,
+    Card,
+    ButtonModule,
+    ChartModule,
+    TimelineModule,
+  ],
   providers: [StatsService],
   templateUrl: './statistiken.component.html',
   styleUrl: './statistiken.component.scss',

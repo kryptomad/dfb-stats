@@ -5,7 +5,7 @@ from collections import defaultdict
 
 # Pfade anpassen
 DB_PATH = Path(__file__).parents[2] / "db" / "dfb_stats.db"
-OUTPUT_PATH = Path(__file__).parents[2] / "dumps" / "legs.json"
+OUTPUT_PATH = Path(__file__).parents[2] / "src" / "assets" / "legs.json"
 
 # Maximale Anzahl an Legs, None für unbegrenzt
 NUM_LEGS = None

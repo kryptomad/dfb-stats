@@ -4,7 +4,7 @@ from pathlib import Path
 
 # Pfade anpassen
 DB_PATH = Path(__file__).parents[2] / "db" / "dfb_stats.db"
-OUTPUT_PATH = Path(__file__).parents[2] / "dumps" / "stats.json"
+OUTPUT_PATH = Path(__file__).parents[2] / "src" / "assets" / "stats.json"
 
 # Optional: Anzahl Datensätze begrenzen, None für alle
 default_limit = None

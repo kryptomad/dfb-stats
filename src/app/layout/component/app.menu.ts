@@ -104,6 +104,12 @@ export class AppMenu implements OnInit {
             routerLink: 'pages/statistiken',
             fragment: 'trendverlauf',
           },
+          {
+            label: 'Oskarsieger',
+            icon: 'pi pi-fw pi-trophy',
+            routerLink: 'pages/statistiken',
+            fragment: 'oskarsieger',
+          },
         ],
       },
       {

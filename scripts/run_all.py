@@ -40,9 +40,14 @@ def apply_migrations(db_path: Path, migrations_dir: Path):
         conn.close()
 
 if __name__ == "__main__":
-    # 0) DB Preparations: CSV-Import & Stat-Berechnungen
+    # 0) Importiere CSV-Daten (Initiale Tabellen/Struktur)
+    run_script(REPO_ROOT / 'scripts' / 'db' / 'db_0_import_csv.py', "Step 0: db/db_0_import_csv.py")
+
+    # 1) SQL-Migrationen anwenden (u. a. Players-Tabelle befüllen)
+    apply_migrations(DB_PATH, MIGRATIONS_DIR)
+
+    # 2) Weitere DB-Skripte, jetzt mit allen Spielern!
     db_scripts = [
-        "db_0_import_csv.py",
         "db_1_prepare_data.py",
         "db_2_assign_season_and_matchday.py",
         "db_3_stats_basics.py",
@@ -51,18 +56,15 @@ if __name__ == "__main__":
         "db_6_stats_keepbreak.py",
         "db_7_stats_averages.py",
     ]
-    for idx, script_name in enumerate(db_scripts):
+    for idx, script_name in enumerate(db_scripts, start=1):
         run_script(REPO_ROOT / 'scripts' / 'db' / script_name,
                    f"Step {idx}: db/{script_name}")
 
-    # 1) SQL-Migrationen anwenden
-    apply_migrations(DB_PATH, MIGRATIONS_DIR)
-
-    # 2) JSON-Exports
+    # 3) JSON-Exports
     for script, desc in EXPORT_SCRIPTS:
         run_script(REPO_ROOT / 'scripts' / script, desc)
 
-    # 3) Ausgabe-Generierung
+    # 4) Ausgabe-Generierung
     for script, desc in OUTPUT_SCRIPTS:
         run_script(REPO_ROOT / 'scripts' / script, desc)
 

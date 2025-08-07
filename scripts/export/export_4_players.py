@@ -4,7 +4,7 @@ from pathlib import Path
 
 # Pfade anpassen
 DB_PATH = Path(__file__).parents[2] / "db" / "dfb_stats.db"
-OUTPUT_PATH = Path(__file__).parents[2] / "dumps" / "players.json"
+OUTPUT_PATH = Path(__file__).parents[2] / "src" / "assets" / "players.json"
 
 # Optional: Anzahl Datensätze begrenzen, None für alle
 default_limit = None
@@ -19,15 +19,18 @@ def export_players(limit=None):
     # Daten abfragen, jetzt mit neuen Spalten
     query = f"""
         SELECT
-            id   AS player_id,
+            player_id,
             name,
-            nationality,
             nickname,
             image,
+            roles,
             memberSince,
-            isFounder
+            leftAt,
+            isFounder,
+            isActive,
+            comment
         FROM players
-        ORDER BY id
+        ORDER BY player_id
         {"LIMIT :limit" if limit else ""}
     """
     params = {"limit": limit} if limit else {}
@@ -40,11 +43,14 @@ def export_players(limit=None):
         players_list.append({
             "player_id": row["player_id"],
             "name": row["name"],
-            "nationality": row["nationality"],
             "nickname": row["nickname"],
             "image": row["image"],
+            "roles": row["roles"],
             "memberSince": row["memberSince"],
-            "isFounder": bool(row["isFounder"])  # 0/1 -> True/False
+            "leftAt": row["leftAt"],
+            "isFounder": bool(row["isFounder"]),  # 0/1 -> True/False
+            "isActive": bool(row["isActive"]),    # 0/1 -> True/False
+            "comment": row["comment"]
         })
 
     # Sicherstellen, dass Ausgabeverzeichnis existiert

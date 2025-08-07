@@ -22,7 +22,11 @@
   {
     "kategorie": "Most 140s",
     "wert": 2,
-    "spieler": ["Franz-Josef", "Martin", "Uwe"]
+    "spieler": [
+      "Uwe",
+      "Franz-Josef",
+      "Martin"
+    ]
   },
   {
     "kategorie": "Most 180s",

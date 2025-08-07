@@ -14,14 +14,16 @@ c = conn.cursor()
 # Tabellen anlegen (angepasste finale Struktur)
 c.execute('''
 CREATE TABLE IF NOT EXISTS players (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    player_id INTEGER UNIQUE,
+    player_id INTEGER PRIMARY KEY AUTOINCREMENT,
     name TEXT NOT NULL,
-    nationality TEXT,
     nickname TEXT,
     image TEXT,
+    roles TEXT,
     memberSince INTEGER,
-    isFounder INTEGER
+    leftAt INTEGER,
+    isFounder INTEGER,
+    isActive INTEGER,
+    comment TEXT
 )
 ''')
 

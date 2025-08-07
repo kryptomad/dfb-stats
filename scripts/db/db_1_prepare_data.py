@@ -3,20 +3,6 @@ import sqlite3
 
 DB_PATH = '../db/dfb_stats.db'
 
-def get_all_players(conn):
-    c = conn.cursor()
-    c.execute('SELECT DISTINCT player1 FROM games UNION SELECT DISTINCT player2 FROM games')
-    players = sorted([row[0] for row in c.fetchall()])  # alphabetisch sortieren
-    return players
-
-def populate_players_table(conn, players):
-    c = conn.cursor()
-    for idx, name in enumerate(players, start=1):
-        # Jeder Name bekommt exakt eine ID (1,2,3...)
-        c.execute('INSERT OR IGNORE INTO players (player_id, name) VALUES (?, ?)', (idx, name))
-    conn.commit()
-    print(f"[OK] {len(players)} Spieler in players-Tabelle eingetragen")
-
 def update_game_player_ids(conn):
     c = conn.cursor()
     # Mapping direkt von unserer Fix-Tabelle übernehmen
@@ -157,9 +143,7 @@ if __name__ == '__main__':
     # 1) Darts & Leg-Nummern berechnen
     update_darts_per_leg(conn)
 
-    # 2) Spieler-Tabelle befüllen & games IDs setzen
-    players = get_all_players(conn)
-    populate_players_table(conn, players)
+    # 2) games IDs setzen
     update_game_player_ids(conn)
 
     # 3) legs starter_id & leg_winner_id aktualisieren

@@ -4,7 +4,7 @@ from pathlib import Path
 
 # Pfade anpassen: von scripts/export aus zwei Ebenen hoch ins Projekt-Root
 DB_PATH = Path(__file__).parents[2] / "db" / "dfb_stats.db"
-OUTPUT_PATH = Path(__file__).parents[2] / "dumps" / "games.json"
+OUTPUT_PATH = Path(__file__).parents[2] / "src" / "assets" / "games.json"
 NUM_LAST_GAMES = 99999  # Wie viele Spiele sollen maximal exportiert werden
 
 def export_games():
@@ -29,8 +29,8 @@ def export_games():
             g.player2_id,
             g.p2_avg_3dart_match
         FROM games g
-        JOIN players p1 ON g.player1_id = p1.id
-        JOIN players p2 ON g.player2_id = p2.id
+        JOIN players p1 ON g.player1_id = p1.player_id
+        JOIN players p2 ON g.player2_id = p2.player_id
         ORDER BY g.game_date DESC, g.game_time DESC
         LIMIT ?
     """, (NUM_LAST_GAMES,))
