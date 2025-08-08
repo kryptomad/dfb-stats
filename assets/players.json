@@ -1,47 +1,98 @@
 [
   {
     "player_id": 1,
-    "name": "Frank",
-    "nationality": "DE",
+    "name": "Uwe",
     "nickname": null,
-    "image": "frank.png",
+    "image": "uwe.png",
+    "roles": null,
     "memberSince": 1993,
-    "isFounder": true
+    "leftAt": null,
+    "isFounder": true,
+    "isActive": true,
+    "comment": null
   },
   {
     "player_id": 2,
-    "name": "Franz-Josef",
-    "nationality": "DE",
+    "name": "Frank",
     "nickname": null,
-    "image": "franz.png",
+    "image": "frank.png",
+    "roles": null,
     "memberSince": 1993,
-    "isFounder": true
+    "leftAt": null,
+    "isFounder": true,
+    "isActive": true,
+    "comment": null
   },
   {
     "player_id": 3,
-    "name": "Heiner",
-    "nationality": "DE",
-    "nickname": "TC",
-    "image": "heiner.png",
-    "memberSince": 1996,
-    "isFounder": false
+    "name": "Rainer",
+    "nickname": null,
+    "image": "rainer.png",
+    "roles": null,
+    "memberSince": 1995,
+    "leftAt": 2016,
+    "isFounder": false,
+    "isActive": false,
+    "comment": null
   },
   {
     "player_id": 4,
-    "name": "Martin",
-    "nationality": "DE",
-    "nickname": "mad",
-    "image": "martin.png",
-    "memberSince": 2018,
-    "isFounder": false
+    "name": "Franz-Josef",
+    "nickname": null,
+    "image": "franz.png",
+    "roles": null,
+    "memberSince": 1993,
+    "leftAt": null,
+    "isFounder": true,
+    "isActive": true,
+    "comment": null
   },
   {
     "player_id": 5,
-    "name": "Uwe",
-    "nationality": "DE",
+    "name": "Udo",
     "nickname": null,
-    "image": "uwe.png",
-    "memberSince": 1993,
-    "isFounder": true
+    "image": "udo.png",
+    "roles": null,
+    "memberSince": 1995,
+    "leftAt": 2004,
+    "isFounder": false,
+    "isActive": false,
+    "comment": null
+  },
+  {
+    "player_id": 6,
+    "name": "Heiner",
+    "nickname": "TC",
+    "image": "heiner.png",
+    "roles": null,
+    "memberSince": 1996,
+    "leftAt": null,
+    "isFounder": false,
+    "isActive": true,
+    "comment": null
+  },
+  {
+    "player_id": 7,
+    "name": "Nico",
+    "nickname": null,
+    "image": "nico.png",
+    "roles": null,
+    "memberSince": 2006,
+    "leftAt": 2017,
+    "isFounder": false,
+    "isActive": false,
+    "comment": null
+  },
+  {
+    "player_id": 8,
+    "name": "Martin",
+    "nickname": "mad",
+    "image": "martin.png",
+    "roles": null,
+    "memberSince": 2007,
+    "leftAt": null,
+    "isFounder": false,
+    "isActive": true,
+    "comment": null
   }
 ]
