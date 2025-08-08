@@ -1,14 +1,16 @@
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 @Component({
   standalone: true,
+  imports: [RouterLink],
   selector: 'app-footer',
   template: `
     <footer class="app-footer">
       <div>© {{ year }} Dartfreunde Borchen n.e.V.</div>
       <div>
-        <a href="/impressum">Impressum</a> ·
-        <a href="/datenschutz">Datenschutz</a>
+        <a routerLink="pages/impressum">Impressum</a> ·
+        <a routerLink="pages/datenschutz">Datenschutz</a>
       </div>
     </footer>
   `,

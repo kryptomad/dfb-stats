@@ -9,6 +9,8 @@ import { SpieleComponent } from './spiele/spiele.component';
 import { AbzeichenComponent } from './abzeichen/abzeichen.component';
 import { LegsComponent } from './legs/legs.component';
 import { ProfilComponent } from './profil/profil.component';
+import { ImpressumComponent } from './impressum/impressum.component';
+import { DatenschutzComponent } from './datenschutz/datenschutz.component';
 
 export default [
   { path: 'startseite', component: StartseiteComponent },
@@ -21,5 +23,7 @@ export default [
   { path: 'abzeichen', component: AbzeichenComponent },
   { path: 'legs/:game_id', component: LegsComponent },
   { path: 'profil/:id', component: ProfilComponent },
+  { path: 'impressum', component: ImpressumComponent },
+  { path: 'datenschutz', component: DatenschutzComponent },
   { path: '**', redirectTo: '/notfound' },
 ] as Routes;
