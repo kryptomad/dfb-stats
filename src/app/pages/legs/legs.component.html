@@ -110,7 +110,7 @@
   </ng-container>
   <!-- Player 2 gewinnt -->
   <ng-container *ngIf="leg.leg_winner_id == game.player2_id">
-    <b>{{ leg.p2_darts_leg }}</b> Darts
+    <span>Sieger:</span><b>{{ leg.p2_darts_leg }}</b> Darts
     <span class="stats-divider">|</span>
     <b>{{ leg.p2_avg_3dart_leg | number:'1.2-2' }}</b> 3DA
   </ng-container>
