@@ -76,6 +76,6 @@ export class OskarsiegerService {
     const manual = this.getManualWinners();
     const manualYears = new Set(manual.map(w => w.jahr));
     const auto = this.getAutoWinnersFromStats(2018).filter(w => !manualYears.has(w.jahr));
-    return [...manual, ...auto].sort((a, b) => a.jahr - b.jahr);
+    return [...manual, ...auto].sort((a, b) => b.jahr - a.jahr);
   }
 }
