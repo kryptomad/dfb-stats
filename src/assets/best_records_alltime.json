@@ -8,35 +8,20 @@
         "spieler": "Uwe"
       },
       {
-        "kategorie": "Best 3 Dart Average",
+        "kategorie": "Highest 3-Dart Average",
         "wert": 79.11,
         "spieler": "Martin"
       },
       {
-        "kategorie": "Most TONs",
-        "wert": 8,
-        "spieler": "Martin"
-      },
-      {
-        "kategorie": "Most 140s",
-        "wert": 3,
-        "spieler": ["Franz-Josef", "Martin"]
-      },
-      {
-        "kategorie": "Most 180s",
-        "wert": 1,
-        "spieler": ["Frank", "Franz-Josef", "Martin", "Uwe"]
+        "kategorie": "Highest First 9 Average",
+        "wert": 92.67,
+        "spieler": "Franz-Josef"
       }
     ]
   },
   {
     "modus": "session",
     "einträge": [
-      {
-        "kategorie": "Best 3 Dart Average",
-        "wert": 79.11,
-        "spieler": "Martin"
-      },
       {
         "kategorie": "Most TONs",
         "wert": 55,
@@ -58,11 +43,6 @@
     "modus": "season",
     "einträge": [
       {
-        "kategorie": "Best 3 Dart Average",
-        "wert": 53.94,
-        "spieler": "Martin"
-      },
-      {
         "kategorie": "Most TONs",
         "wert": 99,
         "spieler": "Martin"
@@ -82,11 +62,6 @@
   {
     "modus": "overall",
     "einträge": [
-      {
-        "kategorie": "Best 3 Dart Average",
-        "wert": 52.98,
-        "spieler": "Martin"
-      },
       {
         "kategorie": "Most TONs",
         "wert": 486,

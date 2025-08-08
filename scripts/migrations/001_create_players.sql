@@ -61,14 +61,14 @@ INSERT INTO players (
     comment
 ) VALUES (
     3,
-    'Franz-Josef',
+    'Rainer',
     NULL,
-    'franz.png',
+    'rainer.png',
     NULL,
-    1993,
-    NULL,
-    1,
-    1,
+    1995,
+    2016,
+    0,
+    0,
     NULL
 );
 
@@ -85,16 +85,18 @@ INSERT INTO players (
     comment
 ) VALUES (
     4,
-    'Rainer',
+    'Franz-Josef',
     NULL,
-    'rainer.png',
+    'franz.png',
     NULL,
-    1995,
-    2016,
-    0,
-    0,
+    1993,
+    NULL,
+    1,
+    1,
     NULL
 );
+
+
 
 INSERT INTO players (
     player_id,

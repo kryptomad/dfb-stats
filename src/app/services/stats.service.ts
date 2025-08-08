@@ -25,11 +25,6 @@ export class StatsService {
     );
   }
 
-  /**
-   * Universalmethode: Gibt alle Spieler (jeden nur einmal!) zurück,
-   * die einen Bestwert (min/max eines Feldes) in einem Match erreicht haben.
-   * Optional kann ein Filter (z.B. nur Sieger) übergeben werden.
-   */
   getAllWithBestValue(
     field: string,
     comparator: 'min' | 'max',
@@ -121,5 +116,9 @@ export class StatsService {
       labels: seasons.map((s) => s.toString()), // z.B. ['2018', '2019', ...]
       datasets,
     };
+  }
+  /** NEU: Zugriff auf die aktuell geladenen Stats */
+  getAllStats(): any[] {
+    return this.enrichedStats || [];
   }
 }

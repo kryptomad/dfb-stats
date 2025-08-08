@@ -4,11 +4,11 @@ from pathlib import Path
 
 # Pfade
 BASE = Path(__file__).parents[2]
-STATS_PATH     = BASE / "dumps" / "stats.json"
-DETAILS_PATH   = BASE / "dumps" / "legs.json"
-SPIELTAGE_PATH = BASE / "dumps" / "games.json"
-PLAYERS_PATH   = BASE / "dumps" / "players.json"
-OUTPUT_PATH    = BASE / "dumps" / "best_records_alltime.json"
+STATS_PATH     = BASE / "src" / "assets" / "stats.json"
+DETAILS_PATH   = BASE / "src" / "assets" / "legs.json"
+SPIELTAGE_PATH = BASE / "src" / "assets" / "games.json"
+PLAYERS_PATH   = BASE / "src" / "assets" / "players.json"
+OUTPUT_PATH    = BASE / "src" / "assets" / "best_records_alltime.json"
 
 MODI = ["match", "session", "season", "overall"]
 

@@ -153,5 +153,37 @@
 
 
 <h2 id="trendverlauf">Trendverlauf</h2>
+<p-card>
 <h5>Punkteentwicklung Gesamtwertung 2018 - Heute</h5>
 <p-chart type="line" [data]="formkurveData" [options]="formkurveOptions"></p-chart>
+</p-card>
+
+
+
+<h2 id="oskarsieger">Oskarsieger</h2>
+<p-card>
+<p-timeline [value]="oskarsiegerTimeline" layout="vertical" align="alternate">
+  <ng-template pTemplate="opposite" let-event>
+    <span class="oskar-jahr">{{ event.label }}</span>
+  </ng-template>
+  <ng-template pTemplate="content" let-event>
+    <ng-container *ngIf="event.player">
+      <div class="timeline-card">
+<img
+  [src]="'assets/players/' + (event.player?.image || 'dummy.png')"
+  (error)="onImgError($event)"
+  class="winner-avatar"
+  alt=""
+/>
+        <span class="winner-name">{{ event.player.name }}</span>
+        <span *ngIf="event.player.nickname" class="winner-nickname">
+          {{ event.player.nickname }}
+        </span>
+      </div>
+    </ng-container>
+    <ng-container *ngIf="!event.player">
+      <i>Unbekannter Spieler (ID: {{ event.player_id }})</i>
+    </ng-container>
+  </ng-template>
+</p-timeline>
+</p-card>

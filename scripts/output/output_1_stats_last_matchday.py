@@ -5,9 +5,9 @@ from pathlib import Path
 # Konfiguration
 ANZAHL_SPIELE = 10
 BASE = Path(__file__).parents[2]
-STATS_PATH = BASE / "dumps" / "stats.json"
-PLAYERS_PATH = BASE / "dumps" / "players.json"
-OUTPUT_PATH = BASE / "dumps" / "last_stats.json"
+STATS_PATH = BASE / "src" / "assets" / "stats.json"
+PLAYERS_PATH = BASE / "src" / "assets" / "players.json"
+OUTPUT_PATH = BASE / "src" / "assets" / "last_stats.json"
 
 
 def load_players():

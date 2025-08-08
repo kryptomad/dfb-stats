@@ -8,15 +8,23 @@ export interface Player {
   image: string;
   memberSince: number;
   isFounder: boolean;
+  isActive: boolean;
 }
 
-@Injectable()
+@Injectable({ providedIn: 'root' })
 export class PlayersService {
-  public loadPlayers(): Signal<Player[]> {
-    const dataObject = Object.create(playersData);
+  private allPlayers: Player[] = [];
+  private activePlayers: Player[] = [];
+  private byId = new Map<number, Player>();
 
-    const players: Player[] = dataObject.default
-      .filter((p: any) => p.isActive)
+  // falls du irgendwo eine Liste brauchst:
+  private activePlayersSignal = signal<Player[]>([]);
+  private allPlayersSignal = signal<Player[]>([]);
+
+  constructor() {
+    const raw: any[] = Object.create(playersData).default;
+
+    this.allPlayers = raw
       .map((p: any) => ({
         id: p.player_id,
         name: p.name,
@@ -24,20 +32,31 @@ export class PlayersService {
         image: p.image,
         memberSince: p.memberSince,
         isFounder: p.isFounder,
-      }));
+        isActive: !!p.isActive, // booleans!
+      }))
+      .sort((a, b) => (a.memberSince ?? 0) - (b.memberSince ?? 0));
 
-    players.sort((a, b) => {
-      return (
-        new Date(a.memberSince).getTime() - new Date(b.memberSince).getTime()
-      );
-    });
+    this.activePlayers = this.allPlayers.filter((p) => p.isActive);
 
-    return signal<Player[]>(players);
+    this.byId = new Map(this.allPlayers.map((p) => [p.id, p]));
+
+    this.activePlayersSignal.set(this.activePlayers);
+    this.allPlayersSignal.set(this.allPlayers);
   }
 
+  /** Für Listen in der UI: standardmäßig nur Aktive */
+  loadPlayers(activeOnly: boolean = true): Signal<Player[]> {
+    return activeOnly ? this.activePlayersSignal : this.allPlayersSignal;
+  }
+
+  /** Für Lookups (Timeline, Stats, Historie): IMMER in allen suchen */
   getPlayerById(id: number): Player | undefined {
-    const players = this.loadPlayers()();
-    return players.find((p) => p.id === id);
+    return this.byId.get(id);
+  }
+
+  /** Optional nützlich */
+  getAllPlayers(): Player[] {
+    return this.allPlayers;
   }
 
   getPlayerNameById(id: number): string {

@@ -25,18 +25,6 @@
   },
   {
     "player_id": 3,
-    "name": "Franz-Josef",
-    "nickname": null,
-    "image": "franz.png",
-    "roles": null,
-    "memberSince": 1993,
-    "leftAt": null,
-    "isFounder": true,
-    "isActive": true,
-    "comment": null
-  },
-  {
-    "player_id": 4,
     "name": "Rainer",
     "nickname": null,
     "image": "rainer.png",
@@ -45,6 +33,18 @@
     "leftAt": 2016,
     "isFounder": false,
     "isActive": false,
+    "comment": null
+  },
+  {
+    "player_id": 4,
+    "name": "Franz-Josef",
+    "nickname": null,
+    "image": "franz.png",
+    "roles": null,
+    "memberSince": 1993,
+    "leftAt": null,
+    "isFounder": true,
+    "isActive": true,
     "comment": null
   },
   {
