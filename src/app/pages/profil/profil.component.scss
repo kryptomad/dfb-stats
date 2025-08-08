@@ -7,17 +7,29 @@
 }
 
 .stats-mini {
-  align-self: flex-end;
+  box-sizing: border-box;      /* feste Breite/Höhe inkl. Padding */
+  display: flex;               /* jetzt wirken align-* */
+  flex-direction: column;
+  justify-content: center;     /* vertikal mittig */
+  align-items: center;         /* horizontal mittig */
+  gap: 0.1rem;
   font-size: 0.8rem;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--primary-text);
-  letter-spacing: 0.03em;
-  line-height: 1;
+  letter-spacing: 0.04em;
+  background: var(--surface-card);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 0.75rem;
+  padding: 0.75rem;
+  width: 77px;     
+  height: 65px;
+  text-align: center;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.25);
+  transition: transform .15s ease, box-shadow .15s ease;
 }
 
 .stat-card-value {
-  align-self: flex-end;
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   font-weight: 700;
   color: var(--primary-color);
   letter-spacing: 0.03em;
@@ -33,7 +45,7 @@
   padding: 0.25rem 0.5rem;
   border-radius: 9999px; /* Full round */
   font-weight: 700;
-  margin-bottom: 0.2rem;
+  margin-bottom: 0.05rem;
   width: fit-content;
   min-width: 80px; /* optional, für konsistente Größe */
 }
@@ -51,4 +63,13 @@
   font-weight: 700;
   min-width: 20px;
   text-align: center;
+}
+
+.stats-header {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-color-secondary);
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
