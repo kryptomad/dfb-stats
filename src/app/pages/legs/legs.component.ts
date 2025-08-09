@@ -56,8 +56,12 @@ export class LegsComponent implements OnInit {
     this.game = legsArray.find((g) => g.game_id === gameId);
     if (!this.game) return;
 
-    this.player1 = this.playersService.getPlayerById(this.game.player1_id);
-    this.player2 = this.playersService.getPlayerById(this.game.player2_id);
+    this.player1 = this.playersService.getPlayerDetailsById(
+      this.game.player1_id,
+    );
+    this.player2 = this.playersService.getPlayerDetailsById(
+      this.game.player2_id,
+    );
 
     // Hole beide Stats-Blöcke für das Spiel
     this.statsP1 = statsArray.find(

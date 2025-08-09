@@ -1,1 +1,38 @@
-<p>spielerstatistiken works!</p>
+<h1>Score‑Radar</h1>
+<p-card class="mb-4">
+  <div class="flex items-center justify-between mb-2">
+
+    <div class="flex items-center gap-3">
+      <!-- Saison-Dropdown -->
+      <p-dropdown
+        [options]="seasons"
+        [(ngModel)]="selectedSeason"
+        (onChange)="onSeasonChange()"
+        placeholder="Saison wählen"
+        styleClass="w-44">
+      </p-dropdown>
+
+      <!-- First-9 Toggle (optional) -->
+<p-selectButton
+  [options]="[
+    { label: 'all Scores', value: false },
+    { label: 'First-9', value: true }
+  ]"
+  [(ngModel)]="first9Only"
+  (onChange)="onFirst9Toggle()">
+</p-selectButton>
+    </div>
+  </div>
+
+  <p-chart
+    type="radar"
+    [data]="radarData"
+    [options]="radarOptions"
+    style="display:block; width:100%; max-width:900px; margin:0 auto; height:420px">
+  </p-chart>
+
+<p>
+  Dieses Radar-Diagramm zeigt, wie häufig die gängigen Scores 26, 41, 45, 60, 100, 140 und 180 geworfen wurden. Klicke oben auf die Spielernamen, um einzelne Spieler ein- und order auszublenden. und gezielt Vergleiche zu machen.<br>
+  <br>Aktuell gewählt: {{ selectedSeason || 'All-Time' }}  <span class="stats-divider">|</span>  {{ first9Only ? 'First-9' : 'all Scores' }}.
+</p>
+</p-card>

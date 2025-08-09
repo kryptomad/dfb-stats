@@ -1,28 +1,25 @@
 import { Component, OnInit } from '@angular/core';
-import { CommonModule, NgForOf, NgIf } from '@angular/common';
+import { CommonModule, NgIf } from '@angular/common';
 import { Card } from 'primeng/card';
 import { ChartModule } from 'primeng/chart';
 import { TimelineModule } from 'primeng/timeline';
 import { TableModule } from 'primeng/table';
-
 import { GamesService } from '../../services/games.service';
 import { StatsService } from '../../services/stats.service';
 import { PlayersService } from '../../services/players.service';
 import { OskarsiegerService } from '../../services/oskarsieger.service';
+import { ChartThemeService } from '../../services/chart-theme.service';
+
+interface Jahreszeile {
+  name: string;
+  altePunkte: number;
+  punkte: number;
+}
 
 @Component({
   standalone: true,
   selector: 'app-oskarstatistiken',
-  imports: [
-    CommonModule,
-    NgForOf,
-    NgIf,
-    Card,
-    ChartModule,
-    TimelineModule,
-    TableModule,
-  ],
-  // providers: [StatsService, PlayersService, OskarsiegerService, GamesService], // brauchst du i.d.R. nicht, da providedIn:'root'
+  imports: [CommonModule, NgIf, Card, ChartModule, TimelineModule, TableModule],
   templateUrl: './oskarstatistiken.component.html',
   styleUrls: ['./oskarstatistiken.component.scss'],
 })
@@ -33,54 +30,37 @@ export class OskarstatistikenComponent implements OnInit {
   letzteSpieltage: any[] = [];
   jahrestabelle: any[] = [];
   aktuelleSaison = '';
-  barChartData: any;
-  barChartOptions: any;
+  barChartData: any = { labels: [], datasets: [] };
+  barChartOptions: any = {};
 
   constructor(
     private statsService: StatsService,
     private oskarsiegerService: OskarsiegerService,
     private playersService: PlayersService,
     private gamesService: GamesService,
+    private chartTheme: ChartThemeService,
   ) {}
 
   ngOnInit() {
-    // 1) Oskarsieger (manuell) sofort
+    this.barChartOptions = this.chartTheme.cartesianOptions({
+      maintainAspectRatio: false,
+    });
+
+    this.chartTheme.watchDomTheme();
+
     this.oskarsiegerRaw = this.oskarsiegerService.getManualWinners();
 
-    // 2) Stats laden → danach Formkurve + Oskarsieger (auto)
     this.statsService.loadEnrichedStats().subscribe(() => {
       this.oskarsiegerRaw = this.oskarsiegerService.getAllWinnersMerged();
 
-      const dark = this.isDarkMode();
-      const color = dark ? '#f3f3f3ff' : '#464646ff';
-      const gridColor = dark ? '#363636ff' : '#dadadaff';
-
       this.formkurveData = this.statsService.getFormkurveData();
-      this.formkurveOptions = {
-        responsive: true,
-        plugins: {
-          legend: { labels: { color } },
-          datalabels: { color },
-        },
-        scales: {
-          x: { ticks: { color }, grid: { color: gridColor } },
-          y: { ticks: { color }, grid: { color: gridColor } },
-        },
-      };
+      this.formkurveOptions = this.chartTheme.cartesianOptions();
 
-      // 3) Oskar – aktuelle Saison & gestapelte Punktevorher/neu
       this.buildOskarCharts();
     });
   }
 
   // -------- Helpers --------
-
-  private isDarkMode() {
-    return (
-      document.documentElement.classList.contains('app-dark') ||
-      document.documentElement.classList.contains('dark')
-    );
-  }
 
   private parseSeasonStartYear(season: unknown): number | null {
     if (typeof season === 'number' && Number.isFinite(season)) return season;
@@ -89,31 +69,20 @@ export class OskarstatistikenComponent implements OnInit {
     return m ? parseInt(m[0], 10) : null;
   }
 
-  private hexToRgba(hex: string, alpha: number): string {
-    hex = hex.replace('#', '');
-    if (hex.length === 3)
-      hex = hex
-        .split('')
-        .map((x) => x + x)
-        .join('');
-    const num = parseInt(hex, 16);
-    return `rgba(${(num >> 16) & 255}, ${(num >> 8) & 255}, ${num & 255}, ${alpha})`;
-  }
-
   private buildOskarCharts() {
-    // Primär-/Sekundärfarben aus CSS-Variablen ziehen
-    const rootStyle = getComputedStyle(document.documentElement);
-    const primaryColor =
-      rootStyle.getPropertyValue('--primary-color').trim() || '#2196F3';
-    const secondaryColor =
-      rootStyle.getPropertyValue('--text-color-secondary').trim() || '#aaaaaa';
-    const primaryColorRgba = this.hexToRgba(primaryColor, 0.55);
-    const secondaryColorRgba = this.hexToRgba(secondaryColor, 0.4);
+    // Fills aus Theme/CSS
+    const primaryFill = this.chartTheme.getPrimaryFill(0.55);
+    const secondary = this.chartTheme.getCssVar(
+      '--text-color-secondary',
+      '#aaaaaa',
+    );
+    const secondaryFill = this.chartTheme.hexToRgba(secondary, 0.4);
 
     // aktuelle Saison (neueste Season nach Startjahr)
     const allGames = this.gamesService.getAllGames();
-    const seasons = Array.from(new Set(allGames.map((g) => String(g.season))));
-    seasons.sort(
+    const seasons = Array.from(
+      new Set(allGames.map((g) => String(g.season))),
+    ).sort(
       (a, b) =>
         (this.parseSeasonStartYear(b) ?? 0) -
         (this.parseSeasonStartYear(a) ?? 0),
@@ -156,7 +125,6 @@ export class OskarstatistikenComponent implements OnInit {
 
     const aktuellerSpieltag = maxMatchday;
     const neuLabel = `Punkte hinzu nach Spieltag ${aktuellerSpieltag}`;
-    const axisColor = this.isDarkMode() ? '#e5e7eb' : '#575757ff';
 
     // Chart-Daten
     this.barChartData = {
@@ -164,13 +132,13 @@ export class OskarstatistikenComponent implements OnInit {
       datasets: [
         {
           label: 'Punkte vorher',
-          backgroundColor: secondaryColorRgba,
+          backgroundColor: secondaryFill,
           data: this.jahrestabelle.map((e) => Number(e.altePunkte)),
           stack: 'punkte',
         },
         {
           label: neuLabel,
-          backgroundColor: primaryColorRgba,
+          backgroundColor: primaryFill,
           data: this.jahrestabelle.map(
             (e) => Number(e.punkte) - Number(e.altePunkte),
           ),
@@ -179,36 +147,22 @@ export class OskarstatistikenComponent implements OnInit {
       ],
     };
 
-    this.barChartOptions = {
-      plugins: {
-        legend: {
-          display: true,
-          labels: { color: axisColor },
-        },
-        datalabels: { display: false },
-      },
-      responsive: true,
+    // Optionen zentral + Stack/No-Grid als Extra
+    this.barChartOptions = this.chartTheme.cartesianOptions({
       maintainAspectRatio: false,
+      plugins: { datalabels: { display: false } },
       scales: {
-        x: {
-          stacked: true,
-          grid: { display: false },
-          ticks: { color: axisColor },
-        },
-        y: {
-          stacked: true,
-          grid: { display: false },
-          ticks: { color: axisColor },
-        },
+        x: { stacked: true, grid: { display: false } },
+        y: { stacked: true, grid: { display: false } },
       },
-    };
+    });
   }
 
   // Timeline-Getter (mit Player-Daten)
   get oskarsiegerTimeline() {
     return this.oskarsiegerRaw.map((entry) => ({
       ...entry,
-      player: this.playersService.getPlayerById(entry.player_id),
+      player: this.playersService.getPlayerDetailsById(entry.player_id),
     }));
   }
 

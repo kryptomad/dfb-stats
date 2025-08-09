@@ -24,7 +24,7 @@ export class ProfilComponent implements OnInit {
 
   ngOnInit() {
     this.playerId = Number(this.route.snapshot.paramMap.get('id'));
-    this.player = this.playersService.getPlayerById(this.playerId);
+    this.player = this.playersService.getPlayerDetailsById(this.playerId);
   }
 
   

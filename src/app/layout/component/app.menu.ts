@@ -43,12 +43,6 @@ export class AppMenu implements OnInit {
             routerLink: 'pages/spieltag',
             fragment: 'aktueller-spieltag',
           },
-          {
-            label: 'Jahrestabelle',
-            icon: 'pi pi-fw pi-table',
-            routerLink: 'pages/spieltag',
-            fragment: 'jahrestabelle',
-          },
         ],
       },
       {

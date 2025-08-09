@@ -9,6 +9,7 @@ export interface Player {
   memberSince: number;
   isFounder: boolean;
   isActive: boolean;
+  color?: string;
 }
 
 @Injectable({ providedIn: 'root' })
@@ -16,10 +17,18 @@ export class PlayersService {
   private allPlayers: Player[] = [];
   private activePlayers: Player[] = [];
   private byId = new Map<number, Player>();
-
-  // falls du irgendwo eine Liste brauchst:
   private activePlayersSignal = signal<Player[]>([]);
   private allPlayersSignal = signal<Player[]>([]);
+  private playerColors: Record<number, string> = {
+    1: '#3498db',
+    2: '#1abc9c',
+    3: '#2ecc71',
+    4: '#e67e22', //inaktiv
+    5: '#f1c40f', //inaktiv
+    6: '#9b59b6',
+    7: '#e74c3c', //inaktiv
+    8: '#e91e63',
+  };
 
   constructor() {
     const raw: any[] = Object.create(playersData).default;
@@ -50,7 +59,7 @@ export class PlayersService {
   }
 
   /** Für Lookups (Timeline, Stats, Historie): IMMER in allen suchen */
-  getPlayerById(id: number): Player | undefined {
+  getPlayerDetailsById(id: number): Player | undefined {
     return this.byId.get(id);
   }
 
@@ -60,6 +69,11 @@ export class PlayersService {
   }
 
   getPlayerNameById(id: number): string {
-    return this.getPlayerById(id)?.name ?? `ID ${id}`;
+    return this.getPlayerDetailsById(id)?.name ?? `ID ${id}`;
+  }
+
+  // setze die Farben für jeweiligen SPieler IDs
+  getPlayerColorById(playerId: number): string {
+    return this.playerColors[playerId] ?? '#999999'; // Fallback grau
   }
 }
