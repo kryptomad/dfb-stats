@@ -9,11 +9,12 @@
   </ul>
 
   <h3 class="text-lg font-medium mt-4 mb-2">2. Punktewertung</h3>
-  <ul class="list-disc pl-5 space-y-1">
-    <li>Punkte werden für <strong>gewonnene Spiele</strong> vergeben.</li>
-    <li><strong>Tagessieger</strong> ist der Spieler mit den meisten Punkten am Spieltag und erhält den <strong>Oskar</strong>.</li>
-    <li><strong>Jahressieger</strong> ist der Spieler mit den meisten Punkten nach allen Spieltagen des Jahres.</li>
-  </ul>
+<ul class="list-disc pl-5 space-y-1">
+  <li>Punkte werden für <strong>jedes gewonnene Leg</strong> vergeben, unabhängig vom Spielergebnis des gesamten Spiels.</li>
+  <li><strong>Tagessieger</strong> ist der Spieler mit den meisten Punkten am Spieltag und erhält den <strong>Oskar</strong>.</li>
+  <li><strong>Jahressieger</strong> ist der Spieler mit den meisten Punkten nach allen Spieltagen des Jahres.</li>
+  <li>Die Saison besteht aus <strong>10 Spieltagen</strong> pro Jahr.</li>
+</ul>
 
   <h3 class="text-lg font-medium mt-4 mb-2">3. Ausbullen (PDC-Regeln)</h3>
   <ul class="list-disc pl-5 space-y-1">
@@ -26,20 +27,18 @@
 
   <h3 class="text-lg font-medium mt-4 mb-2">4. Schreiberpflicht</h3>
   <ul class="list-disc pl-5">
-    <li>Jeder Spieler schreibt <strong>zweimal am Abend</strong>. Die Einteilung erfolgt am Spieltag.</li>
+<li>Jeder Spieler schreibt <strong>zweimal am Abend</strong>. Die Einteilung wird vom Statistikwart vorab festgelegt und ist auf der Startseite unter <em>„Nächster Oskarabend“</em> einsehbar.</li>
     <li>Bei Unstimmigkeiten während des Spiels gilt das <strong>Wort des Schreibers</strong> als endgültig.</li>
   </ul>
-
 
 <h3 class="text-lg font-medium mt-4 mb-2">5. Spielprotokoll & Technik</h3>
 <ul class="list-disc pl-5 space-y-1">
   <li>Alle Spiele werden mit dem Tool <a href="http://www.n01darts.com/" target="_blank" class="text-primary hover:underline">N01</a> digital geschrieben.</li>
   <li>Nach jedem Spiel muss eine <strong>Output-CSV-Datei</strong> gespeichert werden, um die Ergebnisse in die Statistik zu übernehmen.</li>
-  <li>Die benötigte Technik (Laptop inkl. Software) bringt der <strong>Statistikwart</strong> mit zum Oskarabend.</li>
-  <li>Der Statistikwart übernimmt nach dem Spieltag die Übertragung der Daten in die Datenbank und aktualisiert die Vereins-Website.</li>
+  <li>Die benötigte Technik (Laptop inkl. Software) bringt der <strong>Statistikwart</strong> (<span class="roles">{{ playersService.statistikwartName || '—' }}</span>) mit zum Oskarabend.</li>
+  <li>Der Statistikwart (<span class="roles">{{ playersService.statistikwartName || '—' }}</span>) übernimmt nach dem Spieltag die Übertragung der Daten in die Datenbank und aktualisiert die Vereins-Website.</li>
 </ul>
 </section>
-
 
 <section id="dartkasse" class="rounded-xl border border-[var(--surface-border)] bg-[var(--surface-card)] p-5 md:p-6 mt-6">
   <h2 class="text-xl font-semibold mb-3">Dartkasse</h2>
@@ -48,7 +47,7 @@
   <ul class="list-disc pl-5 space-y-1">
     <li><strong>Monatsgeld:</strong> 30 € pro Spieler (monatlich).</li>
     <li><strong>Oskargeld:</strong> 10 € Beitrag pro Spieler.</li>
-    <li><strong>Strafgeld:</strong> 10 € (bei vereinbarten Verstößen, z. B. Nicht-Erscheinen oder Regelverletzung).</li>
+    <li><strong>Strafgeld:</strong> 10 € (bei vereinbarten Verstößen, z. B. Nicht-Erscheinen, Regelverletzung oder Vergessen des Oskars).</li>
     <li><strong>Biergeld:</strong> 10 € an den Gastgeber für die Bereitstellung des Biers am Spielabend.</li>
   </ul>
 
@@ -76,8 +75,8 @@
 
   <h3 class="text-lg font-medium mt-4 mb-2">4. Verwaltung</h3>
   <ul class="list-disc pl-5 space-y-1">
-    <li>Die Kasse wird vom <strong>Kassenwart</strong> geführt.</li>
-    <li>Alle Einzahlungen und Auszahlungen werden pro Spieltag vom Kassenwart dokumentiert.</li>
+    <li>Die Kasse wird vom <strong>Kassenwart</strong> (<span class="roles">{{ playersService.kassenwartName || '—' }}</span>) geführt.</li>
+    <li>Alle Einzahlungen und Auszahlungen werden pro Spieltag vom Kassenwart (<span class="roles">{{ playersService.kassenwartName || '—' }}</span>) dokumentiert.</li>
   </ul>
 </section>
 
