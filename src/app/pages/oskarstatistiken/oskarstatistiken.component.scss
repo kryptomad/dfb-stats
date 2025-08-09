@@ -1,0 +1,78 @@
+:host ::ng-deep .p-card {
+text-align: center;
+}
+
+.card-value {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  opacity: 0.69;
+}
+
+.card-names {
+  color: var(--text-color-secondary);
+  font-size: 1.06rem;
+  font-weight: 500;
+  margin-top: 0.6rem;
+  word-break: break-word;
+}
+
+/* Abstand und Layout */
+:host ::ng-deep .p-timeline {
+  padding: 1rem 0;
+}
+
+:host ::ng-deep .p-timeline-event-opposite {
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: var(--primary-color, #f39c12);
+}
+
+:host ::ng-deep .p-timeline-event-content {
+  display: flex;
+  align-items: center;
+  min-height: 60px;
+}
+
+/* Jahr-Anzeige (opposite Template) */
+.oskar-jahr {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: var(--text-color-secondary);
+}
+
+/* Gewinner-Container */
+.timeline-card {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Gewinner-Bild */
+.winner-avatar {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 6px; /* kleine Abrundung wie bei Spielerlisten */
+  border: 1px solid var(--surface-border, #444);
+}
+
+/* Gewinner-Name */
+.winner-name {
+  font-weight: 500;
+  font-size: 1rem;
+  color: var(--text-color);
+}
+
+/* Nickname in heller und kleiner */
+.winner-nickname {
+  font-size: 0.9rem;
+  color: var(--text-color-secondary);
+  margin-left: 0.25rem;
+  font-style: italic;
+}
+
+/* Fallback: Unbekannter Spieler */
+:host ::ng-deep .p-timeline-event-content i {
+  color: #ccc;
+}

@@ -176,10 +176,10 @@ export class AppMenu implements OnInit {
                 fragment: 'oskarsieger',
               },
               {
-                label: 'Trendverlauf Punkte',
+                label: 'Punkteentwicklung',
                 icon: 'pi pi-fw pi-chart-line',
                 routerLink: 'pages/oskarstatistiken',
-                fragment: 'trendverlauf-punkte',
+                fragment: 'punkteentwicklung',
               },
             ],
           },

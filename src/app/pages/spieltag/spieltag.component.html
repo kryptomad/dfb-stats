@@ -22,39 +22,3 @@
 <hr class="divider" />
 </div>
 </p-card>
-
-
-  <h2 id="jahrestabelle">Jahrestabelle {{ aktuelleSaison }}</h2>
-<p-card>
-<div class="mt-8" id="jahrestabelle">
-
-<div class="w-full h-[12rem] my-6">
-  <p-chart type="bar" [data]="barChartData" [options]="barChartOptions"></p-chart>
-</div>
-
-<p-table [value]="jahrestabelle" class="min-w-full text-center">
-  <ng-template pTemplate="header">
-    <tr>
-      <th>#</th>
-      <th>Name</th>
-      <th>Punkte</th>
-      <th>Trend</th>
-    </tr>
-  </ng-template>
-  <ng-template pTemplate="body" let-eintrag>
-    <tr>
-      <td>{{ eintrag.platz }}</td>
-      <td>{{ eintrag.name }}</td>
-      <td>{{ eintrag.punkte }}</td>
-      <td>
-        <!-- Pfeile wie gehabt -->
-        <span *ngIf="eintrag.trend === 'up'" class="pi pi-arrow-up text-primary ml-1"></span>
-        <span *ngIf="eintrag.trend === 'down'" class="pi pi-arrow-down text-secondary ml-1"></span>
-        <span *ngIf="eintrag.trend === 'same'" class="pi pi-arrow-right text-gray-400 ml-1"></span>
-      </td>
-    </tr>
-  </ng-template>
-</p-table>
-
-</div>
-</p-card>
