@@ -10,7 +10,7 @@ import { PlayersService } from '../../services/players.service';
 import { OskarsiegerService } from '../../services/oskarsieger.service';
 
 @Component({
-  selector: 'app-statistiken',
+  selector: 'app-gesamtstatistiken',
   standalone: true,
   imports: [
     CommonModule,
@@ -22,10 +22,10 @@ import { OskarsiegerService } from '../../services/oskarsieger.service';
     TimelineModule,
   ],
   providers: [StatsService, PlayersService, OskarsiegerService],
-  templateUrl: './statistiken.component.html',
-  styleUrl: './statistiken.component.scss',
+  templateUrl: './gesamtstatistiken.component.html',
+  styleUrl: './gesamtstatistiken.component.scss',
 })
-export class StatistikenComponent implements OnInit {
+export class GesamtstatistikenComponent implements OnInit {
   bestLegs: any[] = [];
   highestCheckout: any[] = [];
   best3DA: any[] = [];
