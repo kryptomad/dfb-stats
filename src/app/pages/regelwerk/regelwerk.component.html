@@ -27,7 +27,7 @@
 
   <h3 class="text-lg font-medium mt-4 mb-2">4. Schreiberpflicht</h3>
   <ul class="list-disc pl-5">
-<li>Jeder Spieler schreibt <strong>zweimal am Abend</strong>. Die Einteilung wird vom Statistikwart vorab festgelegt und ist auf der Startseite unter <em>„Nächster Oskarabend“</em> einsehbar.</li>
+<li>Jeder Spieler schreibt <strong>zweimal am Abend</strong>. Die Einteilung wird vom Statistikwart (<span class="roles">{{ playersService.statistikwartName || '—' }}</span>) vorab festgelegt und ist auf der Startseite unter <em>„Nächster Oskarabend“</em> einsehbar.</li>
     <li>Bei Unstimmigkeiten während des Spiels gilt das <strong>Wort des Schreibers</strong> als endgültig.</li>
   </ul>
 
@@ -35,7 +35,7 @@
 <ul class="list-disc pl-5 space-y-1">
   <li>Alle Spiele werden mit dem Tool <a href="http://www.n01darts.com/" target="_blank" class="text-primary hover:underline">N01</a> digital geschrieben.</li>
   <li>Nach jedem Spiel muss eine <strong>Output-CSV-Datei</strong> gespeichert werden, um die Ergebnisse in die Statistik zu übernehmen.</li>
-  <li>Die benötigte Technik (Laptop inkl. Software) bringt der <strong>Statistikwart</strong> (<span class="roles">{{ playersService.statistikwartName || '—' }}</span>) mit zum Oskarabend.</li>
+  <li>Die benötigte Technik (Laptop inkl. Software) bringt der Statistikwart (<span class="roles">{{ playersService.statistikwartName || '—' }}</span>) mit zum Oskarabend.</li>
   <li>Der Statistikwart (<span class="roles">{{ playersService.statistikwartName || '—' }}</span>) übernimmt nach dem Spieltag die Übertragung der Daten in die Datenbank und aktualisiert die Vereins-Website.</li>
 </ul>
 </section>
@@ -75,7 +75,7 @@
 
   <h3 class="text-lg font-medium mt-4 mb-2">4. Verwaltung</h3>
   <ul class="list-disc pl-5 space-y-1">
-    <li>Die Kasse wird vom <strong>Kassenwart</strong> (<span class="roles">{{ playersService.kassenwartName || '—' }}</span>) geführt.</li>
+    <li>Die Kasse wird vom Kassenwart (<span class="roles">{{ playersService.kassenwartName || '—' }}</span>) geführt.</li>
     <li>Alle Einzahlungen und Auszahlungen werden pro Spieltag vom Kassenwart (<span class="roles">{{ playersService.kassenwartName || '—' }}</span>) dokumentiert.</li>
   </ul>
 </section>
