@@ -23,11 +23,13 @@ def export_players(limit=None):
             name,
             nickname,
             image,
+            location,
             roles,
             memberSince,
             leftAt,
             isFounder,
             isActive,
+            color,
             comment
         FROM players
         ORDER BY player_id
@@ -45,11 +47,13 @@ def export_players(limit=None):
             "name": row["name"],
             "nickname": row["nickname"],
             "image": row["image"],
+            "location": row["location"],
             "roles": row["roles"],
             "memberSince": row["memberSince"],
             "leftAt": row["leftAt"],
             "isFounder": bool(row["isFounder"]),  # 0/1 -> True/False
             "isActive": bool(row["isActive"]),    # 0/1 -> True/False
+            "color": row["color"],
             "comment": row["comment"]
         })
 

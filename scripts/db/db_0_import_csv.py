@@ -24,6 +24,7 @@ CREATE TABLE IF NOT EXISTS players (
     leftAt INTEGER,
     isFounder INTEGER,
     isActive INTEGER,
+    color TEXT,
     comment TEXT
 )
 ''')
