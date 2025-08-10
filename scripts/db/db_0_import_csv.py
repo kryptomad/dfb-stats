@@ -18,6 +18,7 @@ CREATE TABLE IF NOT EXISTS players (
     name TEXT NOT NULL,
     nickname TEXT,
     image TEXT,
+    location TEXT,
     roles TEXT,
     memberSince INTEGER,
     leftAt INTEGER,
