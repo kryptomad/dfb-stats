@@ -165,12 +165,4 @@ export class OskarstatistikenComponent implements OnInit {
       player: this.playersService.getPlayer(entry.player_id),
     }));
   }
-
-  onImgError(ev: Event) {
-    const img = ev.target as HTMLImageElement;
-    if (!img.dataset['fallback']) {
-      img.dataset['fallback'] = '1';
-      img.src = 'assets/players/dummy.png';
-    }
-  }
 }

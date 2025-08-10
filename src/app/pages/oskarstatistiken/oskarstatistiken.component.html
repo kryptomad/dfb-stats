@@ -44,8 +44,7 @@
     <ng-container *ngIf="event.player">
       <div class="timeline-card">
 <img
-  [src]="'assets/players/' + (event.player?.image || 'dummy.png')"
-  (error)="onImgError($event)"
+  [src]="'assets/players/' + event.player?.image"
   class="winner-avatar"
   alt=""
 />
