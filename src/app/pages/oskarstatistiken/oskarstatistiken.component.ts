@@ -9,6 +9,7 @@ import { GamesService } from '../../services/games.service';
 import { StatsService } from '../../services/stats.service';
 import { PlayersService } from '../../services/players.service';
 import { OskarstatsOskarsiegerTimelineService } from '../../services/oskarstats-oskarsieger-timeline.service';
+import { OskarstatsPunkteentwicklungService } from '../../services/oskarstats-punkteentwicklung.service';
 import { ChartThemeService } from '../../services/chart-theme.service';
 
 @Component({
@@ -22,6 +23,7 @@ export class OskarstatistikenComponent implements OnInit {
   constructor(
     private statsService: StatsService,
     private oskarstatsOskarsiegerTimelineServicee: OskarstatsOskarsiegerTimelineService,
+    private oskarstatsPunkteentwicklungService: OskarstatsPunkteentwicklungService,
     private playersService: PlayersService,
     private gamesService: GamesService,
     private chartTheme: ChartThemeService,
@@ -159,17 +161,20 @@ export class OskarstatistikenComponent implements OnInit {
       this.oskarstatsOskarsiegerTimelineServicee.getManualWinners();
 
     // Stats laden → danach: Formkurve + vollständige Siegerliste + Jahrestabelle
-    this.statsService.loadEnrichedStats().subscribe(() => {
-      this.oskarsiegerRaw =
-        this.oskarstatsOskarsiegerTimelineServicee.getAllWinnersMerged();
+    this.oskarstatsPunkteentwicklungService
+      .loadEnrichedStats2()
+      .subscribe(() => {
+        this.oskarsiegerRaw =
+          this.oskarstatsOskarsiegerTimelineServicee.getAllWinnersMerged();
 
-      // Punkteentwicklung
-      this.formkurveData = this.statsService.getFormkurveData();
-      this.formkurveOptions = this.chartTheme.cartesianOptions();
+        // Punkteentwicklung
+        this.formkurveData =
+          this.oskarstatsPunkteentwicklungService.getFormkurveData2();
+        this.formkurveOptions = this.chartTheme.cartesianOptions();
 
-      // Jahrestabelle inkl. Chart
-      this.buildOskarCharts();
-    });
+        // Jahrestabelle inkl. Chart
+        this.buildOskarCharts();
+      });
   }
   //#endregion
 }

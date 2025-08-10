@@ -88,38 +88,7 @@ export class StatsService {
     return this.getAllWithBestValue('avg_first9', 'max');
   }
 
-  getFormkurveData(): any {
-    if (!this.enrichedStats.length) return { labels: [], datasets: [] };
-
-    // Alle Seasons, aufsteigend sortiert
-    const seasons = Array.from(
-      new Set(this.enrichedStats.map((s) => s.season)),
-    ).sort();
-
-    // Alle Spieler (Namen, um Farben/Legende schöner zu haben)
-    const playerNames = Array.from(
-      new Set(this.enrichedStats.map((s) => s.playerName)),
-    );
-
-    const datasets = playerNames.map((player) => {
-      return {
-        label: player,
-        data: seasons.map((season) =>
-          this.enrichedStats
-            .filter((s) => s.season === season && s.playerName === player)
-            .reduce((sum, s) => sum + (s.legs_won || 0), 0),
-        ),
-        fill: false, // Nur Linie, keine Fläche
-        tension: 0.2, // Etwas smooth
-      };
-    });
-
-    return {
-      labels: seasons.map((s) => s.toString()), // z.B. ['2018', '2019', ...]
-      datasets,
-    };
-  }
-  /** NEU: Zugriff auf die aktuell geladenen Stats */
+  /** NEU: Zugriff auf die aktuell geladenen Stats - gehört zur TIMELINE? */
   getAllStats(): any[] {
     return this.enrichedStats || [];
   }
