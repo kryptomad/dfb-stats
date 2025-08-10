@@ -9,6 +9,11 @@
     <ng-template pTemplate="title">{{ player.name }}</ng-template>
     <ng-template pTemplate="subtitle">
   <span class="nickname">{{ player.nickname ? player.nickname : ' ' }}</span>
+<div *ngIf="player.roles" 
+     class="text-sm mt-2 text-gray-700 font-normal flex items-center gap-1">
+  <i class="pi pi-id-card text-gray-500"></i>
+  <span class="font-normal">{{ player.roles }}</span>
+</div>
 </ng-template>
 <div class="text-l mt-2">
   <p-tag *ngIf="player.isFounder; else memberSinceTpl" severity="primary" value="Gründer"></p-tag>
