@@ -17,23 +17,6 @@ text-align: center;
   word-break: break-word;
 }
 
-/* Abstand und Layout */
-:host ::ng-deep .p-timeline {
-  padding: 1rem 0;
-}
-
-:host ::ng-deep .p-timeline-event-opposite {
-  font-weight: bold;
-  font-size: 1.1rem;
-  color: var(--primary-color, #f39c12);
-}
-
-:host ::ng-deep .p-timeline-event-content {
-  display: flex;
-  align-items: center;
-  min-height: 60px;
-}
-
 /* Jahr-Anzeige (opposite Template) */
 .oskar-jahr {
   font-weight: 700;
@@ -54,7 +37,7 @@ text-align: center;
   height: 40px;
   object-fit: cover;
   border-radius: 6px; /* kleine Abrundung wie bei Spielerlisten */
-  border: 1px solid var(--surface-border, #444);
+  border: 1px solid var(--surface-border);
 }
 
 /* Gewinner-Name */
@@ -72,7 +55,25 @@ text-align: center;
   font-style: italic;
 }
 
-/* Fallback: Unbekannter Spieler */
-:host ::ng-deep .p-timeline-event-content i {
-  color: #ccc;
+/* Linke Seite (bei dir = even) an die Linie ziehen + rechtsbündig */
+:host ::ng-deep .p-timeline.p-timeline-vertical
+  .p-timeline-event:nth-child(even) .p-timeline-event-content {
+  display: flex;
+  justify-content: flex-end;
+  text-align: right;
+}
+
+/* Linke Seite: Bild an die Linie, Name daneben (gespiegelt) */
+:host ::ng-deep .p-timeline.p-timeline-vertical
+  .p-timeline-event:nth-child(even) .timeline-card {
+  display: inline-flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+/* Rechte Seite sicherheitshalber normal lassen */
+:host ::ng-deep .p-timeline.p-timeline-vertical
+  .p-timeline-event:nth-child(odd) .timeline-card {
+  flex-direction: row;
 }
