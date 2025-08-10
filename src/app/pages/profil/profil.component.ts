@@ -23,8 +23,8 @@ export class ProfilComponent implements OnInit {
   constructor(private route: ActivatedRoute, private playersService: PlayersService) {}
 
   ngOnInit() {
-    this.playerId = Number(this.route.snapshot.paramMap.get('id'));
-    this.player = this.playersService.getPlayerDetailsById(this.playerId);
+  this.playerId = Number(this.route.snapshot.paramMap.get('id'));
+  this.player = this.playersService.getPlayer(this.playerId);
   }
 
   

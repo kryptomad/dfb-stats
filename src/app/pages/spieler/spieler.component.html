@@ -1,6 +1,6 @@
 
 <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-  <p-card class="cursor-pointer rounded-xl hover:scale-[1.04] transition-all duration-300 min-h-[260px] max-h-[300px] max-w-[300px]" *ngFor="let player of players()">
+  <p-card class="cursor-pointer rounded-xl hover:scale-[1.04] transition-all duration-300 min-h-[260px] max-h-[300px] max-w-[300px]" *ngFor="let player of players">
     <ng-template pTemplate="header">
       <a [routerLink]="['/pages/profil', player.id]">
       <img [src]="'assets/players/' + player.image" [alt]="player.name" class="w-full h-48 object-cover rounded-t-xl transition duration-300 hover:brightness-90" />

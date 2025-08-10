@@ -18,7 +18,9 @@ export class StatsService {
       map((stats) =>
         stats.map((stat) => ({
           ...stat,
-          playerName: this.playersService.getPlayerNameById(stat.player_id),
+          playerName:
+            this.playersService.getPlayer(stat.player_id)?.name ??
+            `ID ${stat.player_id}`,
         })),
       ),
       tap((data) => (this.enrichedStats = data)),

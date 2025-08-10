@@ -24,7 +24,6 @@ import { RouterModule } from '@angular/router';
 })
 export class SpielerComponent {
   private _playersService = inject(PlayersService);
-  private _players = this._playersService.loadPlayers();
 
-  players = computed(() => this._players());
+  players: Player[] = this._playersService.getPlayers({ activeOnly: true });
 }

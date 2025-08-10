@@ -162,7 +162,7 @@ export class OskarstatistikenComponent implements OnInit {
   get oskarsiegerTimeline() {
     return this.oskarsiegerRaw.map((entry) => ({
       ...entry,
-      player: this.playersService.getPlayerDetailsById(entry.player_id),
+      player: this.playersService.getPlayer(entry.player_id),
     }));
   }
 

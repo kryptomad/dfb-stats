@@ -2,13 +2,6 @@ import { Injectable } from '@angular/core';
 import { PlayersService } from './players.service';
 import { ChartThemeService } from './chart-theme.service';
 
-type Player = {
-  id: number;
-  name: string;
-  isActive?: boolean;
-  color?: string;
-};
-
 type Game = {
   game_id: number;
   season: string;
@@ -17,7 +10,11 @@ type Game = {
   player2_id: number;
   legs: {
     leg_number: number;
-    rounds: { round: number; p1_score: number | null; p2_score: number | null }[];
+    rounds: {
+      round: number;
+      p1_score: number | null;
+      p2_score: number | null;
+    }[];
   }[];
 };
 
@@ -27,18 +24,18 @@ const BUCKETS = [26, 41, 45, 60, 100, 140, 180] as const;
 export class ScoreAggService {
   constructor(
     private playersService: PlayersService,
-    private chartTheme: ChartThemeService
+    private chartTheme: ChartThemeService,
   ) {}
 
   /** Top‑5 Scores pro aktiven Spieler (häufigste Werte, Tie‑Break: höherer Score) */
   top5ByPlayerFromGames(
     games: Game[],
-    opts: { season?: string | null; first9Only?: boolean } = {}
+    opts: { season?: string | null; first9Only?: boolean } = {},
   ): Record<string, { score: number; freq: number }[]> {
     const { season = null, first9Only = false } = opts;
 
-    const active = this.playersService.getAllPlayers().filter(p => p.isActive);
-    const activeIds = new Set(active.map(p => p.id));
+    const active = this.playersService.getPlayers({ activeOnly: true });
+    const activeIds = new Set(active.map((p) => p.id));
 
     // player_id -> (score -> freq)
     const counts = new Map<number, Map<number, number>>();
@@ -66,9 +63,9 @@ export class ScoreAggService {
     counts.forEach((m, pid) => {
       const arr = [...m.entries()]
         .map(([score, freq]) => ({ score, freq }))
-        .sort((a, b) => (b.freq - a.freq) || (b.score - a.score))
+        .sort((a, b) => b.freq - a.freq || b.score - a.score)
         .slice(0, 5);
-      const name = this.playersService.getPlayerNameById(pid);
+      const name = this.playersService.getPlayer(pid)?.name ?? `ID ${pid}`;
       out[name] = arr;
     });
 
@@ -78,16 +75,21 @@ export class ScoreAggService {
   /** Radar‑Daten (Häufigkeit je Bucket pro aktiven Spieler) */
   radarData(
     games: Game[],
-    opts: { season?: string | null; first9Only?: boolean } = {}
+    opts: { season?: string | null; first9Only?: boolean } = {},
   ) {
     const { season = null, first9Only = false } = opts;
 
-    const players = this.playersService.getAllPlayers().filter(p => p.isActive);
-    const activeIds = new Set(players.map(p => p.id));
+    const players = this.playersService.getPlayers({ activeOnly: true });
+    const activeIds = new Set(players.map((p) => p.id));
 
     // player_id -> counts pro Bucket
     const mat = new Map<number, number[]>();
-    players.forEach(p => mat.set(p.id, BUCKETS.map(() => 0)));
+    players.forEach((p) =>
+      mat.set(
+        p.id,
+        BUCKETS.map(() => 0),
+      ),
+    );
 
     const bump = (pid: number, raw: number | null) => {
       if (!activeIds.has(pid)) return;
@@ -112,16 +114,16 @@ export class ScoreAggService {
     return {
       labels: BUCKETS.map(String),
       datasets: players.map((p) => {
-        const color = this.playersService.getPlayerColorById(p.id);
+        const color = this.playersService.getPlayer(p.id)?.color ?? '#999999';
         return {
           label: p.name,
           data: mat.get(p.id) ?? BUCKETS.map(() => 0),
           borderColor: color,
           backgroundColor: this.chartTheme.hexToRgba(color, 0.33),
           pointRadius: 2,
-          fill: true
+          fill: true,
         };
-      })
+      }),
     };
   }
 }

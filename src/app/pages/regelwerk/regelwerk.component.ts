@@ -1,18 +1,11 @@
-import { Component, OnInit } from '@angular/core';
-import { PlayersService } from '../../services/players.service';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-regelwerk',
   imports: [],
-  providers: [PlayersService],
+  providers: [],
   templateUrl: './regelwerk.component.html',
   styleUrl: './regelwerk.component.scss',
   standalone: true,
 })
-export class RegelwerkComponent implements OnInit {
-  constructor(public playersService: PlayersService) {} // public, damit HTML zugreifen kann
-
-  ngOnInit() {
-    this.playersService.initRoles();
-  }
-}
+export class RegelwerkComponent {}
