@@ -1,19 +1,48 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, forkJoin } from 'rxjs';
-import { map, tap } from 'rxjs/operators';
+import { map, tap, shareReplay } from 'rxjs/operators';
 import { PlayersService } from './players.service';
-
 import * as SeasonMatchday from '../shared/season-matchday.helpers';
+
+export interface StatRow {
+  season: string | number;
+  matchday: number; // aus matchday | match_day | spieltag
+  player_id: number;
+  legs_won: number;
+}
 
 @Injectable({ providedIn: 'root' })
 export class StatsService {
   enrichedStats: any[] = [];
 
+  private readonly statsUrl = 'assets/stats.json';
+
+  getStatsRaw(): Observable<any[]> {
+    return this.http.get<any[]>(this.statsUrl).pipe(shareReplay(1));
+  }
+
   constructor(
     private playersService: PlayersService,
     private http: HttpClient,
   ) {}
+
+  getStatsNorm$() {
+    return this.getStatsRaw().pipe(
+      map((rows) =>
+        rows.map(
+          (r: any) =>
+            ({
+              season: r.season,
+              matchday: Number(r.matchday ?? r.match_day ?? r.spieltag ?? 0),
+              player_id: Number(r.player_id),
+              legs_won: Number(r.legs_won ?? 0),
+            }) as StatRow,
+        ),
+      ),
+      shareReplay(1),
+    );
+  }
 
   loadEnrichedStats(): Observable<any> {
     return this.http.get<any[]>('../../assets/stats.json').pipe(

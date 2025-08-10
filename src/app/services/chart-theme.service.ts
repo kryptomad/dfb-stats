@@ -17,16 +17,25 @@ export class ChartThemeService {
 
   watchDomTheme() {
     const mo = new MutationObserver(() => this.isDark.set(this.isDomDark()));
-    mo.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
+    mo.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ['class'],
+    });
   }
- getCssVar(name: string, fallback: string): string {
-    const v = getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+  getCssVar(name: string, fallback: string): string {
+    const v = getComputedStyle(document.documentElement)
+      .getPropertyValue(name)
+      .trim();
     return v || fallback;
   }
 
   hexToRgba(hex: string, alpha: number): string {
     let h = hex.replace('#', '').trim();
-    if (h.length === 3) h = h.split('').map(x => x + x).join('');
+    if (h.length === 3)
+      h = h
+        .split('')
+        .map((x) => x + x)
+        .join('');
     const num = parseInt(h, 16);
     const r = (num >> 16) & 255;
     const g = (num >> 8) & 255;
@@ -46,39 +55,40 @@ export class ChartThemeService {
     return { text, grid };
   }
 
-  radarOptions({ showTicks = false } = {}) {
-    const { text, grid } = this.baseColors();
-    return {
-      responsive: true,
-      plugins: { legend: { labels: { color: text } }, datalabels: { color: text } },
-      scales: {
-        r: {
-          beginAtZero: true,
-          pointLabels: { color: text, font: { size: 12 } },
-          angleLines: { color: grid },
-          grid: { color: grid },
-          ticks: { display: showTicks, showLabelBackdrop: false }
-        }
-      }
-    };
-  }
-
-  cartesianOptions(extra?: any) {
+  getRadarChartOptions({ showTicks = false } = {}) {
     const { text, grid } = this.baseColors();
     return {
       responsive: true,
       plugins: {
         legend: { labels: { color: text } },
         datalabels: { color: text },
-        tooltip: { enabled: true }
       },
       scales: {
-        x: { ticks: { color: text }, grid: { color: grid } },
-        y: { ticks: { color: text }, grid: { color: grid } }
+        r: {
+          beginAtZero: true,
+          pointLabels: { color: text, font: { size: 12 } },
+          angleLines: { color: grid },
+          grid: { color: grid },
+          ticks: { display: showTicks, showLabelBackdrop: false },
+        },
       },
-      ...(extra ?? {})
     };
   }
 
-
+  getLineChartOptions(extra?: any) {
+    const { text, grid } = this.baseColors();
+    return {
+      responsive: true,
+      plugins: {
+        legend: { labels: { color: text } },
+        datalabels: { color: text },
+        tooltip: { enabled: true },
+      },
+      scales: {
+        x: { ticks: { color: text }, grid: { color: grid } },
+        y: { ticks: { color: text }, grid: { color: grid } },
+      },
+      ...(extra ?? {}),
+    };
+  }
 }

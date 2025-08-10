@@ -66,7 +66,7 @@ export class SpielerstatistikenComponent implements OnInit {
 
   ngOnInit(): void {
     this.chartTheme.watchDomTheme(); // reagiert auf Dark/Light
-    this.radarOptions = this.chartTheme.radarOptions({ showTicks: false });
+    this.radarOptions = this.chartTheme.getRadarChartOptions({ showTicks: false });
 
     this.http.get<Game[]>('assets/legs.json').subscribe((games) => {
       this.games = games ?? [];
@@ -107,7 +107,7 @@ export class SpielerstatistikenComponent implements OnInit {
   }
 
   updateRadar(): void {
-    this.radarOptions = this.chartTheme.radarOptions(); // <-- IMMER vom Service
+    this.radarOptions = this.chartTheme.getRadarChartOptions(); // <-- IMMER vom Service
     this.radarData = this.agg.radarData(this.games, {
       season: this.selectedSeason,
       first9Only: this.first9Only,
