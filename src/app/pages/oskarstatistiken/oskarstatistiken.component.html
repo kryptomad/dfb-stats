@@ -1,4 +1,4 @@
-  <h2 id="jahrestabelle">Jahrestabelle {{ aktuelleSaison }}</h2>
+  <h2 id="jahrestabelle">Aktueller Tabellenstand {{ aktuelleSaison }}</h2>
 <p-card>
 <div class="mt-8" id="jahrestabelle">
 
@@ -34,6 +34,12 @@
 </p-card>
 
 
+<h2 id="punkteentwicklung">Punkteentwicklung</h2>
+<p-card>
+<h5>Punkteentwicklung Gesamtwertung 2018 - Heute</h5>
+<p-chart type="line" [data]="formkurveData" [options]="formkurveOptions"></p-chart>
+</p-card>
+
 <h2 id="oskarsieger">Oskarsieger</h2>
 <p-card>
 <p-timeline [value]="oskarsiegerTimeline" layout="vertical" align="alternate">
@@ -61,8 +67,3 @@
 </p-timeline>
 </p-card>
 
-<h2 id="punkteentwicklung">Punkteentwicklung</h2>
-<p-card>
-<h5>Punkteentwicklung Gesamtwertung 2018 - Heute</h5>
-<p-chart type="line" [data]="formkurveData" [options]="formkurveOptions"></p-chart>
-</p-card>

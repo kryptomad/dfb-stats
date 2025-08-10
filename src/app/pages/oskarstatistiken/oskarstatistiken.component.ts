@@ -4,17 +4,12 @@ import { Card } from 'primeng/card';
 import { ChartModule } from 'primeng/chart';
 import { TimelineModule } from 'primeng/timeline';
 import { TableModule } from 'primeng/table';
+
 import { GamesService } from '../../services/games.service';
 import { StatsService } from '../../services/stats.service';
 import { PlayersService } from '../../services/players.service';
-import { OskarsiegerService } from '../../services/oskarsieger.service';
+import { OskarstatsOskarsiegerTimelineService } from '../../services/oskarstats-oskarsieger-timeline.service';
 import { ChartThemeService } from '../../services/chart-theme.service';
-
-interface Jahreszeile {
-  name: string;
-  altePunkte: number;
-  punkte: number;
-}
 
 @Component({
   standalone: true,
@@ -24,44 +19,21 @@ interface Jahreszeile {
   styleUrls: ['./oskarstatistiken.component.scss'],
 })
 export class OskarstatistikenComponent implements OnInit {
-  formkurveData: any = {};
-  formkurveOptions: any = {};
-  oskarsiegerRaw: { jahr: number; player_id: number }[] = [];
-  letzteSpieltage: any[] = [];
-  jahrestabelle: any[] = [];
-  aktuelleSaison = '';
-  barChartData: any = { labels: [], datasets: [] };
-  barChartOptions: any = {};
-
   constructor(
     private statsService: StatsService,
-    private oskarsiegerService: OskarsiegerService,
+    private oskarstatsOskarsiegerTimelineServicee: OskarstatsOskarsiegerTimelineService,
     private playersService: PlayersService,
     private gamesService: GamesService,
     private chartTheme: ChartThemeService,
   ) {}
 
-  ngOnInit() {
-    this.barChartOptions = this.chartTheme.cartesianOptions({
-      maintainAspectRatio: false,
-    });
+  //#region 1) JAHRESTABELLE (Bar-Chart + Tabelle)
+  aktuelleSaison = '';
+  jahrestabelle: any[] = [];
+  barChartData: any = { labels: [], datasets: [] };
+  barChartOptions: any = {};
 
-    this.chartTheme.watchDomTheme();
-
-    this.oskarsiegerRaw = this.oskarsiegerService.getManualWinners();
-
-    this.statsService.loadEnrichedStats().subscribe(() => {
-      this.oskarsiegerRaw = this.oskarsiegerService.getAllWinnersMerged();
-
-      this.formkurveData = this.statsService.getFormkurveData();
-      this.formkurveOptions = this.chartTheme.cartesianOptions();
-
-      this.buildOskarCharts();
-    });
-  }
-
-  // -------- Helpers --------
-
+  /** Hilfsparser für Seasons (Startjahr extrahieren) */
   private parseSeasonStartYear(season: unknown): number | null {
     if (typeof season === 'number' && Number.isFinite(season)) return season;
     const s = String(season ?? '');
@@ -69,6 +41,7 @@ export class OskarstatistikenComponent implements OnInit {
     return m ? parseInt(m[0], 10) : null;
   }
 
+  /** Berechnet aktuelle Jahrestabelle + gestapeltes Balkendiagramm */
   private buildOskarCharts() {
     // Fills aus Theme/CSS
     const primaryFill = this.chartTheme.getPrimaryFill(0.55);
@@ -78,7 +51,7 @@ export class OskarstatistikenComponent implements OnInit {
     );
     const secondaryFill = this.chartTheme.hexToRgba(secondary, 0.4);
 
-    // aktuelle Saison (neueste Season nach Startjahr)
+    // neueste Saison nach Startjahr
     const allGames = this.gamesService.getAllGames();
     const seasons = Array.from(
       new Set(allGames.map((g) => String(g.season))),
@@ -89,13 +62,12 @@ export class OskarstatistikenComponent implements OnInit {
     );
     this.aktuelleSaison = seasons[0] ?? '';
 
-    // Spiele der aktuellen Saison
+    // Spiele & letzter Spieltag
     const aktuelleSpiele = allGames.filter(
       (s) => String(s.season) === this.aktuelleSaison,
     );
     if (!aktuelleSpiele.length) return;
 
-    // aktuellster Spieltag
     const matchdays = aktuelleSpiele
       .map((s) => Number(s.matchday))
       .filter((n) => Number.isFinite(n));
@@ -108,7 +80,7 @@ export class OskarstatistikenComponent implements OnInit {
       Math.max(0, maxMatchday - 1),
     );
 
-    // Trends + Diff-Punkte
+    // Trends + Diff-Punkte einrechnen
     this.jahrestabelle = tabelleJetzt.map((eintrag) => {
       const vorher = tabelleVorher.find((e) => e.name === eintrag.name);
       const altePunkte = vorher ? Number(vorher.punkte) : 0;
@@ -123,10 +95,9 @@ export class OskarstatistikenComponent implements OnInit {
       return { ...eintrag, altePunkte, alterPlatz, trend };
     });
 
-    const aktuellerSpieltag = maxMatchday;
-    const neuLabel = `Punkte hinzu nach Spieltag ${aktuellerSpieltag}`;
+    const neuLabel = `Punkte hinzu nach Spieltag ${maxMatchday}`;
 
-    // Chart-Daten
+    // Chart-Daten & Optionen
     this.barChartData = {
       labels: this.jahrestabelle.map((e) => e.name),
       datasets: [
@@ -147,7 +118,6 @@ export class OskarstatistikenComponent implements OnInit {
       ],
     };
 
-    // Optionen zentral + Stack/No-Grid als Extra
     this.barChartOptions = this.chartTheme.cartesianOptions({
       maintainAspectRatio: false,
       plugins: { datalabels: { display: false } },
@@ -157,12 +127,49 @@ export class OskarstatistikenComponent implements OnInit {
       },
     });
   }
+  //#endregion
 
-  // Timeline-Getter (mit Player-Daten)
+  //#region 2) OSKARSIEGER (Timeline)
+  oskarsiegerRaw: { jahr: number; player_id: number }[] = [];
+
+  /** Angereicherte Timeline-Einträge inkl. Player-Objekt */
   get oskarsiegerTimeline() {
     return this.oskarsiegerRaw.map((entry) => ({
       ...entry,
       player: this.playersService.getPlayer(entry.player_id),
     }));
   }
+  //#endregion
+
+  //#region 3) PUNKTEENTWICKLUNG (Formkurve/Liniendiagramm)
+  formkurveData: any = {};
+  formkurveOptions: any = {};
+  //#endregion
+
+  //#region LEBENSZYKLUS
+  ngOnInit() {
+    // Theme initialisieren / reagieren lassen
+    this.barChartOptions = this.chartTheme.cartesianOptions({
+      maintainAspectRatio: false,
+    });
+    this.chartTheme.watchDomTheme();
+
+    // Manuelle Sieger laden (Startzustand)
+    this.oskarsiegerRaw =
+      this.oskarstatsOskarsiegerTimelineServicee.getManualWinners();
+
+    // Stats laden → danach: Formkurve + vollständige Siegerliste + Jahrestabelle
+    this.statsService.loadEnrichedStats().subscribe(() => {
+      this.oskarsiegerRaw =
+        this.oskarstatsOskarsiegerTimelineServicee.getAllWinnersMerged();
+
+      // Punkteentwicklung
+      this.formkurveData = this.statsService.getFormkurveData();
+      this.formkurveOptions = this.chartTheme.cartesianOptions();
+
+      // Jahrestabelle inkl. Chart
+      this.buildOskarCharts();
+    });
+  }
+  //#endregion
 }

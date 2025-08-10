@@ -7,7 +7,7 @@ import { StatsService } from './stats.service';
 type Winner = { jahr: number; player_id: number; label: string };
 
 @Injectable({ providedIn: 'root' })
-export class OskarsiegerService {
+export class OskarstatsOskarsiegerTimelineService {
   constructor(private statsService: StatsService) {}
 
   private parseSeasonStartYear(season: unknown): number | null {

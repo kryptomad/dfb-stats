@@ -8,7 +8,7 @@ import { ToggleButtonModule } from 'primeng/togglebutton';
 import { FormsModule } from '@angular/forms';
 import { SelectButtonModule } from 'primeng/selectbutton';
 import { InputSwitchModule } from 'primeng/inputswitch';
-import { ScoreAggService } from '../../services/score-agg.service';
+import { SpielerstatsScoreVergleichService } from '../../services/spielerstats-score-vergleich.service';
 import { ChartThemeService } from '../../services/chart-theme.service';
 
 // Typen passend zu deiner legs.json (verschachtelt)
@@ -60,7 +60,7 @@ export class SpielerstatistikenComponent implements OnInit {
 
   constructor(
     private http: HttpClient,
-    private agg: ScoreAggService,
+    private agg: SpielerstatsScoreVergleichService,
     private chartTheme: ChartThemeService,
   ) {}
 

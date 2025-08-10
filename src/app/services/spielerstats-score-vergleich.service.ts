@@ -21,7 +21,7 @@ type Game = {
 const BUCKETS = [26, 41, 45, 60, 100, 140, 180] as const;
 
 @Injectable({ providedIn: 'root' })
-export class ScoreAggService {
+export class SpielerstatsScoreVergleichService {
   constructor(
     private playersService: PlayersService,
     private chartTheme: ChartThemeService,
