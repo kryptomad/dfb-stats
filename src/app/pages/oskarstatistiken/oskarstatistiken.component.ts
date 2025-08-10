@@ -22,7 +22,7 @@ import { ChartThemeService } from '../../services/chart-theme.service';
 export class OskarstatistikenComponent implements OnInit {
   constructor(
     private statsService: StatsService,
-    private oskarstatsOskarsiegerTimelineServicee: OskarstatsOskarsiegerTimelineService,
+    private oskarstatsOskarsiegerTimelineService: OskarstatsOskarsiegerTimelineService,
     private oskarstatsPunkteentwicklungService: OskarstatsPunkteentwicklungService,
     private playersService: PlayersService,
     private gamesService: GamesService,
@@ -150,31 +150,32 @@ export class OskarstatistikenComponent implements OnInit {
 
   //#region LEBENSZYKLUS
   ngOnInit() {
-    // Theme initialisieren / reagieren lassen
+    // 1) Theme / Options initialisieren
     this.barChartOptions = this.chartTheme.cartesianOptions({
       maintainAspectRatio: false,
     });
     this.chartTheme.watchDomTheme();
 
-    // Manuelle Sieger laden (Startzustand)
+    // 2) Startzustand: manuelle Sieger zeigen (optional)
     this.oskarsiegerRaw =
-      this.oskarstatsOskarsiegerTimelineServicee.getManualWinners();
+      this.oskarstatsOskarsiegerTimelineService.getManualWinners();
 
-    // Stats laden → danach: Formkurve + vollständige Siegerliste + Jahrestabelle
-    this.oskarstatsPunkteentwicklungService
-      .loadEnrichedStats2()
-      .subscribe(() => {
-        this.oskarsiegerRaw =
-          this.oskarstatsOskarsiegerTimelineServicee.getAllWinnersMerged();
+    // 3) Stats laden -> danach alles aufbauen
+    this.statsService.loadEnrichedStats().subscribe((enriched) => {
+      // Timeline
+      this.oskarsiegerRaw =
+        this.oskarstatsOskarsiegerTimelineService.getAllWinnersMerged();
 
-        // Punkteentwicklung
-        this.formkurveData =
-          this.oskarstatsPunkteentwicklungService.getFormkurveData2();
-        this.formkurveOptions = this.chartTheme.cartesianOptions();
+      // Punkteentwicklung
+      this.formkurveData =
+        this.oskarstatsPunkteentwicklungService.buildFormkurveData(enriched);
 
-        // Jahrestabelle inkl. Chart
-        this.buildOskarCharts();
-      });
+      // Chart-Optionen für Punkteentwicklung
+      this.formkurveOptions = this.chartTheme.cartesianOptions({});
+
+      // Jahrestabelle inkl. Chart
+      this.buildOskarCharts();
+    });
   }
   //#endregion
 }

@@ -29,20 +29,20 @@ export class OskarstatsPunkteentwicklungService {
     );
   }
 
-  getFormkurveData2(): any {
-    if (!this.enrichedStats.length) return { labels: [], datasets: [] };
+  buildFormkurveData(enrichedStats: any[]): any {
+    if (!enrichedStats.length) return { labels: [], datasets: [] };
 
     const seasons = Array.from(
-      new Set(this.enrichedStats.map((s) => s.season)),
+      new Set(enrichedStats.map((s) => s.season)),
     ).sort();
 
     const playerNames = Array.from(
-      new Set(this.enrichedStats.map((s) => s.playerName)),
+      new Set(enrichedStats.map((s) => s.playerName)),
     );
 
     const datasets = playerNames.map((player) => {
       // Player-ID aus den Stats holen
-      const playerId = this.enrichedStats.find(
+      const playerId = enrichedStats.find(
         (s) => s.playerName === player,
       )?.player_id;
       const color = this.playersService.getPlayer(playerId)?.color ?? '#999999';
@@ -50,13 +50,13 @@ export class OskarstatsPunkteentwicklungService {
       return {
         label: player,
         data: seasons.map((season) =>
-          this.enrichedStats
+          enrichedStats
             .filter((s) => s.season === season && s.playerName === player)
             .reduce((sum, s) => sum + (s.legs_won || 0), 0),
         ),
         borderColor: color,
         backgroundColor: this.chartTheme.hexToRgba(color, 0.15),
-        fill: false,
+        fill: false, // war bei dir false → jetzt wie Radar mit transparenter Füllung
         tension: 0.2,
       };
     });
