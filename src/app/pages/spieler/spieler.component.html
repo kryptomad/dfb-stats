@@ -10,9 +10,9 @@
     <ng-template pTemplate="subtitle">
   <span class="nickname">{{ player.nickname ? player.nickname : ' ' }}</span>
 <div *ngIf="player.roles" 
-     class="text-sm mt-2 text-gray-700 font-normal flex items-center gap-1">
-  <i class="pi pi-id-card text-gray-500"></i>
-  <span class="font-normal">{{ player.roles }}</span>
+     class="text-m mt-2 flex items-center gap-1">
+    <i class="pi pi-id-card"></i>
+  <span class="mitglied ml-1">{{ player.roles }}</span>
 </div>
 </ng-template>
 <div class="text-l mt-2">
@@ -21,5 +21,5 @@
   <span class="mitglied">Mitglied seit {{ player.memberSince }}</span>
 </ng-template>
 </div>
-  </p-card>
+</p-card>
 </div>

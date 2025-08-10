@@ -1,6 +1,6 @@
-  <h2 id="jahrestabelle">Aktueller Tabellenstand {{ aktuelleSaison }}</h2>
+  <h2 id="aktueller-tabellenstand">Aktueller Tabellenstand {{ aktuelleSaison }}</h2>
 <p-card>
-<div class="mt-8" id="jahrestabelle">
+<div class="mt-8">
 
 <div class="w-full h-[12rem] my-6">
   <p-chart type="bar" [data]="barChartData" [options]="barChartOptions"></p-chart>
@@ -32,10 +32,19 @@
 </div>
 </p-card>
 
-
-<h2 id="punkteentwicklung">Punkteentwicklung</h2>
+<h2 id="spieltagverlauf">Spieltagverlauf</h2>
 <p-card>
-<h5>Punkteentwicklung Gesamtwertung 2018 - Heute</h5>
+  <h5>Spieltagsverlauf {{ aktuelleSaison }}</h5>
+  <p-chart 
+    type="line" 
+    [data]="spieltagverlaufData" 
+    [options]="formkurveOptions">
+  </p-chart>
+</p-card>
+
+<h2 id="jahresvergleich">Jahresvergleich</h2>
+<p-card>
+<h5>Jahresvergleich Gesamtpunkte 2018 - Heute</h5>
 <p-chart type="line" [data]="formkurveData" [options]="formkurveOptions"></p-chart>
 </p-card>
 

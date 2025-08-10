@@ -152,28 +152,28 @@ export class AppMenu implements OnInit {
             icon: 'pi pi-fw pi-trophy',
             items: [
               {
-                label: 'Jahreswertung',
-                icon: 'pi pi-fw pi-list',
-                routerLink: 'pages/oskarstatistiken',
-                fragment: 'jahreswertung',
-              },
-              {
-                label: 'Jahrestabelle',
+                label: 'aktueller Tabellenstand',
                 icon: 'pi pi-fw pi-table',
                 routerLink: 'pages/oskarstatistiken',
-                fragment: 'jahrestabelle-oskar',
+                fragment: 'aktueller-tabellenstand',
+              },
+              {
+                label: 'Spieltagverlauf',
+                icon: 'pi pi-fw pi-list',
+                routerLink: 'pages/oskarstatistiken',
+                fragment: 'Spieltagverlauf',
+              },
+              {
+                label: 'Jahresvergleich',
+                icon: 'pi pi-fw pi-chart-line',
+                routerLink: 'pages/oskarstatistiken',
+                fragment: 'Jahresvergleich',
               },
               {
                 label: 'Oskarsieger',
                 icon: 'pi pi-fw pi-crown',
                 routerLink: 'pages/oskarstatistiken',
                 fragment: 'oskarsieger',
-              },
-              {
-                label: 'Punkteentwicklung',
-                icon: 'pi pi-fw pi-chart-line',
-                routerLink: 'pages/oskarstatistiken',
-                fragment: 'punkteentwicklung',
               },
             ],
           },

@@ -4,6 +4,8 @@ import { Observable, forkJoin } from 'rxjs';
 import { map, tap } from 'rxjs/operators';
 import { PlayersService } from './players.service';
 
+import * as SeasonMatchday from '../shared/season-matchday.helpers';
+
 @Injectable({ providedIn: 'root' })
 export class StatsService {
   enrichedStats: any[] = [];
