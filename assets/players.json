@@ -4,11 +4,13 @@
     "name": "Uwe",
     "nickname": null,
     "image": "uwe.png",
+    "location": null,
     "roles": null,
     "memberSince": 1993,
     "leftAt": null,
     "isFounder": true,
     "isActive": true,
+    "color": "#3498db",
     "comment": null
   },
   {
@@ -16,11 +18,13 @@
     "name": "Frank",
     "nickname": null,
     "image": "frank.png",
+    "location": "location-frank.png",
     "roles": null,
     "memberSince": 1993,
     "leftAt": null,
     "isFounder": true,
     "isActive": true,
+    "color": "#1abc9c",
     "comment": null
   },
   {
@@ -28,11 +32,13 @@
     "name": "Rainer",
     "nickname": null,
     "image": "rainer.png",
+    "location": null,
     "roles": null,
     "memberSince": 1995,
     "leftAt": 2016,
     "isFounder": false,
     "isActive": false,
+    "color": "#2ecc71",
     "comment": null
   },
   {
@@ -40,11 +46,13 @@
     "name": "Franz-Josef",
     "nickname": null,
     "image": "franz.png",
+    "location": "location-franz.png",
     "roles": null,
     "memberSince": 1993,
     "leftAt": null,
     "isFounder": true,
     "isActive": true,
+    "color": "#e67e22",
     "comment": null
   },
   {
@@ -52,11 +60,13 @@
     "name": "Udo",
     "nickname": null,
     "image": "udo.png",
+    "location": null,
     "roles": null,
     "memberSince": 1995,
     "leftAt": 2004,
     "isFounder": false,
     "isActive": false,
+    "color": "#f1c40f",
     "comment": null
   },
   {
@@ -64,11 +74,13 @@
     "name": "Heiner",
     "nickname": "TC",
     "image": "heiner.png",
+    "location": "location-heiner.png",
     "roles": "Kassenwart",
     "memberSince": 1996,
     "leftAt": null,
     "isFounder": false,
     "isActive": true,
+    "color": "#9b59b6",
     "comment": null
   },
   {
@@ -76,11 +88,13 @@
     "name": "Nico",
     "nickname": null,
     "image": "nico.png",
+    "location": null,
     "roles": null,
     "memberSince": 2006,
     "leftAt": 2017,
     "isFounder": false,
     "isActive": false,
+    "color": "#e74c3c",
     "comment": null
   },
   {
@@ -88,11 +102,13 @@
     "name": "Martin",
     "nickname": "mad",
     "image": "martin.png",
+    "location": "location-martin.png",
     "roles": "Statistikwart",
     "memberSince": 2007,
     "leftAt": null,
     "isFounder": false,
     "isActive": true,
+    "color": "#e91e63",
     "comment": null
   }
 ]
