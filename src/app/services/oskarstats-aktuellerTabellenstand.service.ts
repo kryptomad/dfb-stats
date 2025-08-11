@@ -1,13 +1,13 @@
-// src/app/services/oskarstats-aktueller-tabellenstand.service.ts
 import { Injectable } from '@angular/core';
 import { GamesService } from './games.service';
 import { ChartThemeService } from './chart-theme.service';
+import * as SeasonMatchday from '../shared/season-matchday.helpers';
 
 export interface TabellenstandResult {
   aktuelleSaison: string;
   jahrestabelle: any[];
   barChartData: { labels: string[]; datasets: any[] };
-  barChartOptions: any;
+  barStackedOptions: any;
 }
 
 @Injectable({ providedIn: 'root' })
@@ -17,32 +17,15 @@ export class OskarstatsAktuellerTabellenstandService {
     private chartTheme: ChartThemeService,
   ) {}
 
-  /** kleines Helferlein: Startjahr aus Season ermitteln */
-  private parseSeasonStartYear(season: unknown): number | null {
-    if (typeof season === 'number' && Number.isFinite(season)) return season;
-    const s = String(season ?? '');
-    const m = s.match(/\b(19|20)\d{2}\b/);
-    return m ? parseInt(m[0], 10) : null;
-  }
-
   /** Baut aktuelle Jahrestabelle + gestapeltes Bar‑Chart (wie vorher in der Komponente) */
   build(): TabellenstandResult {
-    // Theme-Farben
-    const primaryFill = this.chartTheme.getPrimaryFill(0.55);
-    const secondary = this.chartTheme.getCssVar(
-      '--text-color-secondary',
-      '#aaaaaa',
-    );
-    const secondaryFill = this.chartTheme.hexToRgba(secondary, 0.4);
-
-    // neueste Saison nach Startjahr
+    // neueste Saison nach Startjahr (jetzt mit Helper)
     const allGames = this.gamesService.getAllGames();
     const seasons = Array.from(
       new Set(allGames.map((g) => String(g.season))),
     ).sort(
       (a, b) =>
-        (this.parseSeasonStartYear(b) ?? 0) -
-        (this.parseSeasonStartYear(a) ?? 0),
+        SeasonMatchday.seasonStartYear(b) - SeasonMatchday.seasonStartYear(a),
     );
     const aktuelleSaison = seasons[0] ?? '';
 
@@ -55,9 +38,7 @@ export class OskarstatsAktuellerTabellenstandService {
         aktuelleSaison,
         jahrestabelle: [],
         barChartData: { labels: [], datasets: [] },
-        barChartOptions: this.chartTheme.getLineChartOptions({
-          maintainAspectRatio: false,
-        }),
+        barStackedOptions: this.chartTheme.getBarStackedOptions({}),
       };
     }
 
@@ -74,7 +55,7 @@ export class OskarstatsAktuellerTabellenstandService {
     );
 
     // Trends + Diff-Punkte einrechnen
-    const jahrestabelle = tabelleJetzt.map((eintrag) => {
+    const jahrestabelle = tabelleJetzt.map((eintrag: any) => {
       const vorher = tabelleVorher.find((e: any) => e.name === eintrag.name);
       const altePunkte = vorher ? Number(vorher.punkte) : 0;
       const alterPlatz = vorher ? vorher.platz : eintrag.platz;
@@ -89,6 +70,10 @@ export class OskarstatsAktuellerTabellenstandService {
     });
 
     const neuLabel = `Punkte hinzu nach Spieltag ${maxMatchday}`;
+    const primary = this.chartTheme.getPrimary();
+    const primaryFill = this.chartTheme.getPrimaryFill(0.55);
+    const secondary = this.chartTheme.getSecondary();
+    const secondaryFill = this.chartTheme.getSecondaryFill(0.4);
 
     const barChartData = {
       labels: jahrestabelle.map((e: any) => e.name),
@@ -110,15 +95,16 @@ export class OskarstatsAktuellerTabellenstandService {
       ],
     };
 
-    const barChartOptions = this.chartTheme.getLineChartOptions({
-      maintainAspectRatio: false,
-      plugins: { datalabels: { display: false } },
-      scales: {
-        x: { stacked: true, grid: { display: false } },
-        y: { stacked: true, grid: { display: false } },
-      },
-    });
-
-    return { aktuelleSaison, jahrestabelle, barChartData, barChartOptions };
+    console.log('PRIMARY ->', primary, 'FILL ->', primaryFill);
+    console.log(
+      'DATASET COLORS ->',
+      barChartData.datasets.map((d) => d.backgroundColor),
+    );
+    return {
+      aktuelleSaison,
+      jahrestabelle,
+      barChartData,
+      barStackedOptions: this.chartTheme.getBarStackedOptions(),
+    };
   }
 }

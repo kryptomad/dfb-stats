@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
 import { map } from 'rxjs/operators';
 import { Observable } from 'rxjs';
-import { StatsQueryService, SeriesDataset } from './stats-query.service';
 import { PlayersService } from './players.service';
 import { ChartThemeService } from './chart-theme.service';
+import { StatsQueryService, SeriesDataset } from './stats-query.service';
 
 export interface SeasonChart {
   labels: string[];
@@ -13,9 +13,9 @@ export interface SeasonChart {
 @Injectable({ providedIn: 'root' })
 export class OskarstatsJahresvergleichService {
   constructor(
-    private statsQuery: StatsQueryService,
-    private players: PlayersService,
     private chartTheme: ChartThemeService,
+    private playersService: PlayersService,
+    private statsQueryService: StatsQueryService,
   ) {}
 
   /** Jahresvergleich: SUM(legs_won) je Spieler & Season → Chart.js-Daten */
@@ -23,11 +23,11 @@ export class OskarstatsJahresvergleichService {
     labels: string[];
     datasets: any[];
   }> {
-    return this.statsQuery.sumLegsWonByPlayerPerSeason$().pipe(
+    return this.statsQueryService.sumLegsWonByPlayerPerSeason$().pipe(
       map((chart: SeasonChart) => {
         const styled = chart.datasets.map((ds: SeriesDataset) => {
           const color =
-            this.players.getPlayer(ds.player_id)?.color ?? '#999999';
+            this.playersService.getPlayer(ds.player_id)?.color ?? '#999999';
           return {
             label: ds.label,
             data: ds.data,

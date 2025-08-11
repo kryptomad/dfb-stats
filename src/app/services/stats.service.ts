@@ -5,6 +5,8 @@ import { map, tap, shareReplay } from 'rxjs/operators';
 import { PlayersService } from './players.service';
 import * as SeasonMatchday from '../shared/season-matchday.helpers';
 
+
+
 export interface StatRow {
   season: string | number;
   matchday: number; // aus matchday | match_day | spieltag
@@ -17,6 +19,8 @@ export class StatsService {
   enrichedStats: any[] = [];
 
   private readonly statsUrl = 'assets/stats.json';
+
+  private _allStats: any[] = [];
 
   getStatsRaw(): Observable<any[]> {
     return this.http.get<any[]>(this.statsUrl).pipe(shareReplay(1));
@@ -54,7 +58,7 @@ export class StatsService {
             `ID ${stat.player_id}`,
         })),
       ),
-      tap((data) => (this.enrichedStats = data)),
+      tap((data) => (this._allStats = Array.isArray(data) ? data : [])),
     );
   }
 

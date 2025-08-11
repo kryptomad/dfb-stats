@@ -22,11 +22,15 @@ export class ChartThemeService {
       attributeFilter: ['class'],
     });
   }
-  getCssVar(name: string, fallback: string): string {
-    const v = getComputedStyle(document.documentElement)
+  getCssVar(name: string, fallback = ''): string {
+    const fromRoot = getComputedStyle(document.documentElement)
       .getPropertyValue(name)
       .trim();
-    return v || fallback;
+    if (fromRoot) return fromRoot;
+    const fromBody = getComputedStyle(document.body)
+      .getPropertyValue(name)
+      .trim();
+    return fromBody || fallback;
   }
 
   hexToRgba(hex: string, alpha: number): string {
@@ -43,9 +47,24 @@ export class ChartThemeService {
     return `rgba(${r}, ${g}, ${b}, ${alpha})`;
   }
 
+  getPrimary(): string {
+    // v18 nutzt meist --p-primary-500; dann erst die alten Tokens
+    return (
+      this.getCssVar('--p-primary-500', '') ||
+      this.getCssVar('--p-primary-color', '') ||
+      this.getCssVar('--primary-color', '') ||
+      '#4b98afff'
+    );
+  }
+
   getPrimaryFill(alpha = 0.55): string {
-    const primary = this.getCssVar('--primary-color', '#2196F3');
-    return this.hexToRgba(primary, alpha);
+    return this.hexToRgba(this.getPrimary(), alpha);
+  }
+  getSecondary(): string {
+    return this.getCssVar('--text-color-secondary', '#aaaaaa');
+  }
+  getSecondaryFill(alpha = 0.4): string {
+    return this.hexToRgba(this.getSecondary(), alpha);
   }
 
   private baseColors() {
@@ -87,6 +106,53 @@ export class ChartThemeService {
       scales: {
         x: { ticks: { color: text }, grid: { color: grid } },
         y: { ticks: { color: text }, grid: { color: grid } },
+      },
+      ...(extra ?? {}),
+    };
+  }
+
+  getBarStackedOptions(extra?: any) {
+    const { text, grid } = this.baseColors();
+    return {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: { labels: { color: text } },
+        datalabels: { color: text, display: false },
+        tooltip: { enabled: true },
+        colors: { enabled: false }, // Autocolors aus, deine Farben gelten
+      },
+      scales: {
+        x: {
+          stacked: true,
+          ticks: { color: text },
+          grid: { color: grid, display: false },
+        },
+        y: {
+          stacked: true,
+          beginAtZero: true,
+          ticks: { color: text },
+          grid: { color: grid, display: false },
+        },
+      },
+      ...(extra ?? {}),
+    };
+  }
+
+  getBarOptions(extra?: any) {
+    const { text, grid } = this.baseColors();
+    return {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: { labels: { color: text } },
+        datalabels: { color: text, display: false },
+        tooltip: { enabled: true },
+        colors: { enabled: false },
+      },
+      scales: {
+        x: { ticks: { color: text }, grid: { color: grid } },
+        y: { beginAtZero: true, ticks: { color: text }, grid: { color: grid } },
       },
       ...(extra ?? {}),
     };

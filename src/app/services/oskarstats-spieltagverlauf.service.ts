@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { map } from 'rxjs/operators';
+import { map, filter, switchMap } from 'rxjs/operators';
 import { PlayersService } from './players.service';
 import { ChartThemeService } from './chart-theme.service';
 import { StatsQueryService } from './stats-query.service';
@@ -11,6 +11,10 @@ export class OskarstatsSpieltagverlaufService {
     private playersService: PlayersService,
     private statsQueryService: StatsQueryService,
   ) {}
+
+  getSeasons$() {
+    return this.statsQueryService.getSeasons$();
+  }
 
   buildSpieltagverlaufData$(season: string | number) {
     return this.statsQueryService.sumLegsWonByPlayerPerMatchday$(season).pipe(
@@ -30,6 +34,13 @@ export class OskarstatsSpieltagverlaufService {
         });
         return { labels: result.labels, datasets };
       }),
+    );
+  }
+
+  buildSpieltagverlaufDataForLatest$() {
+    return this.statsQueryService.getLatestSeason$().pipe(
+      filter((s): s is string => !!s), // nur string durchlassen, null rausfiltern
+      switchMap((season) => this.buildSpieltagverlaufData$(season)),
     );
   }
 }
