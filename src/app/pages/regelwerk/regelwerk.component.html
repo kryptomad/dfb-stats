@@ -50,27 +50,85 @@
     <li><strong>Biergeld:</strong> 10 € an den Gastgeber für die Bereitstellung des Biers am Spielabend.</li>
   </ul>
 
-  <h3 class="text-lg font-medium mt-4 mb-2">2. Gelddarten</h3>
-  <ul class="list-disc pl-5 space-y-1">
-    <li>Bei 4 Spielern: Jeder zahlt 5 € in den Spieltopf.</li>
-    <li>Ein Viertel des Gesamtpotts pro Spiel (2 € pro Spieler) geht zusätzlich in die Dartkasse.</li>
+  <h3 class="text-lg font-medium mt-4 mb-2">2. Chips & Werte</h3>
+  <ul class="list-disc pl-5 space-y-2">
+    <li class="flex items-center gap-2">
+      <span class="inline-block w-4 h-4 rounded-full border border-gray-300 bg-blue-500"></span>
+      Blau = 0,50 €
+    </li>
+    <li class="flex items-center gap-2">
+      <span class="inline-block w-4 h-4 rounded-full border border-gray-300 bg-white"></span>
+      Weiß = 1,00 €
+    </li>
+    <li class="flex items-center gap-2">
+      <span class="inline-block w-4 h-4 rounded-full border border-gray-300 bg-red-500"></span>
+      Rot = 2,00 €
+    </li>
   </ul>
 
-<h3 class="text-lg font-medium mt-4 mb-2">3. Chips & Werte</h3>
-<ul class="list-disc pl-5 space-y-2">
-  <li class="flex items-center gap-2">
-    <span class="inline-block w-4 h-4 rounded-full border border-gray-300 bg-blue-500"></span>
-    Blau = 0,50 €
+<h3 class="text-lg font-medium mt-4 mb-2">3. Gelddarten</h3>
+<ul class="list-disc pl-5 space-y-1">
+  <li>Alle werfen auf Bull. Wer am nächsten ist, bestimmt das nächste Spiel (Einzel oder Doppel).</li>
+  <li><strong>Einsatz pro Spiel:</strong> Einzel = 1 € pro Spieler, Doppel = 2 € pro Spieler (siehe Chipwerte).</li>
+  <li>
+    <strong>Topf-Aufteilung:</strong><br>
+    – <strong>4 Spieler:</strong> 25 % vom Gesamtpott in die Dartkasse, Rest an Sieger.<br>
+    &nbsp;&nbsp;Zusätzlich zahlt jeder Spieler pro Abend einmalig 5 € in die Dartkasse.<br>
+    – <strong>5 Spieler:</strong> 50 % vom Gesamtpott in die Dartkasse, Rest an Sieger.
   </li>
-  <li class="flex items-center gap-2">
-    <span class="inline-block w-4 h-4 rounded-full border border-gray-300 bg-white"></span>
-    Weiß = 1,00 €
-  </li>
-  <li class="flex items-center gap-2">
-    <span class="inline-block w-4 h-4 rounded-full border border-gray-300 bg-red-500"></span>
-    Rot = 2,00 €
-  </li>
+  <li><strong>Auszahlung:</strong> Der Spieltopf geht zu 100 % an den/die Sieger.</li>
 </ul>
+
+<p class="mt-3 font-medium">Beispiele:</p>
+<div class="overflow-x-auto mt-2">
+  <table class="min-w-full border border-[var(--surface-border)] text-sm">
+    <thead class="bg-[var(--surface-border)]/20">
+      <tr>
+        <th class="px-3 py-2 text-left">Spielart</th>
+        <th class="px-3 py-2 text-center">Einsatz<br>p. P.</th>
+        <th class="px-3 py-2 text-center">Spieler</th>
+        <th class="px-3 py-2 text-center">Pott</th>
+        <th class="px-3 py-2 text-center">Dartkasse</th>
+        <th class="px-3 py-2 text-center">Spieltopf</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="px-3 py-2">Einzel</td>
+        <td class="px-3 py-2 text-center">1 €</td>
+        <td class="px-3 py-2 text-center">4</td>
+        <td class="px-3 py-2 text-center">4 €</td>
+        <td class="px-3 py-2 text-center">1,00 €</td>
+        <td class="px-3 py-2 text-center">3,00 €</td>
+      </tr>
+      <tr class="bg-[var(--surface-border)]/10">
+        <td class="px-3 py-2">Doppel</td>
+        <td class="px-3 py-2 text-center">2 €</td>
+        <td class="px-3 py-2 text-center">4</td>
+        <td class="px-3 py-2 text-center">8 €</td>
+        <td class="px-3 py-2 text-center">2,00 €</td>
+        <td class="px-3 py-2 text-center">6,00 €</td>
+      </tr>
+      <tr>
+        <td class="px-3 py-2">Einzel</td>
+        <td class="px-3 py-2 text-center">1 €</td>
+        <td class="px-3 py-2 text-center">5</td>
+        <td class="px-3 py-2 text-center">5 €</td>
+        <td class="px-3 py-2 text-center">2,50 €</td>
+        <td class="px-3 py-2 text-center">2,50 €</td>
+      </tr>
+      <tr class="bg-[var(--surface-border)]/10">
+        <td class="px-3 py-2">Doppel</td>
+        <td class="px-3 py-2 text-center">2 €</td>
+        <td class="px-3 py-2 text-center">5</td>
+        <td class="px-3 py-2 text-center">10 €</td>
+        <td class="px-3 py-2 text-center">5,00 €</td>
+        <td class="px-3 py-2 text-center">5,00 €</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
 
   <h3 class="text-lg font-medium mt-4 mb-2">4. Verwaltung</h3>
   <ul class="list-disc pl-5 space-y-1">
@@ -78,6 +136,7 @@
     <li>Alle Einzahlungen und Auszahlungen werden pro Spieltag vom Kassenwart dokumentiert.</li>
   </ul>
 </section>
+
 
 <section class="rounded-xl border border-[var(--surface-border)] bg-[var(--surface-card)] p-5 md:p-6 mt-6">
   <h2 id="vereinsregeln" class="text-xl font-semibold mb-3">Vereinsregeln</h2>
