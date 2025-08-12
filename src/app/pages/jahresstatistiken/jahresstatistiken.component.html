@@ -1,1 +1,44 @@
-<p>jahresstatistiken works!</p>
+<div class="p-4">
+  <h2>Highlight Legs</h2>
+  <div class="flex justify-start items-center mb-4 w-full">
+    <label for="seasonSelect" class="mr-2">Saison auswählen:</label>
+    <select
+      id="seasonSelect"
+      [(ngModel)]="selectedSeason"
+      (change)="onSeasonChange($event)"
+      class="w-full p-3 rounded"
+    >
+      <option value="" disabled selected>Wähle eine Saison</option>
+      <option *ngFor="let season of seasons" [value]="season.value">{{ season.label }}</option>
+    </select>
+  </div>
+<div class="text-left mb-4">
+  <span class="block">Klicke auf ein Spiel, um das beste Leg zu sehen, zusammen mit dem Spiel, in dem es gespielt wurde, und allen dazugehörigen Statistiken.</span>
+  <span class="block mt-1">Gezeigt wird pro Spieler das jeweils beste Leg.</span>
+</div>
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
+    <ng-container *ngIf="bestLegs$ | async as legs; else loading">
+      <p-card *ngFor="let leg of legs">
+        <div 
+          class="transition-all duration-200 cursor-pointer hover:bg-slate-200 dark:hover:bg-slate-700 hover:bg-opacity-80 p-2"
+          [routerLink]="['/pages/legs', leg.game_id]" [fragment]="'leg-' + leg.leg_number"
+        >
+          <div class="flex items-center gap-2 ml-4">
+            <p-avatar [image]="getPlayerData(leg.player_id).image" size="xlarge" shape="circle"></p-avatar>
+            <div>
+              <span class="text-xl font-semibold">{{ getPlayerData(leg.player_id).name }}</span>
+              <p class="text-gray-500 text-base" *ngIf="getPlayerData(leg.player_id).nickname">{{ getPlayerData(leg.player_id).nickname }}</p>
+            </div>
+            <div class="ml-auto">
+              <span class="text-sm italic text-gray-400">DARTS</span>
+              <span class="card-value mr-4">{{ leg.darts }}</span>
+            </div>
+          </div>
+        </div>
+      </p-card>
+    </ng-container>
+    <ng-template #loading>
+      <p>Lade Daten...</p>
+    </ng-template>
+  </div>
+</div>

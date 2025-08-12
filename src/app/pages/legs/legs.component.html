@@ -39,7 +39,9 @@
 
   <!-- Alle Legs -->
    <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4 mt-10">
-<p-card *ngFor="let leg of game.legs; let i = index">
+<p-card *ngFor="let leg of game.legs; let i = index"
+        class="leg-card"
+        [attr.id]="'leg-' + leg.leg_number">
   <div>
     <div class="legs-counter">
       <span class="block text-center text-2xl font-bold text-primary mt-2 mb-4">Leg {{ leg.leg_number }}</span>
