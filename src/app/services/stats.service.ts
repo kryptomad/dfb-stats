@@ -5,13 +5,34 @@ import { map, tap, shareReplay } from 'rxjs/operators';
 import { PlayersService } from './players.service';
 import * as SeasonMatchday from '../shared/season-matchday.helpers';
 
-
-
 export interface StatRow {
-  season: string | number;
-  matchday: number; // aus matchday | match_day | spieltag
+  game_id: number;
+  season: string;
+  matchday: number;
   player_id: number;
+  player1_id: number;
+  player2_id: number;
+  sets_won: number;
+  legs_played: number;
   legs_won: number;
+  legs_lost: number;
+  darts_thrown: number;
+  avg_darts: number;
+  avg_3dart: number;
+  avg_first9: number;
+  best_leg: number | null;
+  worst_leg: number | null;
+  high_finish: number;
+  high_score: number;
+  score_100: number;
+  score_100_plus: number;
+  score_140: number;
+  score_140_plus: number;
+  score_180: number;
+  keep_pct: number;
+  keep_ratio: string;
+  break_pct: number;
+  break_ratio: string;
 }
 
 @Injectable({ providedIn: 'root' })
