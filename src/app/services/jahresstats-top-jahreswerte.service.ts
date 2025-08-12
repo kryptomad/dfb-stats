@@ -78,7 +78,9 @@ export class JahresstatsTopJahreswerteService {
 
             const playerName = this.playersService.getPlayer(playerId)?.name || `Player ${playerId}`;
             return { playerName, value };
-          });
+          })
+          .filter(value => value.value > 0) // Filtere Spieler mit Wert 0 heraus
+          .sort((a, b) => (b.value as number) - (a.value as number)); // Sortiere absteigend nach value
 
           topYears.push({ year: seasonStr, category, values });
         });
@@ -92,14 +94,12 @@ export class JahresstatsTopJahreswerteService {
     let wins = 0;
     const matchdays = [...new Set(playerRows.map(r => r.matchday))];
     matchdays.forEach(md => {
-      // Berechne die Gesamtsumme von legs_won pro Spieler für diesen Matchday
       const playerTotals = new Map<number, number>();
       seasonRows.filter(r => r.matchday === md).forEach(r => {
         const total = playerTotals.get(r.player_id) || 0;
         playerTotals.set(r.player_id, total + (r.legs_won || 0));
       });
 
-      // Finde den Spieler mit der höchsten Gesamtsumme pro Matchday
       let maxTotal = -1;
       let matchdayWinnerId = -1;
       playerTotals.forEach((total, playerId) => {
@@ -109,7 +109,6 @@ export class JahresstatsTopJahreswerteService {
         }
       });
 
-      // Zähle einen Sieg, wenn der aktuelle Spieler der Gewinner ist
       if (maxTotal > 0 && playerRows[0].player_id === matchdayWinnerId) {
         wins += 1;
       }
