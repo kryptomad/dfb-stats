@@ -2,53 +2,6 @@
   padding: 0rem; /* kleiner Rand */
 }
 
-::ng-deep .p-card {
-  border: none; /* optional: Rahmen entfernen */
-  background: transparent; /* falls Hintergrund auch weg soll */
-}
-
-p-card {
-  border: 1px solid #e2e8f0;
-  border-radius: 0; // Eckig, passend zu Nora
-  background-color: #ffffff;
-  color: #2d3748;
-
-  .p-card-header {
-    font-weight: bold;
-    color: #2b6cb0;
-  }
-  .p-card-subheader {
-    color: #718096;
-  }
-}
-
-select {
-  padding: 0.5rem;
-  border-radius: 0; // Eckig
-  width: 100%;
-  max-width: 33.333%;
-  background-color: #ffffff;
-  color: #2d3748;
-  &:focus {
-    outline: none;
-    border-color: #3b82f6;
-    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
-  }
-  option {
-    background-color: #ffffff;
-    color: #2d3748;
-    &:hover {
-      background-color: #edf2f7;
-    }
-  }
-}
-
-/* Stil für den Inhalt */
-.p-avatar {
-  background-color: #e2e8f0;
-  border-radius: 50%; // Rund, passend zu shape="circle"
-}
-
 .text-primary {
   color: var(--primary-color); // Beispiel für Primary-Color (Grün), anpassbar
 }
