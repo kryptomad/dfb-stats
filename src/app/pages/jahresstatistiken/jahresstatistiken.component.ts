@@ -4,6 +4,7 @@ import { RouterLink } from '@angular/router';
 import { NgForOf } from '@angular/common';
 import { CardModule } from 'primeng/card';
 import { AvatarModule } from 'primeng/avatar';
+import { DropdownModule } from 'primeng/dropdown'; // Hinzugefügt für p-dropdown
 import { FormsModule } from '@angular/forms';
 import { JahresstatsHighlightLegsService } from '../../services/jahresstats-highlight-legs.service';
 import { SeasonSelectorService } from '../../services/season-selector.service';
@@ -25,8 +26,9 @@ interface SeasonOption {
     NgForOf,
     CardModule,
     AvatarModule,
+    DropdownModule,
     FormsModule,
-  ],
+  ], // DropdownModule hinzugefügt
   templateUrl: './jahresstatistiken.component.html',
   styleUrls: ['./jahresstatistiken.component.scss'],
 })
@@ -61,8 +63,8 @@ export class JahresstatistikenComponent {
     });
   }
 
-  onSeasonChange(event: any): void {
-    this.selectedSeason = event.target.value;
+  onSeasonChange(): void {
+    // Anpassung für (onChange) ohne Parameter
     if (this.selectedSeason) {
       this.seasonSelector.setSelectedSeason(this.selectedSeason);
     } else if (this.seasons.length > 0) {
@@ -83,7 +85,7 @@ export class JahresstatistikenComponent {
       nickname: player?.nickname || null,
       image: player?.image
         ? `assets/players/${player.image}`
-        : 'assets/players/default-avatar.png', // Pfad angepasst
+        : 'assets/players/default-avatar.png',
     };
   }
 
