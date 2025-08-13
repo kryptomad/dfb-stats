@@ -12,12 +12,12 @@
         />
       </div>
       <div class="label">Wann</div>
-      <div class="date-time">{{ datum() }} um {{ zeit() }}</div>
+      <div class="date-time">{{ datum() }}<br>um {{ zeit() }}</div>
       <div class="label">Modus</div>
       <div class="icons">
         <i class="fa fa-coins" [ngClass]="{ inactive: gelddarten() }"></i>
         <i
-          class="fa fa-trophy ml-6"
+          class="fa fa-trophy ml-5"
           [ngClass]="{ inactive: oskardarten() }"
         ></i>
       </div>

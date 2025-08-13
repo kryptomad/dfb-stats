@@ -74,3 +74,21 @@
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
+
+.stats-table-header {
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.stats-table {
+  padding: 1rem;
+  .stat-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #646464;
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+}
