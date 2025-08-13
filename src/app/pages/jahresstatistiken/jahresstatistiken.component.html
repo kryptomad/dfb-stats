@@ -39,9 +39,9 @@
       </p-card>
     </ng-container>
     <ng-template #loading>
-<div class="text-lg text-gray-400 animate-pulse">
-  🤖 Beep boop… Lade Daten…
-</div>
+    <div class="text-lg text-gray-600 dark:text-gray-400 animate-pulse" *ngIf="loading">
+        🤖 Beep boop… Lade Daten…
+      </div>
     </ng-template>
   </div>
 </div>
@@ -73,5 +73,10 @@
           </p-table>
         </p-card>
       </ng-container>
+          <ng-template #loading>
+          <div class="text-lg text-gray-600 dark:text-gray-400 animate-pulse" *ngIf="loading">
+              🤖 Beep boop… Lade Daten…
+            </div>
+    </ng-template>
     </div>
   </div>

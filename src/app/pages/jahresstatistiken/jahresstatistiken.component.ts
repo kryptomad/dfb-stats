@@ -16,7 +16,8 @@ import {
   TopYearStats,
   TopYearValue,
 } from '../../services/jahresstats-top-jahreswerte.service';
-import { Observable, Subscription } from 'rxjs';
+import { Observable, Subscription, of } from 'rxjs'; // of importiert für Initialisierung
+import { delay } from 'rxjs/operators'; // Für simulierten Loading-Zustand
 
 interface SeasonOption {
   label: string;
@@ -41,9 +42,9 @@ interface SeasonOption {
 })
 export class JahresstatistikenComponent {
   bestLegs$: Observable<BestLegEntry[]>;
-  topYears$: Observable<TopYearStats[]>;
+  topYears$: Observable<TopYearStats[]>; // Kein explizites loading-Flag, aber simuliert
   seasons: SeasonOption[] = [];
-  selectedSeason: string | null = null; // Zurück zu string | null, kompatibel mit SeasonSelectorService
+  selectedSeason: string | null = null; // Kompatibel mit SeasonSelectorService
   private subscription: Subscription;
 
   constructor(
@@ -53,13 +54,12 @@ export class JahresstatistikenComponent {
     private topJahreswerteService: JahresstatsTopJahreswerteService,
   ) {
     this.bestLegs$ = this.jahresLegsService.getBestLegsForLatestSeason();
-    this.topYears$ = this.topJahreswerteService.getTopYearStats(
-      this.selectedSeason || '',
-    );
+    // Initialisiere topYears$ mit einem delayed Observable, um Loading zu simulieren
+    this.topYears$ = of([]).pipe(delay(0)); // Delay(0) triggert async-Pipe-Laden
     this.subscription = this.seasonSelector
       .getSeasons$()
       .subscribe((seasons) => {
-        this.seasons = seasons.map((s) => ({ label: s, value: s })); // Keine toString() nötig, da seasons schon strings sind
+        this.seasons = seasons.map((s) => ({ label: s, value: s }));
         console.log('Verfügbare Saisons:', this.seasons);
         if (!this.selectedSeason && this.seasons.length > 0) {
           this.selectedSeason = this.seasons[0].value;
@@ -70,7 +70,7 @@ export class JahresstatistikenComponent {
       });
     this.seasonSelector.getSelectedSeason$().subscribe((season) => {
       if (this.selectedSeason !== season) {
-        this.selectedSeason = season; // Nur string oder null
+        this.selectedSeason = season;
         this.updateTopYears();
         console.log('Saison aus Service:', this.selectedSeason);
       }
