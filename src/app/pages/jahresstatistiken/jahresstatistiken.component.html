@@ -1,5 +1,5 @@
 <div class="p-4">
-  <h2>Highlight Legs</h2>
+  <h2 id="highlight-legs">Highlight Legs</h2>
   <div class="flex justify-start items-center mb-4 w-full">
     <label for="seasonSelect" class="mr-4">Saison auswählen:</label>
     <p-dropdown
@@ -39,13 +39,15 @@
       </p-card>
     </ng-container>
     <ng-template #loading>
-      <p>Lade Daten...</p>
+<div class="text-lg text-gray-400 animate-pulse">
+  🤖 Beep boop… Lade Daten…
+</div>
     </ng-template>
   </div>
 </div>
 
     <div class="mt-4">
-    <h2>Top Jahreswerte</h2>
+    <h2 id="top-jahreswerte">Top Jahreswerte</h2>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
       <ng-container *ngIf="topYears$ | async as years; else loading">
         <p-card *ngFor="let yearStat of years">

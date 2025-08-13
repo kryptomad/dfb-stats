@@ -31,8 +31,23 @@
     style="display:block; width:100%; max-width:900px; margin:0 auto;">
   </p-chart>
 
-<p>
-  Dieses Radar-Diagramm zeigt, wie häufig die gängigen Scores 26, 41, 45, 60, 100, 140 und 180 geworfen wurden. Klicke oben auf die Spielernamen, um einzelne Spieler ein- und order auszublenden. und gezielt Vergleiche zu machen.<br>
-  <br>Aktuell gewählt: {{ selectedSeason || 'All-Time' }}  <span class="stats-divider">|</span>  {{ first9Only ? 'First-9' : 'all Scores' }}.
+<p class="mt-6">
+  <span>
+    Dieses Radar-Diagramm zeigt, wie häufig die gängigen Scores 26, 41, 45, 60, 100, 140 und 180 geworfen wurden.
+    Klicke oben auf die Spielernamen, um einzelne Spieler ein- und oder auszublenden und gezielt Vergleiche zu machen.
+  </span>
+  <br><br>
+  <span>
+    Über das Dropdown oben kannst du die gewünschte Saison auswählen.
+    Mit den Buttons daneben lässt sich zwischen <strong>All Scores</strong> und <strong>First-9</strong> umschalten.
+    <em>First-9</em> zeigt nur die ersten neun Darts eines Legs – also reine High-Score-Würfe, ohne dass z. B. auf ein Doppel gestellt wird.
+    Ideal, um die Power-Scorer zu vergleichen.
+  </span>
+  <br><br>
+  <span>
+    Aktuell gewählt: {{ selectedSeason || 'All-Time' }}
+    <span class="stats-divider">|</span>
+    {{ first9Only ? 'First-9' : 'all Scores' }}.
+  </span>
 </p>
 </p-card>
