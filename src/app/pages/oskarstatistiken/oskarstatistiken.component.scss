@@ -77,3 +77,7 @@ text-align: center;
   .p-timeline-event:nth-child(odd) .timeline-card {
   flex-direction: row;
 }
+
+::ng-deep p-table thead tr:first-child th {
+  border-bottom-width: 2px !important;
+}

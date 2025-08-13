@@ -1,9 +1,9 @@
-::ng-deep .p-card .p-card-body {
-  padding: 0rem; /* kleiner Rand */
+::ng-deep .highlight-legs-card .p-card-body {
+  padding: 0;
 }
 
 .text-primary {
-  color: var(--primary-color); // Beispiel für Primary-Color (Grün), anpassbar
+  color: var(--primary-color);
 }
 
 .card-value {
@@ -11,4 +11,29 @@
   font-weight: bold;
   color: var(--primary-color);
   opacity: 0.69;
+}
+
+/* Erste Zeile dick lassen */
+::ng-deep p-table thead tr:first-child th {
+  border-bottom-width: 2px !important;
+}
+
+/* Body-Linien ausblenden */
+::ng-deep p-table tbody td {
+  border-bottom: none !important;
+}
+
+::ng-deep p-table .p-datatable-tbody > tr > td {
+  padding-top: 0.3rem !important;
+  padding-bottom: 0.3rem !important;
+}
+
+::ng-deep p-table .p-datatable-tbody > tr > td,
+::ng-deep p-table .p-datatable-thead > tr > th {
+  width: 50% !important;
+}
+
+::ng-deep p-table .p-datatable-tbody > tr > td:last-child,
+::ng-deep p-table .p-datatable-thead > tr > th:last-child {
+  text-align: right;
 }

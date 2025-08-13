@@ -12,12 +12,14 @@
     ></p-dropdown>
   </div>
 <div class="text-left mb-4">
+  <span class="hinweis block mb-2"><strong>Hinweis:</strong></span>
+  <span class="block mb-4"> Die ausgewählte Saison gilt für alle Abschnitte.</span>
   <span class="block">Klicke auf ein Spiel, um das beste Leg zu sehen, zusammen mit dem Spiel, in dem es gespielt wurde, und allen dazugehörigen Statistiken.</span>
   <span class="block mt-2">Gezeigt wird pro Spieler das jeweils beste Leg.</span>
 </div>
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
     <ng-container *ngIf="bestLegs$ | async as legs; else loading">
-      <p-card *ngFor="let leg of legs">
+      <p-card class="highlight-legs-card" *ngFor="let leg of legs">
         <div 
           class="transition-all duration-200 cursor-pointer hover:bg-slate-200 dark:hover:bg-slate-700 hover:bg-opacity-80 p-2"
           [routerLink]="['/pages/legs', leg.game_id]" [fragment]="'leg-' + leg.leg_number"
@@ -43,16 +45,21 @@
 </div>
 
     <div class="mt-4">
-    <h3>Die Top Jahreswerte</h3>
+    <h2>Top Jahreswerte</h2>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
       <ng-container *ngIf="topYears$ | async as years; else loading">
         <p-card *ngFor="let yearStat of years">
-          <h4 class="text-lg font-semibold">{{ yearStat.year }} - {{ yearStat.category }}</h4>
+          <div class="text-sm text-gray-400 ml-4">
+  {{ yearStat.year }}
+</div>
+<div class="text-xl font-semibold leading-tight ml-4 mb-1">
+  {{ yearStat.category }}
+</div>
           <p-table [value]="yearStat.values" styleClass="p-datatable-sm">
             <ng-template pTemplate="header">
               <tr>
-                <th>Spieler</th>
-                <th>Wert</th>
+                <th class="text-primary">Spieler</th>
+                <th class="text-primary">Wert</th>
               </tr>
             </ng-template>
             <ng-template pTemplate="body" let-value>
