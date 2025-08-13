@@ -1,116 +1,137 @@
 <p-card class="p-6">
-  <div class="flex flex-row gap-6 items-start">
+  <div class="flex flex-row gap-6 items-start" *ngIf="player">
     <div class="w-[140px] flex-shrink-0">
       <div class="rounded-xl shadow-md pb-4">
-        <img [src]="'assets/players/' + player?.image" [alt]="player?.name" class="rounded-t-xl w-full object-cover h-[140px]" />
-<div class="p-2">
-<div class="font-bold text-base flex items-center gap-2">
-  <div class="font-bold text-xl ">{{ player?.name }}</div>
-</div>
-  <div class="nickname text-xl">{{ player?.nickname }}</div>
-<div class="text-l mt-2">
-  <p-tag *ngIf="player?.isFounder; else memberSinceTpl" severity="primary" value="Gründer"></p-tag>
-<ng-template #memberSinceTpl>
-  <span class="mitglied">Mitglied seit {{ player?.memberSince }}</span>
-</ng-template>
-</div>
-<div class="flex flex-col gap-2 mt-3">
-<div class="custom-badge">
-  <span class="label">Jahresoskar</span>
-  <span class="count">xx</span>
-</div>
-<div class="custom-badge">
-  <span class="label">Monatoskar</span>
-  <span class="count">xx</span>
-</div>
-</div>
-    </div>
-    </div>
-    </div>
-    <div class="flex-1 w-full">
-              <div class="stats-header">Aktuelle Saison</div>
-      <div class="grid grid-cols-2 sm:grid-cols-3 gap-2">
-
-
-          <div class="stats-mini">
-            <div class="text-s font-semibold mb-1">Checkout</div>
-            <div class="stat-card-value">99</div>
+        <img [src]="'assets/players/' + player.image" [alt]="player.name" class="rounded-t-xl w-full object-cover h-[140px]" />
+        <div class="p-2">
+          <div class="font-bold text-base flex items-center gap-2">
+            <div class="font-bold text-xl">{{ player.name }}</div>
           </div>
-
-          <div class="stats-mini">
-            <div class="text-s font-semibold mb-1">Best Leg</div>
-            <div class="stat-card-value">19</div>
+          <div class="nickname text-xl">{{ player.nickname }}</div>
+          <div class="text-l mt-2">
+            <p-tag *ngIf="player.isFounder; else memberSinceTpl" severity="primary" value="Gründer"></p-tag>
+            <ng-template #memberSinceTpl>
+              <span class="mitglied">Mitglied seit {{ player.memberSince }}</span>
+            </ng-template>
           </div>
-
-          <div class="stats-mini">
-            <div class="text-s font-semibold mb-1">3DA Match</div>
-            <div class="stat-card-value">60.12</div>
+          <div class="flex flex-col gap-2 mt-3">
+            <div class="custom-badge">
+              <span class="label">Jahresoskar</span>
+              <span class="count">xx</span>
+            </div>
+            <div class="custom-badge">
+              <span class="label">Monatoskar</span>
+              <span class="count">xx</span>
+            </div>
           </div>
-
-          <div class="stats-mini">
-            <div class="text-s font-semibold mb-1">First 9 Match</div>
-            <div class="stat-card-value">73.11</div>
-          </div>
-
-          <div class="stats-mini">
-            <div class="text-s font-semibold mb-1">TONs</div>
-            <div class="stat-card-value">37</div>
-          </div>
-
-          <div class="stats-mini">
-            <div class="text-s font-semibold mb-1">140s</div>
-            <div class="stat-card-value">14</div>
-          </div>
-
-                    <div class="stats-mini">
-            <div class="text-s font-semibold mb-1">180s</div>
-            <div class="stat-card-value">2</div>
-          </div>
-
-          <div class="stats-mini">
-            <div class="text-s font-semibold mb-1">Shortgames</div>
-            <div class="stat-card-value">11</div>
-          </div>
+        </div>
       </div>
     </div>
-</div>
-
+    <div class="flex-1 w-full">
+      <div class="stats-header">Aktuelle Saison: {{ selectedSeason }}</div>
+      <div class="grid grid-cols-2 sm:grid-cols-3 gap-2" *ngIf="stats$ | async as stats">
+        <div class="stats-mini">
+          <div class="text-s font-semibold mb-1">Checkout</div>
+          <div class="stat-card-value">{{ highFinish }}</div>
+        </div>
+        <div class="stats-mini">
+          <div class="text-s font-semibold mb-1">Best Leg</div>
+          <div class="stat-card-value">{{ bestLeg }}</div>
+        </div>
+        <div class="stats-mini">
+          <div class="text-s font-semibold mb-1">Best 3DA Match</div>
+          <div class="stat-card-value">{{ best3DAMatch | number:'1.2-2' }}</div>
+        </div>
+        <div class="stats-mini">
+          <div class="text-s font-semibold mb-1">Best First 9 Match</div>
+          <div class="stat-card-value">{{ bestFirst9Match | number:'1.2-2' }}</div>
+        </div>
+        <div class="stats-mini">
+          <div class="text-s font-semibold mb-1">100+</div>
+          <div class="stat-card-value">{{ score100 }}</div>
+        </div>
+        <div class="stats-mini">
+          <div class="text-s font-semibold mb-1">140+</div> <!-- Geändert -->
+          <div class="stat-card-value">{{ score140 }}</div>
+        </div>
+        <div class="stats-mini">
+          <div class="text-s font-semibold mb-1">180s</div>
+          <div class="stat-card-value">{{ score180 }}</div>
+        </div>
+        <div class="stats-mini">
+          <div class="text-s font-semibold mb-1">Shortgames</div>
+          <div class="stat-card-value">{{ shortGames }}</div>
+        </div>
+      </div>
+    </div>
+  </div>
   <!-- ABZEICHEN -->
-
 </p-card>
 <p-card class="p-4">
   <p-fieldset legend="Abzeichen" [toggleable]="true" [collapsed]="false">
     <p class="m-0">Das Abzeichen Feature ist noch im Aufbau.</p>
   </p-fieldset>
 </p-card>
-
-
 <p-tabs value="0">
-    <p-tablist>
-        <p-tab value="0">Jahresvergleich</p-tab>
-        <p-tab value="1">Trendverlauf</p-tab>
-        <p-tab value="2">Stats</p-tab>
-    </p-tablist>
-    <p-tabpanels>
-        <p-tabpanel value="0">
-            <p class="m-0">
-  Vergleiche deine persönlichen Leistungen über mehrere Saisons hinweg.
-  Sieh auf einen Blick, wie sich deine Averages, Checkouts und Scores
-  von Jahr zu Jahr entwickelt haben.
-            </p>
-        </p-tabpanel>
-        <p-tabpanel value="1">
-            <p class="m-0">
-  Verfolge deinen 3-Dart-Average, First-9-Average und weitere Kennzahlen
-  im Saisonverlauf. Erkenne Formkurven, Leistungssteigerungen und mögliche
-  Schwankungen während der Spieltage.
-            </p>
-        </p-tabpanel>
-        <p-tabpanel value="2">
-            <p class="m-0">
-  Alle wichtigen Statistiken zu deinen Spielen auf einen Blick:
-  Best Leg, höchste Checkouts, 100+/140+/180-Wertungen und vieles mehr.
-            </p>
-        </p-tabpanel>
-    </p-tabpanels>
+  <p-tablist>
+    <p-tab value="0">Jahresvergleich</p-tab>
+    <p-tab value="1">Trendverlauf</p-tab>
+    <p-tab value="2">Stats</p-tab>
+  </p-tablist>
+  <p-tabpanels>
+    <p-tabpanel value="0">
+      <p class="m-0">
+        Vergleiche deine persönlichen Leistungen über mehrere Saisons hinweg.
+        Sieh auf einen Blick, wie sich deine Averages, Checkouts und Scores
+        von Jahr zu Jahr entwickelt haben.
+      </p>
+    </p-tabpanel>
+    <p-tabpanel value="1">
+      <p class="m-0">
+        Verfolge deinen 3-Dart-Average, First-9-Average und weitere Kennzahlen
+        im Saisonverlauf. Erkenne Formkurven, Leistungssteigerungen und mögliche
+        Schwankungen während der Spieltage.
+      </p>
+    </p-tabpanel>
+    <p-tabpanel value="2">
+      <div class="stats-table" *ngIf="stats$ | async as stats">
+        <div class="stat-row">
+          <span>Sets Gewonnen</span>
+          <span>{{ setsWon }}</span>
+        </div>
+        <div class="stat-row">
+          <span>Sets Gewonnen %</span>
+          <span>{{ setsWonPercent }}</span>
+        </div>
+        <div class="stat-row">
+          <span>Legs gespielt / gewonnen</span>
+          <span>{{ legsPlayed }} / {{ totalLegsWon }}</span>
+        </div>
+        <div class="stat-row">
+          <span>Legs Gewonnen %</span>
+          <span>{{ legsWonPercent }}</span>
+        </div>
+        <div class="stat-row">
+          <span>Keep %</span>
+          <span>{{ keepPercent }}</span>
+        </div>
+        <div class="stat-row">
+          <span>Keep Count</span>
+          <span>{{ keepCount }}</span>
+        </div>
+        <div class="stat-row">
+          <span>Break %</span>
+          <span>{{ breakPercent }}</span>
+        </div>
+        <div class="stat-row">
+          <span>Break Count</span>
+          <span>{{ breakCount }}</span>
+        </div>
+        <div class="stat-row">
+          <span>Avg. Darts benötigt</span>
+          <span>{{ avgDartsNeeded }}</span>
+        </div>
+      </div>
+    </p-tabpanel>
+  </p-tabpanels>
 </p-tabs>

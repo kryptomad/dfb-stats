@@ -161,13 +161,13 @@ export class AppMenu implements OnInit {
                 label: 'Spieltagverlauf',
                 icon: 'pi pi-fw pi-list',
                 routerLink: 'pages/oskarstatistiken',
-                fragment: 'Spieltagverlauf',
+                fragment: 'spieltagverlauf',
               },
               {
                 label: 'Jahresvergleich',
                 icon: 'pi pi-fw pi-chart-line',
                 routerLink: 'pages/oskarstatistiken',
-                fragment: 'Jahresvergleich',
+                fragment: 'jahresvergleich',
               },
               {
                 label: 'Oskarsieger',
