@@ -22,7 +22,7 @@ export class RekordeComponent {
   gesamtwertungen: Rekord[] = [
     this.createRekord('Jahres-Oscar Gesamt [3]', '2007–2016', 'Nico', 10),
     this.createRekord('Jahres-Oscar Gewinn in Folge', '2007–2016', 'Nico', 10),
-    this.createRekord('Monats-Oscar Gesamt', '1996–2023/24', 'Y', 81),
+    this.createRekord('Monats-Oscar Gesamt', '1996–2023/24', 'Franz-Josef', 81),
     this.createRekord('Monats-Oscar Gewinn in Folge', '2019–2024', 'mad', 8),
   ];
 
@@ -30,17 +30,22 @@ export class RekordeComponent {
     this.createRekord(
       'Monats-Oscar Gesamt in einem Jahr',
       '2003, 2020/21, 2023/24',
-      'Y, mad',
+      'Franz-Josef, mad',
       9,
     ),
-    this.createRekord('High Check', '2003, 2020/21, 2023/24', 'Y, mad', 9),
+    this.createRekord(
+      'High Check',
+      '2003, 2020/21, 2023/24',
+      'Franz-Josef, mad',
+      9,
+    ),
     this.createRekord(
       'High Check geworfen [1] (+100)',
       '2008, 2013 / 2019, 2020/21',
       'Nico, mad',
       3,
     ),
-    this.createRekord('Geworfene 180er', '2006, 2013', 'Y, Nico', 5),
+    this.createRekord('Geworfene 180er', '2006, 2013', 'Franz-Josef, Nico', 5),
     this.createRekord('Geworfene 180er, Gesamt', '2008, 2013', 'Team', 8),
     this.createRekord('Geworfene 140er', '2021/2022', 'mad', 30),
     this.createRekord('Geworfene 140er, Gesamt', '2009, 2012', 'Team', 64),
@@ -53,7 +58,12 @@ export class RekordeComponent {
   ];
 
   spieltagswertungen: Rekord[] = [
-    this.createRekord('Geworfene 180er', '2006–2024', 'Y, Nico, mad', 2),
+    this.createRekord(
+      'Geworfene 180er',
+      '2006–2024',
+      'Franz-Josef, Nico, mad',
+      2,
+    ),
     this.createRekord('Geworfene 180er, Gesamt [2]', '02.02.2013', 'Team', 3),
     this.createRekord('Geworfene 140er', '13.04.2017', 'Nico', 8),
     this.createRekord('Geworfene 140er, Gesamt [2]', '2009–2017', 'Team', 12),
@@ -64,7 +74,7 @@ export class RekordeComponent {
   ];
 
   matchwertungen: Rekord[] = [
-    this.createRekord('First 9 Dart Average', '2019', 'Y', 92.7),
+    this.createRekord('First 9 Dart Average', '2019', 'Franz-Josef', 92.7),
     this.createRekord('3 Dart Average', '2019', 'mad', 79.1),
     this.createRekord('Average Darts needed', '2019', 'mad', 19),
   ];

@@ -1,3 +1,24 @@
 ::ng-deep p-table thead tr:first-child th {
   border-bottom-width: 2px !important;
 }
+
+/* Spaltenbreiten global für alle Tabellen */
+:host ::ng-deep .p-datatable-table th:nth-child(1),
+:host ::ng-deep .p-datatable-table td:nth-child(1) {
+  width: 35%;
+}
+
+:host ::ng-deep .p-datatable-table th:nth-child(2),
+:host ::ng-deep .p-datatable-table td:nth-child(2) {
+  width: 16%;
+}
+
+:host ::ng-deep .p-datatable-table th:nth-child(3),
+:host ::ng-deep .p-datatable-table td:nth-child(3) {
+  width: 24%;
+}
+
+:host ::ng-deep .p-datatable-table th:nth-child(4),
+:host ::ng-deep .p-datatable-table td:nth-child(4) {
+  width: 25%;
+}
