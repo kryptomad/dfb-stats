@@ -1,9 +1,9 @@
 {
   "gastgeber": "Frank",
-  "datum": "Samstag, 13.09.2025",
-  "zeit": "18:30 Uhr",
-  "oskardarten": true,
-  "gelddarten": false,
+  "datum": "Freitag, 26.09.2025",
+  "zeit": "19:30 Uhr",
+  "oskardarten": false,
+  "gelddarten": true,
   "season": "2024/2025",
   "matchday": 5
 }
