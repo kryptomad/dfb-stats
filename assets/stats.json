@@ -1,7 +1,7 @@
 [
   {
     "game_id": 1,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 1,
     "player_id": 1,
     "player1_id": 1,
@@ -30,7 +30,7 @@
   },
   {
     "game_id": 1,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 1,
     "player_id": 8,
     "player1_id": 1,
@@ -59,7 +59,7 @@
   },
   {
     "game_id": 2,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 1,
     "player_id": 2,
     "player1_id": 4,
@@ -88,7 +88,7 @@
   },
   {
     "game_id": 2,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 1,
     "player_id": 4,
     "player1_id": 4,
@@ -117,7 +117,7 @@
   },
   {
     "game_id": 3,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 1,
     "player_id": 1,
     "player1_id": 6,
@@ -146,7 +146,7 @@
   },
   {
     "game_id": 3,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 1,
     "player_id": 6,
     "player1_id": 6,
@@ -175,7 +175,7 @@
   },
   {
     "game_id": 4,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 1,
     "player_id": 2,
     "player1_id": 8,
@@ -204,7 +204,7 @@
   },
   {
     "game_id": 4,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 1,
     "player_id": 8,
     "player1_id": 8,
@@ -233,7 +233,7 @@
   },
   {
     "game_id": 5,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 1,
     "player_id": 2,
     "player1_id": 2,
@@ -262,7 +262,7 @@
   },
   {
     "game_id": 5,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 1,
     "player_id": 6,
     "player1_id": 2,
@@ -291,7 +291,7 @@
   },
   {
     "game_id": 6,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 1,
     "player_id": 4,
     "player1_id": 4,
@@ -320,7 +320,7 @@
   },
   {
     "game_id": 6,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 1,
     "player_id": 8,
     "player1_id": 4,
@@ -349,7 +349,7 @@
   },
   {
     "game_id": 7,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 1,
     "player_id": 1,
     "player1_id": 2,
@@ -378,7 +378,7 @@
   },
   {
     "game_id": 7,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 1,
     "player_id": 2,
     "player1_id": 2,
@@ -407,7 +407,7 @@
   },
   {
     "game_id": 8,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 1,
     "player_id": 4,
     "player1_id": 4,
@@ -436,7 +436,7 @@
   },
   {
     "game_id": 8,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 1,
     "player_id": 6,
     "player1_id": 4,
@@ -465,7 +465,7 @@
   },
   {
     "game_id": 9,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 1,
     "player_id": 1,
     "player1_id": 1,
@@ -494,7 +494,7 @@
   },
   {
     "game_id": 9,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 1,
     "player_id": 4,
     "player1_id": 1,
@@ -523,7 +523,7 @@
   },
   {
     "game_id": 10,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 1,
     "player_id": 6,
     "player1_id": 8,
@@ -552,7 +552,7 @@
   },
   {
     "game_id": 10,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 1,
     "player_id": 8,
     "player1_id": 8,
@@ -581,7 +581,7 @@
   },
   {
     "game_id": 11,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 2,
     "player_id": 1,
     "player1_id": 1,
@@ -610,7 +610,7 @@
   },
   {
     "game_id": 11,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 2,
     "player_id": 6,
     "player1_id": 1,
@@ -639,7 +639,7 @@
   },
   {
     "game_id": 12,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 2,
     "player_id": 4,
     "player1_id": 4,
@@ -668,7 +668,7 @@
   },
   {
     "game_id": 12,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 2,
     "player_id": 8,
     "player1_id": 4,
@@ -697,7 +697,7 @@
   },
   {
     "game_id": 13,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 2,
     "player_id": 2,
     "player1_id": 6,
@@ -726,7 +726,7 @@
   },
   {
     "game_id": 13,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 2,
     "player_id": 6,
     "player1_id": 6,
@@ -755,7 +755,7 @@
   },
   {
     "game_id": 14,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 2,
     "player_id": 1,
     "player1_id": 1,
@@ -784,7 +784,7 @@
   },
   {
     "game_id": 14,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 2,
     "player_id": 8,
     "player1_id": 1,
@@ -813,7 +813,7 @@
   },
   {
     "game_id": 15,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 2,
     "player_id": 2,
     "player1_id": 8,
@@ -842,7 +842,7 @@
   },
   {
     "game_id": 15,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 2,
     "player_id": 8,
     "player1_id": 8,
@@ -871,7 +871,7 @@
   },
   {
     "game_id": 16,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 2,
     "player_id": 1,
     "player1_id": 1,
@@ -900,7 +900,7 @@
   },
   {
     "game_id": 16,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 2,
     "player_id": 4,
     "player1_id": 1,
@@ -929,7 +929,7 @@
   },
   {
     "game_id": 17,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 2,
     "player_id": 6,
     "player1_id": 8,
@@ -958,7 +958,7 @@
   },
   {
     "game_id": 17,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 2,
     "player_id": 8,
     "player1_id": 8,
@@ -987,7 +987,7 @@
   },
   {
     "game_id": 18,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 2,
     "player_id": 2,
     "player1_id": 4,
@@ -1016,7 +1016,7 @@
   },
   {
     "game_id": 18,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 2,
     "player_id": 4,
     "player1_id": 4,
@@ -1045,7 +1045,7 @@
   },
   {
     "game_id": 19,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 2,
     "player_id": 4,
     "player1_id": 4,
@@ -1074,7 +1074,7 @@
   },
   {
     "game_id": 19,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 2,
     "player_id": 6,
     "player1_id": 4,
@@ -1103,7 +1103,7 @@
   },
   {
     "game_id": 20,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 2,
     "player_id": 1,
     "player1_id": 1,
@@ -1132,7 +1132,7 @@
   },
   {
     "game_id": 20,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 2,
     "player_id": 2,
     "player1_id": 1,
@@ -1161,7 +1161,7 @@
   },
   {
     "game_id": 21,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 3,
     "player_id": 1,
     "player1_id": 6,
@@ -1190,7 +1190,7 @@
   },
   {
     "game_id": 21,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 3,
     "player_id": 6,
     "player1_id": 6,
@@ -1219,7 +1219,7 @@
   },
   {
     "game_id": 22,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 3,
     "player_id": 2,
     "player1_id": 4,
@@ -1248,7 +1248,7 @@
   },
   {
     "game_id": 22,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 3,
     "player_id": 4,
     "player1_id": 4,
@@ -1277,7 +1277,7 @@
   },
   {
     "game_id": 23,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 3,
     "player_id": 1,
     "player1_id": 8,
@@ -1306,7 +1306,7 @@
   },
   {
     "game_id": 23,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 3,
     "player_id": 8,
     "player1_id": 8,
@@ -1335,7 +1335,7 @@
   },
   {
     "game_id": 24,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 3,
     "player_id": 2,
     "player1_id": 2,
@@ -1364,7 +1364,7 @@
   },
   {
     "game_id": 24,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 3,
     "player_id": 6,
     "player1_id": 2,
@@ -1393,7 +1393,7 @@
   },
   {
     "game_id": 25,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 3,
     "player_id": 2,
     "player1_id": 8,
@@ -1422,7 +1422,7 @@
   },
   {
     "game_id": 25,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 3,
     "player_id": 8,
     "player1_id": 8,
@@ -1451,7 +1451,7 @@
   },
   {
     "game_id": 26,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 3,
     "player_id": 4,
     "player1_id": 4,
@@ -1480,7 +1480,7 @@
   },
   {
     "game_id": 26,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 3,
     "player_id": 6,
     "player1_id": 4,
@@ -1509,7 +1509,7 @@
   },
   {
     "game_id": 27,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 3,
     "player_id": 1,
     "player1_id": 2,
@@ -1538,7 +1538,7 @@
   },
   {
     "game_id": 27,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 3,
     "player_id": 2,
     "player1_id": 2,
@@ -1567,7 +1567,7 @@
   },
   {
     "game_id": 28,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 3,
     "player_id": 4,
     "player1_id": 8,
@@ -1596,7 +1596,7 @@
   },
   {
     "game_id": 28,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 3,
     "player_id": 8,
     "player1_id": 8,
@@ -1625,7 +1625,7 @@
   },
   {
     "game_id": 29,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 3,
     "player_id": 1,
     "player1_id": 4,
@@ -1654,7 +1654,7 @@
   },
   {
     "game_id": 29,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 3,
     "player_id": 4,
     "player1_id": 4,
@@ -1683,7 +1683,7 @@
   },
   {
     "game_id": 30,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 3,
     "player_id": 6,
     "player1_id": 8,
@@ -1712,7 +1712,7 @@
   },
   {
     "game_id": 30,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 3,
     "player_id": 8,
     "player1_id": 8,
@@ -1741,7 +1741,7 @@
   },
   {
     "game_id": 31,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 4,
     "player_id": 2,
     "player1_id": 4,
@@ -1770,7 +1770,7 @@
   },
   {
     "game_id": 31,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 4,
     "player_id": 4,
     "player1_id": 4,
@@ -1799,7 +1799,7 @@
   },
   {
     "game_id": 32,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 4,
     "player_id": 1,
     "player1_id": 8,
@@ -1828,7 +1828,7 @@
   },
   {
     "game_id": 32,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 4,
     "player_id": 8,
     "player1_id": 8,
@@ -1857,7 +1857,7 @@
   },
   {
     "game_id": 33,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 4,
     "player_id": 2,
     "player1_id": 6,
@@ -1886,7 +1886,7 @@
   },
   {
     "game_id": 33,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 4,
     "player_id": 6,
     "player1_id": 6,
@@ -1915,7 +1915,7 @@
   },
   {
     "game_id": 34,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 4,
     "player_id": 4,
     "player1_id": 8,
@@ -1944,7 +1944,7 @@
   },
   {
     "game_id": 34,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 4,
     "player_id": 8,
     "player1_id": 8,
@@ -1973,7 +1973,7 @@
   },
   {
     "game_id": 35,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 4,
     "player_id": 6,
     "player1_id": 8,
@@ -2002,7 +2002,7 @@
   },
   {
     "game_id": 35,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 4,
     "player_id": 8,
     "player1_id": 8,
@@ -2031,7 +2031,7 @@
   },
   {
     "game_id": 36,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 4,
     "player_id": 1,
     "player1_id": 4,
@@ -2060,7 +2060,7 @@
   },
   {
     "game_id": 36,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 4,
     "player_id": 4,
     "player1_id": 4,
@@ -2089,7 +2089,7 @@
   },
   {
     "game_id": 37,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 4,
     "player_id": 2,
     "player1_id": 2,
@@ -2118,7 +2118,7 @@
   },
   {
     "game_id": 37,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 4,
     "player_id": 8,
     "player1_id": 2,
@@ -2147,7 +2147,7 @@
   },
   {
     "game_id": 38,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 4,
     "player_id": 1,
     "player1_id": 1,
@@ -2176,7 +2176,7 @@
   },
   {
     "game_id": 38,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 4,
     "player_id": 6,
     "player1_id": 1,
@@ -2205,7 +2205,7 @@
   },
   {
     "game_id": 39,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 4,
     "player_id": 1,
     "player1_id": 2,
@@ -2234,7 +2234,7 @@
   },
   {
     "game_id": 39,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 4,
     "player_id": 2,
     "player1_id": 2,
@@ -2263,7 +2263,7 @@
   },
   {
     "game_id": 40,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 4,
     "player_id": 4,
     "player1_id": 6,
@@ -2292,7 +2292,7 @@
   },
   {
     "game_id": 40,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 4,
     "player_id": 6,
     "player1_id": 6,
@@ -2321,7 +2321,7 @@
   },
   {
     "game_id": 41,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 5,
     "player_id": 1,
     "player1_id": 6,
@@ -2350,7 +2350,7 @@
   },
   {
     "game_id": 41,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 5,
     "player_id": 6,
     "player1_id": 6,
@@ -2379,7 +2379,7 @@
   },
   {
     "game_id": 42,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 5,
     "player_id": 2,
     "player1_id": 4,
@@ -2408,7 +2408,7 @@
   },
   {
     "game_id": 42,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 5,
     "player_id": 4,
     "player1_id": 4,
@@ -2437,7 +2437,7 @@
   },
   {
     "game_id": 43,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 5,
     "player_id": 6,
     "player1_id": 8,
@@ -2466,7 +2466,7 @@
   },
   {
     "game_id": 43,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 5,
     "player_id": 8,
     "player1_id": 8,
@@ -2495,7 +2495,7 @@
   },
   {
     "game_id": 44,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 5,
     "player_id": 1,
     "player1_id": 4,
@@ -2524,7 +2524,7 @@
   },
   {
     "game_id": 44,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 5,
     "player_id": 4,
     "player1_id": 4,
@@ -2553,7 +2553,7 @@
   },
   {
     "game_id": 45,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 5,
     "player_id": 4,
     "player1_id": 4,
@@ -2582,7 +2582,7 @@
   },
   {
     "game_id": 45,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 5,
     "player_id": 8,
     "player1_id": 4,
@@ -2611,7 +2611,7 @@
   },
   {
     "game_id": 46,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 5,
     "player_id": 1,
     "player1_id": 1,
@@ -2640,7 +2640,7 @@
   },
   {
     "game_id": 46,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 5,
     "player_id": 2,
     "player1_id": 1,
@@ -2669,7 +2669,7 @@
   },
   {
     "game_id": 47,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 5,
     "player_id": 4,
     "player1_id": 4,
@@ -2698,7 +2698,7 @@
   },
   {
     "game_id": 47,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 5,
     "player_id": 6,
     "player1_id": 4,
@@ -2727,7 +2727,7 @@
   },
   {
     "game_id": 48,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 5,
     "player_id": 2,
     "player1_id": 2,
@@ -2756,7 +2756,7 @@
   },
   {
     "game_id": 48,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 5,
     "player_id": 8,
     "player1_id": 2,
@@ -2785,7 +2785,7 @@
   },
   {
     "game_id": 49,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 5,
     "player_id": 2,
     "player1_id": 2,
@@ -2814,7 +2814,7 @@
   },
   {
     "game_id": 49,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 5,
     "player_id": 6,
     "player1_id": 2,
@@ -2843,7 +2843,7 @@
   },
   {
     "game_id": 50,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 5,
     "player_id": 1,
     "player1_id": 1,
@@ -2872,7 +2872,7 @@
   },
   {
     "game_id": 50,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 5,
     "player_id": 8,
     "player1_id": 1,
@@ -2901,7 +2901,7 @@
   },
   {
     "game_id": 51,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 6,
     "player_id": 1,
     "player1_id": 1,
@@ -2930,7 +2930,7 @@
   },
   {
     "game_id": 51,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 6,
     "player_id": 4,
     "player1_id": 1,
@@ -2959,7 +2959,7 @@
   },
   {
     "game_id": 52,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 6,
     "player_id": 6,
     "player1_id": 8,
@@ -2988,7 +2988,7 @@
   },
   {
     "game_id": 52,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 6,
     "player_id": 8,
     "player1_id": 8,
@@ -3017,7 +3017,7 @@
   },
   {
     "game_id": 53,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 6,
     "player_id": 1,
     "player1_id": 2,
@@ -3046,7 +3046,7 @@
   },
   {
     "game_id": 53,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 6,
     "player_id": 2,
     "player1_id": 2,
@@ -3075,7 +3075,7 @@
   },
   {
     "game_id": 54,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 6,
     "player_id": 4,
     "player1_id": 4,
@@ -3104,7 +3104,7 @@
   },
   {
     "game_id": 54,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 6,
     "player_id": 8,
     "player1_id": 4,
@@ -3133,7 +3133,7 @@
   },
   {
     "game_id": 55,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 6,
     "player_id": 2,
     "player1_id": 2,
@@ -3162,7 +3162,7 @@
   },
   {
     "game_id": 55,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 6,
     "player_id": 8,
     "player1_id": 2,
@@ -3191,7 +3191,7 @@
   },
   {
     "game_id": 56,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 6,
     "player_id": 4,
     "player1_id": 6,
@@ -3220,7 +3220,7 @@
   },
   {
     "game_id": 56,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 6,
     "player_id": 6,
     "player1_id": 6,
@@ -3249,7 +3249,7 @@
   },
   {
     "game_id": 57,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 6,
     "player_id": 1,
     "player1_id": 8,
@@ -3278,7 +3278,7 @@
   },
   {
     "game_id": 57,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 6,
     "player_id": 8,
     "player1_id": 8,
@@ -3307,7 +3307,7 @@
   },
   {
     "game_id": 58,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 6,
     "player_id": 2,
     "player1_id": 6,
@@ -3336,7 +3336,7 @@
   },
   {
     "game_id": 58,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 6,
     "player_id": 6,
     "player1_id": 6,
@@ -3365,7 +3365,7 @@
   },
   {
     "game_id": 59,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 6,
     "player_id": 1,
     "player1_id": 6,
@@ -3394,7 +3394,7 @@
   },
   {
     "game_id": 59,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 6,
     "player_id": 6,
     "player1_id": 6,
@@ -3423,7 +3423,7 @@
   },
   {
     "game_id": 60,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 6,
     "player_id": 2,
     "player1_id": 4,
@@ -3452,7 +3452,7 @@
   },
   {
     "game_id": 60,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 6,
     "player_id": 4,
     "player1_id": 4,
@@ -3481,7 +3481,7 @@
   },
   {
     "game_id": 61,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 7,
     "player_id": 1,
     "player1_id": 1,
@@ -3510,7 +3510,7 @@
   },
   {
     "game_id": 61,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 7,
     "player_id": 6,
     "player1_id": 1,
@@ -3539,7 +3539,7 @@
   },
   {
     "game_id": 62,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 7,
     "player_id": 2,
     "player1_id": 4,
@@ -3568,7 +3568,7 @@
   },
   {
     "game_id": 62,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 7,
     "player_id": 4,
     "player1_id": 4,
@@ -3597,7 +3597,7 @@
   },
   {
     "game_id": 63,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 7,
     "player_id": 1,
     "player1_id": 1,
@@ -3626,7 +3626,7 @@
   },
   {
     "game_id": 63,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 7,
     "player_id": 8,
     "player1_id": 1,
@@ -3655,7 +3655,7 @@
   },
   {
     "game_id": 64,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 7,
     "player_id": 2,
     "player1_id": 6,
@@ -3684,7 +3684,7 @@
   },
   {
     "game_id": 64,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 7,
     "player_id": 6,
     "player1_id": 6,
@@ -3713,7 +3713,7 @@
   },
   {
     "game_id": 65,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 7,
     "player_id": 2,
     "player1_id": 2,
@@ -3742,7 +3742,7 @@
   },
   {
     "game_id": 65,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 7,
     "player_id": 8,
     "player1_id": 2,
@@ -3771,7 +3771,7 @@
   },
   {
     "game_id": 66,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 7,
     "player_id": 4,
     "player1_id": 6,
@@ -3800,7 +3800,7 @@
   },
   {
     "game_id": 66,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 7,
     "player_id": 6,
     "player1_id": 6,
@@ -3829,7 +3829,7 @@
   },
   {
     "game_id": 67,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 7,
     "player_id": 1,
     "player1_id": 2,
@@ -3858,7 +3858,7 @@
   },
   {
     "game_id": 67,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 7,
     "player_id": 2,
     "player1_id": 2,
@@ -3887,7 +3887,7 @@
   },
   {
     "game_id": 68,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 7,
     "player_id": 4,
     "player1_id": 4,
@@ -3916,7 +3916,7 @@
   },
   {
     "game_id": 68,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 7,
     "player_id": 8,
     "player1_id": 4,
@@ -3945,7 +3945,7 @@
   },
   {
     "game_id": 69,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 7,
     "player_id": 1,
     "player1_id": 4,
@@ -3974,7 +3974,7 @@
   },
   {
     "game_id": 69,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 7,
     "player_id": 4,
     "player1_id": 4,
@@ -4003,7 +4003,7 @@
   },
   {
     "game_id": 70,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 7,
     "player_id": 6,
     "player1_id": 8,
@@ -4032,7 +4032,7 @@
   },
   {
     "game_id": 70,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 7,
     "player_id": 8,
     "player1_id": 8,
@@ -4061,7 +4061,7 @@
   },
   {
     "game_id": 71,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 8,
     "player_id": 2,
     "player1_id": 4,
@@ -4090,7 +4090,7 @@
   },
   {
     "game_id": 71,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 8,
     "player_id": 4,
     "player1_id": 4,
@@ -4119,7 +4119,7 @@
   },
   {
     "game_id": 72,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 8,
     "player_id": 1,
     "player1_id": 8,
@@ -4148,7 +4148,7 @@
   },
   {
     "game_id": 72,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 8,
     "player_id": 8,
     "player1_id": 8,
@@ -4177,7 +4177,7 @@
   },
   {
     "game_id": 73,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 8,
     "player_id": 4,
     "player1_id": 4,
@@ -4206,7 +4206,7 @@
   },
   {
     "game_id": 73,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 8,
     "player_id": 6,
     "player1_id": 4,
@@ -4235,7 +4235,7 @@
   },
   {
     "game_id": 74,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 8,
     "player_id": 2,
     "player1_id": 8,
@@ -4264,7 +4264,7 @@
   },
   {
     "game_id": 74,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 8,
     "player_id": 8,
     "player1_id": 8,
@@ -4293,7 +4293,7 @@
   },
   {
     "game_id": 75,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 8,
     "player_id": 6,
     "player1_id": 8,
@@ -4322,7 +4322,7 @@
   },
   {
     "game_id": 75,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 8,
     "player_id": 8,
     "player1_id": 8,
@@ -4351,7 +4351,7 @@
   },
   {
     "game_id": 76,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 8,
     "player_id": 1,
     "player1_id": 1,
@@ -4380,7 +4380,7 @@
   },
   {
     "game_id": 76,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 8,
     "player_id": 2,
     "player1_id": 1,
@@ -4409,7 +4409,7 @@
   },
   {
     "game_id": 77,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 8,
     "player_id": 4,
     "player1_id": 8,
@@ -4438,7 +4438,7 @@
   },
   {
     "game_id": 77,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 8,
     "player_id": 8,
     "player1_id": 8,
@@ -4467,7 +4467,7 @@
   },
   {
     "game_id": 78,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 8,
     "player_id": 1,
     "player1_id": 1,
@@ -4496,7 +4496,7 @@
   },
   {
     "game_id": 78,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 8,
     "player_id": 6,
     "player1_id": 1,
@@ -4525,7 +4525,7 @@
   },
   {
     "game_id": 79,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 8,
     "player_id": 1,
     "player1_id": 4,
@@ -4554,7 +4554,7 @@
   },
   {
     "game_id": 79,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 8,
     "player_id": 4,
     "player1_id": 4,
@@ -4583,7 +4583,7 @@
   },
   {
     "game_id": 80,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 8,
     "player_id": 2,
     "player1_id": 2,
@@ -4612,7 +4612,7 @@
   },
   {
     "game_id": 80,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 8,
     "player_id": 6,
     "player1_id": 2,
@@ -4641,7 +4641,7 @@
   },
   {
     "game_id": 81,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 9,
     "player_id": 1,
     "player1_id": 8,
@@ -4670,7 +4670,7 @@
   },
   {
     "game_id": 81,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 9,
     "player_id": 8,
     "player1_id": 8,
@@ -4699,7 +4699,7 @@
   },
   {
     "game_id": 82,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 9,
     "player_id": 2,
     "player1_id": 2,
@@ -4728,7 +4728,7 @@
   },
   {
     "game_id": 82,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 9,
     "player_id": 6,
     "player1_id": 2,
@@ -4757,7 +4757,7 @@
   },
   {
     "game_id": 83,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 9,
     "player_id": 4,
     "player1_id": 8,
@@ -4786,7 +4786,7 @@
   },
   {
     "game_id": 83,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 9,
     "player_id": 8,
     "player1_id": 8,
@@ -4815,7 +4815,7 @@
   },
   {
     "game_id": 84,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 9,
     "player_id": 1,
     "player1_id": 1,
@@ -4844,7 +4844,7 @@
   },
   {
     "game_id": 84,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 9,
     "player_id": 6,
     "player1_id": 1,
@@ -4873,7 +4873,7 @@
   },
   {
     "game_id": 85,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 9,
     "player_id": 4,
     "player1_id": 4,
@@ -4902,7 +4902,7 @@
   },
   {
     "game_id": 85,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 9,
     "player_id": 6,
     "player1_id": 4,
@@ -4931,7 +4931,7 @@
   },
   {
     "game_id": 86,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 9,
     "player_id": 1,
     "player1_id": 1,
@@ -4960,7 +4960,7 @@
   },
   {
     "game_id": 86,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 9,
     "player_id": 2,
     "player1_id": 1,
@@ -4989,7 +4989,7 @@
   },
   {
     "game_id": 87,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 9,
     "player_id": 6,
     "player1_id": 8,
@@ -5018,7 +5018,7 @@
   },
   {
     "game_id": 87,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 9,
     "player_id": 8,
     "player1_id": 8,
@@ -5047,7 +5047,7 @@
   },
   {
     "game_id": 88,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 9,
     "player_id": 2,
     "player1_id": 2,
@@ -5076,7 +5076,7 @@
   },
   {
     "game_id": 88,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 9,
     "player_id": 4,
     "player1_id": 2,
@@ -5105,7 +5105,7 @@
   },
   {
     "game_id": 89,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 9,
     "player_id": 2,
     "player1_id": 8,
@@ -5134,7 +5134,7 @@
   },
   {
     "game_id": 89,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 9,
     "player_id": 8,
     "player1_id": 8,
@@ -5163,7 +5163,7 @@
   },
   {
     "game_id": 90,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 9,
     "player_id": 1,
     "player1_id": 4,
@@ -5192,7 +5192,7 @@
   },
   {
     "game_id": 90,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 9,
     "player_id": 4,
     "player1_id": 4,
@@ -5221,7 +5221,7 @@
   },
   {
     "game_id": 91,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 10,
     "player_id": 1,
     "player1_id": 6,
@@ -5250,7 +5250,7 @@
   },
   {
     "game_id": 91,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 10,
     "player_id": 6,
     "player1_id": 6,
@@ -5279,7 +5279,7 @@
   },
   {
     "game_id": 92,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 10,
     "player_id": 4,
     "player1_id": 8,
@@ -5308,7 +5308,7 @@
   },
   {
     "game_id": 92,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 10,
     "player_id": 8,
     "player1_id": 8,
@@ -5337,7 +5337,7 @@
   },
   {
     "game_id": 93,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 10,
     "player_id": 2,
     "player1_id": 2,
@@ -5366,7 +5366,7 @@
   },
   {
     "game_id": 93,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 10,
     "player_id": 6,
     "player1_id": 2,
@@ -5395,7 +5395,7 @@
   },
   {
     "game_id": 94,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 10,
     "player_id": 1,
     "player1_id": 1,
@@ -5424,7 +5424,7 @@
   },
   {
     "game_id": 94,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 10,
     "player_id": 4,
     "player1_id": 1,
@@ -5453,7 +5453,7 @@
   },
   {
     "game_id": 95,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 10,
     "player_id": 2,
     "player1_id": 4,
@@ -5482,7 +5482,7 @@
   },
   {
     "game_id": 95,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 10,
     "player_id": 4,
     "player1_id": 4,
@@ -5511,7 +5511,7 @@
   },
   {
     "game_id": 96,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 10,
     "player_id": 1,
     "player1_id": 8,
@@ -5540,7 +5540,7 @@
   },
   {
     "game_id": 96,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 10,
     "player_id": 8,
     "player1_id": 8,
@@ -5569,7 +5569,7 @@
   },
   {
     "game_id": 97,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 10,
     "player_id": 4,
     "player1_id": 6,
@@ -5598,7 +5598,7 @@
   },
   {
     "game_id": 97,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 10,
     "player_id": 6,
     "player1_id": 6,
@@ -5627,7 +5627,7 @@
   },
   {
     "game_id": 98,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 10,
     "player_id": 2,
     "player1_id": 2,
@@ -5656,7 +5656,7 @@
   },
   {
     "game_id": 98,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 10,
     "player_id": 8,
     "player1_id": 2,
@@ -5685,7 +5685,7 @@
   },
   {
     "game_id": 99,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 10,
     "player_id": 6,
     "player1_id": 8,
@@ -5714,7 +5714,7 @@
   },
   {
     "game_id": 99,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 10,
     "player_id": 8,
     "player1_id": 8,
@@ -5743,7 +5743,7 @@
   },
   {
     "game_id": 100,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 10,
     "player_id": 1,
     "player1_id": 2,
@@ -5772,7 +5772,7 @@
   },
   {
     "game_id": 100,
-    "season": "2018",
+    "season": "2018/2019",
     "matchday": 10,
     "player_id": 2,
     "player1_id": 2,
@@ -5801,7 +5801,7 @@
   },
   {
     "game_id": 101,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 1,
     "player_id": 1,
     "player1_id": 1,
@@ -5830,7 +5830,7 @@
   },
   {
     "game_id": 101,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 1,
     "player_id": 4,
     "player1_id": 1,
@@ -5859,7 +5859,7 @@
   },
   {
     "game_id": 102,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 1,
     "player_id": 2,
     "player1_id": 2,
@@ -5888,7 +5888,7 @@
   },
   {
     "game_id": 102,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 1,
     "player_id": 6,
     "player1_id": 2,
@@ -5917,7 +5917,7 @@
   },
   {
     "game_id": 103,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 1,
     "player_id": 1,
     "player1_id": 8,
@@ -5946,7 +5946,7 @@
   },
   {
     "game_id": 103,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 1,
     "player_id": 8,
     "player1_id": 8,
@@ -5975,7 +5975,7 @@
   },
   {
     "game_id": 104,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 1,
     "player_id": 2,
     "player1_id": 4,
@@ -6004,7 +6004,7 @@
   },
   {
     "game_id": 104,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 1,
     "player_id": 4,
     "player1_id": 4,
@@ -6033,7 +6033,7 @@
   },
   {
     "game_id": 105,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 1,
     "player_id": 2,
     "player1_id": 8,
@@ -6062,7 +6062,7 @@
   },
   {
     "game_id": 105,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 1,
     "player_id": 8,
     "player1_id": 8,
@@ -6091,7 +6091,7 @@
   },
   {
     "game_id": 106,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 1,
     "player_id": 4,
     "player1_id": 6,
@@ -6120,7 +6120,7 @@
   },
   {
     "game_id": 106,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 1,
     "player_id": 6,
     "player1_id": 6,
@@ -6149,7 +6149,7 @@
   },
   {
     "game_id": 107,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 1,
     "player_id": 1,
     "player1_id": 1,
@@ -6178,7 +6178,7 @@
   },
   {
     "game_id": 107,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 1,
     "player_id": 2,
     "player1_id": 1,
@@ -6207,7 +6207,7 @@
   },
   {
     "game_id": 108,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 1,
     "player_id": 6,
     "player1_id": 8,
@@ -6236,7 +6236,7 @@
   },
   {
     "game_id": 108,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 1,
     "player_id": 8,
     "player1_id": 8,
@@ -6265,7 +6265,7 @@
   },
   {
     "game_id": 109,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 1,
     "player_id": 1,
     "player1_id": 1,
@@ -6294,7 +6294,7 @@
   },
   {
     "game_id": 109,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 1,
     "player_id": 6,
     "player1_id": 1,
@@ -6323,7 +6323,7 @@
   },
   {
     "game_id": 110,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 1,
     "player_id": 4,
     "player1_id": 8,
@@ -6352,7 +6352,7 @@
   },
   {
     "game_id": 110,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 1,
     "player_id": 8,
     "player1_id": 8,
@@ -6381,7 +6381,7 @@
   },
   {
     "game_id": 111,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 2,
     "player_id": 2,
     "player1_id": 8,
@@ -6410,7 +6410,7 @@
   },
   {
     "game_id": 111,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 2,
     "player_id": 8,
     "player1_id": 8,
@@ -6439,7 +6439,7 @@
   },
   {
     "game_id": 112,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 2,
     "player_id": 4,
     "player1_id": 4,
@@ -6468,7 +6468,7 @@
   },
   {
     "game_id": 112,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 2,
     "player_id": 6,
     "player1_id": 4,
@@ -6497,7 +6497,7 @@
   },
   {
     "game_id": 113,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 2,
     "player_id": 1,
     "player1_id": 8,
@@ -6526,7 +6526,7 @@
   },
   {
     "game_id": 113,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 2,
     "player_id": 8,
     "player1_id": 8,
@@ -6555,7 +6555,7 @@
   },
   {
     "game_id": 114,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 2,
     "player_id": 1,
     "player1_id": 4,
@@ -6584,7 +6584,7 @@
   },
   {
     "game_id": 114,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 2,
     "player_id": 4,
     "player1_id": 4,
@@ -6613,7 +6613,7 @@
   },
   {
     "game_id": 115,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 2,
     "player_id": 2,
     "player1_id": 2,
@@ -6642,7 +6642,7 @@
   },
   {
     "game_id": 115,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 2,
     "player_id": 6,
     "player1_id": 2,
@@ -6671,7 +6671,7 @@
   },
   {
     "game_id": 116,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 2,
     "player_id": 2,
     "player1_id": 4,
@@ -6700,7 +6700,7 @@
   },
   {
     "game_id": 116,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 2,
     "player_id": 4,
     "player1_id": 4,
@@ -6729,7 +6729,7 @@
   },
   {
     "game_id": 117,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 2,
     "player_id": 4,
     "player1_id": 4,
@@ -6758,7 +6758,7 @@
   },
   {
     "game_id": 117,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 2,
     "player_id": 8,
     "player1_id": 4,
@@ -6787,7 +6787,7 @@
   },
   {
     "game_id": 118,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 2,
     "player_id": 1,
     "player1_id": 1,
@@ -6816,7 +6816,7 @@
   },
   {
     "game_id": 118,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 2,
     "player_id": 6,
     "player1_id": 1,
@@ -6845,7 +6845,7 @@
   },
   {
     "game_id": 119,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 2,
     "player_id": 6,
     "player1_id": 8,
@@ -6874,7 +6874,7 @@
   },
   {
     "game_id": 119,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 2,
     "player_id": 8,
     "player1_id": 8,
@@ -6903,7 +6903,7 @@
   },
   {
     "game_id": 120,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 2,
     "player_id": 1,
     "player1_id": 1,
@@ -6932,7 +6932,7 @@
   },
   {
     "game_id": 120,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 2,
     "player_id": 2,
     "player1_id": 1,
@@ -6961,7 +6961,7 @@
   },
   {
     "game_id": 121,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 3,
     "player_id": 6,
     "player1_id": 8,
@@ -6990,7 +6990,7 @@
   },
   {
     "game_id": 121,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 3,
     "player_id": 8,
     "player1_id": 8,
@@ -7019,7 +7019,7 @@
   },
   {
     "game_id": 122,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 3,
     "player_id": 1,
     "player1_id": 4,
@@ -7048,7 +7048,7 @@
   },
   {
     "game_id": 122,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 3,
     "player_id": 4,
     "player1_id": 4,
@@ -7077,7 +7077,7 @@
   },
   {
     "game_id": 123,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 3,
     "player_id": 2,
     "player1_id": 6,
@@ -7106,7 +7106,7 @@
   },
   {
     "game_id": 123,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 3,
     "player_id": 6,
     "player1_id": 6,
@@ -7135,7 +7135,7 @@
   },
   {
     "game_id": 124,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 3,
     "player_id": 1,
     "player1_id": 8,
@@ -7164,7 +7164,7 @@
   },
   {
     "game_id": 124,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 3,
     "player_id": 8,
     "player1_id": 8,
@@ -7193,7 +7193,7 @@
   },
   {
     "game_id": 125,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 3,
     "player_id": 1,
     "player1_id": 2,
@@ -7222,7 +7222,7 @@
   },
   {
     "game_id": 125,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 3,
     "player_id": 2,
     "player1_id": 2,
@@ -7251,7 +7251,7 @@
   },
   {
     "game_id": 126,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 3,
     "player_id": 4,
     "player1_id": 4,
@@ -7280,7 +7280,7 @@
   },
   {
     "game_id": 126,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 3,
     "player_id": 8,
     "player1_id": 4,
@@ -7309,7 +7309,7 @@
   },
   {
     "game_id": 127,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 3,
     "player_id": 1,
     "player1_id": 6,
@@ -7338,7 +7338,7 @@
   },
   {
     "game_id": 127,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 3,
     "player_id": 6,
     "player1_id": 6,
@@ -7367,7 +7367,7 @@
   },
   {
     "game_id": 128,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 3,
     "player_id": 2,
     "player1_id": 4,
@@ -7396,7 +7396,7 @@
   },
   {
     "game_id": 128,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 3,
     "player_id": 4,
     "player1_id": 4,
@@ -7425,7 +7425,7 @@
   },
   {
     "game_id": 129,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 3,
     "player_id": 4,
     "player1_id": 6,
@@ -7454,7 +7454,7 @@
   },
   {
     "game_id": 129,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 3,
     "player_id": 6,
     "player1_id": 6,
@@ -7483,7 +7483,7 @@
   },
   {
     "game_id": 130,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 3,
     "player_id": 2,
     "player1_id": 2,
@@ -7512,7 +7512,7 @@
   },
   {
     "game_id": 130,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 3,
     "player_id": 8,
     "player1_id": 2,
@@ -7541,7 +7541,7 @@
   },
   {
     "game_id": 131,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 4,
     "player_id": 4,
     "player1_id": 4,
@@ -7570,7 +7570,7 @@
   },
   {
     "game_id": 131,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 4,
     "player_id": 6,
     "player1_id": 4,
@@ -7599,7 +7599,7 @@
   },
   {
     "game_id": 132,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 4,
     "player_id": 1,
     "player1_id": 2,
@@ -7628,7 +7628,7 @@
   },
   {
     "game_id": 132,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 4,
     "player_id": 2,
     "player1_id": 2,
@@ -7657,7 +7657,7 @@
   },
   {
     "game_id": 133,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 4,
     "player_id": 6,
     "player1_id": 6,
@@ -7686,7 +7686,7 @@
   },
   {
     "game_id": 133,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 4,
     "player_id": 8,
     "player1_id": 6,
@@ -7715,7 +7715,7 @@
   },
   {
     "game_id": 134,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 4,
     "player_id": 2,
     "player1_id": 4,
@@ -7744,7 +7744,7 @@
   },
   {
     "game_id": 134,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 4,
     "player_id": 4,
     "player1_id": 4,
@@ -7773,7 +7773,7 @@
   },
   {
     "game_id": 135,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 4,
     "player_id": 2,
     "player1_id": 8,
@@ -7802,7 +7802,7 @@
   },
   {
     "game_id": 135,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 4,
     "player_id": 8,
     "player1_id": 8,
@@ -7831,7 +7831,7 @@
   },
   {
     "game_id": 136,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 4,
     "player_id": 1,
     "player1_id": 4,
@@ -7860,7 +7860,7 @@
   },
   {
     "game_id": 136,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 4,
     "player_id": 4,
     "player1_id": 4,
@@ -7889,7 +7889,7 @@
   },
   {
     "game_id": 137,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 4,
     "player_id": 2,
     "player1_id": 2,
@@ -7918,7 +7918,7 @@
   },
   {
     "game_id": 137,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 4,
     "player_id": 6,
     "player1_id": 2,
@@ -7947,7 +7947,7 @@
   },
   {
     "game_id": 138,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 4,
     "player_id": 1,
     "player1_id": 1,
@@ -7976,7 +7976,7 @@
   },
   {
     "game_id": 138,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 4,
     "player_id": 8,
     "player1_id": 1,
@@ -8005,7 +8005,7 @@
   },
   {
     "game_id": 139,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 4,
     "player_id": 1,
     "player1_id": 1,
@@ -8034,7 +8034,7 @@
   },
   {
     "game_id": 139,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 4,
     "player_id": 6,
     "player1_id": 1,
@@ -8063,7 +8063,7 @@
   },
   {
     "game_id": 140,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 4,
     "player_id": 4,
     "player1_id": 8,
@@ -8092,7 +8092,7 @@
   },
   {
     "game_id": 140,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 4,
     "player_id": 8,
     "player1_id": 8,
@@ -8121,7 +8121,7 @@
   },
   {
     "game_id": 141,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 5,
     "player_id": 6,
     "player1_id": 8,
@@ -8150,7 +8150,7 @@
   },
   {
     "game_id": 141,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 5,
     "player_id": 8,
     "player1_id": 8,
@@ -8179,7 +8179,7 @@
   },
   {
     "game_id": 142,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 5,
     "player_id": 1,
     "player1_id": 1,
@@ -8208,7 +8208,7 @@
   },
   {
     "game_id": 142,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 5,
     "player_id": 2,
     "player1_id": 1,
@@ -8237,7 +8237,7 @@
   },
   {
     "game_id": 143,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 5,
     "player_id": 4,
     "player1_id": 8,
@@ -8266,7 +8266,7 @@
   },
   {
     "game_id": 143,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 5,
     "player_id": 8,
     "player1_id": 8,
@@ -8295,7 +8295,7 @@
   },
   {
     "game_id": 144,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 5,
     "player_id": 1,
     "player1_id": 1,
@@ -8324,7 +8324,7 @@
   },
   {
     "game_id": 144,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 5,
     "player_id": 6,
     "player1_id": 1,
@@ -8353,7 +8353,7 @@
   },
   {
     "game_id": 145,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 5,
     "player_id": 1,
     "player1_id": 4,
@@ -8382,7 +8382,7 @@
   },
   {
     "game_id": 145,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 5,
     "player_id": 4,
     "player1_id": 4,
@@ -8411,7 +8411,7 @@
   },
   {
     "game_id": 146,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 5,
     "player_id": 2,
     "player1_id": 2,
@@ -8440,7 +8440,7 @@
   },
   {
     "game_id": 146,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 5,
     "player_id": 6,
     "player1_id": 2,
@@ -8469,7 +8469,7 @@
   },
   {
     "game_id": 147,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 5,
     "player_id": 1,
     "player1_id": 8,
@@ -8498,7 +8498,7 @@
   },
   {
     "game_id": 147,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 5,
     "player_id": 8,
     "player1_id": 8,
@@ -8527,7 +8527,7 @@
   },
   {
     "game_id": 148,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 5,
     "player_id": 2,
     "player1_id": 4,
@@ -8556,7 +8556,7 @@
   },
   {
     "game_id": 148,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 5,
     "player_id": 4,
     "player1_id": 4,
@@ -8585,7 +8585,7 @@
   },
   {
     "game_id": 149,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 5,
     "player_id": 2,
     "player1_id": 2,
@@ -8614,7 +8614,7 @@
   },
   {
     "game_id": 149,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 5,
     "player_id": 8,
     "player1_id": 2,
@@ -8643,7 +8643,7 @@
   },
   {
     "game_id": 150,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 5,
     "player_id": 4,
     "player1_id": 4,
@@ -8672,7 +8672,7 @@
   },
   {
     "game_id": 150,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 5,
     "player_id": 6,
     "player1_id": 4,
@@ -8701,7 +8701,7 @@
   },
   {
     "game_id": 151,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 6,
     "player_id": 6,
     "player1_id": 8,
@@ -8730,7 +8730,7 @@
   },
   {
     "game_id": 151,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 6,
     "player_id": 8,
     "player1_id": 8,
@@ -8759,7 +8759,7 @@
   },
   {
     "game_id": 152,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 6,
     "player_id": 1,
     "player1_id": 1,
@@ -8788,7 +8788,7 @@
   },
   {
     "game_id": 152,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 6,
     "player_id": 4,
     "player1_id": 1,
@@ -8817,7 +8817,7 @@
   },
   {
     "game_id": 153,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 6,
     "player_id": 2,
     "player1_id": 8,
@@ -8846,7 +8846,7 @@
   },
   {
     "game_id": 153,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 6,
     "player_id": 8,
     "player1_id": 8,
@@ -8875,7 +8875,7 @@
   },
   {
     "game_id": 154,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 6,
     "player_id": 4,
     "player1_id": 6,
@@ -8904,7 +8904,7 @@
   },
   {
     "game_id": 154,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 6,
     "player_id": 6,
     "player1_id": 6,
@@ -8933,7 +8933,7 @@
   },
   {
     "game_id": 155,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 6,
     "player_id": 2,
     "player1_id": 4,
@@ -8962,7 +8962,7 @@
   },
   {
     "game_id": 155,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 6,
     "player_id": 4,
     "player1_id": 4,
@@ -8991,7 +8991,7 @@
   },
   {
     "game_id": 156,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 6,
     "player_id": 1,
     "player1_id": 1,
@@ -9020,7 +9020,7 @@
   },
   {
     "game_id": 156,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 6,
     "player_id": 6,
     "player1_id": 1,
@@ -9049,7 +9049,7 @@
   },
   {
     "game_id": 157,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 6,
     "player_id": 4,
     "player1_id": 8,
@@ -9078,7 +9078,7 @@
   },
   {
     "game_id": 157,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 6,
     "player_id": 8,
     "player1_id": 8,
@@ -9107,7 +9107,7 @@
   },
   {
     "game_id": 158,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 6,
     "player_id": 1,
     "player1_id": 1,
@@ -9136,7 +9136,7 @@
   },
   {
     "game_id": 158,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 6,
     "player_id": 2,
     "player1_id": 1,
@@ -9165,7 +9165,7 @@
   },
   {
     "game_id": 159,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 6,
     "player_id": 1,
     "player1_id": 8,
@@ -9194,7 +9194,7 @@
   },
   {
     "game_id": 159,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 6,
     "player_id": 8,
     "player1_id": 8,
@@ -9223,7 +9223,7 @@
   },
   {
     "game_id": 160,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 6,
     "player_id": 2,
     "player1_id": 6,
@@ -9252,7 +9252,7 @@
   },
   {
     "game_id": 160,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 6,
     "player_id": 6,
     "player1_id": 6,
@@ -9281,7 +9281,7 @@
   },
   {
     "game_id": 161,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 7,
     "player_id": 1,
     "player1_id": 2,
@@ -9310,7 +9310,7 @@
   },
   {
     "game_id": 161,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 7,
     "player_id": 2,
     "player1_id": 2,
@@ -9339,7 +9339,7 @@
   },
   {
     "game_id": 162,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 7,
     "player_id": 4,
     "player1_id": 6,
@@ -9368,7 +9368,7 @@
   },
   {
     "game_id": 162,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 7,
     "player_id": 6,
     "player1_id": 6,
@@ -9397,7 +9397,7 @@
   },
   {
     "game_id": 163,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 7,
     "player_id": 2,
     "player1_id": 8,
@@ -9426,7 +9426,7 @@
   },
   {
     "game_id": 163,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 7,
     "player_id": 8,
     "player1_id": 8,
@@ -9455,7 +9455,7 @@
   },
   {
     "game_id": 164,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 7,
     "player_id": 1,
     "player1_id": 6,
@@ -9484,7 +9484,7 @@
   },
   {
     "game_id": 164,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 7,
     "player_id": 6,
     "player1_id": 6,
@@ -9513,7 +9513,7 @@
   },
   {
     "game_id": 165,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 7,
     "player_id": 6,
     "player1_id": 8,
@@ -9542,7 +9542,7 @@
   },
   {
     "game_id": 165,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 7,
     "player_id": 8,
     "player1_id": 8,
@@ -9571,7 +9571,7 @@
   },
   {
     "game_id": 166,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 7,
     "player_id": 1,
     "player1_id": 4,
@@ -9600,7 +9600,7 @@
   },
   {
     "game_id": 166,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 7,
     "player_id": 4,
     "player1_id": 4,
@@ -9629,7 +9629,7 @@
   },
   {
     "game_id": 167,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 7,
     "player_id": 2,
     "player1_id": 2,
@@ -9658,7 +9658,7 @@
   },
   {
     "game_id": 167,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 7,
     "player_id": 6,
     "player1_id": 2,
@@ -9687,7 +9687,7 @@
   },
   {
     "game_id": 168,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 7,
     "player_id": 4,
     "player1_id": 8,
@@ -9716,7 +9716,7 @@
   },
   {
     "game_id": 168,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 7,
     "player_id": 8,
     "player1_id": 8,
@@ -9745,7 +9745,7 @@
   },
   {
     "game_id": 169,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 7,
     "player_id": 2,
     "player1_id": 4,
@@ -9774,7 +9774,7 @@
   },
   {
     "game_id": 169,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 7,
     "player_id": 4,
     "player1_id": 4,
@@ -9803,7 +9803,7 @@
   },
   {
     "game_id": 170,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 7,
     "player_id": 1,
     "player1_id": 8,
@@ -9832,7 +9832,7 @@
   },
   {
     "game_id": 170,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 7,
     "player_id": 8,
     "player1_id": 8,
@@ -9861,7 +9861,7 @@
   },
   {
     "game_id": 171,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 8,
     "player_id": 2,
     "player1_id": 8,
@@ -9890,7 +9890,7 @@
   },
   {
     "game_id": 171,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 8,
     "player_id": 8,
     "player1_id": 8,
@@ -9919,7 +9919,7 @@
   },
   {
     "game_id": 172,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 8,
     "player_id": 4,
     "player1_id": 4,
@@ -9948,7 +9948,7 @@
   },
   {
     "game_id": 172,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 8,
     "player_id": 6,
     "player1_id": 4,
@@ -9977,7 +9977,7 @@
   },
   {
     "game_id": 173,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 8,
     "player_id": 1,
     "player1_id": 8,
@@ -10006,7 +10006,7 @@
   },
   {
     "game_id": 173,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 8,
     "player_id": 8,
     "player1_id": 8,
@@ -10035,7 +10035,7 @@
   },
   {
     "game_id": 174,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 8,
     "player_id": 2,
     "player1_id": 2,
@@ -10064,7 +10064,7 @@
   },
   {
     "game_id": 174,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 8,
     "player_id": 4,
     "player1_id": 2,
@@ -10093,7 +10093,7 @@
   },
   {
     "game_id": 175,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 8,
     "player_id": 1,
     "player1_id": 1,
@@ -10122,7 +10122,7 @@
   },
   {
     "game_id": 175,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 8,
     "player_id": 4,
     "player1_id": 1,
@@ -10151,7 +10151,7 @@
   },
   {
     "game_id": 176,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 8,
     "player_id": 2,
     "player1_id": 2,
@@ -10180,7 +10180,7 @@
   },
   {
     "game_id": 176,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 8,
     "player_id": 6,
     "player1_id": 2,
@@ -10209,7 +10209,7 @@
   },
   {
     "game_id": 177,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 8,
     "player_id": 4,
     "player1_id": 8,
@@ -10238,7 +10238,7 @@
   },
   {
     "game_id": 177,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 8,
     "player_id": 8,
     "player1_id": 8,
@@ -10267,7 +10267,7 @@
   },
   {
     "game_id": 178,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 8,
     "player_id": 1,
     "player1_id": 1,
@@ -10296,7 +10296,7 @@
   },
   {
     "game_id": 178,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 8,
     "player_id": 6,
     "player1_id": 1,
@@ -10325,7 +10325,7 @@
   },
   {
     "game_id": 179,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 8,
     "player_id": 6,
     "player1_id": 6,
@@ -10354,7 +10354,7 @@
   },
   {
     "game_id": 179,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 8,
     "player_id": 8,
     "player1_id": 6,
@@ -10383,7 +10383,7 @@
   },
   {
     "game_id": 180,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 8,
     "player_id": 1,
     "player1_id": 1,
@@ -10412,7 +10412,7 @@
   },
   {
     "game_id": 180,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 8,
     "player_id": 2,
     "player1_id": 1,
@@ -10441,7 +10441,7 @@
   },
   {
     "game_id": 181,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 9,
     "player_id": 2,
     "player1_id": 2,
@@ -10470,7 +10470,7 @@
   },
   {
     "game_id": 181,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 9,
     "player_id": 6,
     "player1_id": 2,
@@ -10499,7 +10499,7 @@
   },
   {
     "game_id": 182,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 9,
     "player_id": 4,
     "player1_id": 4,
@@ -10528,7 +10528,7 @@
   },
   {
     "game_id": 182,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 9,
     "player_id": 8,
     "player1_id": 4,
@@ -10557,7 +10557,7 @@
   },
   {
     "game_id": 183,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 9,
     "player_id": 1,
     "player1_id": 1,
@@ -10586,7 +10586,7 @@
   },
   {
     "game_id": 183,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 9,
     "player_id": 2,
     "player1_id": 1,
@@ -10615,7 +10615,7 @@
   },
   {
     "game_id": 184,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 9,
     "player_id": 4,
     "player1_id": 4,
@@ -10644,7 +10644,7 @@
   },
   {
     "game_id": 184,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 9,
     "player_id": 6,
     "player1_id": 4,
@@ -10673,7 +10673,7 @@
   },
   {
     "game_id": 185,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 9,
     "player_id": 1,
     "player1_id": 4,
@@ -10702,7 +10702,7 @@
   },
   {
     "game_id": 185,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 9,
     "player_id": 4,
     "player1_id": 4,
@@ -10731,7 +10731,7 @@
   },
   {
     "game_id": 186,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 9,
     "player_id": 6,
     "player1_id": 8,
@@ -10760,7 +10760,7 @@
   },
   {
     "game_id": 186,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 9,
     "player_id": 8,
     "player1_id": 8,
@@ -10789,7 +10789,7 @@
   },
   {
     "game_id": 187,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 9,
     "player_id": 2,
     "player1_id": 4,
@@ -10818,7 +10818,7 @@
   },
   {
     "game_id": 187,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 9,
     "player_id": 4,
     "player1_id": 4,
@@ -10847,7 +10847,7 @@
   },
   {
     "game_id": 188,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 9,
     "player_id": 1,
     "player1_id": 8,
@@ -10876,7 +10876,7 @@
   },
   {
     "game_id": 188,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 9,
     "player_id": 8,
     "player1_id": 8,
@@ -10905,7 +10905,7 @@
   },
   {
     "game_id": 189,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 9,
     "player_id": 2,
     "player1_id": 2,
@@ -10934,7 +10934,7 @@
   },
   {
     "game_id": 189,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 9,
     "player_id": 8,
     "player1_id": 2,
@@ -10963,7 +10963,7 @@
   },
   {
     "game_id": 190,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 9,
     "player_id": 1,
     "player1_id": 1,
@@ -10992,7 +10992,7 @@
   },
   {
     "game_id": 190,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 9,
     "player_id": 6,
     "player1_id": 1,
@@ -11021,7 +11021,7 @@
   },
   {
     "game_id": 191,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 10,
     "player_id": 1,
     "player1_id": 2,
@@ -11050,7 +11050,7 @@
   },
   {
     "game_id": 191,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 10,
     "player_id": 2,
     "player1_id": 2,
@@ -11079,7 +11079,7 @@
   },
   {
     "game_id": 192,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 10,
     "player_id": 4,
     "player1_id": 8,
@@ -11108,7 +11108,7 @@
   },
   {
     "game_id": 192,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 10,
     "player_id": 8,
     "player1_id": 8,
@@ -11137,7 +11137,7 @@
   },
   {
     "game_id": 193,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 10,
     "player_id": 1,
     "player1_id": 1,
@@ -11166,7 +11166,7 @@
   },
   {
     "game_id": 193,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 10,
     "player_id": 6,
     "player1_id": 1,
@@ -11195,7 +11195,7 @@
   },
   {
     "game_id": 194,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 10,
     "player_id": 2,
     "player1_id": 4,
@@ -11224,7 +11224,7 @@
   },
   {
     "game_id": 194,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 10,
     "player_id": 4,
     "player1_id": 4,
@@ -11253,7 +11253,7 @@
   },
   {
     "game_id": 195,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 10,
     "player_id": 4,
     "player1_id": 4,
@@ -11282,7 +11282,7 @@
   },
   {
     "game_id": 195,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 10,
     "player_id": 6,
     "player1_id": 4,
@@ -11311,7 +11311,7 @@
   },
   {
     "game_id": 196,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 10,
     "player_id": 2,
     "player1_id": 8,
@@ -11340,7 +11340,7 @@
   },
   {
     "game_id": 196,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 10,
     "player_id": 8,
     "player1_id": 8,
@@ -11369,7 +11369,7 @@
   },
   {
     "game_id": 197,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 10,
     "player_id": 1,
     "player1_id": 4,
@@ -11398,7 +11398,7 @@
   },
   {
     "game_id": 197,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 10,
     "player_id": 4,
     "player1_id": 4,
@@ -11427,7 +11427,7 @@
   },
   {
     "game_id": 198,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 10,
     "player_id": 6,
     "player1_id": 8,
@@ -11456,7 +11456,7 @@
   },
   {
     "game_id": 198,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 10,
     "player_id": 8,
     "player1_id": 8,
@@ -11485,7 +11485,7 @@
   },
   {
     "game_id": 199,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 10,
     "player_id": 1,
     "player1_id": 8,
@@ -11514,7 +11514,7 @@
   },
   {
     "game_id": 199,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 10,
     "player_id": 8,
     "player1_id": 8,
@@ -11543,7 +11543,7 @@
   },
   {
     "game_id": 200,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 10,
     "player_id": 2,
     "player1_id": 2,
@@ -11572,7 +11572,7 @@
   },
   {
     "game_id": 200,
-    "season": "2019",
+    "season": "2019/2020",
     "matchday": 10,
     "player_id": 6,
     "player1_id": 2,
@@ -31312,6 +31312,586 @@
     "score_100": 0,
     "score_100_plus": 0,
     "score_140": 0,
+    "score_140_plus": 0,
+    "score_180": 0,
+    "keep_pct": 100.0,
+    "keep_ratio": "2 / 2",
+    "break_pct": 100.0,
+    "break_ratio": "1 / 1"
+  },
+  {
+    "game_id": 541,
+    "season": "2024/2025",
+    "matchday": 5,
+    "player_id": 1,
+    "player1_id": 6,
+    "player2_id": 1,
+    "sets_won": 1,
+    "legs_played": 3,
+    "legs_won": 3,
+    "legs_lost": 0,
+    "darts_thrown": 108,
+    "avg_darts": 36.0,
+    "avg_3dart": 41.75,
+    "avg_first9": 46.22,
+    "best_leg": 29,
+    "worst_leg": 40,
+    "high_finish": 40,
+    "high_score": 143,
+    "score_100": 1,
+    "score_100_plus": 1,
+    "score_140": 0,
+    "score_140_plus": 1,
+    "score_180": 0,
+    "keep_pct": 100.0,
+    "keep_ratio": "1 / 1",
+    "break_pct": 100.0,
+    "break_ratio": "2 / 2"
+  },
+  {
+    "game_id": 541,
+    "season": "2024/2025",
+    "matchday": 5,
+    "player_id": 6,
+    "player1_id": 6,
+    "player2_id": 1,
+    "sets_won": 0,
+    "legs_played": 3,
+    "legs_won": 0,
+    "legs_lost": 3,
+    "darts_thrown": 108,
+    "avg_darts": 0.0,
+    "avg_3dart": 33.28,
+    "avg_first9": 39.67,
+    "best_leg": null,
+    "worst_leg": null,
+    "high_finish": 0,
+    "high_score": 78,
+    "score_100": 0,
+    "score_100_plus": 0,
+    "score_140": 0,
+    "score_140_plus": 0,
+    "score_180": 0,
+    "keep_pct": 0.0,
+    "keep_ratio": "0 / 2",
+    "break_pct": 0.0,
+    "break_ratio": "0 / 1"
+  },
+  {
+    "game_id": 542,
+    "season": "2024/2025",
+    "matchday": 5,
+    "player_id": 4,
+    "player1_id": 4,
+    "player2_id": 8,
+    "sets_won": 0,
+    "legs_played": 3,
+    "legs_won": 0,
+    "legs_lost": 3,
+    "darts_thrown": 81,
+    "avg_darts": 0.0,
+    "avg_3dart": 45.0,
+    "avg_first9": 35.22,
+    "best_leg": null,
+    "worst_leg": null,
+    "high_finish": 0,
+    "high_score": 98,
+    "score_100": 0,
+    "score_100_plus": 0,
+    "score_140": 0,
+    "score_140_plus": 0,
+    "score_180": 0,
+    "keep_pct": 0.0,
+    "keep_ratio": "0 / 2",
+    "break_pct": 0.0,
+    "break_ratio": "0 / 1"
+  },
+  {
+    "game_id": 542,
+    "season": "2024/2025",
+    "matchday": 5,
+    "player_id": 8,
+    "player1_id": 4,
+    "player2_id": 8,
+    "sets_won": 1,
+    "legs_played": 3,
+    "legs_won": 3,
+    "legs_lost": 0,
+    "darts_thrown": 80,
+    "avg_darts": 26.67,
+    "avg_3dart": 56.36,
+    "avg_first9": 49.22,
+    "best_leg": 22,
+    "worst_leg": 30,
+    "high_finish": 20,
+    "high_score": 180,
+    "score_100": 0,
+    "score_100_plus": 1,
+    "score_140": 0,
+    "score_140_plus": 0,
+    "score_180": 1,
+    "keep_pct": 100.0,
+    "keep_ratio": "1 / 1",
+    "break_pct": 100.0,
+    "break_ratio": "2 / 2"
+  },
+  {
+    "game_id": 543,
+    "season": "2024/2025",
+    "matchday": 5,
+    "player_id": 2,
+    "player1_id": 2,
+    "player2_id": 6,
+    "sets_won": 1,
+    "legs_played": 5,
+    "legs_won": 3,
+    "legs_lost": 2,
+    "darts_thrown": 263,
+    "avg_darts": 56.67,
+    "avg_3dart": 28.28,
+    "avg_first9": 32.07,
+    "best_leg": 43,
+    "worst_leg": 65,
+    "high_finish": 8,
+    "high_score": 93,
+    "score_100": 0,
+    "score_100_plus": 0,
+    "score_140": 0,
+    "score_140_plus": 0,
+    "score_180": 0,
+    "keep_pct": 66.7,
+    "keep_ratio": "2 / 3",
+    "break_pct": 50.0,
+    "break_ratio": "1 / 2"
+  },
+  {
+    "game_id": 543,
+    "season": "2024/2025",
+    "matchday": 5,
+    "player_id": 6,
+    "player1_id": 2,
+    "player2_id": 6,
+    "sets_won": 0,
+    "legs_played": 5,
+    "legs_won": 2,
+    "legs_lost": 3,
+    "darts_thrown": 262,
+    "avg_darts": 47.0,
+    "avg_3dart": 28.27,
+    "avg_first9": 35.67,
+    "best_leg": 44,
+    "worst_leg": 50,
+    "high_finish": 34,
+    "high_score": 125,
+    "score_100": 0,
+    "score_100_plus": 1,
+    "score_140": 0,
+    "score_140_plus": 0,
+    "score_180": 0,
+    "keep_pct": 50.0,
+    "keep_ratio": "1 / 2",
+    "break_pct": 33.3,
+    "break_ratio": "1 / 3"
+  },
+  {
+    "game_id": 544,
+    "season": "2024/2025",
+    "matchday": 5,
+    "player_id": 1,
+    "player1_id": 8,
+    "player2_id": 1,
+    "sets_won": 0,
+    "legs_played": 3,
+    "legs_won": 0,
+    "legs_lost": 3,
+    "darts_thrown": 96,
+    "avg_darts": 0.0,
+    "avg_3dart": 36.97,
+    "avg_first9": 31.89,
+    "best_leg": null,
+    "worst_leg": null,
+    "high_finish": 0,
+    "high_score": 100,
+    "score_100": 1,
+    "score_100_plus": 0,
+    "score_140": 0,
+    "score_140_plus": 0,
+    "score_180": 0,
+    "keep_pct": 0.0,
+    "keep_ratio": "0 / 1",
+    "break_pct": 0.0,
+    "break_ratio": "0 / 2"
+  },
+  {
+    "game_id": 544,
+    "season": "2024/2025",
+    "matchday": 5,
+    "player_id": 8,
+    "player1_id": 8,
+    "player2_id": 1,
+    "sets_won": 1,
+    "legs_played": 3,
+    "legs_won": 3,
+    "legs_lost": 0,
+    "darts_thrown": 99,
+    "avg_darts": 33.0,
+    "avg_3dart": 45.55,
+    "avg_first9": 67.22,
+    "best_leg": 21,
+    "worst_leg": 47,
+    "high_finish": 32,
+    "high_score": 100,
+    "score_100": 3,
+    "score_100_plus": 0,
+    "score_140": 0,
+    "score_140_plus": 0,
+    "score_180": 0,
+    "keep_pct": 100.0,
+    "keep_ratio": "2 / 2",
+    "break_pct": 100.0,
+    "break_ratio": "1 / 1"
+  },
+  {
+    "game_id": 545,
+    "season": "2024/2025",
+    "matchday": 5,
+    "player_id": 2,
+    "player1_id": 4,
+    "player2_id": 2,
+    "sets_won": 0,
+    "legs_played": 4,
+    "legs_won": 1,
+    "legs_lost": 3,
+    "darts_thrown": 190,
+    "avg_darts": 49.0,
+    "avg_3dart": 31.2,
+    "avg_first9": 39.92,
+    "best_leg": 49,
+    "worst_leg": 49,
+    "high_finish": 32,
+    "high_score": 93,
+    "score_100": 0,
+    "score_100_plus": 0,
+    "score_140": 0,
+    "score_140_plus": 0,
+    "score_180": 0,
+    "keep_pct": 50.0,
+    "keep_ratio": "1 / 2",
+    "break_pct": 0.0,
+    "break_ratio": "0 / 2"
+  },
+  {
+    "game_id": 545,
+    "season": "2024/2025",
+    "matchday": 5,
+    "player_id": 4,
+    "player1_id": 4,
+    "player2_id": 2,
+    "sets_won": 1,
+    "legs_played": 4,
+    "legs_won": 3,
+    "legs_lost": 1,
+    "darts_thrown": 192,
+    "avg_darts": 48.0,
+    "avg_3dart": 31.27,
+    "avg_first9": 41.25,
+    "best_leg": 37,
+    "worst_leg": 69,
+    "high_finish": 28,
+    "high_score": 94,
+    "score_100": 0,
+    "score_100_plus": 0,
+    "score_140": 0,
+    "score_140_plus": 0,
+    "score_180": 0,
+    "keep_pct": 100.0,
+    "keep_ratio": "2 / 2",
+    "break_pct": 50.0,
+    "break_ratio": "1 / 2"
+  },
+  {
+    "game_id": 546,
+    "season": "2024/2025",
+    "matchday": 5,
+    "player_id": 1,
+    "player1_id": 1,
+    "player2_id": 4,
+    "sets_won": 0,
+    "legs_played": 5,
+    "legs_won": 2,
+    "legs_lost": 3,
+    "darts_thrown": 154,
+    "avg_darts": 32.0,
+    "avg_3dart": 43.27,
+    "avg_first9": 44.27,
+    "best_leg": 30,
+    "worst_leg": 34,
+    "high_finish": 32,
+    "high_score": 100,
+    "score_100": 1,
+    "score_100_plus": 0,
+    "score_140": 0,
+    "score_140_plus": 0,
+    "score_180": 0,
+    "keep_pct": 0.0,
+    "keep_ratio": "0 / 3",
+    "break_pct": 100.0,
+    "break_ratio": "2 / 2"
+  },
+  {
+    "game_id": 546,
+    "season": "2024/2025",
+    "matchday": 5,
+    "player_id": 4,
+    "player1_id": 1,
+    "player2_id": 4,
+    "sets_won": 1,
+    "legs_played": 5,
+    "legs_won": 3,
+    "legs_lost": 2,
+    "darts_thrown": 154,
+    "avg_darts": 29.33,
+    "avg_3dart": 46.32,
+    "avg_first9": 50.47,
+    "best_leg": 27,
+    "worst_leg": 32,
+    "high_finish": 72,
+    "high_score": 100,
+    "score_100": 1,
+    "score_100_plus": 0,
+    "score_140": 0,
+    "score_140_plus": 0,
+    "score_180": 0,
+    "keep_pct": 0.0,
+    "keep_ratio": "0 / 2",
+    "break_pct": 100.0,
+    "break_ratio": "3 / 3"
+  },
+  {
+    "game_id": 547,
+    "season": "2024/2025",
+    "matchday": 5,
+    "player_id": 2,
+    "player1_id": 2,
+    "player2_id": 8,
+    "sets_won": 0,
+    "legs_played": 3,
+    "legs_won": 0,
+    "legs_lost": 3,
+    "darts_thrown": 75,
+    "avg_darts": 0.0,
+    "avg_3dart": 43.08,
+    "avg_first9": 43.0,
+    "best_leg": null,
+    "worst_leg": null,
+    "high_finish": 0,
+    "high_score": 92,
+    "score_100": 0,
+    "score_100_plus": 0,
+    "score_140": 0,
+    "score_140_plus": 0,
+    "score_180": 0,
+    "keep_pct": 0.0,
+    "keep_ratio": "0 / 2",
+    "break_pct": 0.0,
+    "break_ratio": "0 / 1"
+  },
+  {
+    "game_id": 547,
+    "season": "2024/2025",
+    "matchday": 5,
+    "player_id": 8,
+    "player1_id": 2,
+    "player2_id": 8,
+    "sets_won": 1,
+    "legs_played": 3,
+    "legs_won": 3,
+    "legs_lost": 0,
+    "darts_thrown": 75,
+    "avg_darts": 25.0,
+    "avg_3dart": 60.12,
+    "avg_first9": 57.33,
+    "best_leg": 22,
+    "worst_leg": 29,
+    "high_finish": 40,
+    "high_score": 100,
+    "score_100": 2,
+    "score_100_plus": 0,
+    "score_140": 0,
+    "score_140_plus": 0,
+    "score_180": 0,
+    "keep_pct": 100.0,
+    "keep_ratio": "1 / 1",
+    "break_pct": 100.0,
+    "break_ratio": "2 / 2"
+  },
+  {
+    "game_id": 548,
+    "season": "2024/2025",
+    "matchday": 5,
+    "player_id": 4,
+    "player1_id": 4,
+    "player2_id": 6,
+    "sets_won": 1,
+    "legs_played": 3,
+    "legs_won": 3,
+    "legs_lost": 0,
+    "darts_thrown": 120,
+    "avg_darts": 40.0,
+    "avg_3dart": 37.58,
+    "avg_first9": 57.56,
+    "best_leg": 28,
+    "worst_leg": 59,
+    "high_finish": 32,
+    "high_score": 132,
+    "score_100": 1,
+    "score_100_plus": 3,
+    "score_140": 0,
+    "score_140_plus": 0,
+    "score_180": 0,
+    "keep_pct": 100.0,
+    "keep_ratio": "2 / 2",
+    "break_pct": 100.0,
+    "break_ratio": "1 / 1"
+  },
+  {
+    "game_id": 548,
+    "season": "2024/2025",
+    "matchday": 5,
+    "player_id": 6,
+    "player1_id": 4,
+    "player2_id": 6,
+    "sets_won": 0,
+    "legs_played": 3,
+    "legs_won": 0,
+    "legs_lost": 3,
+    "darts_thrown": 117,
+    "avg_darts": 0.0,
+    "avg_3dart": 33.72,
+    "avg_first9": 46.89,
+    "best_leg": null,
+    "worst_leg": null,
+    "high_finish": 0,
+    "high_score": 123,
+    "score_100": 0,
+    "score_100_plus": 1,
+    "score_140": 0,
+    "score_140_plus": 0,
+    "score_180": 0,
+    "keep_pct": 0.0,
+    "keep_ratio": "0 / 1",
+    "break_pct": 0.0,
+    "break_ratio": "0 / 2"
+  },
+  {
+    "game_id": 549,
+    "season": "2024/2025",
+    "matchday": 5,
+    "player_id": 1,
+    "player1_id": 2,
+    "player2_id": 1,
+    "sets_won": 0,
+    "legs_played": 5,
+    "legs_won": 2,
+    "legs_lost": 3,
+    "darts_thrown": 223,
+    "avg_darts": 38.0,
+    "avg_3dart": 33.47,
+    "avg_first9": 38.67,
+    "best_leg": 36,
+    "worst_leg": 40,
+    "high_finish": 42,
+    "high_score": 97,
+    "score_100": 0,
+    "score_100_plus": 0,
+    "score_140": 0,
+    "score_140_plus": 0,
+    "score_180": 0,
+    "keep_pct": 50.0,
+    "keep_ratio": "1 / 2",
+    "break_pct": 33.3,
+    "break_ratio": "1 / 3"
+  },
+  {
+    "game_id": 549,
+    "season": "2024/2025",
+    "matchday": 5,
+    "player_id": 2,
+    "player1_id": 2,
+    "player2_id": 1,
+    "sets_won": 1,
+    "legs_played": 5,
+    "legs_won": 3,
+    "legs_lost": 2,
+    "darts_thrown": 224,
+    "avg_darts": 49.67,
+    "avg_3dart": 32.84,
+    "avg_first9": 45.53,
+    "best_leg": 40,
+    "worst_leg": 56,
+    "high_finish": 14,
+    "high_score": 121,
+    "score_100": 0,
+    "score_100_plus": 1,
+    "score_140": 0,
+    "score_140_plus": 0,
+    "score_180": 0,
+    "keep_pct": 66.7,
+    "keep_ratio": "2 / 3",
+    "break_pct": 50.0,
+    "break_ratio": "1 / 2"
+  },
+  {
+    "game_id": 550,
+    "season": "2024/2025",
+    "matchday": 5,
+    "player_id": 6,
+    "player1_id": 8,
+    "player2_id": 6,
+    "sets_won": 0,
+    "legs_played": 3,
+    "legs_won": 0,
+    "legs_lost": 3,
+    "darts_thrown": 72,
+    "avg_darts": 0.0,
+    "avg_3dart": 39.54,
+    "avg_first9": 47.56,
+    "best_leg": null,
+    "worst_leg": null,
+    "high_finish": 0,
+    "high_score": 75,
+    "score_100": 0,
+    "score_100_plus": 0,
+    "score_140": 0,
+    "score_140_plus": 0,
+    "score_180": 0,
+    "keep_pct": 0.0,
+    "keep_ratio": "0 / 1",
+    "break_pct": 0.0,
+    "break_ratio": "0 / 2"
+  },
+  {
+    "game_id": 550,
+    "season": "2024/2025",
+    "matchday": 5,
+    "player_id": 8,
+    "player1_id": 8,
+    "player2_id": 6,
+    "sets_won": 1,
+    "legs_played": 3,
+    "legs_won": 3,
+    "legs_lost": 0,
+    "darts_thrown": 75,
+    "avg_darts": 25.0,
+    "avg_3dart": 60.12,
+    "avg_first9": 59.11,
+    "best_leg": 23,
+    "worst_leg": 26,
+    "high_finish": 50,
+    "high_score": 140,
+    "score_100": 2,
+    "score_100_plus": 0,
+    "score_140": 1,
     "score_140_plus": 0,
     "score_180": 0,
     "keep_pct": 100.0,
