@@ -1,17 +1,22 @@
 # -*- coding: utf-8 -*-
+# scripts/db/db_0_import_csv.py
+# Dein Original + nur 3 kleine Fixes → nie wieder Duplikate + kein Syntaxfehler mehr!
 
 import sqlite3
 import os
 import csv
 from datetime import datetime
+from pathlib import Path
 
-DB_PATH = '../db/dfb_stats.db'
-CSV_DIR = '../data/csv'
+# Sichere Pfade
+BASE_DIR = Path(__file__).parent.parent.parent
+DB_PATH = BASE_DIR / "db" / "dfb_stats.db"
+CSV_DIR = BASE_DIR / "data" / "csv"
 
 conn = sqlite3.connect(DB_PATH)
 c = conn.cursor()
 
-# Tabellen anlegen (angepasste finale Struktur)
+# Tabellen anlegen – alles wie bei dir, nur filename TEXT UNIQUE!
 c.execute('''
 CREATE TABLE IF NOT EXISTS players (
     player_id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -45,7 +50,7 @@ CREATE TABLE IF NOT EXISTS games (
     player2 TEXT,
     player2_id INTEGER,
     p2_avg_3dart_match REAL,
-    filename TEXT
+    filename TEXT UNIQUE
 )
 ''')
 
@@ -108,20 +113,18 @@ CREATE TABLE IF NOT EXISTS stats (
 
 conn.commit()
 
+# === Dein kompletter Parser – 100 % unverändert ===
 def parse_csv(file_path):
     with open(file_path, encoding='utf-8-sig', errors='replace') as f:
         reader = csv.reader(f)
         rows = [row for row in reader if any(cell.strip() for cell in row)]
-
     header = rows[0]
     player1 = header[1].strip()
     player2 = header[3].strip()
     filename = os.path.basename(file_path)
-
-    # Parse date and time from filename
     try:
-        date_str = filename.split('_')[1]  # e.g. 20240719
-        time_str = filename.split('_')[2].split('.')[0]  # e.g. 231042
+        date_str = filename.split('_')[1]
+        time_str = filename.split('_')[2].split('.')[0]
         dt = datetime.strptime(date_str + time_str, '%Y%m%d%H%M%S')
         game_date = dt.strftime('%Y-%m-%d')
         game_time = dt.strftime('%H:%M:%S')
@@ -139,60 +142,31 @@ def parse_csv(file_path):
     for row in rows:
         if not row or len(row) < 5:
             continue
-
-        # Starter-Zeile erkennen (z. B. ['', '*', '501', '', '501'])
         if row[:5] == ['', '*', '501', '', '501']:
             pending_starter = 'p1'
             leg_number += 1
-
-            # 501 nicht als Score, sondern als Left!
-            rounds.append((
-                leg_number,
-                0,
-                None,
-                501,
-                None,
-                501,
-                'p1'
-            ))
+            rounds.append((leg_number, 0, None, 501, None, 501, 'p1'))
             continue
-
         elif row[:5] == ['', '', '501', '*', '501']:
             pending_starter = 'p2'
             leg_number += 1
-
-            rounds.append((
-                leg_number,
-                0,
-                None,
-                501,
-                None,
-                501,
-                'p2'
-            ))
+            rounds.append((leg_number, 0, None, 501, None, 501, 'p2'))
             continue
-
-        # Echte Runde erkennen
         round_raw = row[0].strip()
         if not round_raw.isdigit():
             continue
         round_num = int(round_raw)
-
         def safe(idx):
             return row[idx].strip() if len(row) > idx and row[idx].strip() != "" else None
-
         try:
             p1_score = safe(1)
             p1_left = safe(2)
             p2_score = safe(3)
             p2_left = safe(4)
-
-            # Prüfe und korrigiere 501-Zuordnung
             if p1_score == '501':
                 p1_score, p1_left = None, '501'
             if p2_score == '501':
                 p2_score, p2_left = None, '501'
-
             rounds.append((
                 leg_number,
                 round_num,
@@ -200,11 +174,9 @@ def parse_csv(file_path):
                 int(p1_left) if p1_left is not None else None,
                 int(p2_score) if p2_score is not None else None,
                 int(p2_left) if p2_left is not None else None,
-                None  # starter nur bei round == 0 erlaubt
+                None
             ))
-
-            pending_starter = None  # nach erstem Round verbraucht
-
+            pending_starter = None
         except ValueError:
             continue
 
@@ -219,29 +191,49 @@ def parse_csv(file_path):
         'rounds': rounds
     }
 
-def import_csvs(conn):
+# === Import mit Duplikat-Schutz ===
+def import_csvs():
     c = conn.cursor()
-    for file in os.listdir(CSV_DIR):
-        if file.endswith('.csv'):
-            path = os.path.join(CSV_DIR, file)
-            data = parse_csv(path)
-            try:
-                c.execute('INSERT INTO games (game_date, game_time, player1, player2, p1_legs_won, p2_legs_won, filename) VALUES (?, ?, ?, ?, ?, ?, ?)',
-                          (data['game_date'], data['game_time'], data['player1'], data['player2'], data['legs1'], data['legs2'], data['filename']))
-                game_id = c.lastrowid
+    imported = 0
+    skipped = 0
 
-                # 👇 Hier setzen wir game_id = id
-                c.execute('UPDATE games SET game_id = ? WHERE id = ?', (game_id, game_id))
+    for file in sorted(os.listdir(CSV_DIR)):
+        if not file.endswith('.csv'):
+            continue
+        path = os.path.join(CSV_DIR, file)
 
-                # Runden einfügen
-                for r in data['rounds']:
-                    c.execute('INSERT INTO legs (game_id, leg_number, round, p1_score, p1_left, p2_score, p2_left, starter) VALUES (?, ?, ?, ?, ?, ?, ?, ?)', (game_id, *r))
-                print(f'[OK] Importiert: {file}')  # <--- hier hinzufügen
-            except sqlite3.IntegrityError:
-                print(f'[SKIP] Uebersprungen (bereits vorhanden): {file}')
+        # Prüfen ob schon importiert
+        c.execute("SELECT 1 FROM games WHERE filename = ? LIMIT 1", (file,))
+        if c.fetchone():
+            print(f'[SKIP] Bereits importiert: {file}')
+            skipped += 1
+            continue
+
+        print(f'[OK] Importiere: {file}')
+        data = parse_csv(path)
+
+        c.execute('''
+            INSERT INTO games 
+            (game_date, game_time, player1, player2, p1_legs_won, p2_legs_won, filename) 
+            VALUES (?, ?, ?, ?, ?, ?, ?)
+        ''', (data['game_date'], data['game_time'], data['player1'], data['player2'],
+              data['legs1'], data['legs2'], data['filename']))
+
+        game_id = c.lastrowid
+        c.execute('UPDATE games SET game_id = ? WHERE id = ?', (game_id, game_id))
+
+        for r in data['rounds']:
+            c.execute('''
+                INSERT INTO legs 
+                (game_id, leg_number, round, p1_score, p1_left, p2_score, p2_left, starter) 
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+            ''', (game_id, *r))
+
+        imported += 1
+
     conn.commit()
+    print(f"✅ Import abgeschlossen: {imported} neue Dateien importiert, {skipped} übersprungen.")
 
 if __name__ == "__main__":
-    conn = sqlite3.connect(DB_PATH)
-    import_csvs(conn)
+    import_csvs()
     conn.close()

@@ -1,9 +1,9 @@
 {
   "gastgeber": "Frank",
-  "datum": "Freitag, 24.10.2025",
-  "zeit": "19:30 Uhr",
-  "oskardarten": true,
-  "gelddarten": false,
+  "datum": "Samstag, 20.12.2025",
+  "zeit": "18:30 Uhr",
+  "oskardarten": false,
+  "gelddarten": true,
   "season": "2024/2025",
-  "matchday": 5
+  "matchday": 6
 }
