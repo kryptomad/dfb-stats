@@ -1,9 +1,9 @@
 {
-  "gastgeber": "Frank",
-  "datum": "Samstag, 03.01.2025",
-  "zeit": "15:00 Uhr",
-  "oskardarten": false,
-  "gelddarten": true,
+  "gastgeber": "Franz-Josef",
+  "datum": "Samstag, 17.01.2025",
+  "zeit": "18:30 Uhr",
+  "oskardarten": true,
+  "gelddarten": false,
   "season": "2024/2025",
-  "matchday": 7
+  "matchday": 8
 }
