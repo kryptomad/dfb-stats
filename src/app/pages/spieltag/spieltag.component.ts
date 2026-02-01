@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { GamesService } from '../../services/games.service';
-import { NgForOf } from '@angular/common';
+import { NgForOf, NgIf } from '@angular/common';
 import { Card } from 'primeng/card';
 import { ChartModule } from 'primeng/chart';
 import { TableModule } from 'primeng/table';
 
 @Component({
   selector: 'app-spieltag',
-  imports: [Card, NgForOf, ChartModule, TableModule, RouterModule],
+  imports: [Card, NgForOf, NgIf, ChartModule, TableModule, RouterModule],
   providers: [GamesService],
   templateUrl: './spieltag.component.html',
   styleUrl: './spieltag.component.scss',
@@ -139,5 +139,21 @@ export class SpieltagComponent implements OnInit {
         },
       },
     };
+  }
+
+  getPlayersOrdered(spieltag: any): {
+    left: any;
+    right: any;
+    leftIsWinner: boolean;
+  } {
+    const p1IsWinner = spieltag.p1_legs_won > spieltag.p2_legs_won;
+
+    return p1IsWinner
+      ? { left: spieltag.player1, right: spieltag.player2, leftIsWinner: true }
+      : {
+          left: spieltag.player2,
+          right: spieltag.player1,
+          leftIsWinner: false,
+        };
   }
 }

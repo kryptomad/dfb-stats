@@ -1,24 +1,60 @@
 <h2 id="aktueller-spieltag">{{ letzteSpieltage[0]?.season }} – Spieltag {{ letzteSpieltage[0]?.matchday }}</h2>
 <p-card>
-<div *ngFor="let spieltag of letzteSpieltage" class="flex flex-col gap-2 w-auto mb-2" [routerLink]="['/pages/legs', spieltag.game_id]">
-  <!-- Einzelnes Spiel -->
-  <div class="flex flex-row items-center justify-center gap-8 py-2 rounded-md transition-all duration-200 cursor-pointer hover:bg-slate-200 dark:hover:bg-slate-700 hover:bg-opacity-80">
-    <!-- Spieler 1 -->
-    <div class="flex flex-col items-end min-w-[130px]">
-      <span class="text-lg font-semibold">{{ spieltag.player1 }}</span>
-      <span class="text-gray-400 text-sm">{{ spieltag.p1_avg_3dart_match }}</span>
-    </div>
-    <!-- Scores -->
-    <div class="flex flex-row items-center gap-2">
-      <span class="score-box winner">{{ spieltag.p1_legs_won }}</span>
-      <span class="score-box loser">{{ spieltag.p2_legs_won }}</span>
-    </div>
-    <!-- Spieler 2 -->
-    <div class="flex flex-col items-start min-w-[130px]">
-      <span class="text-lg font-semibold">{{ spieltag.player2 }}</span>
-      <span class="text-gray-400 text-sm">{{ spieltag.p2_avg_3dart_match }}</span>
-    </div>
+  <div *ngFor="let spieltag of letzteSpieltage; let last = last" class="flex flex-col gap-2 w-auto mb-2" [routerLink]="['/pages/legs', spieltag.game_id]">
+    <ng-container *ngIf="getPlayersOrdered(spieltag) as players">
+      <!-- Einzelnes Spiel -->
+      <div class="flex flex-row items-center justify-center gap-8 py-2 rounded-md transition-all duration-200 cursor-pointer hover:bg-slate-200 dark:hover:bg-slate-700 hover:bg-opacity-80">
+        <!-- Linker Spieler (Gewinner) -->
+        <div class="flex flex-col items-end min-w-[130px]">
+          <span class="text-lg font-semibold">{{ players.left }}</span>
+          <span class="text-gray-400 text-sm">
+            {{
+              spieltag[
+                players.left === spieltag.player1
+                  ? 'p1_avg_3dart_match'
+                  : 'p2_avg_3dart_match'
+              ]
+            }}
+          </span>
+        </div>
+        
+        <!-- Scores -->
+        <div class="flex flex-row items-center gap-2">
+          <span class="score-box winner">
+            {{
+              spieltag[
+                players.left === spieltag.player1
+                  ? 'p1_legs_won'
+                  : 'p2_legs_won'
+              ]
+            }}
+          </span>
+          <span class="score-box loser">
+            {{
+              spieltag[
+                players.right === spieltag.player1
+                  ? 'p1_legs_won'
+                  : 'p2_legs_won'
+              ]
+            }}
+          </span>
+        </div>
+        
+        <!-- Rechter Spieler (Verlierer) -->
+        <div class="flex flex-col items-start min-w-[130px]">
+          <span class="text-lg font-semibold">{{ players.right }}</span>
+          <span class="text-gray-400 text-sm">
+            {{
+              spieltag[
+                players.right === spieltag.player1
+                  ? 'p1_avg_3dart_match'
+                  : 'p2_avg_3dart_match'
+              ]
+            }}
+          </span>
+        </div>
+      </div>
+    </ng-container>
+    <hr *ngIf="!last" class="divider" />
   </div>
-<hr class="divider" />
-</div>
 </p-card>
