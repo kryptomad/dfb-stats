@@ -1,9 +1,9 @@
 {
   "gastgeber": "Franz-Josef",
-  "datum": "Samstag, 17.01.2025",
-  "zeit": "18:30 Uhr",
-  "oskardarten": true,
-  "gelddarten": false,
+  "datum": "Freitag, 13.02.2026",
+  "zeit": "19:30 Uhr",
+  "oskardarten": false,
+  "gelddarten": true,
   "season": "2024/2025",
   "matchday": 8
 }
