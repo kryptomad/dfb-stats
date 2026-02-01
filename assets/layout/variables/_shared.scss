@@ -116,20 +116,6 @@ hr.divider {
   text-align: center;
 }
 
-.score-box.winner {
-  display: inline-block;
-  background: #309f6a;
-  color: #fff;
-  border-radius: 6px;
-  font-weight: 500;
-  font-size: 0.9em;
-  padding: 4px 7px;
-  margin: 0 4px;
-  letter-spacing: 0.05em;
-    white-space: nowrap;   /* <--- DAS verhindert Zeilenumbruch! */
-}
-
-
 /*prüfen ob sinnvoll*/
 
 .leg-card.leg-highlight {

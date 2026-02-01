@@ -1,7 +1,7 @@
 @use "./variables/_common";
 @use "./variables/_light";
 @use "./variables/_dark";
-@use "./variables/shared";
+@use "./variables/_shared";
 @use "./_mixins";
 @use "./_preloading";
 @use "./_core";
@@ -12,4 +12,3 @@
 @use "./_responsive";
 @use "./_utils";
 @use "./_typography";
-
