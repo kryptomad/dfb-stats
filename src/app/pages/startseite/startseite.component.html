@@ -5,8 +5,8 @@
       <div class="label">Gastgeber</div>
       <div class="profile-row">
         <p-chip
-          label="{{ gastgeber() }}"
-          image="assets/players/franz.png"
+          [label]="gastgeber()"
+          [image]="'assets/players/' + image()"
           alt="Avatar image"
           class="profile-chip"
         />
@@ -24,7 +24,7 @@
     </div>
     <div class="card-bgimg">
       <img
-        ngSrc="assets/locations/location-franz.png"
+        ngSrc="assets/locations/{{ location() }}"
         alt="Spielort"
         height="749"
         width="526"

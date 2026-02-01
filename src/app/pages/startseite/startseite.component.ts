@@ -25,6 +25,8 @@ export class StartseiteComponent {
   oskardarten = computed(() => this._nextMatchday()?.oskardarten);
   season = computed(() => this._nextMatchday()?.season);
   matchday = computed(() => this._nextMatchday()?.matchday);
+  location = computed(() => this._nextMatchday()?.location);
+  image = computed(() => this._nextMatchday()?.image);
   games = computed(() => this._nextMatchday()?.games);
 
   private _lastStatsService = inject(LastStatsService);
