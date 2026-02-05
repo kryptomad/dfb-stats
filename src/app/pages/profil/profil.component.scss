@@ -92,3 +92,55 @@
     }
   }
 }
+
+/* Letzten 5 Saisonspiele Section */
+.trend-container {
+  padding: 1rem 0;
+}
+
+.trend-heading {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-color);
+  margin-bottom: 1.5rem;
+}
+
+.trend-content {
+  display: flex;
+  flex-direction: row; /* Horizontal in einer Reihe */
+  align-items: center;
+  gap: 0.2rem;
+  flex-wrap: nowrap; /* Alle Elemente bleiben in einer Zeile */
+}
+
+.trend-arrow {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-left: 0.8rem; /* Extra Abstand zwischen Boxen und Pfeil */
+  flex-shrink: 0; /* Verhindert Schrumpfen des Pfeils */
+}
+
+.no-games-message {
+  padding: 2rem;
+  text-align: center;
+  color: var(--text-color-secondary);
+  font-style: italic;
+}
+
+.info-message {
+  margin-top: 1rem;
+
+  p {
+    font-size: 0.875rem;
+    color: var(--text-color-secondary);
+    margin: 0;
+  }
+}
+
+/* Responsive: Mobile - Boxen bleiben horizontal */
+@media (max-width: 640px) {
+  .trend-content {
+    flex-wrap: wrap; /* Erlaubt Umbruch auf sehr kleinen Bildschirmen */
+    gap: 0.3rem;
+  }
+}

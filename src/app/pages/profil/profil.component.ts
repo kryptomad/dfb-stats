@@ -60,6 +60,11 @@ export class ProfilComponent implements OnInit {
   best3DAMatch: number = 0;
   bestFirst9Match: number = 0;
 
+  // Letzten 5 Saisonspiele
+  lastFiveGames: StatRow[] = [];
+  trendArrow: string = '→';
+  trendColor: string = '#f97316'; // orange
+
   constructor(
     private route: ActivatedRoute,
     private playersService: PlayersService,
@@ -202,6 +207,38 @@ export class ProfilComponent implements OnInit {
         (max, r) => Math.max(max, r.avg_first9 || 0),
         0,
       );
+
+      // Letzten 5 Spiele extrahieren und Trend berechnen
+      const sortedGames = [...playerRows].sort((a, b) => b.matchday - a.matchday);
+      this.lastFiveGames = sortedGames.slice(0, 5).reverse(); // Ältestes links, Neuestes rechts
+      this.calculateTrend();
     });
+  }
+
+  private calculateTrend(): void {
+    if (this.lastFiveGames.length === 0) {
+      this.trendArrow = '→';
+      this.trendColor = '#f97316'; // orange
+      return;
+    }
+
+    // Nimm die letzten 3 Spiele (oder weniger falls < 3 Spiele vorhanden)
+    const recentGames = this.lastFiveGames.slice(-3);
+
+    // Zähle Siege und Niederlagen
+    const wins = recentGames.filter(game => game.sets_won === 1).length;
+    const losses = recentGames.length - wins;
+
+    // Bestimme Trend
+    if (wins > losses) {
+      this.trendArrow = '↗';
+      this.trendColor = '#10b981'; // grün
+    } else if (wins < losses) {
+      this.trendArrow = '↘';
+      this.trendColor = '#ef4444'; // rot
+    } else {
+      this.trendArrow = '→';
+      this.trendColor = '#f97316'; // orange
+    }
   }
 }
