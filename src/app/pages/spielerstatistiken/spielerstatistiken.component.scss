@@ -6,3 +6,58 @@
   line-height: 1;
   vertical-align: middle;
 }
+
+// Section spacing for fragment navigation
+section {
+  scroll-margin-top: 80px; // Account for sticky header
+}
+
+// Checkdarts table styling
+::ng-deep .checkdarts-table {
+  .p-datatable-thead > tr > th {
+    background: var(--surface-card);
+    color: var(--primary-color);
+    font-weight: 600;
+    text-align: center;
+    padding: 0.75rem 0.5rem;
+  }
+
+  .p-datatable-tbody > tr > td {
+    text-align: center;
+    padding: 0.75rem 0.5rem;
+  }
+
+  // Player name column - left aligned
+  .p-datatable-tbody > tr > td:first-child {
+    text-align: left;
+    font-weight: 500;
+  }
+
+  // Alternate row colors
+  .p-datatable-tbody > tr:nth-child(even) {
+    background: var(--surface-100);
+  }
+
+  // Mobile responsive
+  @media (max-width: 768px) {
+    font-size: 0.875rem;
+
+    th,
+    td {
+      padding: 0.5rem 0.25rem;
+    }
+
+    // Sticky player name on mobile
+    .p-datatable-tbody > tr > td:first-child {
+      position: sticky;
+      left: 0;
+      background: var(--surface-card);
+      z-index: 1;
+      box-shadow: 2px 0 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .p-datatable-tbody > tr:nth-child(even) > td:first-child {
+      background: var(--surface-100);
+    }
+  }
+}

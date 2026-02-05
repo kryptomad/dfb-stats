@@ -39,6 +39,7 @@ export class ProfilComponent implements OnInit {
   total180s: number = 0;
   avgDarts: number = 0;
   setsWon: number = 0;
+  setsPlayed: number = 0;
   setsWonPercent: string = 'TBD';
   bestLeg: number = 0;
   worstLeg: number = 0;
@@ -93,6 +94,7 @@ export class ProfilComponent implements OnInit {
         (r) => r.player_id === this.playerId && r.season === seasonStr,
       );
       console.log('Gefilterte Player Rows für Saison:', playerRows);
+      this.setsPlayed = playerRows.length;
       this.totalLegsWon = playerRows.reduce(
         (sum, r) => sum + (r.legs_won || 0),
         0,
@@ -101,9 +103,16 @@ export class ProfilComponent implements OnInit {
         (sum, r) => sum + (r.score_180 || 0),
         0,
       );
-      this.avgDarts =
-        playerRows.reduce((sum, r) => sum + (r.avg_darts || 0), 0) /
-          playerRows.length || 0;
+      // Gewichteter Durchschnitt: (sum(avg_darts * legs_played)) / sum(legs_played)
+      const totalDartsWeighted = playerRows.reduce(
+        (sum, r) => sum + (r.avg_darts || 0) * (r.legs_played || 0),
+        0,
+      );
+      const totalLegs = playerRows.reduce(
+        (sum, r) => sum + (r.legs_played || 0),
+        0,
+      );
+      this.avgDarts = totalLegs > 0 ? totalDartsWeighted / totalLegs : 0;
       this.setsWon = playerRows.reduce((sum, r) => sum + (r.sets_won || 0), 0);
       this.bestLeg =
         playerRows.reduce(
@@ -147,23 +156,44 @@ export class ProfilComponent implements OnInit {
           (r.best_leg !== null && r.best_leg >= 9 && r.best_leg <= 21 ? 1 : 0),
         0,
       );
-      this.avgDartsNeeded = 'TBD';
+      this.avgDartsNeeded = this.avgDarts > 0 ? this.avgDarts.toFixed(1) : '0.0';
       this.breakCount = playerRows.reduce(
         (sum, r) => sum + Number(r.break_ratio.split('/')[0] || 0),
         0,
       );
-      this.breakPercent = 'TBD';
+      const breakOpportunities = playerRows.reduce(
+        (sum, r) => sum + Number(r.break_ratio.split('/')[1]?.trim() || 0),
+        0,
+      );
+      this.breakPercent =
+        breakOpportunities > 0
+          ? ((this.breakCount / breakOpportunities) * 100).toFixed(1) + '%'
+          : '0%';
       this.legsPlayed = playerRows.reduce(
         (sum, r) => sum + (r.legs_played || 0),
         0,
       );
       this.legsWon = playerRows.reduce((sum, r) => sum + (r.legs_won || 0), 0);
-      this.legsWonPercent = 'TBD';
-      this.keepPercent = 'TBD';
+      this.legsWonPercent =
+        this.legsPlayed > 0
+          ? ((this.legsWon / this.legsPlayed) * 100).toFixed(1) + '%'
+          : '0%';
+      this.setsWonPercent =
+        this.setsPlayed > 0
+          ? ((this.setsWon / this.setsPlayed) * 100).toFixed(1) + '%'
+          : '0%';
       this.keepCount = playerRows.reduce(
         (sum, r) => sum + Number(r.keep_ratio.split('/')[0] || 0),
         0,
       );
+      const keepOpportunities = playerRows.reduce(
+        (sum, r) => sum + Number(r.keep_ratio.split('/')[1]?.trim() || 0),
+        0,
+      );
+      this.keepPercent =
+        keepOpportunities > 0
+          ? ((this.keepCount / keepOpportunities) * 100).toFixed(1) + '%'
+          : '0%';
       this.best3DAMatch = playerRows.reduce(
         (max, r) => Math.max(max, r.avg_3dart || 0),
         0,

@@ -1,3 +1,4 @@
+<section id="scorevergleich">
 <h1>Score‑Vergleich</h1>
 <p-card class="mb-4">
   <div class="flex items-center justify-between mb-2">
@@ -51,3 +52,100 @@
   </span>
 </p>
 </p-card>
+</section>
+
+<!-- Checkdarts Section -->
+<section id="checkdarts" class="mt-8">
+  <h1>Checkdarts</h1>
+
+  <p-card class="mb-4">
+    <div class="flex items-center justify-between mb-4">
+      <!-- Season selector (reuse same model) -->
+      <div class="flex items-center gap-3">
+        <p-dropdown
+          [options]="seasons"
+          [(ngModel)]="selectedSeason"
+          (onChange)="onSeasonChange()"
+          placeholder="Saison wählen"
+          styleClass="w-44">
+        </p-dropdown>
+      </div>
+    </div>
+
+    <!-- Chart -->
+    <div class="mb-2" style="height: 180px;">
+      <p-chart
+        type="bar"
+        [data]="checkdartsChartData"
+        [options]="checkdartsChartOptions"
+        style="display:block; width:100%; height:100%;">
+      </p-chart>
+    </div>
+
+    <!-- Table -->
+    <div class="mt-2">
+      <h3 class="text-lg font-semibold mb-3">Detaillierte Statistik</h3>
+      <p-table
+        [value]="checkdartsData"
+        styleClass="p-datatable-sm checkdarts-table"
+        [scrollable]="true"
+        scrollDirection="both"
+        responsiveLayout="scroll">
+
+        <ng-template pTemplate="header">
+          <tr>
+            <th style="min-width:120px">Spieler</th>
+            <th style="min-width:70px">1-Dart</th>
+            <th style="min-width:80px">1-Dart %</th>
+            <th style="min-width:70px">2-Dart</th>
+            <th style="min-width:80px">2-Dart %</th>
+            <th style="min-width:70px">3-Dart</th>
+            <th style="min-width:80px">3-Dart %</th>
+            <th style="min-width:70px">Total</th>
+          </tr>
+        </ng-template>
+
+        <ng-template pTemplate="body" let-row>
+          <tr>
+            <td>
+              <span [style.color]="row.playerColor" class="font-semibold">
+                {{ row.playerName }}
+              </span>
+            </td>
+            <td class="text-center">{{ row.oneDart }}</td>
+            <td class="text-center">{{ row.oneDartPct | number:'1.1-1' }}%</td>
+            <td class="text-center">{{ row.twoDart }}</td>
+            <td class="text-center">{{ row.twoDartPct | number:'1.1-1' }}%</td>
+            <td class="text-center">{{ row.threeDart }}</td>
+            <td class="text-center">{{ row.threeDartPct | number:'1.1-1' }}%</td>
+            <td class="text-center"><strong>{{ row.total }}</strong></td>
+          </tr>
+        </ng-template>
+
+        <ng-template pTemplate="emptymessage">
+          <tr>
+            <td colspan="8" class="text-center text-gray-400 py-4">
+              Keine Daten für diese Saison verfügbar.
+            </td>
+          </tr>
+        </ng-template>
+      </p-table>
+    </div>
+
+    <!-- Explanation -->
+    <div class="mt-6 text-sm text-gray-500 dark:text-gray-400">
+      <p class="mb-2">
+        Diese Statistik zeigt die Verteilung der Checkout-Effizienz pro Spieler basierend auf der Anzahl der benötigten Darts für den finalen Checkout.
+      </p>
+      <p>
+        <strong>1-Dart Checkout</strong>: Mit dem ersten Dart ausgecheckt <span class="mx-2">|</span>
+        <strong>2-Dart Checkout</strong>: Mit dem zweiten Dart ausgecheckt <span class="mx-2">|</span>
+        <strong>3-Dart Checkout</strong>: Mit dem dritten Dart ausgecheckt
+      </p>
+      <br>
+      <p>
+        Aktuell gewählt: {{ selectedSeason || 'All-Time' }}
+      </p>
+    </div>
+  </p-card>
+</section>

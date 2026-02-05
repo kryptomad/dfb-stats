@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
+import { ActivatedRoute, RouterModule } from '@angular/router';
+import { ViewportScroller } from '@angular/common';
 import { ChartModule } from 'primeng/chart';
 import { Card } from 'primeng/card';
 import { DropdownModule } from 'primeng/dropdown';
@@ -8,8 +10,10 @@ import { ToggleButtonModule } from 'primeng/togglebutton';
 import { FormsModule } from '@angular/forms';
 import { SelectButtonModule } from 'primeng/selectbutton';
 import { InputSwitchModule } from 'primeng/inputswitch';
+import { TableModule } from 'primeng/table';
 import { SpielerstatsScoreVergleichService } from '../../services/spielerstats-score-vergleich.service';
 import { ChartThemeService } from '../../services/chart-theme.service';
+import { CheckdartsService, CheckdartsStats } from '../../services/checkdarts.service';
 
 // Typen passend zu deiner legs.json (verschachtelt)
 type Game = {
@@ -20,10 +24,18 @@ type Game = {
   player2_id: number;
   legs: {
     leg_number: number;
+    starter_id: number;
+    leg_winner_id: number | null;
+    p1_darts_leg: number | null;
+    p2_darts_leg: number | null;
+    p1_avg_3dart_leg: number;
+    p2_avg_3dart_leg: number;
     rounds: {
       round: number;
       p1_score: number | null;
+      p1_left: number | null;
       p2_score: number | null;
+      p2_left: number | null;
     }[];
   }[];
 };
@@ -40,6 +52,8 @@ type Game = {
     ToggleButtonModule,
     SelectButtonModule,
     InputSwitchModule,
+    TableModule,
+    RouterModule,
   ],
   templateUrl: './spielerstatistiken.component.html',
   styleUrls: ['./spielerstatistiken.component.scss'],
@@ -56,22 +70,43 @@ export class SpielerstatistikenComponent implements OnInit {
   selectedSeason: string | null = null; // null = All-Time
   first9Only = false;
 
+  // Checkdarts properties
+  checkdartsData: CheckdartsStats[] = [];
+  checkdartsChartData: any = { labels: [], datasets: [] };
+  checkdartsChartOptions: any = {};
+  currentFragment: string | null = null;
+
   private games: Game[] = []; // <<— statt legs
 
   constructor(
     private http: HttpClient,
     private agg: SpielerstatsScoreVergleichService,
     private chartTheme: ChartThemeService,
+    private checkdartsService: CheckdartsService,
+    private route: ActivatedRoute,
+    private viewportScroller: ViewportScroller,
   ) {}
 
   ngOnInit(): void {
     this.chartTheme.watchDomTheme(); // reagiert auf Dark/Light
     this.radarOptions = this.chartTheme.getRadarChartOptions({ showTicks: false });
+    this.checkdartsChartOptions = this.getCheckdartsChartOptions();
 
     this.http.get<Game[]>('assets/legs.json').subscribe((games) => {
       this.games = games ?? [];
       this.buildSeasons();
       this.updateRadar();
+      this.updateCheckdarts();
+    });
+
+    // Fragment navigation
+    this.route.fragment.subscribe((fragment) => {
+      this.currentFragment = fragment;
+      if (fragment) {
+        setTimeout(() => {
+          this.viewportScroller.scrollToAnchor(fragment);
+        }, 100);
+      }
     });
   }
 
@@ -101,6 +136,7 @@ export class SpielerstatistikenComponent implements OnInit {
 
   onSeasonChange(): void {
     this.updateRadar();
+    this.updateCheckdarts();
   }
   onFirst9Toggle(): void {
     this.updateRadar();
@@ -112,5 +148,65 @@ export class SpielerstatistikenComponent implements OnInit {
       season: this.selectedSeason,
       first9Only: this.first9Only,
     });
+  }
+
+  updateCheckdarts(): void {
+    this.checkdartsData = this.checkdartsService.calculateCheckdartsStats(
+      this.games,
+      { season: this.selectedSeason },
+    );
+    this.checkdartsChartData = this.checkdartsService.getCheckdartsChartData(
+      this.checkdartsData,
+    );
+  }
+
+  private getCheckdartsChartOptions(): any {
+    return {
+      indexAxis: 'y',
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: {
+          position: 'top',
+          labels: {
+            color: this.chartTheme.getSecondary(),
+            font: { size: 12 },
+          },
+        },
+        tooltip: {
+          callbacks: {
+            label: (context: any) => {
+              const value = context.parsed.x;
+              return `${context.dataset.label}: ${value.toFixed(1)}%`;
+            },
+          },
+        },
+        datalabels: {
+          display: false, // Deaktiviere Datalabels auf den Balken
+        },
+      },
+      scales: {
+        x: {
+          stacked: true,
+          max: 100,
+          ticks: {
+            callback: (val: number) => val.toFixed(0) + '%',
+            color: this.chartTheme.getSecondary(),
+          },
+          grid: {
+            color: this.chartTheme.hexToRgba(this.chartTheme.getSecondary(), 0.1),
+          },
+        },
+        y: {
+          stacked: true,
+          ticks: {
+            color: this.chartTheme.getSecondary(),
+          },
+          grid: {
+            display: false,
+          },
+        },
+      },
+    };
   }
 }

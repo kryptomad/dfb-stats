@@ -78,7 +78,7 @@
   <p-tablist>
     <p-tab value="0">Jahresvergleich</p-tab>
     <p-tab value="1">Trendverlauf</p-tab>
-    <p-tab value="2">Stats</p-tab>
+    <p-tab value="2">Jahresstats</p-tab>
   </p-tablist>
   <p-tabpanels>
     <p-tabpanel value="0">
@@ -102,16 +102,16 @@
           <span class="stats-table-header">Wert</span>
         </div>
         <div class="stat-row">
-          <span>Sets Gewonnen</span>
-          <span>{{ setsWon }}</span>
+          <span>Sets gewonnen / gespielt</span>
+          <span>{{ setsWon }} / {{ setsPlayed }}</span>
         </div>
         <div class="stat-row">
           <span>Sets Gewonnen %</span>
           <span>{{ setsWonPercent }}</span>
         </div>
         <div class="stat-row">
-          <span>Legs gespielt / gewonnen</span>
-          <span>{{ legsPlayed }} / {{ totalLegsWon }}</span>
+          <span>Legs gewonnen / gespielt</span>
+          <span>{{ legsWon }} / {{ legsPlayed }}</span>
         </div>
         <div class="stat-row">
           <span>Legs Gewonnen %</span>
