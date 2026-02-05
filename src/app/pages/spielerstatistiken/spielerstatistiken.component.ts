@@ -194,13 +194,17 @@ export class SpielerstatistikenComponent implements OnInit {
             color: this.chartTheme.getSecondary(),
           },
           grid: {
-            color: this.chartTheme.hexToRgba(this.chartTheme.getSecondary(), 0.1),
+            color: this.chartTheme.hexToRgba(
+              this.chartTheme.getSecondary(),
+              0.1,
+            ),
           },
         },
         y: {
           stacked: true,
           ticks: {
             color: this.chartTheme.getSecondary(),
+            autoSkip: false,
           },
           grid: {
             display: false,
