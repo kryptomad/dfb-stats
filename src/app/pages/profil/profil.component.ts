@@ -8,6 +8,8 @@ import { NgIf } from '@angular/common';
 import { BadgeModule } from 'primeng/badge';
 import { CommonModule } from '@angular/common'; // Für number-Pipe
 import { ChartModule } from 'primeng/chart';
+import { DropdownModule } from 'primeng/dropdown';
+import { FormsModule } from '@angular/forms';
 import { PlayersService, Player } from '../../services/players.service';
 import { StatsQueryService } from '../../services/stats-query.service';
 import { SeasonSelectorService } from '../../services/season-selector.service';
@@ -17,6 +19,10 @@ import {
   CheckoutData,
   WonLegData,
 } from '../../services/legs.service';
+import {
+  PlayerComparisonService,
+  PlayerComparisonResult,
+} from '../../services/player-comparison.service';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { StatRow } from '../../services/stats.service';
@@ -33,6 +39,8 @@ import { StatRow } from '../../services/stats.service';
     BadgeModule,
     CommonModule,
     ChartModule,
+    DropdownModule,
+    FormsModule,
   ],
   providers: [PlayersService, StatsQueryService, SeasonSelectorService],
   templateUrl: './profil.component.html',
@@ -81,6 +89,14 @@ export class ProfilComponent implements OnInit {
   lastCheckouts: CheckoutData[] = [];
   lastWonLegs: WonLegData[] = [];
 
+  // Season comparison properties
+  seasons: { label: string; value: string }[] = [];
+  matchdays: { label: string; value: number | null }[] = [];
+  selectedSeason1: string | null = null;
+  selectedSeason2: string | null = null;
+  selectedComparisonMatchday: number | null = null;
+  seasonComparisonResult: PlayerComparisonResult | null = null;
+
   constructor(
     private route: ActivatedRoute,
     private playersService: PlayersService,
@@ -88,6 +104,7 @@ export class ProfilComponent implements OnInit {
     private seasonSelector: SeasonSelectorService,
     private chartTheme: ChartThemeService,
     private legsService: LegsService,
+    private playerComparison: PlayerComparisonService,
   ) {
     this.playerId = Number(this.route.snapshot.paramMap.get('id'));
     this.stats$ = this.statsQuery.getFullStatsBySeason$(this.selectedSeason);
@@ -101,6 +118,24 @@ export class ProfilComponent implements OnInit {
     await this.legsService.ensureLoaded();
 
     this.player = this.playersService.getPlayer(this.playerId);
+
+    // Build matchdays list (1-10 + All)
+    this.buildMatchdays();
+
+    // Load seasons from StatsQueryService for comparison
+    this.statsQuery.getSeasons$().subscribe((seasons) => {
+      // Build seasons dropdown for comparison (descending order - newest first)
+      const sortedSeasons = [...seasons].reverse();
+      this.seasons = sortedSeasons.map((s) => ({ label: s, value: s }));
+
+      // Default to comparing latest two seasons if available
+      if (sortedSeasons.length >= 2) {
+        this.selectedSeason1 = sortedSeasons[1]; // Second newest
+        this.selectedSeason2 = sortedSeasons[0]; // Newest
+        this.updateSeasonComparison();
+      }
+    });
+
     this.seasonSelector.getSeasons$().subscribe((seasons) => {
       if (seasons.length > 0 && !seasons.includes(this.selectedSeason)) {
         this.selectedSeason = seasons[0];
@@ -426,5 +461,74 @@ export class ProfilComponent implements OnInit {
         },
       },
     });
+  }
+
+  private buildMatchdays(): void {
+    // Build matchday options: All + 1-10
+    this.matchdays = [
+      { label: 'Alle Spieltage', value: null },
+      ...Array.from({ length: 10 }, (_, i) => ({
+        label: `Spieltag ${i + 1}`,
+        value: i + 1,
+      })),
+    ];
+  }
+
+  onSeasonComparisonChange(): void {
+    if (this.selectedSeason1 && this.selectedSeason2) {
+      this.updateSeasonComparison();
+    }
+  }
+
+  onComparisonMatchdayChange(): void {
+    if (this.selectedSeason1 && this.selectedSeason2) {
+      this.updateSeasonComparison();
+    }
+  }
+
+  updateSeasonComparison(): void {
+    if (!this.selectedSeason1 || !this.selectedSeason2) return;
+
+    this.playerComparison
+      .comparePlayerAcrossSeasons(
+        this.playerId,
+        this.selectedSeason1,
+        this.selectedSeason2,
+        this.selectedComparisonMatchday
+      )
+      .subscribe((result) => {
+        this.seasonComparisonResult = result;
+      });
+  }
+
+  formatValue(value: number, type: string): string {
+    if (type === 'number') return value.toFixed(0);
+    if (type === 'percentage') return value.toFixed(1) + '%';
+    if (type === 'decimal') return value.toFixed(2);
+    return value.toString();
+  }
+
+  getBarWidth(
+    v1: number,
+    v2: number,
+    higherBetter: boolean,
+    isLeft: boolean,
+    formatType?: string,
+    absoluteMax?: number
+  ): number {
+    const value = isLeft ? v1 : v2;
+
+    // If there's an absolute maximum, use it
+    if (absoluteMax !== undefined) {
+      const percentage = (value / absoluteMax) * 50; // 50 because each bar is half of track
+      return Math.min(percentage, 50);
+    }
+
+    // For values without absolute max, calculate relative to max of both values
+    const maxValue = Math.max(v1, v2);
+    if (maxValue === 0) return 0;
+
+    const percentage = (value / maxValue) * 50; // 50 because each bar is half of track
+    return Math.min(percentage, 50);
   }
 }

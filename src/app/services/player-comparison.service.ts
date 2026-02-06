@@ -225,6 +225,201 @@ export class PlayerComparisonService {
     );
   }
 
+  /**
+   * Compare the same player across two different seasons.
+   * Returns comparison where season1 is treated as "player1" and season2 as "player2"
+   */
+  comparePlayerAcrossSeasons(
+    playerId: number,
+    season1: string,
+    season2: string,
+    matchday?: number | null
+  ): Observable<PlayerComparisonResult> {
+    return forkJoin({
+      stats1: this.statsQuery.getFullStatsBySeason$(season1),
+      stats2: this.statsQuery.getFullStatsBySeason$(season2),
+    }).pipe(
+      map(({ stats1, stats2 }) => {
+        // Filter stats for this player from each season
+        let p1Stats = stats1.filter((s) => s.player_id === playerId);
+        let p2Stats = stats2.filter((s) => s.player_id === playerId);
+
+        // Additional filter by matchday if specified
+        if (matchday !== null && matchday !== undefined) {
+          p1Stats = p1Stats.filter((s) => s.matchday === matchday);
+          p2Stats = p2Stats.filter((s) => s.matchday === matchday);
+        }
+
+        // Get player name
+        const player = this.playersService.getPlayer(playerId);
+        const playerName = player?.name || `Player ${playerId}`;
+
+        // Calculate all metrics for both seasons
+        const p1Avg3Dart = this.calculateAvg3Dart(p1Stats);
+        const p2Avg3Dart = this.calculateAvg3Dart(p2Stats);
+
+        const p1AvgFirst9 = this.calculateAvgFirst9(p1Stats);
+        const p2AvgFirst9 = this.calculateAvgFirst9(p2Stats);
+
+        const p1_180s = this.calculate180s(p1Stats);
+        const p2_180s = this.calculate180s(p2Stats);
+
+        const p1_140plus = this.calculate140Plus(p1Stats);
+        const p2_140plus = this.calculate140Plus(p2Stats);
+
+        const p1_100plus = this.calculate100Plus(p1Stats);
+        const p2_100plus = this.calculate100Plus(p2Stats);
+
+        const p1_100 = this.calculate100(p1Stats);
+        const p2_100 = this.calculate100(p2Stats);
+
+        const p1SetsWon = this.calculateSetsWon(p1Stats);
+        const p2SetsWon = this.calculateSetsWon(p2Stats);
+
+        const p1LegsWon = this.calculateLegsWon(p1Stats);
+        const p2LegsWon = this.calculateLegsWon(p2Stats);
+
+        const p1Checkout1Dart = this.calculate1DartCheckoutPct(playerId, season1);
+        const p2Checkout1Dart = this.calculate1DartCheckoutPct(playerId, season2);
+
+        const p1Checkout2Dart = this.calculate2DartCheckoutPct(playerId, season1);
+        const p2Checkout2Dart = this.calculate2DartCheckoutPct(playerId, season2);
+
+        const p1Checkout3Dart = this.calculate3DartCheckoutPct(playerId, season1);
+        const p2Checkout3Dart = this.calculate3DartCheckoutPct(playerId, season2);
+
+        const p1Checkouts100 = this.calculateCheckouts100Plus(playerId, season1);
+        const p2Checkouts100 = this.calculateCheckouts100Plus(playerId, season2);
+
+        const p1HighCheckout = this.calculateHighestCheckout(p1Stats);
+        const p2HighCheckout = this.calculateHighestCheckout(p2Stats);
+
+        // Build metrics array
+        const metrics: PlayerComparisonMetric[] = [
+          {
+            label: 'Sets gewonnen',
+            player1Value: p1SetsWon,
+            player2Value: p2SetsWon,
+            player1Better: p1SetsWon > p2SetsWon,
+            formatType: 'number',
+            higherIsBetter: true,
+          },
+          {
+            label: 'Legs gewonnen',
+            player1Value: p1LegsWon,
+            player2Value: p2LegsWon,
+            player1Better: p1LegsWon > p2LegsWon,
+            formatType: 'number',
+            higherIsBetter: true,
+          },
+          {
+            label: 'Durchschnitt (3-Dart)',
+            player1Value: p1Avg3Dart,
+            player2Value: p2Avg3Dart,
+            player1Better: p1Avg3Dart > p2Avg3Dart,
+            formatType: 'decimal',
+            higherIsBetter: true,
+            absoluteMax: 167,
+          },
+          {
+            label: 'Durchschnitt (First-9)',
+            player1Value: p1AvgFirst9,
+            player2Value: p2AvgFirst9,
+            player1Better: p1AvgFirst9 > p2AvgFirst9,
+            formatType: 'decimal',
+            higherIsBetter: true,
+            absoluteMax: 180,
+          },
+          {
+            label: '180er',
+            player1Value: p1_180s,
+            player2Value: p2_180s,
+            player1Better: p1_180s > p2_180s,
+            formatType: 'number',
+            higherIsBetter: true,
+          },
+          {
+            label: '140+',
+            player1Value: p1_140plus,
+            player2Value: p2_140plus,
+            player1Better: p1_140plus > p2_140plus,
+            formatType: 'number',
+            higherIsBetter: true,
+          },
+          {
+            label: '100+',
+            player1Value: p1_100plus,
+            player2Value: p2_100plus,
+            player1Better: p1_100plus > p2_100plus,
+            formatType: 'number',
+            higherIsBetter: true,
+          },
+          {
+            label: '100',
+            player1Value: p1_100,
+            player2Value: p2_100,
+            player1Better: p1_100 > p2_100,
+            formatType: 'number',
+            higherIsBetter: true,
+          },
+          {
+            label: '1-Dart Checkout %',
+            player1Value: p1Checkout1Dart,
+            player2Value: p2Checkout1Dart,
+            player1Better: p1Checkout1Dart > p2Checkout1Dart,
+            formatType: 'percentage',
+            higherIsBetter: true,
+            absoluteMax: 100,
+          },
+          {
+            label: '2-Dart Checkout %',
+            player1Value: p1Checkout2Dart,
+            player2Value: p2Checkout2Dart,
+            player1Better: p1Checkout2Dart > p2Checkout2Dart,
+            formatType: 'percentage',
+            higherIsBetter: true,
+            absoluteMax: 100,
+          },
+          {
+            label: '3-Dart Checkout %',
+            player1Value: p1Checkout3Dart,
+            player2Value: p2Checkout3Dart,
+            player1Better: p1Checkout3Dart > p2Checkout3Dart,
+            formatType: 'percentage',
+            higherIsBetter: true,
+            absoluteMax: 100,
+          },
+          {
+            label: 'Checkouts 100+',
+            player1Value: p1Checkouts100,
+            player2Value: p2Checkouts100,
+            player1Better: p1Checkouts100 > p2Checkouts100,
+            formatType: 'number',
+            higherIsBetter: true,
+          },
+          {
+            label: 'Höchster Checkout',
+            player1Value: p1HighCheckout,
+            player2Value: p2HighCheckout,
+            player1Better: p1HighCheckout > p2HighCheckout,
+            formatType: 'number',
+            higherIsBetter: true,
+            absoluteMax: 170,
+          },
+        ];
+
+        return {
+          player1Id: playerId,
+          player2Id: playerId,
+          player1Name: season1, // Use season names for display
+          player2Name: season2,
+          season: `${season1} vs ${season2}`,
+          metrics,
+        };
+      })
+    );
+  }
+
   // Private helper methods for metric calculations
 
   private calculateAvg3Dart(statsRows: StatRow[]): number {

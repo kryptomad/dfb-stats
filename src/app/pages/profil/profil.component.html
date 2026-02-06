@@ -82,11 +82,87 @@
   </p-tablist>
   <p-tabpanels>
     <p-tabpanel value="0">
-      <p class="m-0">
-        Vergleiche deine persönlichen Leistungen über mehrere Saisons hinweg.
-        Sieh auf einen Blick, wie sich deine Averages, Checkouts und Scores
-        von Jahr zu Jahr entwickelt haben.
-      </p>
+      <!-- Filter Row -->
+      <div class="flex items-center justify-between mb-4 gap-4 flex-wrap">
+        <div class="flex gap-3 items-center">
+          <p-dropdown
+            [options]="seasons"
+            [(ngModel)]="selectedSeason1"
+            (onChange)="onSeasonComparisonChange()"
+            placeholder="Saison 1 wählen"
+            styleClass="w-44">
+          </p-dropdown>
+
+          <span class="text-lg font-bold">VS</span>
+
+          <p-dropdown
+            [options]="seasons"
+            [(ngModel)]="selectedSeason2"
+            (onChange)="onSeasonComparisonChange()"
+            placeholder="Saison 2 wählen"
+            styleClass="w-44">
+          </p-dropdown>
+        </div>
+
+        <p-dropdown
+          [options]="matchdays"
+          [(ngModel)]="selectedComparisonMatchday"
+          (onChange)="onComparisonMatchdayChange()"
+          placeholder="Spieltag wählen"
+          styleClass="w-44">
+        </p-dropdown>
+      </div>
+
+      <!-- Season Names Header -->
+      <div *ngIf="seasonComparisonResult" class="player-names-header">
+        <div class="player-name left">{{ seasonComparisonResult.player1Name }}</div>
+        <div class="metric-spacer"></div>
+        <div class="player-name right">{{ seasonComparisonResult.player2Name }}</div>
+      </div>
+
+      <!-- Comparison Chart -->
+      <div *ngIf="seasonComparisonResult" class="comparison-chart">
+        <div *ngFor="let metric of seasonComparisonResult.metrics" class="metric-row">
+          <!-- Header: Values and Label -->
+          <div class="metric-header">
+            <span class="metric-value left">{{ formatValue(metric.player1Value, metric.formatType) }}</span>
+            <span class="metric-label">{{ metric.label }}</span>
+            <span class="metric-value right">{{ formatValue(metric.player2Value, metric.formatType) }}</span>
+          </div>
+
+          <!-- Bar Track with thin colored bars -->
+          <div class="bar-track">
+            <div
+              class="bar left"
+              [class.primary]="metric.player1Better"
+              [style.width.%]="getBarWidth(metric.player1Value, metric.player2Value, metric.higherIsBetter, true, metric.formatType, metric.absoluteMax)">
+            </div>
+            <div
+              class="bar right"
+              [class.primary]="!metric.player1Better"
+              [style.width.%]="getBarWidth(metric.player1Value, metric.player2Value, metric.higherIsBetter, false, metric.formatType, metric.absoluteMax)">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Empty State -->
+      <div *ngIf="!seasonComparisonResult" class="text-center py-8 text-gray-400">
+        Wähle zwei Saisons aus, um deine Leistungen zu vergleichen.
+      </div>
+
+      <!-- Info Text -->
+      <div *ngIf="seasonComparisonResult" class="mt-6">
+        <p>
+          Dieser Vergleich zeigt deine persönlichen Leistungen über zwei verschiedene Saisons hinweg.
+          Der Balken in der <strong>Primärfarbe</strong> markiert den besseren Wert, der graue Balken den schlechteren.
+        </p>
+        <p class="mt-2">
+          <strong>Aktuell gewählt:</strong> {{ selectedSeason1 }} vs {{ selectedSeason2 }}
+          <span *ngIf="selectedComparisonMatchday !== null"> | Spieltag {{ selectedComparisonMatchday }}</span>
+          <span *ngIf="selectedComparisonMatchday === null"> | Alle Spieltage</span>
+        </p>
+      </div>
     </p-tabpanel>
     <p-tabpanel value="1">
       <div class="trend-container">

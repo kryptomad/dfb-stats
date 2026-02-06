@@ -327,3 +327,166 @@
     min-width: 45px;
   }
 }
+
+// Season comparison chart styles (reused from spielerstatistiken)
+.comparison-chart {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.metric-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+// Header with values and label
+.metric-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+.metric-value {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-color);
+  min-width: 80px;
+
+  &.left {
+    text-align: left;
+  }
+
+  &.right {
+    text-align: right;
+  }
+}
+
+.metric-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-color-secondary);
+  text-align: center;
+  flex: 1;
+}
+
+// Bar track - light gray background
+.bar-track {
+  position: relative;
+  height: 12px;
+  background: rgba(156, 163, 175, 0.2); // light gray
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+// Thin colored bars
+.bar {
+  position: absolute;
+  height: 100%;
+  transition: width 0.3s ease, background 0.3s ease;
+  min-width: 2px;
+
+  &.left {
+    right: 50%;
+    background: #9ca3af; // gray for worse value
+    border-radius: 6px 0 0 6px;
+
+    &.primary {
+      background: var(--primary-color); // primary for better value
+    }
+  }
+
+  &.right {
+    left: 50%;
+    background: #9ca3af; // gray for worse value
+    border-radius: 0 6px 6px 0;
+
+    &.primary {
+      background: var(--primary-color); // primary for better value
+    }
+  }
+}
+
+.player-names-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding: 0 1rem;
+}
+
+.metric-spacer {
+  flex: 1;
+  text-align: center;
+}
+
+.player-name {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  flex: 1;
+
+  &.left {
+    text-align: left;
+  }
+
+  &.right {
+    text-align: right;
+  }
+}
+
+// Responsive for comparison chart
+@media (max-width: 768px) {
+  .comparison-chart {
+    gap: 1.25rem;
+  }
+
+  .metric-value {
+    font-size: 0.9rem;
+    min-width: 70px;
+  }
+
+  .metric-label {
+    font-size: 0.75rem;
+  }
+
+  .bar-track {
+    height: 10px;
+    border-radius: 5px;
+  }
+
+  .player-name {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .metric-value {
+    font-size: 0.85rem;
+    min-width: 60px;
+  }
+
+  .metric-label {
+    font-size: 0.7rem;
+  }
+
+  .bar-track {
+    height: 8px;
+    border-radius: 4px;
+  }
+
+  .metric-header {
+    padding: 0 0.5rem;
+  }
+
+  .player-names-header {
+    padding: 0 0.5rem;
+  }
+}
