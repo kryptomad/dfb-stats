@@ -15,7 +15,8 @@ import { SpielerstatsScoreVergleichService } from '../../services/spielerstats-s
 import { ChartThemeService } from '../../services/chart-theme.service';
 import { CheckdartsService, CheckdartsStats } from '../../services/checkdarts.service';
 import { PlayerComparisonService, PlayerComparisonResult } from '../../services/player-comparison.service';
-import { PlayersService } from '../../services/players.service';
+import { PlayersService, Player } from '../../services/players.service';
+import { PersonalBestService, PersonalBest, TimePeriod } from '../../services/personal-best.service';
 
 // Typen passend zu deiner legs.json (verschachtelt)
 type Game = {
@@ -86,6 +87,18 @@ export class SpielerstatistikenComponent implements OnInit {
   selectedMatchday: number | null = null;
   comparisonResult: PlayerComparisonResult | null = null;
 
+  // Bestleistungen properties
+  allPlayers: Player[] = [];
+  selectedBestPlayer: number | null = null;
+  selectedTimePeriod: TimePeriod = 'all-time';
+  timePeriodOptions = [
+    { label: 'Spiel', value: 'game' as TimePeriod },
+    { label: 'Spieltag', value: 'matchday' as TimePeriod },
+    { label: 'Saison', value: 'season' as TimePeriod },
+    { label: 'All-Time', value: 'all-time' as TimePeriod },
+  ];
+  personalBests: PersonalBest[] = [];
+
   private games: Game[] = []; // <<— statt legs
 
   constructor(
@@ -95,6 +108,7 @@ export class SpielerstatistikenComponent implements OnInit {
     private checkdartsService: CheckdartsService,
     private playerComparison: PlayerComparisonService,
     private playersService: PlayersService,
+    private personalBestService: PersonalBestService,
     private route: ActivatedRoute,
     private viewportScroller: ViewportScroller,
   ) {}
@@ -107,6 +121,13 @@ export class SpielerstatistikenComponent implements OnInit {
     // Load active players for comparison dropdowns
     const activePlayers = this.playersService.getPlayers({ activeOnly: true });
     this.players = activePlayers.map((p) => ({ label: p.name, value: p.id }));
+
+    // Load all players for Bestleistungen
+    this.allPlayers = this.playersService.getPlayers({ activeOnly: true });
+    if (this.allPlayers.length > 0) {
+      this.selectedBestPlayer = this.allPlayers[0].id;
+      this.updateBestleistungen();
+    }
 
     // Build matchdays list (1-10 + All)
     this.buildMatchdays();
@@ -306,5 +327,48 @@ export class SpielerstatistikenComponent implements OnInit {
 
     const percentage = (value / maxValue) * 50; // 50 because each bar is half of track
     return Math.min(percentage, 50);
+  }
+
+  // Bestleistungen methods
+  onPlayerButtonClick(playerId: number): void {
+    this.selectedBestPlayer = playerId;
+    this.updateBestleistungen();
+  }
+
+  onTimePeriodChange(): void {
+    this.updateBestleistungen();
+  }
+
+  updateBestleistungen(): void {
+    if (!this.selectedBestPlayer) return;
+
+    const season = this.selectedSeason || 'All-Time';
+    // For matchday/game time periods, we might need additional context
+    // For now, we'll pass the current season
+
+    this.personalBestService
+      .getPersonalBests(
+        this.selectedBestPlayer,
+        this.selectedTimePeriod,
+        season
+      )
+      .subscribe((bests) => {
+        this.personalBests = bests;
+      });
+  }
+
+  formatBestValue(best: PersonalBest): string {
+    return this.formatValue(best.value, best.formatType);
+  }
+
+  getMedalEmoji(rank: number | undefined): string {
+    if (rank === 1) return '🥇';
+    if (rank === 2) return '🥈';
+    if (rank === 3) return '🥉';
+    return '';
+  }
+
+  hasTopRankedBests(): boolean {
+    return this.personalBests.some(b => b.topRank !== undefined);
   }
 }

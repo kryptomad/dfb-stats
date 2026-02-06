@@ -110,6 +110,12 @@ export class AppMenu implements OnInit {
                 fragment: 'allzeit-rekorde',
               },
               {
+                label: 'Top 5 Ranglisten',
+                icon: 'pi pi-fw pi-list-check',
+                routerLink: 'pages/gesamtstatistiken',
+                fragment: 'top5',
+              },
+              {
                 label: 'Jahresvergleich',
                 icon: 'pi pi-fw pi-chart-bar',
                 routerLink: 'pages/gesamtstatistiken',

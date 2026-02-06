@@ -543,3 +543,135 @@
   Beste Einzelleistung aller Zeiten (Best Leg, Highest Checkout, 3DA, First9 in einem Spiel) + Gesamt-Summen über die Karriere (TONs/140s/180s).
 </div>
 
+<!-- Top 5 Ranglisten (Eigene Section) -->
+<section id="top5" class="mt-8">
+  <h2>Top 5 Ranglisten</h2>
+
+  <div *ngIf="allTimeRecords.length > 0">
+
+  <div class="all-time-records-grid">
+    <div *ngFor="let record of allTimeRecords" class="record-section">
+      <!-- Tile with #1 value -->
+      <div class="record-tile">
+        <div class="record-tile-header">
+          <span class="record-tile-label">{{ record.metricName }}</span>
+          <span class="medal">🥇</span>
+        </div>
+        <div class="record-tile-value">{{ formatRecordValue(record) }}</div>
+        <div class="record-tile-player">{{ record.topPlayerName }}</div>
+      </div>
+
+      <!-- Top 5 Table -->
+      <div class="top5-table">
+        <div class="top5-header">
+          <span class="top5-rank-col">Rang</span>
+          <span class="top5-player-col">Spieler</span>
+          <span class="top5-value-col">Wert</span>
+          <span class="top5-context-col">Kontext</span>
+        </div>
+        <div *ngFor="let entry of record.top5" class="top5-row">
+          <span class="top5-rank">
+            <span *ngIf="entry.rank <= 3" class="medal-small">{{ getMedalEmoji(entry.rank) }}</span>
+            <span *ngIf="entry.rank > 3">{{ entry.rank }}</span>
+          </span>
+          <span class="top5-player">{{ entry.playerName }}</span>
+          <span class="top5-value">{{ formatTop5Value(entry.value, record.formatType) }}</span>
+          <span class="top5-context">
+            <span *ngIf="entry.season !== 'All-Time'">{{ entry.season }}, ST {{ entry.matchday }}</span>
+            <span *ngIf="entry.season === 'All-Time'">All-Time</span>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="mt-6 text-sm" style="color: #888;">
+    <p>
+      Diese Ranglisten zeigen die Top 5 Leistungen für jede Metrik.
+      🥇🥈🥉 Medaillen markieren die besten drei Plätze.
+    </p>
+  </div>
+  </div>
+
+  <div *ngIf="allTimeRecords.length === 0" class="text-center py-8 text-gray-400">
+    Keine Ranglisten verfügbar.
+  </div>
+</section>
+
+<!-- Jahresvergleich (Season Comparison) -->
+<section id="jahresvergleich" class="mt-8">
+  <h2>Jahresvergleich</h2>
+
+  <p-card class="mb-4">
+    <!-- Season Selection Row -->
+    <div class="flex items-center justify-center mb-6 gap-3 flex-wrap">
+      <p-dropdown
+        [options]="seasons"
+        [(ngModel)]="selectedSeason1"
+        (onChange)="onSeasonSelectionChange()"
+        placeholder="Saison 1 wählen"
+        styleClass="w-44">
+      </p-dropdown>
+
+      <span class="text-lg font-bold">VS</span>
+
+      <p-dropdown
+        [options]="seasons"
+        [(ngModel)]="selectedSeason2"
+        (onChange)="onSeasonSelectionChange()"
+        placeholder="Saison 2 wählen"
+        styleClass="w-44">
+      </p-dropdown>
+    </div>
+
+    <!-- Season Names Header -->
+    <div *ngIf="seasonComparisonResult" class="player-names-header">
+      <div class="player-name left">{{ seasonComparisonResult.player1Name }}</div>
+      <div class="metric-spacer"></div>
+      <div class="player-name right">{{ seasonComparisonResult.player2Name }}</div>
+    </div>
+
+    <!-- Comparison Chart -->
+    <div *ngIf="seasonComparisonResult" class="comparison-chart">
+      <div *ngFor="let metric of seasonComparisonResult.metrics" class="metric-row">
+        <!-- Header: Values and Label -->
+        <div class="metric-header">
+          <span class="metric-value left">{{ formatComparisonValue(metric.player1Value, metric.formatType) }}</span>
+          <span class="metric-label">{{ metric.label }}</span>
+          <span class="metric-value right">{{ formatComparisonValue(metric.player2Value, metric.formatType) }}</span>
+        </div>
+
+        <!-- Bar Track with thin colored bars -->
+        <div class="bar-track">
+          <div
+            class="bar left"
+            [class.primary]="metric.player1Better"
+            [style.width.%]="getBarWidth(metric.player1Value, metric.player2Value, metric.higherIsBetter, true)">
+          </div>
+          <div
+            class="bar right"
+            [class.primary]="!metric.player1Better"
+            [style.width.%]="getBarWidth(metric.player1Value, metric.player2Value, metric.higherIsBetter, false)">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Empty State -->
+    <div *ngIf="!seasonComparisonResult" class="text-center py-8 text-gray-400">
+      Wähle zwei Saisons aus, um ihre kombinierten Statistiken zu vergleichen.
+    </div>
+
+    <!-- Info Text -->
+    <div class="mt-6 text-sm" style="color: #888;">
+      <p>
+        Dieser Vergleich zeigt die aggregierten Leistungen aller Spieler über zwei Saisons hinweg.
+        Der Balken in der <strong>Primärfarbe</strong> markiert die bessere Saison, der graue Balken die schlechtere.
+      </p>
+      <p class="mt-2">
+        Die Metriken umfassen kombinierte Durchschnitte, Gesamtsummen und beste Einzelwerte aus beiden Saisons.
+      </p>
+    </div>
+  </p-card>
+</section>
+

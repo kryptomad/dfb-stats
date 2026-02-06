@@ -226,6 +226,132 @@ export class PlayerComparisonService {
   }
 
   /**
+   * Compare all players' combined stats across two seasons.
+   * Aggregates stats from ALL players for each season and compares them.
+   * Returns comparison where season1 is treated as "player1" and season2 as "player2"
+   */
+  compareSeasonsAllPlayers(
+    season1: string,
+    season2: string
+  ): Observable<PlayerComparisonResult> {
+    return forkJoin({
+      stats1: this.statsQuery.getFullStatsBySeason$(season1),
+      stats2: this.statsQuery.getFullStatsBySeason$(season2),
+    }).pipe(
+      map(({ stats1, stats2 }) => {
+        // Use ALL stats from each season (no player filtering)
+        const p1Stats = stats1;
+        const p2Stats = stats2;
+
+        // Calculate all metrics for both seasons (aggregated across all players)
+        const p1Avg3Dart = this.calculateAvg3Dart(p1Stats);
+        const p2Avg3Dart = this.calculateAvg3Dart(p2Stats);
+
+        const p1AvgFirst9 = this.calculateAvgFirst9(p1Stats);
+        const p2AvgFirst9 = this.calculateAvgFirst9(p2Stats);
+
+        const p1_180s = this.calculate180s(p1Stats);
+        const p2_180s = this.calculate180s(p2Stats);
+
+        const p1_140plus = this.calculate140Plus(p1Stats);
+        const p2_140plus = this.calculate140Plus(p2Stats);
+
+        const p1_100 = this.calculate100(p1Stats);
+        const p2_100 = this.calculate100(p2Stats);
+
+        const p1HighCheckout = this.calculateHighestCheckout(p1Stats);
+        const p2HighCheckout = this.calculateHighestCheckout(p2Stats);
+
+        const p1BestLeg = this.calculateBestLeg(p1Stats);
+        const p2BestLeg = this.calculateBestLeg(p2Stats);
+
+        const p1Checkouts100 = this.calculateCheckouts100PlusAllPlayers(season1);
+        const p2Checkouts100 = this.calculateCheckouts100PlusAllPlayers(season2);
+
+        // Build metrics array (using user's requested metrics)
+        const metrics: PlayerComparisonMetric[] = [
+          {
+            label: 'Durchschnitt (3-Dart)',
+            player1Value: p1Avg3Dart,
+            player2Value: p2Avg3Dart,
+            player1Better: p1Avg3Dart > p2Avg3Dart,
+            formatType: 'decimal',
+            higherIsBetter: true,
+            absoluteMax: 167,
+          },
+          {
+            label: 'Durchschnitt (First-9)',
+            player1Value: p1AvgFirst9,
+            player2Value: p2AvgFirst9,
+            player1Better: p1AvgFirst9 > p2AvgFirst9,
+            formatType: 'decimal',
+            higherIsBetter: true,
+            absoluteMax: 180,
+          },
+          {
+            label: '180er',
+            player1Value: p1_180s,
+            player2Value: p2_180s,
+            player1Better: p1_180s > p2_180s,
+            formatType: 'number',
+            higherIsBetter: true,
+          },
+          {
+            label: '140+',
+            player1Value: p1_140plus,
+            player2Value: p2_140plus,
+            player1Better: p1_140plus > p2_140plus,
+            formatType: 'number',
+            higherIsBetter: true,
+          },
+          {
+            label: 'TONs (100er)',
+            player1Value: p1_100,
+            player2Value: p2_100,
+            player1Better: p1_100 > p2_100,
+            formatType: 'number',
+            higherIsBetter: true,
+          },
+          {
+            label: 'Checkouts 100+',
+            player1Value: p1Checkouts100,
+            player2Value: p2Checkouts100,
+            player1Better: p1Checkouts100 > p2Checkouts100,
+            formatType: 'number',
+            higherIsBetter: true,
+          },
+          {
+            label: 'Höchster Checkout',
+            player1Value: p1HighCheckout,
+            player2Value: p2HighCheckout,
+            player1Better: p1HighCheckout > p2HighCheckout,
+            formatType: 'number',
+            higherIsBetter: true,
+            absoluteMax: 170,
+          },
+          {
+            label: 'Best Leg',
+            player1Value: p1BestLeg,
+            player2Value: p2BestLeg,
+            player1Better: p1BestLeg > 0 && (p2BestLeg === 0 || p1BestLeg < p2BestLeg), // Lower is better for legs
+            formatType: 'number',
+            higherIsBetter: false,
+          },
+        ];
+
+        return {
+          player1Id: 0, // Not applicable for season comparison
+          player2Id: 0,
+          player1Name: season1,
+          player2Name: season2,
+          season: `${season1} vs ${season2}`,
+          metrics,
+        };
+      })
+    );
+  }
+
+  /**
    * Compare the same player across two different seasons.
    * Returns comparison where season1 is treated as "player1" and season2 as "player2"
    */
@@ -516,5 +642,42 @@ export class PlayerComparisonService {
 
   private calculateHighestCheckout(statsRows: StatRow[]): number {
     return statsRows.reduce((max, s) => Math.max(max, s.high_finish || 0), 0);
+  }
+
+  private calculateBestLeg(statsRows: StatRow[]): number {
+    const validLegs = statsRows.filter((s) => s.best_leg && s.best_leg > 0);
+    if (validLegs.length === 0) return 0;
+    return Math.min(...validLegs.map((s) => s.best_leg as number));
+  }
+
+  private calculateOverallCheckoutPct(season: string): number {
+    const games = (this.legsService as any).gamesDataSignal?.();
+    if (!games || games.length === 0) return 0;
+
+    const stats = this.checkdartsService.calculateCheckdartsStats(games, { season });
+    if (stats.length === 0) return 0;
+
+    // Aggregate across all players
+    const totalCheckouts = stats.reduce((sum, s) => sum + s.total, 0);
+    const totalSuccessful = stats.reduce((sum, s) => sum + s.oneDart + s.twoDart + s.threeDart, 0);
+
+    return totalCheckouts > 0 ? (totalSuccessful / totalCheckouts) * 100 : 0;
+  }
+
+  private calculateCheckouts100PlusAllPlayers(season: string): number {
+    const games = (this.legsService as any).gamesDataSignal?.();
+    if (!games || games.length === 0) return 0;
+
+    // Get all active players
+    const players = this.playersService.getPlayers({ activeOnly: false });
+    let total = 0;
+
+    // Sum checkouts 100+ for all players
+    players.forEach((player) => {
+      const checkouts = this.legsService.getPlayerCheckouts(player.id, season, 999);
+      total += checkouts.filter((c) => c.value >= 100).length;
+    });
+
+    return total;
   }
 }

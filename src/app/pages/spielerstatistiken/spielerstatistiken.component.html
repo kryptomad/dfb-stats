@@ -1,5 +1,65 @@
+<!-- Bestleistungen Section -->
+<section id="bestleistungen">
+  <h1>Bestleistungen</h1>
+
+  <p-card class="mb-4">
+    <!-- Player Buttons -->
+    <div class="flex flex-wrap gap-2 mb-4 justify-center">
+      <button
+        *ngFor="let player of allPlayers"
+        class="player-button"
+        [class.active]="selectedBestPlayer === player.id"
+        (click)="onPlayerButtonClick(player.id)">
+        {{ player.name }}
+      </button>
+    </div>
+
+    <!-- Time Period Buttons -->
+    <div class="flex flex-wrap gap-2 mb-6 justify-center">
+      <button
+        *ngFor="let option of timePeriodOptions"
+        class="time-period-button"
+        [class.active]="selectedTimePeriod === option.value"
+        (click)="selectedTimePeriod = option.value; onTimePeriodChange()">
+        {{ option.label }}
+      </button>
+    </div>
+
+    <!-- Personal Best Tiles -->
+    <div class="best-tiles-grid">
+      <div *ngFor="let best of personalBests" class="best-tile">
+        <div class="best-tile-header">
+          <span class="best-tile-label">{{ best.label }}</span>
+          <span *ngIf="best.topRank" class="medal">{{ getMedalEmoji(best.topRank) }}</span>
+        </div>
+        <div class="best-tile-value">{{ formatBestValue(best) }}</div>
+        <div class="best-tile-context">{{ best.context }}</div>
+      </div>
+    </div>
+
+    <!-- Empty State -->
+    <div *ngIf="personalBests.length === 0" class="text-center py-8 text-gray-400">
+      Keine Bestleistungen für diesen Zeitraum verfügbar.
+    </div>
+
+    <!-- Info Text -->
+    <div class="mt-6">
+      <p>
+        Diese Ansicht zeigt die persönlichen Bestleistungen des ausgewählten Spielers für den gewählten Zeitraum.
+        <span *ngIf="selectedTimePeriod === 'game'">Die <strong>Spiel</strong>-Ansicht zeigt die besten Werte aus einem einzelnen Spiel.</span>
+        <span *ngIf="selectedTimePeriod === 'matchday'">Die <strong>Spieltag</strong>-Ansicht zeigt aggregierte Werte pro Spieltag.</span>
+        <span *ngIf="selectedTimePeriod === 'season'">Die <strong>Saison</strong>-Ansicht zeigt aggregierte Werte für die ausgewählte Saison.</span>
+        <span *ngIf="selectedTimePeriod === 'all-time'">Die <strong>All-Time</strong>-Ansicht zeigt die besten Werte über alle Zeiten hinweg.</span>
+      </p>
+      <p class="mt-2" *ngIf="hasTopRankedBests()">
+        Medaillen 🥇🥈🥉 zeigen an, dass der Spieler mit diesem Wert in den Top 3 aller Spieler liegt.
+      </p>
+    </div>
+  </p-card>
+</section>
+
 <!-- Spieler vs. Spieler Section -->
-<section id="spieler-vs-spieler">
+<section id="spieler-vs-spieler" class="mt-8">
   <h1>Spieler vs. Spieler</h1>
 
   <p-card class="mb-4">
