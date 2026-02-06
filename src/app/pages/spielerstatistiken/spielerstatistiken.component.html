@@ -1,4 +1,103 @@
-<section id="scorevergleich">
+<!-- Spieler vs. Spieler Section -->
+<section id="spieler-vs-spieler">
+  <h1>Spieler vs. Spieler</h1>
+
+  <p-card class="mb-4">
+    <!-- Filter Row -->
+    <div class="flex items-center justify-between mb-4 gap-4 flex-wrap">
+      <div class="flex gap-3 items-center">
+        <p-dropdown
+          [options]="seasons"
+          [(ngModel)]="selectedSeason"
+          (onChange)="onSeasonChange()"
+          placeholder="Saison wählen"
+          styleClass="w-44">
+        </p-dropdown>
+
+        <p-dropdown
+          [options]="matchdays"
+          [(ngModel)]="selectedMatchday"
+          (onChange)="onMatchdayChange()"
+          placeholder="Spieltag wählen"
+          styleClass="w-44">
+        </p-dropdown>
+      </div>
+
+      <div class="flex gap-3 items-center">
+        <p-dropdown
+          [options]="players"
+          [(ngModel)]="selectedPlayer1"
+          (onChange)="onPlayerSelectionChange()"
+          placeholder="Spieler 1"
+          styleClass="w-44">
+        </p-dropdown>
+
+        <span class="text-lg font-bold">VS</span>
+
+        <p-dropdown
+          [options]="players"
+          [(ngModel)]="selectedPlayer2"
+          (onChange)="onPlayerSelectionChange()"
+          placeholder="Spieler 2"
+          styleClass="w-44">
+        </p-dropdown>
+      </div>
+    </div>
+
+    <!-- Player Names Header -->
+    <div *ngIf="comparisonResult" class="player-names-header">
+      <div class="player-name left">{{ comparisonResult.player1Name }}</div>
+      <div class="metric-spacer"></div>
+      <div class="player-name right">{{ comparisonResult.player2Name }}</div>
+    </div>
+
+    <!-- Comparison Chart -->
+    <div *ngIf="comparisonResult" class="comparison-chart">
+      <div *ngFor="let metric of comparisonResult.metrics" class="metric-row">
+        <!-- Header: Values and Label -->
+        <div class="metric-header">
+          <span class="metric-value left">{{ formatValue(metric.player1Value, metric.formatType) }}</span>
+          <span class="metric-label">{{ metric.label }}</span>
+          <span class="metric-value right">{{ formatValue(metric.player2Value, metric.formatType) }}</span>
+        </div>
+
+        <!-- Bar Track with thin colored bars -->
+        <div class="bar-track">
+          <div
+            class="bar left"
+            [class.primary]="metric.player1Better"
+            [style.width.%]="getBarWidth(metric.player1Value, metric.player2Value, metric.higherIsBetter, true, metric.formatType, metric.absoluteMax)">
+          </div>
+          <div
+            class="bar right"
+            [class.primary]="!metric.player1Better"
+            [style.width.%]="getBarWidth(metric.player1Value, metric.player2Value, metric.higherIsBetter, false, metric.formatType, metric.absoluteMax)">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Empty State -->
+    <div *ngIf="!comparisonResult" class="text-center py-8 text-gray-400">
+      Wähle zwei Spieler aus, um ihre Statistiken zu vergleichen.
+    </div>
+
+    <!-- Info Text -->
+    <div class="mt-6">
+      <p>
+        Dieser direkte Vergleich zeigt die Leistungen zweier Spieler in der gewählten Saison.
+        Der Balken in der <strong>Primärfarbe</strong> markiert den besseren Wert, der graue Balken den schlechteren.
+      </p>
+      <p class="mt-2">
+        <strong>Aktuell gewählt:</strong> {{ selectedSeason || 'All-Time' }}
+        <span *ngIf="selectedMatchday !== null"> | Spieltag {{ selectedMatchday }}</span>
+        <span *ngIf="selectedMatchday === null"> | Alle Spieltage</span>
+      </p>
+    </div>
+  </p-card>
+</section>
+
+<section id="scorevergleich" class="mt-8">
 <h1>Scorevergleich</h1>
 <p-card class="mb-4">
   <div class="flex items-center justify-between mb-2">

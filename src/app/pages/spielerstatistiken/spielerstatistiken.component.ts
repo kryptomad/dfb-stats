@@ -14,6 +14,8 @@ import { TableModule } from 'primeng/table';
 import { SpielerstatsScoreVergleichService } from '../../services/spielerstats-score-vergleich.service';
 import { ChartThemeService } from '../../services/chart-theme.service';
 import { CheckdartsService, CheckdartsStats } from '../../services/checkdarts.service';
+import { PlayerComparisonService, PlayerComparisonResult } from '../../services/player-comparison.service';
+import { PlayersService } from '../../services/players.service';
 
 // Typen passend zu deiner legs.json (verschachtelt)
 type Game = {
@@ -76,6 +78,14 @@ export class SpielerstatistikenComponent implements OnInit {
   checkdartsChartOptions: any = {};
   currentFragment: string | null = null;
 
+  // Player comparison properties
+  players: { label: string; value: number }[] = [];
+  matchdays: { label: string; value: number | null }[] = [];
+  selectedPlayer1: number | null = null;
+  selectedPlayer2: number | null = null;
+  selectedMatchday: number | null = null;
+  comparisonResult: PlayerComparisonResult | null = null;
+
   private games: Game[] = []; // <<— statt legs
 
   constructor(
@@ -83,6 +93,8 @@ export class SpielerstatistikenComponent implements OnInit {
     private agg: SpielerstatsScoreVergleichService,
     private chartTheme: ChartThemeService,
     private checkdartsService: CheckdartsService,
+    private playerComparison: PlayerComparisonService,
+    private playersService: PlayersService,
     private route: ActivatedRoute,
     private viewportScroller: ViewportScroller,
   ) {}
@@ -91,6 +103,13 @@ export class SpielerstatistikenComponent implements OnInit {
     this.chartTheme.watchDomTheme(); // reagiert auf Dark/Light
     this.radarOptions = this.chartTheme.getRadarChartOptions({ showTicks: false });
     this.checkdartsChartOptions = this.getCheckdartsChartOptions();
+
+    // Load active players for comparison dropdowns
+    const activePlayers = this.playersService.getPlayers({ activeOnly: true });
+    this.players = activePlayers.map((p) => ({ label: p.name, value: p.id }));
+
+    // Build matchdays list (1-10 + All)
+    this.buildMatchdays();
 
     this.http.get<Game[]>('assets/legs.json').subscribe((games) => {
       this.games = games ?? [];
@@ -137,6 +156,21 @@ export class SpielerstatistikenComponent implements OnInit {
   onSeasonChange(): void {
     this.updateRadar();
     this.updateCheckdarts();
+    // Update comparison if players are selected
+    if (this.selectedPlayer1 && this.selectedPlayer2) {
+      this.updateComparison();
+    }
+  }
+
+  private buildMatchdays(): void {
+    // Build matchday options: All + 1-10
+    this.matchdays = [
+      { label: 'Alle Spieltage', value: null },
+      ...Array.from({ length: 10 }, (_, i) => ({
+        label: `Spieltag ${i + 1}`,
+        value: i + 1,
+      })),
+    ];
   }
   onFirst9Toggle(): void {
     this.updateRadar();
@@ -212,5 +246,65 @@ export class SpielerstatistikenComponent implements OnInit {
         },
       },
     };
+  }
+
+  // Player comparison methods
+  onPlayerSelectionChange(): void {
+    if (this.selectedPlayer1 && this.selectedPlayer2) {
+      this.updateComparison();
+    }
+  }
+
+  onMatchdayChange(): void {
+    if (this.selectedPlayer1 && this.selectedPlayer2) {
+      this.updateComparison();
+    }
+  }
+
+  updateComparison(): void {
+    if (!this.selectedPlayer1 || !this.selectedPlayer2) return;
+
+    const season = this.selectedSeason || 'All-Time';
+    this.playerComparison
+      .comparePlayersBySeason(
+        this.selectedPlayer1,
+        this.selectedPlayer2,
+        season,
+        this.selectedMatchday
+      )
+      .subscribe((result) => {
+        this.comparisonResult = result;
+      });
+  }
+
+  formatValue(value: number, type: string): string {
+    if (type === 'number') return value.toFixed(0);
+    if (type === 'percentage') return value.toFixed(1) + '%';
+    if (type === 'decimal') return value.toFixed(2);
+    return value.toString();
+  }
+
+  getBarWidth(
+    v1: number,
+    v2: number,
+    higherBetter: boolean,
+    isLeft: boolean,
+    formatType?: string,
+    absoluteMax?: number
+  ): number {
+    const value = isLeft ? v1 : v2;
+
+    // If there's an absolute maximum, use it
+    if (absoluteMax !== undefined) {
+      const percentage = (value / absoluteMax) * 50; // 50 because each bar is half of track
+      return Math.min(percentage, 50);
+    }
+
+    // For values without absolute max, calculate relative to max of both values
+    const maxValue = Math.max(v1, v2);
+    if (maxValue === 0) return 0;
+
+    const percentage = (value / maxValue) * 50; // 50 because each bar is half of track
+    return Math.min(percentage, 50);
   }
 }

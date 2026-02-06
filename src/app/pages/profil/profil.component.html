@@ -117,6 +117,14 @@
             Erst {{ lastFiveGames.length }} von 5 Spielen gespielt
           </p>
         </div>
+
+        <!-- Trend-Erklärung -->
+        <div *ngIf="lastFiveGames.length > 0" class="info-message">
+          <p>
+            <strong>Trend-Berechnung:</strong> Basierend auf den letzten 3 Spielen
+            (↗ Mehrheit Siege, ↘ Mehrheit Niederlagen, → ausgeglichen)
+          </p>
+        </div>
       </div>
 
       <!-- Average-Entwicklung Chart -->

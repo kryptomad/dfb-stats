@@ -51,8 +51,9 @@ export class StatsQueryService {
 
   getFullStatsBySeason$(season: string | number): Observable<StatRow[]> {
     return this.stats.getStatsRaw().pipe(
-      map((rows) =>
-        rows.map(
+      map((rows) => {
+        // First normalize all rows
+        const normalized = rows.map(
           (r: any) =>
             ({
               game_id: Number(r.game_id),
@@ -83,8 +84,14 @@ export class StatsQueryService {
               break_pct: Number(r.break_pct ?? 0),
               break_ratio: r.break_ratio || '0 / 0',
             }) as StatRow,
-        ),
-      ),
+        );
+        // Handle "All-Time" by returning all normalized rows
+        if (season === 'All-Time' || season === null) {
+          return normalized;
+        }
+        // Otherwise filter by season using the helper
+        return SeasonMatchday.filterBySeason(normalized, season);
+      }),
       shareReplay(1),
     );
   }
