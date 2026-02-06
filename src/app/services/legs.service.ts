@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { firstValueFrom, Observable, of } from 'rxjs';
 import { catchError, shareReplay, map } from 'rxjs/operators';
 import { SeasonDataSource, SeasonSelectorService } from './season-selector.service';
+import { StatsService } from './stats.service';
 
 export interface LegRow {
   id: number;
@@ -87,7 +88,11 @@ export class LegsService implements SeasonDataSource {
   private loadingSignal = signal(false);
   private errorSignal = signal<string | null>(null);
 
-  constructor(private http: HttpClient, private seasonSelector: SeasonSelectorService) {
+  constructor(
+    private http: HttpClient,
+    private seasonSelector: SeasonSelectorService,
+    private statsService: StatsService
+  ) {
     this.initializeSeasonSelector();
   }
 
@@ -274,6 +279,9 @@ export class LegsService implements SeasonDataSource {
     const games = this.gamesDataSignal();
     if (!games) return [];
 
+    const stats = this.statsService.enrichedStats;
+    if (!stats || stats.length === 0) return [];
+
     const highlights: HighlightMatch[] = [];
 
     games
@@ -288,49 +296,23 @@ export class LegsService implements SeasonDataSource {
         const player2Id = player2Leg?.starter_id;
         if (!player2Id) return; // Skip if we can't identify both players
 
-        // Calculate averages for both players across all legs
-        let p1TotalScore = 0;
-        let p1TotalDarts = 0;
-        let p2TotalScore = 0;
-        let p2TotalDarts = 0;
+        // Get averages from stats.json (correct source)
+        const p1Stats = stats.find(s => s.game_id === game.game_id && s.player_id === player1Id);
+        const p2Stats = stats.find(s => s.game_id === game.game_id && s.player_id === player2Id);
+
+        if (!p1Stats || !p2Stats) return; // Skip if stats not found
+
+        const p1Avg = p1Stats.avg_3dart || 0;
+        const p2Avg = p2Stats.avg_3dart || 0;
+        const combinedAvg = p1Avg + p2Avg;
+
+        // Count legs won
         let p1LegsWon = 0;
         let p2LegsWon = 0;
-
         game.legs.forEach(leg => {
-          const isPlayer1Starter = leg.starter_id === player1Id;
-
-          // Accumulate stats based on who started this leg
-          if (isPlayer1Starter) {
-            // Player1 is p1 in this leg, Player2 is p2
-            if (leg.p1_avg_3dart_leg && leg.p1_darts_leg) {
-              p1TotalScore += leg.p1_avg_3dart_leg * (leg.p1_darts_leg / 3);
-              p1TotalDarts += leg.p1_darts_leg;
-            }
-            if (leg.p2_avg_3dart_leg && leg.p2_darts_leg) {
-              p2TotalScore += leg.p2_avg_3dart_leg * (leg.p2_darts_leg / 3);
-              p2TotalDarts += leg.p2_darts_leg;
-            }
-          } else {
-            // Player1 is p2 in this leg, Player2 is p1
-            if (leg.p1_avg_3dart_leg && leg.p1_darts_leg) {
-              p2TotalScore += leg.p1_avg_3dart_leg * (leg.p1_darts_leg / 3);
-              p2TotalDarts += leg.p1_darts_leg;
-            }
-            if (leg.p2_avg_3dart_leg && leg.p2_darts_leg) {
-              p1TotalScore += leg.p2_avg_3dart_leg * (leg.p2_darts_leg / 3);
-              p1TotalDarts += leg.p2_darts_leg;
-            }
-          }
-
-          // Count legs won
           if (leg.leg_winner_id === player1Id) p1LegsWon++;
           else if (leg.leg_winner_id === player2Id) p2LegsWon++;
         });
-
-        // Calculate weighted averages
-        const p1Avg = p1TotalDarts > 0 ? (p1TotalScore / p1TotalDarts) * 3 : 0;
-        const p2Avg = p2TotalDarts > 0 ? (p2TotalScore / p2TotalDarts) * 3 : 0;
-        const combinedAvg = p1Avg + p2Avg;
 
         // Skip if averages are too low (indicates incomplete data)
         if (combinedAvg < 50) return;
