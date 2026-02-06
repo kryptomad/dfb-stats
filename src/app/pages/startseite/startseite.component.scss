@@ -144,3 +144,68 @@
   margin-top: 0.6rem;
   word-break: break-word;
 }
+
+// Nächster Oskarabend Styles - Grid Layout
+.oskar-game-grid {
+  display: grid;
+  grid-template-columns: auto minmax(80px, 2fr) auto minmax(80px, 2fr) auto minmax(70px, auto);
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem;
+}
+
+.player1-avatar {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.player1-name {
+  display: flex;
+  justify-content: flex-start;
+  text-align: left;
+  padding-left: 0.5rem;
+}
+
+.vs-column {
+  display: flex;
+  justify-content: center;
+}
+
+.vs-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--primary-color);
+  color: white;
+  font-weight: bold;
+  font-size: 0.6rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.6rem;
+  min-width: 2.2rem;
+}
+
+.player2-name {
+  display: flex;
+  justify-content: flex-end;
+  text-align: right;
+  padding-right: 0.5rem;
+}
+
+.player2-avatar {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.schreiber-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+  justify-content: center;
+  padding-left: 0.5rem;
+  min-width: 70px;
+
+  span {
+    text-align: center;
+  }
+}

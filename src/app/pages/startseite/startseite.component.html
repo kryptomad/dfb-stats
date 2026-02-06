@@ -56,21 +56,48 @@
   – Spieltag:
   <span class="text-primary">{{ matchday() }}</span>
 </div>
-<p-card>
-  <p-table [value]="games() || []">
-    <ng-template #header>
-      <tr>
-        <th>Schreiber</th>
-        <th>Spieler 1</th>
-        <th>Spieler 2</th>
-      </tr>
-    </ng-template>
-    <ng-template #body let-game>
-      <tr>
-        <td class="schreiber">{{ game.writer }}</td>
-        <td>{{ game.player1 }}</td>
-        <td>{{ game.player2 }}</td>
-      </tr>
-    </ng-template>
-  </p-table>
-</p-card>
+
+<div class="grid grid-cols-1 gap-3">
+  <p-card *ngFor="let game of games()">
+    <div class="oskar-game-grid">
+      <!-- Player 1 Avatar -->
+      <div class="player1-avatar">
+        <p-avatar
+          [image]="getPlayerImage(game.player1)"
+          size="large"
+          shape="circle">
+        </p-avatar>
+      </div>
+
+      <!-- Player 1 Name -->
+      <div class="player1-name">
+        <span class="text-base font-semibold">{{ game.player1 }}</span>
+      </div>
+
+      <!-- VS Badge -->
+      <div class="vs-column">
+        <div class="vs-badge">VS</div>
+      </div>
+
+      <!-- Player 2 Name -->
+      <div class="player2-name">
+        <span class="text-base font-semibold">{{ game.player2 }}</span>
+      </div>
+
+      <!-- Player 2 Avatar -->
+      <div class="player2-avatar">
+        <p-avatar
+          [image]="getPlayerImage(game.player2)"
+          size="large"
+          shape="circle">
+        </p-avatar>
+      </div>
+
+      <!-- Schreiber -->
+      <div class="schreiber-column">
+        <i class="pi pi-pencil text-gray-400 text-sm"></i>
+        <span class="text-xs text-gray-500">{{ game.writer }}</span>
+      </div>
+    </div>
+  </p-card>
+</div>
