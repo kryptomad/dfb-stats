@@ -598,9 +598,9 @@
   </div>
 </section>
 
-<!-- Jahresvergleich (Season Comparison) -->
+<!-- Saisonvergleich (Season Comparison) -->
 <section id="jahresvergleich" class="mt-8">
-  <h2>Jahresvergleich</h2>
+  <h2>Saisonvergleich</h2>
 
   <p-card class="mb-4">
     <!-- Season Selection Row -->
@@ -670,6 +670,32 @@
       </p>
       <p class="mt-2">
         Die Metriken umfassen kombinierte Durchschnitte, Gesamtsummen und beste Einzelwerte aus beiden Saisons.
+      </p>
+    </div>
+  </p-card>
+</section>
+
+<!-- Trendverlauf (Trend Over Time) -->
+<section id="trendverlauf" class="mt-8">
+  <h2>Trendverlauf</h2>
+
+  <p-card class="mb-4">
+    <div class="chart-container" style="position: relative; height: 150px;">
+      <p-chart
+        type="line"
+        [data]="trendChartData"
+        [options]="trendChartOptions">
+      </p-chart>
+    </div>
+
+    <!-- Info Text -->
+    <div class="mt-6 text-sm" style="color: #888;">
+      <p>
+        Dieser Chart zeigt die Entwicklung der aggregierten Durchschnittswerte aller Spieler über alle Saisons hinweg.
+      </p>
+      <p class="mt-2">
+        <strong>3-Dart-Average:</strong> Gewichteter Durchschnitt über alle geworfenen Darts.<br>
+        <strong>First-9-Average:</strong> Einfacher Durchschnitt der First-9-Werte aller Spiele.
       </p>
     </div>
   </p-card>

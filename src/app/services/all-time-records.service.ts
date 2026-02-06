@@ -49,29 +49,23 @@ export class AllTimeRecordsService {
         // 3. Most 180s (single game)
         records.push(this.calculateMost180sSingleGame(allStats));
 
-        // 4. Most 180s (total)
-        records.push(this.calculateMost180sTotal(allStats));
+        // 4. Most 180s (matchday)
+        records.push(this.calculateMost180sMatchday(allStats));
 
         // 5. Most 140+ (single game)
         records.push(this.calculateMost140PlusSingleGame(allStats));
 
-        // 6. Most 140+ (total)
-        records.push(this.calculateMost140PlusTotal(allStats));
+        // 6. Most 140+ (matchday)
+        records.push(this.calculateMost140PlusMatchday(allStats));
 
         // 7. Most 100+ (single game)
         records.push(this.calculateMost100PlusSingleGame(allStats));
 
-        // 8. Most 100+ (total)
-        records.push(this.calculateMost100PlusTotal(allStats));
+        // 8. Most 100+ (matchday)
+        records.push(this.calculateMost100PlusMatchday(allStats));
 
         // 9. Highest Checkout
         records.push(this.calculateHighestCheckout(allStats));
-
-        // 10. Most Legs Won (single game)
-        records.push(this.calculateMostLegsWonSingleGame(allStats));
-
-        // 11. Most Legs Won (total)
-        records.push(this.calculateMostLegsWonTotal(allStats));
 
         return records;
       })
@@ -168,26 +162,30 @@ export class AllTimeRecordsService {
     };
   }
 
-  private calculateMost180sTotal(allStats: StatRow[]): AllTimeRecord {
-    // Aggregate total 180s per player
-    const playerTotals = new Map<number, { total: number; stats: StatRow[] }>();
+  private calculateMost180sMatchday(allStats: StatRow[]): AllTimeRecord {
+    // Aggregate 180s per player per matchday
+    const matchdayTotals = new Map<string, {
+      playerId: number;
+      season: string;
+      matchday: number;
+      total: number
+    }>();
 
     allStats.forEach((s) => {
-      if (!playerTotals.has(s.player_id)) {
-        playerTotals.set(s.player_id, { total: 0, stats: [] });
+      const key = `${s.player_id}_${s.season}_${s.matchday}`;
+      if (!matchdayTotals.has(key)) {
+        matchdayTotals.set(key, {
+          playerId: s.player_id,
+          season: s.season,
+          matchday: s.matchday,
+          total: 0
+        });
       }
-      const entry = playerTotals.get(s.player_id)!;
+      const entry = matchdayTotals.get(key)!;
       entry.total += s.score_180;
-      entry.stats.push(s);
     });
 
-    const sorted = Array.from(playerTotals.entries())
-      .map(([playerId, data]) => ({
-        playerId,
-        total: data.total,
-        // Use most recent stat for season/matchday context
-        lastStat: data.stats[data.stats.length - 1],
-      }))
+    const sorted = Array.from(matchdayTotals.values())
       .sort((a, b) => b.total - a.total)
       .slice(0, 5);
 
@@ -197,15 +195,15 @@ export class AllTimeRecordsService {
       playerName:
         this.playersService.getPlayer(item.playerId)?.name || 'Unknown',
       value: item.total,
-      season: 'All-Time',
-      matchday: 0,
+      season: item.season,
+      matchday: item.matchday,
     }));
 
     const topRecord = top5[0];
 
     return {
-      metricKey: 'most_180s_total',
-      metricName: 'Meiste 180er (Gesamt)',
+      metricKey: 'most_180s_matchday',
+      metricName: 'Meiste 180er (Spieltag)',
       topValue: topRecord?.value || 0,
       topPlayerId: topRecord?.playerId || 0,
       topPlayerName: topRecord?.playerName || 'N/A',
@@ -247,16 +245,30 @@ export class AllTimeRecordsService {
     };
   }
 
-  private calculateMost140PlusTotal(allStats: StatRow[]): AllTimeRecord {
-    const playerTotals = new Map<number, number>();
+  private calculateMost140PlusMatchday(allStats: StatRow[]): AllTimeRecord {
+    // Aggregate 140+ per player per matchday
+    const matchdayTotals = new Map<string, {
+      playerId: number;
+      season: string;
+      matchday: number;
+      total: number
+    }>();
 
     allStats.forEach((s) => {
-      const total = playerTotals.get(s.player_id) || 0;
-      playerTotals.set(s.player_id, total + s.score_140 + s.score_140_plus);
+      const key = `${s.player_id}_${s.season}_${s.matchday}`;
+      if (!matchdayTotals.has(key)) {
+        matchdayTotals.set(key, {
+          playerId: s.player_id,
+          season: s.season,
+          matchday: s.matchday,
+          total: 0
+        });
+      }
+      const entry = matchdayTotals.get(key)!;
+      entry.total += s.score_140 + s.score_140_plus;
     });
 
-    const sorted = Array.from(playerTotals.entries())
-      .map(([playerId, total]) => ({ playerId, total }))
+    const sorted = Array.from(matchdayTotals.values())
       .sort((a, b) => b.total - a.total)
       .slice(0, 5);
 
@@ -266,15 +278,15 @@ export class AllTimeRecordsService {
       playerName:
         this.playersService.getPlayer(item.playerId)?.name || 'Unknown',
       value: item.total,
-      season: 'All-Time',
-      matchday: 0,
+      season: item.season,
+      matchday: item.matchday,
     }));
 
     const topRecord = top5[0];
 
     return {
-      metricKey: 'most_140plus_total',
-      metricName: 'Meiste 140+ (Gesamt)',
+      metricKey: 'most_140plus_matchday',
+      metricName: 'Meiste 140+ (Spieltag)',
       topValue: topRecord?.value || 0,
       topPlayerId: topRecord?.playerId || 0,
       topPlayerName: topRecord?.playerName || 'N/A',
@@ -316,16 +328,30 @@ export class AllTimeRecordsService {
     };
   }
 
-  private calculateMost100PlusTotal(allStats: StatRow[]): AllTimeRecord {
-    const playerTotals = new Map<number, number>();
+  private calculateMost100PlusMatchday(allStats: StatRow[]): AllTimeRecord {
+    // Aggregate 100+ per player per matchday
+    const matchdayTotals = new Map<string, {
+      playerId: number;
+      season: string;
+      matchday: number;
+      total: number
+    }>();
 
     allStats.forEach((s) => {
-      const total = playerTotals.get(s.player_id) || 0;
-      playerTotals.set(s.player_id, total + s.score_100 + s.score_100_plus);
+      const key = `${s.player_id}_${s.season}_${s.matchday}`;
+      if (!matchdayTotals.has(key)) {
+        matchdayTotals.set(key, {
+          playerId: s.player_id,
+          season: s.season,
+          matchday: s.matchday,
+          total: 0
+        });
+      }
+      const entry = matchdayTotals.get(key)!;
+      entry.total += s.score_100 + s.score_100_plus;
     });
 
-    const sorted = Array.from(playerTotals.entries())
-      .map(([playerId, total]) => ({ playerId, total }))
+    const sorted = Array.from(matchdayTotals.values())
       .sort((a, b) => b.total - a.total)
       .slice(0, 5);
 
@@ -335,15 +361,15 @@ export class AllTimeRecordsService {
       playerName:
         this.playersService.getPlayer(item.playerId)?.name || 'Unknown',
       value: item.total,
-      season: 'All-Time',
-      matchday: 0,
+      season: item.season,
+      matchday: item.matchday,
     }));
 
     const topRecord = top5[0];
 
     return {
-      metricKey: 'most_100plus_total',
-      metricName: 'Meiste 100+ (Gesamt)',
+      metricKey: 'most_100plus_matchday',
+      metricName: 'Meiste 100+ (Spieltag)',
       topValue: topRecord?.value || 0,
       topPlayerId: topRecord?.playerId || 0,
       topPlayerName: topRecord?.playerName || 'N/A',
@@ -372,70 +398,6 @@ export class AllTimeRecordsService {
     return {
       metricKey: 'highest_checkout',
       metricName: 'Höchster Checkout',
-      topValue: topRecord?.value || 0,
-      topPlayerId: topRecord?.playerId || 0,
-      topPlayerName: topRecord?.playerName || 'N/A',
-      formatType: 'number',
-      top5,
-    };
-  }
-
-  private calculateMostLegsWonSingleGame(allStats: StatRow[]): AllTimeRecord {
-    const sorted = [...allStats]
-      .filter((s) => s.legs_won > 0)
-      .sort((a, b) => b.legs_won - a.legs_won)
-      .slice(0, 5);
-
-    const top5: TopPlayerRecord[] = sorted.map((s, index) => ({
-      rank: index + 1,
-      playerId: s.player_id,
-      playerName: this.playersService.getPlayer(s.player_id)?.name || 'Unknown',
-      value: s.legs_won,
-      season: s.season,
-      matchday: s.matchday,
-    }));
-
-    const topRecord = top5[0];
-
-    return {
-      metricKey: 'most_legs_won_game',
-      metricName: 'Meiste Legs gewonnen (Spiel)',
-      topValue: topRecord?.value || 0,
-      topPlayerId: topRecord?.playerId || 0,
-      topPlayerName: topRecord?.playerName || 'N/A',
-      formatType: 'number',
-      top5,
-    };
-  }
-
-  private calculateMostLegsWonTotal(allStats: StatRow[]): AllTimeRecord {
-    const playerTotals = new Map<number, number>();
-
-    allStats.forEach((s) => {
-      const total = playerTotals.get(s.player_id) || 0;
-      playerTotals.set(s.player_id, total + s.legs_won);
-    });
-
-    const sorted = Array.from(playerTotals.entries())
-      .map(([playerId, total]) => ({ playerId, total }))
-      .sort((a, b) => b.total - a.total)
-      .slice(0, 5);
-
-    const top5: TopPlayerRecord[] = sorted.map((item, index) => ({
-      rank: index + 1,
-      playerId: item.playerId,
-      playerName:
-        this.playersService.getPlayer(item.playerId)?.name || 'Unknown',
-      value: item.total,
-      season: 'All-Time',
-      matchday: 0,
-    }));
-
-    const topRecord = top5[0];
-
-    return {
-      metricKey: 'most_legs_won_total',
-      metricName: 'Meiste Legs gewonnen (Gesamt)',
       topValue: topRecord?.value || 0,
       topPlayerId: topRecord?.playerId || 0,
       topPlayerName: topRecord?.playerName || 'N/A',

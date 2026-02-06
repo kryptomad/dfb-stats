@@ -33,7 +33,11 @@ export class LegsQueriesService {
   perPlayerBestLegsInSeason(): Observable<BestLegEntry[]> {
     return this.seasonSelector.getSelectedSeason$().pipe(
       switchMap(season => this.getLegs$().pipe(
-        map(legs => this.calculateBestLegPerPlayer(legs.filter(l => l.season === season), season || ''))
+        map(legs => {
+          // If All-Time, use all legs; otherwise filter by season
+          const filteredLegs = season === 'All-Time' ? legs : legs.filter(l => l.season === season);
+          return this.calculateBestLegPerPlayer(filteredLegs, season || '');
+        })
       ))
     );
   }

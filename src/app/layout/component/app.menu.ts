@@ -116,7 +116,7 @@ export class AppMenu implements OnInit {
                 fragment: 'top5',
               },
               {
-                label: 'Jahresvergleich',
+                label: 'Saisonvergleich',
                 icon: 'pi pi-fw pi-chart-bar',
                 routerLink: 'pages/gesamtstatistiken',
                 fragment: 'jahresvergleich',

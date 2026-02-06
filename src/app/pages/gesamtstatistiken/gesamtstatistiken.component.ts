@@ -11,6 +11,7 @@ import { StatsService } from '../../services/stats.service';
 import { PlayersService } from '../../services/players.service';
 import { AllTimeRecordsService, AllTimeRecord } from '../../services/all-time-records.service';
 import { PlayerComparisonService, PlayerComparisonResult } from '../../services/player-comparison.service';
+import { ChartThemeService } from '../../services/chart-theme.service';
 import { FormsModule } from '@angular/forms';
 import { DropdownModule } from 'primeng/dropdown';
 
@@ -71,17 +72,22 @@ export class GesamtstatistikenComponent implements OnInit {
   // Allzeit-Rekorde with Top 5
   allTimeRecords: AllTimeRecord[] = [];
 
-  // Jahresvergleich (Season Comparison)
+  // Saisonvergleich (Season Comparison)
   seasons: { label: string; value: string }[] = [];
   selectedSeason1: string | null = null;
   selectedSeason2: string | null = null;
   seasonComparisonResult: PlayerComparisonResult | null = null;
+
+  // Trendverlauf (Trend Over Time)
+  trendChartData: any = { labels: [], datasets: [] };
+  trendChartOptions: any = {};
 
   constructor(
     private statsService: StatsService,
     private playersService: PlayersService,
     private allTimeRecordsService: AllTimeRecordsService,
     private playerComparisonService: PlayerComparisonService,
+    private chartTheme: ChartThemeService,
     private route: ActivatedRoute,
     private viewportScroller: ViewportScroller,
   ) {}
@@ -94,6 +100,7 @@ export class GesamtstatistikenComponent implements OnInit {
       this.loadJahrData();
       this.loadAlltimeData();
       this.loadSeasons();
+      this.buildTrendChart();
     });
 
     // Load all-time records with top 5
@@ -109,12 +116,17 @@ export class GesamtstatistikenComponent implements OnInit {
         }, 100);
       }
     });
+
+    // Initialize chart options
+    this.trendChartOptions = this.getTrendChartOptions();
   }
 
   // Load available seasons for comparison
   private loadSeasons() {
     const allStats = this.statsService.enrichedStats;
-    const uniqueSeasons = [...new Set(allStats.map((s: any) => s.season as string))].sort((a: string, b: string) => {
+    const uniqueSeasons = [
+      ...new Set(allStats.map((s: any) => s.season as string)),
+    ].sort((a: string, b: string) => {
       const [yearA] = a.split('/').map(Number);
       const [yearB] = b.split('/').map(Number);
       return yearB - yearA; // Neueste zuerst
@@ -197,7 +209,8 @@ export class GesamtstatistikenComponent implements OnInit {
   // Helper methods for AllTimeRecords
   formatRecordValue(record: AllTimeRecord): string {
     if (record.formatType === 'number') return record.topValue.toFixed(0);
-    if (record.formatType === 'percentage') return record.topValue.toFixed(1) + '%';
+    if (record.formatType === 'percentage')
+      return record.topValue.toFixed(1) + '%';
     if (record.formatType === 'decimal') return record.topValue.toFixed(2);
     return record.topValue.toString();
   }
@@ -224,7 +237,12 @@ export class GesamtstatistikenComponent implements OnInit {
     return value.toString();
   }
 
-  getBarWidth(v1: number, v2: number, higherBetter: boolean, isLeft: boolean): number {
+  getBarWidth(
+    v1: number,
+    v2: number,
+    higherBetter: boolean,
+    isLeft: boolean,
+  ): number {
     // For "lower is better" metrics (like Best Leg), we need to invert
     if (!higherBetter) {
       // Treat 0 as no value
@@ -248,5 +266,160 @@ export class GesamtstatistikenComponent implements OnInit {
     const percentage = (value / maxValue) * 100;
 
     return Math.min(percentage, 100);
+  }
+
+  // Build Trendverlauf Chart
+  private buildTrendChart(): void {
+    const allStats = this.statsService.enrichedStats;
+
+    if (allStats.length === 0) {
+      this.trendChartData = { labels: [], datasets: [] };
+      return;
+    }
+
+    // Group stats by season
+    const groupedBySeason = allStats.reduce(
+      (acc, row) => {
+        const season = row.season as string;
+        if (!acc[season]) {
+          acc[season] = [];
+        }
+        acc[season].push(row);
+        return acc;
+      },
+      {} as Record<string, any[]>,
+    );
+
+    // Calculate averages per season (aggregated across all players)
+    const seasonAverages = (
+      Object.entries(groupedBySeason) as [string, any[]][]
+    ).map(([season, rows]) => {
+      // Weighted average for 3-Dart
+      const totalPoints = rows.reduce(
+        (sum: number, r: any) => sum + (r.avg_3dart * r.darts_thrown) / 3,
+        0,
+      );
+      const totalDarts = rows.reduce(
+        (sum: number, r: any) => sum + r.darts_thrown,
+        0,
+      );
+      const avg_3dart = totalDarts > 0 ? (totalPoints / totalDarts) * 3 : 0;
+
+      // Simple average for First-9
+      const validFirst9 = rows.filter(
+        (r: any) => r.avg_first9 && r.avg_first9 > 0,
+      );
+      const avg_first9 =
+        validFirst9.length > 0
+          ? validFirst9.reduce((sum: number, r: any) => sum + r.avg_first9, 0) /
+            validFirst9.length
+          : 0;
+
+      return {
+        season,
+        avg_3dart,
+        avg_first9,
+      };
+    });
+
+    // Sort by season (chronologically)
+    const sortedSeasons = seasonAverages.sort((a, b) => {
+      const [yearA] = a.season.split('/').map(Number);
+      const [yearB] = b.season.split('/').map(Number);
+      return yearA - yearB; // Oldest first
+    });
+
+    // Extract labels and data
+    const labels = sortedSeasons.map((s) => s.season);
+    const avg3DartData = sortedSeasons.map((s) => s.avg_3dart);
+    const avgFirst9Data = sortedSeasons.map((s) => s.avg_first9);
+
+    // Get colors from theme (same as profil component)
+    const primaryColor = this.chartTheme.getPrimary();
+    const secondaryColor = '#f97316'; // Orange for contrast
+
+    this.trendChartData = {
+      labels,
+      datasets: [
+        {
+          label: '3-Dart-Average',
+          data: avg3DartData,
+          borderColor: primaryColor,
+          backgroundColor: this.chartTheme.hexToRgba(primaryColor, 0.2),
+          tension: 0.4,
+          fill: true,
+          borderWidth: 2,
+          pointRadius: 4,
+          pointBackgroundColor: primaryColor,
+        },
+        {
+          label: 'First-9-Average',
+          data: avgFirst9Data,
+          borderColor: secondaryColor,
+          backgroundColor: this.chartTheme.hexToRgba(secondaryColor, 0.2),
+          tension: 0.4,
+          fill: true,
+          borderWidth: 2,
+          pointRadius: 4,
+          pointBackgroundColor: secondaryColor,
+        },
+      ],
+    };
+  }
+
+  private getTrendChartOptions(): any {
+    return this.chartTheme.getLineChartOptions({
+      responsive: true,
+      maintainAspectRatio: false,
+      layout: {
+        padding: {
+          bottom: 0,
+        },
+      },
+      plugins: {
+        legend: {
+          position: 'top',
+          labels: {
+            usePointStyle: true,
+          },
+        },
+        tooltip: {
+          mode: 'index',
+          intersect: false,
+          callbacks: {
+            label: (context: any) =>
+              `${context.dataset.label}: ${context.parsed.y.toFixed(2)}`,
+          },
+        },
+        datalabels: {
+          display: false,
+        },
+      },
+      scales: {
+        x: {
+          title: {
+            display: true,
+            text: 'Jahr',
+            font: { size: 12 },
+          },
+          ticks: {
+            autoSkip: false,
+            maxRotation: 45,
+            minRotation: 45,
+            font: { size: 11 },
+          },
+          grid: { display: false },
+        },
+        y: {
+          beginAtZero: false,
+          ticks: { font: { size: 11 } },
+          title: {
+            display: true,
+            text: 'Average',
+            font: { size: 12 },
+          },
+        },
+      },
+    });
   }
 }

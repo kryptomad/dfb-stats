@@ -6,6 +6,7 @@ import { StatRow } from './stats.service';
 import { PlayersService } from './players.service';
 
 export interface TopYearValue {
+  playerId: number;
   playerName: string;
   value: string | number;
 }
@@ -77,7 +78,7 @@ export class JahresstatsTopJahreswerteService {
             }
 
             const playerName = this.playersService.getPlayer(playerId)?.name || `Player ${playerId}`;
-            return { playerName, value };
+            return { playerId, playerName, value };
           })
           .filter(value => value.value > 0) // Filtere Spieler mit Wert 0 heraus
           .sort((a, b) => (b.value as number) - (a.value as number)); // Sortiere absteigend nach value

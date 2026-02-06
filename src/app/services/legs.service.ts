@@ -44,6 +44,19 @@ export interface WonLegData {
   season: string;
 }
 
+export interface HighlightMatch {
+  rank: number;
+  gameId: number | string;
+  season: string;
+  matchday: number;
+  player1Id: number;
+  player1Avg: number;
+  player2Id: number;
+  player2Avg: number;
+  result: string; // "3:2"
+  combinedAvg: number;
+}
+
 interface GameData {
   game_id: number | string;
   season?: string | number;
@@ -255,5 +268,95 @@ export class LegsService implements SeasonDataSource {
 
   getSeasons$(): Observable<any[]> {
     return this.loadLegs$();
+  }
+
+  getHighlightMatches(season: string = 'All-Time', limit: number = 10): HighlightMatch[] {
+    const games = this.gamesDataSignal();
+    if (!games) return [];
+
+    const highlights: HighlightMatch[] = [];
+
+    games
+      .filter(g => season === 'All-Time' || g.season === season)
+      .forEach(game => {
+        // Identify player1 and player2 (player1 is starter of first leg)
+        const player1Id = game.legs[0]?.starter_id;
+        if (!player1Id) return;
+
+        // Find player2 by looking for a different starter_id
+        const player2Leg = game.legs.find(l => l.starter_id !== player1Id);
+        const player2Id = player2Leg?.starter_id;
+        if (!player2Id) return; // Skip if we can't identify both players
+
+        // Calculate averages for both players across all legs
+        let p1TotalScore = 0;
+        let p1TotalDarts = 0;
+        let p2TotalScore = 0;
+        let p2TotalDarts = 0;
+        let p1LegsWon = 0;
+        let p2LegsWon = 0;
+
+        game.legs.forEach(leg => {
+          const isPlayer1Starter = leg.starter_id === player1Id;
+
+          // Accumulate stats based on who started this leg
+          if (isPlayer1Starter) {
+            // Player1 is p1 in this leg, Player2 is p2
+            if (leg.p1_avg_3dart_leg && leg.p1_darts_leg) {
+              p1TotalScore += leg.p1_avg_3dart_leg * (leg.p1_darts_leg / 3);
+              p1TotalDarts += leg.p1_darts_leg;
+            }
+            if (leg.p2_avg_3dart_leg && leg.p2_darts_leg) {
+              p2TotalScore += leg.p2_avg_3dart_leg * (leg.p2_darts_leg / 3);
+              p2TotalDarts += leg.p2_darts_leg;
+            }
+          } else {
+            // Player1 is p2 in this leg, Player2 is p1
+            if (leg.p1_avg_3dart_leg && leg.p1_darts_leg) {
+              p2TotalScore += leg.p1_avg_3dart_leg * (leg.p1_darts_leg / 3);
+              p2TotalDarts += leg.p1_darts_leg;
+            }
+            if (leg.p2_avg_3dart_leg && leg.p2_darts_leg) {
+              p1TotalScore += leg.p2_avg_3dart_leg * (leg.p2_darts_leg / 3);
+              p1TotalDarts += leg.p2_darts_leg;
+            }
+          }
+
+          // Count legs won
+          if (leg.leg_winner_id === player1Id) p1LegsWon++;
+          else if (leg.leg_winner_id === player2Id) p2LegsWon++;
+        });
+
+        // Calculate weighted averages
+        const p1Avg = p1TotalDarts > 0 ? (p1TotalScore / p1TotalDarts) * 3 : 0;
+        const p2Avg = p2TotalDarts > 0 ? (p2TotalScore / p2TotalDarts) * 3 : 0;
+        const combinedAvg = p1Avg + p2Avg;
+
+        // Skip if averages are too low (indicates incomplete data)
+        if (combinedAvg < 50) return;
+
+        highlights.push({
+          rank: 0, // Will be set after sorting
+          gameId: game.game_id,
+          season: String(game.season || ''),
+          matchday: game.matchday || 0,
+          player1Id,
+          player1Avg: p1Avg,
+          player2Id,
+          player2Avg: p2Avg,
+          result: `${p1LegsWon}:${p2LegsWon}`,
+          combinedAvg
+        });
+      });
+
+    // Sort by combined average DESC
+    const sorted = highlights
+      .sort((a, b) => b.combinedAvg - a.combinedAvg)
+      .slice(0, limit);
+
+    // Add ranks
+    sorted.forEach((h, i) => h.rank = i + 1);
+
+    return sorted;
   }
 }

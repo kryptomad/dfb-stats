@@ -46,31 +46,124 @@
   </div>
 </div>
 
-    <div class="mt-4">
+<!-- Highlight Matches -->
+<div class="mt-8">
+  <h2 id="highlight-matches">Highlight Matches</h2>
+
+  <div class="flex justify-start items-center mb-4 w-full">
+    <label for="seasonSelectMatches" class="mr-4">Saison auswählen:</label>
+    <p-dropdown
+      id="seasonSelectMatches"
+      [options]="seasons"
+      [(ngModel)]="selectedSeason"
+      (onChange)="onSeasonChange()"
+      placeholder="Saison wählen"
+      styleClass="w-44"
+    ></p-dropdown>
+  </div>
+
+  <div class="text-left mb-4">
+    <span class="block">Die hochklassigsten 10 Matches der Saison, sortiert nach Combined Average beider Spieler.</span>
+    <span class="block mt-2">Klicke auf ein Match, um alle Details und Statistiken zu sehen.</span>
+  </div>
+
+  <div *ngIf="highlightMatches.length > 0" class="grid grid-cols-1 gap-2">
+    <p-card class="highlight-match-card" *ngFor="let match of highlightMatches">
+      <div
+        class="transition-all duration-200 cursor-pointer hover:bg-slate-200 dark:hover:bg-slate-700 hover:bg-opacity-80 p-3"
+        [routerLink]="['/pages/legs', match.gameId]"
+      >
+        <div class="flex flex-col gap-2">
+          <!-- Obere Reihe: Player 1 - Score Boxes - Player 2 -->
+          <div class="flex items-center justify-between gap-4">
+            <!-- Player 1 -->
+            <div class="flex items-center gap-3 flex-1">
+              <p-avatar [image]="getPlayerData(match.player1Id).image" size="large" shape="circle"></p-avatar>
+              <div>
+                <div class="text-lg font-semibold">{{ getPlayerData(match.player1Id).name }}</div>
+                <div class="text-sm text-gray-500">Ø {{ match.player1Avg.toFixed(2) }}</div>
+              </div>
+            </div>
+
+            <!-- Result with Score Boxes -->
+            <div class="flex items-center gap-1">
+              <span class="score-box" [ngClass]="match.result.split(':')[0] > match.result.split(':')[1] ? 'winner' : 'loser'">
+                {{ match.result.split(':')[0] }}
+              </span>
+              <span class="score-box" [ngClass]="match.result.split(':')[1] > match.result.split(':')[0] ? 'winner' : 'loser'">
+                {{ match.result.split(':')[1] }}
+              </span>
+            </div>
+
+            <!-- Player 2 -->
+            <div class="flex items-center gap-3 flex-1 justify-end">
+              <div class="text-right">
+                <div class="text-lg font-semibold">{{ getPlayerData(match.player2Id).name }}</div>
+                <div class="text-sm text-gray-500">Ø {{ match.player2Avg.toFixed(2) }}</div>
+              </div>
+              <p-avatar [image]="getPlayerData(match.player2Id).image" size="large" shape="circle"></p-avatar>
+            </div>
+          </div>
+
+          <!-- Untere Reihe: Combined Average zentriert -->
+          <div class="text-center text-xs text-gray-400">
+            Combined Avg: Ø {{ match.combinedAvg.toFixed(2) }}
+          </div>
+        </div>
+      </div>
+    </p-card>
+  </div>
+
+  <div *ngIf="highlightMatches.length === 0" class="text-center text-gray-500 py-8">
+    Keine Highlight Matches für diese Saison verfügbar.
+  </div>
+</div>
+
+    <div class="mt-4" *ngIf="selectedSeason !== 'All-Time'">
     <h2 id="top-jahreswerte">Top Jahreswerte</h2>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
       <ng-container *ngIf="topYears$ | async as years; else loading">
         <p-card *ngFor="let yearStat of years">
-          <div class="text-sm text-gray-400 ml-4">
-  {{ yearStat.year }}
-</div>
-<div class="text-xl font-semibold leading-tight ml-4 mb-1">
-  {{ yearStat.category }}
-</div>
-          <p-table [value]="yearStat.values" styleClass="p-datatable-sm">
-            <ng-template pTemplate="header">
-              <tr>
-                <th class="text-primary">Spieler</th>
-                <th class="text-primary">Wert</th>
-              </tr>
-            </ng-template>
-            <ng-template pTemplate="body" let-value>
-              <tr>
-                <td>{{ value.playerName }}</td>
-                <td>{{ value.value }}</td>
-              </tr>
-            </ng-template>
-          </p-table>
+          <div class="text-sm text-gray-400 mb-1">
+            {{ yearStat.year }}
+          </div>
+          <div class="text-xl font-semibold leading-tight mb-4">
+            {{ yearStat.category }}
+          </div>
+
+          <div class="flex flex-col gap-3">
+            <div *ngFor="let value of yearStat.values; let i = index"
+                 class="flex items-center gap-3 p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+              <!-- Rank Badge -->
+              <div class="flex items-center justify-center w-8 h-8 rounded-full font-bold text-sm shrink-0"
+                   [ngClass]="{
+                     'bg-yellow-400 text-yellow-900': i === 0,
+                     'bg-gray-300 text-gray-700': i === 1,
+                     'bg-orange-400 text-orange-900': i === 2,
+                     'bg-slate-200 dark:bg-slate-700 text-slate-600 dark:text-slate-300': i > 2
+                   }">
+                {{ i + 1 }}
+              </div>
+
+              <!-- Player Avatar -->
+              <p-avatar [image]="getPlayerData(value.playerId).image"
+                        size="normal"
+                        shape="circle"
+                        class="shrink-0"></p-avatar>
+
+              <!-- Player Name -->
+              <div class="flex-1 min-w-0">
+                <div class="text-base font-semibold truncate">
+                  {{ value.playerName }}
+                </div>
+              </div>
+
+              <!-- Value -->
+              <div class="text-lg font-bold text-primary shrink-0">
+                {{ value.value }}
+              </div>
+            </div>
+          </div>
         </p-card>
       </ng-container>
           <ng-template #loading>
