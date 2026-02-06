@@ -1,14 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { GamesService } from '../../services/games.service';
-import { NgForOf, NgIf } from '@angular/common';
+import { PlayersService } from '../../services/players.service';
+import { NgForOf, NgIf, NgClass } from '@angular/common';
 import { Card } from 'primeng/card';
 import { ChartModule } from 'primeng/chart';
 import { TableModule } from 'primeng/table';
+import { AvatarModule } from 'primeng/avatar';
 
 @Component({
   selector: 'app-spieltag',
-  imports: [Card, NgForOf, NgIf, ChartModule, TableModule, RouterModule],
+  imports: [Card, NgForOf, NgIf, NgClass, ChartModule, TableModule, RouterModule, AvatarModule],
   providers: [GamesService],
   templateUrl: './spieltag.component.html',
   styleUrl: './spieltag.component.scss',
@@ -22,7 +24,10 @@ export class SpieltagComponent implements OnInit {
   barChartData: any;
   barChartOptions: any;
 
-  constructor(private gamesService: GamesService) {}
+  constructor(
+    private gamesService: GamesService,
+    private playersService: PlayersService
+  ) {}
 
   ngOnInit() {
     this.letzteSpieltage = this.gamesService.getLastNSpieltage(10);
@@ -155,5 +160,20 @@ export class SpieltagComponent implements OnInit {
           right: spieltag.player1,
           leftIsWinner: false,
         };
+  }
+
+  getPlayerData(playerId: number): {
+    name: string;
+    nickname: string | null;
+    image: string;
+  } {
+    const player = this.playersService.getPlayer(playerId);
+    return {
+      name: player?.name || 'Unbekannter Spieler',
+      nickname: player?.nickname || null,
+      image: player?.image
+        ? `assets/players/${player.image}`
+        : 'assets/players/default-avatar.png',
+    };
   }
 }
