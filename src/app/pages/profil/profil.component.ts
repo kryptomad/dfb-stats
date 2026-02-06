@@ -7,9 +7,16 @@ import { TabsModule } from 'primeng/tabs';
 import { NgIf } from '@angular/common';
 import { BadgeModule } from 'primeng/badge';
 import { CommonModule } from '@angular/common'; // Für number-Pipe
+import { ChartModule } from 'primeng/chart';
 import { PlayersService, Player } from '../../services/players.service';
 import { StatsQueryService } from '../../services/stats-query.service';
 import { SeasonSelectorService } from '../../services/season-selector.service';
+import { ChartThemeService } from '../../services/chart-theme.service';
+import {
+  LegsService,
+  CheckoutData,
+  WonLegData,
+} from '../../services/legs.service';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { StatRow } from '../../services/stats.service';
@@ -25,6 +32,7 @@ import { StatRow } from '../../services/stats.service';
     NgIf,
     BadgeModule,
     CommonModule,
+    ChartModule,
   ],
   providers: [PlayersService, StatsQueryService, SeasonSelectorService],
   templateUrl: './profil.component.html',
@@ -65,17 +73,33 @@ export class ProfilComponent implements OnInit {
   trendArrow: string = '→';
   trendColor: string = '#f97316'; // orange
 
+  // Chart data for Saisontrend
+  trendChartData: any = { labels: [], datasets: [] };
+  trendChartOptions: any = {};
+
+  // Last 5 checkouts and won legs
+  lastCheckouts: CheckoutData[] = [];
+  lastWonLegs: WonLegData[] = [];
+
   constructor(
     private route: ActivatedRoute,
     private playersService: PlayersService,
     private statsQuery: StatsQueryService,
     private seasonSelector: SeasonSelectorService,
+    private chartTheme: ChartThemeService,
+    private legsService: LegsService,
   ) {
     this.playerId = Number(this.route.snapshot.paramMap.get('id'));
     this.stats$ = this.statsQuery.getFullStatsBySeason$(this.selectedSeason);
   }
 
-  ngOnInit() {
+  async ngOnInit() {
+    this.chartTheme.watchDomTheme();
+    this.trendChartOptions = this.getTrendChartOptions();
+
+    // Ensure legs data is loaded
+    await this.legsService.ensureLoaded();
+
     this.player = this.playersService.getPlayer(this.playerId);
     this.seasonSelector.getSeasons$().subscribe((seasons) => {
       if (seasons.length > 0 && !seasons.includes(this.selectedSeason)) {
@@ -161,7 +185,8 @@ export class ProfilComponent implements OnInit {
           (r.best_leg !== null && r.best_leg >= 9 && r.best_leg <= 21 ? 1 : 0),
         0,
       );
-      this.avgDartsNeeded = this.avgDarts > 0 ? this.avgDarts.toFixed(1) : '0.0';
+      this.avgDartsNeeded =
+        this.avgDarts > 0 ? this.avgDarts.toFixed(1) : '0.0';
       this.breakCount = playerRows.reduce(
         (sum, r) => sum + Number(r.break_ratio.split('/')[0] || 0),
         0,
@@ -209,9 +234,26 @@ export class ProfilComponent implements OnInit {
       );
 
       // Letzten 5 Spiele extrahieren und Trend berechnen
-      const sortedGames = [...playerRows].sort((a, b) => b.matchday - a.matchday);
+      const sortedGames = [...playerRows].sort(
+        (a, b) => b.matchday - a.matchday,
+      );
       this.lastFiveGames = sortedGames.slice(0, 5).reverse(); // Ältestes links, Neuestes rechts
       this.calculateTrend();
+
+      // Build trend chart data
+      this.buildTrendChart(playerRows);
+
+      // Load last 5 checkouts and won legs
+      this.lastCheckouts = this.legsService.getPlayerCheckouts(
+        this.playerId,
+        seasonStr,
+        5,
+      );
+      this.lastWonLegs = this.legsService.getPlayerWonLegs(
+        this.playerId,
+        seasonStr,
+        5,
+      );
     });
   }
 
@@ -226,7 +268,7 @@ export class ProfilComponent implements OnInit {
     const recentGames = this.lastFiveGames.slice(-3);
 
     // Zähle Siege und Niederlagen
-    const wins = recentGames.filter(game => game.sets_won === 1).length;
+    const wins = recentGames.filter((game) => game.sets_won === 1).length;
     const losses = recentGames.length - wins;
 
     // Bestimme Trend
@@ -240,5 +282,149 @@ export class ProfilComponent implements OnInit {
       this.trendArrow = '→';
       this.trendColor = '#f97316'; // orange
     }
+  }
+
+  private buildTrendChart(playerRows: StatRow[]): void {
+    console.log('buildTrendChart called with', playerRows.length, 'rows');
+    if (playerRows.length > 0) {
+      console.log('Season:', playerRows[0]?.season);
+      console.log('Player:', playerRows[0]?.player_id);
+      console.log(
+        'Matchdays:',
+        playerRows.map((r) => r.matchday),
+      );
+    }
+
+    if (playerRows.length === 0) {
+      this.trendChartData = { labels: [], datasets: [] };
+      return;
+    }
+
+    // Group by matchday (each matchday has 4 games)
+    const groupedByMatchday = playerRows.reduce(
+      (acc, row) => {
+        if (!acc[row.matchday]) {
+          acc[row.matchday] = [];
+        }
+        acc[row.matchday].push(row);
+        return acc;
+      },
+      {} as Record<number, StatRow[]>,
+    );
+
+    // Calculate average per matchday
+    const matchdayAverages = Object.entries(groupedByMatchday).map(
+      ([matchday, rows]) => ({
+        matchday: Number(matchday),
+        avg_3dart:
+          rows.reduce((sum, r) => sum + (r.avg_3dart || 0), 0) / rows.length,
+        avg_first9:
+          rows.reduce((sum, r) => sum + (r.avg_first9 || 0), 0) / rows.length,
+        gameCount: rows.length,
+      }),
+    );
+
+    console.log('Matchday averages:', matchdayAverages);
+
+    // Sort by matchday ascending and take last 5 matchdays
+    const sortedMatchdays = matchdayAverages
+      .sort((a, b) => a.matchday - b.matchday)
+      .slice(-5);
+
+    console.log('Last 5 matchdays:', sortedMatchdays);
+
+    // Extract labels and data
+    const labels = sortedMatchdays.map((m) => `${m.matchday}`);
+    console.log('Chart labels:', labels);
+    const avg3DartData = sortedMatchdays.map((m) => m.avg_3dart);
+    const avgFirst9Data = sortedMatchdays.map((m) => m.avg_first9);
+
+    // Get colors from theme
+    const primaryColor = this.chartTheme.getPrimary();
+    const secondaryColor = '#f97316'; // Orange for contrast
+
+    this.trendChartData = {
+      labels,
+      datasets: [
+        {
+          label: '3-Dart-Average',
+          data: avg3DartData,
+          borderColor: primaryColor,
+          backgroundColor: this.chartTheme.hexToRgba(primaryColor, 0.2),
+          tension: 0.4,
+          fill: true,
+          borderWidth: 2,
+          pointRadius: 4,
+          pointBackgroundColor: primaryColor,
+        },
+        {
+          label: 'First-9-Average',
+          data: avgFirst9Data,
+          borderColor: secondaryColor,
+          backgroundColor: this.chartTheme.hexToRgba(secondaryColor, 0.2),
+          tension: 0.4,
+          fill: true,
+          borderWidth: 2,
+          pointRadius: 4,
+          pointBackgroundColor: secondaryColor,
+        },
+      ],
+    };
+  }
+
+  private getTrendChartOptions(): any {
+    return this.chartTheme.getLineChartOptions({
+      responsive: true,
+      maintainAspectRatio: false,
+      layout: {
+        padding: {
+          bottom: 0,
+        },
+      },
+      plugins: {
+        legend: {
+          position: 'top',
+          labels: {
+            usePointStyle: true,
+          },
+        },
+        tooltip: {
+          mode: 'index',
+          intersect: false,
+          callbacks: {
+            label: (context: any) =>
+              `${context.dataset.label}: ${context.parsed.y.toFixed(2)}`,
+          },
+        },
+        datalabels: {
+          display: false,
+        },
+      },
+      scales: {
+        x: {
+          title: {
+            display: true,
+            text: 'Spieltag',
+            font: { size: 12 },
+          },
+          ticks: {
+            autoSkip: false,
+            maxRotation: 0,
+            minRotation: 0,
+            font: { size: 11 },
+          },
+          grid: { display: false },
+        },
+        y: {
+          beginAtZero: false,
+          ticks: { font: { size: 11 } },
+          title: {
+            display: true,
+            text: 'Average',
+            font: { size: 12 },
+          },
+        },
+      },
+    });
   }
 }

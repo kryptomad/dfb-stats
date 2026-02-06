@@ -26,6 +26,24 @@ export interface LegRow {
   starter_id?: number | null;
 }
 
+export interface CheckoutData {
+  value: number;
+  darts: number;
+  matchday: number;
+  gameId: number | string;
+  legNumber: number;
+  season: string;
+}
+
+export interface WonLegData {
+  darts: number;
+  avg: number;
+  matchday: number;
+  gameId: number | string;
+  legNumber: number;
+  season: string;
+}
+
 interface GameData {
   game_id: number | string;
   season?: string | number;
@@ -52,6 +70,7 @@ interface GameData {
 export class LegsService implements SeasonDataSource {
   private legsUrl = 'assets/legs.json';
   private legsSignal = signal<LegRow[] | null>(null);
+  private gamesDataSignal = signal<GameData[] | null>(null);
   private loadingSignal = signal(false);
   private errorSignal = signal<string | null>(null);
 
@@ -67,7 +86,10 @@ export class LegsService implements SeasonDataSource {
     this.loadingSignal.set(true);
     this.errorSignal.set(null);
     return this.http.get<GameData[]>(this.legsUrl).pipe(
-      map(games => this.transformGamesToLegs(games)),
+      map(games => {
+        this.gamesDataSignal.set(games);
+        return this.transformGamesToLegs(games);
+      }),
       catchError(err => {
         console.error('Fehler beim Laden der Legs-Daten:', err);
         this.errorSignal.set('Leg-Daten konnten nicht geladen werden.');
@@ -129,7 +151,106 @@ export class LegsService implements SeasonDataSource {
 
   async refresh(): Promise<void> {
     this.legsSignal.set(null);
+    this.gamesDataSignal.set(null);
     await this.ensureLoaded();
+  }
+
+  getPlayerCheckouts(playerId: number, season: string, limit: number = 5): CheckoutData[] {
+    const games = this.gamesDataSignal();
+    if (!games) return [];
+
+    const checkouts: CheckoutData[] = [];
+
+    games
+      .filter(g => g.season === season)
+      .forEach(game => {
+        game.legs.forEach(leg => {
+          // Check if player won this leg
+          if (leg.leg_winner_id !== playerId) return;
+
+          // Determine if player is p1 or p2
+          const isPlayer1 = game.legs[0].starter_id === playerId ||
+                           (leg.starter_id === playerId && leg.leg_number === 1);
+
+          // Get the last round
+          const lastRound = leg.rounds[leg.rounds.length - 1];
+          if (!lastRound) return;
+
+          const score = isPlayer1 ? lastRound.p1_score : lastRound.p2_score;
+          const left = isPlayer1 ? lastRound.p1_left : lastRound.p2_left;
+
+          // Check if this is a checkout (negative score and null left)
+          if (score && score < 0 && left === null) {
+            // Get the previous round for checkout value
+            const prevRound = leg.rounds[leg.rounds.length - 2];
+            if (prevRound) {
+              const checkoutValue = isPlayer1 ? prevRound.p1_left : prevRound.p2_left;
+              if (checkoutValue && checkoutValue > 0) {
+                checkouts.push({
+                  value: checkoutValue,
+                  darts: Math.abs(score),
+                  matchday: game.matchday || 0,
+                  gameId: game.game_id,
+                  legNumber: leg.leg_number,
+                  season: season
+                });
+              }
+            }
+          }
+        });
+      });
+
+    // Sort by matchday desc, then game_id desc, then leg_number desc
+    return checkouts
+      .sort((a, b) => {
+        if (b.matchday !== a.matchday) return b.matchday - a.matchday;
+        if (Number(b.gameId) !== Number(a.gameId)) return Number(b.gameId) - Number(a.gameId);
+        return b.legNumber - a.legNumber;
+      })
+      .slice(0, limit);
+  }
+
+  getPlayerWonLegs(playerId: number, season: string, limit: number = 5): WonLegData[] {
+    const games = this.gamesDataSignal();
+    if (!games) return [];
+
+    const wonLegs: WonLegData[] = [];
+
+    games
+      .filter(g => g.season === season)
+      .forEach(game => {
+        game.legs.forEach(leg => {
+          // Check if player won this leg
+          if (leg.leg_winner_id !== playerId) return;
+
+          // Determine if player is p1 or p2
+          const isPlayer1 = game.legs[0].starter_id === playerId ||
+                           (leg.starter_id === playerId && leg.leg_number === 1);
+
+          const darts = isPlayer1 ? leg.p1_darts_leg : leg.p2_darts_leg;
+          const avg = isPlayer1 ? leg.p1_avg_3dart_leg : leg.p2_avg_3dart_leg;
+
+          if (darts && avg) {
+            wonLegs.push({
+              darts,
+              avg,
+              matchday: game.matchday || 0,
+              gameId: game.game_id,
+              legNumber: leg.leg_number,
+              season: season
+            });
+          }
+        });
+      });
+
+    // Sort by matchday desc, then game_id desc, then leg_number desc
+    return wonLegs
+      .sort((a, b) => {
+        if (b.matchday !== a.matchday) return b.matchday - a.matchday;
+        if (Number(b.gameId) !== Number(a.gameId)) return Number(b.gameId) - Number(a.gameId);
+        return b.legNumber - a.legNumber;
+      })
+      .slice(0, limit);
   }
 
   getSeasons$(): Observable<any[]> {

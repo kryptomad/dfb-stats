@@ -118,6 +118,90 @@
           </p>
         </div>
       </div>
+
+      <!-- Average-Entwicklung Chart -->
+      <div class="trend-container mt-2">
+        <h3 class="trend-heading">Average-Entwicklung der letzten 5 Spieltage</h3>
+
+        <div *ngIf="trendChartData.labels.length === 0" class="no-games-message">
+          <p>Noch keine Spiele in dieser Saison gespielt.</p>
+        </div>
+
+        <div *ngIf="trendChartData.labels.length > 0" class="chart-wrapper">
+          <p-chart
+            type="line"
+            [data]="trendChartData"
+            [options]="trendChartOptions">
+          </p-chart>
+        </div>
+
+        <div *ngIf="trendChartData.labels.length > 0">
+          <p>
+            Dieser Graph zeigt die Entwicklung deiner Averages über die letzten 5 Spieltage der Saison {{ selectedSeason }}.
+          </p>
+        </div>
+      </div>
+
+      <!-- Letzte Checkouts & Gewonnene Legs -->
+      <div class="trend-container mt-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <!-- Letzte 5 Checkouts -->
+          <div>
+            <h3 class="trend-heading">Letzte 5 Checkouts</h3>
+            <div *ngIf="lastCheckouts.length === 0" class="no-games-message">
+              <p>Noch keine Checkouts in dieser Saison.</p>
+            </div>
+            <div *ngIf="lastCheckouts.length > 0" class="stats-mini-table">
+              <div class="mini-table-header">
+                <span>Score</span>
+                <span>Checkdarts</span>
+                <span>Spieltag</span>
+              </div>
+              <div *ngFor="let checkout of lastCheckouts" class="mini-table-row">
+                <span class="checkout-value">{{ checkout.value }}</span>
+                <span class="checkout-darts">
+                  <svg [class.active]="1 <= checkout.darts" class="dart-icon" xmlns="http://www.w3.org/2000/svg" viewBox="120 120 280 280">
+                    <g transform="translate(-48,-13)">
+                      <path d="M134.745 22.098c-4.538-.146-9.08 1.43-14.893 7.243-5.586 5.586-11.841 21.725-15.248 35.992-.234.979-.444 1.907-.654 2.836l114.254 105.338c-7.18-28.538-17.555-59.985-29.848-86.75-11.673-25.418-25.249-46.657-37.514-57.024-6.132-5.183-11.56-7.488-16.097-7.635zM92.528 82.122 82.124 92.526 243.58 267.651l24.072-24.072L92.528 82.122zm-24.357 21.826c-.929.21-1.857.42-2.836.654-14.267 3.407-30.406 9.662-35.993 15.248-5.813 5.813-7.39 10.355-7.244 14.893.147 4.538 2.452 9.965 7.635 16.098 10.367 12.265 31.608 25.842 57.025 37.515 26.766 12.293 58.211 22.669 86.749 29.848L68.17 103.948zM280.899 255.79l-25.107 25.107 73.265 79.469 31.31-31.31L280.9 255.79zm92.715 85.476-32.346 32.344 2.07 2.246c.061.058 4.419 4.224 10.585 6.28 6.208 2.069 12.71 2.88 21.902-6.313 9.192-9.192 8.38-15.694 6.31-21.902-2.057-6.174-6.235-10.54-6.283-10.59l-2.238-2.065zm20.172 41.059a46.23 46.23 0 0 1-5.233 6.226 46.241 46.241 0 0 1-6.226 5.235L489.91 489.91l-96.125-107.586z" transform="translate(128, 128) scale(0.5, 0.5) rotate(30, 256, 256)"></path>
+                    </g>
+                  </svg>
+                  <svg [class.active]="2 <= checkout.darts" class="dart-icon" xmlns="http://www.w3.org/2000/svg" viewBox="120 120 280 280">
+                    <g transform="translate(-48,-13)">
+                      <path d="M134.745 22.098c-4.538-.146-9.08 1.43-14.893 7.243-5.586 5.586-11.841 21.725-15.248 35.992-.234.979-.444 1.907-.654 2.836l114.254 105.338c-7.18-28.538-17.555-59.985-29.848-86.75-11.673-25.418-25.249-46.657-37.514-57.024-6.132-5.183-11.56-7.488-16.097-7.635zM92.528 82.122 82.124 92.526 243.58 267.651l24.072-24.072L92.528 82.122zm-24.357 21.826c-.929.21-1.857.42-2.836.654-14.267 3.407-30.406 9.662-35.993 15.248-5.813 5.813-7.39 10.355-7.244 14.893.147 4.538 2.452 9.965 7.635 16.098 10.367 12.265 31.608 25.842 57.025 37.515 26.766 12.293 58.211 22.669 86.749 29.848L68.17 103.948zM280.899 255.79l-25.107 25.107 73.265 79.469 31.31-31.31L280.9 255.79zm92.715 85.476-32.346 32.344 2.07 2.246c.061.058 4.419 4.224 10.585 6.28 6.208 2.069 12.71 2.88 21.902-6.313 9.192-9.192 8.38-15.694 6.31-21.902-2.057-6.174-6.235-10.54-6.283-10.59l-2.238-2.065zm20.172 41.059a46.23 46.23 0 0 1-5.233 6.226 46.241 46.241 0 0 1-6.226 5.235L489.91 489.91l-96.125-107.586z" transform="translate(128, 128) scale(0.5, 0.5) rotate(30, 256, 256)"></path>
+                    </g>
+                  </svg>
+                  <svg [class.active]="3 <= checkout.darts" class="dart-icon" xmlns="http://www.w3.org/2000/svg" viewBox="120 120 280 280">
+                    <g transform="translate(-48,-13)">
+                      <path d="M134.745 22.098c-4.538-.146-9.08 1.43-14.893 7.243-5.586 5.586-11.841 21.725-15.248 35.992-.234.979-.444 1.907-.654 2.836l114.254 105.338c-7.18-28.538-17.555-59.985-29.848-86.75-11.673-25.418-25.249-46.657-37.514-57.024-6.132-5.183-11.56-7.488-16.097-7.635zM92.528 82.122 82.124 92.526 243.58 267.651l24.072-24.072L92.528 82.122zm-24.357 21.826c-.929.21-1.857.42-2.836.654-14.267 3.407-30.406 9.662-35.993 15.248-5.813 5.813-7.39 10.355-7.244 14.893.147 4.538 2.452 9.965 7.635 16.098 10.367 12.265 31.608 25.842 57.025 37.515 26.766 12.293 58.211 22.669 86.749 29.848L68.17 103.948zM280.899 255.79l-25.107 25.107 73.265 79.469 31.31-31.31L280.9 255.79zm92.715 85.476-32.346 32.344 2.07 2.246c.061.058 4.419 4.224 10.585 6.28 6.208 2.069 12.71 2.88 21.902-6.313 9.192-9.192 8.38-15.694 6.31-21.902-2.057-6.174-6.235-10.54-6.283-10.59l-2.238-2.065zm20.172 41.059a46.23 46.23 0 0 1-5.233 6.226 46.241 46.241 0 0 1-6.226 5.235L489.91 489.91l-96.125-107.586z" transform="translate(128, 128) scale(0.5, 0.5) rotate(30, 256, 256)"></path>
+                    </g>
+                  </svg>
+                </span>
+                <span class="checkout-matchday">{{ checkout.matchday }}</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Letzten 5 gewonnenen Legs -->
+          <div>
+            <h3 class="trend-heading">Letzten 5 gewonnenen Legs</h3>
+            <div *ngIf="lastWonLegs.length === 0" class="no-games-message">
+              <p>Noch keine gewonnenen Legs in dieser Saison.</p>
+            </div>
+            <div *ngIf="lastWonLegs.length > 0" class="stats-mini-table">
+              <div class="mini-table-header">
+                <span>Darts</span>
+                <span>Average</span>
+                <span>Spieltag</span>
+              </div>
+              <div *ngFor="let leg of lastWonLegs" class="mini-table-row">
+                <span class="leg-darts">{{ leg.darts }}</span>
+                <span class="leg-avg">Ø {{ leg.avg | number:'1.2-2' }}</span>
+                <span class="leg-matchday">{{ leg.matchday }}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </p-tabpanel>
     <p-tabpanel value="2">
       <div class="stats-table" *ngIf="stats$ | async as stats">
