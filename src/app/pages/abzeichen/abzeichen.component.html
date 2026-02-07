@@ -1,20 +1,47 @@
 
+<div class="mb-6">
 <p-card>
-<div *ngFor="let player of leaderboardData" class="flex items-center gap-4 mb-4">
-  <div class="flex-1">
-        <p-chip
-          label="{{ player.name }}"
-          image="{{ player.avatar }}"
-          alt="Avatar image"
-          class="profile-chip"
-        />
-<p-progressbar [value]="player.points" [showValue]="false" [style]="{height: '24px'}">
-  <ng-template #content let-value>
-    <span class="text-white font-bold">{{ player.points }}/100</span>
+  <ng-template #header>
+    <div class="flex items-center gap-2 px-4 pt-4">
+      <i class="fa-solid fa-coins text-yellow-500"></i>
+      <span class="font-bold text-lg">Chip Race</span>
+    </div>
   </ng-template>
-</p-progressbar>
+  <div *ngFor="let player of leaderboardData" class="flex items-center gap-3 mb-3">
+    <p-avatar
+      [image]="player.avatar"
+      shape="circle"
+      size="normal"
+    ></p-avatar>
+    <span class="font-semibold w-24 shrink-0 truncate">{{ player.name }}</span>
+    <div class="flex-1">
+      <p-progressbar [value]="player.chips" [showValue]="false" [style]="{height: '20px'}">
+        <ng-template #content let-value>
+          <span class="text-white font-bold text-sm">{{ player.chips }}/100</span>
+        </ng-template>
+      </p-progressbar>
+    </div>
   </div>
+</p-card>
 </div>
+<p-card *ngIf="chipWinners.length > 0" class="mt-6">
+  <ng-template #header>
+    <div class="flex items-center gap-2 px-4 pt-4">
+      <i class="fa-solid fa-trophy text-yellow-500"></i>
+      <span class="font-bold text-lg">Hall of Fame</span>
+    </div>
+  </ng-template>
+  <div *ngFor="let winner of chipWinners" class="flex items-center gap-3 mb-3">
+    <p-avatar
+      [image]="winner.avatar"
+      shape="circle"
+      size="large"
+    ></p-avatar>
+    <span class="font-bold">{{ winner.name }}</span>
+    <span class="ml-auto font-bold text-yellow-500">
+      {{ winner.wins }}x <i class="fa-solid fa-trophy"></i>
+    </span>
+  </div>
 </p-card>
 
 <div class="mb-6 mt-6">
@@ -26,8 +53,8 @@
   </p>
   <p class="mt-2">
     Für jedes gewonnene Abzeichen erhältst du Chips.<br>
-    <strong>Sobald ein Spieler 100 <i class="fa-solid fa-coins" aria-hidden="true" title="Punkte"></i> erreicht, gewinnt er einen kleinen Preis!</strong><br>
-    Danach werden alle Punkte zurückgesetzt – und das Sammeln beginnt von vorn.
+    <strong>Sobald du 100 <i class="fa-solid fa-coins" aria-hidden="true" title="Punkte"></i> erreichst, gewinnst du einen kleinen Preis!</strong><br>
+    Danach werden nur <strong>deine</strong> Punkte zurückgesetzt – alle anderen sammeln weiter.
   </p>
   <p class="hinweis"><strong>Hinweis:</strong></p>
   <p>Klicke auf eine Kategorie unten, um die zugehörigen Abzeichen und aktuellen Halter anzuzeigen.<br>
@@ -69,7 +96,7 @@
           </td>
           <td>{{ abz.beschreibung }}</td>
 <td>
-  <div class="flex items-center gap-2">
+  <div class="flex items-center gap-2" *ngIf="abz.halterId > 0">
     <p-overlay-badge [value]="abz.count" severity="info" class="inline-flex">
       <p-avatar
         [image]="getSpielerBild(abz.halterId)"
@@ -78,6 +105,7 @@
       ></p-avatar>
     </p-overlay-badge>
   </div>
+  <span *ngIf="abz.halterId === 0" class="text-gray-400 text-sm">—</span>
 </td>
         </tr>
       </ng-template>

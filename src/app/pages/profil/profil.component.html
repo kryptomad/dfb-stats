@@ -71,7 +71,23 @@
 </p-card>
 <p-card class="p-4">
   <p-fieldset legend="Abzeichen" [toggleable]="true" [collapsed]="false">
-    <p class="m-0">Das Abzeichen Feature ist noch im Aufbau.</p>
+    <div *ngIf="playerBadges.length === 0">
+      <p class="text-gray-400 m-0">Noch keine Abzeichen gewonnen.</p>
+    </div>
+    <div class="flex flex-wrap gap-3" *ngIf="playerBadges.length > 0">
+      <div *ngFor="let pb of playerBadges">
+        <p-chip class="!py-0 !pl-0 !pr-4">
+          <span
+            [ngClass]="badgesService.kategorieFarbe[pb.badge.kategorie] +
+              ' rounded-full w-8 h-8 flex items-center justify-center'"
+          >
+            <i [class]="pb.badge.icon"></i>
+          </span>
+          <span class="ml-2 font-medium">{{ pb.badge.name }}</span>
+          <span class="ml-1 text-xs text-gray-400" *ngIf="pb.count > 1">&times;{{ pb.count }}</span>
+        </p-chip>
+      </div>
+    </div>
   </p-fieldset>
 </p-card>
 <p-tabs value="0">

@@ -4,13 +4,15 @@ import { Card } from 'primeng/card';
 import { FieldsetModule } from 'primeng/fieldset';
 import { TagModule } from 'primeng/tag';
 import { TabsModule } from 'primeng/tabs';
-import { NgIf } from '@angular/common';
+import { NgClass, NgFor, NgIf } from '@angular/common';
 import { BadgeModule } from 'primeng/badge';
 import { CommonModule } from '@angular/common'; // Für number-Pipe
+import { ChipModule } from 'primeng/chip';
 import { ChartModule } from 'primeng/chart';
 import { DropdownModule } from 'primeng/dropdown';
 import { FormsModule } from '@angular/forms';
 import { PlayersService, Player } from '../../services/players.service';
+import { BadgesService, PlayerBadge } from '../../services/badges.service';
 import { StatsQueryService } from '../../services/stats-query.service';
 import { SeasonSelectorService } from '../../services/season-selector.service';
 import { ChartThemeService } from '../../services/chart-theme.service';
@@ -36,11 +38,14 @@ import { StatRow } from '../../services/stats.service';
     TagModule,
     TabsModule,
     NgIf,
+    NgFor,
+    NgClass,
     BadgeModule,
     CommonModule,
     ChartModule,
     DropdownModule,
     FormsModule,
+    ChipModule,
   ],
   providers: [PlayersService, StatsQueryService, SeasonSelectorService],
   templateUrl: './profil.component.html',
@@ -97,6 +102,9 @@ export class ProfilComponent implements OnInit {
   selectedComparisonMatchday: number | null = null;
   seasonComparisonResult: PlayerComparisonResult | null = null;
 
+  // Abzeichen
+  playerBadges: PlayerBadge[] = [];
+
   constructor(
     private route: ActivatedRoute,
     private playersService: PlayersService,
@@ -105,6 +113,7 @@ export class ProfilComponent implements OnInit {
     private chartTheme: ChartThemeService,
     private legsService: LegsService,
     private playerComparison: PlayerComparisonService,
+    public badgesService: BadgesService,
   ) {
     this.playerId = Number(this.route.snapshot.paramMap.get('id'));
     this.stats$ = this.statsQuery.getFullStatsBySeason$(this.selectedSeason);
@@ -118,6 +127,7 @@ export class ProfilComponent implements OnInit {
     await this.legsService.ensureLoaded();
 
     this.player = this.playersService.getPlayer(this.playerId);
+    this.playerBadges = this.badgesService.getPlayerCurrentBadges(this.playerId);
 
     // Build matchdays list (1-10 + All)
     this.buildMatchdays();
