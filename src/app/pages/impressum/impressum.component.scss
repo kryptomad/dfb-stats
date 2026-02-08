@@ -4,3 +4,41 @@
   word-break: normal;      /* keine brutalen Wort-Zerlegungen */
 }
 .prose a { word-break: break-word; } /* URLs dürfen umgebrochen werden */
+
+.mad-logo-wrapper {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  margin-top: 10px;
+  padding-top: 20px;
+}
+
+.mad-logo {
+  fill: var(--primary-color);
+  opacity: 0.3;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+}
+
+.mad-logo:hover {
+  opacity: 0.8;
+  transform: scale(1.1);
+}
+
+.mad-logo-wrapper::after {
+  content: "Website by mad";
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--primary-color);
+  font-size: 11px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.mad-logo-wrapper:hover::after {
+  opacity: 0.6;
+}

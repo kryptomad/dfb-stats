@@ -204,17 +204,17 @@
         </div>
 
         <!-- Info: Weniger als 5 Spiele -->
-        <div *ngIf="lastFiveGames.length > 0 && lastFiveGames.length < 5" class="info-message">
+        <div *ngIf="lastFiveGames.length > 0 && lastFiveGames.length < 5">
           <p class="text-sm text-gray-500 mt-2">
             Erst {{ lastFiveGames.length }} von 5 Spielen gespielt
           </p>
         </div>
 
         <!-- Trend-Erklärung -->
-        <div *ngIf="lastFiveGames.length > 0" class="info-message">
-          <p>
-            <strong>Trend-Berechnung:</strong> Basierend auf den letzten 3 Spielen
-            (↗ Mehrheit Siege, ↘ Mehrheit Niederlagen, → ausgeglichen)
+        <div *ngIf="lastFiveGames.length > 0">
+          <p><br>
+            <strong>Trend-Berechnung:</strong><br>Basierend auf den letzten 3 Spielen
+            (Mehrheit Siege ↗,  Mehrheit Niederlagen ↘, ausgeglichen →)
           </p>
         </div>
       </div>

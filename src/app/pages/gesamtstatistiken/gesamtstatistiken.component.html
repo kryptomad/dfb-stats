@@ -172,10 +172,10 @@
   </ng-template>
 </p-card>
 </div>
-<div *ngIf="selectedView === 'spiel'" class="mt-4 text-sm" style="color: #888;">
+<div *ngIf="selectedView === 'spiel'" class="mt-4 text-sm">
   <strong>Spiel:</strong><br>
   Beste Leistung in einem einzelnen Spiel/Leg.<br>
-  3DA = höchster 3-Dart-Avg in einem Spiel/Leg.
+  3DA = höchster 3-Dart-Average in einem Spiel/Leg.
 </div>
 
 <!-- SPIELTAG ANSICHT (5 Cards) -->
@@ -280,10 +280,10 @@
   </ng-template>
 </p-card>
 </div>
-<div *ngIf="selectedView === 'spieltag'" class="mt-4 text-sm" style="color: #888;">
+<div *ngIf="selectedView === 'spieltag'" class="mt-4 text-sm">
   <strong>Spieltag:</strong><br>
   Beste Leistung an einem Spieltag (über mehrere Spiele aggregiert).<br>
-  3DA und First9 sind gewichtete Durchschnitte.<br>
+  3DA und First-9 sind gewichtete Durchschnitte.<br>
   TONs/140s/180s sind Summen.
 </div>
 
@@ -389,10 +389,10 @@
   </ng-template>
 </p-card>
 </div>
-<div *ngIf="selectedView === 'jahr'" class="mt-4 text-sm" style="color: #888;">
+<div *ngIf="selectedView === 'jahr'" class="mt-4 text-sm">
   <strong>Jahr:</strong><br>
   Beste Leistung in einer Saison (über alle Spiele einer Saison aggregiert).<br>
-  3DA und First9 sind gewichtete Durchschnitte.<br>
+  3DA und First-9 sind gewichtete Durchschnitte.<br>
   TONs/140s/180s sind Summen.
 </div>
 
@@ -538,7 +538,7 @@
   </ng-template>
 </p-card>
 </div>
-<div *ngIf="selectedView === 'alltime'" class="mt-4 text-sm" style="color: #888;">
+<div *ngIf="selectedView === 'alltime'" class="mt-4 text-sm">
   <strong>Alltime:</strong><br>
   Beste Einzelleistung aller Zeiten (Best Leg, Highest Checkout, 3DA, First9 in einem Spiel) + Gesamt-Summen über die Karriere (TONs/140s/180s).
 </div>
@@ -585,10 +585,10 @@
     </div>
   </div>
 
-  <div class="mt-6 text-sm" style="color: #888;">
+  <div class="mt-6 text-sm">
     <p>
-      Diese Ranglisten zeigen die Top 5 Leistungen für jede Metrik.
-      🥇🥈🥉 Medaillen markieren die besten drei Plätze.
+      Diese Ranglisten zeigen die Top 5 Leistungen für jede Metrik.<br>
+      🥇🥈🥉 Medaillen markieren die besten drei Plätze. 
     </p>
   </div>
   </div>
@@ -663,7 +663,7 @@
     </div>
 
     <!-- Info Text -->
-    <div class="mt-6 text-sm" style="color: #888;">
+    <div class="mt-6 text-sm">
       <p>
         Dieser Vergleich zeigt die aggregierten Leistungen aller Spieler über zwei Saisons hinweg.
         Der Balken in der <strong>Primärfarbe</strong> markiert die bessere Saison, der graue Balken die schlechtere.
@@ -689,7 +689,7 @@
     </div>
 
     <!-- Info Text -->
-    <div class="mt-6 text-sm" style="color: #888;">
+    <div class="mt-6 text-sm">
       <p>
         Dieser Chart zeigt die Entwicklung der aggregierten Durchschnittswerte aller Spieler über alle Saisons hinweg.
       </p>
