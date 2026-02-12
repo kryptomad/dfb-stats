@@ -9,6 +9,7 @@ import { BadgeModule } from 'primeng/badge';
 import { CommonModule } from '@angular/common'; // Für number-Pipe
 import { ChipModule } from 'primeng/chip';
 import { ChartModule } from 'primeng/chart';
+import { DialogModule } from 'primeng/dialog';
 import { DropdownModule } from 'primeng/dropdown';
 import { FormsModule } from '@angular/forms';
 import { PlayersService, Player } from '../../services/players.service';
@@ -46,6 +47,7 @@ import { StatRow } from '../../services/stats.service';
     DropdownModule,
     FormsModule,
     ChipModule,
+    DialogModule,
   ],
   providers: [PlayersService, StatsQueryService, SeasonSelectorService],
   templateUrl: './profil.component.html',
@@ -81,8 +83,9 @@ export class ProfilComponent implements OnInit {
   best3DAMatch: number = 0;
   bestFirst9Match: number = 0;
 
-  // Letzten 5 Saisonspiele
-  lastFiveGames: StatRow[] = [];
+  // Letzten 8 Saisonspiele
+  lastEightGames: StatRow[] = [];
+  showTrendInfo = false;
   trendArrow: string = '→';
   trendColor: string = '#f97316'; // orange
 
@@ -278,11 +281,11 @@ export class ProfilComponent implements OnInit {
         0,
       );
 
-      // Letzten 5 Spiele extrahieren und Trend berechnen
+      // Letzten 8 Spiele extrahieren und Trend berechnen
       const sortedGames = [...playerRows].sort(
         (a, b) => b.matchday - a.matchday,
       );
-      this.lastFiveGames = sortedGames.slice(0, 5).reverse(); // Ältestes links, Neuestes rechts
+      this.lastEightGames = sortedGames.slice(0, 8).reverse(); // Ältestes links, Neuestes rechts
       this.calculateTrend();
 
       // Build trend chart data
@@ -303,29 +306,29 @@ export class ProfilComponent implements OnInit {
   }
 
   private calculateTrend(): void {
-    if (this.lastFiveGames.length === 0) {
+    if (this.lastEightGames.length === 0) {
       this.trendArrow = '→';
       this.trendColor = '#f97316'; // orange
       return;
     }
 
-    // Nimm die letzten 3 Spiele (oder weniger falls < 3 Spiele vorhanden)
-    const recentGames = this.lastFiveGames.slice(-3);
+    const wins = this.lastEightGames.filter((game) => game.sets_won === 1).length;
 
-    // Zähle Siege und Niederlagen
-    const wins = recentGames.filter((game) => game.sets_won === 1).length;
-    const losses = recentGames.length - wins;
-
-    // Bestimme Trend
-    if (wins > losses) {
+    if (wins >= 6) {
+      this.trendArrow = '↗↗';
+      this.trendColor = '#10b981'; // grün
+    } else if (wins === 5) {
       this.trendArrow = '↗';
       this.trendColor = '#10b981'; // grün
-    } else if (wins < losses) {
+    } else if (wins === 4) {
+      this.trendArrow = '→';
+      this.trendColor = '#f97316'; // orange
+    } else if (wins === 3) {
       this.trendArrow = '↘';
       this.trendColor = '#ef4444'; // rot
     } else {
-      this.trendArrow = '→';
-      this.trendColor = '#f97316'; // orange
+      this.trendArrow = '↘↘';
+      this.trendColor = '#ef4444'; // rot
     }
   }
 

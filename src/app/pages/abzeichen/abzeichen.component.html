@@ -96,16 +96,16 @@
           </td>
           <td>{{ abz.beschreibung }}</td>
 <td>
-  <div class="flex items-center gap-2" *ngIf="abz.halterId > 0">
-    <p-overlay-badge [value]="abz.count" severity="info" class="inline-flex">
+  <div class="flex items-center gap-2 flex-wrap" *ngIf="abz.holders.length > 0">
+    <p-overlay-badge *ngFor="let holder of abz.holders" [value]="holder.count" severity="info" class="inline-flex">
       <p-avatar
-        [image]="getSpielerBild(abz.halterId)"
+        [image]="getSpielerBild(holder.playerId)"
         shape="circle"
         size="large"
       ></p-avatar>
     </p-overlay-badge>
   </div>
-  <span *ngIf="abz.halterId === 0" class="text-gray-400 text-sm">—</span>
+  <span *ngIf="abz.holders.length === 0" class="text-gray-400 text-sm">—</span>
 </td>
         </tr>
       </ng-template>

@@ -92,107 +92,24 @@
 </p-card>
 <p-tabs value="0">
   <p-tablist>
-    <p-tab value="0">Jahresvergleich</p-tab>
-    <p-tab value="1">Saisontrend</p-tab>
-    <p-tab value="2">Jahresstats</p-tab>
+    <p-tab value="0">Saisontrend</p-tab>
+    <p-tab value="1">Jahresstats</p-tab>
+    <p-tab value="2">Jahresvergleich</p-tab>
   </p-tablist>
   <p-tabpanels>
     <p-tabpanel value="0">
-      <!-- Filter Row -->
-      <div class="flex items-center justify-between mb-4 gap-4 flex-wrap">
-        <div class="flex gap-3 items-center">
-          <p-dropdown
-            [options]="seasons"
-            [(ngModel)]="selectedSeason1"
-            (onChange)="onSeasonComparisonChange()"
-            placeholder="Saison 1 wählen"
-            styleClass="w-44">
-          </p-dropdown>
-
-          <span class="text-lg font-bold">VS</span>
-
-          <p-dropdown
-            [options]="seasons"
-            [(ngModel)]="selectedSeason2"
-            (onChange)="onSeasonComparisonChange()"
-            placeholder="Saison 2 wählen"
-            styleClass="w-44">
-          </p-dropdown>
-        </div>
-
-        <p-dropdown
-          [options]="matchdays"
-          [(ngModel)]="selectedComparisonMatchday"
-          (onChange)="onComparisonMatchdayChange()"
-          placeholder="Spieltag wählen"
-          styleClass="w-44">
-        </p-dropdown>
-      </div>
-
-      <!-- Season Names Header -->
-      <div *ngIf="seasonComparisonResult" class="player-names-header">
-        <div class="player-name left">{{ seasonComparisonResult.player1Name }}</div>
-        <div class="metric-spacer"></div>
-        <div class="player-name right">{{ seasonComparisonResult.player2Name }}</div>
-      </div>
-
-      <!-- Comparison Chart -->
-      <div *ngIf="seasonComparisonResult" class="comparison-chart">
-        <div *ngFor="let metric of seasonComparisonResult.metrics" class="metric-row">
-          <!-- Header: Values and Label -->
-          <div class="metric-header">
-            <span class="metric-value left">{{ formatValue(metric.player1Value, metric.formatType) }}</span>
-            <span class="metric-label">{{ metric.label }}</span>
-            <span class="metric-value right">{{ formatValue(metric.player2Value, metric.formatType) }}</span>
-          </div>
-
-          <!-- Bar Track with thin colored bars -->
-          <div class="bar-track">
-            <div
-              class="bar left"
-              [class.primary]="metric.player1Better"
-              [style.width.%]="getBarWidth(metric.player1Value, metric.player2Value, metric.higherIsBetter, true, metric.formatType, metric.absoluteMax)">
-            </div>
-            <div
-              class="bar right"
-              [class.primary]="!metric.player1Better"
-              [style.width.%]="getBarWidth(metric.player1Value, metric.player2Value, metric.higherIsBetter, false, metric.formatType, metric.absoluteMax)">
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Empty State -->
-      <div *ngIf="!seasonComparisonResult" class="text-center py-8 text-gray-400">
-        Wähle zwei Saisons aus, um deine Leistungen zu vergleichen.
-      </div>
-
-      <!-- Info Text -->
-      <div *ngIf="seasonComparisonResult" class="mt-6">
-        <p>
-          Dieser Vergleich zeigt deine persönlichen Leistungen über zwei verschiedene Saisons hinweg.
-          Der Balken in der <strong>Primärfarbe</strong> markiert den besseren Wert, der graue Balken den schlechteren.
-        </p>
-        <p class="mt-2">
-          <strong>Aktuell gewählt:</strong> {{ selectedSeason1 }} vs {{ selectedSeason2 }}
-          <span *ngIf="selectedComparisonMatchday !== null"> | Spieltag {{ selectedComparisonMatchday }}</span>
-          <span *ngIf="selectedComparisonMatchday === null"> | Alle Spieltage</span>
-        </p>
-      </div>
-    </p-tabpanel>
-    <p-tabpanel value="1">
       <div class="trend-container">
-        <h3 class="trend-heading">Letzten 5 Saisonspiele</h3>
+        <h3 class="trend-heading">Letzten 8 Saisonspiele</h3>
 
         <!-- Fall: Keine Spiele gespielt -->
-        <div *ngIf="lastFiveGames.length === 0" class="no-games-message">
+        <div *ngIf="lastEightGames.length === 0" class="no-games-message">
           <p>Noch keine Spiele in dieser Saison gespielt.</p>
         </div>
 
         <!-- Game Boxen und Trend-Pfeil -->
-        <div *ngIf="lastFiveGames.length > 0" class="trend-content">
+        <div *ngIf="lastEightGames.length > 0" class="trend-content">
           <span
-            *ngFor="let game of lastFiveGames"
+            *ngFor="let game of lastEightGames"
             class="score-box"
             [ngClass]="game.sets_won === 1 ? 'winner' : 'loser'">
             {{ game.sets_won === 1 ? 'S' : 'N' }}
@@ -201,22 +118,31 @@
           <span class="trend-arrow" [style.color]="trendColor">
             {{ trendArrow }}
           </span>
+
+          <i class="fa-solid fa-circle-info cursor-pointer ml-auto text-lg"
+             style="color: var(--p-primary-color)"
+             (click)="showTrendInfo = true"
+             title="Trend-Erklärung"></i>
         </div>
 
-        <!-- Info: Weniger als 5 Spiele -->
-        <div *ngIf="lastFiveGames.length > 0 && lastFiveGames.length < 5">
+        <!-- Info: Weniger als 8 Spiele -->
+        <div *ngIf="lastEightGames.length > 0 && lastEightGames.length < 8">
           <p class="text-sm text-gray-500 mt-2">
-            Erst {{ lastFiveGames.length }} von 5 Spielen gespielt
+            Erst {{ lastEightGames.length }} von 8 Spielen gespielt
           </p>
         </div>
 
-        <!-- Trend-Erklärung -->
-        <div *ngIf="lastFiveGames.length > 0">
-          <p><br>
-            <strong>Trend-Berechnung:</strong><br>Basierend auf den letzten 3 Spielen
-            (Mehrheit Siege ↗,  Mehrheit Niederlagen ↘, ausgeglichen →)
-          </p>
-        </div>
+        <!-- Trend-Info Dialog -->
+        <p-dialog header="Trend-Berechnung" [(visible)]="showTrendInfo" [modal]="true" [style]="{width: '22rem'}">
+          <p class="mb-2">Basierend auf den letzten 8 Spielen (2 Spieltage):</p>
+          <div class="flex flex-col gap-2">
+            <div><span class="font-bold" style="color: #10b981">↗↗</span> Sehr guter Lauf (6+ Siege)</div>
+            <div><span class="font-bold" style="color: #10b981">↗</span>&nbsp; Aufwärtstrend (5 Siege)</div>
+            <div><span class="font-bold" style="color: #f97316">→</span>&nbsp; Ausgeglichen (4:4)</div>
+            <div><span class="font-bold" style="color: #ef4444">↘</span>&nbsp; Abwärtstrend (3 Siege)</div>
+            <div><span class="font-bold" style="color: #ef4444">↘↘</span> Schlechter Lauf (≤2 Siege)</div>
+          </div>
+        </p-dialog>
       </div>
 
       <!-- Average-Entwicklung Chart -->
@@ -303,7 +229,7 @@
         </div>
       </div>
     </p-tabpanel>
-    <p-tabpanel value="2">
+    <p-tabpanel value="1">
       <div class="stats-table" *ngIf="stats$ | async as stats">
            <div class="stat-row">
           <span class="stats-table-header">Kategorie</span>
@@ -345,6 +271,89 @@
           <span>Avg. Darts benötigt</span>
           <span>{{ avgDartsNeeded }}</span>
         </div>
+      </div>
+    </p-tabpanel>
+    <p-tabpanel value="2">
+      <!-- Filter Row -->
+      <div class="flex items-center justify-between mb-4 gap-4 flex-wrap">
+        <div class="flex gap-3 items-center">
+          <p-dropdown
+            [options]="seasons"
+            [(ngModel)]="selectedSeason1"
+            (onChange)="onSeasonComparisonChange()"
+            placeholder="Saison 1 wählen"
+            styleClass="w-44">
+          </p-dropdown>
+
+          <span class="text-lg font-bold">VS</span>
+
+          <p-dropdown
+            [options]="seasons"
+            [(ngModel)]="selectedSeason2"
+            (onChange)="onSeasonComparisonChange()"
+            placeholder="Saison 2 wählen"
+            styleClass="w-44">
+          </p-dropdown>
+        </div>
+
+        <p-dropdown
+          [options]="matchdays"
+          [(ngModel)]="selectedComparisonMatchday"
+          (onChange)="onComparisonMatchdayChange()"
+          placeholder="Spieltag wählen"
+          styleClass="w-44">
+        </p-dropdown>
+      </div>
+
+      <!-- Season Names Header -->
+      <div *ngIf="seasonComparisonResult" class="player-names-header">
+        <div class="player-name left">{{ seasonComparisonResult.player1Name }}</div>
+        <div class="metric-spacer"></div>
+        <div class="player-name right">{{ seasonComparisonResult.player2Name }}</div>
+      </div>
+
+      <!-- Comparison Chart -->
+      <div *ngIf="seasonComparisonResult" class="comparison-chart">
+        <div *ngFor="let metric of seasonComparisonResult.metrics" class="metric-row">
+          <!-- Header: Values and Label -->
+          <div class="metric-header">
+            <span class="metric-value left">{{ formatValue(metric.player1Value, metric.formatType) }}</span>
+            <span class="metric-label">{{ metric.label }}</span>
+            <span class="metric-value right">{{ formatValue(metric.player2Value, metric.formatType) }}</span>
+          </div>
+
+          <!-- Bar Track with thin colored bars -->
+          <div class="bar-track">
+            <div
+              class="bar left"
+              [class.primary]="metric.player1Better"
+              [style.width.%]="getBarWidth(metric.player1Value, metric.player2Value, metric.higherIsBetter, true, metric.formatType, metric.absoluteMax)">
+            </div>
+            <div
+              class="bar right"
+              [class.primary]="!metric.player1Better"
+              [style.width.%]="getBarWidth(metric.player1Value, metric.player2Value, metric.higherIsBetter, false, metric.formatType, metric.absoluteMax)">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Empty State -->
+      <div *ngIf="!seasonComparisonResult" class="text-center py-8 text-gray-400">
+        Wähle zwei Saisons aus, um deine Leistungen zu vergleichen.
+      </div>
+
+      <!-- Info Text -->
+      <div *ngIf="seasonComparisonResult" class="mt-6">
+        <p>
+          Dieser Vergleich zeigt deine persönlichen Leistungen über zwei verschiedene Saisons hinweg.
+          Der Balken in der <strong>Primärfarbe</strong> markiert den besseren Wert, der graue Balken den schlechteren.
+        </p>
+        <p class="mt-2">
+          <strong>Aktuell gewählt:</strong> {{ selectedSeason1 }} vs {{ selectedSeason2 }}
+          <span *ngIf="selectedComparisonMatchday !== null"> | Spieltag {{ selectedComparisonMatchday }}</span>
+          <span *ngIf="selectedComparisonMatchday === null"> | Alle Spieltage</span>
+        </p>
       </div>
     </p-tabpanel>
   </p-tabpanels>
