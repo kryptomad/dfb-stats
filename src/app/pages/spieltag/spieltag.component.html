@@ -1,4 +1,8 @@
-<h2 id="aktueller-spieltag">{{ letzteSpieltage[0]?.season }} – Spieltag {{ letzteSpieltage[0]?.matchday }}</h2>
+<h2 id="aktueller-spieltag">Spieltag {{ letzteSpieltage[0]?.matchday }}</h2>
+<div class="mb-4">
+  Saison:
+  <span class="text-primary">{{ letzteSpieltage[0]?.season }}</span>
+</div>
 <p-card>
   <div *ngFor="let spieltag of letzteSpieltage; let last = last" class="mb-2" [routerLink]="['/pages/legs', spieltag.game_id]">
     <div class="flex items-center justify-between gap-4 py-2 px-3 rounded-md transition-all duration-200 cursor-pointer hover:bg-slate-200 dark:hover:bg-slate-700 hover:bg-opacity-80">
@@ -41,3 +45,110 @@
     <hr *ngIf="!last" class="divider" />
   </div>
 </p-card>
+
+<h2 id="aktueller-tabellenstand">Aktueller Tabellenstand</h2>
+<div class="mb-4">
+  Saison:
+  <span class="text-primary">{{ aktuelleSaison }}</span>
+</div>
+<p-card>
+<div class="mt-8">
+  <div class="w-full my-6">
+    <p-chart type="bar" [data]="barChartData" [options]="barChartOptions"></p-chart>
+  </div>
+  <p-table [value]="jahrestabelle" class="min-w-full text-center">
+    <ng-template pTemplate="header">
+      <tr>
+        <th>#</th>
+        <th>Name</th>
+        <th>Punkte</th>
+        <th>Trend</th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-eintrag>
+      <tr>
+        <td>{{ eintrag.platz }}</td>
+        <td>{{ eintrag.name }}</td>
+        <td>{{ eintrag.punkte }}</td>
+        <td>
+          <span *ngIf="eintrag.trend === 'up'" class="pi pi-arrow-up text-primary ml-1"></span>
+          <span *ngIf="eintrag.trend === 'down'" class="pi pi-arrow-down text-secondary ml-1"></span>
+          <span *ngIf="eintrag.trend === 'same'" class="pi pi-arrow-right text-gray-400 ml-1"></span>
+        </td>
+      </tr>
+    </ng-template>
+  </p-table>
+</div>
+</p-card>
+
+<h2 id="spieltagverlauf">Spieltagverlauf</h2>
+<p-card>
+  <div class="grid grid-cols-2 items-center mb-3">
+    <h5 class="m-0">Spieltagsverlauf</h5>
+    <p-dropdown
+      [options]="spieltagverlaufSeasons"
+      [(ngModel)]="selectedSpieltagverlaufSeason"
+      (onChange)="onSpieltagverlaufSeasonChange($event.value)"
+      placeholder="Season wählen"
+      styleClass="season-dd"
+    ></p-dropdown>
+  </div>
+  <p-chart
+    type="line"
+    [data]="spieltagverlaufData"
+    [options]="formkurveOptions">
+  </p-chart>
+</p-card>
+
+<div class="mt-4" *ngIf="selectedTopYearsSeason !== 'All-Time'">
+  <h2 id="saisonwertungen">Saisonwertungen</h2>
+  <div class="flex justify-start items-center mb-4 w-full">
+    <label for="topYearsSeasonSelect" class="mr-4">Saison auswählen:</label>
+    <p-dropdown
+      id="topYearsSeasonSelect"
+      [options]="topYearsSeasons"
+      [(ngModel)]="selectedTopYearsSeason"
+      (onChange)="onTopYearsSeasonChange()"
+      placeholder="Saison wählen"
+      styleClass="w-44"
+    ></p-dropdown>
+  </div>
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+    <ng-container *ngIf="topYears$ | async as years">
+      <p-card *ngFor="let yearStat of years">
+        <div class="text-sm text-gray-400 mb-1">
+          {{ yearStat.year }}
+        </div>
+        <div class="text-xl font-semibold leading-tight mb-4">
+          {{ yearStat.category }}
+        </div>
+        <div class="flex flex-col gap-3">
+          <div *ngFor="let value of yearStat.values; let i = index"
+               class="flex items-center gap-3 p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+            <div class="flex items-center justify-center w-8 h-8 rounded-full font-bold text-sm shrink-0"
+                 [ngClass]="{
+                   'bg-yellow-400 text-yellow-900': i === 0,
+                   'bg-gray-300 text-gray-700': i === 1,
+                   'bg-orange-400 text-orange-900': i === 2,
+                   'bg-slate-200 dark:bg-slate-700 text-slate-600 dark:text-slate-300': i > 2
+                 }">
+              {{ i + 1 }}
+            </div>
+            <p-avatar [image]="getPlayerData(value.playerId).image"
+                      size="normal"
+                      shape="circle"
+                      class="shrink-0"></p-avatar>
+            <div class="flex-1 min-w-0">
+              <div class="text-base font-semibold truncate">
+                {{ value.playerName }}
+              </div>
+            </div>
+            <div class="text-lg font-bold text-primary shrink-0">
+              {{ value.value }}
+            </div>
+          </div>
+        </div>
+      </p-card>
+    </ng-container>
+  </div>
+</div>

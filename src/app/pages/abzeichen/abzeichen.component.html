@@ -1,12 +1,7 @@
 
+ <h2 id="chip-race">Chip Race</h2>
 <div class="mb-6">
 <p-card>
-  <ng-template #header>
-    <div class="flex items-center gap-2 px-4 pt-4">
-      <i class="fa-solid fa-coins text-yellow-500"></i>
-      <span class="font-bold text-lg">Chip Race</span>
-    </div>
-  </ng-template>
   <div *ngFor="let player of leaderboardData" class="flex items-center gap-3 mb-3">
     <p-avatar
       [image]="player.avatar"
@@ -24,23 +19,19 @@
   </div>
 </p-card>
 </div>
+ <h2 id="hall-of-fame">Hall of Fame</h2>
 <p-card *ngIf="chipWinners.length > 0" class="mt-6">
-  <ng-template #header>
-    <div class="flex items-center gap-2 px-4 pt-4">
-      <i class="fa-solid fa-trophy text-yellow-500"></i>
-      <span class="font-bold text-lg">Hall of Fame</span>
-    </div>
-  </ng-template>
   <div *ngFor="let winner of chipWinners" class="flex items-center gap-3 mb-3">
     <p-avatar
       [image]="winner.avatar"
       shape="circle"
       size="large"
     ></p-avatar>
-    <span class="font-bold">{{ winner.name }}</span>
-    <span class="ml-auto font-bold text-yellow-500">
-      {{ winner.wins }}x <i class="fa-solid fa-trophy"></i>
-    </span>
+      <span class="font-bold">{{ winner.name }}</span>
+      <span class="ml-auto font-bold">
+        {{ winner.wins }}x 
+        <i class="fa-solid fa-trophy text-yellow-500"></i>
+      </span>
   </div>
 </p-card>
 
@@ -62,7 +53,7 @@
 
 </p-fieldset>
 </div>
-
+ <h2 id="Abzeichen">Abzeichen</h2>
 <div class="grid grid-cols-1 md:grid-cols-1 gap-6">
   <p-accordion [multiple]="true" class="mb-8">
   <p-accordionTab *ngFor="let kat of kategorieNamen" [header]="kat.titel">
@@ -105,7 +96,7 @@
       ></p-avatar>
     </p-overlay-badge>
   </div>
-  <span *ngIf="abz.holders.length === 0" class="text-gray-400 text-sm">—</span>
+  <span *ngIf="abz.holders.length === 0">—</span>
 </td>
         </tr>
       </ng-template>

@@ -138,7 +138,7 @@
     </div>
 
     <!-- Empty State -->
-    <div *ngIf="!comparisonResult" class="text-center py-8 text-gray-400">
+    <div *ngIf="!comparisonResult" class="text-center py-8" style="color: var(--p-primary-color)">
       Wähle zwei Spieler aus, um ihre Statistiken zu vergleichen.
     </div>
 
@@ -308,4 +308,279 @@
       </p>
     </div>
   </p-card>
+</section>
+
+<!-- Allzeit-Rekorde Section -->
+<section id="allzeit-rekorde" class="mt-8">
+  <h1>Allzeit-Rekorde</h1>
+
+  <div class="grid grid-cols-4 gap-4 mb-4 w-full">
+    <p-button label="Spiel" styleClass="w-full"
+      [severity]="selectedRecordView === 'spiel' ? 'primary' : 'secondary'"
+      (click)="selectRecordView('spiel')"></p-button>
+    <p-button label="Spieltag" styleClass="w-full"
+      [severity]="selectedRecordView === 'spieltag' ? 'primary' : 'secondary'"
+      (click)="selectRecordView('spieltag')"></p-button>
+    <p-button label="Jahr" styleClass="w-full"
+      [severity]="selectedRecordView === 'jahr' ? 'primary' : 'secondary'"
+      (click)="selectRecordView('jahr')"></p-button>
+    <p-button label="Alltime" styleClass="w-full"
+      [severity]="selectedRecordView === 'alltime' ? 'primary' : 'secondary'"
+      (click)="selectRecordView('alltime')"></p-button>
+  </div>
+
+  <!-- SPIEL ANSICHT -->
+  <div *ngIf="selectedRecordView === 'spiel'" class="grid gap-4 grid-cols-2 sm:grid-cols-3">
+    <p-card header="Best Leg">
+      <ng-container *ngIf="bestLegsRecord && bestLegsRecord.length > 0; else noBestLeg">
+        <b class="card-value">{{ bestLegsRecord[0]?.best_leg }}</b><br />
+        <span class="card-names">
+          <span *ngFor="let leg of bestLegsRecord; let last = last">{{ leg.playerName }}<span *ngIf="!last">, </span></span>
+        </span>
+      </ng-container>
+      <ng-template #noBestLeg><span style="color: #aaa;">Noch kein Best Leg</span></ng-template>
+    </p-card>
+    <p-card header="Highest Checkout">
+      <ng-container *ngIf="highestCheckout && highestCheckout.length > 0; else noHighCheckout">
+        <b class="card-value">{{ highestCheckout[0]?.high_finish }}</b><br />
+        <span class="card-names">
+          <span *ngFor="let entry of highestCheckout; let last = last">{{ entry.playerName }}<span *ngIf="!last">, </span></span>
+        </span>
+      </ng-container>
+      <ng-template #noHighCheckout><span style="color: #aaa;">Noch kein High Finish</span></ng-template>
+    </p-card>
+    <p-card header="3 Dart Avg">
+      <ng-container *ngIf="best3DA && best3DA.length > 0; else no3DA">
+        <b class="card-value">{{ best3DA[0]?.avg_3dart | number:'1.2-2' }}</b><br />
+        <span class="card-names">
+          <span *ngFor="let entry of best3DA; let last = last">{{ entry.playerName }}<span *ngIf="!last">, </span></span>
+        </span>
+      </ng-container>
+      <ng-template #no3DA><span style="color: #aaa;">Noch kein Bestwert</span></ng-template>
+    </p-card>
+    <p-card header="First 9 Avg">
+      <ng-container *ngIf="bestFirst9 && bestFirst9.length > 0; else noFirst9">
+        <b class="card-value">{{ bestFirst9[0]?.avg_first9 | number:'1.2-2' }}</b><br />
+        <span class="card-names">
+          <span *ngFor="let entry of bestFirst9; let last = last">{{ entry.playerName }}<span *ngIf="!last">, </span></span>
+        </span>
+      </ng-container>
+      <ng-template #noFirst9><span style="color: #aaa;">Noch kein Bestwert</span></ng-template>
+    </p-card>
+    <p-card header="Most TONs">
+      <ng-container *ngIf="mostTONs && mostTONs.length > 0; else noTONs">
+        <b class="card-value">{{ mostTONs[0]?.score_100 }}</b><br />
+        <span class="card-names">
+          <span *ngFor="let entry of mostTONs; let last = last">{{ entry.playerName }}<span *ngIf="!last">, </span></span>
+        </span>
+      </ng-container>
+      <ng-template #noTONs><span style="color: #aaa;">Noch kein Wert</span></ng-template>
+    </p-card>
+    <p-card header="Most 140">
+      <ng-container *ngIf="most140s && most140s.length > 0; else no140s">
+        <b class="card-value">{{ most140s[0]?.score_140 }}</b><br />
+        <span class="card-names">
+          <span *ngFor="let entry of most140s; let last = last">{{ entry.playerName }}<span *ngIf="!last">, </span></span>
+        </span>
+      </ng-container>
+      <ng-template #no140s><span style="color: #aaa;">Noch kein Wert</span></ng-template>
+    </p-card>
+    <p-card header="Most 180">
+      <ng-container *ngIf="most180s && most180s.length > 0; else no180s">
+        <b class="card-value">{{ most180s[0]?.score_180 }}</b><br />
+        <span class="card-names">
+          <span *ngFor="let entry of most180s; let last = last">{{ entry.playerName }}<span *ngIf="!last">, </span></span>
+        </span>
+      </ng-container>
+      <ng-template #no180s><span style="color: #aaa;">Noch kein Wert</span></ng-template>
+    </p-card>
+  </div>
+  <div *ngIf="selectedRecordView === 'spiel'" class="mt-4 text-sm">
+    <strong>Spiel:</strong><br>Beste Leistung in einem einzelnen Spiel/Leg.<br>3DA = höchster 3-Dart-Average in einem Spiel/Leg.
+  </div>
+
+  <!-- SPIELTAG ANSICHT -->
+  <div *ngIf="selectedRecordView === 'spieltag'" class="grid gap-4 grid-cols-2 sm:grid-cols-3">
+    <p-card header="3 Dart Avg">
+      <ng-container *ngIf="spieltagBest3DA && spieltagBest3DA.length > 0; else noSpieltag3DA">
+        <b class="card-value">{{ spieltagBest3DA[0]?.avg_3dart | number:'1.2-2' }}</b><br />
+        <span class="card-names"><span *ngFor="let entry of spieltagBest3DA; let last = last">{{ entry.playerName }}<span *ngIf="!last">, </span></span></span>
+      </ng-container>
+      <ng-template #noSpieltag3DA><span style="color: #aaa;">Noch kein Bestwert</span></ng-template>
+    </p-card>
+    <p-card header="First 9 Avg">
+      <ng-container *ngIf="spieltagBestFirst9 && spieltagBestFirst9.length > 0; else noSpieltagFirst9">
+        <b class="card-value">{{ spieltagBestFirst9[0]?.avg_first9 | number:'1.2-2' }}</b><br />
+        <span class="card-names"><span *ngFor="let entry of spieltagBestFirst9; let last = last">{{ entry.playerName }}<span *ngIf="!last">, </span></span></span>
+      </ng-container>
+      <ng-template #noSpieltagFirst9><span style="color: #aaa;">Noch kein Bestwert</span></ng-template>
+    </p-card>
+    <p-card header="Most TONs">
+      <ng-container *ngIf="spieltagMostTONs && spieltagMostTONs.length > 0; else noSpieltagTONs">
+        <b class="card-value">{{ spieltagMostTONs[0]?.score_100 }}</b><br />
+        <span class="card-names"><span *ngFor="let entry of spieltagMostTONs; let last = last">{{ entry.playerName }}<span *ngIf="!last">, </span></span></span>
+      </ng-container>
+      <ng-template #noSpieltagTONs><span style="color: #aaa;">Noch kein Wert</span></ng-template>
+    </p-card>
+    <p-card header="Most 140">
+      <ng-container *ngIf="spieltagMost140s && spieltagMost140s.length > 0; else noSpieltag140s">
+        <b class="card-value">{{ spieltagMost140s[0]?.score_140 }}</b><br />
+        <span class="card-names"><span *ngFor="let entry of spieltagMost140s; let last = last">{{ entry.playerName }}<span *ngIf="!last">, </span></span></span>
+      </ng-container>
+      <ng-template #noSpieltag140s><span style="color: #aaa;">Noch kein Wert</span></ng-template>
+    </p-card>
+    <p-card header="Most 180">
+      <ng-container *ngIf="spieltagMost180s && spieltagMost180s.length > 0; else noSpieltag180s">
+        <b class="card-value">{{ spieltagMost180s[0]?.score_180 }}</b><br />
+        <span class="card-names"><span *ngFor="let entry of spieltagMost180s; let last = last">{{ entry.playerName }}<span *ngIf="!last">, </span></span></span>
+      </ng-container>
+      <ng-template #noSpieltag180s><span style="color: #aaa;">Noch kein Wert</span></ng-template>
+    </p-card>
+  </div>
+  <div *ngIf="selectedRecordView === 'spieltag'" class="mt-4 text-sm">
+    <strong>Spieltag:</strong><br>Beste Leistung an einem Spieltag (über mehrere Spiele aggregiert).<br>3DA und First-9 sind gewichtete Durchschnitte.<br>TONs/140s/180s sind Summen.
+  </div>
+
+  <!-- JAHR ANSICHT -->
+  <div *ngIf="selectedRecordView === 'jahr'" class="grid gap-4 grid-cols-2 sm:grid-cols-3">
+    <p-card header="3 Dart Avg">
+      <ng-container *ngIf="jahrBest3DA && jahrBest3DA.length > 0; else noJahr3DA">
+        <b class="card-value">{{ jahrBest3DA[0]?.avg_3dart | number:'1.2-2' }}</b><br />
+        <span class="card-names"><span *ngFor="let entry of jahrBest3DA; let last = last">{{ entry.playerName }}<span *ngIf="!last">, </span></span></span>
+      </ng-container>
+      <ng-template #noJahr3DA><span style="color: #aaa;">Noch kein Bestwert</span></ng-template>
+    </p-card>
+    <p-card header="First 9 Avg">
+      <ng-container *ngIf="jahrBestFirst9 && jahrBestFirst9.length > 0; else noJahrFirst9">
+        <b class="card-value">{{ jahrBestFirst9[0]?.avg_first9 | number:'1.2-2' }}</b><br />
+        <span class="card-names"><span *ngFor="let entry of jahrBestFirst9; let last = last">{{ entry.playerName }}<span *ngIf="!last">, </span></span></span>
+      </ng-container>
+      <ng-template #noJahrFirst9><span style="color: #aaa;">Noch kein Bestwert</span></ng-template>
+    </p-card>
+    <p-card header="Most TONs">
+      <ng-container *ngIf="jahrMostTONs && jahrMostTONs.length > 0; else noJahrTONs">
+        <b class="card-value">{{ jahrMostTONs[0]?.score_100 }}</b><br />
+        <span class="card-names"><span *ngFor="let entry of jahrMostTONs; let last = last">{{ entry.playerName }}<span *ngIf="!last">, </span></span></span>
+      </ng-container>
+      <ng-template #noJahrTONs><span style="color: #aaa;">Noch kein Wert</span></ng-template>
+    </p-card>
+    <p-card header="Most 140">
+      <ng-container *ngIf="jahrMost140s && jahrMost140s.length > 0; else noJahr140s">
+        <b class="card-value">{{ jahrMost140s[0]?.score_140 }}</b><br />
+        <span class="card-names"><span *ngFor="let entry of jahrMost140s; let last = last">{{ entry.playerName }}<span *ngIf="!last">, </span></span></span>
+      </ng-container>
+      <ng-template #noJahr140s><span style="color: #aaa;">Noch kein Wert</span></ng-template>
+    </p-card>
+    <p-card header="Most 180">
+      <ng-container *ngIf="jahrMost180s && jahrMost180s.length > 0; else noJahr180s">
+        <b class="card-value">{{ jahrMost180s[0]?.score_180 }}</b><br />
+        <span class="card-names"><span *ngFor="let entry of jahrMost180s; let last = last">{{ entry.playerName }}<span *ngIf="!last">, </span></span></span>
+      </ng-container>
+      <ng-template #noJahr180s><span style="color: #aaa;">Noch kein Wert</span></ng-template>
+    </p-card>
+  </div>
+  <div *ngIf="selectedRecordView === 'jahr'" class="mt-4 text-sm">
+    <strong>Jahr:</strong><br>Beste Leistung in einer Saison (über alle Spiele einer Saison aggregiert).<br>3DA und First-9 sind gewichtete Durchschnitte.<br>TONs/140s/180s sind Summen.
+  </div>
+
+  <!-- ALLTIME ANSICHT -->
+  <div *ngIf="selectedRecordView === 'alltime'" class="grid gap-4 grid-cols-2 sm:grid-cols-3">
+    <p-card header="Best Leg">
+      <ng-container *ngIf="alltimeBestLegs && alltimeBestLegs.length > 0; else noAlltimeBestLeg">
+        <b class="card-value">{{ alltimeBestLegs[0]?.best_leg }}</b><br />
+        <span class="card-names"><span *ngFor="let leg of alltimeBestLegs; let last = last">{{ leg.playerName }}<span *ngIf="!last">, </span></span></span>
+      </ng-container>
+      <ng-template #noAlltimeBestLeg><span style="color: #aaa;">Noch kein Best Leg</span></ng-template>
+    </p-card>
+    <p-card header="Highest Checkout">
+      <ng-container *ngIf="alltimeHighestCheckout && alltimeHighestCheckout.length > 0; else noAlltimeHighCheckout">
+        <b class="card-value">{{ alltimeHighestCheckout[0]?.high_finish }}</b><br />
+        <span class="card-names"><span *ngFor="let entry of alltimeHighestCheckout; let last = last">{{ entry.playerName }}<span *ngIf="!last">, </span></span></span>
+      </ng-container>
+      <ng-template #noAlltimeHighCheckout><span style="color: #aaa;">Noch kein High Finish</span></ng-template>
+    </p-card>
+    <p-card header="3 Dart Avg">
+      <ng-container *ngIf="alltimeBest3DA && alltimeBest3DA.length > 0; else noAlltime3DA">
+        <b class="card-value">{{ alltimeBest3DA[0]?.avg_3dart | number:'1.2-2' }}</b><br />
+        <span class="card-names"><span *ngFor="let entry of alltimeBest3DA; let last = last">{{ entry.playerName }}<span *ngIf="!last">, </span></span></span>
+      </ng-container>
+      <ng-template #noAlltime3DA><span style="color: #aaa;">Noch kein Bestwert</span></ng-template>
+    </p-card>
+    <p-card header="First 9 Avg">
+      <ng-container *ngIf="alltimeBestFirst9 && alltimeBestFirst9.length > 0; else noAlltimeFirst9">
+        <b class="card-value">{{ alltimeBestFirst9[0]?.avg_first9 | number:'1.2-2' }}</b><br />
+        <span class="card-names"><span *ngFor="let entry of alltimeBestFirst9; let last = last">{{ entry.playerName }}<span *ngIf="!last">, </span></span></span>
+      </ng-container>
+      <ng-template #noAlltimeFirst9><span style="color: #aaa;">Noch kein Bestwert</span></ng-template>
+    </p-card>
+    <p-card header="Most TONs">
+      <ng-container *ngIf="alltimeMostTONs && alltimeMostTONs.length > 0; else noAlltimeTONs">
+        <b class="card-value">{{ alltimeMostTONs[0]?.score_100 }}</b><br />
+        <span class="card-names"><span *ngFor="let entry of alltimeMostTONs; let last = last">{{ entry.playerName }}<span *ngIf="!last">, </span></span></span>
+      </ng-container>
+      <ng-template #noAlltimeTONs><span style="color: #aaa;">Noch kein Wert</span></ng-template>
+    </p-card>
+    <p-card header="Most 140">
+      <ng-container *ngIf="alltimeMost140s && alltimeMost140s.length > 0; else noAlltime140s">
+        <b class="card-value">{{ alltimeMost140s[0]?.score_140 }}</b><br />
+        <span class="card-names"><span *ngFor="let entry of alltimeMost140s; let last = last">{{ entry.playerName }}<span *ngIf="!last">, </span></span></span>
+      </ng-container>
+      <ng-template #noAlltime140s><span style="color: #aaa;">Noch kein Wert</span></ng-template>
+    </p-card>
+    <p-card header="Most 180">
+      <ng-container *ngIf="alltimeMost180s && alltimeMost180s.length > 0; else noAlltime180s">
+        <b class="card-value">{{ alltimeMost180s[0]?.score_180 }}</b><br />
+        <span class="card-names"><span *ngFor="let entry of alltimeMost180s; let last = last">{{ entry.playerName }}<span *ngIf="!last">, </span></span></span>
+      </ng-container>
+      <ng-template #noAlltime180s><span style="color: #aaa;">Noch kein Wert</span></ng-template>
+    </p-card>
+  </div>
+  <div *ngIf="selectedRecordView === 'alltime'" class="mt-4 text-sm">
+    <strong>Alltime:</strong><br>Beste Einzelleistung aller Zeiten (Best Leg, Highest Checkout, 3DA, First9 in einem Spiel) + Gesamt-Summen über die Karriere (TONs/140s/180s).
+  </div>
+</section>
+
+<!-- Top 5 Ranglisten Section -->
+<section id="top5" class="mt-8">
+  <h1>Top 5 Ranglisten</h1>
+  <div *ngIf="allTimeRecords.length > 0">
+    <div class="all-time-records-grid">
+      <div *ngFor="let record of allTimeRecords" class="record-section">
+        <div class="record-tile">
+          <div class="record-tile-header">
+            <span class="record-tile-label">{{ record.metricName }}</span>
+            <span class="medal">🥇</span>
+          </div>
+          <div class="record-tile-value">{{ formatRecordValue(record) }}</div>
+          <div class="record-tile-player">{{ record.topPlayerName }}</div>
+        </div>
+        <div class="top5-table">
+          <div class="top5-header">
+            <span class="top5-rank-col">Rang</span>
+            <span class="top5-player-col">Spieler</span>
+            <span class="top5-value-col">Wert</span>
+            <span class="top5-context-col">Kontext</span>
+          </div>
+          <div *ngFor="let entry of record.top5" class="top5-row">
+            <span class="top5-rank">
+              <span *ngIf="entry.rank <= 3" class="medal-small">{{ getMedalEmoji(entry.rank) }}</span>
+              <span *ngIf="entry.rank > 3">{{ entry.rank }}</span>
+            </span>
+            <span class="top5-player">{{ entry.playerName }}</span>
+            <span class="top5-value">{{ formatTop5Value(entry.value, record.formatType) }}</span>
+            <span class="top5-context">
+              <span *ngIf="entry.season !== 'All-Time'">{{ entry.season }}, ST {{ entry.matchday }}</span>
+              <span *ngIf="entry.season === 'All-Time'">All-Time</span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mt-6 text-sm">
+      <p>Diese Ranglisten zeigen die Top 5 Leistungen für jede Metrik.<br>🥇🥈🥉 Medaillen markieren die besten drei Plätze.</p>
+    </div>
+  </div>
+  <div *ngIf="allTimeRecords.length === 0" class="text-center py-8 text-gray-400">
+    Keine Ranglisten verfügbar.
+  </div>
 </section>

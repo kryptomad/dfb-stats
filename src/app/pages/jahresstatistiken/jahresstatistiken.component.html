@@ -119,57 +119,85 @@
   </div>
 </div>
 
-    <div class="mt-4" *ngIf="selectedSeason !== 'All-Time'">
-    <h2 id="top-jahreswerte">Top Jahreswerte</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-      <ng-container *ngIf="topYears$ | async as years; else loading">
-        <p-card *ngFor="let yearStat of years">
-          <div class="text-sm text-gray-400 mb-1">
-            {{ yearStat.year }}
-          </div>
-          <div class="text-xl font-semibold leading-tight mb-4">
-            {{ yearStat.category }}
-          </div>
-
-          <div class="flex flex-col gap-3">
-            <div *ngFor="let value of yearStat.values; let i = index"
-                 class="flex items-center gap-3 p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
-              <!-- Rank Badge -->
-              <div class="flex items-center justify-center w-8 h-8 rounded-full font-bold text-sm shrink-0"
-                   [ngClass]="{
-                     'bg-yellow-400 text-yellow-900': i === 0,
-                     'bg-gray-300 text-gray-700': i === 1,
-                     'bg-orange-400 text-orange-900': i === 2,
-                     'bg-slate-200 dark:bg-slate-700 text-slate-600 dark:text-slate-300': i > 2
-                   }">
-                {{ i + 1 }}
-              </div>
-
-              <!-- Player Avatar -->
-              <p-avatar [image]="getPlayerData(value.playerId).image"
-                        size="normal"
-                        shape="circle"
-                        class="shrink-0"></p-avatar>
-
-              <!-- Player Name -->
-              <div class="flex-1 min-w-0">
-                <div class="text-base font-semibold truncate">
-                  {{ value.playerName }}
-                </div>
-              </div>
-
-              <!-- Value -->
-              <div class="text-lg font-bold text-primary shrink-0">
-                {{ value.value }}
-              </div>
-            </div>
-          </div>
-        </p-card>
-      </ng-container>
-          <ng-template #loading>
-          <div class="text-lg text-gray-600 dark:text-gray-400 animate-pulse" *ngIf="loading">
-              🤖 Beep boop… Lade Daten…
-            </div>
-    </ng-template>
+<!-- Saisonvergleich -->
+<section id="jahresvergleich" class="mt-8">
+  <h2>Saisonvergleich</h2>
+  <p-card class="mb-4">
+    <div class="flex items-center justify-center mb-6 gap-3 flex-wrap">
+      <p-dropdown
+        [options]="comparisonSeasons"
+        [(ngModel)]="selectedCompSeason1"
+        (onChange)="onCompSeasonChange()"
+        placeholder="Saison 1 wählen"
+        styleClass="w-44">
+      </p-dropdown>
+      <span class="text-lg font-bold">VS</span>
+      <p-dropdown
+        [options]="comparisonSeasons"
+        [(ngModel)]="selectedCompSeason2"
+        (onChange)="onCompSeasonChange()"
+        placeholder="Saison 2 wählen"
+        styleClass="w-44">
+      </p-dropdown>
     </div>
-  </div>
+
+    <div *ngIf="seasonComparisonResult" class="player-names-header">
+      <div class="player-name left">{{ seasonComparisonResult.player1Name }}</div>
+      <div class="metric-spacer"></div>
+      <div class="player-name right">{{ seasonComparisonResult.player2Name }}</div>
+    </div>
+
+    <div *ngIf="seasonComparisonResult" class="comparison-chart">
+      <div *ngFor="let metric of seasonComparisonResult.metrics" class="metric-row">
+        <div class="metric-header">
+          <span class="metric-value left">{{ formatComparisonValue(metric.player1Value, metric.formatType) }}</span>
+          <span class="metric-label">{{ metric.label }}</span>
+          <span class="metric-value right">{{ formatComparisonValue(metric.player2Value, metric.formatType) }}</span>
+        </div>
+        <div class="bar-track">
+          <div class="bar left" [class.primary]="metric.player1Better"
+            [style.width.%]="getCompBarWidth(metric.player1Value, metric.player2Value, metric.higherIsBetter, true)"></div>
+          <div class="bar right" [class.primary]="!metric.player1Better"
+            [style.width.%]="getCompBarWidth(metric.player1Value, metric.player2Value, metric.higherIsBetter, false)"></div>
+        </div>
+      </div>
+    </div>
+
+    <div *ngIf="!seasonComparisonResult" class="text-center py-8 text-gray-400">
+      Wähle zwei Saisons aus, um ihre kombinierten Statistiken zu vergleichen.
+    </div>
+
+    <div class="mt-6 text-sm">
+      <p>Dieser Vergleich zeigt die aggregierten Leistungen aller Spieler über zwei Saisons hinweg.
+        Der Balken in der <strong>Primärfarbe</strong> markiert die bessere Saison, der graue Balken die schlechtere.</p>
+      <p class="mt-2">Die Metriken umfassen kombinierte Durchschnitte, Gesamtsummen und beste Einzelwerte aus beiden Saisons.</p>
+    </div>
+  </p-card>
+</section>
+
+<!-- Trendverlauf -->
+<section id="trendverlauf" class="mt-8">
+  <h2>Trendverlauf</h2>
+  <p-card class="mb-4">
+    <div class="chart-container" style="position: relative; height: 150px;">
+      <p-chart type="line" [data]="trendChartData" [options]="trendChartOptions"></p-chart>
+    </div>
+    <div class="mt-6 text-sm">
+      <p>Dieser Chart zeigt die Entwicklung der aggregierten Durchschnittswerte aller Spieler über alle Saisons hinweg.</p>
+      <p class="mt-2">
+        <strong>3-Dart-Average:</strong> Gewichteter Durchschnitt über alle geworfenen Darts.<br>
+        <strong>First-9-Average:</strong> Einfacher Durchschnitt der First-9-Werte aller Spiele.
+      </p>
+    </div>
+  </p-card>
+</section>
+
+<!-- Jahresvergleich -->
+<section id="jahresvergleich-punkte" class="mt-8">
+  <h2>Jahresvergleich</h2>
+  <p-card>
+    <h5>Jahresvergleich Gesamtpunkte 2018 - Heute</h5>
+    <p-chart type="line" [data]="jahresvergleichData" [options]="jahresvergleichOptions"></p-chart>
+  </p-card>
+</section>
+

@@ -17,6 +17,9 @@ import { CheckdartsService, CheckdartsStats } from '../../services/checkdarts.se
 import { PlayerComparisonService, PlayerComparisonResult } from '../../services/player-comparison.service';
 import { PlayersService, Player } from '../../services/players.service';
 import { PersonalBestService, PersonalBest, TimePeriod } from '../../services/personal-best.service';
+import { StatsService } from '../../services/stats.service';
+import { AllTimeRecordsService, AllTimeRecord } from '../../services/all-time-records.service';
+import { ButtonModule } from 'primeng/button';
 
 // Typen passend zu deiner legs.json (verschachtelt)
 type Game = {
@@ -57,6 +60,7 @@ type Game = {
     InputSwitchModule,
     TableModule,
     RouterModule,
+    ButtonModule,
   ],
   templateUrl: './spielerstatistiken.component.html',
   styleUrls: ['./spielerstatistiken.component.scss'],
@@ -99,7 +103,37 @@ export class SpielerstatistikenComponent implements OnInit {
   ];
   personalBests: PersonalBest[] = [];
 
-  private games: Game[] = []; // <<— statt legs
+  // Allzeit-Rekorde
+  selectedRecordView: 'spiel' | 'spieltag' | 'jahr' | 'alltime' = 'spiel';
+  bestLegsRecord: any[] = [];
+  highestCheckout: any[] = [];
+  best3DA: any[] = [];
+  bestFirst9: any[] = [];
+  mostTONs: any[] = [];
+  most140s: any[] = [];
+  most180s: any[] = [];
+  spieltagBest3DA: any[] = [];
+  spieltagBestFirst9: any[] = [];
+  spieltagMostTONs: any[] = [];
+  spieltagMost140s: any[] = [];
+  spieltagMost180s: any[] = [];
+  jahrBest3DA: any[] = [];
+  jahrBestFirst9: any[] = [];
+  jahrMostTONs: any[] = [];
+  jahrMost140s: any[] = [];
+  jahrMost180s: any[] = [];
+  alltimeBestLegs: any[] = [];
+  alltimeHighestCheckout: any[] = [];
+  alltimeBest3DA: any[] = [];
+  alltimeBestFirst9: any[] = [];
+  alltimeMostTONs: any[] = [];
+  alltimeMost140s: any[] = [];
+  alltimeMost180s: any[] = [];
+
+  // Top 5 Ranglisten
+  allTimeRecords: AllTimeRecord[] = [];
+
+  private games: Game[] = [];
 
   constructor(
     private http: HttpClient,
@@ -109,6 +143,8 @@ export class SpielerstatistikenComponent implements OnInit {
     private playerComparison: PlayerComparisonService,
     private playersService: PlayersService,
     private personalBestService: PersonalBestService,
+    private statsService: StatsService,
+    private allTimeRecordsService: AllTimeRecordsService,
     private route: ActivatedRoute,
     private viewportScroller: ViewportScroller,
   ) {}
@@ -137,6 +173,19 @@ export class SpielerstatistikenComponent implements OnInit {
       this.buildSeasons();
       this.updateRadar();
       this.updateCheckdarts();
+    });
+
+    // Allzeit-Rekorde laden
+    this.statsService.loadEnrichedStats().subscribe(() => {
+      this.loadRecordSpielData();
+      this.loadRecordSpieltagData();
+      this.loadRecordJahrData();
+      this.loadRecordAlltimeData();
+    });
+
+    // Top 5 Ranglisten laden
+    this.allTimeRecordsService.getAllTimeRecords().subscribe((records) => {
+      this.allTimeRecords = records;
     });
 
     // Fragment navigation
@@ -370,5 +419,60 @@ export class SpielerstatistikenComponent implements OnInit {
 
   hasTopRankedBests(): boolean {
     return this.personalBests.some(b => b.topRank !== undefined);
+  }
+
+  // Allzeit-Rekorde methods
+  selectRecordView(view: 'spiel' | 'spieltag' | 'jahr' | 'alltime') {
+    this.selectedRecordView = view;
+  }
+
+  private loadRecordSpielData() {
+    this.bestLegsRecord = this.statsService.getBestLegMatch();
+    this.highestCheckout = this.statsService.getHighestCheckoutMatch();
+    this.best3DA = this.statsService.getBest3DAMatch();
+    this.bestFirst9 = this.statsService.getBestFirst9Match();
+    this.mostTONs = this.statsService.getMostTONsMatch();
+    this.most140s = this.statsService.getMost140sMatch();
+    this.most180s = this.statsService.getMost180sMatch();
+  }
+
+  private loadRecordSpieltagData() {
+    this.spieltagBest3DA = this.statsService.getBest3DAMatchday();
+    this.spieltagBestFirst9 = this.statsService.getBestFirst9Matchday();
+    this.spieltagMostTONs = this.statsService.getMostTONsMatchday();
+    this.spieltagMost140s = this.statsService.getMost140sMatchday();
+    this.spieltagMost180s = this.statsService.getMost180sMatchday();
+  }
+
+  private loadRecordJahrData() {
+    this.jahrBest3DA = this.statsService.getBest3DASeason();
+    this.jahrBestFirst9 = this.statsService.getBestFirst9Season();
+    this.jahrMostTONs = this.statsService.getMostTONsSeason();
+    this.jahrMost140s = this.statsService.getMost140sSeason();
+    this.jahrMost180s = this.statsService.getMost180sSeason();
+  }
+
+  private loadRecordAlltimeData() {
+    this.alltimeBestLegs = this.statsService.getBestLegMatch();
+    this.alltimeHighestCheckout = this.statsService.getHighestCheckoutMatch();
+    this.alltimeBest3DA = this.statsService.getBest3DAMatch();
+    this.alltimeBestFirst9 = this.statsService.getBestFirst9Match();
+    this.alltimeMostTONs = this.statsService.getMostTONsAlltime();
+    this.alltimeMost140s = this.statsService.getMost140sAlltime();
+    this.alltimeMost180s = this.statsService.getMost180sAlltime();
+  }
+
+  formatRecordValue(record: AllTimeRecord): string {
+    if (record.formatType === 'number') return record.topValue.toFixed(0);
+    if (record.formatType === 'percentage') return record.topValue.toFixed(1) + '%';
+    if (record.formatType === 'decimal') return record.topValue.toFixed(2);
+    return record.topValue.toString();
+  }
+
+  formatTop5Value(value: number, formatType: string): string {
+    if (formatType === 'number') return value.toFixed(0);
+    if (formatType === 'percentage') return value.toFixed(1) + '%';
+    if (formatType === 'decimal') return value.toFixed(2);
+    return value.toString();
   }
 }

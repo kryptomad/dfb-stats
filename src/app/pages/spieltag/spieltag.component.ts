@@ -2,15 +2,26 @@ import { Component, OnInit } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { GamesService } from '../../services/games.service';
 import { PlayersService } from '../../services/players.service';
-import { NgForOf, NgIf, NgClass } from '@angular/common';
+import { NgForOf, NgIf, NgClass, AsyncPipe } from '@angular/common';
 import { Card } from 'primeng/card';
 import { ChartModule } from 'primeng/chart';
 import { TableModule } from 'primeng/table';
 import { AvatarModule } from 'primeng/avatar';
+import { DropdownModule } from 'primeng/dropdown';
+import { FormsModule } from '@angular/forms';
+import { OskarstatsSpieltagverlaufService } from '../../services/oskarstats-spieltagverlauf.service';
+import { ChartThemeService } from '../../services/chart-theme.service';
+import {
+  JahresstatsTopJahreswerteService,
+  TopYearStats,
+} from '../../services/jahresstats-top-jahreswerte.service';
+import { SeasonSelectorService } from '../../services/season-selector.service';
+import { StatsService } from '../../services/stats.service';
+import { Observable, of } from 'rxjs';
 
 @Component({
   selector: 'app-spieltag',
-  imports: [Card, NgForOf, NgIf, NgClass, ChartModule, TableModule, RouterModule, AvatarModule],
+  imports: [Card, NgForOf, NgIf, NgClass, ChartModule, TableModule, RouterModule, AvatarModule, DropdownModule, FormsModule, AsyncPipe],
   providers: [GamesService],
   templateUrl: './spieltag.component.html',
   styleUrl: './spieltag.component.scss',
@@ -24,9 +35,25 @@ export class SpieltagComponent implements OnInit {
   barChartData: any;
   barChartOptions: any;
 
+  // Spieltagverlauf
+  spieltagverlaufSeasons: string[] = [];
+  selectedSpieltagverlaufSeason: string | number = '';
+  spieltagverlaufData: any;
+  formkurveOptions: any = {};
+
+  // Saisonwertungen (Top Jahreswerte)
+  topYearsSeasons: { label: string; value: string }[] = [];
+  selectedTopYearsSeason: string | null = null;
+  topYears$: Observable<TopYearStats[]> = of([]);
+
   constructor(
     private gamesService: GamesService,
-    private playersService: PlayersService
+    private playersService: PlayersService,
+    private spieltagverlaufService: OskarstatsSpieltagverlaufService,
+    private chartTheme: ChartThemeService,
+    private topJahreswerteService: JahresstatsTopJahreswerteService,
+    private seasonSelector: SeasonSelectorService,
+    private statsService: StatsService,
   ) {}
 
   ngOnInit() {
@@ -144,6 +171,57 @@ export class SpieltagComponent implements OnInit {
         },
       },
     };
+
+    // Spieltagverlauf
+    this.formkurveOptions = this.chartTheme.getLineChartOptions({});
+    this.spieltagverlaufService.getSeasons$().subscribe((seasons: string[]) => {
+      this.spieltagverlaufSeasons = seasons;
+      const latest = seasons[seasons.length - 1] ?? '';
+      this.selectedSpieltagverlaufSeason = latest;
+      if (latest) {
+        this.spieltagverlaufService
+          .buildSpieltagverlaufData$(latest)
+          .subscribe((chart: any) => {
+            this.spieltagverlaufData = chart;
+            this.formkurveOptions = this.chartTheme.getLineChartOptions({});
+          });
+      }
+    });
+
+    // Saisonwertungen (Top Jahreswerte)
+    this.statsService.loadEnrichedStats().subscribe(() => {
+      this.seasonSelector.getSeasons$().subscribe((seasons) => {
+        this.topYearsSeasons = [
+          { label: 'All-Time', value: 'All-Time' },
+          ...seasons.map((s) => ({ label: s, value: s })),
+        ];
+        if (!this.selectedTopYearsSeason && this.topYearsSeasons.length > 0) {
+          this.selectedTopYearsSeason =
+            this.topYearsSeasons[1]?.value || this.topYearsSeasons[0].value;
+          this.updateTopYears();
+        }
+      });
+    });
+  }
+
+  onSpieltagverlaufSeasonChange(season: string | number) {
+    this.selectedSpieltagverlaufSeason = season;
+    this.spieltagverlaufService
+      .buildSpieltagverlaufData$(season)
+      .subscribe((chart: any) => {
+        this.spieltagverlaufData = chart;
+        this.formkurveOptions = this.chartTheme.getLineChartOptions({});
+      });
+  }
+
+  onTopYearsSeasonChange() {
+    this.updateTopYears();
+  }
+
+  private updateTopYears() {
+    this.topYears$ = this.topJahreswerteService.getTopYearStats(
+      this.selectedTopYearsSeason || '',
+    );
   }
 
   getPlayersOrdered(spieltag: any): {

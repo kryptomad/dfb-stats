@@ -1,7 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { CommonModule, NgIf } from '@angular/common';
 import { Card } from 'primeng/card';
 import { FieldsetModule } from 'primeng/fieldset';
 import { TableModule } from 'primeng/table';
+import { TimelineModule } from 'primeng/timeline';
+import { StatsService } from '../../services/stats.service';
+import { PlayersService } from '../../services/players.service';
+import { OskarstatsOskarsiegerTimelineService } from '../../services/oskarstats-oskarsieger-timeline.service';
 
 export interface Rekord {
   was: string;
@@ -15,10 +20,42 @@ export interface Rekord {
   templateUrl: './rekorde.component.html',
   styleUrls: ['./rekorde.component.scss'],
   standalone: true,
-  imports: [Card, FieldsetModule, TableModule],
+  imports: [CommonModule, NgIf, Card, FieldsetModule, TableModule, TimelineModule],
   providers: [],
 })
-export class RekordeComponent {
+export class RekordeComponent implements OnInit {
+  // Oskarsieger
+  oskarsiegerRaw: { jahr: number; player_id: number }[] = [];
+
+  get oskarsiegerTimeline() {
+    return this.oskarsiegerRaw.map((entry) => ({
+      ...entry,
+      player: this.playersService.getPlayer(entry.player_id),
+    }));
+  }
+
+  constructor(
+    private statsService: StatsService,
+    private oskarstatsOskarsiegerTimelineService: OskarstatsOskarsiegerTimelineService,
+    private playersService: PlayersService,
+  ) {}
+
+  ngOnInit() {
+    this.oskarsiegerRaw =
+      this.oskarstatsOskarsiegerTimelineService.getAllWinnersMerged();
+
+    this.statsService.loadEnrichedStats().subscribe(() => {
+      this.oskarsiegerRaw =
+        this.oskarstatsOskarsiegerTimelineService.getAllWinnersMerged();
+      this.statsService.getStatsNorm$().subscribe((normRows: any[]) => {
+        this.oskarsiegerRaw =
+          this.oskarstatsOskarsiegerTimelineService.getAllWinnersMergedFromNormalizedRows(
+            normRows,
+          );
+      });
+    });
+  }
+
   gesamtwertungen: Rekord[] = [
     this.createRekord('Jahres-Oscar Gesamt [3]', '2007–2016', 'Nico', 10),
     this.createRekord('Jahres-Oscar Gewinn in Folge', '2007–2016', 'Nico', 10),

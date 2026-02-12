@@ -22,3 +22,57 @@
 :host ::ng-deep .p-datatable-table td:nth-child(4) {
   width: 25%;
 }
+
+// Oskarsieger Timeline Styles
+.oskar-jahr {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: var(--text-color-secondary);
+}
+
+.timeline-card {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.winner-avatar {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 1px solid var(--surface-border);
+}
+
+.winner-name {
+  font-weight: 500;
+  font-size: 1rem;
+  color: var(--text-color);
+}
+
+.winner-nickname {
+  font-size: 0.9rem;
+  color: var(--text-color-secondary);
+  margin-left: 0.25rem;
+  font-style: italic;
+}
+
+:host ::ng-deep .p-timeline.p-timeline-vertical
+  .p-timeline-event:nth-child(even) .p-timeline-event-content {
+  display: flex;
+  justify-content: flex-end;
+  text-align: right;
+}
+
+:host ::ng-deep .p-timeline.p-timeline-vertical
+  .p-timeline-event:nth-child(even) .timeline-card {
+  display: inline-flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+:host ::ng-deep .p-timeline.p-timeline-vertical
+  .p-timeline-event:nth-child(odd) .timeline-card {
+  flex-direction: row;
+}

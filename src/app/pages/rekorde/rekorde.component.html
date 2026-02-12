@@ -1,5 +1,31 @@
-<div id="gesamtwertungen" class="mt-5">
-  <p-card header="Gesamtwertungen">
+<section id="oskarsieger">
+  <h2>Oskarsieger</h2>
+  <p-card>
+    <p-timeline [value]="oskarsiegerTimeline" layout="vertical" align="alternate">
+      <ng-template pTemplate="opposite" let-event>
+        <span class="oskar-jahr">{{ event.label }}</span>
+      </ng-template>
+      <ng-template pTemplate="content" let-event>
+        <ng-container *ngIf="event.player">
+          <div class="timeline-card">
+            <img [src]="'assets/players/' + event.player?.image" class="winner-avatar" alt="" />
+            <span class="winner-name">{{ event.player.name }}</span>
+            <span *ngIf="event.player.nickname" class="winner-nickname">
+              {{ event.player.nickname }}
+            </span>
+          </div>
+        </ng-container>
+        <ng-container *ngIf="!event.player">
+          <i>Unbekannter Spieler (ID: {{ event.player_id }})</i>
+        </ng-container>
+      </ng-template>
+    </p-timeline>
+  </p-card>
+</section>
+
+ <h2 id="gesamtwertungen">Gesamtwertungen</h2>
+<div class="mt-5">
+  <p-card>
     <p-table [value]="gesamtwertungen">
       <ng-template pTemplate="header">
         <tr>
@@ -21,8 +47,9 @@
   </p-card>
 </div>
 
-<div id="jahreswertungen" class="mt-5">
-  <p-card header="Jahreswertungen">
+ <h2 id="jahreswertungen">Jahreswertungen</h2>
+<div class="mt-5">
+  <p-card>
     <p-table [value]="jahreswertungen">
       <ng-template pTemplate="header">
         <tr>
@@ -44,8 +71,9 @@
   </p-card>
 </div>
 
-<div id="spieltagswertungen" class="mt-5">
-  <p-card header="Spieltagswertungen">
+ <h2 id="spieltagswertungen">Spieltagswertungen</h2>
+<div class="mt-5">
+  <p-card>
     <p-table [value]="spieltagswertungen">
       <ng-template pTemplate="header">
         <tr>
@@ -67,8 +95,9 @@
   </p-card>
 </div>
 
-<div id="matchwertungen" class="mt-5">
-  <p-card header="Matchwertungen [6]">
+ <h2 id="matchwertungen">Matchwertungen [6]</h2>
+<div class="mt-5">
+  <p-card>
     <p-table [value]="matchwertungen">
       <ng-template pTemplate="header">
         <tr>

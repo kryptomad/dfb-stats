@@ -37,3 +37,99 @@
 ::ng-deep p-table .p-datatable-thead > tr > th:last-child {
   text-align: right;
 }
+
+// Saisonvergleich Styles
+.comparison-chart {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.metric-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.metric-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+.metric-value {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-color);
+  min-width: 80px;
+  &.left { text-align: left; }
+  &.right { text-align: right; }
+}
+
+.metric-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-color-secondary);
+  text-align: center;
+  flex: 1;
+}
+
+.bar-track {
+  position: relative;
+  height: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.bar {
+  position: absolute;
+  height: 100%;
+  background: #9ca3af;
+  transition: width 0.3s ease, background 0.3s ease;
+  &.primary { background: var(--primary-color); }
+  &.left { right: 50%; border-radius: 6px 0 0 6px; }
+  &.right { left: 50%; border-radius: 0 6px 6px 0; }
+}
+
+.player-names-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding: 0 1rem;
+}
+
+.metric-spacer { flex: 1; text-align: center; }
+
+.player-name {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  flex: 1;
+  &.left { text-align: left; }
+  &.right { text-align: right; }
+}
+
+@media (max-width: 768px) {
+  .comparison-chart { gap: 1.25rem; }
+  .metric-value { font-size: 0.9rem; min-width: 70px; }
+  .metric-label { font-size: 0.75rem; }
+  .bar-track { height: 10px; border-radius: 5px; }
+  .player-name { font-size: 1rem; }
+}
+
+@media (max-width: 480px) {
+  .metric-value { font-size: 0.85rem; min-width: 60px; }
+  .metric-label { font-size: 0.7rem; }
+  .bar-track { height: 8px; border-radius: 4px; }
+  .metric-header { padding: 0 0.5rem; }
+  .player-names-header { padding: 0 0.5rem; }
+  .player-name { font-size: 0.9rem; }
+}
