@@ -26,6 +26,11 @@ import {
   PlayerComparisonService,
   PlayerComparisonResult,
 } from '../../services/player-comparison.service';
+import {
+  PersonalBestService,
+  PersonalBest,
+  TimePeriod,
+} from '../../services/personal-best.service';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { StatRow } from '../../services/stats.service';
@@ -108,6 +113,16 @@ export class ProfilComponent implements OnInit {
   // Abzeichen
   playerBadges: PlayerBadge[] = [];
 
+  // Bestleistungen
+  selectedTimePeriod: TimePeriod = 'all-time';
+  timePeriodOptions = [
+    { label: 'Spiel', value: 'game' as TimePeriod },
+    { label: 'Spieltag', value: 'matchday' as TimePeriod },
+    { label: 'Saison', value: 'season' as TimePeriod },
+    { label: 'All-Time', value: 'all-time' as TimePeriod },
+  ];
+  personalBests: PersonalBest[] = [];
+
   constructor(
     private route: ActivatedRoute,
     private playersService: PlayersService,
@@ -117,6 +132,7 @@ export class ProfilComponent implements OnInit {
     private legsService: LegsService,
     private playerComparison: PlayerComparisonService,
     public badgesService: BadgesService,
+    private personalBestService: PersonalBestService,
   ) {
     this.playerId = Number(this.route.snapshot.paramMap.get('id'));
     this.stats$ = this.statsQuery.getFullStatsBySeason$(this.selectedSeason);
@@ -290,6 +306,9 @@ export class ProfilComponent implements OnInit {
 
       // Build trend chart data
       this.buildTrendChart(playerRows);
+
+      // Update Bestleistungen
+      this.updateBestleistungen();
 
       // Load last 5 checkouts and won legs
       this.lastCheckouts = this.legsService.getPlayerCheckouts(
@@ -519,6 +538,23 @@ export class ProfilComponent implements OnInit {
     if (type === 'percentage') return value.toFixed(1) + '%';
     if (type === 'decimal') return value.toFixed(2);
     return value.toString();
+  }
+
+  // Bestleistungen methods
+  onTimePeriodChange(): void {
+    this.updateBestleistungen();
+  }
+
+  private updateBestleistungen(): void {
+    this.personalBestService
+      .getPersonalBests(this.playerId, this.selectedTimePeriod)
+      .subscribe((bests) => {
+        this.personalBests = bests;
+      });
+  }
+
+  formatBestValue(best: PersonalBest): string {
+    return this.formatValue(best.value, best.formatType);
   }
 
   getBarWidth(

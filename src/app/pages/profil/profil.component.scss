@@ -328,6 +328,145 @@
   }
 }
 
+// Bestleistungen styles
+.time-period-button {
+  padding: 0.5rem 1rem;
+  border: 2px solid var(--surface-border);
+  background: var(--surface-card);
+  color: var(--text-color);
+  border-radius: 0.5rem;
+  font-weight: 500;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-width: 90px;
+  text-align: center;
+
+  &:hover {
+    background: var(--surface-hover);
+    border-color: var(--primary-color);
+  }
+
+  &.active {
+    background: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+    font-weight: 600;
+  }
+}
+
+.best-tiles-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  width: 100%;
+}
+
+.best-tile {
+  background: var(--surface-card);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  flex: 1 1 calc(50% - 0.5rem);
+  min-width: 0;
+  max-width: calc(50% - 0.5rem);
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  }
+}
+
+.best-tile-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.best-tile-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-color-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  text-align: center;
+}
+
+.best-tile-value {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+  line-height: 1;
+}
+
+.best-tile-context {
+  font-size: 0.8rem;
+  color: var(--text-color-secondary);
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .time-period-button {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.85rem;
+    min-width: 80px;
+  }
+
+  .best-tiles-grid {
+    gap: 0.75rem;
+  }
+
+  .best-tile {
+    padding: 1rem;
+    flex: 1 1 calc(50% - 0.375rem);
+    max-width: calc(50% - 0.375rem);
+  }
+
+  .best-tile-value {
+    font-size: 1.75rem;
+  }
+
+  .best-tile-context {
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .time-period-button {
+    padding: 0.35rem 0.7rem;
+    font-size: 0.8rem;
+    min-width: 70px;
+  }
+
+  .best-tiles-grid {
+    gap: 0.5rem;
+  }
+
+  .best-tile {
+    flex: 1 1 calc(50% - 0.25rem);
+    max-width: calc(50% - 0.25rem);
+    padding: 0.75rem;
+  }
+
+  .best-tile-label {
+    font-size: 0.7rem;
+  }
+
+  .best-tile-value {
+    font-size: 1.25rem;
+  }
+
+  .best-tile-context {
+    font-size: 0.65rem;
+  }
+}
+
 // Season comparison chart styles (reused from spielerstatistiken)
 .comparison-chart {
   display: flex;

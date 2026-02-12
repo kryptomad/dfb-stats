@@ -92,12 +92,6 @@ export class AppMenu implements OnInit {
             icon: 'pi pi-fw pi-users',
             items: [
               {
-                label: 'Bestleistungen',
-                icon: 'pi pi-fw pi-bolt',
-                routerLink: 'pages/spielerstatistiken',
-                fragment: 'bestleistungen',
-              },
-              {
                 label: 'Spieler vs. Spieler',
                 icon: 'pi pi-fw pi-users',
                 routerLink: 'pages/spielerstatistiken',
