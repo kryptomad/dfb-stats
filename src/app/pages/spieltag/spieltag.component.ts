@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import ChartDataLabels from 'chartjs-plugin-datalabels';
 import { GamesService } from '../../services/games.service';
 import { PlayersService } from '../../services/players.service';
 import { NgForOf, NgIf, NgClass, AsyncPipe } from '@angular/common';
@@ -17,6 +18,7 @@ import {
 } from '../../services/jahresstats-top-jahreswerte.service';
 import { SeasonSelectorService } from '../../services/season-selector.service';
 import { StatsService } from '../../services/stats.service';
+import { LegsService } from '../../services/legs.service';
 import { Observable, of } from 'rxjs';
 
 @Component({
@@ -34,6 +36,7 @@ export class SpieltagComponent implements OnInit {
   // Chart Properties nur DEKLARIEREN (nicht befüllen!)
   barChartData: any;
   barChartOptions: any;
+  barChartPlugins = [ChartDataLabels];
 
   // Spieltagverlauf
   spieltagverlaufSeasons: string[] = [];
@@ -54,6 +57,7 @@ export class SpieltagComponent implements OnInit {
     private topJahreswerteService: JahresstatsTopJahreswerteService,
     private seasonSelector: SeasonSelectorService,
     private statsService: StatsService,
+    private _legsService: LegsService,
   ) {}
 
   ngOnInit() {
@@ -131,6 +135,7 @@ export class SpieltagComponent implements OnInit {
           label: 'Punkte vorher',
           backgroundColor: secondaryColorRgba,
           data: this.jahrestabelle.map((e) => Number(e.altePunkte)),
+          datalabels: { display: false },
         },
         {
           label: neuLabel,
@@ -138,6 +143,14 @@ export class SpieltagComponent implements OnInit {
           data: this.jahrestabelle.map(
             (e) => Number(e.punkte) - Number(e.altePunkte),
           ),
+          datalabels: {
+            display: (ctx: any) => ctx.dataset.data[ctx.dataIndex] > 0,
+            anchor: 'end' as const,
+            align: 'end' as const,
+            color: primaryColor,
+            font: { weight: 'bold' as const, size: 12 },
+            formatter: (value: number) => value,
+          },
         },
       ],
     };
@@ -146,6 +159,7 @@ export class SpieltagComponent implements OnInit {
       plugins: {
         legend: {
           display: true,
+          position: 'bottom' as const,
           labels: {
             color: axisColor, // <--- Legenden-Textfarbe
           },
@@ -175,8 +189,8 @@ export class SpieltagComponent implements OnInit {
     // Spieltagverlauf
     this.formkurveOptions = this.chartTheme.getLineChartOptions({});
     this.spieltagverlaufService.getSeasons$().subscribe((seasons: string[]) => {
-      this.spieltagverlaufSeasons = seasons;
-      const latest = seasons[seasons.length - 1] ?? '';
+      this.spieltagverlaufSeasons = [...seasons].reverse();
+      const latest = this.spieltagverlaufSeasons[0] ?? '';
       this.selectedSpieltagverlaufSeason = latest;
       if (latest) {
         this.spieltagverlaufService
@@ -191,13 +205,9 @@ export class SpieltagComponent implements OnInit {
     // Saisonwertungen (Top Jahreswerte)
     this.statsService.loadEnrichedStats().subscribe(() => {
       this.seasonSelector.getSeasons$().subscribe((seasons) => {
-        this.topYearsSeasons = [
-          { label: 'All-Time', value: 'All-Time' },
-          ...seasons.map((s) => ({ label: s, value: s })),
-        ];
+        this.topYearsSeasons = seasons.map((s) => ({ label: s, value: s }));
         if (!this.selectedTopYearsSeason && this.topYearsSeasons.length > 0) {
-          this.selectedTopYearsSeason =
-            this.topYearsSeasons[1]?.value || this.topYearsSeasons[0].value;
+          this.selectedTopYearsSeason = this.topYearsSeasons[0].value;
           this.updateTopYears();
         }
       });
