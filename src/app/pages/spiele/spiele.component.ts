@@ -52,7 +52,7 @@ export class SpieleComponent implements OnInit {
 
     this.seasons = Array.from(
       new Set(this.alleSpiele.map((s) => s.season)),
-    ).sort();
+    ).sort().reverse();
     this.matchdays = Array.from(
       new Set(this.alleSpiele.map((s) => s.matchday)),
     ).sort((a, b) => a - b);

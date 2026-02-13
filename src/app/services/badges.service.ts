@@ -357,6 +357,25 @@ export class BadgesService {
     this.chipWinnersList.sort((a, b) => b.wins - a.wins);
   }
 
+  /** Komplette Badge-Historie eines Spielers (alle Spieltage) */
+  getPlayerBadgeHistory(playerId: number): PlayerBadge[] {
+    const badgeCounts = new Map<string, number>();
+    for (const award of this.allAwards) {
+      if (award.playerId === playerId) {
+        badgeCounts.set(award.badgeName, (badgeCounts.get(award.badgeName) || 0) + 1);
+      }
+    }
+
+    return Array.from(badgeCounts.entries())
+      .map(([name, count]) => {
+        const def = this.badgeDefinitions.find((b) => b.name === name);
+        if (!def) return null;
+        return { badge: def, count };
+      })
+      .filter((b): b is PlayerBadge => b !== null)
+      .sort((a, b) => b.count - a.count);
+  }
+
   /** Nur Badges vom letzten Spieltag (fürs Profil) */
   getPlayerCurrentBadges(playerId: number): PlayerBadge[] {
     const latestAwards = this.allAwards.filter(

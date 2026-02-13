@@ -197,8 +197,8 @@ export class SpielerstatistikenComponent implements OnInit {
 
     // Optionen: alle Saisons (absteigend), dann All‑Time am Ende
     this.seasons = [
-      ...list.map((s) => ({ label: s, value: s })),
       { label: 'All-Time', value: null },
+      ...list.map((s) => ({ label: s, value: s })),
     ];
   }
 

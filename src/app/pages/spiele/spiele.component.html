@@ -53,7 +53,7 @@
 </div>
 
 <div *ngIf="filteredSpiele.length === 0; else spieleListe" class="no-results mt-8">
-<div class="text-left text-mg text-gray-400">
+<div class="text-left text-mg">
   <span>
     Setze einen Filter (Saison, Spieler, etc.), um Spiele zu sehen.<br>
   </span>
@@ -79,7 +79,7 @@
             >
               {{ players.left }}
             </span>
-            <span class="text-gray-400 text-sm">
+            <span class="text-sm">
               {{
                 spieltag[
                   players.left === spieltag.player1
@@ -122,7 +122,7 @@
             >
               {{ players.right }}
             </span>
-            <span class="text-gray-400 text-sm">
+            <span class="text-sm">
               {{
                 spieltag[
                   players.right === spieltag.player1

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, RouterModule } from '@angular/router';
 import { Card } from 'primeng/card';
-import { FieldsetModule } from 'primeng/fieldset';
+import { AccordionModule } from 'primeng/accordion';
 import { TagModule } from 'primeng/tag';
 import { TabsModule } from 'primeng/tabs';
 import { NgClass, NgFor, NgIf } from '@angular/common';
@@ -40,7 +40,7 @@ import { StatRow } from '../../services/stats.service';
   imports: [
     Card,
     RouterModule,
-    FieldsetModule,
+    AccordionModule,
     TagModule,
     TabsModule,
     NgIf,
@@ -112,6 +112,7 @@ export class ProfilComponent implements OnInit {
 
   // Abzeichen
   playerBadges: PlayerBadge[] = [];
+  badgeHistory: PlayerBadge[] = [];
 
   // Bestleistungen
   selectedTimePeriod: TimePeriod = 'all-time';
@@ -147,6 +148,7 @@ export class ProfilComponent implements OnInit {
 
     this.player = this.playersService.getPlayer(this.playerId);
     this.playerBadges = this.badgesService.getPlayerCurrentBadges(this.playerId);
+    this.badgeHistory = this.badgesService.getPlayerBadgeHistory(this.playerId);
 
     // Build matchdays list (1-10 + All)
     this.buildMatchdays();

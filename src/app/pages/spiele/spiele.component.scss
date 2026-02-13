@@ -1,0 +1,18 @@
+:host ::ng-deep {
+  .p-multiselect,
+  .p-select {
+    background: var(--surface-card);
+    border-color: var(--surface-border);
+    color: var(--text-color);
+  }
+
+  .p-multiselect-label,
+  .p-select-label {
+    color: var(--text-color);
+  }
+
+  .p-multiselect .p-multiselect-label.p-placeholder,
+  .p-select .p-select-label.p-placeholder {
+    color: var(--text-color-secondary);
+  }
+}
