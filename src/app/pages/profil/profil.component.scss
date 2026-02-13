@@ -391,7 +391,7 @@
 .best-tile-label {
   font-size: 0.85rem;
   font-weight: 600;
-  color: var(--text-color-secondary);
+  color: var(--text-color) !important;
   text-transform: uppercase;
   letter-spacing: 0.5px;
   text-align: center;

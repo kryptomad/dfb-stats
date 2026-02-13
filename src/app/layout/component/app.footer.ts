@@ -9,7 +9,7 @@ import { RouterLink } from '@angular/router';
     <footer class="app-footer">
       <div>© {{ year }} Dartfreunde Borchen n.e.V.</div>
       <div>
-        <a routerLink="pages/impressum">Impressum</a> ·
+        <a routerLink="pages/impressum">Impressum</a> <span style="color: var(--primary-color)">·</span>
         <a routerLink="pages/datenschutz">Datenschutz</a>
       </div>
     </footer>
