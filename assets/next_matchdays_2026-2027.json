@@ -1,0 +1,182 @@
+[
+  {
+    "season": "2026/2027",
+    "matchday": 1,
+    "boardA": [
+      { "game": 1, "player1": "Martin", "player2": "Frank" },
+      { "game": 2, "player1": "Franz-Josef", "player2": "Uwe" },
+      { "game": 3, "player1": "Heiner", "player2": "Martin" },
+      { "game": 4, "player1": "Frank", "player2": "Franz-Josef" },
+      { "game": 5, "player1": "Uwe", "player2": "Heiner" }
+    ],
+    "boardB": [
+      { "game": 1, "player1": "Franz-Josef", "player2": "Heiner" },
+      { "game": 2, "player1": "Heiner", "player2": "Frank" },
+      { "game": 3, "player1": "Frank", "player2": "Uwe" },
+      { "game": 4, "player1": "Uwe", "player2": "Martin" },
+      { "game": 5, "player1": "Martin", "player2": "Franz-Josef" }
+    ]
+  },
+  {
+    "season": "2026/2027",
+    "matchday": 2,
+    "boardA": [
+      { "game": 1, "player1": "Martin", "player2": "Franz-Josef" },
+      { "game": 2, "player1": "Heiner", "player2": "Uwe" },
+      { "game": 3, "player1": "Frank", "player2": "Martin" },
+      { "game": 4, "player1": "Franz-Josef", "player2": "Heiner" },
+      { "game": 5, "player1": "Uwe", "player2": "Frank" }
+    ],
+    "boardB": [
+      { "game": 1, "player1": "Heiner", "player2": "Frank" },
+      { "game": 2, "player1": "Frank", "player2": "Franz-Josef" },
+      { "game": 3, "player1": "Franz-Josef", "player2": "Uwe" },
+      { "game": 4, "player1": "Uwe", "player2": "Martin" },
+      { "game": 5, "player1": "Martin", "player2": "Heiner" }
+    ]
+  },
+  {
+    "season": "2026/2027",
+    "matchday": 3,
+    "boardA": [
+      { "game": 1, "player1": "Uwe", "player2": "Franz-Josef" },
+      { "game": 2, "player1": "Martin", "player2": "Frank" },
+      { "game": 3, "player1": "Heiner", "player2": "Uwe" },
+      { "game": 4, "player1": "Franz-Josef", "player2": "Martin" },
+      { "game": 5, "player1": "Frank", "player2": "Heiner" }
+    ],
+    "boardB": [
+      { "game": 1, "player1": "Martin", "player2": "Heiner" },
+      { "game": 2, "player1": "Heiner", "player2": "Franz-Josef" },
+      { "game": 3, "player1": "Franz-Josef", "player2": "Frank" },
+      { "game": 4, "player1": "Frank", "player2": "Uwe" },
+      { "game": 5, "player1": "Uwe", "player2": "Martin" }
+    ]
+  },
+  {
+    "season": "2026/2027",
+    "matchday": 4,
+    "boardA": [
+      { "game": 1, "player1": "Heiner", "player2": "Uwe" },
+      { "game": 2, "player1": "Franz-Josef", "player2": "Martin" },
+      { "game": 3, "player1": "Frank", "player2": "Heiner" },
+      { "game": 4, "player1": "Uwe", "player2": "Franz-Josef" },
+      { "game": 5, "player1": "Martin", "player2": "Frank" }
+    ],
+    "boardB": [
+      { "game": 1, "player1": "Franz-Josef", "player2": "Frank" },
+      { "game": 2, "player1": "Frank", "player2": "Uwe" },
+      { "game": 3, "player1": "Uwe", "player2": "Martin" },
+      { "game": 4, "player1": "Martin", "player2": "Heiner" },
+      { "game": 5, "player1": "Heiner", "player2": "Franz-Josef" }
+    ]
+  },
+  {
+    "season": "2026/2027",
+    "matchday": 5,
+    "boardA": [
+      { "game": 1, "player1": "Uwe", "player2": "Martin" },
+      { "game": 2, "player1": "Frank", "player2": "Heiner" },
+      { "game": 3, "player1": "Franz-Josef", "player2": "Uwe" },
+      { "game": 4, "player1": "Martin", "player2": "Frank" },
+      { "game": 5, "player1": "Heiner", "player2": "Franz-Josef" }
+    ],
+    "boardB": [
+      { "game": 1, "player1": "Frank", "player2": "Franz-Josef" },
+      { "game": 2, "player1": "Franz-Josef", "player2": "Martin" },
+      { "game": 3, "player1": "Martin", "player2": "Heiner" },
+      { "game": 4, "player1": "Heiner", "player2": "Uwe" },
+      { "game": 5, "player1": "Uwe", "player2": "Frank" }
+    ]
+  },
+  {
+    "season": "2026/2027",
+    "matchday": 6,
+    "boardA": [
+      { "game": 1, "player1": "Heiner", "player2": "Uwe" },
+      { "game": 2, "player1": "Martin", "player2": "Frank" },
+      { "game": 3, "player1": "Franz-Josef", "player2": "Heiner" },
+      { "game": 4, "player1": "Uwe", "player2": "Martin" },
+      { "game": 5, "player1": "Frank", "player2": "Franz-Josef" }
+    ],
+    "boardB": [
+      { "game": 1, "player1": "Martin", "player2": "Franz-Josef" },
+      { "game": 2, "player1": "Franz-Josef", "player2": "Uwe" },
+      { "game": 3, "player1": "Uwe", "player2": "Frank" },
+      { "game": 4, "player1": "Frank", "player2": "Heiner" },
+      { "game": 5, "player1": "Heiner", "player2": "Martin" }
+    ]
+  },
+  {
+    "season": "2026/2027",
+    "matchday": 7,
+    "boardA": [
+      { "game": 1, "player1": "Frank", "player2": "Heiner" },
+      { "game": 2, "player1": "Uwe", "player2": "Franz-Josef" },
+      { "game": 3, "player1": "Martin", "player2": "Frank" },
+      { "game": 4, "player1": "Heiner", "player2": "Uwe" },
+      { "game": 5, "player1": "Franz-Josef", "player2": "Martin" }
+    ],
+    "boardB": [
+      { "game": 1, "player1": "Uwe", "player2": "Martin" },
+      { "game": 2, "player1": "Martin", "player2": "Heiner" },
+      { "game": 3, "player1": "Heiner", "player2": "Franz-Josef" },
+      { "game": 4, "player1": "Franz-Josef", "player2": "Frank" },
+      { "game": 5, "player1": "Frank", "player2": "Uwe" }
+    ]
+  },
+  {
+    "season": "2026/2027",
+    "matchday": 8,
+    "boardA": [
+      { "game": 1, "player1": "Franz-Josef", "player2": "Heiner" },
+      { "game": 2, "player1": "Frank", "player2": "Martin" },
+      { "game": 3, "player1": "Uwe", "player2": "Franz-Josef" },
+      { "game": 4, "player1": "Heiner", "player2": "Frank" },
+      { "game": 5, "player1": "Martin", "player2": "Uwe" }
+    ],
+    "boardB": [
+      { "game": 1, "player1": "Frank", "player2": "Uwe" },
+      { "game": 2, "player1": "Uwe", "player2": "Heiner" },
+      { "game": 3, "player1": "Heiner", "player2": "Martin" },
+      { "game": 4, "player1": "Martin", "player2": "Franz-Josef" },
+      { "game": 5, "player1": "Franz-Josef", "player2": "Frank" }
+    ]
+  },
+  {
+    "season": "2026/2027",
+    "matchday": 9,
+    "boardA": [
+      { "game": 1, "player1": "Franz-Josef", "player2": "Frank" },
+      { "game": 2, "player1": "Uwe", "player2": "Heiner" },
+      { "game": 3, "player1": "Martin", "player2": "Franz-Josef" },
+      { "game": 4, "player1": "Frank", "player2": "Uwe" },
+      { "game": 5, "player1": "Heiner", "player2": "Martin" }
+    ],
+    "boardB": [
+      { "game": 1, "player1": "Uwe", "player2": "Martin" },
+      { "game": 2, "player1": "Martin", "player2": "Frank" },
+      { "game": 3, "player1": "Frank", "player2": "Heiner" },
+      { "game": 4, "player1": "Heiner", "player2": "Franz-Josef" },
+      { "game": 5, "player1": "Franz-Josef", "player2": "Uwe" }
+    ]
+  },
+  {
+    "season": "2026/2027",
+    "matchday": 10,
+    "boardA": [
+      { "game": 1, "player1": "Frank", "player2": "Martin" },
+      { "game": 2, "player1": "Heiner", "player2": "Franz-Josef" },
+      { "game": 3, "player1": "Uwe", "player2": "Frank" },
+      { "game": 4, "player1": "Martin", "player2": "Heiner" },
+      { "game": 5, "player1": "Franz-Josef", "player2": "Uwe" }
+    ],
+    "boardB": [
+      { "game": 1, "player1": "Heiner", "player2": "Uwe" },
+      { "game": 2, "player1": "Uwe", "player2": "Martin" },
+      { "game": 3, "player1": "Martin", "player2": "Franz-Josef" },
+      { "game": 4, "player1": "Franz-Josef", "player2": "Frank" },
+      { "game": 5, "player1": "Frank", "player2": "Heiner" }
+    ]
+  }
+]
