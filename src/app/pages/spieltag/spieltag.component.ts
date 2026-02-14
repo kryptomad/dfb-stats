@@ -181,7 +181,9 @@ export class SpieltagComponent implements OnInit {
           grid: { display: false },
           ticks: {
             color: axisColor, // <--- Y-Achsen-Beschriftung
+            stepSize: 40,
           },
+          max: 120,
         },
       },
     };

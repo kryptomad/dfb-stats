@@ -1,4 +1,4 @@
-import { Component, computed, inject, Input, signal } from '@angular/core';
+import { Component, computed, inject, signal } from '@angular/core';
 import { LastStatsService } from '../../services/lastStats.service';
 import { NextMatchDayService } from '../../services/nextMatchDay.service';
 import { PlayersService } from '../../services/players.service';
@@ -13,8 +13,8 @@ import { AvatarModule } from 'primeng/avatar';
   templateUrl: './startseite.component.html',
   styleUrls: ['./startseite.component.scss'],
   standalone: true,
-  imports: [TableModule, NgClass, Card, NgForOf, ChipModule, NgOptimizedImage, AvatarModule],
-  providers: [NextMatchDayService, NextMatchDayService, LastStatsService],
+  imports: [TableModule, NgClass, NgIf, Card, NgForOf, ChipModule, NgOptimizedImage, AvatarModule],
+  providers: [NextMatchDayService, LastStatsService],
 })
 export class StartseiteComponent {
   private _nextMatchdayService = inject(NextMatchDayService);
@@ -31,6 +31,11 @@ export class StartseiteComponent {
   location = computed(() => this._nextMatchday()?.location);
   image = computed(() => this._nextMatchday()?.image);
   games = computed(() => this._nextMatchday()?.games);
+  boardA = computed(() => this._nextMatchday()?.boardA);
+  boardB = computed(() => this._nextMatchday()?.boardB);
+
+  // Upcoming season preview (v2 format)
+  upcoming = this._nextMatchdayService.loadUpcomingV2();
 
   private _lastStatsService = inject(LastStatsService);
   private _lastStats = this._lastStatsService.loadLastStats();
