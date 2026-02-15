@@ -1,61 +1,63 @@
-.card-content {
-  display: flex;
-  flex-direction: row;
-  position: relative;
-  min-height: 150px; // Höher, damit Bild besser wirkt!
+:host ::ng-deep .advanced-card .p-card-body {
+  padding: 0;
 }
 
-.card-info {
-  z-index: 2;
-  padding: 0.5rem 0.5rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.7rem;
-  flex: 3; // Info etwas breiter als Bild
+:host ::ng-deep .advanced-card .p-card-content {
+  padding: 0;
 }
 
-.card-bgimg {
-  position: relative;
-  flex: 1.5; // nimmt ~35% der Card ein, anpassen wie du willst
-  min-width: 150px;
-  max-width: 300px;
-  height: 100%;
-  display: flex;
-  align-items: stretch;
+.card-header-img {
+  width: 100%;
   overflow: hidden;
+  border-radius: var(--p-card-border-radius, 12px) var(--p-card-border-radius, 12px) 0 0;
 
   img {
     width: 100%;
-    height: 100%;
-    object-fit: contain; // Bild IMMER ganz sichtbar!
-    opacity: 0.79; // Bild leicht transparent, wirkt softer
-    position: relative; // NICHT absolute, sonst springt das Bild
-    z-index: 1;
-    margin-right: 0;
-    background: #f7fafd; // oder passendes Card-Hintergrund
+    height: 200px;
+    object-fit: cover;
     display: block;
-    border-radius: 8px;
   }
+}
 
-  .gradient {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 2;
-    pointer-events: none;
-    background: linear-gradient(
-      90deg,
-      var(--surface-card, #fff) 0%,
-      rgba(255, 255, 255, 0) 80%
-    );
+.card-info {
+  padding: 1rem 1.25rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.card-info-left {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.card-info-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.5rem;
+}
+
+.modus-icons {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.4rem;
+  font-size: 2rem;
+  font-weight: 500;
+  color: gold;
+
+  i {
+    margin-right: 0.7rem;
+    font-size: 1.3rem;
   }
 }
 
 .label {
   /*color: #7d8ca7;*/
-  color: var(--text-color-secondary);
+  color: var(--primary-color);
   font-size: 0.97rem;
 }
 

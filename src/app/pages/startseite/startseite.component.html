@@ -1,7 +1,16 @@
 <h2 id="naechster-abend">Nächster Abend</h2>
-<p-card class="grid gap-4 grid-cols-1 sm:grid-cols-1">
-  <div class="card-content">
-    <div class="card-info">
+<p-card styleClass="advanced-card">
+  <div class="card-header-img">
+    <img
+      ngSrc="assets/locations/{{ location() }}"
+      alt="Spielort"
+      width="800"
+      height="400"
+      priority
+    />
+  </div>
+  <div class="card-info">
+    <div class="card-info-left">
       <div class="label">Gastgeber</div>
       <div class="profile-row">
         <p-chip
@@ -12,25 +21,18 @@
         />
       </div>
       <div class="label">Wann</div>
-      <div class="date-time">{{ datum() }}<br>um {{ zeit() }}</div>
-      <div class="label">Modus</div>
-      <div class="icons">
-        <i class="fa fa-coins" [ngClass]="{ inactive: gelddarten() }"></i>
-        <i
-          class="fa fa-trophy ml-5"
-          [ngClass]="{ inactive: oskardarten() }"
-        ></i>
-      </div>
+      <div class="date-time">{{ datum() }} um {{ zeit() }}</div>
     </div>
-    <div class="card-bgimg">
-      <img
-        ngSrc="assets/locations/{{ location() }}"
-        alt="Spielort"
-        height="749"
-        width="526"
-        priority
-      />
-      <div class="gradient"></div>
+    <div class="card-info-right">
+      <div class="label">Modus</div>
+      <div class="modus-icons">
+        <div [ngClass]="{ inactive: gelddarten() }">
+        <i class="fa fa-coins"></i>
+        </div>
+        <div [ngClass]="{ inactive: oskardarten() }">
+        <i class="fa fa-trophy"></i>
+        </div>
+      </div>
     </div>
   </div>
 </p-card>
