@@ -225,11 +225,14 @@
   flex-direction: column;
 }
 
+// 6-column grid: [Nr] [Avatar1] [Name1 right] [VS] [Name2 left] [Avatar2]
 .board-row {
   display: grid;
-  grid-template-columns: 2.5rem 1fr auto 1fr;
+  grid-template-columns: 2.5rem 2.2rem 1fr auto 1fr 2.2rem;
   align-items: center;
-  padding: 0.5rem 0.25rem;
+  padding: 0.5rem 0.5rem 0.5rem 0.25rem;
+  column-gap: 0.5rem;
+  row-gap: 0;
   border-bottom: 1px solid var(--surface-border, rgba(255,255,255,0.08));
 
   &:last-child {
@@ -252,28 +255,37 @@
   align-items: center;
 }
 
-.game-nr {
+.col-nr {
   justify-content: center;
   font-weight: 600;
   color: var(--text-color-secondary);
   font-size: 0.9rem;
+  margin-right: 0.3rem;
 }
 
-.player-col {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
+.col-avatar {
+  justify-content: center;
 }
 
-.player-name-text {
+.col-name-right {
+  justify-content: flex-end;
+  text-align: right;
   font-weight: 500;
   font-size: 0.95rem;
   white-space: nowrap;
 }
 
-.vs-col {
+.col-name-left {
+  justify-content: flex-start;
+  text-align: left;
+  font-weight: 500;
+  font-size: 0.95rem;
+  white-space: nowrap;
+}
+
+.col-vs {
   justify-content: center;
-  padding: 0 0.4rem;
+  padding: 0 0.2rem;
 }
 
 .vs-badge-sm {
@@ -287,6 +299,28 @@
   padding: 0.15rem 0.4rem;
   border-radius: 0.4rem;
   min-width: 1.8rem;
+}
+
+// V1: ohne Spiel-Spalte, mit Schreiber
+.board-row-v1 {
+  display: grid;
+  grid-template-columns: 2.2rem 1fr auto 1fr 2.2rem 6rem;
+  align-items: center;
+  padding: 0.5rem 0.5rem;
+  column-gap: 0.5rem;
+  border-bottom: 1px solid var(--surface-border, rgba(255,255,255,0.08));
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.col-writer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.3rem;
+  padding-left: 0.5rem;
 }
 
 :host ::ng-deep .board-avatar .p-avatar {

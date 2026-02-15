@@ -3,7 +3,7 @@ import { LastStatsService } from '../../services/lastStats.service';
 import { NextMatchDayService } from '../../services/nextMatchDay.service';
 import { PlayersService } from '../../services/players.service';
 import { TableModule } from 'primeng/table';
-import { NgClass, NgForOf, NgIf, NgOptimizedImage } from '@angular/common';
+import { NgClass, NgForOf, NgIf, NgOptimizedImage, NgTemplateOutlet } from '@angular/common';
 import { Card } from 'primeng/card';
 import { ChipModule } from 'primeng/chip';
 import { AvatarModule } from 'primeng/avatar';
@@ -13,7 +13,7 @@ import { AvatarModule } from 'primeng/avatar';
   templateUrl: './startseite.component.html',
   styleUrls: ['./startseite.component.scss'],
   standalone: true,
-  imports: [TableModule, NgClass, NgIf, Card, NgForOf, ChipModule, NgOptimizedImage, AvatarModule],
+  imports: [TableModule, NgClass, NgIf, Card, NgForOf, ChipModule, NgOptimizedImage, AvatarModule, NgTemplateOutlet],
   providers: [NextMatchDayService, LastStatsService],
 })
 export class StartseiteComponent {
