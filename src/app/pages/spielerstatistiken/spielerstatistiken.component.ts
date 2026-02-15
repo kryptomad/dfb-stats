@@ -4,6 +4,7 @@ import { HttpClient } from '@angular/common/http';
 import { ActivatedRoute, RouterModule } from '@angular/router';
 import { ViewportScroller } from '@angular/common';
 import { ChartModule } from 'primeng/chart';
+import ChartDataLabels from 'chartjs-plugin-datalabels';
 import { Card } from 'primeng/card';
 import { DropdownModule } from 'primeng/dropdown';
 import { ToggleButtonModule } from 'primeng/togglebutton';
@@ -65,6 +66,7 @@ type Game = {
   styleUrls: ['./spielerstatistiken.component.scss'],
 })
 export class SpielerstatistikenComponent implements OnInit {
+  radarPlugins = [ChartDataLabels];
   radarData: any = { labels: [], datasets: [] };
   radarOptions: any = {
     responsive: true,

@@ -8,7 +8,7 @@
       shape="circle"
       size="normal"
     ></p-avatar>
-    <span class="font-semibold w-24 shrink-0 truncate">{{ player.name }}</span>
+    <a [routerLink]="['/pages/profil', player.playerId]" class="font-semibold w-24 shrink-0 truncate text-color no-underline hover:text-primary">{{ player.name }}</a>
     <div class="flex-1">
       <p-progressbar [value]="player.chips" [showValue]="false" [style]="{height: '20px'}">
         <ng-template #content let-value>
@@ -27,7 +27,7 @@
       shape="circle"
       size="large"
     ></p-avatar>
-      <span class="font-bold">{{ winner.name }}</span>
+      <a [routerLink]="['/pages/profil', winner.playerId]" class="font-bold text-color no-underline hover:text-primary">{{ winner.name }}</a>
       <span class="ml-auto font-bold">
         {{ winner.wins }}x 
         <i class="fa-solid fa-trophy text-yellow-500"></i>

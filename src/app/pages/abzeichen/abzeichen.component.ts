@@ -1,4 +1,5 @@
 import { Component, inject } from '@angular/core';
+import { RouterModule } from '@angular/router';
 import { TableModule } from 'primeng/table';
 import { Card } from 'primeng/card';
 import { ChipModule } from 'primeng/chip';
@@ -26,6 +27,7 @@ import { BadgesService, BadgeWithHolder, ChipWinner } from '../../services/badge
     FieldsetModule,
     ProgressBarModule,
     ToastModule,
+    RouterModule,
   ],
   templateUrl: './abzeichen.component.html',
   styleUrl: './abzeichen.component.scss',

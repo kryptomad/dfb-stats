@@ -80,7 +80,7 @@ export class ChartThemeService {
       responsive: true,
       plugins: {
         legend: { labels: { color: text } },
-        datalabels: { color: text },
+        datalabels: { display: true, color: text },
       },
       scales: {
         r: {
