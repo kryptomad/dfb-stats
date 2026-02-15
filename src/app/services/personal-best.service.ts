@@ -678,12 +678,8 @@ export class PersonalBestService {
       // Only count legs the player actually won
       if (leg.leg_winner_id !== playerId) return false;
 
+      // Determine if player is p1 or p2 (player1_id is always the first leg's starter)
       const isPlayer1 = leg.player1_id === playerId;
-      const isPlayer2 = leg.player2_id === playerId;
-
-      if (!isPlayer1 && !isPlayer2) return false;
-
-      // Get darts for this player
       const darts = isPlayer1 ? leg.p1_darts_leg : leg.p2_darts_leg;
 
       // Only include legs where darts data exists and is valid

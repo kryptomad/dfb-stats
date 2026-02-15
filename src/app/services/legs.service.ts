@@ -128,8 +128,8 @@ export class LegsService implements SeasonDataSource {
           season: game.season,
           matchday: game.matchday,
           leg_number: leg.leg_number,
-          player1_id: game.legs[0].starter_id, // Annahme: player1_id ist der Starter
-          player2_id: game.legs.find(l => l.starter_id !== leg.starter_id)?.starter_id || 0,
+          player1_id: game.legs[0].starter_id,
+          player2_id: game.legs.find(l => l.starter_id !== game.legs[0].starter_id)?.starter_id || 0,
           p1_score: leg.rounds[leg.rounds.length - 1]?.p1_score || null,
           p1_left: leg.rounds[leg.rounds.length - 1]?.p1_left || null,
           p2_score: leg.rounds[leg.rounds.length - 1]?.p2_score || null,
