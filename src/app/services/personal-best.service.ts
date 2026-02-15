@@ -673,8 +673,11 @@ export class PersonalBestService {
     // Get all legs from LegsService
     const allLegs = this.legsService.getLegs();
 
-    // Filter legs for this player and where darts data exists
+    // Filter legs where this player WON and darts data exists
     const playerLegs = allLegs.filter(leg => {
+      // Only count legs the player actually won
+      if (leg.leg_winner_id !== playerId) return false;
+
       const isPlayer1 = leg.player1_id === playerId;
       const isPlayer2 = leg.player2_id === playerId;
 

@@ -64,6 +64,16 @@ export class AppMenu implements OnInit {
         ],
       },
       {
+        label: 'Spieler',
+        items: [
+          {
+            label: 'Aktive Spieler',
+            icon: 'pi pi-fw pi-user',
+            routerLink: 'pages/spieler',
+          },
+        ],
+      },
+      {
         label: 'Spiele',
         items: [
           {
@@ -71,16 +81,6 @@ export class AppMenu implements OnInit {
             icon: 'pi pi-fw pi-list',
             routerLink: 'pages/spiele',
             fragment: 'alle-spiele',
-          },
-        ],
-      },
-      {
-        label: 'Spieler',
-        items: [
-          {
-            label: 'Aktive Spieler',
-            icon: 'pi pi-fw pi-user',
-            routerLink: 'pages/spieler',
           },
         ],
       },
