@@ -17,6 +17,7 @@ export const LEG_STATS_FIELDS = [
   { field: 'best_leg', label: 'Best Leg' },
   { field: 'high_finish', label: 'High Finish' },
   { field: 'score_100', label: 'TON' },
+  { field: 'score_100_plus', label: '100+' },
   { field: 'score_140', label: '140s' },
   { field: 'score_180', label: '180s' },
   // Weitere Felder nach Wunsch ergänzen!
