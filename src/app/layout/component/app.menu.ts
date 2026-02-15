@@ -31,7 +31,10 @@ export class AppMenu implements OnInit {
       {
         label: 'Startseite',
         items: [
-          { label: 'Startseite', icon: 'pi pi-fw pi-home', routerLink: '/' },
+          { label: 'Nächster Abend', icon: 'pi pi-fw pi-home', routerLink: '/', fragment: 'naechster-abend' },
+          { label: 'Highlights letzter Spieltag', icon: 'pi pi-fw pi-star', routerLink: '/', fragment: 'highlights-letzter-spieltag' },
+          { label: 'Nächster Oskarabend', icon: 'pi pi-fw pi-calendar', routerLink: '/', fragment: 'naechster-oskarabend' },
+          { label: 'Vorschau nächste Saison', icon: 'pi pi-fw pi-eye', routerLink: '/', fragment: 'vorschau-naechste-saison' },
         ],
       },
       {
