@@ -17,6 +17,7 @@ EXPORT_SCRIPTS  = [
 OUTPUT_SCRIPTS  = [
     ('output/output_1_stats_last_matchday.py', 'Generiere Best Records (Last 10 Games/Matchday)'),
     ('output/output_2_best_records_alltime.py','Generiere Best Records (alltime)'),
+    ('generate_insights.py',                   'Generiere Spieler-Insights'),
 ]
 
 def log(msg: str):

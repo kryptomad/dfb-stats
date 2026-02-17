@@ -31,6 +31,7 @@ import {
   PersonalBest,
   TimePeriod,
 } from '../../services/personal-best.service';
+import { InsightsService, Insight } from '../../services/insights.service';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { StatRow } from '../../services/stats.service';
@@ -124,6 +125,9 @@ export class ProfilComponent implements OnInit {
   ];
   personalBests: PersonalBest[] = [];
 
+  // Insights
+  playerInsights: Insight[] = [];
+
   constructor(
     private route: ActivatedRoute,
     private playersService: PlayersService,
@@ -134,6 +138,7 @@ export class ProfilComponent implements OnInit {
     private playerComparison: PlayerComparisonService,
     public badgesService: BadgesService,
     private personalBestService: PersonalBestService,
+    public insightsService: InsightsService,
   ) {
     this.playerId = Number(this.route.snapshot.paramMap.get('id'));
     this.stats$ = this.statsQuery.getFullStatsBySeason$(this.selectedSeason);
@@ -149,6 +154,7 @@ export class ProfilComponent implements OnInit {
     this.player = this.playersService.getPlayer(this.playerId);
     this.playerBadges = this.badgesService.getPlayerCurrentBadges(this.playerId);
     this.badgeHistory = this.badgesService.getPlayerBadgeHistory(this.playerId);
+    this.playerInsights = this.insightsService.getRandomInsights(this.playerId, 5);
 
     // Build matchdays list (1-10 + All)
     this.buildMatchdays();

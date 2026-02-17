@@ -69,6 +69,21 @@
   </div>
   <!-- ABZEICHEN -->
 </p-card>
+
+<!-- INSIGHTS -->
+<p-card class="p-4" *ngIf="playerInsights.length > 0">
+  <div class="insights-header">
+    <i class="pi pi-sparkles text-primary mr-2"></i>
+    <span class="font-semibold text-lg">Spieler-Insights</span>
+  </div>
+  <div class="insights-list">
+    <div *ngFor="let insight of playerInsights" class="insight-item">
+      <i [class]="insightsService.getCategoryIcon(insight.category) + ' insight-icon'"></i>
+      <span class="insight-text">{{ insightsService.resolveText(insight) }}</span>
+    </div>
+  </div>
+</p-card>
+
 <p-card class="p-4">
   <p-accordion [multiple]="true" [value]="['0']">
     <p-accordion-panel value="0">
