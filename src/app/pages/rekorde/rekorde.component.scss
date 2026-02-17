@@ -59,11 +59,31 @@
   color: var(--text-color);
 }
 
+.winner-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.winner-name-row {
+  display: flex;
+  align-items: baseline;
+  gap: 0.25rem;
+}
+
 .winner-nickname {
   font-size: 0.9rem;
   color: var(--text-color-secondary);
-  margin-left: 0.25rem;
   font-style: italic;
+}
+
+.winner-season {
+  font-size: 0.8rem;
+  color: var(--text-color-secondary);
+  opacity: 0.7;
+
+  .pi-trophy {
+    font-size: 0.65rem;
+  }
 }
 
 :host ::ng-deep .p-timeline.p-timeline-vertical

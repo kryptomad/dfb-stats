@@ -14,10 +14,15 @@
         <ng-container *ngIf="event.type === 'oskarsieger' && event.player">
           <div class="timeline-card">
             <img [src]="'assets/players/' + event.player?.image" class="winner-avatar" alt="" />
-            <span class="winner-name">{{ event.player.name }}</span>
-            <span *ngIf="event.player.nickname" class="winner-nickname">
-              {{ event.player.nickname }}
-            </span>
+            <div class="winner-info">
+              <div class="winner-name-row">
+                <span class="winner-name">{{ event.player.name }}</span>
+                <span *ngIf="event.player.nickname" class="winner-nickname">
+                  {{ event.player.nickname }}
+                </span>
+              </div>
+              <div class="winner-season"><i class="pi pi-trophy"></i> {{ event.seasonLabel }}</div>
+            </div>
           </div>
           <div *ngIf="event.text" class="timeline-geschichte mt-2">
             <div class="geschichte-title">{{ event.title }}</div>

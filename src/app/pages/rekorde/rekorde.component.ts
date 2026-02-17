@@ -32,7 +32,7 @@ export interface Rekord {
 })
 export class RekordeComponent implements OnInit {
   // Oskarsieger
-  oskarsiegerRaw: { jahr: number; player_id: number }[] = [];
+  oskarsiegerRaw: { jahr: number; player_id: number; seasonLabel?: string }[] = [];
 
   // Vereinsgeschichte: Texteinträge ohne Spieler
   vereinsgeschichte: {
@@ -62,25 +62,25 @@ export class RekordeComponent implements OnInit {
     },
     {
       jahr: 2018,
-      label: '2018/2019',
-      title: 'Strukturwandel im Spielbetrieb',
-      text: '2019:<br>Im Jahr 2019 wurde das Regelwerk weiter vereinfacht. Die Bonuspunkte für Highscore und Highfinish wurden abgeschafft, sodass seitdem ausschließlich das reine Spielergebnis in die Wertung einfließt – mit dem Ziel einer klareren und besser vergleichbaren Wertung.<br><br>2018:<br>Zwei Jahre nach der Übernahme der Statistikverantwortung leitete Martin (mad) mit der Einführung der elektronischen Datenerfassung im Jahr 2018 ein neues Kapitel im Verein ein. Statt Tafel und Kreide wurden die Spiele fortan digital mit dem Tool n01 erfasst.<br>Die gewonnenen Spieldaten bilden seitdem die Grundlage für eine strukturierte Statistik, aus der nicht nur Auswertungen, sondern auch die heutige Vereins-Website entstanden ist – ein wichtiger Schritt hin zu mehr Transparenz, Übersicht und nachhaltiger Dokumentation des Vereinslebens.',
+      label: '2018',
+      title: 'Einführung Elektronischer Datenerfassung',
+      text: 'Zwei Jahre nach der Übernahme der Statistikverantwortung leitete Martin (mad) mit der Einführung der elektronischen Datenerfassung im Jahr 2018 ein neues Kapitel im Verein ein. Statt Tafel und Kreide wurden die Spiele fortan digital mit dem Tool n01 erfasst.<br>Die gewonnenen Spieldaten bilden seitdem die Grundlage für eine strukturierte Statistik, aus der nicht nur Auswertungen, sondern auch die heutige Vereins-Website entstanden ist – ein wichtiger Schritt hin zu mehr Transparenz, Übersicht und nachhaltiger Dokumentation des Vereinslebens.',
     },
     {
       jahr: 2019,
-      label: '2019/2020',
-      title: 'Dartfahrt',
-      text: 'Dartfahrt nach Spanien, Málaga. (2019)',
+      label: '2019',
+      title: 'Regelwerk vereinfacht',
+      text: 'Im Jahr 2019 wurde das Regelwerk weiter vereinfacht. Die Bonuspunkte für Highscore und Highfinish wurden abgeschafft, sodass seitdem ausschließlich das reine Spielergebnis in die Wertung einfließt – mit dem Ziel einer klareren und besser vergleichbaren Wertung.<br><br>Dartfahrt nach Spanien, Málaga. (2019)',
     },
     {
-      jahr: 2020,
-      label: '2020/2021',
+      jahr: 2021,
+      label: '2021',
       title: 'Spielbetrieb unterbrochen',
       text: 'Bedingt durch die COVID-19-Pandemie musste der Spielbetrieb für 266 Tage pausiert werden. Zwischen Spieltag 8 am 17.10.2020 und Spieltag 9 am 10.07.2021 ruhte der Spielbetrieb vollständig.<br>Erst im Sommer 2021 konnte der Spielbetrieb wieder aufgenommen werden.',
     },
     {
-      jahr: 2023,
-      label: '2023/2024',
+      jahr: 2024,
+      label: '2024',
       title: 'Dartfahrt',
       text: 'Dartfahrt nach Spanien, Calpe. (2024)',
     },
@@ -102,6 +102,7 @@ export class RekordeComponent implements OnInit {
         ...entry,
         type: 'oskarsieger' as const,
         player: this.playersService.getPlayer(entry.player_id),
+        seasonLabel: (entry as any).seasonLabel || String(entry.jahr),
         title: extra?.title || '',
         text: extra?.text || '',
       };

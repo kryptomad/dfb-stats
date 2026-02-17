@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import oskarsiegerData from '../../assets/oskarsieger.json';
 import { StatsService } from './stats.service';
 
-type Winner = { jahr: number; player_id: number; label: string };
+type Winner = { jahr: number; player_id: number; label: string; seasonLabel: string };
 
 @Injectable({ providedIn: 'root' })
 export class OskarstatsOskarsiegerTimelineService {
@@ -21,7 +21,7 @@ export class OskarstatsOskarsiegerTimelineService {
   getManualWinners(): Winner[] {
     const arr =
       (oskarsiegerData as { jahr: number; player_id: number }[]) || [];
-    return arr.map((w) => ({ ...w, label: String(w.jahr) }));
+    return arr.map((w) => ({ ...w, label: String(w.jahr), seasonLabel: String(w.jahr) }));
   }
 
   // Automatisch berechnete Sieger (OHNE Matchday-Filter)
@@ -30,22 +30,25 @@ export class OskarstatsOskarsiegerTimelineService {
     if (!Array.isArray(stats) || stats.length === 0) return [];
 
     const yearPlayerTotals = new Map<number, Map<number, number>>();
-    const yearLabel = new Map<number, string>();
+    const yearSeasonLabel = new Map<number, string>();
 
     for (const s of stats as any[]) {
-      const y = OskarstatsOskarsiegerTimelineService.parseSeasonStartYear(
-        s?.season,
-      );
+      const seasonStr = String(s?.season ?? '');
+      const y = OskarstatsOskarsiegerTimelineService.parseSeasonStartYear(seasonStr);
       if (y === null || y < startYear) continue;
+
+      // Bei Doppeljahren das Endjahr für die Timeline nehmen
+      const matches = seasonStr.match(/\b(19|20)\d{2}\b/g);
+      const displayYear = matches && matches.length > 1 ? parseInt(matches[matches.length - 1], 10) : y;
 
       const pid = Number(s?.player_id);
       const legs = Number(s?.legs_won) || 0;
       if (!Number.isFinite(pid)) continue;
 
-      if (!yearPlayerTotals.has(y)) yearPlayerTotals.set(y, new Map());
-      if (!yearLabel.has(y)) yearLabel.set(y, String(s?.season ?? y));
+      if (!yearPlayerTotals.has(displayYear)) yearPlayerTotals.set(displayYear, new Map());
+      if (!yearSeasonLabel.has(displayYear)) yearSeasonLabel.set(displayYear, seasonStr);
 
-      const totals = yearPlayerTotals.get(y)!;
+      const totals = yearPlayerTotals.get(displayYear)!;
       totals.set(pid, (totals.get(pid) || 0) + legs);
     }
 
@@ -63,7 +66,8 @@ export class OskarstatsOskarsiegerTimelineService {
         winners.push({
           jahr,
           player_id: topId,
-          label: yearLabel.get(jahr) ?? String(jahr),
+          label: String(jahr),
+          seasonLabel: yearSeasonLabel.get(jahr) ?? String(jahr),
         });
       }
     }
@@ -100,10 +104,13 @@ export class OskarstatsOskarsiegerTimelineService {
     const winners: Winner[] = [];
 
     for (const season of seasons) {
-      // Startjahr bestimmen (aus normalisiertem String, z. B. "2023/2024")
-      const m = season.match(/\b(19|20)\d{2}\b/);
-      const start = m ? parseInt(m[0], 10) : null;
-      if (start === null || start < startYear) continue;
+      // Alle Jahreszahlen aus dem Season-String extrahieren
+      const matches = season.match(/\b(19|20)\d{2}\b/g);
+      if (!matches) continue;
+      const start = parseInt(matches[0], 10);
+      // Bei Doppeljahren (z.B. "2020/2021") das Endjahr für die Timeline nehmen
+      const displayYear = matches.length > 1 ? parseInt(matches[matches.length - 1], 10) : start;
+      if (start < startYear) continue;
 
       // >=10-Spieltageregel NUR anwenden, wenn wir die Anzahl sicher kennen
       const knownMd = mdCountBySeason.get(season);
@@ -135,7 +142,7 @@ export class OskarstatsOskarsiegerTimelineService {
         }
       }
       if (topId !== -1) {
-        winners.push({ jahr: start, player_id: topId, label: season });
+        winners.push({ jahr: displayYear, player_id: topId, label: String(displayYear), seasonLabel: season });
       }
     }
 
