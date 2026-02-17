@@ -8,6 +8,7 @@ import { TableModule } from 'primeng/table';
 import { PlayersService, Player } from '../../services/players.service';
 import * as legsData from '../../../assets/legs.json';
 import * as statsData from '../../../assets/stats.json';
+import * as gamesData from '../../../assets/games.json';
 
 export const LEG_STATS_FIELDS = [
   { field: 'legs_won', label: 'Legs Won' },
@@ -33,6 +34,7 @@ export const LEG_STATS_FIELDS = [
 export class LegsComponent implements OnInit {
   LEG_STATS_FIELDS = LEG_STATS_FIELDS;
   game: any;
+  gameInfo: any;
   player1: Player | undefined;
   player2: Player | undefined;
   statsP1: any;
@@ -53,9 +55,12 @@ export class LegsComponent implements OnInit {
   loadGameAndPlayers(gameId: number) {
     const legsArray: any[] = (legsData as any).default ?? (legsData as any);
     const statsArray: any[] = (statsData as any).default ?? (statsData as any);
+    const gamesArray: any[] = (gamesData as any).default ?? (gamesData as any);
 
     this.game = legsArray.find((g) => g.game_id === gameId);
     if (!this.game) return;
+
+    this.gameInfo = gamesArray.find((g) => g.game_id === gameId);
 
     this.player1 = this.playersService.getPlayer(this.game.player1_id);
     this.player2 = this.playersService.getPlayer(this.game.player2_id);

@@ -7,6 +7,9 @@
     <div class="text-gray-400 mt-2">
       Saison {{ game.season }} – Spieltag {{ game.matchday }}
     </div>
+    <div class="text-gray-500 text-sm mt-1" *ngIf="gameInfo">
+      {{ gameInfo.game_date | date:'dd.MM.yyyy' }} um {{ gameInfo.game_time | slice:0:5 }} Uhr
+    </div>
   </div>
 
 
