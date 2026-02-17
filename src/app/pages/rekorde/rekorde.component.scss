@@ -23,6 +23,15 @@
   width: 25%;
 }
 
+// Abstand zwischen Timeline-Einträgen
+:host ::ng-deep .p-timeline-event-content {
+  padding-bottom: 1.5rem;
+}
+
+:host ::ng-deep .p-timeline-event-opposite {
+  padding-bottom: 1.5rem;
+}
+
 // Oskarsieger Timeline Styles
 .oskar-jahr {
   font-weight: 700;
@@ -60,7 +69,8 @@
 :host ::ng-deep .p-timeline.p-timeline-vertical
   .p-timeline-event:nth-child(even) .p-timeline-event-content {
   display: flex;
-  justify-content: flex-end;
+  flex-direction: column;
+  align-items: flex-end;
   text-align: right;
 }
 

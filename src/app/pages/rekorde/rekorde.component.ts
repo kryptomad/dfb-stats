@@ -53,6 +53,18 @@ export class RekordeComponent implements OnInit {
       title: 'Dartfahrt',
       text: 'Dartfahrt nach Spanien, Calpe. (2024)',
     },
+    {
+      jahr: 2019,
+      label: '2019/2020',
+      title: 'Dartfahrt',
+      text: 'Dartfahrt nach Spanien, Málaga. (2019)',
+    },
+    {
+      jahr: 2018,
+      label: '2018/2019',
+      title: 'Einführung Elektronischer Datenerfassung',
+      text: 'Mit der Einführung der elektronischen Datenerfassung im Jahr 2018 schlug der Verein ein neues Kapitel auf. Statt Tafel und Kreide wurden die Spiele fortan digital mit dem Tool n01 erfasst. Die erfassten Spieldaten bilden seitdem die Grundlage für eine strukturierte Statistik, aus der nicht nur Auswertungen, sondern auch die heutige Vereins-Website entstanden ist. Ein wichtiger Schritt hin zu mehr Transparenz, Übersicht und nachhaltiger Dokumentation des Vereinslebens.',
+    },
   ];
 
   get oskarsiegerTimeline() {
