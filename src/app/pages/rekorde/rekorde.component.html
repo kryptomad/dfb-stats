@@ -21,7 +21,7 @@
           </div>
           <div *ngIf="event.text" class="timeline-geschichte mt-2">
             <div class="geschichte-title">{{ event.title }}</div>
-            <div class="geschichte-text">{{ event.text }}</div>
+            <div class="geschichte-text" [innerHTML]="event.text"></div>
           </div>
         </ng-container>
         <ng-container *ngIf="event.type === 'oskarsieger' && !event.player">
@@ -31,7 +31,7 @@
         <ng-container *ngIf="event.type === 'geschichte'">
           <div class="timeline-geschichte">
             <div class="geschichte-title">{{ event.title }}</div>
-            <div class="geschichte-text">{{ event.text }}</div>
+            <div class="geschichte-text" [innerHTML]="event.text"></div>
           </div>
         </ng-container>
       </ng-template>

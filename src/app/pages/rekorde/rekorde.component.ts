@@ -60,10 +60,22 @@ export class RekordeComponent implements OnInit {
       text: 'Dartfahrt nach Spanien, Málaga. (2019)',
     },
     {
+      jahr: 2016,
+      label: '2016',
+      title: 'Übergabe der Statistikverantwortung',
+      text: 'Nach 19 Jahren übergab Heiner (TC) die Verantwortung für die Vereinsstatistik. Über fast zwei Jahrzehnte hinweg hatte er die statistische Dokumentation des Vereins geprägt und zuverlässig begleitet.<br><br> Mit der einstimmigen Wahl von Martin (mad) als Nachfolger wurde diese Aufgabe in neue Hände gelegt – verbunden mit dem Vertrauen, die Statistik im Sinne des Vereins weiterzuführen und weiterzuentwickeln.',
+    },
+    {
+      jahr: 2017,
+      label: '2017',
+      title: 'Veränderung im Spielsystem und im Team',
+      text: 'Im Jahr 2017 wurde ein neues Spielformat eingeführt:<br>Statt Best of 3 wurde fortan im Modus Best of 5 gespielt – ein Schritt hin zu mehr sportlicher Tiefe und Konstanz.<br><br>Nach elf Jahren Vereinszugehörigkeit gab Nico am 14.04.2017 nach dem dritten Oscarabend seinen Austritt aus dem Verein bekannt. In dieser Zeit prägte er den Verein sportlich und gehörte zu den erfolgreichsten Spielern. Seitdem besteht das Team aus fünf Mitgliedern.',
+    },
+    {
       jahr: 2018,
       label: '2018/2019',
       title: 'Einführung Elektronischer Datenerfassung',
-      text: 'Mit der Einführung der elektronischen Datenerfassung im Jahr 2018 schlug der Verein ein neues Kapitel auf. Statt Tafel und Kreide wurden die Spiele fortan digital mit dem Tool n01 erfasst. Die erfassten Spieldaten bilden seitdem die Grundlage für eine strukturierte Statistik, aus der nicht nur Auswertungen, sondern auch die heutige Vereins-Website entstanden ist. Ein wichtiger Schritt hin zu mehr Transparenz, Übersicht und nachhaltiger Dokumentation des Vereinslebens.',
+      text: 'Zwei Jahre nach der Übernahme der Statistikverantwortung leitete Martin (mad) mit der Einführung der elektronischen Datenerfassung im Jahr 2018 ein neues Kapitel im Verein ein. Statt Tafel und Kreide wurden die Spiele fortan digital mit dem Tool n01 erfasst.<br>Die gewonnenen Spieldaten bilden seitdem die Grundlage für eine strukturierte Statistik, aus der nicht nur Auswertungen, sondern auch die heutige Vereins-Website entstanden ist – ein wichtiger Schritt hin zu mehr Transparenz, Übersicht und nachhaltiger Dokumentation des Vereinslebens.',
     },
   ];
 

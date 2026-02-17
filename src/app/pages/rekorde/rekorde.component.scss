@@ -25,11 +25,11 @@
 
 // Abstand zwischen Timeline-Einträgen
 :host ::ng-deep .p-timeline-event-content {
-  padding-bottom: 1.5rem;
+  padding-bottom: 1.5rem !important;
 }
 
 :host ::ng-deep .p-timeline-event-opposite {
-  padding-bottom: 1.5rem;
+  padding-bottom: 1.5rem !important;
 }
 
 // Oskarsieger Timeline Styles
