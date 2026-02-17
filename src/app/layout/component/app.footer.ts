@@ -8,6 +8,7 @@ import { RouterLink } from '@angular/router';
   template: `
     <footer class="app-footer">
       <div>© {{ year }} Dartfreunde Borchen n.e.V.</div>
+      <div class="data-note">Elektronische Datenerfassung seit 2018 via n01</div>
       <div>
         <a routerLink="pages/impressum">Impressum</a> <span style="color: var(--primary-color)">·</span>
         <a routerLink="pages/datenschutz">Datenschutz</a>
@@ -21,6 +22,11 @@ import { RouterLink } from '@angular/router';
         color: var(--text-color-secondary);
         padding: 1rem 0;
         font-size: 0.95rem;
+      }
+      .data-note {
+        font-size: 0.8rem;
+        opacity: 0.6;
+        margin: 0.25rem 0;
       }
       .app-footer a {
         color: var(--text-color-secondary);

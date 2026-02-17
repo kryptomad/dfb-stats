@@ -76,3 +76,21 @@
   .p-timeline-event:nth-child(odd) .timeline-card {
   flex-direction: row;
 }
+
+// Vereinsgeschichte Text-Einträge
+.timeline-geschichte {
+  max-width: 320px;
+}
+
+.geschichte-title {
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--primary-color);
+  margin-bottom: 0.35rem;
+}
+
+.geschichte-text {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--text-color);
+}

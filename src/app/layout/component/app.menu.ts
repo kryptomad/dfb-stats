@@ -172,12 +172,6 @@ export class AppMenu implements OnInit {
             icon: 'pi pi-fw pi-trophy',
             items: [
               {
-                label: 'Oskarsieger',
-                icon: 'pi pi-fw pi-crown',
-                routerLink: 'pages/rekorde',
-                fragment: 'oskarsieger',
-              },
-              {
                 label: 'Gesamtwertungen',
                 icon: 'pi pi-fw pi-trophy',
                 routerLink: 'pages/rekorde',
@@ -208,6 +202,12 @@ export class AppMenu implements OnInit {
       {
         label: 'Verein',
         items: [
+          {
+            label: 'Vereinsgeschichte',
+            icon: 'pi pi-fw pi-crown',
+            routerLink: 'pages/rekorde',
+            fragment: 'vereinsgeschichte',
+          },
           {
             label: 'Regelwerk',
             icon: 'pi pi-fw pi-book',

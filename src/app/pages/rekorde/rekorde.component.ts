@@ -20,18 +20,74 @@ export interface Rekord {
   templateUrl: './rekorde.component.html',
   styleUrls: ['./rekorde.component.scss'],
   standalone: true,
-  imports: [CommonModule, NgIf, Card, FieldsetModule, TableModule, TimelineModule],
+  imports: [
+    CommonModule,
+    NgIf,
+    Card,
+    FieldsetModule,
+    TableModule,
+    TimelineModule,
+  ],
   providers: [],
 })
 export class RekordeComponent implements OnInit {
   // Oskarsieger
   oskarsiegerRaw: { jahr: number; player_id: number }[] = [];
 
+  // Vereinsgeschichte: Texteinträge ohne Spieler
+  vereinsgeschichte: {
+    jahr: number;
+    label: string;
+    title: string;
+    text: string;
+  }[] = [
+    {
+      jahr: 1993,
+      label: '1993',
+      title: 'Alles beginnt in Nordborchen',
+      text: 'Mit viel Leidenschaft für den Dartsport – und einer ebenso großen Begeisterung für ein kühles Bier – gründeten Uwe, Franz-Josef und Frank 1993 in Nordborchen den Verein. Damit legten sie den Grundstein für die heutigen Dartfreunde Borchen n. e. V.',
+    },
+    {
+      jahr: 2023,
+      label: '2023/2024',
+      title: 'Dartfahrt',
+      text: 'Dartfahrt nach Spanien, Calpe. (2024)',
+    },
+  ];
+
   get oskarsiegerTimeline() {
-    return this.oskarsiegerRaw.map((entry) => ({
-      ...entry,
-      player: this.playersService.getPlayer(entry.player_id),
-    }));
+    // Vereinsgeschichte nach Jahr indexieren
+    const geschichteByJahr = new Map<number, { title: string; text: string }>();
+    for (const g of this.vereinsgeschichte) {
+      geschichteByJahr.set(g.jahr, { title: g.title, text: g.text });
+    }
+
+    // Oskarsieger-Einträge (ggf. mit Geschichte-Text anreichern)
+    const usedJahre = new Set<number>();
+    const oskar = this.oskarsiegerRaw.map((entry) => {
+      const extra = geschichteByJahr.get(entry.jahr);
+      if (extra) usedJahre.add(entry.jahr);
+      return {
+        ...entry,
+        type: 'oskarsieger' as const,
+        player: this.playersService.getPlayer(entry.player_id),
+        title: extra?.title || '',
+        text: extra?.text || '',
+      };
+    });
+
+    // Vereinsgeschichte-Einträge die KEIN Oskarsieger-Jahr haben
+    const geschichte = this.vereinsgeschichte
+      .filter((g) => !usedJahre.has(g.jahr))
+      .map((entry) => ({
+        ...entry,
+        type: 'geschichte' as const,
+        player_id: 0,
+        player: null,
+      }));
+
+    // Zusammenführen und nach Jahr sortieren (neueste oben)
+    return [...oskar, ...geschichte].sort((a, b) => b.jahr - a.jahr);
   }
 
   constructor(
