@@ -47,18 +47,7 @@ export class RekordeComponent implements OnInit {
       title: 'Alles beginnt in Nordborchen',
       text: 'Mit viel Leidenschaft für den Dartsport – und einer ebenso großen Begeisterung für ein kühles Bier – gründeten Uwe, Franz-Josef und Frank 1993 in Nordborchen den Verein. Damit legten sie den Grundstein für die heutigen Dartfreunde Borchen n. e. V.',
     },
-    {
-      jahr: 2023,
-      label: '2023/2024',
-      title: 'Dartfahrt',
-      text: 'Dartfahrt nach Spanien, Calpe. (2024)',
-    },
-    {
-      jahr: 2019,
-      label: '2019/2020',
-      title: 'Dartfahrt',
-      text: 'Dartfahrt nach Spanien, Málaga. (2019)',
-    },
+
     {
       jahr: 2016,
       label: '2016',
@@ -69,13 +58,31 @@ export class RekordeComponent implements OnInit {
       jahr: 2017,
       label: '2017',
       title: 'Veränderung im Spielsystem und im Team',
-      text: 'Im Jahr 2017 wurde ein neues Spielformat eingeführt:<br>Statt Best of 3 wurde fortan im Modus Best of 5 gespielt – ein Schritt hin zu mehr sportlicher Tiefe und Konstanz.<br><br>Nach elf Jahren Vereinszugehörigkeit gab Nico am 14.04.2017 nach dem dritten Oscarabend seinen Austritt aus dem Verein bekannt. In dieser Zeit prägte er den Verein sportlich und gehörte zu den erfolgreichsten Spielern. Seitdem besteht das Team aus fünf Mitgliedern.',
+      text: 'Im Jahr 2017 wurde ein neues Spielformat eingeführt: Statt Best of 3 wurde fortan im Modus Best of 5 gespielt. Dadurch gewann der Spielbetrieb an sportlicher Tiefe und Konstanz.<br><br>Nach elf Jahren Vereinszugehörigkeit gab Nico am 14.04.2017 nach dem dritten Oscarabend seinen Austritt aus dem Verein bekannt. In dieser Zeit prägte er den Verein sportlich und gehörte zu den erfolgreichsten Spielern. Seitdem besteht das Team aus fünf Mitgliedern.',
     },
     {
       jahr: 2018,
       label: '2018/2019',
-      title: 'Einführung Elektronischer Datenerfassung',
-      text: 'Zwei Jahre nach der Übernahme der Statistikverantwortung leitete Martin (mad) mit der Einführung der elektronischen Datenerfassung im Jahr 2018 ein neues Kapitel im Verein ein. Statt Tafel und Kreide wurden die Spiele fortan digital mit dem Tool n01 erfasst.<br>Die gewonnenen Spieldaten bilden seitdem die Grundlage für eine strukturierte Statistik, aus der nicht nur Auswertungen, sondern auch die heutige Vereins-Website entstanden ist – ein wichtiger Schritt hin zu mehr Transparenz, Übersicht und nachhaltiger Dokumentation des Vereinslebens.',
+      title: 'Strukturwandel im Spielbetrieb',
+      text: '2019:<br>Im Jahr 2019 wurde das Regelwerk weiter vereinfacht. Die Bonuspunkte für Highscore und Highfinish wurden abgeschafft, sodass seitdem ausschließlich das reine Spielergebnis in die Wertung einfließt – mit dem Ziel einer klareren und besser vergleichbaren Wertung.<br><br>2018:<br>Zwei Jahre nach der Übernahme der Statistikverantwortung leitete Martin (mad) mit der Einführung der elektronischen Datenerfassung im Jahr 2018 ein neues Kapitel im Verein ein. Statt Tafel und Kreide wurden die Spiele fortan digital mit dem Tool n01 erfasst.<br>Die gewonnenen Spieldaten bilden seitdem die Grundlage für eine strukturierte Statistik, aus der nicht nur Auswertungen, sondern auch die heutige Vereins-Website entstanden ist – ein wichtiger Schritt hin zu mehr Transparenz, Übersicht und nachhaltiger Dokumentation des Vereinslebens.',
+    },
+    {
+      jahr: 2019,
+      label: '2019/2020',
+      title: 'Dartfahrt',
+      text: 'Dartfahrt nach Spanien, Málaga. (2019)',
+    },
+    {
+      jahr: 2020,
+      label: '2020/2021',
+      title: 'Spielbetrieb unterbrochen',
+      text: 'Bedingt durch die COVID-19-Pandemie musste der Spielbetrieb für 266 Tage pausiert werden. Zwischen Spieltag 8 am 17.10.2020 und Spieltag 9 am 10.07.2021 ruhte der Spielbetrieb vollständig.<br>Erst im Sommer 2021 konnte der Spielbetrieb wieder aufgenommen werden.',
+    },
+    {
+      jahr: 2023,
+      label: '2023/2024',
+      title: 'Dartfahrt',
+      text: 'Dartfahrt nach Spanien, Calpe. (2024)',
     },
   ];
 
