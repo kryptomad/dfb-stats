@@ -204,7 +204,7 @@ export class AppMenu implements OnInit {
         items: [
           {
             label: 'Vereinsgeschichte',
-            icon: 'pi pi-fw pi-crown',
+            icon: 'pi pi-fw pi-history',
             routerLink: 'pages/rekorde',
             fragment: 'vereinsgeschichte',
           },
