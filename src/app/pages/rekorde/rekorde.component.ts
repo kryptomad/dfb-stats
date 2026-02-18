@@ -41,6 +41,7 @@ export class RekordeComponent implements OnInit {
     label: string;
     title: string;
     text: string;
+    images?: { src: string; alt: string }[];
   }[] = [
     {
       jahr: 1993,
@@ -58,7 +59,11 @@ export class RekordeComponent implements OnInit {
       jahr: 2016,
       label: '2016',
       title: 'Übergabe der Statistikverantwortung',
-      text: 'Nach 19 Jahren übergab Heiner (TC) die Verantwortung für die Vereinsstatistik. Über fast zwei Jahrzehnte hinweg hatte er die statistische Dokumentation des Vereins geprägt und zuverlässig begleitet.<br><br> Mit der einstimmigen Wahl von Martin (mad) als Nachfolger wurde diese Aufgabe in neue Hände gelegt – verbunden mit dem Vertrauen, die Statistik im Sinne des Vereins weiterzuführen und weiterzuentwickeln.',
+      text: 'Nach 19 Jahren übergab Heiner (TC) die Verantwortung für die Vereinsstatistik. Über fast zwei Jahrzehnte hinweg hatte er die statistische Dokumentation des Vereins geprägt und zuverlässig begleitet.<br><br> Mit der einstimmigen Wahl von Martin (mad) als Nachfolger wurde diese Aufgabe in neue Hände gelegt – verbunden mit dem Vertrauen, die Statistik im Sinne des Vereins weiterzuführen und weiterzuentwickeln.<br><br>Neben der Übergabe der Statistikverantwortung wurde auch ein neues Vereinslogo eingeführt.',
+      images: [
+        { src: 'assets/timeline/dfb-logo-alt.jpg', alt: 'Altes Vereinslogo' },
+        { src: 'assets/logo.svg', alt: 'Neues Vereinslogo' },
+      ],
     },
     {
       jahr: 2017,
@@ -100,9 +105,9 @@ export class RekordeComponent implements OnInit {
 
   get oskarsiegerTimeline() {
     // Vereinsgeschichte nach Jahr indexieren
-    const geschichteByJahr = new Map<number, { title: string; text: string }>();
+    const geschichteByJahr = new Map<number, { title: string; text: string; images?: { src: string; alt: string }[] }>();
     for (const g of this.vereinsgeschichte) {
-      geschichteByJahr.set(g.jahr, { title: g.title, text: g.text });
+      geschichteByJahr.set(g.jahr, { title: g.title, text: g.text, images: g.images });
     }
 
     // Oskarsieger-Einträge (ggf. mit Geschichte-Text anreichern)
@@ -117,6 +122,7 @@ export class RekordeComponent implements OnInit {
         seasonLabel: (entry as any).seasonLabel || String(entry.jahr),
         title: extra?.title || '',
         text: extra?.text || '',
+        images: extra?.images || [],
       };
     });
 
