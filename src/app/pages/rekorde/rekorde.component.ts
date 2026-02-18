@@ -32,7 +32,8 @@ export interface Rekord {
 })
 export class RekordeComponent implements OnInit {
   // Oskarsieger
-  oskarsiegerRaw: { jahr: number; player_id: number; seasonLabel?: string }[] = [];
+  oskarsiegerRaw: { jahr: number; player_id: number; seasonLabel?: string }[] =
+    [];
 
   // Vereinsgeschichte: Texteinträge ohne Spieler
   vereinsgeschichte: {
@@ -47,7 +48,12 @@ export class RekordeComponent implements OnInit {
       title: 'Alles beginnt in Nordborchen',
       text: 'Mit viel Leidenschaft für den Dartsport – und einer ebenso großen Begeisterung für ein kühles Bier – gründeten Uwe, Franz-Josef und Frank 1993 in Nordborchen den Verein. Damit legten sie den Grundstein für die heutigen Dartfreunde Borchen n. e. V.',
     },
-
+    {
+      jahr: 2015,
+      label: '2015',
+      title: 'Dartfahrt Calpe',
+      text: 'Dartfahrt nach Spanien 🇪🇸, Calpe.',
+    },
     {
       jahr: 2016,
       label: '2016',
@@ -58,7 +64,7 @@ export class RekordeComponent implements OnInit {
       jahr: 2017,
       label: '2017',
       title: 'Veränderung im Spielsystem und im Team',
-      text: 'Im Jahr 2017 wurde ein neues Spielformat eingeführt: Statt Best of 3 wurde fortan im Modus Best of 5 gespielt. Dadurch gewann der Spielbetrieb an sportlicher Tiefe und Konstanz.<br><br>Nach elf Jahren Vereinszugehörigkeit gab Nico am 14.04.2017 nach dem dritten Oscarabend seinen Austritt aus dem Verein bekannt. In dieser Zeit prägte er den Verein sportlich und gehörte zu den erfolgreichsten Spielern. Seitdem besteht das Team aus fünf Mitgliedern.',
+      text: 'Im Jahr 2017 wurde ein neues Spielformat eingeführt: Statt Best of 3 wurde fortan im Modus Best of 5 gespielt. Dadurch gewann der Spielbetrieb an sportlicher Tiefe und Konstanz.<br><br>Nach elf Jahren Vereinszugehörigkeit gab Nico am 14.04.2017 nach dem dritten Oscarabend seinen Austritt aus dem Verein bekannt. In dieser Zeit prägte er den Verein sportlich und gehörte zu den erfolgreichsten Spielern. Seitdem besteht das Team aus fünf Mitgliedern.<br><br>Dartfahrt nach Griechenland 🇬🇷, Kreta - Sissi.',
     },
     {
       jahr: 2018,
@@ -70,7 +76,7 @@ export class RekordeComponent implements OnInit {
       jahr: 2019,
       label: '2019',
       title: 'Regelwerk vereinfacht',
-      text: 'Im Jahr 2019 wurde das Regelwerk weiter vereinfacht. Die Bonuspunkte für Highscore und Highfinish wurden abgeschafft, sodass seitdem ausschließlich das reine Spielergebnis in die Wertung einfließt – mit dem Ziel einer klareren und besser vergleichbaren Wertung.<br><br>Dartfahrt nach Spanien, Málaga. (2019)',
+      text: 'Im Jahr 2019 wurde das Regelwerk weiter vereinfacht. Die Bonuspunkte für Highscore und Highfinish wurden abgeschafft, sodass seitdem ausschließlich das reine Spielergebnis in die Wertung einfließt – mit dem Ziel einer klareren und besser vergleichbaren Wertung.<br><br>Dartfahrt nach Spanien 🇪🇸, Málaga.<br><br>Tagesfahrt zur European Darts Championship - Lokhalle, Göttingen',
     },
     {
       jahr: 2021,
@@ -79,10 +85,16 @@ export class RekordeComponent implements OnInit {
       text: 'Bedingt durch die COVID-19-Pandemie musste der Spielbetrieb für 266 Tage pausiert werden. Zwischen Spieltag 8 am 17.10.2020 und Spieltag 9 am 10.07.2021 ruhte der Spielbetrieb vollständig.<br>Erst im Sommer 2021 konnte der Spielbetrieb wieder aufgenommen werden.',
     },
     {
+      jahr: 2023,
+      label: '2023',
+      title: 'Dartfahrt',
+      text: 'Dartfahrt nach Spanien 🇪🇸, Calpe.',
+    },
+    {
       jahr: 2024,
       label: '2024',
       title: 'Dartfahrt',
-      text: 'Dartfahrt nach Spanien, Calpe. (2024)',
+      text: 'Dartfahrt nach Spanien 🇪🇸, Calpe.',
     },
   ];
 

@@ -23,13 +23,15 @@
   width: 25%;
 }
 
-// Abstand zwischen Timeline-Einträgen
+// Abstand zwischen Timeline-Einträgen + oben ausrichten
 :host ::ng-deep .p-timeline-event-content {
   padding-bottom: 1.5rem !important;
+  align-self: start !important;
 }
 
 :host ::ng-deep .p-timeline-event-opposite {
   padding-bottom: 1.5rem !important;
+  align-self: start !important;
 }
 
 // Oskarsieger Timeline Styles
@@ -110,6 +112,41 @@
 // Vereinsgeschichte Text-Einträge
 .timeline-geschichte {
   max-width: 320px;
+}
+
+.mobile-only {
+  display: none;
+}
+
+// Mobile: alternate Timeline auf einseitig umschalten
+@media (max-width: 576px) {
+  .mobile-only {
+    display: block;
+    margin-bottom: 0.25rem;
+  }
+
+  :host ::ng-deep .p-timeline.p-timeline-vertical.p-timeline-alternate {
+    .p-timeline-event {
+      flex-direction: row !important;
+
+      .p-timeline-event-opposite {
+        display: none;
+      }
+
+      .p-timeline-event-content {
+        text-align: left !important;
+        align-items: flex-start !important;
+      }
+
+      .timeline-card {
+        flex-direction: row !important;
+      }
+    }
+  }
+
+  .timeline-geschichte {
+    max-width: 100%;
+  }
 }
 
 .geschichte-title {

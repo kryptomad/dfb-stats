@@ -10,6 +10,7 @@
         <span class="oskar-jahr">{{ event.label }}</span>
       </ng-template>
       <ng-template pTemplate="content" let-event>
+        <span class="oskar-jahr mobile-only">{{ event.label }}</span>
         <!-- Oskarsieger -->
         <ng-container *ngIf="event.type === 'oskarsieger' && event.player">
           <div class="timeline-card">
