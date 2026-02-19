@@ -5,6 +5,7 @@ import { FieldsetModule } from 'primeng/fieldset';
 import { TableModule } from 'primeng/table';
 import { TimelineModule } from 'primeng/timeline';
 import { StatsService } from '../../services/stats.service';
+import { StatsQueryService } from '../../services/stats-query.service';
 import { PlayersService } from '../../services/players.service';
 import { OskarstatsOskarsiegerTimelineService } from '../../services/oskarstats-oskarsieger-timeline.service';
 
@@ -50,9 +51,63 @@ export class RekordeComponent implements OnInit {
       text: 'Mit viel Leidenschaft für den Dartsport – und einer ebenso großen Begeisterung für ein kühles Bier – gründeten Uwe, Franz-Josef und Frank 1993 in Nordborchen den Verein. Damit legten sie den Grundstein für die heutigen Dartfreunde Borchen n. e. V.',
     },
     {
+      jahr: 1997,
+      label: '1997',
+      title: 'Dartfahrt',
+      text: 'Dartfahrt nach Deutschland 🇩🇪, Norddeich.',
+    },
+    {
+      jahr: 1998,
+      label: '19998',
+      title: 'Dartfahrt',
+      text: 'Dartfahrt Deutschland 🇩🇪, Norddeich.',
+    },
+    {
+      jahr: 1999,
+      label: '1999',
+      title: 'Dartfahrt',
+      text: 'Dartfahrt nach Deutschland 🇩🇪, Norddeich.',
+    },
+    {
+      jahr: 2000,
+      label: '2000',
+      title: 'Dartfahrt',
+      text: 'Dartfahrt nach Deutschland 🇩🇪, Matchlos.',
+    },
+    {
+      jahr: 2005,
+      label: '2005',
+      title: 'Dartfahrt',
+      text: 'Dartfahrt nach Irland 🇮🇪, Caven.',
+    },
+    {
+      jahr: 2007,
+      label: '2007',
+      title: 'Dartfahrt',
+      text: 'Dartfahrt nach Schweden 🇸🇪',
+    },
+    {
+      jahr: 2009,
+      label: '2009',
+      title: 'Dartfahrt',
+      text: 'Dartfahrt nach Spanien 🇪🇸, Calpe.',
+    },
+    {
+      jahr: 2011,
+      label: '2011',
+      title: 'Dartfahrt',
+      text: 'Dartfahrt nach Spanien 🇪🇸, Calpe.',
+    },
+    {
+      jahr: 2013,
+      label: '2013',
+      title: 'Dartfahrt',
+      text: 'Dartfahrt nach Spanien 🇪🇸, Mallorca.',
+    },
+    {
       jahr: 2015,
       label: '2015',
-      title: 'Dartfahrt Calpe',
+      title: 'Dartfahrt',
       text: 'Dartfahrt nach Spanien 🇪🇸, Calpe.',
     },
     {
@@ -93,7 +148,7 @@ export class RekordeComponent implements OnInit {
       jahr: 2023,
       label: '2023',
       title: 'Dartfahrt',
-      text: 'Dartfahrt nach Spanien 🇪🇸, Calpe.',
+      text: 'Dartfahrt nach Spanien 🇪🇸, Calpe.<br><br>Tagesausflug nach Dortmund zur European Championship.',
     },
     {
       jahr: 2024,
@@ -105,9 +160,16 @@ export class RekordeComponent implements OnInit {
 
   get oskarsiegerTimeline() {
     // Vereinsgeschichte nach Jahr indexieren
-    const geschichteByJahr = new Map<number, { title: string; text: string; images?: { src: string; alt: string }[] }>();
+    const geschichteByJahr = new Map<
+      number,
+      { title: string; text: string; images?: { src: string; alt: string }[] }
+    >();
     for (const g of this.vereinsgeschichte) {
-      geschichteByJahr.set(g.jahr, { title: g.title, text: g.text, images: g.images });
+      geschichteByJahr.set(g.jahr, {
+        title: g.title,
+        text: g.text,
+        images: g.images,
+      });
     }
 
     // Oskarsieger-Einträge (ggf. mit Geschichte-Text anreichern)
@@ -140,8 +202,11 @@ export class RekordeComponent implements OnInit {
     return [...oskar, ...geschichte].sort((a, b) => b.jahr - a.jahr);
   }
 
+  currentSeason = '';
+
   constructor(
     private statsService: StatsService,
+    private statsQueryService: StatsQueryService,
     private oskarstatsOskarsiegerTimelineService: OskarstatsOskarsiegerTimelineService,
     private playersService: PlayersService,
   ) {}
@@ -149,6 +214,10 @@ export class RekordeComponent implements OnInit {
   ngOnInit() {
     this.oskarsiegerRaw =
       this.oskarstatsOskarsiegerTimelineService.getAllWinnersMerged();
+
+    this.statsQueryService.getLatestSeason$().subscribe((season) => {
+      this.currentSeason = season || '';
+    });
 
     this.statsService.loadEnrichedStats().subscribe(() => {
       this.oskarsiegerRaw =
@@ -159,7 +228,59 @@ export class RekordeComponent implements OnInit {
             normRows,
           );
       });
+      this.computeMatchwertungen();
     });
+  }
+
+  private computeMatchwertungen() {
+    const best3DA = this.statsService.getBest3DAMatch();
+    const bestFirst9 = this.statsService.getBestFirst9Match();
+    const bestAvgDarts = this.statsService.getAllWithBestValue(
+      'avg_darts',
+      'min',
+      (s) => s.legs_won === 3,
+    );
+
+    this.matchwertungen = [];
+
+    if (bestFirst9.length) {
+      const s = bestFirst9[0];
+      const names = bestFirst9.map((r: any) => r.playerName).join(', ');
+      this.matchwertungen.push(
+        this.createRekord(
+          'First 9 Dart Average',
+          s.season,
+          names,
+          Math.round(s.avg_first9 * 10) / 10,
+        ),
+      );
+    }
+
+    if (best3DA.length) {
+      const s = best3DA[0];
+      const names = best3DA.map((r: any) => r.playerName).join(', ');
+      this.matchwertungen.push(
+        this.createRekord(
+          '3 Dart Average',
+          s.season,
+          names,
+          Math.round(s.avg_3dart * 10) / 10,
+        ),
+      );
+    }
+
+    if (bestAvgDarts.length) {
+      const s = bestAvgDarts[0];
+      const names = bestAvgDarts.map((r: any) => r.playerName).join(', ');
+      this.matchwertungen.push(
+        this.createRekord(
+          'Average Darts needed',
+          s.season,
+          names,
+          Math.round(s.avg_darts * 100) / 100,
+        ),
+      );
+    }
   }
 
   gesamtwertungen: Rekord[] = [
@@ -216,11 +337,7 @@ export class RekordeComponent implements OnInit {
     this.createRekord('Average Darts needed [6]', '2019', 'mad', 23.75),
   ];
 
-  matchwertungen: Rekord[] = [
-    this.createRekord('First 9 Dart Average', '2019', 'Franz-Josef', 92.7),
-    this.createRekord('3 Dart Average', '2019', 'mad', 79.1),
-    this.createRekord('Average Darts needed', '2019', 'mad', 19),
-  ];
+  matchwertungen: Rekord[] = [];
 
   private createRekord(
     was: string,

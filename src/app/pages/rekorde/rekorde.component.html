@@ -144,7 +144,7 @@
           <td>{{ rekord.was }}</td>
           <td>{{ rekord.count }}</td>
           <td>{{ rekord.wer }}</td>
-          <td>{{ rekord.wann }}</td>
+          <td [class.text-primary]="rekord.wann === currentSeason" [class.font-semibold]="rekord.wann === currentSeason">{{ rekord.wann }}</td>
         </tr>
       </ng-template>
     </p-table>
