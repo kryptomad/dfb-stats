@@ -151,7 +151,7 @@
   </p-card>
 </div>
 
-<div class="mt-5" *ngIf="vergleichsDetails.length">
+<div class="mt-5 verifikation-panel-wrapper" *ngIf="vergleichsDetails.length">
   <p-card>
     <p-fieldset legend="Daten-Verifikation: Auto vs. Historisch" [toggleable]="true" [collapsed]="true">
       <p class="text-sm text-color-secondary mb-3">
@@ -160,6 +160,7 @@
       </p>
 
       <ng-template #vergleichsTabelle let-rows="rows">
+        <div class="verifikation-scroll">
         <p-table [value]="rows" styleClass="p-datatable-sm">
           <ng-template pTemplate="header">
             <tr>
@@ -191,6 +192,7 @@
             </tr>
           </ng-template>
         </p-table>
+        </div>
       </ng-template>
 
       <p class="font-semibold mt-0 mb-2">Jahreswertungen</p>

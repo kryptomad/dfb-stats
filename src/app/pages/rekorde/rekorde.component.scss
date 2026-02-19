@@ -2,7 +2,7 @@
   border-bottom-width: 2px !important;
 }
 
-/* Spaltenbreiten global für alle Tabellen */
+/* Spaltenbreiten für normale Rekord-Tabellen (nicht Verifikation) */
 :host ::ng-deep .p-datatable-table th:nth-child(1),
 :host ::ng-deep .p-datatable-table td:nth-child(1) {
   width: 35%;
@@ -21,6 +21,27 @@
 :host ::ng-deep .p-datatable-table th:nth-child(4),
 :host ::ng-deep .p-datatable-table td:nth-child(4) {
   width: 25%;
+}
+
+/* Verifikations-Panel: verhindert dass die Seite breiter wird */
+.verifikation-panel-wrapper {
+  overflow-x: hidden;
+}
+
+:host ::ng-deep .p-fieldset {
+  border: none !important;
+}
+
+/* Verifikations-Tabelle: horizontales Scrollen innerhalb des Panels */
+.verifikation-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Spaltenbreiten der Verifikations-Tabellen zurücksetzen */
+:host ::ng-deep .verifikation-scroll .p-datatable-table th,
+:host ::ng-deep .verifikation-scroll .p-datatable-table td {
+  width: auto !important;
 }
 
 // Abstand zwischen Timeline-Einträgen + oben ausrichten
