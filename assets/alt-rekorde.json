@@ -1,0 +1,176 @@
+{
+  "matchwertungen": [
+    {
+      "was": "First 9 Dart Average",
+      "wann": "2019",
+      "wer": "Franz-Josef",
+      "count": 92.7,
+      "vergleich": "max",
+      "key": "first9_match"
+    },
+    {
+      "was": "3 Dart Average",
+      "wann": "2019",
+      "wer": "mad",
+      "count": 79.1,
+      "vergleich": "max",
+      "key": "3dart_match"
+    },
+    {
+      "was": "Average Darts needed",
+      "wann": "2019",
+      "wer": "mad",
+      "count": 19.0,
+      "vergleich": "min",
+      "key": "avgdarts_match"
+    }
+  ],
+  "spieltagswertungen": [
+    {
+      "was": "Geworfene 180er",
+      "wann": "2006–2024",
+      "wer": "Franz-Josef, Nico, mad",
+      "count": 2,
+      "vergleich": "max",
+      "key": "180s_spieltag"
+    },
+    {
+      "was": "Geworfene 180er, Gesamt [2]",
+      "wann": "02.02.2013",
+      "wer": "Team",
+      "count": 3,
+      "vergleich": "max",
+      "key": "180s_spieltag_gesamt"
+    },
+    {
+      "was": "Geworfene 140er",
+      "wann": "13.04.2017",
+      "wer": "Nico",
+      "count": 8,
+      "vergleich": "max",
+      "key": "140s_spieltag"
+    },
+    {
+      "was": "Geworfene 140er, Gesamt [2]",
+      "wann": "2009–2017",
+      "wer": "Team",
+      "count": 12,
+      "vergleich": "max",
+      "key": "140s_spieltag_gesamt"
+    },
+    {
+      "was": "Geworfene TONs [8]",
+      "wann": "21.12.2019",
+      "wer": "mad",
+      "count": 22,
+      "vergleich": "max",
+      "key": "tons_spieltag"
+    },
+    {
+      "was": "First 9 Dart Average [6]",
+      "wann": "2023/24",
+      "wer": "mad",
+      "count": 71.9,
+      "vergleich": "max",
+      "key": "first9_spieltag"
+    },
+    {
+      "was": "3 Dart Average [6]",
+      "wann": "2019",
+      "wer": "mad",
+      "count": 62.8,
+      "vergleich": "max",
+      "key": "3dart_spieltag"
+    },
+    {
+      "was": "Average Darts needed [6]",
+      "wann": "2019",
+      "wer": "mad",
+      "count": 23.75,
+      "vergleich": "min",
+      "key": "avgdarts_spieltag"
+    }
+  ],
+  "jahreswertungen": [
+    {
+      "was": "Monats-Oscar Gesamt in einem Jahr",
+      "wann": "2003, 2020/21, 2023/24",
+      "wer": "Franz-Josef, mad",
+      "count": 9
+    },
+    {
+      "was": "High Check",
+      "wann": "2003, 2020/21, 2023/24",
+      "wer": "Franz-Josef, mad",
+      "count": 9
+    },
+    {
+      "was": "High Check geworfen [1] (+100)",
+      "wann": "2008, 2013 / 2019, 2020/21",
+      "wer": "Nico, mad",
+      "count": 3
+    },
+    {
+      "was": "Geworfene 180er",
+      "wann": "2006, 2013",
+      "wer": "Franz-Josef, Nico",
+      "count": 5,
+      "vergleich": "max",
+      "key": "180s_saison"
+    },
+    {
+      "was": "Geworfene 180er, Gesamt",
+      "wann": "2008, 2013",
+      "wer": "Team",
+      "count": 8,
+      "vergleich": "max",
+      "key": "180s_saison_gesamt"
+    },
+    {
+      "was": "Geworfene 140er",
+      "wann": "2021/2022",
+      "wer": "mad",
+      "count": 30,
+      "vergleich": "max",
+      "key": "140s_saison"
+    },
+    {
+      "was": "Geworfene 140er, Gesamt",
+      "wann": "2009, 2012",
+      "wer": "Team",
+      "count": 64,
+      "vergleich": "max",
+      "key": "140s_saison_gesamt"
+    },
+    {
+      "was": "Punkte Jahreswertung [7]",
+      "wann": "2020/21",
+      "wer": "mad",
+      "count": 120
+    },
+    {
+      "was": "Spiele gewonnen [5]",
+      "wann": "2020/21, 2023/24",
+      "wer": "mad",
+      "count": 40
+    },
+    {
+      "was": "Spiele in Serie gewonnen",
+      "wann": "2023/24",
+      "wer": "mad",
+      "count": 33
+    },
+    {
+      "was": "Short Games geworfen [2]",
+      "wann": "2023/24",
+      "wer": "mad",
+      "count": 17
+    },
+    {
+      "was": "Short Game, Anzahl Darts [2]",
+      "wann": "01.01.2007",
+      "wer": "Nico",
+      "count": 14
+    }
+  ]
+}
