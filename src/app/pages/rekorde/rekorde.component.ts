@@ -8,12 +8,35 @@ import { StatsService } from '../../services/stats.service';
 import { StatsQueryService } from '../../services/stats-query.service';
 import { PlayersService } from '../../services/players.service';
 import { OskarstatsOskarsiegerTimelineService } from '../../services/oskarstats-oskarsieger-timeline.service';
+import * as altRekordData from '../../../assets/alt-rekorde.json';
 
 export interface Rekord {
   was: string;
   wann: string;
   wer: string;
   count: number;
+}
+
+interface AltRekord {
+  was: string;
+  wann: string;
+  wer: string;
+  count: number;
+  vergleich?: 'max' | 'min';
+  key?: string;
+}
+
+export interface VergleichsDetail {
+  was: string;
+  kategorie: string;
+  autoWert: number | null;
+  autoWer: string;
+  autoWann: string;
+  altWert: number;
+  altWer: string;
+  altWann: string;
+  gewinner: 'auto' | 'historisch' | 'kein auto';
+  delta: number | null;
 }
 
 @Component({
@@ -228,59 +251,223 @@ export class RekordeComponent implements OnInit {
             normRows,
           );
       });
+      this.vergleichsDetails = [];
       this.computeMatchwertungen();
+      this.computeSpieltagswertungen();
+      this.computeJahreswertungen();
     });
   }
 
+  private readonly altRekorde = Object.create(altRekordData).default as {
+    matchwertungen: AltRekord[];
+    spieltagswertungen: AltRekord[];
+    jahreswertungen: AltRekord[];
+  };
+
+  private autoRekordForKey(key: string): Rekord | null {
+    switch (key) {
+      case 'first9_match': {
+        const rows = this.statsService.getBestFirst9Match();
+        if (!rows.length) return null;
+        return this.createRekord(
+          '',
+          rows[0].season,
+          rows.map((r: any) => r.playerName).join(', '),
+          Math.round(rows[0].avg_first9 * 10) / 10,
+        );
+      }
+      case '3dart_match': {
+        const rows = this.statsService.getBest3DAMatch();
+        if (!rows.length) return null;
+        return this.createRekord(
+          '',
+          rows[0].season,
+          rows.map((r: any) => r.playerName).join(', '),
+          Math.round(rows[0].avg_3dart * 10) / 10,
+        );
+      }
+      case 'avgdarts_match': {
+        const rows = this.statsService.getAllWithBestValue(
+          'avg_darts',
+          'min',
+          (s) => s.legs_won === 3,
+        );
+        if (!rows.length) return null;
+        return this.createRekord(
+          '',
+          rows[0].season,
+          rows.map((r: any) => r.playerName).join(', '),
+          Math.round(rows[0].avg_darts * 100) / 100,
+        );
+      }
+      case 'first9_spieltag': {
+        const rows = this.statsService.getBestFirst9Matchday();
+        if (!rows.length) return null;
+        return this.createRekord(
+          '',
+          rows[0].season,
+          rows.map((r: any) => r.playerName).join(', '),
+          Math.round(rows[0].avg_first9 * 10) / 10,
+        );
+      }
+      case '3dart_spieltag': {
+        const rows = this.statsService.getBest3DAMatchday();
+        if (!rows.length) return null;
+        return this.createRekord(
+          '',
+          rows[0].season,
+          rows.map((r: any) => r.playerName).join(', '),
+          Math.round(rows[0].avg_3dart * 10) / 10,
+        );
+      }
+      case 'avgdarts_spieltag': {
+        const rows = this.statsService.getBestAvgDartsMatchday();
+        if (!rows.length) return null;
+        return this.createRekord(
+          '',
+          rows[0].season,
+          rows.map((r: any) => r.playerName).join(', '),
+          Math.round(rows[0].avg_darts * 100) / 100,
+        );
+      }
+      case '180s_spieltag': {
+        const rows = this.statsService.getMost180sMatchday();
+        if (!rows.length) return null;
+        return this.createRekord(
+          '',
+          rows[0].season,
+          rows.map((r: any) => r.playerName).join(', '),
+          rows[0].score_180,
+        );
+      }
+      case '180s_spieltag_gesamt': {
+        const rows = this.statsService.getMost180sMatchdayTeam();
+        if (!rows.length) return null;
+        return this.createRekord('', rows[0].season, 'Team', rows[0].score_180);
+      }
+      case '140s_spieltag': {
+        const rows = this.statsService.getMost140sMatchday();
+        if (!rows.length) return null;
+        return this.createRekord(
+          '',
+          rows[0].season,
+          rows.map((r: any) => r.playerName).join(', '),
+          rows[0].score_140,
+        );
+      }
+      case '140s_spieltag_gesamt': {
+        const rows = this.statsService.getMost140sMatchdayTeam();
+        if (!rows.length) return null;
+        return this.createRekord('', rows[0].season, 'Team', rows[0].score_140);
+      }
+      case 'tons_spieltag': {
+        const rows = this.statsService.getMostTONsMatchday();
+        if (!rows.length) return null;
+        return this.createRekord(
+          '',
+          rows[0].season,
+          rows.map((r: any) => r.playerName).join(', '),
+          rows[0].score_100,
+        );
+      }
+      case '180s_saison': {
+        const rows = this.statsService.getMost180sSeason();
+        if (!rows.length) return null;
+        return this.createRekord(
+          '',
+          rows[0].season,
+          rows.map((r: any) => r.playerName).join(', '),
+          rows[0].score_180,
+        );
+      }
+      case '180s_saison_gesamt': {
+        const rows = this.statsService.getMost180sSeasonTeam();
+        if (!rows.length) return null;
+        return this.createRekord('', rows[0].season, 'Team', rows[0].score_180);
+      }
+      case '140s_saison': {
+        const rows = this.statsService.getMost140sSeason();
+        if (!rows.length) return null;
+        return this.createRekord(
+          '',
+          rows[0].season,
+          rows.map((r: any) => r.playerName).join(', '),
+          rows[0].score_140,
+        );
+      }
+      case '140s_saison_gesamt': {
+        const rows = this.statsService.getMost140sSeasonTeam();
+        if (!rows.length) return null;
+        return this.createRekord('', rows[0].season, 'Team', rows[0].score_140);
+      }
+      case 'tons_saison': {
+        const rows = this.statsService.getMostTONsSeason();
+        if (!rows.length) return null;
+        return this.createRekord(
+          '',
+          rows[0].season,
+          rows.map((r: any) => r.playerName).join(', '),
+          rows[0].score_100,
+        );
+      }
+      default:
+        return null;
+    }
+  }
+
+  private pickBestRekord(alt: AltRekord, kategorie: string): Rekord {
+    const fallback = this.createRekord(alt.was, alt.wann, alt.wer, alt.count);
+    if (!alt.vergleich || !alt.key) return fallback;
+
+    const auto = this.autoRekordForKey(alt.key);
+
+    const detail: VergleichsDetail = {
+      was: alt.was,
+      kategorie,
+      autoWert: auto ? auto.count : null,
+      autoWer: auto ? auto.wer : '–',
+      autoWann: auto ? auto.wann : '–',
+      altWert: alt.count,
+      altWer: alt.wer,
+      altWann: alt.wann,
+      gewinner: !auto ? 'kein auto' : 'historisch',
+      delta: null,
+    };
+
+    if (auto) {
+      const autoBetter =
+        alt.vergleich === 'max' ? auto.count > alt.count : auto.count < alt.count;
+      detail.gewinner = autoBetter ? 'auto' : 'historisch';
+      detail.delta =
+        alt.vergleich === 'max'
+          ? Math.round((auto.count - alt.count) * 100) / 100
+          : Math.round((alt.count - auto.count) * 100) / 100;
+      if (autoBetter) {
+        this.vergleichsDetails.push(detail);
+        return { ...auto, was: alt.was };
+      }
+    }
+
+    this.vergleichsDetails.push(detail);
+    return fallback;
+  }
+
   private computeMatchwertungen() {
-    const best3DA = this.statsService.getBest3DAMatch();
-    const bestFirst9 = this.statsService.getBestFirst9Match();
-    const bestAvgDarts = this.statsService.getAllWithBestValue(
-      'avg_darts',
-      'min',
-      (s) => s.legs_won === 3,
+    this.matchwertungen = this.altRekorde.matchwertungen.map((alt) =>
+      this.pickBestRekord(alt, 'Match'),
     );
+  }
 
-    this.matchwertungen = [];
+  private computeSpieltagswertungen() {
+    this.spieltagswertungen = this.altRekorde.spieltagswertungen.map((alt) =>
+      this.pickBestRekord(alt, 'Spieltag'),
+    );
+  }
 
-    if (bestFirst9.length) {
-      const s = bestFirst9[0];
-      const names = bestFirst9.map((r: any) => r.playerName).join(', ');
-      this.matchwertungen.push(
-        this.createRekord(
-          'First 9 Dart Average',
-          s.season,
-          names,
-          Math.round(s.avg_first9 * 10) / 10,
-        ),
-      );
-    }
-
-    if (best3DA.length) {
-      const s = best3DA[0];
-      const names = best3DA.map((r: any) => r.playerName).join(', ');
-      this.matchwertungen.push(
-        this.createRekord(
-          '3 Dart Average',
-          s.season,
-          names,
-          Math.round(s.avg_3dart * 10) / 10,
-        ),
-      );
-    }
-
-    if (bestAvgDarts.length) {
-      const s = bestAvgDarts[0];
-      const names = bestAvgDarts.map((r: any) => r.playerName).join(', ');
-      this.matchwertungen.push(
-        this.createRekord(
-          'Average Darts needed',
-          s.season,
-          names,
-          Math.round(s.avg_darts * 100) / 100,
-        ),
-      );
-    }
+  private computeJahreswertungen() {
+    this.jahreswertungen = this.altRekorde.jahreswertungen.map((alt) =>
+      this.pickBestRekord(alt, 'Jahr'),
+    );
   }
 
   gesamtwertungen: Rekord[] = [
@@ -290,54 +477,25 @@ export class RekordeComponent implements OnInit {
     this.createRekord('Monats-Oscar Gewinn in Folge', '2019–2024', 'mad', 8),
   ];
 
-  jahreswertungen: Rekord[] = [
-    this.createRekord(
-      'Monats-Oscar Gesamt in einem Jahr',
-      '2003, 2020/21, 2023/24',
-      'Franz-Josef, mad',
-      9,
-    ),
-    this.createRekord(
-      'High Check',
-      '2003, 2020/21, 2023/24',
-      'Franz-Josef, mad',
-      9,
-    ),
-    this.createRekord(
-      'High Check geworfen [1] (+100)',
-      '2008, 2013 / 2019, 2020/21',
-      'Nico, mad',
-      3,
-    ),
-    this.createRekord('Geworfene 180er', '2006, 2013', 'Franz-Josef, Nico', 5),
-    this.createRekord('Geworfene 180er, Gesamt', '2008, 2013', 'Team', 8),
-    this.createRekord('Geworfene 140er', '2021/2022', 'mad', 30),
-    this.createRekord('Geworfene 140er, Gesamt', '2009, 2012', 'Team', 64),
-    this.createRekord('Geworfene TONs [8]', '2021/2022', 'mad', 149),
-    this.createRekord('Punkte Jahreswertung [7]', '2020/21', 'mad', 120),
-    this.createRekord('Spiele gewonnen [5]', '2020/21, 2023/24', 'mad', 40),
-    this.createRekord('Spiele in Serie gewonnen', '2023/24', 'mad', 33),
-    this.createRekord('Short Games geworfen [2]', '2023/24', 'mad', 17),
-    this.createRekord('Short Game, Anzahl Darts [2]', '01.01.2007', 'Nico', 14),
-  ];
+  jahreswertungen: Rekord[] = [];
 
-  spieltagswertungen: Rekord[] = [
-    this.createRekord(
-      'Geworfene 180er',
-      '2006–2024',
-      'Franz-Josef, Nico, mad',
-      2,
-    ),
-    this.createRekord('Geworfene 180er, Gesamt [2]', '02.02.2013', 'Team', 3),
-    this.createRekord('Geworfene 140er', '13.04.2017', 'Nico', 8),
-    this.createRekord('Geworfene 140er, Gesamt [2]', '2009–2017', 'Team', 12),
-    this.createRekord('Geworfene TONs [8]', '21.12.2019', 'mad', 22),
-    this.createRekord('First 9 Dart Average [6]', '2023/24', 'mad', 71.9),
-    this.createRekord('3 Dart Average [6]', '2019', 'mad', 62.8),
-    this.createRekord('Average Darts needed [6]', '2019', 'mad', 23.75),
-  ];
+  spieltagswertungen: Rekord[] = [];
 
   matchwertungen: Rekord[] = [];
+
+  vergleichsDetails: VergleichsDetail[] = [];
+
+  get vergleichsMatch() {
+    return this.vergleichsDetails.filter((d) => d.kategorie === 'Match');
+  }
+
+  get vergleichsSpieltag() {
+    return this.vergleichsDetails.filter((d) => d.kategorie === 'Spieltag');
+  }
+
+  get vergleichsJahr() {
+    return this.vergleichsDetails.filter((d) => d.kategorie === 'Jahr');
+  }
 
   private createRekord(
     was: string,

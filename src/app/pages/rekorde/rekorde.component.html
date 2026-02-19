@@ -120,7 +120,7 @@
           <td>{{ rekord.was }}</td>
           <td>{{ rekord.count }}</td>
           <td>{{ rekord.wer }}</td>
-          <td>{{ rekord.wann }}</td>
+          <td [class.text-primary]="rekord.wann === currentSeason" [class.font-semibold]="rekord.wann === currentSeason">{{ rekord.wann }}</td>
         </tr>
       </ng-template>
     </p-table>
@@ -148,6 +148,61 @@
         </tr>
       </ng-template>
     </p-table>
+  </p-card>
+</div>
+
+<div class="mt-5" *ngIf="vergleichsDetails.length">
+  <p-card>
+    <p-fieldset legend="Daten-Verifikation: Auto vs. Historisch" [toggleable]="true" [collapsed]="true">
+      <p class="text-sm text-color-secondary mb-3">
+        Automatisch berechnete Werte aus den Spieldaten im Vergleich zu den historischen Rekorden in <code>alt-rekorde.json</code>.
+        Delta positiv = Auto-Wert besser als historischer Rekord.
+      </p>
+
+      <ng-template #vergleichsTabelle let-rows="rows">
+        <p-table [value]="rows" styleClass="p-datatable-sm">
+          <ng-template pTemplate="header">
+            <tr>
+              <th>Rekord</th>
+              <th>Auto-Wert</th>
+              <th>Auto (Spieler / Saison)</th>
+              <th>Hist. Wert</th>
+              <th>Hist. (Spieler / Saison)</th>
+              <th>Delta</th>
+              <th>Gewinner</th>
+            </tr>
+          </ng-template>
+          <ng-template pTemplate="body" let-d>
+            <tr>
+              <td>{{ d.was }}</td>
+              <td>{{ d.autoWert ?? '–' }}</td>
+              <td class="text-color-secondary text-sm">{{ d.autoWer }} / {{ d.autoWann }}</td>
+              <td>{{ d.altWert }}</td>
+              <td class="text-color-secondary text-sm">{{ d.altWer }} / {{ d.altWann }}</td>
+              <td [class.text-green-500]="d.delta !== null && d.delta > 0"
+                  [class.text-orange-400]="d.delta !== null && d.delta < 0"
+                  [class.text-color-secondary]="d.delta === 0">
+                {{ d.delta !== null ? (d.delta > 0 ? '+' : '') + d.delta : '–' }}
+              </td>
+              <td [class.text-primary]="d.gewinner === 'auto'"
+                  [class.font-semibold]="d.gewinner === 'auto'">
+                {{ d.gewinner === 'auto' ? '★ Auto' : d.gewinner === 'historisch' ? 'Historisch' : '–' }}
+              </td>
+            </tr>
+          </ng-template>
+        </p-table>
+      </ng-template>
+
+      <p class="font-semibold mt-0 mb-2">Jahreswertungen</p>
+      <ng-container *ngTemplateOutlet="vergleichsTabelle; context: { rows: vergleichsJahr }"></ng-container>
+
+      <p class="font-semibold mt-4 mb-2">Spieltagswertungen</p>
+      <ng-container *ngTemplateOutlet="vergleichsTabelle; context: { rows: vergleichsSpieltag }"></ng-container>
+
+      <p class="font-semibold mt-4 mb-2">Matchwertungen</p>
+      <ng-container *ngTemplateOutlet="vergleichsTabelle; context: { rows: vergleichsMatch }"></ng-container>
+
+    </p-fieldset>
   </p-card>
 </div>
 

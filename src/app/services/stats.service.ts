@@ -314,6 +314,53 @@ export class StatsService {
     return result.map((r) => ({ ...r, score_180: r.aggregatedValue }));
   }
 
+  /** Team-Summe eines Score-Feldes über alle Spieler pro Spieltag */
+  private getBestTeamMatchdayScore(field: string): any[] {
+    if (!this.enrichedStats.length) return [];
+    // Gruppe ohne player_id → alle Spieler eines Spieltags zusammen
+    const groups = this.groupBy(
+      this.enrichedStats,
+      (s) => `${s.season}_${s.matchday}`,
+    );
+    const groupValues = Array.from(groups.entries()).map(([, stats]) => ({
+      stats,
+      value: this.sumScore(stats, field),
+    }));
+    const bestValue = Math.max(...groupValues.map((g) => g.value));
+    if (bestValue <= 0) return [];
+    return groupValues
+      .filter((g) => g.value === bestValue)
+      .map((g) => ({ ...g.stats[0], [field]: g.value, playerName: 'Team' }));
+  }
+
+  getMost180sMatchdayTeam(): any[] {
+    return this.getBestTeamMatchdayScore('score_180');
+  }
+
+  getMost140sMatchdayTeam(): any[] {
+    return this.getBestTeamMatchdayScore('score_140');
+  }
+
+  getBestAvgDartsMatchday(): any[] {
+    if (!this.enrichedStats.length) return [];
+    const groups = this.groupBy(
+      this.enrichedStats,
+      (s) => `${s.player_id}_${s.season}_${s.matchday}`,
+    );
+    const result = this.getBestAggregatedGroups(
+      groups,
+      (stats) => {
+        const totalLegs = stats.reduce((sum, s) => sum + (s.legs_played ?? 0), 0);
+        const totalDarts = stats.reduce((sum, s) => sum + (s.darts_thrown ?? 0), 0);
+        return totalLegs > 0 ? totalDarts / totalLegs : 0;
+      },
+      'min',
+    );
+    return result
+      .filter((r) => r.aggregatedValue > 0)
+      .map((r) => ({ ...r, avg_darts: r.aggregatedValue }));
+  }
+
   // ====================================================================
   // SAISON-AGGREGATIONEN (pro Spieler pro Saison)
   // ====================================================================
@@ -386,6 +433,35 @@ export class StatsService {
       'max',
     );
     return result.map((r) => ({ ...r, score_180: r.aggregatedValue }));
+  }
+
+  getMost180sSeasonTeam(): any[] {
+    return this.getBestTeamSeasonScore('score_180');
+  }
+
+  getMost140sSeasonTeam(): any[] {
+    return this.getBestTeamSeasonScore('score_140');
+  }
+
+  getMostTONsSeasonTeam(): any[] {
+    return this.getBestTeamSeasonScore('score_100');
+  }
+
+  private getBestTeamSeasonScore(field: string): any[] {
+    if (!this.enrichedStats.length) return [];
+    const groups = this.groupBy(
+      this.enrichedStats,
+      (s) => `${s.season}`,
+    );
+    const groupValues = Array.from(groups.entries()).map(([, stats]) => ({
+      stats,
+      value: this.sumScore(stats, field),
+    }));
+    const bestValue = Math.max(...groupValues.map((g) => g.value));
+    if (bestValue <= 0) return [];
+    return groupValues
+      .filter((g) => g.value === bestValue)
+      .map((g) => ({ ...g.stats[0], [field]: g.value, playerName: 'Team' }));
   }
 
   // ====================================================================
