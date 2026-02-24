@@ -4,8 +4,8 @@
   <span class="text-primary">{{ letzteSpieltage[0]?.season }}</span>
 </div>
 <p-card>
-  <div *ngFor="let spieltag of letzteSpieltage; let last = last" class="mb-2" [routerLink]="['/pages/legs', spieltag.game_id]">
-    <div class="flex items-center justify-between gap-4 py-2 px-3 rounded-md transition-all duration-200 cursor-pointer hover:bg-slate-200 dark:hover:bg-slate-700 hover:bg-opacity-80">
+  <div *ngFor="let spieltag of letzteSpieltage; let last = last" [routerLink]="['/pages/legs', spieltag.game_id]">
+    <div class="flex items-center justify-between gap-4 py-2 px-3 rounded-md transition-all duration-200 cursor-pointer hover:bg-slate-200 dark:hover:bg-slate-700 hover:bg-opacity-80" [ngClass]="{ 'row-divider': !last }">
       <!-- Player 1 -->
       <div class="flex items-center gap-3 flex-1">
         <p-avatar
@@ -42,7 +42,6 @@
         </p-avatar>
       </div>
     </div>
-    <hr *ngIf="!last" class="divider" />
   </div>
 </p-card>
 
@@ -62,7 +61,7 @@
         <th>#</th>
         <th>Name</th>
         <th>Punkte</th>
-        <th>Trend</th>
+        <th>Abstand</th>
       </tr>
     </ng-template>
     <ng-template pTemplate="body" let-eintrag>
@@ -70,10 +69,21 @@
         <td>{{ eintrag.platz }}</td>
         <td>{{ eintrag.name }}</td>
         <td>{{ eintrag.punkte }}</td>
-        <td>
-          <span *ngIf="eintrag.trend === 'up'" class="pi pi-arrow-up text-primary ml-1"></span>
-          <span *ngIf="eintrag.trend === 'down'" class="pi pi-arrow-down text-secondary ml-1"></span>
-          <span *ngIf="eintrag.trend === 'same'" class="pi pi-arrow-right text-gray-400 ml-1"></span>
+        <td class="text-center">
+          <ng-container *ngIf="eintrag.gapOben !== null">
+            <span class="font-semibold" [ngClass]="{
+              'gap-improved':    eintrag.gapFarbe === 'green',
+              'gap-slight-loss': eintrag.gapFarbe === 'orange',
+              'gap-medium-loss': eintrag.gapFarbe === 'red',
+              'gap-large-loss':  eintrag.gapFarbe === 'darkred'
+            }">
+              {{ eintrag.gapOben }}
+              <span *ngIf="eintrag.gapChange !== 0" class="text-xs font-normal ml-1">
+                ({{ eintrag.gapChange > 0 ? '+' : '' }}{{ eintrag.gapChange }})
+              </span>
+            </span>
+          </ng-container>
+          <span *ngIf="eintrag.gapOben === null" class="text-gray-400">—</span>
         </td>
       </tr>
     </ng-template>

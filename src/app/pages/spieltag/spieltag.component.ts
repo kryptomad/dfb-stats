@@ -103,20 +103,54 @@ export class SpieltagComponent implements OnInit {
       maxMatchday - 1,
     );
 
-    // 4. Trends berechnen und speichern
-    this.jahrestabelle = tabelleJetzt.map((eintrag) => {
+    // 4. Abstand zum Spieler darüber berechnen (inkl. Farbindikator)
+    const sorted = [...tabelleJetzt].sort((a, b) => a.platz - b.platz);
+
+    this.jahrestabelle = sorted.map((eintrag, index) => {
       const vorher = tabelleVorher.find((e) => e.name === eintrag.name);
+      const altePunkteEintrag = vorher ? vorher.punkte : eintrag.punkte;
+
+      let gapOben: number | null = null;
+      let gapChange = 0; // positiv = verbessert, negativ = verschlechtert
+
+      if (index === 0) {
+        // 1. Platz: Vorsprung auf 2. Platz
+        const zweiter = sorted[1];
+        if (zweiter) {
+          const vorherZweiter = tabelleVorher.find((e) => e.name === zweiter.name);
+          const currentLead = eintrag.punkte - zweiter.punkte;
+          const prevLead = altePunkteEintrag - (vorherZweiter ? vorherZweiter.punkte : zweiter.punkte);
+          gapOben = currentLead;
+          gapChange = currentLead - prevLead;
+        }
+      } else {
+        const oben = sorted[index - 1];
+        if (oben) {
+          const vorherOben = tabelleVorher.find((e) => e.name === oben.name);
+          const currentGap = oben.punkte - eintrag.punkte;
+          const prevGap = (vorherOben ? vorherOben.punkte : oben.punkte) - altePunkteEintrag;
+          gapOben = currentGap;
+          gapChange = -(currentGap - prevGap);
+        }
+      }
+
+      let gapFarbe: string;
+      if (gapChange >= 0) {
+        gapFarbe = 'green';
+      } else {
+        const loss = Math.abs(gapChange);
+        if (loss <= 3) gapFarbe = 'orange';
+        else if (loss <= 5) gapFarbe = 'red';
+        else gapFarbe = 'darkred';
+      }
+
       return {
         ...eintrag,
-        altePunkte: vorher ? vorher.punkte : 0,
+        altePunkte: altePunkteEintrag,
         alterPlatz: vorher ? vorher.platz : eintrag.platz,
-        trend: !vorher
-          ? 'same'
-          : vorher.platz > eintrag.platz
-            ? 'up'
-            : vorher.platz < eintrag.platz
-              ? 'down'
-              : 'same',
+        gapOben,
+        gapChange,
+        gapFarbe,
       };
     });
 

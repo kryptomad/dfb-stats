@@ -1,3 +1,12 @@
 ::ng-deep p-table thead tr:first-child th {
   border-bottom-width: 2px !important;
 }
+
+.row-divider {
+  border-bottom: 1px solid var(--surface-border);
+}
+
+.gap-improved    { color: #22c55e; }
+.gap-slight-loss { color: #f97316; }
+.gap-medium-loss { color: #ef4444; }
+.gap-large-loss  { color: #7f1d1d; }
