@@ -154,7 +154,7 @@ export class ProfilComponent implements OnInit {
     this.player = this.playersService.getPlayer(this.playerId);
     this.playerBadges = this.badgesService.getPlayerCurrentBadges(this.playerId);
     this.badgeHistory = this.badgesService.getPlayerBadgeHistory(this.playerId);
-    this.playerInsights = this.insightsService.getRandomInsights(this.playerId, 5);
+    this.playerInsights = this.insightsService.getRandomInsights(this.playerId, 3);
 
     // Build matchdays list (1-10 + All)
     this.buildMatchdays();
