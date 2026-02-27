@@ -136,8 +136,8 @@ export class RekordeComponent implements OnInit {
     {
       jahr: 2016,
       label: '2016',
-      title: 'Übergabe der Statistikverantwortung',
-      text: 'Nach 19 Jahren übergab Heiner (TC) die Verantwortung für die Vereinsstatistik. Über fast zwei Jahrzehnte hinweg hatte er die statistische Dokumentation des Vereins geprägt und zuverlässig begleitet.<br><br> Mit der einstimmigen Wahl von Martin (mad) als Nachfolger wurde diese Aufgabe in neue Hände gelegt – verbunden mit dem Vertrauen, die Statistik im Sinne des Vereins weiterzuführen und weiterzuentwickeln.<br><br>Neben der Übergabe der Statistikverantwortung wurde auch ein neues Vereinslogo eingeführt.',
+      title: 'Veränderungen im Verein',
+      text: 'Nach 19 Jahren übergab Heiner (TC) die Verantwortung für die Vereinsstatistik. Über fast zwei Jahrzehnte hinweg hatte er die statistische Dokumentation des Vereins geprägt und zuverlässig begleitet. Mit der einstimmigen Wahl von Martin (mad) als Nachfolger wurde diese Aufgabe in neue Hände gelegt – verbunden mit dem Vertrauen, die Statistik im Sinne des Vereins weiterzuführen und weiterzuentwickeln.<br><br>Neben der personellen Veränderung wurde im selben Jahr auch ein neues Vereinslogo eingeführt.<br><br>Mit Rainer verabschiedete sich am 23.04.2016 ein Mitglied, das dem Verein seit 1995 angehörte und ihn über 21 Jahre hinweg maßgeblich mitgeprägt hatte. Mit seinem Ausscheiden endete eine besonders lange und prägende Phase der Vereinszugehörigkeit.',
       images: [
         { src: 'assets/timeline/dfb-logo-alt.jpg', alt: 'Altes Vereinslogo' },
         { src: 'assets/logo.svg', alt: 'Neues Vereinslogo' },
@@ -147,7 +147,7 @@ export class RekordeComponent implements OnInit {
       jahr: 2017,
       label: '2017',
       title: 'Veränderung im Spielsystem und im Team',
-      text: 'Im Jahr 2017 wurde ein neues Spielformat eingeführt: Statt Best of 3 wurde fortan im Modus Best of 5 gespielt. Dadurch gewann der Spielbetrieb an sportlicher Tiefe und Konstanz.<br><br>Nach elf Jahren Vereinszugehörigkeit gab Nico am 14.04.2017 nach dem dritten Oscarabend seinen Austritt aus dem Verein bekannt. In dieser Zeit prägte er den Verein sportlich und gehörte zu den erfolgreichsten Spielern. Seitdem besteht das Team aus fünf Mitgliedern.<br><br>Dartfahrt nach Griechenland 🇬🇷, Kreta - Sissi.',
+      text: 'Im Jahr 2017 wurde ein neues Spielformat eingeführt: Statt Best of 3 wurde fortan im Modus Best of 5 gespielt. Dadurch gewann der Spielbetrieb an sportlicher Tiefe und Konstanz.<br><br>Nachdem im Vorjahr ein langjähriges Mitglied seine aktive Zeit beendet hatte, kam es 2017 erneut zu einer personellen Veränderung: Nach elf Jahren Vereinszugehörigkeit gab Nico am 14.04.2017 nach dem dritten Oscarabend seinen Austritt aus dem Verein bekannt. In dieser Zeit prägte er den Verein vor allem sportlich und gehörte zu den erfolgreichsten Spielern. Seitdem besteht das Team aus fünf Mitgliedern.<br><br>Dartfahrt nach Griechenland 🇬🇷, Kreta - Sissi.',
     },
     {
       jahr: 2018,
@@ -226,7 +226,11 @@ export class RekordeComponent implements OnInit {
   }
 
   currentSeason = '';
-  readonly heutigesDatum = new Date().toLocaleDateString('de-DE', { day: '2-digit', month: '2-digit', year: 'numeric' });
+  readonly heutigesDatum = new Date().toLocaleDateString('de-DE', {
+    day: '2-digit',
+    month: '2-digit',
+    year: 'numeric',
+  });
 
   constructor(
     private statsService: StatsService,
@@ -437,7 +441,9 @@ export class RekordeComponent implements OnInit {
 
     if (auto) {
       const autoBetter =
-        alt.vergleich === 'max' ? auto.count > alt.count : auto.count < alt.count;
+        alt.vergleich === 'max'
+          ? auto.count > alt.count
+          : auto.count < alt.count;
       detail.gewinner = autoBetter ? 'auto' : 'historisch';
       detail.delta =
         alt.vergleich === 'max'
