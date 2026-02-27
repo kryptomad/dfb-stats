@@ -1,14 +1,7 @@
 import { Injectable, signal } from '@angular/core';
 import * as nextMatchDay from '../../assets/nextMatchday.json';
-import * as nextMatchDays from '../../assets/next_matchdays.json';
-import * as nextMatchDaysV2 from '../../assets/next_matchdays_2026-2027.json';
+import * as spielplan from '../../assets/spielplan.json';
 import * as players from '../../assets/players.json';
-
-interface DataNextMatchDays {
-  season: string;
-  matchday: number;
-  games: Game[];
-}
 
 interface BoardGame {
   game: number;
@@ -16,7 +9,7 @@ interface BoardGame {
   player2: string;
 }
 
-interface DataNextMatchDaysV2 {
+interface SpielplanEntry {
   season: string;
   matchday: number;
   boardA: BoardGame[];
@@ -48,12 +41,6 @@ interface Player {
   comment: string | null;
 }
 
-export interface Game {
-  writer: string;
-  player1: string;
-  player2: string;
-}
-
 export type { BoardGame };
 
 export interface NextMatchDay {
@@ -66,7 +53,6 @@ export interface NextMatchDay {
   matchday: number;
   location: string;
   image: string;
-  games?: Game[];
   boardA?: BoardGame[];
   boardB?: BoardGame[];
 }
@@ -84,15 +70,8 @@ export class NextMatchDayService {
     const nextMD = this.loadNextMatchday();
     const host = this.findPlayerByName(nextMD.gastgeber);
 
-    // Try v2 format first (2-board system)
-    const v2Match = this.loadNextMatchDaysV2()
+    const match = this.loadSpielplan()
       .find(v => v.season === nextMD.season && v.matchday === nextMD.matchday);
-
-    // Fallback to v1 format (single board with writer)
-    const v1Match = !v2Match
-      ? this.loadNextMatchDays()
-          .find(v => v.season === nextMD.season && v.matchday === nextMD.matchday)
-      : undefined;
 
     return signal<NextMatchDay | undefined>({
       gastgeber: nextMD.gastgeber,
@@ -104,15 +83,14 @@ export class NextMatchDayService {
       matchday: nextMD.matchday,
       location: host?.location || 'default-location.png',
       image: host?.image || 'default-player.png',
-      games: v1Match?.games,
-      boardA: v2Match?.boardA,
-      boardB: v2Match?.boardB,
+      boardA: match?.boardA,
+      boardB: match?.boardB,
     });
   }
 
   public loadUpcomingV2(): UpcomingMatchDay | undefined {
-    const allV2 = this.loadNextMatchDaysV2();
-    return allV2.length > 0 ? allV2[0] : undefined;
+    const all = this.loadSpielplan();
+    return all.length > 0 ? all[0] : undefined;
   }
 
   private findPlayerByName(name: string): Player | undefined {
@@ -131,13 +109,8 @@ export class NextMatchDayService {
     return nextMatchDay;
   }
 
-  private loadNextMatchDays(): DataNextMatchDays[] {
-    const dataObject = Object.create(nextMatchDays);
-    return dataObject.default;
-  }
-
-  private loadNextMatchDaysV2(): DataNextMatchDaysV2[] {
-    const dataObject = Object.create(nextMatchDaysV2);
+  private loadSpielplan(): SpielplanEntry[] {
+    const dataObject = Object.create(spielplan);
     return dataObject.default;
   }
 }

@@ -30,7 +30,6 @@ export class StartseiteComponent {
   matchday = computed(() => this._nextMatchday()?.matchday);
   location = computed(() => this._nextMatchday()?.location);
   image = computed(() => this._nextMatchday()?.image);
-  games = computed(() => this._nextMatchday()?.games);
   boardA = computed(() => this._nextMatchday()?.boardA);
   boardB = computed(() => this._nextMatchday()?.boardB);
 

@@ -59,38 +59,7 @@
   <span class="text-primary">{{ matchday() }}</span>
 </div>
 
-<!-- V1: Legacy single-board layout -->
-<div *ngIf="games() && !boardA()">
-  <p-card>
-    <div class="board-table">
-      <div class="board-row-v1 board-row-header">
-        <span class="board-cell col-avatar"></span>
-        <span class="board-cell col-name-right">Spieler 1</span>
-        <span class="board-cell col-vs"></span>
-        <span class="board-cell col-name-left">Spieler 2</span>
-        <span class="board-cell col-avatar"></span>
-        <span class="board-cell col-writer"></span>
-      </div>
-      <div *ngFor="let game of games()" class="board-row-v1">
-        <span class="board-cell col-avatar">
-          <p-avatar [image]="getPlayerImage(game.player1)" shape="circle" class="board-avatar"></p-avatar>
-        </span>
-        <span class="board-cell col-name-right">{{ game.player1 }}</span>
-        <span class="board-cell col-vs"><span class="vs-badge-sm">VS</span></span>
-        <span class="board-cell col-name-left">{{ game.player2 }}</span>
-        <span class="board-cell col-avatar">
-          <p-avatar [image]="getPlayerImage(game.player2)" shape="circle" class="board-avatar"></p-avatar>
-        </span>
-        <span class="board-cell col-writer">
-          <i class="fa-solid fa-pencil text-gray-400 text-xs"></i>
-          <span class="text-xs text-gray-500">{{ game.writer }}</span>
-        </span>
-      </div>
-    </div>
-  </p-card>
-</div>
-
-<!-- V2: 2-Board Layout (current matchday or preview) -->
+<!-- 2-Board Layout -->
 <ng-container *ngIf="boardA() && boardB()">
   <ng-container *ngTemplateOutlet="boardLayout; context: { boardA: boardA(), boardB: boardB() }"></ng-container>
 </ng-container>
