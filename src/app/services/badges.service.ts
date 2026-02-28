@@ -181,7 +181,7 @@ export class BadgesService {
     {
       name: 'Der Erlöser',
       punkte: 3,
-      beschreibung: 'Gewinnt das längste Spiel am Abend',
+      beschreibung: 'Gewinnt das längste Leg am Abend',
       kategorie: 'Fun',
       icon: 'fa-solid fa-hands',
     },
@@ -867,39 +867,41 @@ export class BadgesService {
     this.awardDerErloeser(season, matchday, mdGames);
   }
 
-  /** Der Erlöser: Gewinner des längsten Spiels (meisten Runden über alle Legs) */
+  /** Der Erlöser: Gewinner des längsten einzelnen Legs (meisten Darts in einem Leg) */
   private awardDerErloeser(
     season: string,
     matchday: number,
     mdGames: any[],
   ): void {
-    let maxRounds = 0;
+    let maxDarts = 0;
     let winnersOfLongest: number[] = [];
 
     for (const game of mdGames) {
-      let totalRounds = 0;
       for (const leg of game.legs || []) {
-        const rounds = (leg.rounds || []).filter((r: any) => r.round > 0);
-        totalRounds += rounds.length;
-      }
+        const winnerId = leg.leg_winner_id;
+        if (!winnerId) continue;
 
-      if (totalRounds > maxRounds) {
-        maxRounds = totalRounds;
-        winnersOfLongest = [game.game_winner_id];
-      } else if (totalRounds === maxRounds && totalRounds > 0) {
-        winnersOfLongest.push(game.game_winner_id);
+        const winnerDarts = winnerId === game.player1_id
+          ? (leg.p1_darts_leg || 0)
+          : (leg.p2_darts_leg || 0);
+        if (winnerDarts <= 0) continue;
+
+        if (winnerDarts > maxDarts) {
+          maxDarts = winnerDarts;
+          winnersOfLongest = [winnerId];
+        } else if (winnerDarts === maxDarts && !winnersOfLongest.includes(winnerId)) {
+          winnersOfLongest.push(winnerId);
+        }
       }
     }
 
     for (const pid of winnersOfLongest) {
-      if (pid) {
-        this.allAwards.push({
-          season,
-          matchday,
-          badgeName: 'Der Erlöser',
-          playerId: pid,
-        });
-      }
+      this.allAwards.push({
+        season,
+        matchday,
+        badgeName: 'Der Erlöser',
+        playerId: pid,
+      });
     }
   }
 
