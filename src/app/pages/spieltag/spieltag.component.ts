@@ -19,6 +19,7 @@ import {
 import { SeasonSelectorService } from '../../services/season-selector.service';
 import { StatsService } from '../../services/stats.service';
 import { LegsService } from '../../services/legs.service';
+import { SpieltagHighlightsService, SpieltagHighlights } from '../../services/spieltag-highlights.service';
 import { Observable, of } from 'rxjs';
 
 @Component({
@@ -49,6 +50,9 @@ export class SpieltagComponent implements OnInit {
   selectedTopYearsSeason: string | null = null;
   topYears$: Observable<TopYearStats[]> = of([]);
 
+  // Spieltag Highlights
+  highlights: SpieltagHighlights | null = null;
+
   constructor(
     private gamesService: GamesService,
     private playersService: PlayersService,
@@ -58,6 +62,7 @@ export class SpieltagComponent implements OnInit {
     private seasonSelector: SeasonSelectorService,
     private statsService: StatsService,
     private _legsService: LegsService,
+    private highlightsService: SpieltagHighlightsService,
   ) {}
 
   ngOnInit() {
@@ -95,6 +100,9 @@ export class SpieltagComponent implements OnInit {
 
     // 2. Aktuellster Spieltag bestimmen
     const maxMatchday = Math.max(...aktuelleSpiele.map((s) => s.matchday));
+
+    // Spieltag Highlights
+    this.highlights = this.highlightsService.getHighlights(this.aktuelleSaison, maxMatchday);
 
     // 3. Tabellen für jetzt und für den vorigen Spieltag berechnen
     const tabelleJetzt =

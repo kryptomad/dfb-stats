@@ -34,7 +34,6 @@ export class AppMenu implements OnInit {
           { label: 'Nächster Abend', icon: 'pi pi-fw pi-home', routerLink: '/', fragment: 'naechster-abend' },
           { label: 'Highlights letzter Spieltag', icon: 'pi pi-fw pi-star', routerLink: '/', fragment: 'highlights-letzter-spieltag' },
           { label: 'Nächster Oskarabend', icon: 'pi pi-fw pi-calendar', routerLink: '/', fragment: 'naechster-oskarabend' },
-          { label: 'Vorschau nächste Saison', icon: 'pi pi-fw pi-eye', routerLink: '/', fragment: 'vorschau-naechste-saison' },
         ],
       },
       {
@@ -45,6 +44,12 @@ export class AppMenu implements OnInit {
             icon: 'pi pi-fw pi-clock',
             routerLink: 'pages/spieltag',
             fragment: 'aktueller-spieltag',
+          },
+          {
+            label: 'Highlights',
+            icon: 'pi pi-fw pi-star',
+            routerLink: 'pages/spieltag',
+            fragment: 'spieltag-highlights',
           },
           {
             label: 'Aktueller Tabellenstand',

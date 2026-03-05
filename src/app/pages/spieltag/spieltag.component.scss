@@ -2,6 +2,12 @@
   border-bottom-width: 2px !important;
 }
 
+::ng-deep .highlight-card .p-card-title {
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.25rem;
+  border-bottom: 1px solid var(--surface-border);
+}
+
 .gap-improved    { color: #22c55e; }
 .gap-slight-loss { color: #f97316; }
 .gap-medium-loss { color: #ef4444; }

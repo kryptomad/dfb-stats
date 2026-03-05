@@ -46,6 +46,61 @@
   </div>
 </p-card>
 
+<h2 id="spieltag-highlights">Highlights</h2>
+<div *ngIf="highlights?.hasData" class="grid grid-cols-2 lg:grid-cols-3 gap-3">
+
+  <!-- Top Checkouts -->
+  <p-card header="Top Checkouts" styleClass="highlight-card">
+    <div class="flex flex-col gap-1">
+      <div *ngFor="let c of highlights!.topCheckouts" class="flex items-center justify-between gap-2">
+        <span class="truncate">{{ c.playerName }}</span>
+        <span class="font-bold text-primary shrink-0">{{ c.value }}</span>
+      </div>
+    </div>
+  </p-card>
+
+  <!-- High Scores -->
+  <p-card header="High Scores" styleClass="highlight-card" *ngIf="highlights!.highScores.length > 0">
+    <div class="flex flex-col gap-1">
+      <div *ngFor="let h of highlights!.highScores" class="flex items-center justify-between gap-2">
+        <span class="truncate">{{ h.playerName }}</span>
+        <span class="font-bold text-primary shrink-0">{{ h.count }}× {{ h.value }}</span>
+      </div>
+    </div>
+  </p-card>
+
+  <!-- Short Games -->
+  <p-card header="Short Games (≤21)" styleClass="highlight-card" *ngIf="highlights!.shortGames.length > 0">
+    <div class="flex flex-col gap-1">
+      <div *ngFor="let s of highlights!.shortGames" class="flex items-center justify-between gap-2">
+        <span class="truncate">{{ s.playerName }}</span>
+        <span class="font-bold text-primary shrink-0">{{ s.darts }} Darts</span>
+      </div>
+    </div>
+  </p-card>
+
+  <!-- Bester 3-Dart Average -->
+  <p-card header="3-Dart Average" styleClass="highlight-card">
+    <div class="flex flex-col gap-1">
+      <div *ngFor="let a of highlights!.topAvg3Dart" class="flex items-center justify-between gap-2">
+        <span class="truncate">{{ a.playerName }}</span>
+        <span class="font-bold text-primary shrink-0">{{ a.avg }}</span>
+      </div>
+    </div>
+  </p-card>
+
+  <!-- Bester First-9 Average -->
+  <p-card header="First-9 Average" styleClass="highlight-card">
+    <div class="flex flex-col gap-1">
+      <div *ngFor="let a of highlights!.topAvgFirst9" class="flex items-center justify-between gap-2">
+        <span class="truncate">{{ a.playerName }}</span>
+        <span class="font-bold text-primary shrink-0">{{ a.avg }}</span>
+      </div>
+    </div>
+  </p-card>
+
+</div>
+
 <h2 id="aktueller-tabellenstand">Aktueller Tabellenstand</h2>
 <div class="mb-4">
   Saison:
