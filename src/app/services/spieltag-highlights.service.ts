@@ -55,8 +55,8 @@ export class SpieltagHighlightsService {
       topCheckouts: this.computeTopCheckouts(mdGames),
       highScores: this.computeHighScores(mdStats),
       shortGames: this.computeShortGames(mdGames),
-      topAvg3Dart: this.computeTopAvg(mdStats, 'avg_3dart', 'darts_thrown'),
-      topAvgFirst9: this.computeTopAvg(mdStats, 'avg_first9', 'legs_played'),
+      topAvg3Dart: this.computeTopAvg(mdStats, 'avg_3dart'),
+      topAvgFirst9: this.computeTopAvg(mdStats, 'avg_first9'),
       hasData: mdStats.length > 0,
     };
   }
@@ -129,24 +129,19 @@ export class SpieltagHighlightsService {
     return result.sort((a, b) => a.darts - b.darts);
   }
 
-  private computeTopAvg(mdStats: any[], field: string, weightField: string): AvgEntry[] {
-    const numerator = new Map<number, number>();
-    const denominator = new Map<number, number>();
+  private computeTopAvg(mdStats: any[], field: string): AvgEntry[] {
+    const best = new Map<number, number>();
 
     for (const s of mdStats) {
       const val = s[field] || 0;
-      const w = s[weightField] || 0;
-      if (val <= 0 || w <= 0) continue;
-      numerator.set(s.player_id, (numerator.get(s.player_id) || 0) + val * w);
-      denominator.set(s.player_id, (denominator.get(s.player_id) || 0) + w);
+      if (val <= 0) continue;
+      if (val > (best.get(s.player_id) || 0)) best.set(s.player_id, val);
     }
 
     const result: AvgEntry[] = [];
-    for (const [pid, num] of numerator) {
-      const den = denominator.get(pid) || 0;
-      if (den <= 0) continue;
+    for (const [pid, avg] of best) {
       const p = this.playersService.getPlayer(pid);
-      result.push({ playerName: p?.name || '', playerImage: this.playerImage(p), avg: Math.round(num / den * 100) / 100 });
+      result.push({ playerName: p?.name || '', playerImage: this.playerImage(p), avg });
     }
     return result.sort((a, b) => b.avg - a.avg);
   }

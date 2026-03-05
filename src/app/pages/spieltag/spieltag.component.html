@@ -70,7 +70,8 @@
   </p-card>
 
   <!-- Short Games -->
-  <p-card header="Short Games (≤21)" styleClass="highlight-card" *ngIf="highlights!.shortGames.length > 0">
+  <p-card styleClass="highlight-card" *ngIf="highlights!.shortGames.length > 0">
+    <ng-template pTemplate="title">Short Games <span class="text-xs font-normal text-gray-400">(≤21)</span></ng-template>
     <div class="flex flex-col gap-1">
       <div *ngFor="let s of highlights!.shortGames" class="flex items-center justify-between gap-2">
         <span class="truncate">{{ s.playerName }}</span>
@@ -79,8 +80,9 @@
     </div>
   </p-card>
 
-  <!-- Bester 3-Dart Average -->
-  <p-card header="3-Dart Average" styleClass="highlight-card">
+  <!-- Bester 3-Dart Avg -->
+  <p-card styleClass="highlight-card">
+    <ng-template pTemplate="title">3-Dart Avg <span class="text-xs font-normal text-gray-400">(Spiel)</span></ng-template>
     <div class="flex flex-col gap-1">
       <div *ngFor="let a of highlights!.topAvg3Dart" class="flex items-center justify-between gap-2">
         <span class="truncate">{{ a.playerName }}</span>
@@ -89,8 +91,9 @@
     </div>
   </p-card>
 
-  <!-- Bester First-9 Average -->
-  <p-card header="First-9 Average" styleClass="highlight-card">
+  <!-- Bester First-9 Avg -->
+  <p-card styleClass="highlight-card">
+    <ng-template pTemplate="title">First-9 Avg <span class="text-xs font-normal text-gray-400">(Spiel)</span></ng-template>
     <div class="flex flex-col gap-1">
       <div *ngFor="let a of highlights!.topAvgFirst9" class="flex items-center justify-between gap-2">
         <span class="truncate">{{ a.playerName }}</span>
