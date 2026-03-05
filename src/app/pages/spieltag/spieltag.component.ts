@@ -294,6 +294,12 @@ export class SpieltagComponent implements OnInit {
         };
   }
 
+  padTo5(arr: any[]): any[] {
+    const result = [...arr];
+    while (result.length < 5) result.push(null);
+    return result;
+  }
+
   getPlayerData(playerId: number): {
     name: string;
     nickname: string | null;

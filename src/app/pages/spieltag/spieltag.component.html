@@ -62,20 +62,15 @@
   <!-- High Scores -->
   <p-card header="High Scores" styleClass="highlight-card" *ngIf="highlights!.highScores.length > 0">
     <div class="flex flex-col gap-1">
-      <div *ngFor="let h of highlights!.highScores" class="flex items-center justify-between gap-2">
-        <span class="truncate">{{ h.playerName }}</span>
-        <span class="font-bold text-primary shrink-0">{{ h.count }}× {{ h.value }}</span>
-      </div>
-    </div>
-  </p-card>
-
-  <!-- Short Games -->
-  <p-card styleClass="highlight-card" *ngIf="highlights!.shortGames.length > 0">
-    <ng-template pTemplate="title">Short Games <span class="text-xs font-normal text-gray-400">(≤21)</span></ng-template>
-    <div class="flex flex-col gap-1">
-      <div *ngFor="let s of highlights!.shortGames" class="flex items-center justify-between gap-2">
-        <span class="truncate">{{ s.playerName }}</span>
-        <span class="font-bold text-primary shrink-0">{{ s.darts }} Darts</span>
+      <div *ngFor="let h of padTo5(highlights!.highScores)" class="flex items-center justify-between gap-2">
+        <ng-container *ngIf="h; else emptyRow">
+          <span class="truncate">{{ h.playerName }}</span>
+          <span class="shrink-0 flex items-center gap-1">
+            <span *ngIf="h.count > 1" class="text-gray-400 text-sm">{{ h.count }}×</span>
+            <span class="font-bold text-primary">{{ h.value }}</span>
+          </span>
+        </ng-container>
+        <ng-template #emptyRow><span>&nbsp;</span></ng-template>
       </div>
     </div>
   </p-card>
@@ -98,6 +93,20 @@
       <div *ngFor="let a of highlights!.topAvgFirst9" class="flex items-center justify-between gap-2">
         <span class="truncate">{{ a.playerName }}</span>
         <span class="font-bold text-primary shrink-0">{{ a.avg }}</span>
+      </div>
+    </div>
+  </p-card>
+
+  <!-- Short Games -->
+  <p-card styleClass="highlight-card" *ngIf="highlights!.shortGames.length > 0">
+    <ng-template pTemplate="title">Short Games <span class="text-xs font-normal text-gray-400">(≤21)</span></ng-template>
+    <div class="flex flex-col gap-1">
+      <div *ngFor="let s of padTo5(highlights!.shortGames)" class="flex items-center justify-between gap-2">
+        <ng-container *ngIf="s; else emptyRow2">
+          <span class="truncate">{{ s.playerName }}</span>
+          <span class="font-bold text-primary shrink-0">{{ s.darts }} Darts</span>
+        </ng-container>
+        <ng-template #emptyRow2><span>&nbsp;</span></ng-template>
       </div>
     </div>
   </p-card>
