@@ -107,7 +107,7 @@ export class RekordeComponent implements OnInit {
       jahr: 2007,
       label: '2007',
       title: 'Dartfahrt',
-      text: 'Dartfahrt nach Schweden 🇸🇪',
+      text: 'Dartfahrt nach Schweden 🇸🇪, Skärhamn.',
     },
     {
       jahr: 2009,
