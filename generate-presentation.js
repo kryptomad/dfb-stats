@@ -303,7 +303,7 @@ const html = `<!DOCTYPE html>
 
     <!-- ── 4. Averages ── -->
     <section data-transition="slide">
-      <h2>Averages <small style="font-size:.5em;opacity:.5">(bestes Einzelspiel)</small></h2>
+      <h2>Averages <small style="font-size:.5em;opacity:.5">(bestes Match)</small></h2>
       <div class="two-col">
         <div>
           <div class="col-title">3-Dart Average</div>
