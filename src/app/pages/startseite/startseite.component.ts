@@ -82,6 +82,32 @@ export class StartseiteComponent {
     URL.revokeObjectURL(url);
   }
 
+  addToGoogleCalendar(): void {
+    const datumRaw = this.datum() ?? '';
+    const zeitRaw = this.zeit() ?? '';
+    const gastgeber = this.gastgeber() ?? '';
+    const season = this.season() ?? '';
+    const matchday = this.matchday() ?? '';
+
+    const datePart = datumRaw.includes(',') ? datumRaw.split(', ')[1] : datumRaw;
+    const [day, month, year] = datePart.split('.');
+    const [hour, minute] = zeitRaw.replace(' Uhr', '').split(':');
+
+    const pad = (n: string) => n.padStart(2, '0');
+    const dtStart = `${year}${pad(month)}${pad(day)}T${pad(hour)}${pad(minute)}00`;
+    const endHour = String(parseInt(hour, 10) + 3).padStart(2, '0');
+    const dtEnd = `${year}${pad(month)}${pad(day)}T${endHour}${pad(minute)}00`;
+
+    const params = new URLSearchParams({
+      action: 'TEMPLATE',
+      text: `Dartabend bei ${gastgeber}`,
+      dates: `${dtStart}/${dtEnd}`,
+      details: `Dartfreunde Borchen n.e.V. – Saison ${season} Spieltag ${matchday}`,
+    });
+
+    window.open(`https://calendar.google.com/calendar/render?${params.toString()}`, '_blank');
+  }
+
   getPlayerImage(playerName: string): string {
     const players = this._playersService.getPlayers({});
     const player = players.find(p => p.name.toLowerCase() === playerName.toLowerCase());

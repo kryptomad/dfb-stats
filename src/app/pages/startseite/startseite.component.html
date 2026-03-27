@@ -22,13 +22,20 @@
       </div>
       <div class="label">Wann</div>
       <div class="date-time">{{ datum() }} um {{ zeit() }}</div>
-      <p-button
-        label="Zum Kalender hinzufügen"
-        icon="pi pi-calendar"
-        (onClick)="addToCalendar()"
-        class="mt-3"
-        size="small">
-      </p-button>
+      <div class="flex gap-2 mt-3">
+        <p-button
+          label="Google"
+          (onClick)="addToGoogleCalendar()"
+          size="small">
+          <ng-template pTemplate="icon"><i class="fab fa-google mr-2"></i></ng-template>
+        </p-button>
+        <p-button
+          label="Apple"
+          (onClick)="addToCalendar()"
+          size="small">
+          <ng-template pTemplate="icon"><i class="fab fa-apple mr-2"></i></ng-template>
+        </p-button>
+      </div>
     </div>
     <div class="card-info-right">
       <div class="label">Modus</div>
