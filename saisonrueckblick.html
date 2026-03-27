@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>Saisonrückblick 2024/2025 – Dartfreunde Borchen n.e.V.</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/reveal.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/theme/black.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+
+    :root {
+      --gold:    #b08040;
+      --gold-dim: rgba(176,128,64,.15);
+      --silver:  #8a9ab5;
+      --bronze:  #9a6b3e;
+      --text:    #dde3ec;
+      --muted:   #5a6680;
+      --bg-card: rgba(255,255,255,.04);
+      --border:  rgba(176,128,64,.22);
+    }
+
+    .reveal, .reveal h1, .reveal h2, .reveal h3, .reveal p { font-family: 'Inter', sans-serif; }
+    .reveal h1 { font-size: 1.8em; font-weight: 700; color: var(--text);   letter-spacing: -.02em; text-transform: none; }
+    .reveal h2 { font-size: 1.2em; font-weight: 600; color: var(--gold);   letter-spacing: .06em;  text-transform: uppercase; margin-bottom: 14px; }
+    .reveal .slides section { padding: 8px 44px; }
+    .reveal .progress span { background: var(--gold); }
+
+    /* ── Titelfolie ── */
+    .club-logo  { width: 110px; margin: 0 auto 18px; display: block; text-align: center; }
+    .reveal .slides section.title-slide { text-align: center; }
+    .club-date  { font-size: .85em !important; color: var(--muted) !important; margin-top: 10px; }
+    .title-divider { width: 60px; height: 2px; background: var(--gold); margin: 14px auto; opacity: .6; }
+
+    /* ── Stat Cards ── */
+    .stats-grid  { display: grid; grid-template-columns: repeat(4,1fr); gap: 12px; margin-top: 20px; }
+    .stat-card   { background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; padding: 16px 8px; text-align: center; }
+    .stat-number { font-size: 2em; font-weight: 700; color: var(--gold); display: block; line-height: 1; }
+    .stat-label  { font-size: .7em; color: var(--muted); margin-top: 5px; display: block; letter-spacing: .04em; }
+
+    /* ── Podium (card layout) ── */
+    .podium        { display: flex; justify-content: center; align-items: flex-end; gap: 12px; margin: 10px 0 8px; }
+    .podium-card   { display: flex; flex-direction: column; align-items: center; gap: 5px; border-radius: 10px; padding: 12px 10px 10px; background: var(--bg-card); border: 1px solid var(--border); width: 195px; }
+    .podium-card.p1 { border-color: var(--gold); background: rgba(176,128,64,.1); padding-top: 16px; }
+    .podium-avatar { width: 50px; height: 50px; border-radius: 50%; object-fit: cover; border: 2px solid var(--border); }
+    .podium-card.p1 .podium-avatar { width: 60px; height: 60px; border-color: var(--gold); }
+    .podium-name   { font-size: .76em; font-weight: 600; color: var(--text); text-align: center; line-height: 1.2; }
+    .podium-medal  { font-size: 1.4em; line-height: 1; }
+    .podium-pts    { font-size: .68em; color: var(--gold); font-weight: 700; }
+
+    /* ── Standings Table ── */
+    .standings-table { width: 100%; border-collapse: collapse; font-size: .78em; margin-top: 12px; }
+    .standings-table th { color: var(--muted); border-bottom: 1px solid var(--border); padding: 5px 10px; text-align: center; font-weight: 400; letter-spacing: .05em; font-size: .9em; }
+    .standings-table td { padding: 5px 10px; border-bottom: 1px solid rgba(255,255,255,.05); text-align: center; color: var(--text); }
+    .standings-table tr:nth-child(1) td { font-weight: 700; color: var(--gold); }
+    .standings-table tr:nth-child(2) td { color: var(--silver); }
+    .standings-table tr:nth-child(3) td { color: var(--bronze); }
+
+    /* ── Player Rows ── */
+    .player-row   { display: flex; align-items: center; gap: 12px; padding: 7px 11px; border-radius: 7px; background: var(--bg-card); border: 1px solid rgba(255,255,255,.04); margin: 4px 0; }
+    .player-avatar { width: 38px; height: 38px; border-radius: 50%; object-fit: cover; border: 1px solid var(--border); flex-shrink: 0; }
+    .player-name  { flex: 1; font-weight: 500; text-align: left; font-size: .88em; color: var(--text); }
+    .player-value { font-size: 1.15em; font-weight: 700; color: var(--gold); white-space: nowrap; }
+    .rank-badge   { width: 34px; height: 34px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: .68em; flex-shrink: 0; }
+    .rank-1  { background: var(--gold);   color: #111; }
+    .rank-2  { background: var(--silver); color: #111; }
+    .rank-3  { background: var(--bronze); color: #fff; }
+    .rank-other { background: rgba(255,255,255,.08); color: var(--muted); }
+
+    /* ── Checkout / Short Game Rows ── */
+    .checkout-item { display: flex; align-items: center; gap: 10px; padding: 5px 10px; border-radius: 6px; background: var(--bg-card); border: 1px solid rgba(255,255,255,.04); margin: 3px 0; }
+    .checkout-value { font-size: 1.05em; font-weight: 700; color: var(--gold); min-width: 44px; text-align: right; }
+    .checkout-md    { font-size: .65em; color: var(--muted); margin-left: auto; white-space: nowrap; }
+    .checkout-item .player-name  { font-size: .82em; }
+    .checkout-item .player-avatar { width: 30px; height: 30px; }
+    .checkout-item .rank-badge   { width: 28px; height: 28px; font-size: .65em; }
+
+    /* ── Duelle ── */
+    .duelle-list  { display: flex; flex-direction: column; gap: 14px; margin-top: 10px; }
+    .duell-card   { display: flex; align-items: center; background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; padding: 14px 20px; gap: 12px; }
+    .duell-player { display: flex; align-items: center; gap: 10px; flex: 1; }
+    .duell-player.right { flex-direction: row-reverse; }
+    .duell-avatar { width: 46px; height: 46px; border-radius: 50%; object-fit: cover; border: 2px solid var(--border); }
+    .duell-name   { font-size: .88em; font-weight: 600; color: var(--text); }
+    .duell-score  { display: flex; align-items: center; gap: 6px; font-size: 1.6em; font-weight: 800; color: var(--gold); white-space: nowrap; flex-shrink: 0; }
+    .duell-score span { font-size: .55em; color: var(--muted); font-weight: 400; }
+    .duell-diff   { font-size: .65em; color: var(--muted); margin-top: 2px; text-align: center; }
+
+    /* ── Two columns ── */
+    .two-col   { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 8px; }
+    .col-title { color: var(--muted); font-size: .75em; letter-spacing: .08em; text-transform: uppercase; margin-bottom: 7px; text-align: center; border-bottom: 1px solid var(--border); padding-bottom: 4px; }
+    .two-col .player-row    { gap: 8px; padding: 6px 10px; }
+    .two-col .rank-badge    { width: 28px; height: 28px; font-size: .65em; flex-shrink: 0; }
+    .two-col .player-avatar { width: 30px; height: 30px; }
+    .two-col .player-value  { font-size: 1.05em; }
+  </style>
+</head>
+<body>
+<div class="reveal">
+  <div class="slides">
+
+    <!-- ── 1. Titel ── -->
+    <section data-transition="fade" class="title-slide" style="text-align:center">
+      <img src="src/assets/logo.svg" alt="Dartfreunde Borchen" style="width:110px;display:block;margin:0 auto 18px" />
+      <div class="title-divider"></div>
+      <h1>Saisonrückblick 2024/2025</h1>
+      <p class="club-date">27. März 2026</p>
+    </section>
+
+    <!-- ── 2. Saison in Zahlen ── -->
+    <section data-transition="slide">
+      <h2>Die Saison in Zahlen</h2>
+      <div class="stats-grid">
+        <div class="stat-card"><span class="stat-number">9</span><span class="stat-label">Spieltage</span></div>
+        <div class="stat-card"><span class="stat-number">90</span><span class="stat-label">Spiele</span></div>
+        <div class="stat-card"><span class="stat-number">327</span><span class="stat-label">Legs</span></div>
+        <div class="stat-card"><span class="stat-number">24.071</span><span class="stat-label">Darts geworfen</span></div>
+      </div>
+    </section>
+
+    <!-- ── 3. Podium ── -->
+    <section data-transition="slide">
+      <h2>Abschlusstabelle</h2>
+      <div class="podium">
+        
+  <div class="podium-card p2">
+    <span class="podium-medal">🥈</span>
+    <img class="podium-avatar" src="src/assets/players/franz.png" onerror="this.src='src/assets/players/default-avatar.png'" />
+    <div class="podium-name">Franz-Josef</div>
+    <div class="podium-pts">86 Pts</div>
+  </div>
+        
+  <div class="podium-card p1">
+    <span class="podium-medal">🏆</span>
+    <img class="podium-avatar" src="src/assets/players/martin.png" onerror="this.src='src/assets/players/default-avatar.png'" />
+    <div class="podium-name">Martin</div>
+    <div class="podium-pts">105 Pts</div>
+  </div>
+        
+  <div class="podium-card p3">
+    <span class="podium-medal">🥉</span>
+    <img class="podium-avatar" src="src/assets/players/uwe.png" onerror="this.src='src/assets/players/default-avatar.png'" />
+    <div class="podium-name">Uwe</div>
+    <div class="podium-pts">63 Pts</div>
+  </div>
+      </div>
+      <table class="standings-table">
+        <thead><tr><th>#</th><th>Spieler</th><th>Punkte (Legs)</th><th>Siege</th><th>Niederlagen</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td>Martin</td><td>105</td><td>34</td><td>2</td></tr><tr><td>2</td><td>Franz-Josef</td><td>86</td><td>26</td><td>10</td></tr><tr><td>3</td><td>Uwe</td><td>63</td><td>17</td><td>19</td></tr><tr><td>4</td><td>Frank</td><td>45</td><td>11</td><td>25</td></tr><tr><td>5</td><td>Heiner</td><td>28</td><td>2</td><td>34</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ── 4. Averages ── -->
+    <section data-transition="slide">
+      <h2>Averages <small style="font-size:.5em;opacity:.5">(bestes Einzelspiel)</small></h2>
+      <div class="two-col">
+        <div>
+          <div class="col-title">3-Dart Average</div>
+          
+  <div class="player-row">
+    <div class="rank-badge rank-1">1</div>
+    <img class="player-avatar" src="src/assets/players/martin.png" onerror="this.src='src/assets/players/default-avatar.png'" />
+    <span class="player-name">Martin</span>
+    <span class="player-value">62.62</span>
+  </div>
+  <div class="player-row">
+    <div class="rank-badge rank-2">2</div>
+    <img class="player-avatar" src="src/assets/players/uwe.png" onerror="this.src='src/assets/players/default-avatar.png'" />
+    <span class="player-name">Uwe</span>
+    <span class="player-value">50.93</span>
+  </div>
+  <div class="player-row">
+    <div class="rank-badge rank-3">3</div>
+    <img class="player-avatar" src="src/assets/players/franz.png" onerror="this.src='src/assets/players/default-avatar.png'" />
+    <span class="player-name">Franz-Josef</span>
+    <span class="player-value">50.10</span>
+  </div>
+  <div class="player-row">
+    <div class="rank-badge rank-other">4</div>
+    <img class="player-avatar" src="src/assets/players/frank.png" onerror="this.src='src/assets/players/default-avatar.png'" />
+    <span class="player-name">Frank</span>
+    <span class="player-value">46.70</span>
+  </div>
+  <div class="player-row">
+    <div class="rank-badge rank-other">5</div>
+    <img class="player-avatar" src="src/assets/players/heiner.png" onerror="this.src='src/assets/players/default-avatar.png'" />
+    <span class="player-name">Heiner</span>
+    <span class="player-value">39.95</span>
+  </div>
+        </div>
+        <div>
+          <div class="col-title">First-9 Average</div>
+          
+  <div class="player-row">
+    <div class="rank-badge rank-1">1</div>
+    <img class="player-avatar" src="src/assets/players/martin.png" onerror="this.src='src/assets/players/default-avatar.png'" />
+    <span class="player-name">Martin</span>
+    <span class="player-value">83.89</span>
+  </div>
+  <div class="player-row">
+    <div class="rank-badge rank-2">2</div>
+    <img class="player-avatar" src="src/assets/players/franz.png" onerror="this.src='src/assets/players/default-avatar.png'" />
+    <span class="player-name">Franz-Josef</span>
+    <span class="player-value">58.93</span>
+  </div>
+  <div class="player-row">
+    <div class="rank-badge rank-3">3</div>
+    <img class="player-avatar" src="src/assets/players/frank.png" onerror="this.src='src/assets/players/default-avatar.png'" />
+    <span class="player-name">Frank</span>
+    <span class="player-value">57.78</span>
+  </div>
+  <div class="player-row">
+    <div class="rank-badge rank-other">4</div>
+    <img class="player-avatar" src="src/assets/players/uwe.png" onerror="this.src='src/assets/players/default-avatar.png'" />
+    <span class="player-name">Uwe</span>
+    <span class="player-value">57.11</span>
+  </div>
+  <div class="player-row">
+    <div class="rank-badge rank-other">5</div>
+    <img class="player-avatar" src="src/assets/players/heiner.png" onerror="this.src='src/assets/players/default-avatar.png'" />
+    <span class="player-name">Heiner</span>
+    <span class="player-value">52.78</span>
+  </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── 5. Checkouts ── -->
+    <section data-transition="slide">
+      <h2>🎯 Höchste Checkouts</h2>
+      
+      <div class="checkout-item">
+        <div class="rank-badge rank-1">1</div>
+        <img class="player-avatar" src="src/assets/players/martin.png" onerror="this.src='src/assets/players/default-avatar.png'" />
+        <span class="player-name">Martin</span>
+        <span class="checkout-md">Spieltag 9</span>
+        <span class="checkout-value">112</span>
+      </div>
+      <div class="checkout-item">
+        <div class="rank-badge rank-2">2</div>
+        <img class="player-avatar" src="src/assets/players/franz.png" onerror="this.src='src/assets/players/default-avatar.png'" />
+        <span class="player-name">Franz-Josef</span>
+        <span class="checkout-md">Spieltag 1</span>
+        <span class="checkout-value">102</span>
+      </div>
+      <div class="checkout-item">
+        <div class="rank-badge rank-3">3</div>
+        <img class="player-avatar" src="src/assets/players/franz.png" onerror="this.src='src/assets/players/default-avatar.png'" />
+        <span class="player-name">Franz-Josef</span>
+        <span class="checkout-md">Spieltag 4</span>
+        <span class="checkout-value">99</span>
+      </div>
+      <div class="checkout-item">
+        <div class="rank-badge rank-other">4</div>
+        <img class="player-avatar" src="src/assets/players/martin.png" onerror="this.src='src/assets/players/default-avatar.png'" />
+        <span class="player-name">Martin</span>
+        <span class="checkout-md">Spieltag 1</span>
+        <span class="checkout-value">96</span>
+      </div>
+      <div class="checkout-item">
+        <div class="rank-badge rank-other">5</div>
+        <img class="player-avatar" src="src/assets/players/franz.png" onerror="this.src='src/assets/players/default-avatar.png'" />
+        <span class="player-name">Franz-Josef</span>
+        <span class="checkout-md">Spieltag 7</span>
+        <span class="checkout-value">96</span>
+      </div>
+      <div class="checkout-item">
+        <div class="rank-badge rank-other">6</div>
+        <img class="player-avatar" src="src/assets/players/franz.png" onerror="this.src='src/assets/players/default-avatar.png'" />
+        <span class="player-name">Franz-Josef</span>
+        <span class="checkout-md">Spieltag 3</span>
+        <span class="checkout-value">90</span>
+      </div>
+      <div class="checkout-item">
+        <div class="rank-badge rank-other">7</div>
+        <img class="player-avatar" src="src/assets/players/martin.png" onerror="this.src='src/assets/players/default-avatar.png'" />
+        <span class="player-name">Martin</span>
+        <span class="checkout-md">Spieltag 4</span>
+        <span class="checkout-value">90</span>
+      </div>
+      <div class="checkout-item">
+        <div class="rank-badge rank-other">8</div>
+        <img class="player-avatar" src="src/assets/players/uwe.png" onerror="this.src='src/assets/players/default-avatar.png'" />
+        <span class="player-name">Uwe</span>
+        <span class="checkout-md">Spieltag 3</span>
+        <span class="checkout-value">89</span>
+      </div>
+    </section>
+
+    <!-- ── 6. High Scores ── -->
+    <section data-transition="slide">
+      <h2>High Scores</h2>
+      <div class="two-col">
+        <div>
+          <div class="col-title">180er</div>
+          
+  <div class="player-row">
+    <div class="rank-badge rank-1">1</div>
+    <img class="player-avatar" src="src/assets/players/martin.png" onerror="this.src='src/assets/players/default-avatar.png'" />
+    <span class="player-name">Martin</span>
+    <span class="player-value">3× 180</span>
+  </div>
+  <div class="player-row">
+    <div class="rank-badge rank-2">2</div>
+    <img class="player-avatar" src="src/assets/players/franz.png" onerror="this.src='src/assets/players/default-avatar.png'" />
+    <span class="player-name">Franz-Josef</span>
+    <span class="player-value">1× 180</span>
+  </div>
+        </div>
+        <div>
+          <div class="col-title">140+</div>
+          
+  <div class="player-row">
+    <div class="rank-badge rank-1">1</div>
+    <img class="player-avatar" src="src/assets/players/martin.png" onerror="this.src='src/assets/players/default-avatar.png'" />
+    <span class="player-name">Martin</span>
+    <span class="player-value">27× 140+</span>
+  </div>
+  <div class="player-row">
+    <div class="rank-badge rank-2">2</div>
+    <img class="player-avatar" src="src/assets/players/uwe.png" onerror="this.src='src/assets/players/default-avatar.png'" />
+    <span class="player-name">Uwe</span>
+    <span class="player-value">7× 140+</span>
+  </div>
+  <div class="player-row">
+    <div class="rank-badge rank-3">3</div>
+    <img class="player-avatar" src="src/assets/players/franz.png" onerror="this.src='src/assets/players/default-avatar.png'" />
+    <span class="player-name">Franz-Josef</span>
+    <span class="player-value">6× 140+</span>
+  </div>
+  <div class="player-row">
+    <div class="rank-badge rank-other">4</div>
+    <img class="player-avatar" src="src/assets/players/heiner.png" onerror="this.src='src/assets/players/default-avatar.png'" />
+    <span class="player-name">Heiner</span>
+    <span class="player-value">1× 140+</span>
+  </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── 7. Short Games ── -->
+    <section data-transition="slide">
+      <h2>Best Legs</h2>
+      <p style="opacity:.5;font-size:.75em;margin:0 0 8px">Legs gewonnen in ≤21 Darts</p>
+      
+        <div class="checkout-item">
+          <div class="rank-badge rank-1">1</div>
+          <img class="player-avatar" src="src/assets/players/martin.png" onerror="this.src='src/assets/players/default-avatar.png'" />
+          <span class="player-name">Martin</span>
+          <span class="checkout-md">Spieltag 1</span>
+          <span class="checkout-value">15 Darts</span>
+        </div>
+        <div class="checkout-item">
+          <div class="rank-badge rank-2">2</div>
+          <img class="player-avatar" src="src/assets/players/martin.png" onerror="this.src='src/assets/players/default-avatar.png'" />
+          <span class="player-name">Martin</span>
+          <span class="checkout-md">Spieltag 6</span>
+          <span class="checkout-value">15 Darts</span>
+        </div>
+        <div class="checkout-item">
+          <div class="rank-badge rank-3">3</div>
+          <img class="player-avatar" src="src/assets/players/martin.png" onerror="this.src='src/assets/players/default-avatar.png'" />
+          <span class="player-name">Martin</span>
+          <span class="checkout-md">Spieltag 7</span>
+          <span class="checkout-value">17 Darts</span>
+        </div>
+        <div class="checkout-item">
+          <div class="rank-badge rank-other">4</div>
+          <img class="player-avatar" src="src/assets/players/martin.png" onerror="this.src='src/assets/players/default-avatar.png'" />
+          <span class="player-name">Martin</span>
+          <span class="checkout-md">Spieltag 1</span>
+          <span class="checkout-value">19 Darts</span>
+        </div>
+        <div class="checkout-item">
+          <div class="rank-badge rank-other">5</div>
+          <img class="player-avatar" src="src/assets/players/martin.png" onerror="this.src='src/assets/players/default-avatar.png'" />
+          <span class="player-name">Martin</span>
+          <span class="checkout-md">Spieltag 2</span>
+          <span class="checkout-value">19 Darts</span>
+        </div>
+        <div class="checkout-item">
+          <div class="rank-badge rank-other">6</div>
+          <img class="player-avatar" src="src/assets/players/martin.png" onerror="this.src='src/assets/players/default-avatar.png'" />
+          <span class="player-name">Martin</span>
+          <span class="checkout-md">Spieltag 2</span>
+          <span class="checkout-value">19 Darts</span>
+        </div>
+        <div class="checkout-item">
+          <div class="rank-badge rank-other">7</div>
+          <img class="player-avatar" src="src/assets/players/martin.png" onerror="this.src='src/assets/players/default-avatar.png'" />
+          <span class="player-name">Martin</span>
+          <span class="checkout-md">Spieltag 4</span>
+          <span class="checkout-value">19 Darts</span>
+        </div>
+        <div class="checkout-item">
+          <div class="rank-badge rank-other">8</div>
+          <img class="player-avatar" src="src/assets/players/martin.png" onerror="this.src='src/assets/players/default-avatar.png'" />
+          <span class="player-name">Martin</span>
+          <span class="checkout-md">Spieltag 6</span>
+          <span class="checkout-value">19 Darts</span>
+        </div>
+    </section>
+
+    <!-- ── 8. Oskargewinne ── -->
+    <section data-transition="slide">
+      <h2>Oskargewinne</h2>
+      
+  <div class="player-row">
+    <div class="rank-badge rank-1">1</div>
+    <img class="player-avatar" src="src/assets/players/martin.png" onerror="this.src='src/assets/players/default-avatar.png'" />
+    <span class="player-name">Martin</span>
+    <span class="player-value">7×</span>
+  </div>
+  <div class="player-row">
+    <div class="rank-badge rank-2">2</div>
+    <img class="player-avatar" src="src/assets/players/franz.png" onerror="this.src='src/assets/players/default-avatar.png'" />
+    <span class="player-name">Franz-Josef</span>
+    <span class="player-value">2×</span>
+  </div>
+    </section>
+
+    <!-- ── 9. Engste Duelle ── -->
+    <section data-transition="slide">
+      <h2>Engste Duelle</h2>
+      <p style="opacity:.5;font-size:.75em;margin:0 0 14px">Gesamte Legs der Saison — die 3 knappsten Paarungen</p>
+      <div class="duelle-list">
+        
+        <div class="duell-card">
+          <div class="duell-player">
+            <img class="duell-avatar" src="src/assets/players/frank.png" onerror="this.src='src/assets/players/default-avatar.png'" />
+            <div>
+              <div class="duell-name">Frank</div>
+              <div class="duell-diff">&nbsp;</div>
+            </div>
+          </div>
+          <div style="text-align:center;flex-shrink:0">
+            <div class="duell-score">22 <span>:</span> 15</div>
+            <div class="duell-diff">Differenz: 7 Legs</div>
+          </div>
+          <div class="duell-player right">
+            <img class="duell-avatar" src="src/assets/players/heiner.png" onerror="this.src='src/assets/players/default-avatar.png'" />
+            <div style="text-align:right">
+              <div class="duell-name">Heiner</div>
+              <div class="duell-diff">&nbsp;</div>
+            </div>
+          </div>
+        </div>
+        <div class="duell-card">
+          <div class="duell-player">
+            <img class="duell-avatar" src="src/assets/players/frank.png" onerror="this.src='src/assets/players/default-avatar.png'" />
+            <div>
+              <div class="duell-name">Frank</div>
+              <div class="duell-diff">&nbsp;</div>
+            </div>
+          </div>
+          <div style="text-align:center;flex-shrink:0">
+            <div class="duell-score">12 <span>:</span> 24</div>
+            <div class="duell-diff">Differenz: 12 Legs</div>
+          </div>
+          <div class="duell-player right">
+            <img class="duell-avatar" src="src/assets/players/uwe.png" onerror="this.src='src/assets/players/default-avatar.png'" />
+            <div style="text-align:right">
+              <div class="duell-name">Uwe</div>
+              <div class="duell-diff">&nbsp;</div>
+            </div>
+          </div>
+        </div>
+        <div class="duell-card">
+          <div class="duell-player">
+            <img class="duell-avatar" src="src/assets/players/franz.png" onerror="this.src='src/assets/players/default-avatar.png'" />
+            <div>
+              <div class="duell-name">Franz-Josef</div>
+              <div class="duell-diff">&nbsp;</div>
+            </div>
+          </div>
+          <div style="text-align:center;flex-shrink:0">
+            <div class="duell-score">26 <span>:</span> 12</div>
+            <div class="duell-diff">Differenz: 14 Legs</div>
+          </div>
+          <div class="duell-player right">
+            <img class="duell-avatar" src="src/assets/players/uwe.png" onerror="this.src='src/assets/players/default-avatar.png'" />
+            <div style="text-align:right">
+              <div class="duell-name">Uwe</div>
+              <div class="duell-diff">&nbsp;</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── 10. Abschluss ── -->
+    <section data-transition="fade" style="text-align:center">
+      <img src="src/assets/logo.svg" alt="Dartfreunde Borchen" style="width:110px;display:block;margin:0 auto 18px" />
+      <div class="title-divider"></div>
+      <h1>Danke für eine tolle Saison!</h1>
+      <p class="club-date">Dartfreunde Borchen n.e.V. · 2024/2025</p>
+      <p style="margin-top:40px;color:var(--muted);font-size:.6em">← → Pfeiltasten oder Leertaste zum Navigieren</p>
+    </section>
+
+  </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/reveal.min.js"></script>
+<script>
+  Reveal.initialize({
+    hash: true,
+    transition: 'slide',
+    controls: true,
+    progress: true,
+    center: true,
+    slideNumber: 'c/t',
+  });
+</script>
+</body>
+</html>

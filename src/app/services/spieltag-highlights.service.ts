@@ -99,7 +99,7 @@ export class SpieltagHighlightsService {
     for (const s of mdStats) {
       const cur = map.get(s.player_id) || { s180: 0, s140: 0 };
       cur.s180 += s.score_180 || 0;
-      cur.s140 += s.score_140 || 0;
+      cur.s140 += (s.score_140 || 0) + (s.score_140_plus || 0);
       map.set(s.player_id, cur);
     }
 
