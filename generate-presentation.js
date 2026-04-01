@@ -428,7 +428,7 @@ const html = `<!DOCTYPE html>
             <img class="player-avatar" src="${s.image}" onerror="this.src='/assets/players/default-avatar.png'" />
             <span class="player-name">${s.name}</span>
             <span class="checkout-md">ST ${s.matchday}</span>
-            <span class="checkout-value">${s.darts} Darts</span>
+            <span class="checkout-value">${s.darts}</span>
           </div>`).join('')}
         </div>
         <div>
@@ -438,7 +438,7 @@ const html = `<!DOCTYPE html>
             <img class="player-avatar" src="${s.image}" onerror="this.src='/assets/players/default-avatar.png'" />
             <span class="player-name">${s.name}</span>
             <span class="checkout-md">ST ${s.matchday}</span>
-            <span class="checkout-value">${s.darts} Darts</span>
+            <span class="checkout-value">${s.darts}</span>
           </div>`).join('')}
         </div>
       </div>`}
