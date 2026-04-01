@@ -2,11 +2,13 @@
 /**
  * Saisonrückblick Generator
  * Aufruf: node generate-presentation.js
- * Ausgabe: saisonrueckblick.html (im Projektroot öffnen)
+ * Ausgabe: public/saisonrueckblick-{SAISON}.html
  */
 
 const fs = require('fs');
 const SEASON = '2024/2025';
+const SEASON_SLUG = SEASON.replace('/', '-');
+const OUTPUT_FILE = `public/saisonrueckblick-${SEASON_SLUG}.html`;
 
 const games   = require('./src/assets/games.json');
 const stats   = require('./src/assets/stats.json');
@@ -469,7 +471,8 @@ const html = `<!DOCTYPE html>
 </body>
 </html>`;
 
-fs.writeFileSync('saisonrueckblick.html', html, 'utf8');
+if (!fs.existsSync('public')) fs.mkdirSync('public');
+fs.writeFileSync(OUTPUT_FILE, html, 'utf8');
 
 // ─── Vorjahresvergleich ─────────────────────────────────────────────────────
 const seasons = [...new Set(games.map(g => g.season))].sort();
@@ -481,7 +484,7 @@ if (prevSeason) {
   prevGames = games.filter(g => g.season === prevSeason).length;
 }
 
-console.log('\n✅  saisonrueckblick.html wurde erstellt!\n');
+console.log(`\n✅  ${OUTPUT_FILE} wurde erstellt!\n`);
 console.log('═══════════════════════════════════════════════');
 console.log(`  Saison ${SEASON}`);
 console.log('═══════════════════════════════════════════════');
