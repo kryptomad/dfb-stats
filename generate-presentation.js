@@ -422,7 +422,7 @@ const html = `<!DOCTYPE html>
       ${shortGames.length === 0 ? '<p style="opacity:.5">Keine Short Games diese Saison.</p>' : `
       <div class="two-col" style="margin-top:4px">
         <div>
-          ${shortGames.slice(0, Math.ceil(shortGames.length/2)).map((s, i) => `
+          ${shortGames.slice(0, 5).map((s, i) => `
           <div class="checkout-item">
             <div class="rank-badge ${rankClass(i)}">${i+1}</div>
             <img class="player-avatar" src="${s.image}" onerror="this.src='/assets/players/default-avatar.png'" />
@@ -432,9 +432,9 @@ const html = `<!DOCTYPE html>
           </div>`).join('')}
         </div>
         <div>
-          ${shortGames.slice(Math.ceil(shortGames.length/2)).map((s, i) => `
+          ${shortGames.slice(5, 10).map((s, i) => `
           <div class="checkout-item">
-            <div class="rank-badge ${rankClass(Math.ceil(shortGames.length/2) + i)}">${Math.ceil(shortGames.length/2) + i + 1}</div>
+            <div class="rank-badge ${rankClass(5 + i)}">${5 + i + 1}</div>
             <img class="player-avatar" src="${s.image}" onerror="this.src='/assets/players/default-avatar.png'" />
             <span class="player-name">${s.name}</span>
             <span class="checkout-md">ST ${s.matchday}</span>
