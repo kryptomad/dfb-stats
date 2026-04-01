@@ -83,7 +83,7 @@ const allCheckouts = [];
 sStats.forEach(s => {
   if (s.high_finish > 0) allCheckouts.push({ name: getName(s.player_id), image: getImage(s.player_id), value: s.high_finish, matchday: s.matchday });
 });
-const topCheckouts = allCheckouts.sort((a,b) => b.value - a.value).slice(0, 8);
+const topCheckouts = allCheckouts.sort((a,b) => b.value - a.value).slice(0, 5);
 
 // ─── Oskargewinne ───────────────────────────────────────────────────────────
 
@@ -197,7 +197,7 @@ const html = `<!DOCTYPE html>
     .reveal, .reveal h1, .reveal h2, .reveal h3, .reveal p { font-family: 'Inter', sans-serif; }
     .reveal h1 { font-size: 1.9em; font-weight: 800; color: #fff; letter-spacing: -.03em; text-transform: none; }
     .reveal h2 { font-size: 1.15em; font-weight: 700; color: var(--red); letter-spacing: .1em; text-transform: uppercase; margin-bottom: 14px; }
-    .reveal .slides section { padding: 8px 44px; }
+    .reveal .slides section { padding: 6px 36px; }
     .reveal .progress span { background: var(--red); }
 
     /* ── Wasserzeichen ── */
@@ -230,11 +230,11 @@ const html = `<!DOCTYPE html>
     .stat-label  { font-size: .68em; color: var(--muted); margin-top: 6px; display: block; letter-spacing: .06em; text-transform: uppercase; }
 
     /* ── Podium ── */
-    .podium        { display: flex; justify-content: center; align-items: flex-end; gap: 12px; margin: 10px 0 8px; }
-    .podium-card   { display: flex; flex-direction: column; align-items: center; gap: 5px; border-radius: 12px; padding: 12px 10px 10px; background: var(--bg-card); border: 1px solid var(--border); width: 195px; }
-    .podium-card.p1 { border-color: var(--red); background: var(--red-glow); padding-top: 16px; box-shadow: 0 0 24px rgba(192,57,43,.15); }
-    .podium-avatar { width: 50px; height: 50px; border-radius: 50%; object-fit: cover; border: 2px solid var(--border); }
-    .podium-card.p1 .podium-avatar { width: 62px; height: 62px; border-color: var(--red); }
+    .podium        { display: flex; justify-content: center; align-items: flex-end; gap: 10px; margin: 6px 0 6px; }
+    .podium-card   { display: flex; flex-direction: column; align-items: center; gap: 4px; border-radius: 12px; padding: 10px 10px 8px; background: var(--bg-card); border: 1px solid var(--border); width: 180px; }
+    .podium-card.p1 { border-color: var(--red); background: var(--red-glow); padding-top: 13px; box-shadow: 0 0 24px rgba(192,57,43,.15); }
+    .podium-avatar { width: 44px; height: 44px; border-radius: 50%; object-fit: cover; border: 2px solid var(--border); }
+    .podium-card.p1 .podium-avatar { width: 54px; height: 54px; border-color: var(--red); }
     .podium-name   { font-size: .76em; font-weight: 600; color: var(--text); text-align: center; line-height: 1.2; }
     .podium-medal  { font-size: 1.4em; line-height: 1; }
     .podium-pts    { font-size: .68em; color: var(--red); font-weight: 700; }
@@ -242,9 +242,9 @@ const html = `<!DOCTYPE html>
     /* ── Standings Table ── */
     .standings-table { width: 100%; border-collapse: separate; border-spacing: 0; font-size: .78em; margin-top: 12px; border-radius: 10px; overflow: hidden; }
     .standings-table thead tr { background: rgba(192,57,43,.18); }
-    .standings-table th { color: var(--text); padding: 7px 12px; text-align: center; font-weight: 600; letter-spacing: .05em; font-size: .85em; border-bottom: 2px solid var(--border-red); }
+    .standings-table th { color: var(--text); padding: 5px 10px; text-align: center; font-weight: 600; letter-spacing: .05em; font-size: .85em; border-bottom: 2px solid var(--border-red); }
     .standings-table th:nth-child(2) { text-align: left; }
-    .standings-table td { padding: 6px 12px; text-align: center; color: rgba(255,255,255,.7); border: none; }
+    .standings-table td { padding: 4px 10px; text-align: center; color: rgba(255,255,255,.7); border: none; }
     .standings-table td:nth-child(2) { text-align: left; }
     .standings-table tbody tr { border-bottom: 1px solid rgba(255,255,255,.04); }
     .standings-table tbody tr:last-child { border-bottom: none; }
@@ -270,7 +270,7 @@ const html = `<!DOCTYPE html>
     .score-row:first-child .score-row-val { color: var(--red); }
 
     /* ── Player Rows ── */
-    .player-row   { display: flex; align-items: center; gap: 12px; padding: 7px 11px; border-radius: 8px; background: var(--bg-card); border: 1px solid var(--border); margin: 4px 0; }
+    .player-row   { display: flex; align-items: center; gap: 12px; padding: 6px 11px; border-radius: 8px; background: var(--bg-card); border: 1px solid var(--border); margin: 3px 0; }
     .player-row:first-child { border-color: var(--border-red); background: var(--red-glow); }
     .player-avatar { width: 38px; height: 38px; border-radius: 50%; object-fit: cover; border: 1px solid var(--border); flex-shrink: 0; }
     .player-name  { flex: 1; font-weight: 500; text-align: left; font-size: .88em; color: var(--text); }
@@ -283,7 +283,7 @@ const html = `<!DOCTYPE html>
     .rank-other { background: rgba(255,255,255,.1); color: var(--muted); }
 
     /* ── Checkout / Short Game Rows ── */
-    .checkout-item { display: flex; align-items: center; gap: 10px; padding: 5px 10px; border-radius: 7px; background: var(--bg-card); border: 1px solid var(--border); margin: 3px 0; }
+    .checkout-item { display: flex; align-items: center; gap: 10px; padding: 4px 10px; border-radius: 7px; background: var(--bg-card); border: 1px solid var(--border); margin: 2px 0; }
     .checkout-value { font-size: 1.05em; font-weight: 700; color: #fff; min-width: 44px; text-align: right; }
     .checkout-item:first-child .checkout-value { color: var(--red); }
     .checkout-md    { font-size: .65em; color: var(--muted); margin-left: auto; margin-right: 14px; white-space: nowrap; }
@@ -412,7 +412,7 @@ const html = `<!DOCTYPE html>
       <h2>Best Legs</h2>
       <p style="opacity:.5;font-size:.75em;margin:0 0 8px">Legs gewonnen in ≤21 Darts</p>
       ${shortGames.length === 0 ? '<p style="opacity:.5">Keine Short Games diese Saison.</p>' :
-        shortGames.slice(0,8).map((s, i) => `
+        shortGames.slice(0,6).map((s, i) => `
         <div class="checkout-item">
           <div class="rank-badge ${rankClass(i)}">${i+1}</div>
           <img class="player-avatar" src="${s.image}" onerror="this.src='/assets/players/default-avatar.png'" />
@@ -466,6 +466,12 @@ const html = `<!DOCTYPE html>
     progress: true,
     center: true,
     slideNumber: 'c/t',
+    width: 960,
+    height: 700,
+    margin: 0.04,
+    minScale: 0.1,
+    maxScale: 2.0,
+    disableLayout: false,
   });
 </script>
 </body>
