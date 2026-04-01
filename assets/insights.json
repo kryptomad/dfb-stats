@@ -13,7 +13,7 @@
       "updated_at": "2026-03-28",
       "value2": 33.9,
       "insight_id": "INS_009",
-      "value_prev": 5
+      "value_prev": 4
     },
     {
       "player_id": 1,
@@ -88,7 +88,7 @@
       "updated_at": "2026-03-28",
       "value2": 60,
       "insight_id": "INS_005",
-      "value_prev": 45
+      "value_prev": 46
     },
     {
       "player_id": 1,
@@ -113,7 +113,7 @@
       "generated_at": "2026-02-28",
       "updated_at": "2026-03-28",
       "insight_id": "INS_078",
-      "value_prev": 3
+      "value_prev": 4
     },
     {
       "player_id": 1,
@@ -125,7 +125,7 @@
       "generated_at": "2026-02-17",
       "updated_at": "2026-03-28",
       "insight_id": "INS_002",
-      "value_prev": 59
+      "value_prev": 60
     },
     {
       "player_id": 1,
@@ -137,7 +137,7 @@
       "generated_at": "2026-02-17",
       "updated_at": "2026-03-28",
       "insight_id": "INS_006",
-      "value_prev": 4
+      "value_prev": 5
     },
     {
       "player_id": 1,
@@ -163,7 +163,7 @@
       "updated_at": "2026-03-28",
       "value2": 39.6,
       "insight_id": "INS_011",
-      "value_prev": 36.9
+      "value_prev": 36.8
     },
     {
       "player_id": 1,
@@ -176,7 +176,7 @@
       "updated_at": "2026-03-28",
       "value2": 58,
       "insight_id": "INS_014",
-      "value_prev": 76
+      "value_prev": 77
     },
     {
       "player_id": 1,
@@ -213,7 +213,7 @@
       "generated_at": "2026-03-28",
       "updated_at": "2026-03-28",
       "insight_id": "INS_085",
-      "value_prev": null
+      "value_prev": 5
     },
     {
       "player_id": 2,
@@ -226,7 +226,7 @@
       "updated_at": "2026-03-28",
       "value2": 35.9,
       "insight_id": "INS_025",
-      "value_prev": 3
+      "value_prev": 2
     },
     {
       "player_id": 2,
@@ -250,7 +250,7 @@
       "generated_at": "2026-02-17",
       "updated_at": "2026-03-28",
       "insight_id": "INS_031",
-      "value_prev": 18
+      "value_prev": 19
     },
     {
       "player_id": 2,
@@ -314,7 +314,7 @@
       "generated_at": "2026-02-17",
       "updated_at": "2026-03-28",
       "insight_id": "INS_023",
-      "value_prev": 4
+      "value_prev": 5
     },
     {
       "player_id": 2,
@@ -326,7 +326,7 @@
       "generated_at": "2026-02-17",
       "updated_at": "2026-03-28",
       "insight_id": "INS_020",
-      "value_prev": 59
+      "value_prev": 60
     },
     {
       "player_id": 2,
@@ -365,7 +365,7 @@
       "updated_at": "2026-03-28",
       "value2": 54,
       "insight_id": "INS_029",
-      "value_prev": 96
+      "value_prev": 97
     },
     {
       "player_id": 2,
@@ -390,7 +390,7 @@
       "generated_at": "2026-02-17",
       "updated_at": "2026-03-28",
       "insight_id": "INS_028",
-      "value_prev": 30
+      "value_prev": 32
     },
     {
       "player_id": 4,
@@ -403,7 +403,7 @@
       "updated_at": "2026-03-28",
       "value2": 39.5,
       "insight_id": "INS_038",
-      "value_prev": 7
+      "value_prev": 6
     },
     {
       "player_id": 4,
@@ -453,7 +453,7 @@
       "updated_at": "2026-03-28",
       "value2": 60,
       "insight_id": "INS_036",
-      "value_prev": 52
+      "value_prev": 53
     },
     {
       "player_id": 4,
@@ -466,7 +466,7 @@
       "updated_at": "2026-03-28",
       "value2": 60,
       "insight_id": "INS_032",
-      "value_prev": 56
+      "value_prev": 57
     },
     {
       "player_id": 4,
@@ -479,7 +479,7 @@
       "updated_at": "2026-03-28",
       "value2": 60,
       "insight_id": "INS_034",
-      "value_prev": 59
+      "value_prev": 60
     },
     {
       "player_id": 4,
@@ -491,7 +491,7 @@
       "generated_at": "2026-02-28",
       "updated_at": "2026-03-28",
       "insight_id": "INS_080",
-      "value_prev": 3
+      "value_prev": 4
     },
     {
       "player_id": 4,
@@ -503,7 +503,7 @@
       "generated_at": "2026-02-28",
       "updated_at": "2026-03-28",
       "insight_id": "INS_081",
-      "value_prev": 3
+      "value_prev": 4
     },
     {
       "player_id": 4,
@@ -515,7 +515,7 @@
       "generated_at": "2026-02-17",
       "updated_at": "2026-03-28",
       "insight_id": "INS_035",
-      "value_prev": 59
+      "value_prev": 60
     },
     {
       "player_id": 4,
@@ -554,7 +554,7 @@
       "updated_at": "2026-03-28",
       "value2": 46.4,
       "insight_id": "INS_039",
-      "value_prev": 44.7
+      "value_prev": 44.6
     },
     {
       "player_id": 4,
@@ -567,7 +567,7 @@
       "updated_at": "2026-03-28",
       "value2": 52,
       "insight_id": "INS_042",
-      "value_prev": 29
+      "value_prev": 30
     },
     {
       "player_id": 4,
@@ -580,7 +580,7 @@
       "updated_at": "2026-03-28",
       "value2": 97,
       "insight_id": "INS_040",
-      "value_prev": 54
+      "value_prev": 53
     },
     {
       "player_id": 4,
@@ -605,7 +605,7 @@
       "updated_at": "2026-03-28",
       "value2": 30.6,
       "insight_id": "INS_054",
-      "value_prev": 0
+      "value_prev": 2
     },
     {
       "player_id": 6,
@@ -630,7 +630,7 @@
       "updated_at": "2026-03-28",
       "value2": 60,
       "insight_id": "INS_046",
-      "value_prev": 5
+      "value_prev": 6
     },
     {
       "player_id": 6,
@@ -643,7 +643,7 @@
       "updated_at": "2026-03-28",
       "value2": 60,
       "insight_id": "INS_048",
-      "value_prev": 16
+      "value_prev": 17
     },
     {
       "player_id": 6,
@@ -681,7 +681,7 @@
       "generated_at": "2026-02-17",
       "updated_at": "2026-03-28",
       "insight_id": "INS_050",
-      "value_prev": 59
+      "value_prev": 60
     },
     {
       "player_id": 6,
@@ -693,7 +693,7 @@
       "generated_at": "2026-02-17",
       "updated_at": "2026-03-28",
       "insight_id": "INS_052",
-      "value_prev": 59
+      "value_prev": 60
     },
     {
       "player_id": 6,
@@ -719,7 +719,7 @@
       "updated_at": "2026-03-28",
       "value2": 34.7,
       "insight_id": "INS_055",
-      "value_prev": 30.9
+      "value_prev": 30.4
     },
     {
       "player_id": 6,
@@ -732,7 +732,7 @@
       "updated_at": "2026-03-28",
       "value2": 65,
       "insight_id": "INS_058",
-      "value_prev": 140
+      "value_prev": 141
     },
     {
       "player_id": 6,
@@ -745,7 +745,7 @@
       "updated_at": "2026-03-28",
       "value2": 9,
       "insight_id": "INS_056",
-      "value_prev": 43
+      "value_prev": 39
     },
     {
       "player_id": 6,
@@ -769,7 +769,7 @@
       "generated_at": "2026-02-17",
       "updated_at": "2026-03-28",
       "insight_id": "INS_068",
-      "value_prev": 14
+      "value_prev": 18
     },
     {
       "player_id": 8,
@@ -806,7 +806,7 @@
       "generated_at": "2026-02-17",
       "updated_at": "2026-03-28",
       "insight_id": "INS_077",
-      "value_prev": 50
+      "value_prev": 51
     },
     {
       "player_id": 8,
@@ -819,7 +819,7 @@
       "updated_at": "2026-03-28",
       "value2": 60,
       "insight_id": "INS_061",
-      "value_prev": 59
+      "value_prev": 60
     },
     {
       "player_id": 8,
@@ -832,7 +832,7 @@
       "updated_at": "2026-03-28",
       "value2": 60,
       "insight_id": "INS_063",
-      "value_prev": 59
+      "value_prev": 60
     },
     {
       "player_id": 8,
@@ -845,7 +845,7 @@
       "updated_at": "2026-03-28",
       "value2": 60,
       "insight_id": "INS_065",
-      "value_prev": 47
+      "value_prev": 48
     },
     {
       "player_id": 8,
@@ -858,7 +858,7 @@
       "updated_at": "2026-03-28",
       "value2": 60,
       "insight_id": "INS_066",
-      "value_prev": 59
+      "value_prev": 60
     },
     {
       "player_id": 8,
@@ -870,7 +870,7 @@
       "generated_at": "2026-02-17",
       "updated_at": "2026-03-28",
       "insight_id": "INS_062",
-      "value_prev": 59
+      "value_prev": 60
     },
     {
       "player_id": 8,
@@ -882,7 +882,7 @@
       "generated_at": "2026-02-17",
       "updated_at": "2026-03-28",
       "insight_id": "INS_064",
-      "value_prev": 59
+      "value_prev": 60
     },
     {
       "player_id": 8,
@@ -894,7 +894,7 @@
       "generated_at": "2026-02-28",
       "updated_at": "2026-03-28",
       "insight_id": "INS_083",
-      "value_prev": 3
+      "value_prev": 4
     },
     {
       "player_id": 8,
@@ -906,7 +906,7 @@
       "generated_at": "2026-02-17",
       "updated_at": "2026-03-28",
       "insight_id": "INS_067",
-      "value_prev": 59
+      "value_prev": 60
     },
     {
       "player_id": 8,
@@ -958,7 +958,7 @@
       "updated_at": "2026-03-28",
       "value2": 182,
       "insight_id": "INS_073",
-      "value_prev": 79
+      "value_prev": 80
     },
     {
       "player_id": 8,
