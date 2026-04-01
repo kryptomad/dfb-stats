@@ -83,7 +83,7 @@ const allCheckouts = [];
 sStats.forEach(s => {
   if (s.high_finish > 0) allCheckouts.push({ name: getName(s.player_id), image: getImage(s.player_id), value: s.high_finish, matchday: s.matchday });
 });
-const topCheckouts = allCheckouts.sort((a,b) => b.value - a.value).slice(0, 5);
+const topCheckouts = allCheckouts.sort((a,b) => b.value - a.value).slice(0, 10);
 
 // ─── Oskargewinne ───────────────────────────────────────────────────────────
 
@@ -240,11 +240,11 @@ const html = `<!DOCTYPE html>
     .podium-pts    { font-size: .68em; color: var(--red); font-weight: 700; }
 
     /* ── Standings Table ── */
-    .standings-table { width: 100%; border-collapse: separate; border-spacing: 0; font-size: .78em; margin-top: 12px; border-radius: 10px; overflow: hidden; }
+    .standings-table { width: 100%; border-collapse: separate; border-spacing: 0; font-size: .88em; margin-top: 16px; border-radius: 10px; overflow: hidden; }
     .standings-table thead tr { background: rgba(192,57,43,.18); }
-    .standings-table th { color: var(--text); padding: 5px 10px; text-align: center; font-weight: 600; letter-spacing: .05em; font-size: .85em; border-bottom: 2px solid var(--border-red); }
+    .standings-table th { color: var(--text); padding: 9px 14px; text-align: center; font-weight: 600; letter-spacing: .05em; font-size: .85em; border-bottom: 2px solid var(--border-red); }
     .standings-table th:nth-child(2) { text-align: left; }
-    .standings-table td { padding: 4px 10px; text-align: center; color: rgba(255,255,255,.7); border: none; }
+    .standings-table td { padding: 8px 14px; text-align: center; color: rgba(255,255,255,.7); border: none; }
     .standings-table td:nth-child(2) { text-align: left; }
     .standings-table tbody tr { border-bottom: 1px solid rgba(255,255,255,.04); }
     .standings-table tbody tr:last-child { border-bottom: none; }
@@ -339,14 +339,9 @@ const html = `<!DOCTYPE html>
       </div>
     </section>
 
-    <!-- ── 3. Podium ── -->
+    <!-- ── 3. Abschlusstabelle ── -->
     <section data-transition="slide">
       <h2>Abschlusstabelle</h2>
-      <div class="podium">
-        ${podiumCard(tabelle[1], 'p2', '2', 'm2')}
-        ${podiumCard(tabelle[0], 'p1', '1', 'm1')}
-        ${podiumCard(tabelle[2], 'p3', '3', 'm3')}
-      </div>
       <table class="standings-table">
         <thead><tr><th>#</th><th>Spieler</th><th>Punkte</th><th>S</th><th>N</th></tr></thead>
         <tbody>
@@ -379,14 +374,28 @@ const html = `<!DOCTYPE html>
     <!-- ── 5. Checkouts ── -->
     <section data-transition="slide">
       <h2>Höchste Checkouts</h2>
-      ${topCheckouts.map((c, i) => `
-      <div class="checkout-item">
-        <div class="rank-badge ${rankClass(i)}">${i+1}</div>
-        <img class="player-avatar" src="${c.image}" onerror="this.src='/assets/players/default-avatar.png'" />
-        <span class="player-name">${c.name}</span>
-        <span class="checkout-md">Spieltag ${c.matchday}</span>
-        <span class="checkout-value">${c.value}</span>
-      </div>`).join('')}
+      <div class="two-col" style="margin-top:6px">
+        <div>
+          ${topCheckouts.slice(0, Math.ceil(topCheckouts.length/2)).map((c, i) => `
+          <div class="checkout-item">
+            <div class="rank-badge ${rankClass(i)}">${i+1}</div>
+            <img class="player-avatar" src="${c.image}" onerror="this.src='/assets/players/default-avatar.png'" />
+            <span class="player-name">${c.name}</span>
+            <span class="checkout-md">ST ${c.matchday}</span>
+            <span class="checkout-value">${c.value}</span>
+          </div>`).join('')}
+        </div>
+        <div>
+          ${topCheckouts.slice(Math.ceil(topCheckouts.length/2)).map((c, i) => `
+          <div class="checkout-item">
+            <div class="rank-badge ${rankClass(Math.ceil(topCheckouts.length/2) + i)}">${Math.ceil(topCheckouts.length/2) + i + 1}</div>
+            <img class="player-avatar" src="${c.image}" onerror="this.src='/assets/players/default-avatar.png'" />
+            <span class="player-name">${c.name}</span>
+            <span class="checkout-md">ST ${c.matchday}</span>
+            <span class="checkout-value">${c.value}</span>
+          </div>`).join('')}
+        </div>
+      </div>
     </section>
 
     <!-- ── 6. High Scores ── -->
@@ -410,16 +419,30 @@ const html = `<!DOCTYPE html>
     <!-- ── 7. Short Games ── -->
     <section data-transition="slide">
       <h2>Best Legs</h2>
-      <p style="opacity:.5;font-size:.75em;margin:0 0 8px">Legs gewonnen in ≤21 Darts</p>
-      ${shortGames.length === 0 ? '<p style="opacity:.5">Keine Short Games diese Saison.</p>' :
-        shortGames.slice(0,6).map((s, i) => `
-        <div class="checkout-item">
-          <div class="rank-badge ${rankClass(i)}">${i+1}</div>
-          <img class="player-avatar" src="${s.image}" onerror="this.src='/assets/players/default-avatar.png'" />
-          <span class="player-name">${s.name}</span>
-          <span class="checkout-md">Spieltag ${s.matchday}</span>
-          <span class="checkout-value">${s.darts} Darts</span>
-        </div>`).join('')}
+      <p style="opacity:.5;font-size:.75em;margin:0 0 6px">Legs gewonnen in ≤21 Darts</p>
+      ${shortGames.length === 0 ? '<p style="opacity:.5">Keine Short Games diese Saison.</p>' : `
+      <div class="two-col" style="margin-top:4px">
+        <div>
+          ${shortGames.slice(0, Math.ceil(shortGames.length/2)).map((s, i) => `
+          <div class="checkout-item">
+            <div class="rank-badge ${rankClass(i)}">${i+1}</div>
+            <img class="player-avatar" src="${s.image}" onerror="this.src='/assets/players/default-avatar.png'" />
+            <span class="player-name">${s.name}</span>
+            <span class="checkout-md">ST ${s.matchday}</span>
+            <span class="checkout-value">${s.darts} Darts</span>
+          </div>`).join('')}
+        </div>
+        <div>
+          ${shortGames.slice(Math.ceil(shortGames.length/2)).map((s, i) => `
+          <div class="checkout-item">
+            <div class="rank-badge ${rankClass(Math.ceil(shortGames.length/2) + i)}">${Math.ceil(shortGames.length/2) + i + 1}</div>
+            <img class="player-avatar" src="${s.image}" onerror="this.src='/assets/players/default-avatar.png'" />
+            <span class="player-name">${s.name}</span>
+            <span class="checkout-md">ST ${s.matchday}</span>
+            <span class="checkout-value">${s.darts} Darts</span>
+          </div>`).join('')}
+        </div>
+      </div>`}
     </section>
 
 

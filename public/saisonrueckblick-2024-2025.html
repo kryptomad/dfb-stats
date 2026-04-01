@@ -71,11 +71,11 @@
     .podium-pts    { font-size: .68em; color: var(--red); font-weight: 700; }
 
     /* ── Standings Table ── */
-    .standings-table { width: 100%; border-collapse: separate; border-spacing: 0; font-size: .78em; margin-top: 12px; border-radius: 10px; overflow: hidden; }
+    .standings-table { width: 100%; border-collapse: separate; border-spacing: 0; font-size: .88em; margin-top: 16px; border-radius: 10px; overflow: hidden; }
     .standings-table thead tr { background: rgba(192,57,43,.18); }
-    .standings-table th { color: var(--text); padding: 5px 10px; text-align: center; font-weight: 600; letter-spacing: .05em; font-size: .85em; border-bottom: 2px solid var(--border-red); }
+    .standings-table th { color: var(--text); padding: 9px 14px; text-align: center; font-weight: 600; letter-spacing: .05em; font-size: .85em; border-bottom: 2px solid var(--border-red); }
     .standings-table th:nth-child(2) { text-align: left; }
-    .standings-table td { padding: 4px 10px; text-align: center; color: rgba(255,255,255,.7); border: none; }
+    .standings-table td { padding: 8px 14px; text-align: center; color: rgba(255,255,255,.7); border: none; }
     .standings-table td:nth-child(2) { text-align: left; }
     .standings-table tbody tr { border-bottom: 1px solid rgba(255,255,255,.04); }
     .standings-table tbody tr:last-child { border-bottom: none; }
@@ -170,32 +170,9 @@
       </div>
     </section>
 
-    <!-- ── 3. Podium ── -->
+    <!-- ── 3. Abschlusstabelle ── -->
     <section data-transition="slide">
       <h2>Abschlusstabelle</h2>
-      <div class="podium">
-        
-  <div class="podium-card p2">
-    <div class="podium-medal-badge m2">2</div>
-    <img class="podium-avatar" src="/assets/players/franz.png" onerror="this.src='/assets/players/default-avatar.png'" />
-    <div class="podium-name">Franz-Josef</div>
-    <div class="podium-pts">95</div>
-  </div>
-        
-  <div class="podium-card p1">
-    <div class="podium-medal-badge m1">1</div>
-    <img class="podium-avatar" src="/assets/players/martin.png" onerror="this.src='/assets/players/default-avatar.png'" />
-    <div class="podium-name">Martin</div>
-    <div class="podium-pts">117</div>
-  </div>
-        
-  <div class="podium-card p3">
-    <div class="podium-medal-badge m3">3</div>
-    <img class="podium-avatar" src="/assets/players/uwe.png" onerror="this.src='/assets/players/default-avatar.png'" />
-    <div class="podium-name">Uwe</div>
-    <div class="podium-pts">68</div>
-  </div>
-      </div>
       <table class="standings-table">
         <thead><tr><th>#</th><th>Spieler</th><th>Punkte</th><th>S</th><th>N</th></tr></thead>
         <tbody>
@@ -300,41 +277,83 @@
     <!-- ── 5. Checkouts ── -->
     <section data-transition="slide">
       <h2>Höchste Checkouts</h2>
-      
-      <div class="checkout-item">
-        <div class="rank-badge rank-1">1</div>
-        <img class="player-avatar" src="/assets/players/martin.png" onerror="this.src='/assets/players/default-avatar.png'" />
-        <span class="player-name">Martin</span>
-        <span class="checkout-md">Spieltag 9</span>
-        <span class="checkout-value">112</span>
-      </div>
-      <div class="checkout-item">
-        <div class="rank-badge rank-2">2</div>
-        <img class="player-avatar" src="/assets/players/franz.png" onerror="this.src='/assets/players/default-avatar.png'" />
-        <span class="player-name">Franz-Josef</span>
-        <span class="checkout-md">Spieltag 1</span>
-        <span class="checkout-value">102</span>
-      </div>
-      <div class="checkout-item">
-        <div class="rank-badge rank-3">3</div>
-        <img class="player-avatar" src="/assets/players/franz.png" onerror="this.src='/assets/players/default-avatar.png'" />
-        <span class="player-name">Franz-Josef</span>
-        <span class="checkout-md">Spieltag 4</span>
-        <span class="checkout-value">99</span>
-      </div>
-      <div class="checkout-item">
-        <div class="rank-badge rank-other">4</div>
-        <img class="player-avatar" src="/assets/players/martin.png" onerror="this.src='/assets/players/default-avatar.png'" />
-        <span class="player-name">Martin</span>
-        <span class="checkout-md">Spieltag 10</span>
-        <span class="checkout-value">98</span>
-      </div>
-      <div class="checkout-item">
-        <div class="rank-badge rank-other">5</div>
-        <img class="player-avatar" src="/assets/players/martin.png" onerror="this.src='/assets/players/default-avatar.png'" />
-        <span class="player-name">Martin</span>
-        <span class="checkout-md">Spieltag 1</span>
-        <span class="checkout-value">96</span>
+      <div class="two-col" style="margin-top:6px">
+        <div>
+          
+          <div class="checkout-item">
+            <div class="rank-badge rank-1">1</div>
+            <img class="player-avatar" src="/assets/players/martin.png" onerror="this.src='/assets/players/default-avatar.png'" />
+            <span class="player-name">Martin</span>
+            <span class="checkout-md">ST 9</span>
+            <span class="checkout-value">112</span>
+          </div>
+          <div class="checkout-item">
+            <div class="rank-badge rank-2">2</div>
+            <img class="player-avatar" src="/assets/players/franz.png" onerror="this.src='/assets/players/default-avatar.png'" />
+            <span class="player-name">Franz-Josef</span>
+            <span class="checkout-md">ST 1</span>
+            <span class="checkout-value">102</span>
+          </div>
+          <div class="checkout-item">
+            <div class="rank-badge rank-3">3</div>
+            <img class="player-avatar" src="/assets/players/franz.png" onerror="this.src='/assets/players/default-avatar.png'" />
+            <span class="player-name">Franz-Josef</span>
+            <span class="checkout-md">ST 4</span>
+            <span class="checkout-value">99</span>
+          </div>
+          <div class="checkout-item">
+            <div class="rank-badge rank-other">4</div>
+            <img class="player-avatar" src="/assets/players/martin.png" onerror="this.src='/assets/players/default-avatar.png'" />
+            <span class="player-name">Martin</span>
+            <span class="checkout-md">ST 10</span>
+            <span class="checkout-value">98</span>
+          </div>
+          <div class="checkout-item">
+            <div class="rank-badge rank-other">5</div>
+            <img class="player-avatar" src="/assets/players/martin.png" onerror="this.src='/assets/players/default-avatar.png'" />
+            <span class="player-name">Martin</span>
+            <span class="checkout-md">ST 1</span>
+            <span class="checkout-value">96</span>
+          </div>
+        </div>
+        <div>
+          
+          <div class="checkout-item">
+            <div class="rank-badge rank-other">6</div>
+            <img class="player-avatar" src="/assets/players/franz.png" onerror="this.src='/assets/players/default-avatar.png'" />
+            <span class="player-name">Franz-Josef</span>
+            <span class="checkout-md">ST 7</span>
+            <span class="checkout-value">96</span>
+          </div>
+          <div class="checkout-item">
+            <div class="rank-badge rank-other">7</div>
+            <img class="player-avatar" src="/assets/players/franz.png" onerror="this.src='/assets/players/default-avatar.png'" />
+            <span class="player-name">Franz-Josef</span>
+            <span class="checkout-md">ST 3</span>
+            <span class="checkout-value">90</span>
+          </div>
+          <div class="checkout-item">
+            <div class="rank-badge rank-other">8</div>
+            <img class="player-avatar" src="/assets/players/martin.png" onerror="this.src='/assets/players/default-avatar.png'" />
+            <span class="player-name">Martin</span>
+            <span class="checkout-md">ST 4</span>
+            <span class="checkout-value">90</span>
+          </div>
+          <div class="checkout-item">
+            <div class="rank-badge rank-other">9</div>
+            <img class="player-avatar" src="/assets/players/uwe.png" onerror="this.src='/assets/players/default-avatar.png'" />
+            <span class="player-name">Uwe</span>
+            <span class="checkout-md">ST 3</span>
+            <span class="checkout-value">89</span>
+          </div>
+          <div class="checkout-item">
+            <div class="rank-badge rank-other">10</div>
+            <img class="player-avatar" src="/assets/players/martin.png" onerror="this.src='/assets/players/default-avatar.png'" />
+            <span class="player-name">Martin</span>
+            <span class="checkout-md">ST 7</span>
+            <span class="checkout-value">88</span>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -392,50 +411,135 @@
     <!-- ── 7. Short Games ── -->
     <section data-transition="slide">
       <h2>Best Legs</h2>
-      <p style="opacity:.5;font-size:.75em;margin:0 0 8px">Legs gewonnen in ≤21 Darts</p>
+      <p style="opacity:.5;font-size:.75em;margin:0 0 6px">Legs gewonnen in ≤21 Darts</p>
       
-        <div class="checkout-item">
-          <div class="rank-badge rank-1">1</div>
-          <img class="player-avatar" src="/assets/players/martin.png" onerror="this.src='/assets/players/default-avatar.png'" />
-          <span class="player-name">Martin</span>
-          <span class="checkout-md">Spieltag 1</span>
-          <span class="checkout-value">15 Darts</span>
+      <div class="two-col" style="margin-top:4px">
+        <div>
+          
+          <div class="checkout-item">
+            <div class="rank-badge rank-1">1</div>
+            <img class="player-avatar" src="/assets/players/martin.png" onerror="this.src='/assets/players/default-avatar.png'" />
+            <span class="player-name">Martin</span>
+            <span class="checkout-md">ST 1</span>
+            <span class="checkout-value">15 Darts</span>
+          </div>
+          <div class="checkout-item">
+            <div class="rank-badge rank-2">2</div>
+            <img class="player-avatar" src="/assets/players/martin.png" onerror="this.src='/assets/players/default-avatar.png'" />
+            <span class="player-name">Martin</span>
+            <span class="checkout-md">ST 6</span>
+            <span class="checkout-value">15 Darts</span>
+          </div>
+          <div class="checkout-item">
+            <div class="rank-badge rank-3">3</div>
+            <img class="player-avatar" src="/assets/players/martin.png" onerror="this.src='/assets/players/default-avatar.png'" />
+            <span class="player-name">Martin</span>
+            <span class="checkout-md">ST 7</span>
+            <span class="checkout-value">17 Darts</span>
+          </div>
+          <div class="checkout-item">
+            <div class="rank-badge rank-other">4</div>
+            <img class="player-avatar" src="/assets/players/martin.png" onerror="this.src='/assets/players/default-avatar.png'" />
+            <span class="player-name">Martin</span>
+            <span class="checkout-md">ST 10</span>
+            <span class="checkout-value">18 Darts</span>
+          </div>
+          <div class="checkout-item">
+            <div class="rank-badge rank-other">5</div>
+            <img class="player-avatar" src="/assets/players/martin.png" onerror="this.src='/assets/players/default-avatar.png'" />
+            <span class="player-name">Martin</span>
+            <span class="checkout-md">ST 10</span>
+            <span class="checkout-value">18 Darts</span>
+          </div>
+          <div class="checkout-item">
+            <div class="rank-badge rank-other">6</div>
+            <img class="player-avatar" src="/assets/players/martin.png" onerror="this.src='/assets/players/default-avatar.png'" />
+            <span class="player-name">Martin</span>
+            <span class="checkout-md">ST 1</span>
+            <span class="checkout-value">19 Darts</span>
+          </div>
+          <div class="checkout-item">
+            <div class="rank-badge rank-other">7</div>
+            <img class="player-avatar" src="/assets/players/martin.png" onerror="this.src='/assets/players/default-avatar.png'" />
+            <span class="player-name">Martin</span>
+            <span class="checkout-md">ST 2</span>
+            <span class="checkout-value">19 Darts</span>
+          </div>
+          <div class="checkout-item">
+            <div class="rank-badge rank-other">8</div>
+            <img class="player-avatar" src="/assets/players/martin.png" onerror="this.src='/assets/players/default-avatar.png'" />
+            <span class="player-name">Martin</span>
+            <span class="checkout-md">ST 2</span>
+            <span class="checkout-value">19 Darts</span>
+          </div>
+          <div class="checkout-item">
+            <div class="rank-badge rank-other">9</div>
+            <img class="player-avatar" src="/assets/players/martin.png" onerror="this.src='/assets/players/default-avatar.png'" />
+            <span class="player-name">Martin</span>
+            <span class="checkout-md">ST 4</span>
+            <span class="checkout-value">19 Darts</span>
+          </div>
         </div>
-        <div class="checkout-item">
-          <div class="rank-badge rank-2">2</div>
-          <img class="player-avatar" src="/assets/players/martin.png" onerror="this.src='/assets/players/default-avatar.png'" />
-          <span class="player-name">Martin</span>
-          <span class="checkout-md">Spieltag 6</span>
-          <span class="checkout-value">15 Darts</span>
+        <div>
+          
+          <div class="checkout-item">
+            <div class="rank-badge rank-other">10</div>
+            <img class="player-avatar" src="/assets/players/martin.png" onerror="this.src='/assets/players/default-avatar.png'" />
+            <span class="player-name">Martin</span>
+            <span class="checkout-md">ST 6</span>
+            <span class="checkout-value">19 Darts</span>
+          </div>
+          <div class="checkout-item">
+            <div class="rank-badge rank-other">11</div>
+            <img class="player-avatar" src="/assets/players/martin.png" onerror="this.src='/assets/players/default-avatar.png'" />
+            <span class="player-name">Martin</span>
+            <span class="checkout-md">ST 7</span>
+            <span class="checkout-value">19 Darts</span>
+          </div>
+          <div class="checkout-item">
+            <div class="rank-badge rank-other">12</div>
+            <img class="player-avatar" src="/assets/players/martin.png" onerror="this.src='/assets/players/default-avatar.png'" />
+            <span class="player-name">Martin</span>
+            <span class="checkout-md">ST 10</span>
+            <span class="checkout-value">19 Darts</span>
+          </div>
+          <div class="checkout-item">
+            <div class="rank-badge rank-other">13</div>
+            <img class="player-avatar" src="/assets/players/martin.png" onerror="this.src='/assets/players/default-avatar.png'" />
+            <span class="player-name">Martin</span>
+            <span class="checkout-md">ST 2</span>
+            <span class="checkout-value">21 Darts</span>
+          </div>
+          <div class="checkout-item">
+            <div class="rank-badge rank-other">14</div>
+            <img class="player-avatar" src="/assets/players/martin.png" onerror="this.src='/assets/players/default-avatar.png'" />
+            <span class="player-name">Martin</span>
+            <span class="checkout-md">ST 5</span>
+            <span class="checkout-value">21 Darts</span>
+          </div>
+          <div class="checkout-item">
+            <div class="rank-badge rank-other">15</div>
+            <img class="player-avatar" src="/assets/players/martin.png" onerror="this.src='/assets/players/default-avatar.png'" />
+            <span class="player-name">Martin</span>
+            <span class="checkout-md">ST 9</span>
+            <span class="checkout-value">21 Darts</span>
+          </div>
+          <div class="checkout-item">
+            <div class="rank-badge rank-other">16</div>
+            <img class="player-avatar" src="/assets/players/martin.png" onerror="this.src='/assets/players/default-avatar.png'" />
+            <span class="player-name">Martin</span>
+            <span class="checkout-md">ST 9</span>
+            <span class="checkout-value">21 Darts</span>
+          </div>
+          <div class="checkout-item">
+            <div class="rank-badge rank-other">17</div>
+            <img class="player-avatar" src="/assets/players/martin.png" onerror="this.src='/assets/players/default-avatar.png'" />
+            <span class="player-name">Martin</span>
+            <span class="checkout-md">ST 9</span>
+            <span class="checkout-value">21 Darts</span>
+          </div>
         </div>
-        <div class="checkout-item">
-          <div class="rank-badge rank-3">3</div>
-          <img class="player-avatar" src="/assets/players/martin.png" onerror="this.src='/assets/players/default-avatar.png'" />
-          <span class="player-name">Martin</span>
-          <span class="checkout-md">Spieltag 7</span>
-          <span class="checkout-value">17 Darts</span>
-        </div>
-        <div class="checkout-item">
-          <div class="rank-badge rank-other">4</div>
-          <img class="player-avatar" src="/assets/players/martin.png" onerror="this.src='/assets/players/default-avatar.png'" />
-          <span class="player-name">Martin</span>
-          <span class="checkout-md">Spieltag 10</span>
-          <span class="checkout-value">18 Darts</span>
-        </div>
-        <div class="checkout-item">
-          <div class="rank-badge rank-other">5</div>
-          <img class="player-avatar" src="/assets/players/martin.png" onerror="this.src='/assets/players/default-avatar.png'" />
-          <span class="player-name">Martin</span>
-          <span class="checkout-md">Spieltag 10</span>
-          <span class="checkout-value">18 Darts</span>
-        </div>
-        <div class="checkout-item">
-          <div class="rank-badge rank-other">6</div>
-          <img class="player-avatar" src="/assets/players/martin.png" onerror="this.src='/assets/players/default-avatar.png'" />
-          <span class="player-name">Martin</span>
-          <span class="checkout-md">Spieltag 1</span>
-          <span class="checkout-value">19 Darts</span>
-        </div>
+      </div>
     </section>
 
 
