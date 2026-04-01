@@ -21,7 +21,7 @@ const getPlayer  = (id) => players.find(p => p.player_id === id);
 const getName    = (id) => getPlayer(id)?.name || 'Unbekannt';
 const getImage   = (id) => {
   const p = getPlayer(id);
-  return p?.image ? `src/assets/players/${p.image}` : 'src/assets/players/default-avatar.png';
+  return p?.image ? `/assets/players/${p.image}` : '/assets/players/default-avatar.png';
 };
 const rankClass  = (i) => i === 0 ? 'rank-1' : i === 1 ? 'rank-2' : i === 2 ? 'rank-3' : 'rank-other';
 
@@ -53,7 +53,7 @@ const tabelle = Object.values(punkteMap)
   .sort((a,b) => b.punkte - a.punkte)
   .map((e, i) => {
     const p = players.find(pl => pl.name === e.name);
-    return { ...e, platz: i+1, image: p?.image ? `src/assets/players/${p.image}` : 'src/assets/players/default-avatar.png' };
+    return { ...e, platz: i+1, image: p?.image ? `/assets/players/${p.image}` : '/assets/players/default-avatar.png' };
   });
 
 // ─── Averages ───────────────────────────────────────────────────────────────
@@ -105,7 +105,7 @@ const oskarRanking = Object.entries(oskarWins)
   .sort((a,b) => b[1]-a[1])
   .map(([name, count]) => {
     const p = players.find(pl => pl.name === name);
-    return { name, count, image: p?.image ? `src/assets/players/${p.image}` : 'src/assets/players/default-avatar.png' };
+    return { name, count, image: p?.image ? `/assets/players/${p.image}` : '/assets/players/default-avatar.png' };
   });
 
 // ─── Engste Duelle ──────────────────────────────────────────────────────────
@@ -130,8 +130,8 @@ const engsteDuelle = Object.values(duellMap)
   .map(d => {
     const pA = players.find(pl => pl.name === d.nameA);
     const pB = players.find(pl => pl.name === d.nameB);
-    return { ...d, imgA: pA?.image ? `src/assets/players/${pA.image}` : 'src/assets/players/default-avatar.png',
-                    imgB: pB?.image ? `src/assets/players/${pB.image}` : 'src/assets/players/default-avatar.png' };
+    return { ...d, imgA: pA?.image ? `/assets/players/${pA.image}` : '/assets/players/default-avatar.png',
+                    imgB: pB?.image ? `/assets/players/${pB.image}` : '/assets/players/default-avatar.png' };
   });
 
 // ─── Short Games ────────────────────────────────────────────────────────────
@@ -152,7 +152,7 @@ shortGames.sort((a,b) => a.darts - b.darts);
 const playerRow = (p, i) => `
   <div class="player-row">
     <div class="rank-badge ${rankClass(i)}">${i+1}</div>
-    <img class="player-avatar" src="${p.image}" onerror="this.src='src/assets/players/default-avatar.png'" />
+    <img class="player-avatar" src="${p.image}" onerror="this.src='/assets/players/default-avatar.png'" />
     <span class="player-name">${p.name}</span>
     <span class="player-value">${p.value}</span>
   </div>`;
@@ -160,7 +160,7 @@ const playerRow = (p, i) => `
 const podiumCard = (e, cls, medalNum, medalCls) => !e ? '' : `
   <div class="podium-card ${cls}">
     <div class="podium-medal-badge ${medalCls}">${medalNum}</div>
-    <img class="podium-avatar" src="${e.image}" onerror="this.src='src/assets/players/default-avatar.png'" />
+    <img class="podium-avatar" src="${e.image}" onerror="this.src='/assets/players/default-avatar.png'" />
     <div class="podium-name">${e.name}</div>
     <div class="podium-pts">${e.punkte}</div>
   </div>`;
@@ -207,7 +207,7 @@ const html = `<!DOCTYPE html>
       top: 50%; left: 50%;
       transform: translate(-50%, -50%);
       width: 300px; height: 300px;
-      background: url('src/assets/logo.svg') center/contain no-repeat;
+      background: url('/assets/logo.svg') center/contain no-repeat;
       opacity: .03;
       filter: grayscale(1) brightness(2);
       pointer-events: none;
@@ -321,7 +321,7 @@ const html = `<!DOCTYPE html>
 
     <!-- ── 1. Titel ── -->
     <section data-transition="fade" class="title-slide" style="text-align:center">
-      <img src="src/assets/logo.svg" alt="Dartfreunde Borchen" style="width:120px;display:block;margin:0 auto 20px;filter:drop-shadow(0 0 18px rgba(192,57,43,.4))" />
+      <img src="/assets/logo.svg" alt="Dartfreunde Borchen" style="width:120px;display:block;margin:0 auto 20px;filter:drop-shadow(0 0 18px rgba(192,57,43,.4))" />
       <div class="title-divider"></div>
       <h1>Saisonrückblick ${SEASON}</h1>
       <p style="font-size:.7em;letter-spacing:.15em;text-transform:uppercase;color:#666e7a;margin-top:6px">Dartfreunde Borchen n.e.V.</p>
@@ -350,7 +350,7 @@ const html = `<!DOCTYPE html>
       <table class="standings-table">
         <thead><tr><th>#</th><th>Spieler</th><th>Punkte</th><th>S</th><th>N</th></tr></thead>
         <tbody>
-          ${tabelle.map(e => `<tr><td>${e.platz}</td><td><div class="td-player"><img src="${e.image}" onerror="this.src='src/assets/players/default-avatar.png'" />${e.name}</div></td><td>${e.punkte}</td><td>${e.wins}</td><td>${e.losses}</td></tr>`).join('')}
+          ${tabelle.map(e => `<tr><td>${e.platz}</td><td><div class="td-player"><img src="${e.image}" onerror="this.src='/assets/players/default-avatar.png'" />${e.name}</div></td><td>${e.punkte}</td><td>${e.wins}</td><td>${e.losses}</td></tr>`).join('')}
         </tbody>
       </table>
     </section>
@@ -382,7 +382,7 @@ const html = `<!DOCTYPE html>
       ${topCheckouts.map((c, i) => `
       <div class="checkout-item">
         <div class="rank-badge ${rankClass(i)}">${i+1}</div>
-        <img class="player-avatar" src="${c.image}" onerror="this.src='src/assets/players/default-avatar.png'" />
+        <img class="player-avatar" src="${c.image}" onerror="this.src='/assets/players/default-avatar.png'" />
         <span class="player-name">${c.name}</span>
         <span class="checkout-md">Spieltag ${c.matchday}</span>
         <span class="checkout-value">${c.value}</span>
@@ -415,7 +415,7 @@ const html = `<!DOCTYPE html>
         shortGames.slice(0,8).map((s, i) => `
         <div class="checkout-item">
           <div class="rank-badge ${rankClass(i)}">${i+1}</div>
-          <img class="player-avatar" src="${s.image}" onerror="this.src='src/assets/players/default-avatar.png'" />
+          <img class="player-avatar" src="${s.image}" onerror="this.src='/assets/players/default-avatar.png'" />
           <span class="player-name">${s.name}</span>
           <span class="checkout-md">Spieltag ${s.matchday}</span>
           <span class="checkout-value">${s.darts} Darts</span>
@@ -431,7 +431,7 @@ const html = `<!DOCTYPE html>
         ${engsteDuelle.map((d, i) => `
         <div class="duell-card">
           <div class="duell-player">
-            <img class="duell-avatar" src="${d.imgA}" onerror="this.src='src/assets/players/default-avatar.png'" />
+            <img class="duell-avatar" src="${d.imgA}" onerror="this.src='/assets/players/default-avatar.png'" />
             <div class="duell-name">${d.nameA}</div>
           </div>
           <div class="duell-center">
@@ -439,7 +439,7 @@ const html = `<!DOCTYPE html>
             <div class="duell-diff">Differenz: ${d.diff} Leg${d.diff !== 1 ? 's' : ''}</div>
           </div>
           <div class="duell-player right">
-            <img class="duell-avatar" src="${d.imgB}" onerror="this.src='src/assets/players/default-avatar.png'" />
+            <img class="duell-avatar" src="${d.imgB}" onerror="this.src='/assets/players/default-avatar.png'" />
             <div class="duell-name">${d.nameB}</div>
           </div>
         </div>`).join('')}
@@ -448,7 +448,7 @@ const html = `<!DOCTYPE html>
 
     <!-- ── 10. Abschluss ── -->
     <section data-transition="fade" class="title-slide" style="text-align:center">
-      <img src="src/assets/logo.svg" alt="Dartfreunde Borchen" style="width:120px;display:block;margin:0 auto 20px;filter:drop-shadow(0 0 18px rgba(192,57,43,.4))" />
+      <img src="/assets/logo.svg" alt="Dartfreunde Borchen" style="width:120px;display:block;margin:0 auto 20px;filter:drop-shadow(0 0 18px rgba(192,57,43,.4))" />
       <div class="title-divider"></div>
       <h1>Danke für eine tolle Saison!</h1>
       <p style="font-size:.7em;letter-spacing:.15em;text-transform:uppercase;color:#666e7a;margin-top:6px">Dartfreunde Borchen n.e.V. · ${SEASON}</p>
