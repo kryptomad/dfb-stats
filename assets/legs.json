@@ -228986,5 +228986,4250 @@
         ]
       }
     ]
+  },
+  {
+    "game_id": 602,
+    "season": "2026/2027",
+    "matchday": 1,
+    "player1_id": 2,
+    "player2_id": 8,
+    "legs": [
+      {
+        "leg_number": 1,
+        "starter_id": 2,
+        "leg_winner_id": 8,
+        "p1_darts_leg": 42,
+        "p2_darts_leg": 40,
+        "p1_avg_3dart_leg": 35.071,
+        "p2_avg_3dart_leg": 37.575,
+        "rounds": [
+          {
+            "round": 0,
+            "p1_score": null,
+            "p1_left": 501,
+            "p2_score": null,
+            "p2_left": 501
+          },
+          {
+            "round": 1,
+            "p1_score": 33,
+            "p1_left": 468,
+            "p2_score": 60,
+            "p2_left": 441
+          },
+          {
+            "round": 2,
+            "p1_score": 44,
+            "p1_left": 424,
+            "p2_score": 60,
+            "p2_left": 381
+          },
+          {
+            "round": 3,
+            "p1_score": 20,
+            "p1_left": 404,
+            "p2_score": 40,
+            "p2_left": 341
+          },
+          {
+            "round": 4,
+            "p1_score": 45,
+            "p1_left": 359,
+            "p2_score": 81,
+            "p2_left": 260
+          },
+          {
+            "round": 5,
+            "p1_score": 29,
+            "p1_left": 330,
+            "p2_score": 60,
+            "p2_left": 200
+          },
+          {
+            "round": 6,
+            "p1_score": 19,
+            "p1_left": 311,
+            "p2_score": 40,
+            "p2_left": 160
+          },
+          {
+            "round": 7,
+            "p1_score": 33,
+            "p1_left": 278,
+            "p2_score": 24,
+            "p2_left": 136
+          },
+          {
+            "round": 8,
+            "p1_score": 26,
+            "p1_left": 252,
+            "p2_score": 56,
+            "p2_left": 80
+          },
+          {
+            "round": 9,
+            "p1_score": 26,
+            "p1_left": 226,
+            "p2_score": 0,
+            "p2_left": 80
+          },
+          {
+            "round": 10,
+            "p1_score": 69,
+            "p1_left": 157,
+            "p2_score": 40,
+            "p2_left": 40
+          },
+          {
+            "round": 11,
+            "p1_score": 39,
+            "p1_left": 118,
+            "p2_score": 30,
+            "p2_left": 10
+          },
+          {
+            "round": 12,
+            "p1_score": 73,
+            "p1_left": 45,
+            "p2_score": 6,
+            "p2_left": 4
+          },
+          {
+            "round": 13,
+            "p1_score": 23,
+            "p1_left": 22,
+            "p2_score": 0,
+            "p2_left": 4
+          },
+          {
+            "round": 14,
+            "p1_score": 12,
+            "p1_left": 10,
+            "p2_score": -1,
+            "p2_left": null
+          }
+        ]
+      },
+      {
+        "leg_number": 2,
+        "starter_id": 8,
+        "leg_winner_id": 8,
+        "p1_darts_leg": 33,
+        "p2_darts_leg": 35,
+        "p1_avg_3dart_leg": 32.364,
+        "p2_avg_3dart_leg": 42.943,
+        "rounds": [
+          {
+            "round": 0,
+            "p1_score": null,
+            "p1_left": 501,
+            "p2_score": null,
+            "p2_left": 501
+          },
+          {
+            "round": 1,
+            "p1_score": 11,
+            "p1_left": 490,
+            "p2_score": 40,
+            "p2_left": 461
+          },
+          {
+            "round": 2,
+            "p1_score": 43,
+            "p1_left": 447,
+            "p2_score": 41,
+            "p2_left": 420
+          },
+          {
+            "round": 3,
+            "p1_score": 35,
+            "p1_left": 412,
+            "p2_score": 100,
+            "p2_left": 320
+          },
+          {
+            "round": 4,
+            "p1_score": 44,
+            "p1_left": 368,
+            "p2_score": 55,
+            "p2_left": 265
+          },
+          {
+            "round": 5,
+            "p1_score": 25,
+            "p1_left": 343,
+            "p2_score": 25,
+            "p2_left": 240
+          },
+          {
+            "round": 6,
+            "p1_score": 72,
+            "p1_left": 271,
+            "p2_score": 45,
+            "p2_left": 195
+          },
+          {
+            "round": 7,
+            "p1_score": 23,
+            "p1_left": 248,
+            "p2_score": 28,
+            "p2_left": 167
+          },
+          {
+            "round": 8,
+            "p1_score": 29,
+            "p1_left": 219,
+            "p2_score": 83,
+            "p2_left": 84
+          },
+          {
+            "round": 9,
+            "p1_score": 33,
+            "p1_left": 186,
+            "p2_score": 0,
+            "p2_left": 84
+          },
+          {
+            "round": 10,
+            "p1_score": 30,
+            "p1_left": 156,
+            "p2_score": 44,
+            "p2_left": 40
+          },
+          {
+            "round": 11,
+            "p1_score": 11,
+            "p1_left": 145,
+            "p2_score": 20,
+            "p2_left": 20
+          },
+          {
+            "round": 12,
+            "p1_score": null,
+            "p1_left": null,
+            "p2_score": -2,
+            "p2_left": null
+          }
+        ]
+      },
+      {
+        "leg_number": 3,
+        "starter_id": 2,
+        "leg_winner_id": 8,
+        "p1_darts_leg": 27,
+        "p2_darts_leg": 26,
+        "p1_avg_3dart_leg": 42.444,
+        "p2_avg_3dart_leg": 57.808,
+        "rounds": [
+          {
+            "round": 0,
+            "p1_score": null,
+            "p1_left": 501,
+            "p2_score": null,
+            "p2_left": 501
+          },
+          {
+            "round": 1,
+            "p1_score": 35,
+            "p1_left": 466,
+            "p2_score": 140,
+            "p2_left": 361
+          },
+          {
+            "round": 2,
+            "p1_score": 21,
+            "p1_left": 445,
+            "p2_score": 60,
+            "p2_left": 301
+          },
+          {
+            "round": 3,
+            "p1_score": 25,
+            "p1_left": 420,
+            "p2_score": 60,
+            "p2_left": 241
+          },
+          {
+            "round": 4,
+            "p1_score": 60,
+            "p1_left": 360,
+            "p2_score": 60,
+            "p2_left": 181
+          },
+          {
+            "round": 5,
+            "p1_score": 39,
+            "p1_left": 321,
+            "p2_score": 40,
+            "p2_left": 141
+          },
+          {
+            "round": 6,
+            "p1_score": 11,
+            "p1_left": 310,
+            "p2_score": 60,
+            "p2_left": 81
+          },
+          {
+            "round": 7,
+            "p1_score": 33,
+            "p1_left": 277,
+            "p2_score": 9,
+            "p2_left": 72
+          },
+          {
+            "round": 8,
+            "p1_score": 102,
+            "p1_left": 175,
+            "p2_score": 32,
+            "p2_left": 40
+          },
+          {
+            "round": 9,
+            "p1_score": 56,
+            "p1_left": 119,
+            "p2_score": -2,
+            "p2_left": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "game_id": 603,
+    "season": "2026/2027",
+    "matchday": 1,
+    "player1_id": 4,
+    "player2_id": 6,
+    "legs": [
+      {
+        "leg_number": 1,
+        "starter_id": 4,
+        "leg_winner_id": 4,
+        "p1_darts_leg": 94,
+        "p2_darts_leg": 93,
+        "p1_avg_3dart_leg": 15.989,
+        "p2_avg_3dart_leg": 16.097,
+        "rounds": [
+          {
+            "round": 0,
+            "p1_score": null,
+            "p1_left": 501,
+            "p2_score": null,
+            "p2_left": 501
+          },
+          {
+            "round": 1,
+            "p1_score": 31,
+            "p1_left": 470,
+            "p2_score": 34,
+            "p2_left": 467
+          },
+          {
+            "round": 2,
+            "p1_score": 74,
+            "p1_left": 396,
+            "p2_score": 35,
+            "p2_left": 432
+          },
+          {
+            "round": 3,
+            "p1_score": 23,
+            "p1_left": 373,
+            "p2_score": 6,
+            "p2_left": 426
+          },
+          {
+            "round": 4,
+            "p1_score": 16,
+            "p1_left": 357,
+            "p2_score": 55,
+            "p2_left": 371
+          },
+          {
+            "round": 5,
+            "p1_score": 59,
+            "p1_left": 298,
+            "p2_score": 51,
+            "p2_left": 320
+          },
+          {
+            "round": 6,
+            "p1_score": 18,
+            "p1_left": 280,
+            "p2_score": 17,
+            "p2_left": 303
+          },
+          {
+            "round": 7,
+            "p1_score": 49,
+            "p1_left": 231,
+            "p2_score": 24,
+            "p2_left": 279
+          },
+          {
+            "round": 8,
+            "p1_score": 41,
+            "p1_left": 190,
+            "p2_score": 59,
+            "p2_left": 220
+          },
+          {
+            "round": 9,
+            "p1_score": 41,
+            "p1_left": 149,
+            "p2_score": 38,
+            "p2_left": 182
+          },
+          {
+            "round": 10,
+            "p1_score": 25,
+            "p1_left": 124,
+            "p2_score": 22,
+            "p2_left": 160
+          },
+          {
+            "round": 11,
+            "p1_score": 24,
+            "p1_left": 100,
+            "p2_score": 28,
+            "p2_left": 132
+          },
+          {
+            "round": 12,
+            "p1_score": 45,
+            "p1_left": 55,
+            "p2_score": 58,
+            "p2_left": 74
+          },
+          {
+            "round": 13,
+            "p1_score": 15,
+            "p1_left": 40,
+            "p2_score": 37,
+            "p2_left": 37
+          },
+          {
+            "round": 14,
+            "p1_score": 28,
+            "p1_left": 12,
+            "p2_score": 0,
+            "p2_left": 37
+          },
+          {
+            "round": 15,
+            "p1_score": 0,
+            "p1_left": 12,
+            "p2_score": 29,
+            "p2_left": 8
+          },
+          {
+            "round": 16,
+            "p1_score": 0,
+            "p1_left": 12,
+            "p2_score": 0,
+            "p2_left": 8
+          },
+          {
+            "round": 17,
+            "p1_score": 0,
+            "p1_left": 12,
+            "p2_score": 0,
+            "p2_left": 8
+          },
+          {
+            "round": 18,
+            "p1_score": 10,
+            "p1_left": 2,
+            "p2_score": 0,
+            "p2_left": 8
+          },
+          {
+            "round": 19,
+            "p1_score": 0,
+            "p1_left": 2,
+            "p2_score": 0,
+            "p2_left": 8
+          },
+          {
+            "round": 20,
+            "p1_score": 0,
+            "p1_left": 2,
+            "p2_score": 4,
+            "p2_left": 4
+          },
+          {
+            "round": 21,
+            "p1_score": 0,
+            "p1_left": 2,
+            "p2_score": 0,
+            "p2_left": 4
+          },
+          {
+            "round": 22,
+            "p1_score": 0,
+            "p1_left": 2,
+            "p2_score": 0,
+            "p2_left": 4
+          },
+          {
+            "round": 23,
+            "p1_score": 0,
+            "p1_left": 2,
+            "p2_score": 0,
+            "p2_left": 4
+          },
+          {
+            "round": 24,
+            "p1_score": 0,
+            "p1_left": 2,
+            "p2_score": 2,
+            "p2_left": 2
+          },
+          {
+            "round": 25,
+            "p1_score": 0,
+            "p1_left": 2,
+            "p2_score": 0,
+            "p2_left": 2
+          },
+          {
+            "round": 26,
+            "p1_score": 0,
+            "p1_left": 2,
+            "p2_score": 0,
+            "p2_left": 2
+          },
+          {
+            "round": 27,
+            "p1_score": 0,
+            "p1_left": 2,
+            "p2_score": 0,
+            "p2_left": 2
+          },
+          {
+            "round": 28,
+            "p1_score": 0,
+            "p1_left": 2,
+            "p2_score": 0,
+            "p2_left": 2
+          },
+          {
+            "round": 29,
+            "p1_score": 0,
+            "p1_left": 2,
+            "p2_score": 0,
+            "p2_left": 2
+          },
+          {
+            "round": 30,
+            "p1_score": 0,
+            "p1_left": 2,
+            "p2_score": 0,
+            "p2_left": 2
+          },
+          {
+            "round": 31,
+            "p1_score": 0,
+            "p1_left": 2,
+            "p2_score": 0,
+            "p2_left": 2
+          },
+          {
+            "round": 32,
+            "p1_score": -1,
+            "p1_left": null,
+            "p2_score": null,
+            "p2_left": null
+          }
+        ]
+      },
+      {
+        "leg_number": 2,
+        "starter_id": 6,
+        "leg_winner_id": 4,
+        "p1_darts_leg": 37,
+        "p2_darts_leg": 39,
+        "p1_avg_3dart_leg": 40.622,
+        "p2_avg_3dart_leg": 33.154,
+        "rounds": [
+          {
+            "round": 0,
+            "p1_score": null,
+            "p1_left": 501,
+            "p2_score": null,
+            "p2_left": 501
+          },
+          {
+            "round": 1,
+            "p1_score": 25,
+            "p1_left": 476,
+            "p2_score": 47,
+            "p2_left": 454
+          },
+          {
+            "round": 2,
+            "p1_score": 100,
+            "p1_left": 376,
+            "p2_score": 22,
+            "p2_left": 432
+          },
+          {
+            "round": 3,
+            "p1_score": 70,
+            "p1_left": 306,
+            "p2_score": 19,
+            "p2_left": 413
+          },
+          {
+            "round": 4,
+            "p1_score": 45,
+            "p1_left": 261,
+            "p2_score": 28,
+            "p2_left": 385
+          },
+          {
+            "round": 5,
+            "p1_score": 19,
+            "p1_left": 242,
+            "p2_score": 38,
+            "p2_left": 347
+          },
+          {
+            "round": 6,
+            "p1_score": 9,
+            "p1_left": 233,
+            "p2_score": 82,
+            "p2_left": 265
+          },
+          {
+            "round": 7,
+            "p1_score": 30,
+            "p1_left": 203,
+            "p2_score": 43,
+            "p2_left": 222
+          },
+          {
+            "round": 8,
+            "p1_score": 87,
+            "p1_left": 116,
+            "p2_score": 12,
+            "p2_left": 210
+          },
+          {
+            "round": 9,
+            "p1_score": 76,
+            "p1_left": 40,
+            "p2_score": 49,
+            "p2_left": 161
+          },
+          {
+            "round": 10,
+            "p1_score": 0,
+            "p1_left": 40,
+            "p2_score": 27,
+            "p2_left": 134
+          },
+          {
+            "round": 11,
+            "p1_score": 8,
+            "p1_left": 32,
+            "p2_score": 25,
+            "p2_left": 109
+          },
+          {
+            "round": 12,
+            "p1_score": 24,
+            "p1_left": 8,
+            "p2_score": 21,
+            "p2_left": 88
+          },
+          {
+            "round": 13,
+            "p1_score": -1,
+            "p1_left": null,
+            "p2_score": 18,
+            "p2_left": 70
+          }
+        ]
+      },
+      {
+        "leg_number": 3,
+        "starter_id": 4,
+        "leg_winner_id": 4,
+        "p1_darts_leg": 34,
+        "p2_darts_leg": 33,
+        "p1_avg_3dart_leg": 44.206,
+        "p2_avg_3dart_leg": 31.455,
+        "rounds": [
+          {
+            "round": 0,
+            "p1_score": null,
+            "p1_left": 501,
+            "p2_score": null,
+            "p2_left": 501
+          },
+          {
+            "round": 1,
+            "p1_score": 30,
+            "p1_left": 471,
+            "p2_score": 58,
+            "p2_left": 443
+          },
+          {
+            "round": 2,
+            "p1_score": 11,
+            "p1_left": 460,
+            "p2_score": 30,
+            "p2_left": 413
+          },
+          {
+            "round": 3,
+            "p1_score": 35,
+            "p1_left": 425,
+            "p2_score": 26,
+            "p2_left": 387
+          },
+          {
+            "round": 4,
+            "p1_score": 76,
+            "p1_left": 349,
+            "p2_score": 47,
+            "p2_left": 340
+          },
+          {
+            "round": 5,
+            "p1_score": 40,
+            "p1_left": 309,
+            "p2_score": 26,
+            "p2_left": 314
+          },
+          {
+            "round": 6,
+            "p1_score": 24,
+            "p1_left": 285,
+            "p2_score": 23,
+            "p2_left": 291
+          },
+          {
+            "round": 7,
+            "p1_score": 41,
+            "p1_left": 244,
+            "p2_score": 31,
+            "p2_left": 260
+          },
+          {
+            "round": 8,
+            "p1_score": 89,
+            "p1_left": 155,
+            "p2_score": 30,
+            "p2_left": 230
+          },
+          {
+            "round": 9,
+            "p1_score": 39,
+            "p1_left": 116,
+            "p2_score": 43,
+            "p2_left": 187
+          },
+          {
+            "round": 10,
+            "p1_score": 60,
+            "p1_left": 56,
+            "p2_score": 11,
+            "p2_left": 176
+          },
+          {
+            "round": 11,
+            "p1_score": 24,
+            "p1_left": 32,
+            "p2_score": 21,
+            "p2_left": 155
+          },
+          {
+            "round": 12,
+            "p1_score": -1,
+            "p1_left": null,
+            "p2_score": null,
+            "p2_left": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "game_id": 604,
+    "season": "2026/2027",
+    "matchday": 1,
+    "player1_id": 6,
+    "player2_id": 2,
+    "legs": [
+      {
+        "leg_number": 1,
+        "starter_id": 6,
+        "leg_winner_id": 2,
+        "p1_darts_leg": 60,
+        "p2_darts_leg": 58,
+        "p1_avg_3dart_leg": 24.35,
+        "p2_avg_3dart_leg": 25.914,
+        "rounds": [
+          {
+            "round": 0,
+            "p1_score": null,
+            "p1_left": 501,
+            "p2_score": null,
+            "p2_left": 501
+          },
+          {
+            "round": 1,
+            "p1_score": 20,
+            "p1_left": 481,
+            "p2_score": 116,
+            "p2_left": 385
+          },
+          {
+            "round": 2,
+            "p1_score": 17,
+            "p1_left": 464,
+            "p2_score": 41,
+            "p2_left": 344
+          },
+          {
+            "round": 3,
+            "p1_score": 23,
+            "p1_left": 441,
+            "p2_score": 31,
+            "p2_left": 313
+          },
+          {
+            "round": 4,
+            "p1_score": 23,
+            "p1_left": 418,
+            "p2_score": 24,
+            "p2_left": 289
+          },
+          {
+            "round": 5,
+            "p1_score": 53,
+            "p1_left": 365,
+            "p2_score": 42,
+            "p2_left": 247
+          },
+          {
+            "round": 6,
+            "p1_score": 26,
+            "p1_left": 339,
+            "p2_score": 51,
+            "p2_left": 196
+          },
+          {
+            "round": 7,
+            "p1_score": 69,
+            "p1_left": 270,
+            "p2_score": 21,
+            "p2_left": 175
+          },
+          {
+            "round": 8,
+            "p1_score": 18,
+            "p1_left": 252,
+            "p2_score": 60,
+            "p2_left": 115
+          },
+          {
+            "round": 9,
+            "p1_score": 7,
+            "p1_left": 245,
+            "p2_score": 40,
+            "p2_left": 75
+          },
+          {
+            "round": 10,
+            "p1_score": 5,
+            "p1_left": 240,
+            "p2_score": 57,
+            "p2_left": 18
+          },
+          {
+            "round": 11,
+            "p1_score": 13,
+            "p1_left": 227,
+            "p2_score": 0,
+            "p2_left": 18
+          },
+          {
+            "round": 12,
+            "p1_score": 30,
+            "p1_left": 197,
+            "p2_score": 0,
+            "p2_left": 18
+          },
+          {
+            "round": 13,
+            "p1_score": 37,
+            "p1_left": 160,
+            "p2_score": 0,
+            "p2_left": 18
+          },
+          {
+            "round": 14,
+            "p1_score": 22,
+            "p1_left": 138,
+            "p2_score": 2,
+            "p2_left": 16
+          },
+          {
+            "round": 15,
+            "p1_score": 6,
+            "p1_left": 132,
+            "p2_score": 8,
+            "p2_left": 8
+          },
+          {
+            "round": 16,
+            "p1_score": 51,
+            "p1_left": 81,
+            "p2_score": 0,
+            "p2_left": 8
+          },
+          {
+            "round": 17,
+            "p1_score": 36,
+            "p1_left": 45,
+            "p2_score": 0,
+            "p2_left": 8
+          },
+          {
+            "round": 18,
+            "p1_score": 19,
+            "p1_left": 26,
+            "p2_score": 4,
+            "p2_left": 4
+          },
+          {
+            "round": 19,
+            "p1_score": 12,
+            "p1_left": 14,
+            "p2_score": 0,
+            "p2_left": 4
+          },
+          {
+            "round": 20,
+            "p1_score": 0,
+            "p1_left": 14,
+            "p2_score": -1,
+            "p2_left": null
+          }
+        ]
+      },
+      {
+        "leg_number": 2,
+        "starter_id": 2,
+        "leg_winner_id": 6,
+        "p1_darts_leg": 64,
+        "p2_darts_leg": 66,
+        "p1_avg_3dart_leg": 23.484,
+        "p2_avg_3dart_leg": 22.591,
+        "rounds": [
+          {
+            "round": 0,
+            "p1_score": null,
+            "p1_left": 501,
+            "p2_score": null,
+            "p2_left": 501
+          },
+          {
+            "round": 1,
+            "p1_score": 37,
+            "p1_left": 464,
+            "p2_score": 18,
+            "p2_left": 483
+          },
+          {
+            "round": 2,
+            "p1_score": 40,
+            "p1_left": 424,
+            "p2_score": 22,
+            "p2_left": 461
+          },
+          {
+            "round": 3,
+            "p1_score": 21,
+            "p1_left": 403,
+            "p2_score": 43,
+            "p2_left": 418
+          },
+          {
+            "round": 4,
+            "p1_score": 38,
+            "p1_left": 365,
+            "p2_score": 36,
+            "p2_left": 382
+          },
+          {
+            "round": 5,
+            "p1_score": 27,
+            "p1_left": 338,
+            "p2_score": 34,
+            "p2_left": 348
+          },
+          {
+            "round": 6,
+            "p1_score": 31,
+            "p1_left": 307,
+            "p2_score": 31,
+            "p2_left": 317
+          },
+          {
+            "round": 7,
+            "p1_score": 17,
+            "p1_left": 290,
+            "p2_score": 38,
+            "p2_left": 279
+          },
+          {
+            "round": 8,
+            "p1_score": 40,
+            "p1_left": 250,
+            "p2_score": 36,
+            "p2_left": 243
+          },
+          {
+            "round": 9,
+            "p1_score": 68,
+            "p1_left": 182,
+            "p2_score": 10,
+            "p2_left": 233
+          },
+          {
+            "round": 10,
+            "p1_score": 12,
+            "p1_left": 170,
+            "p2_score": 22,
+            "p2_left": 211
+          },
+          {
+            "round": 11,
+            "p1_score": 66,
+            "p1_left": 104,
+            "p2_score": 30,
+            "p2_left": 181
+          },
+          {
+            "round": 12,
+            "p1_score": 7,
+            "p1_left": 97,
+            "p2_score": 64,
+            "p2_left": 117
+          },
+          {
+            "round": 13,
+            "p1_score": 19,
+            "p1_left": 78,
+            "p2_score": 24,
+            "p2_left": 93
+          },
+          {
+            "round": 14,
+            "p1_score": 40,
+            "p1_left": 38,
+            "p2_score": 22,
+            "p2_left": 71
+          },
+          {
+            "round": 15,
+            "p1_score": 0,
+            "p1_left": 38,
+            "p2_score": 57,
+            "p2_left": 14
+          },
+          {
+            "round": 16,
+            "p1_score": 17,
+            "p1_left": 21,
+            "p2_score": 0,
+            "p2_left": 14
+          },
+          {
+            "round": 17,
+            "p1_score": 15,
+            "p1_left": 6,
+            "p2_score": 8,
+            "p2_left": 6
+          },
+          {
+            "round": 18,
+            "p1_score": 0,
+            "p1_left": 6,
+            "p2_score": 0,
+            "p2_left": 6
+          },
+          {
+            "round": 19,
+            "p1_score": 0,
+            "p1_left": 6,
+            "p2_score": 0,
+            "p2_left": 6
+          },
+          {
+            "round": 20,
+            "p1_score": 0,
+            "p1_left": 6,
+            "p2_score": 0,
+            "p2_left": 6
+          },
+          {
+            "round": 21,
+            "p1_score": 0,
+            "p1_left": 6,
+            "p2_score": 0,
+            "p2_left": 6
+          },
+          {
+            "round": 22,
+            "p1_score": -1,
+            "p1_left": null,
+            "p2_score": 2,
+            "p2_left": 4
+          }
+        ]
+      },
+      {
+        "leg_number": 3,
+        "starter_id": 6,
+        "leg_winner_id": 6,
+        "p1_darts_leg": 50,
+        "p2_darts_leg": 48,
+        "p1_avg_3dart_leg": 30.06,
+        "p2_avg_3dart_leg": 30.062,
+        "rounds": [
+          {
+            "round": 0,
+            "p1_score": null,
+            "p1_left": 501,
+            "p2_score": null,
+            "p2_left": 501
+          },
+          {
+            "round": 1,
+            "p1_score": 18,
+            "p1_left": 483,
+            "p2_score": 38,
+            "p2_left": 463
+          },
+          {
+            "round": 2,
+            "p1_score": 49,
+            "p1_left": 434,
+            "p2_score": 15,
+            "p2_left": 448
+          },
+          {
+            "round": 3,
+            "p1_score": 22,
+            "p1_left": 412,
+            "p2_score": 45,
+            "p2_left": 403
+          },
+          {
+            "round": 4,
+            "p1_score": 51,
+            "p1_left": 361,
+            "p2_score": 33,
+            "p2_left": 370
+          },
+          {
+            "round": 5,
+            "p1_score": 19,
+            "p1_left": 342,
+            "p2_score": 36,
+            "p2_left": 334
+          },
+          {
+            "round": 6,
+            "p1_score": 17,
+            "p1_left": 325,
+            "p2_score": 40,
+            "p2_left": 294
+          },
+          {
+            "round": 7,
+            "p1_score": 34,
+            "p1_left": 291,
+            "p2_score": 30,
+            "p2_left": 264
+          },
+          {
+            "round": 8,
+            "p1_score": 20,
+            "p1_left": 271,
+            "p2_score": 19,
+            "p2_left": 245
+          },
+          {
+            "round": 9,
+            "p1_score": 42,
+            "p1_left": 229,
+            "p2_score": 100,
+            "p2_left": 145
+          },
+          {
+            "round": 10,
+            "p1_score": 42,
+            "p1_left": 187,
+            "p2_score": 3,
+            "p2_left": 142
+          },
+          {
+            "round": 11,
+            "p1_score": 24,
+            "p1_left": 163,
+            "p2_score": 50,
+            "p2_left": 92
+          },
+          {
+            "round": 12,
+            "p1_score": 61,
+            "p1_left": 102,
+            "p2_score": 50,
+            "p2_left": 42
+          },
+          {
+            "round": 13,
+            "p1_score": 44,
+            "p1_left": 58,
+            "p2_score": 2,
+            "p2_left": 40
+          },
+          {
+            "round": 14,
+            "p1_score": 17,
+            "p1_left": 41,
+            "p2_score": 20,
+            "p2_left": 20
+          },
+          {
+            "round": 15,
+            "p1_score": 19,
+            "p1_left": 22,
+            "p2_score": 0,
+            "p2_left": 20
+          },
+          {
+            "round": 16,
+            "p1_score": 10,
+            "p1_left": 12,
+            "p2_score": 0,
+            "p2_left": 20
+          },
+          {
+            "round": 17,
+            "p1_score": -2,
+            "p1_left": null,
+            "p2_score": null,
+            "p2_left": null
+          }
+        ]
+      },
+      {
+        "leg_number": 4,
+        "starter_id": 2,
+        "leg_winner_id": 2,
+        "p1_darts_leg": 30,
+        "p2_darts_leg": 33,
+        "p1_avg_3dart_leg": 24.0,
+        "p2_avg_3dart_leg": 45.545,
+        "rounds": [
+          {
+            "round": 0,
+            "p1_score": null,
+            "p1_left": 501,
+            "p2_score": null,
+            "p2_left": 501
+          },
+          {
+            "round": 1,
+            "p1_score": 19,
+            "p1_left": 482,
+            "p2_score": 100,
+            "p2_left": 401
+          },
+          {
+            "round": 2,
+            "p1_score": 39,
+            "p1_left": 443,
+            "p2_score": 45,
+            "p2_left": 356
+          },
+          {
+            "round": 3,
+            "p1_score": 4,
+            "p1_left": 439,
+            "p2_score": 52,
+            "p2_left": 304
+          },
+          {
+            "round": 4,
+            "p1_score": 33,
+            "p1_left": 406,
+            "p2_score": 33,
+            "p2_left": 271
+          },
+          {
+            "round": 5,
+            "p1_score": 36,
+            "p1_left": 370,
+            "p2_score": 39,
+            "p2_left": 232
+          },
+          {
+            "round": 6,
+            "p1_score": 8,
+            "p1_left": 362,
+            "p2_score": 49,
+            "p2_left": 183
+          },
+          {
+            "round": 7,
+            "p1_score": 25,
+            "p1_left": 337,
+            "p2_score": 45,
+            "p2_left": 138
+          },
+          {
+            "round": 8,
+            "p1_score": 37,
+            "p1_left": 300,
+            "p2_score": 21,
+            "p2_left": 117
+          },
+          {
+            "round": 9,
+            "p1_score": 20,
+            "p1_left": 280,
+            "p2_score": 45,
+            "p2_left": 72
+          },
+          {
+            "round": 10,
+            "p1_score": 19,
+            "p1_left": 261,
+            "p2_score": 44,
+            "p2_left": 28
+          },
+          {
+            "round": 11,
+            "p1_score": null,
+            "p1_left": null,
+            "p2_score": -3,
+            "p2_left": null
+          }
+        ]
+      },
+      {
+        "leg_number": 5,
+        "starter_id": 6,
+        "leg_winner_id": 2,
+        "p1_darts_leg": 33,
+        "p2_darts_leg": 32,
+        "p1_avg_3dart_leg": 30.818,
+        "p2_avg_3dart_leg": 46.969,
+        "rounds": [
+          {
+            "round": 0,
+            "p1_score": null,
+            "p1_left": 501,
+            "p2_score": null,
+            "p2_left": 501
+          },
+          {
+            "round": 1,
+            "p1_score": 85,
+            "p1_left": 416,
+            "p2_score": 24,
+            "p2_left": 477
+          },
+          {
+            "round": 2,
+            "p1_score": 5,
+            "p1_left": 411,
+            "p2_score": 54,
+            "p2_left": 423
+          },
+          {
+            "round": 3,
+            "p1_score": 23,
+            "p1_left": 388,
+            "p2_score": 58,
+            "p2_left": 365
+          },
+          {
+            "round": 4,
+            "p1_score": 5,
+            "p1_left": 383,
+            "p2_score": 42,
+            "p2_left": 323
+          },
+          {
+            "round": 5,
+            "p1_score": 6,
+            "p1_left": 377,
+            "p2_score": 22,
+            "p2_left": 301
+          },
+          {
+            "round": 6,
+            "p1_score": 4,
+            "p1_left": 373,
+            "p2_score": 26,
+            "p2_left": 275
+          },
+          {
+            "round": 7,
+            "p1_score": 49,
+            "p1_left": 324,
+            "p2_score": 55,
+            "p2_left": 220
+          },
+          {
+            "round": 8,
+            "p1_score": 33,
+            "p1_left": 291,
+            "p2_score": 41,
+            "p2_left": 179
+          },
+          {
+            "round": 9,
+            "p1_score": 34,
+            "p1_left": 257,
+            "p2_score": 71,
+            "p2_left": 108
+          },
+          {
+            "round": 10,
+            "p1_score": 25,
+            "p1_left": 232,
+            "p2_score": 83,
+            "p2_left": 25
+          },
+          {
+            "round": 11,
+            "p1_score": 70,
+            "p1_left": 162,
+            "p2_score": -2,
+            "p2_left": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "game_id": 605,
+    "season": "2026/2027",
+    "matchday": 1,
+    "player1_id": 4,
+    "player2_id": 1,
+    "legs": [
+      {
+        "leg_number": 1,
+        "starter_id": 4,
+        "leg_winner_id": 1,
+        "p1_darts_leg": 48,
+        "p2_darts_leg": 46,
+        "p1_avg_3dart_leg": 31.188,
+        "p2_avg_3dart_leg": 32.674,
+        "rounds": [
+          {
+            "round": 0,
+            "p1_score": null,
+            "p1_left": 501,
+            "p2_score": null,
+            "p2_left": 501
+          },
+          {
+            "round": 1,
+            "p1_score": 26,
+            "p1_left": 475,
+            "p2_score": 20,
+            "p2_left": 481
+          },
+          {
+            "round": 2,
+            "p1_score": 43,
+            "p1_left": 432,
+            "p2_score": 26,
+            "p2_left": 455
+          },
+          {
+            "round": 3,
+            "p1_score": 25,
+            "p1_left": 407,
+            "p2_score": 52,
+            "p2_left": 403
+          },
+          {
+            "round": 4,
+            "p1_score": 32,
+            "p1_left": 375,
+            "p2_score": 23,
+            "p2_left": 380
+          },
+          {
+            "round": 5,
+            "p1_score": 40,
+            "p1_left": 335,
+            "p2_score": 43,
+            "p2_left": 337
+          },
+          {
+            "round": 6,
+            "p1_score": 27,
+            "p1_left": 308,
+            "p2_score": 22,
+            "p2_left": 315
+          },
+          {
+            "round": 7,
+            "p1_score": 36,
+            "p1_left": 272,
+            "p2_score": 79,
+            "p2_left": 236
+          },
+          {
+            "round": 8,
+            "p1_score": 76,
+            "p1_left": 196,
+            "p2_score": 22,
+            "p2_left": 214
+          },
+          {
+            "round": 9,
+            "p1_score": 32,
+            "p1_left": 164,
+            "p2_score": 22,
+            "p2_left": 192
+          },
+          {
+            "round": 10,
+            "p1_score": 60,
+            "p1_left": 104,
+            "p2_score": 80,
+            "p2_left": 112
+          },
+          {
+            "round": 11,
+            "p1_score": 66,
+            "p1_left": 38,
+            "p2_score": 14,
+            "p2_left": 98
+          },
+          {
+            "round": 12,
+            "p1_score": 18,
+            "p1_left": 20,
+            "p2_score": 36,
+            "p2_left": 62
+          },
+          {
+            "round": 13,
+            "p1_score": 18,
+            "p1_left": 2,
+            "p2_score": 53,
+            "p2_left": 9
+          },
+          {
+            "round": 14,
+            "p1_score": 0,
+            "p1_left": 2,
+            "p2_score": 0,
+            "p2_left": 9
+          },
+          {
+            "round": 15,
+            "p1_score": 0,
+            "p1_left": 2,
+            "p2_score": 1,
+            "p2_left": 8
+          },
+          {
+            "round": 16,
+            "p1_score": 0,
+            "p1_left": 2,
+            "p2_score": -1,
+            "p2_left": null
+          }
+        ]
+      },
+      {
+        "leg_number": 2,
+        "starter_id": 1,
+        "leg_winner_id": 4,
+        "p1_darts_leg": 44,
+        "p2_darts_leg": 45,
+        "p1_avg_3dart_leg": 34.159,
+        "p2_avg_3dart_leg": 32.067,
+        "rounds": [
+          {
+            "round": 0,
+            "p1_score": null,
+            "p1_left": 501,
+            "p2_score": null,
+            "p2_left": 501
+          },
+          {
+            "round": 1,
+            "p1_score": 45,
+            "p1_left": 456,
+            "p2_score": 25,
+            "p2_left": 476
+          },
+          {
+            "round": 2,
+            "p1_score": 10,
+            "p1_left": 446,
+            "p2_score": 28,
+            "p2_left": 448
+          },
+          {
+            "round": 3,
+            "p1_score": 36,
+            "p1_left": 410,
+            "p2_score": 27,
+            "p2_left": 421
+          },
+          {
+            "round": 4,
+            "p1_score": 30,
+            "p1_left": 380,
+            "p2_score": 41,
+            "p2_left": 380
+          },
+          {
+            "round": 5,
+            "p1_score": 100,
+            "p1_left": 280,
+            "p2_score": 58,
+            "p2_left": 322
+          },
+          {
+            "round": 6,
+            "p1_score": 17,
+            "p1_left": 263,
+            "p2_score": 70,
+            "p2_left": 252
+          },
+          {
+            "round": 7,
+            "p1_score": 35,
+            "p1_left": 228,
+            "p2_score": 24,
+            "p2_left": 228
+          },
+          {
+            "round": 8,
+            "p1_score": 26,
+            "p1_left": 202,
+            "p2_score": 41,
+            "p2_left": 187
+          },
+          {
+            "round": 9,
+            "p1_score": 41,
+            "p1_left": 161,
+            "p2_score": 44,
+            "p2_left": 143
+          },
+          {
+            "round": 10,
+            "p1_score": 41,
+            "p1_left": 120,
+            "p2_score": 38,
+            "p2_left": 105
+          },
+          {
+            "round": 11,
+            "p1_score": 29,
+            "p1_left": 91,
+            "p2_score": 28,
+            "p2_left": 77
+          },
+          {
+            "round": 12,
+            "p1_score": 43,
+            "p1_left": 48,
+            "p2_score": 37,
+            "p2_left": 40
+          },
+          {
+            "round": 13,
+            "p1_score": 32,
+            "p1_left": 16,
+            "p2_score": 20,
+            "p2_left": 20
+          },
+          {
+            "round": 14,
+            "p1_score": 8,
+            "p1_left": 8,
+            "p2_score": 0,
+            "p2_left": 20
+          },
+          {
+            "round": 15,
+            "p1_score": -2,
+            "p1_left": null,
+            "p2_score": 0,
+            "p2_left": 20
+          }
+        ]
+      },
+      {
+        "leg_number": 3,
+        "starter_id": 4,
+        "leg_winner_id": 4,
+        "p1_darts_leg": 43,
+        "p2_darts_leg": 42,
+        "p1_avg_3dart_leg": 34.953,
+        "p2_avg_3dart_leg": 24.929,
+        "rounds": [
+          {
+            "round": 0,
+            "p1_score": null,
+            "p1_left": 501,
+            "p2_score": null,
+            "p2_left": 501
+          },
+          {
+            "round": 1,
+            "p1_score": 60,
+            "p1_left": 441,
+            "p2_score": 11,
+            "p2_left": 490
+          },
+          {
+            "round": 2,
+            "p1_score": 9,
+            "p1_left": 432,
+            "p2_score": 45,
+            "p2_left": 445
+          },
+          {
+            "round": 3,
+            "p1_score": 40,
+            "p1_left": 392,
+            "p2_score": 41,
+            "p2_left": 404
+          },
+          {
+            "round": 4,
+            "p1_score": 60,
+            "p1_left": 332,
+            "p2_score": 27,
+            "p2_left": 377
+          },
+          {
+            "round": 5,
+            "p1_score": 43,
+            "p1_left": 289,
+            "p2_score": 17,
+            "p2_left": 360
+          },
+          {
+            "round": 6,
+            "p1_score": 81,
+            "p1_left": 208,
+            "p2_score": 30,
+            "p2_left": 330
+          },
+          {
+            "round": 7,
+            "p1_score": 22,
+            "p1_left": 186,
+            "p2_score": 29,
+            "p2_left": 301
+          },
+          {
+            "round": 8,
+            "p1_score": 63,
+            "p1_left": 123,
+            "p2_score": 22,
+            "p2_left": 279
+          },
+          {
+            "round": 9,
+            "p1_score": 39,
+            "p1_left": 84,
+            "p2_score": 26,
+            "p2_left": 253
+          },
+          {
+            "round": 10,
+            "p1_score": 44,
+            "p1_left": 40,
+            "p2_score": 5,
+            "p2_left": 248
+          },
+          {
+            "round": 11,
+            "p1_score": 30,
+            "p1_left": 10,
+            "p2_score": 22,
+            "p2_left": 226
+          },
+          {
+            "round": 12,
+            "p1_score": 0,
+            "p1_left": 10,
+            "p2_score": 22,
+            "p2_left": 204
+          },
+          {
+            "round": 13,
+            "p1_score": 0,
+            "p1_left": 10,
+            "p2_score": 26,
+            "p2_left": 178
+          },
+          {
+            "round": 14,
+            "p1_score": 6,
+            "p1_left": 4,
+            "p2_score": 26,
+            "p2_left": 152
+          },
+          {
+            "round": 15,
+            "p1_score": -1,
+            "p1_left": null,
+            "p2_score": null,
+            "p2_left": null
+          }
+        ]
+      },
+      {
+        "leg_number": 4,
+        "starter_id": 1,
+        "leg_winner_id": 4,
+        "p1_darts_leg": 44,
+        "p2_darts_leg": 45,
+        "p1_avg_3dart_leg": 34.159,
+        "p2_avg_3dart_leg": 32.733,
+        "rounds": [
+          {
+            "round": 0,
+            "p1_score": null,
+            "p1_left": 501,
+            "p2_score": null,
+            "p2_left": 501
+          },
+          {
+            "round": 1,
+            "p1_score": 92,
+            "p1_left": 409,
+            "p2_score": 2,
+            "p2_left": 499
+          },
+          {
+            "round": 2,
+            "p1_score": 28,
+            "p1_left": 381,
+            "p2_score": 99,
+            "p2_left": 400
+          },
+          {
+            "round": 3,
+            "p1_score": 100,
+            "p1_left": 281,
+            "p2_score": 13,
+            "p2_left": 387
+          },
+          {
+            "round": 4,
+            "p1_score": 52,
+            "p1_left": 229,
+            "p2_score": 47,
+            "p2_left": 340
+          },
+          {
+            "round": 5,
+            "p1_score": 36,
+            "p1_left": 193,
+            "p2_score": 13,
+            "p2_left": 327
+          },
+          {
+            "round": 6,
+            "p1_score": 34,
+            "p1_left": 159,
+            "p2_score": 58,
+            "p2_left": 269
+          },
+          {
+            "round": 7,
+            "p1_score": 25,
+            "p1_left": 134,
+            "p2_score": 93,
+            "p2_left": 176
+          },
+          {
+            "round": 8,
+            "p1_score": 29,
+            "p1_left": 105,
+            "p2_score": 57,
+            "p2_left": 119
+          },
+          {
+            "round": 9,
+            "p1_score": 43,
+            "p1_left": 62,
+            "p2_score": 25,
+            "p2_left": 94
+          },
+          {
+            "round": 10,
+            "p1_score": 46,
+            "p1_left": 16,
+            "p2_score": 54,
+            "p2_left": 40
+          },
+          {
+            "round": 11,
+            "p1_score": 12,
+            "p1_left": 4,
+            "p2_score": 5,
+            "p2_left": 35
+          },
+          {
+            "round": 12,
+            "p1_score": 0,
+            "p1_left": 4,
+            "p2_score": 0,
+            "p2_left": 35
+          },
+          {
+            "round": 13,
+            "p1_score": 0,
+            "p1_left": 4,
+            "p2_score": 15,
+            "p2_left": 20
+          },
+          {
+            "round": 14,
+            "p1_score": 0,
+            "p1_left": 4,
+            "p2_score": 10,
+            "p2_left": 10
+          },
+          {
+            "round": 15,
+            "p1_score": -2,
+            "p1_left": null,
+            "p2_score": 0,
+            "p2_left": 10
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "game_id": 606,
+    "season": "2026/2027",
+    "matchday": 1,
+    "player1_id": 8,
+    "player2_id": 6,
+    "legs": [
+      {
+        "leg_number": 1,
+        "starter_id": 8,
+        "leg_winner_id": 8,
+        "p1_darts_leg": 28,
+        "p2_darts_leg": 27,
+        "p1_avg_3dart_leg": 53.679,
+        "p2_avg_3dart_leg": 40.111,
+        "rounds": [
+          {
+            "round": 0,
+            "p1_score": null,
+            "p1_left": 501,
+            "p2_score": null,
+            "p2_left": 501
+          },
+          {
+            "round": 1,
+            "p1_score": 60,
+            "p1_left": 441,
+            "p2_score": 39,
+            "p2_left": 462
+          },
+          {
+            "round": 2,
+            "p1_score": 45,
+            "p1_left": 396,
+            "p2_score": 72,
+            "p2_left": 390
+          },
+          {
+            "round": 3,
+            "p1_score": 45,
+            "p1_left": 351,
+            "p2_score": 67,
+            "p2_left": 323
+          },
+          {
+            "round": 4,
+            "p1_score": 95,
+            "p1_left": 256,
+            "p2_score": 27,
+            "p2_left": 296
+          },
+          {
+            "round": 5,
+            "p1_score": 81,
+            "p1_left": 175,
+            "p2_score": 23,
+            "p2_left": 273
+          },
+          {
+            "round": 6,
+            "p1_score": 100,
+            "p1_left": 75,
+            "p2_score": 51,
+            "p2_left": 222
+          },
+          {
+            "round": 7,
+            "p1_score": 70,
+            "p1_left": 5,
+            "p2_score": 20,
+            "p2_left": 202
+          },
+          {
+            "round": 8,
+            "p1_score": 0,
+            "p1_left": 5,
+            "p2_score": 47,
+            "p2_left": 155
+          },
+          {
+            "round": 9,
+            "p1_score": 1,
+            "p1_left": 4,
+            "p2_score": 15,
+            "p2_left": 140
+          },
+          {
+            "round": 10,
+            "p1_score": -1,
+            "p1_left": null,
+            "p2_score": null,
+            "p2_left": null
+          }
+        ]
+      },
+      {
+        "leg_number": 2,
+        "starter_id": 6,
+        "leg_winner_id": 8,
+        "p1_darts_leg": 50,
+        "p2_darts_leg": 51,
+        "p1_avg_3dart_leg": 30.06,
+        "p2_avg_3dart_leg": 29.294,
+        "rounds": [
+          {
+            "round": 0,
+            "p1_score": null,
+            "p1_left": 501,
+            "p2_score": null,
+            "p2_left": 501
+          },
+          {
+            "round": 1,
+            "p1_score": 37,
+            "p1_left": 464,
+            "p2_score": 83,
+            "p2_left": 418
+          },
+          {
+            "round": 2,
+            "p1_score": 100,
+            "p1_left": 364,
+            "p2_score": 21,
+            "p2_left": 397
+          },
+          {
+            "round": 3,
+            "p1_score": 40,
+            "p1_left": 324,
+            "p2_score": 22,
+            "p2_left": 375
+          },
+          {
+            "round": 4,
+            "p1_score": 41,
+            "p1_left": 283,
+            "p2_score": 20,
+            "p2_left": 355
+          },
+          {
+            "round": 5,
+            "p1_score": 83,
+            "p1_left": 200,
+            "p2_score": 79,
+            "p2_left": 276
+          },
+          {
+            "round": 6,
+            "p1_score": 77,
+            "p1_left": 123,
+            "p2_score": 22,
+            "p2_left": 254
+          },
+          {
+            "round": 7,
+            "p1_score": 93,
+            "p1_left": 30,
+            "p2_score": 37,
+            "p2_left": 217
+          },
+          {
+            "round": 8,
+            "p1_score": 16,
+            "p1_left": 14,
+            "p2_score": 25,
+            "p2_left": 192
+          },
+          {
+            "round": 9,
+            "p1_score": 0,
+            "p1_left": 14,
+            "p2_score": 34,
+            "p2_left": 158
+          },
+          {
+            "round": 10,
+            "p1_score": 0,
+            "p1_left": 14,
+            "p2_score": 19,
+            "p2_left": 139
+          },
+          {
+            "round": 11,
+            "p1_score": 10,
+            "p1_left": 4,
+            "p2_score": 55,
+            "p2_left": 84
+          },
+          {
+            "round": 12,
+            "p1_score": 2,
+            "p1_left": 2,
+            "p2_score": 78,
+            "p2_left": 6
+          },
+          {
+            "round": 13,
+            "p1_score": 0,
+            "p1_left": 2,
+            "p2_score": 3,
+            "p2_left": 3
+          },
+          {
+            "round": 14,
+            "p1_score": 0,
+            "p1_left": 2,
+            "p2_score": 0,
+            "p2_left": 3
+          },
+          {
+            "round": 15,
+            "p1_score": 0,
+            "p1_left": 2,
+            "p2_score": 0,
+            "p2_left": 3
+          },
+          {
+            "round": 16,
+            "p1_score": 0,
+            "p1_left": 2,
+            "p2_score": 0,
+            "p2_left": 3
+          },
+          {
+            "round": 17,
+            "p1_score": -2,
+            "p1_left": null,
+            "p2_score": 0,
+            "p2_left": 3
+          }
+        ]
+      },
+      {
+        "leg_number": 3,
+        "starter_id": 8,
+        "leg_winner_id": 8,
+        "p1_darts_leg": 36,
+        "p2_darts_leg": 33,
+        "p1_avg_3dart_leg": 41.75,
+        "p2_avg_3dart_leg": 38.545,
+        "rounds": [
+          {
+            "round": 0,
+            "p1_score": null,
+            "p1_left": 501,
+            "p2_score": null,
+            "p2_left": 501
+          },
+          {
+            "round": 1,
+            "p1_score": 41,
+            "p1_left": 460,
+            "p2_score": 83,
+            "p2_left": 418
+          },
+          {
+            "round": 2,
+            "p1_score": 40,
+            "p1_left": 420,
+            "p2_score": 21,
+            "p2_left": 397
+          },
+          {
+            "round": 3,
+            "p1_score": 24,
+            "p1_left": 396,
+            "p2_score": 17,
+            "p2_left": 380
+          },
+          {
+            "round": 4,
+            "p1_score": 45,
+            "p1_left": 351,
+            "p2_score": 22,
+            "p2_left": 358
+          },
+          {
+            "round": 5,
+            "p1_score": 60,
+            "p1_left": 291,
+            "p2_score": 5,
+            "p2_left": 353
+          },
+          {
+            "round": 6,
+            "p1_score": 44,
+            "p1_left": 247,
+            "p2_score": 61,
+            "p2_left": 292
+          },
+          {
+            "round": 7,
+            "p1_score": 25,
+            "p1_left": 222,
+            "p2_score": 41,
+            "p2_left": 251
+          },
+          {
+            "round": 8,
+            "p1_score": 36,
+            "p1_left": 186,
+            "p2_score": 73,
+            "p2_left": 178
+          },
+          {
+            "round": 9,
+            "p1_score": 80,
+            "p1_left": 106,
+            "p2_score": 55,
+            "p2_left": 123
+          },
+          {
+            "round": 10,
+            "p1_score": 46,
+            "p1_left": 60,
+            "p2_score": 25,
+            "p2_left": 98
+          },
+          {
+            "round": 11,
+            "p1_score": 44,
+            "p1_left": 16,
+            "p2_score": 21,
+            "p2_left": 77
+          },
+          {
+            "round": 12,
+            "p1_score": -3,
+            "p1_left": null,
+            "p2_score": null,
+            "p2_left": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "game_id": 607,
+    "season": "2026/2027",
+    "matchday": 1,
+    "player1_id": 1,
+    "player2_id": 2,
+    "legs": [
+      {
+        "leg_number": 1,
+        "starter_id": 1,
+        "leg_winner_id": 1,
+        "p1_darts_leg": 53,
+        "p2_darts_leg": 51,
+        "p1_avg_3dart_leg": 28.358,
+        "p2_avg_3dart_leg": 28.882,
+        "rounds": [
+          {
+            "round": 0,
+            "p1_score": null,
+            "p1_left": 501,
+            "p2_score": null,
+            "p2_left": 501
+          },
+          {
+            "round": 1,
+            "p1_score": 26,
+            "p1_left": 475,
+            "p2_score": 30,
+            "p2_left": 471
+          },
+          {
+            "round": 2,
+            "p1_score": 29,
+            "p1_left": 446,
+            "p2_score": 85,
+            "p2_left": 386
+          },
+          {
+            "round": 3,
+            "p1_score": 100,
+            "p1_left": 346,
+            "p2_score": 30,
+            "p2_left": 356
+          },
+          {
+            "round": 4,
+            "p1_score": 12,
+            "p1_left": 334,
+            "p2_score": 22,
+            "p2_left": 334
+          },
+          {
+            "round": 5,
+            "p1_score": 140,
+            "p1_left": 194,
+            "p2_score": 43,
+            "p2_left": 291
+          },
+          {
+            "round": 6,
+            "p1_score": 24,
+            "p1_left": 170,
+            "p2_score": 26,
+            "p2_left": 265
+          },
+          {
+            "round": 7,
+            "p1_score": 24,
+            "p1_left": 146,
+            "p2_score": 42,
+            "p2_left": 223
+          },
+          {
+            "round": 8,
+            "p1_score": 42,
+            "p1_left": 104,
+            "p2_score": 43,
+            "p2_left": 180
+          },
+          {
+            "round": 9,
+            "p1_score": 36,
+            "p1_left": 68,
+            "p2_score": 28,
+            "p2_left": 152
+          },
+          {
+            "round": 10,
+            "p1_score": 12,
+            "p1_left": 56,
+            "p2_score": 38,
+            "p2_left": 114
+          },
+          {
+            "round": 11,
+            "p1_score": 16,
+            "p1_left": 40,
+            "p2_score": 64,
+            "p2_left": 50
+          },
+          {
+            "round": 12,
+            "p1_score": 20,
+            "p1_left": 20,
+            "p2_score": 30,
+            "p2_left": 20
+          },
+          {
+            "round": 13,
+            "p1_score": 15,
+            "p1_left": 5,
+            "p2_score": 10,
+            "p2_left": 10
+          },
+          {
+            "round": 14,
+            "p1_score": 0,
+            "p1_left": 5,
+            "p2_score": 0,
+            "p2_left": 10
+          },
+          {
+            "round": 15,
+            "p1_score": 1,
+            "p1_left": 4,
+            "p2_score": 0,
+            "p2_left": 10
+          },
+          {
+            "round": 16,
+            "p1_score": 0,
+            "p1_left": 4,
+            "p2_score": 0,
+            "p2_left": 10
+          },
+          {
+            "round": 17,
+            "p1_score": 2,
+            "p1_left": 2,
+            "p2_score": 0,
+            "p2_left": 10
+          },
+          {
+            "round": 18,
+            "p1_score": -2,
+            "p1_left": null,
+            "p2_score": null,
+            "p2_left": null
+          }
+        ]
+      },
+      {
+        "leg_number": 2,
+        "starter_id": 2,
+        "leg_winner_id": 2,
+        "p1_darts_leg": 39,
+        "p2_darts_leg": 42,
+        "p1_avg_3dart_leg": 37.923,
+        "p2_avg_3dart_leg": 35.786,
+        "rounds": [
+          {
+            "round": 0,
+            "p1_score": null,
+            "p1_left": 501,
+            "p2_score": null,
+            "p2_left": 501
+          },
+          {
+            "round": 1,
+            "p1_score": 31,
+            "p1_left": 470,
+            "p2_score": 66,
+            "p2_left": 435
+          },
+          {
+            "round": 2,
+            "p1_score": 45,
+            "p1_left": 425,
+            "p2_score": 43,
+            "p2_left": 392
+          },
+          {
+            "round": 3,
+            "p1_score": 24,
+            "p1_left": 401,
+            "p2_score": 52,
+            "p2_left": 340
+          },
+          {
+            "round": 4,
+            "p1_score": 83,
+            "p1_left": 318,
+            "p2_score": 24,
+            "p2_left": 316
+          },
+          {
+            "round": 5,
+            "p1_score": 56,
+            "p1_left": 262,
+            "p2_score": 37,
+            "p2_left": 279
+          },
+          {
+            "round": 6,
+            "p1_score": 11,
+            "p1_left": 251,
+            "p2_score": 26,
+            "p2_left": 253
+          },
+          {
+            "round": 7,
+            "p1_score": 26,
+            "p1_left": 225,
+            "p2_score": 28,
+            "p2_left": 225
+          },
+          {
+            "round": 8,
+            "p1_score": 60,
+            "p1_left": 165,
+            "p2_score": 92,
+            "p2_left": 133
+          },
+          {
+            "round": 9,
+            "p1_score": 59,
+            "p1_left": 106,
+            "p2_score": 19,
+            "p2_left": 114
+          },
+          {
+            "round": 10,
+            "p1_score": 40,
+            "p1_left": 66,
+            "p2_score": 20,
+            "p2_left": 94
+          },
+          {
+            "round": 11,
+            "p1_score": 50,
+            "p1_left": 16,
+            "p2_score": 39,
+            "p2_left": 55
+          },
+          {
+            "round": 12,
+            "p1_score": 0,
+            "p1_left": 16,
+            "p2_score": 47,
+            "p2_left": 8
+          },
+          {
+            "round": 13,
+            "p1_score": 8,
+            "p1_left": 8,
+            "p2_score": 0,
+            "p2_left": 8
+          },
+          {
+            "round": 14,
+            "p1_score": null,
+            "p1_left": null,
+            "p2_score": -3,
+            "p2_left": null
+          }
+        ]
+      },
+      {
+        "leg_number": 3,
+        "starter_id": 1,
+        "leg_winner_id": 2,
+        "p1_darts_leg": 48,
+        "p2_darts_leg": 46,
+        "p1_avg_3dart_leg": 31.062,
+        "p2_avg_3dart_leg": 32.674,
+        "rounds": [
+          {
+            "round": 0,
+            "p1_score": null,
+            "p1_left": 501,
+            "p2_score": null,
+            "p2_left": 501
+          },
+          {
+            "round": 1,
+            "p1_score": 43,
+            "p1_left": 458,
+            "p2_score": 47,
+            "p2_left": 454
+          },
+          {
+            "round": 2,
+            "p1_score": 4,
+            "p1_left": 454,
+            "p2_score": 30,
+            "p2_left": 424
+          },
+          {
+            "round": 3,
+            "p1_score": 45,
+            "p1_left": 409,
+            "p2_score": 41,
+            "p2_left": 383
+          },
+          {
+            "round": 4,
+            "p1_score": 60,
+            "p1_left": 349,
+            "p2_score": 74,
+            "p2_left": 309
+          },
+          {
+            "round": 5,
+            "p1_score": 38,
+            "p1_left": 311,
+            "p2_score": 34,
+            "p2_left": 275
+          },
+          {
+            "round": 6,
+            "p1_score": 3,
+            "p1_left": 308,
+            "p2_score": 60,
+            "p2_left": 215
+          },
+          {
+            "round": 7,
+            "p1_score": 80,
+            "p1_left": 228,
+            "p2_score": 41,
+            "p2_left": 174
+          },
+          {
+            "round": 8,
+            "p1_score": 60,
+            "p1_left": 168,
+            "p2_score": 34,
+            "p2_left": 140
+          },
+          {
+            "round": 9,
+            "p1_score": 61,
+            "p1_left": 107,
+            "p2_score": 92,
+            "p2_left": 48
+          },
+          {
+            "round": 10,
+            "p1_score": 43,
+            "p1_left": 64,
+            "p2_score": 0,
+            "p2_left": 48
+          },
+          {
+            "round": 11,
+            "p1_score": 15,
+            "p1_left": 49,
+            "p2_score": 32,
+            "p2_left": 16
+          },
+          {
+            "round": 12,
+            "p1_score": 10,
+            "p1_left": 39,
+            "p2_score": 11,
+            "p2_left": 5
+          },
+          {
+            "round": 13,
+            "p1_score": 31,
+            "p1_left": 8,
+            "p2_score": 1,
+            "p2_left": 4
+          },
+          {
+            "round": 14,
+            "p1_score": 0,
+            "p1_left": 8,
+            "p2_score": 0,
+            "p2_left": 4
+          },
+          {
+            "round": 15,
+            "p1_score": 4,
+            "p1_left": 4,
+            "p2_score": 0,
+            "p2_left": 4
+          },
+          {
+            "round": 16,
+            "p1_score": 0,
+            "p1_left": 4,
+            "p2_score": -1,
+            "p2_left": null
+          }
+        ]
+      },
+      {
+        "leg_number": 4,
+        "starter_id": 2,
+        "leg_winner_id": 1,
+        "p1_darts_leg": 36,
+        "p2_darts_leg": 36,
+        "p1_avg_3dart_leg": 41.75,
+        "p2_avg_3dart_leg": 39.083,
+        "rounds": [
+          {
+            "round": 0,
+            "p1_score": null,
+            "p1_left": 501,
+            "p2_score": null,
+            "p2_left": 501
+          },
+          {
+            "round": 1,
+            "p1_score": 41,
+            "p1_left": 460,
+            "p2_score": 49,
+            "p2_left": 452
+          },
+          {
+            "round": 2,
+            "p1_score": 41,
+            "p1_left": 419,
+            "p2_score": 37,
+            "p2_left": 415
+          },
+          {
+            "round": 3,
+            "p1_score": 26,
+            "p1_left": 393,
+            "p2_score": 26,
+            "p2_left": 389
+          },
+          {
+            "round": 4,
+            "p1_score": 41,
+            "p1_left": 352,
+            "p2_score": 28,
+            "p2_left": 361
+          },
+          {
+            "round": 5,
+            "p1_score": 100,
+            "p1_left": 252,
+            "p2_score": 22,
+            "p2_left": 339
+          },
+          {
+            "round": 6,
+            "p1_score": 13,
+            "p1_left": 239,
+            "p2_score": 45,
+            "p2_left": 294
+          },
+          {
+            "round": 7,
+            "p1_score": 45,
+            "p1_left": 194,
+            "p2_score": 61,
+            "p2_left": 233
+          },
+          {
+            "round": 8,
+            "p1_score": 40,
+            "p1_left": 154,
+            "p2_score": 40,
+            "p2_left": 193
+          },
+          {
+            "round": 9,
+            "p1_score": 42,
+            "p1_left": 112,
+            "p2_score": 56,
+            "p2_left": 137
+          },
+          {
+            "round": 10,
+            "p1_score": 40,
+            "p1_left": 72,
+            "p2_score": 28,
+            "p2_left": 109
+          },
+          {
+            "round": 11,
+            "p1_score": 47,
+            "p1_left": 25,
+            "p2_score": 77,
+            "p2_left": 32
+          },
+          {
+            "round": 12,
+            "p1_score": -3,
+            "p1_left": null,
+            "p2_score": 0,
+            "p2_left": 32
+          }
+        ]
+      },
+      {
+        "leg_number": 5,
+        "starter_id": 1,
+        "leg_winner_id": 1,
+        "p1_darts_leg": 22,
+        "p2_darts_leg": 21,
+        "p1_avg_3dart_leg": 68.318,
+        "p2_avg_3dart_leg": 38.143,
+        "rounds": [
+          {
+            "round": 0,
+            "p1_score": null,
+            "p1_left": 501,
+            "p2_score": null,
+            "p2_left": 501
+          },
+          {
+            "round": 1,
+            "p1_score": 41,
+            "p1_left": 460,
+            "p2_score": 22,
+            "p2_left": 479
+          },
+          {
+            "round": 2,
+            "p1_score": 58,
+            "p1_left": 402,
+            "p2_score": 35,
+            "p2_left": 444
+          },
+          {
+            "round": 3,
+            "p1_score": 100,
+            "p1_left": 302,
+            "p2_score": 28,
+            "p2_left": 416
+          },
+          {
+            "round": 4,
+            "p1_score": 140,
+            "p1_left": 162,
+            "p2_score": 39,
+            "p2_left": 377
+          },
+          {
+            "round": 5,
+            "p1_score": 68,
+            "p1_left": 94,
+            "p2_score": 77,
+            "p2_left": 300
+          },
+          {
+            "round": 6,
+            "p1_score": 23,
+            "p1_left": 71,
+            "p2_score": 33,
+            "p2_left": 267
+          },
+          {
+            "round": 7,
+            "p1_score": 31,
+            "p1_left": 40,
+            "p2_score": 33,
+            "p2_left": 234
+          },
+          {
+            "round": 8,
+            "p1_score": -1,
+            "p1_left": null,
+            "p2_score": null,
+            "p2_left": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "game_id": 608,
+    "season": "2026/2027",
+    "matchday": 1,
+    "player1_id": 8,
+    "player2_id": 1,
+    "legs": [
+      {
+        "leg_number": 1,
+        "starter_id": 8,
+        "leg_winner_id": 8,
+        "p1_darts_leg": 37,
+        "p2_darts_leg": 36,
+        "p1_avg_3dart_leg": 40.622,
+        "p2_avg_3dart_leg": 40.417,
+        "rounds": [
+          {
+            "round": 0,
+            "p1_score": null,
+            "p1_left": 501,
+            "p2_score": null,
+            "p2_left": 501
+          },
+          {
+            "round": 1,
+            "p1_score": 36,
+            "p1_left": 465,
+            "p2_score": 22,
+            "p2_left": 479
+          },
+          {
+            "round": 2,
+            "p1_score": 66,
+            "p1_left": 399,
+            "p2_score": 15,
+            "p2_left": 464
+          },
+          {
+            "round": 3,
+            "p1_score": 85,
+            "p1_left": 314,
+            "p2_score": 64,
+            "p2_left": 400
+          },
+          {
+            "round": 4,
+            "p1_score": 41,
+            "p1_left": 273,
+            "p2_score": 89,
+            "p2_left": 311
+          },
+          {
+            "round": 5,
+            "p1_score": 43,
+            "p1_left": 230,
+            "p2_score": 62,
+            "p2_left": 249
+          },
+          {
+            "round": 6,
+            "p1_score": 10,
+            "p1_left": 220,
+            "p2_score": 11,
+            "p2_left": 238
+          },
+          {
+            "round": 7,
+            "p1_score": 45,
+            "p1_left": 175,
+            "p2_score": 52,
+            "p2_left": 186
+          },
+          {
+            "round": 8,
+            "p1_score": 45,
+            "p1_left": 130,
+            "p2_score": 3,
+            "p2_left": 183
+          },
+          {
+            "round": 9,
+            "p1_score": 60,
+            "p1_left": 70,
+            "p2_score": 47,
+            "p2_left": 136
+          },
+          {
+            "round": 10,
+            "p1_score": 8,
+            "p1_left": 62,
+            "p2_score": 42,
+            "p2_left": 94
+          },
+          {
+            "round": 11,
+            "p1_score": 30,
+            "p1_left": 32,
+            "p2_score": 26,
+            "p2_left": 68
+          },
+          {
+            "round": 12,
+            "p1_score": 0,
+            "p1_left": 32,
+            "p2_score": 52,
+            "p2_left": 16
+          },
+          {
+            "round": 13,
+            "p1_score": -1,
+            "p1_left": null,
+            "p2_score": null,
+            "p2_left": null
+          }
+        ]
+      },
+      {
+        "leg_number": 2,
+        "starter_id": 1,
+        "leg_winner_id": 8,
+        "p1_darts_leg": 27,
+        "p2_darts_leg": 27,
+        "p1_avg_3dart_leg": 55.667,
+        "p2_avg_3dart_leg": 36.111,
+        "rounds": [
+          {
+            "round": 0,
+            "p1_score": null,
+            "p1_left": 501,
+            "p2_score": null,
+            "p2_left": 501
+          },
+          {
+            "round": 1,
+            "p1_score": 45,
+            "p1_left": 456,
+            "p2_score": 60,
+            "p2_left": 441
+          },
+          {
+            "round": 2,
+            "p1_score": 40,
+            "p1_left": 416,
+            "p2_score": 40,
+            "p2_left": 401
+          },
+          {
+            "round": 3,
+            "p1_score": 45,
+            "p1_left": 371,
+            "p2_score": 30,
+            "p2_left": 371
+          },
+          {
+            "round": 4,
+            "p1_score": 28,
+            "p1_left": 343,
+            "p2_score": 22,
+            "p2_left": 349
+          },
+          {
+            "round": 5,
+            "p1_score": 24,
+            "p1_left": 319,
+            "p2_score": 13,
+            "p2_left": 336
+          },
+          {
+            "round": 6,
+            "p1_score": 41,
+            "p1_left": 278,
+            "p2_score": 45,
+            "p2_left": 291
+          },
+          {
+            "round": 7,
+            "p1_score": 81,
+            "p1_left": 197,
+            "p2_score": 41,
+            "p2_left": 250
+          },
+          {
+            "round": 8,
+            "p1_score": 85,
+            "p1_left": 112,
+            "p2_score": 30,
+            "p2_left": 220
+          },
+          {
+            "round": 9,
+            "p1_score": -3,
+            "p1_left": null,
+            "p2_score": 44,
+            "p2_left": 176
+          }
+        ]
+      },
+      {
+        "leg_number": 3,
+        "starter_id": 8,
+        "leg_winner_id": 8,
+        "p1_darts_leg": 21,
+        "p2_darts_leg": 18,
+        "p1_avg_3dart_leg": 71.571,
+        "p2_avg_3dart_leg": 42.333,
+        "rounds": [
+          {
+            "round": 0,
+            "p1_score": null,
+            "p1_left": 501,
+            "p2_score": null,
+            "p2_left": 501
+          },
+          {
+            "round": 1,
+            "p1_score": 100,
+            "p1_left": 401,
+            "p2_score": 61,
+            "p2_left": 440
+          },
+          {
+            "round": 2,
+            "p1_score": 45,
+            "p1_left": 356,
+            "p2_score": 41,
+            "p2_left": 399
+          },
+          {
+            "round": 3,
+            "p1_score": 180,
+            "p1_left": 176,
+            "p2_score": 41,
+            "p2_left": 358
+          },
+          {
+            "round": 4,
+            "p1_score": 60,
+            "p1_left": 116,
+            "p2_score": 43,
+            "p2_left": 315
+          },
+          {
+            "round": 5,
+            "p1_score": 60,
+            "p1_left": 56,
+            "p2_score": 41,
+            "p2_left": 274
+          },
+          {
+            "round": 6,
+            "p1_score": 36,
+            "p1_left": 20,
+            "p2_score": 27,
+            "p2_left": 247
+          },
+          {
+            "round": 7,
+            "p1_score": -3,
+            "p1_left": null,
+            "p2_score": null,
+            "p2_left": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "game_id": 609,
+    "season": "2026/2027",
+    "matchday": 1,
+    "player1_id": 4,
+    "player2_id": 2,
+    "legs": [
+      {
+        "leg_number": 1,
+        "starter_id": 4,
+        "leg_winner_id": 2,
+        "p1_darts_leg": 39,
+        "p2_darts_leg": 37,
+        "p1_avg_3dart_leg": 38.154,
+        "p2_avg_3dart_leg": 40.622,
+        "rounds": [
+          {
+            "round": 0,
+            "p1_score": null,
+            "p1_left": 501,
+            "p2_score": null,
+            "p2_left": 501
+          },
+          {
+            "round": 1,
+            "p1_score": 32,
+            "p1_left": 469,
+            "p2_score": 46,
+            "p2_left": 455
+          },
+          {
+            "round": 2,
+            "p1_score": 65,
+            "p1_left": 404,
+            "p2_score": 10,
+            "p2_left": 445
+          },
+          {
+            "round": 3,
+            "p1_score": 24,
+            "p1_left": 380,
+            "p2_score": 43,
+            "p2_left": 402
+          },
+          {
+            "round": 4,
+            "p1_score": 48,
+            "p1_left": 332,
+            "p2_score": 26,
+            "p2_left": 376
+          },
+          {
+            "round": 5,
+            "p1_score": 37,
+            "p1_left": 295,
+            "p2_score": 56,
+            "p2_left": 320
+          },
+          {
+            "round": 6,
+            "p1_score": 78,
+            "p1_left": 217,
+            "p2_score": 66,
+            "p2_left": 254
+          },
+          {
+            "round": 7,
+            "p1_score": 29,
+            "p1_left": 188,
+            "p2_score": 70,
+            "p2_left": 184
+          },
+          {
+            "round": 8,
+            "p1_score": 47,
+            "p1_left": 141,
+            "p2_score": 40,
+            "p2_left": 144
+          },
+          {
+            "round": 9,
+            "p1_score": 77,
+            "p1_left": 64,
+            "p2_score": 26,
+            "p2_left": 118
+          },
+          {
+            "round": 10,
+            "p1_score": 24,
+            "p1_left": 40,
+            "p2_score": 87,
+            "p2_left": 31
+          },
+          {
+            "round": 11,
+            "p1_score": 35,
+            "p1_left": 5,
+            "p2_score": 3,
+            "p2_left": 28
+          },
+          {
+            "round": 12,
+            "p1_score": 0,
+            "p1_left": 5,
+            "p2_score": 0,
+            "p2_left": 28
+          },
+          {
+            "round": 13,
+            "p1_score": 0,
+            "p1_left": 5,
+            "p2_score": -1,
+            "p2_left": null
+          }
+        ]
+      },
+      {
+        "leg_number": 2,
+        "starter_id": 2,
+        "leg_winner_id": 2,
+        "p1_darts_leg": 30,
+        "p2_darts_leg": 33,
+        "p1_avg_3dart_leg": 48.1,
+        "p2_avg_3dart_leg": 45.545,
+        "rounds": [
+          {
+            "round": 0,
+            "p1_score": null,
+            "p1_left": 501,
+            "p2_score": null,
+            "p2_left": 501
+          },
+          {
+            "round": 1,
+            "p1_score": 27,
+            "p1_left": 474,
+            "p2_score": 22,
+            "p2_left": 479
+          },
+          {
+            "round": 2,
+            "p1_score": 33,
+            "p1_left": 441,
+            "p2_score": 25,
+            "p2_left": 454
+          },
+          {
+            "round": 3,
+            "p1_score": 44,
+            "p1_left": 397,
+            "p2_score": 83,
+            "p2_left": 371
+          },
+          {
+            "round": 4,
+            "p1_score": 50,
+            "p1_left": 347,
+            "p2_score": 60,
+            "p2_left": 311
+          },
+          {
+            "round": 5,
+            "p1_score": 44,
+            "p1_left": 303,
+            "p2_score": 41,
+            "p2_left": 270
+          },
+          {
+            "round": 6,
+            "p1_score": 83,
+            "p1_left": 220,
+            "p2_score": 28,
+            "p2_left": 242
+          },
+          {
+            "round": 7,
+            "p1_score": 38,
+            "p1_left": 182,
+            "p2_score": 45,
+            "p2_left": 197
+          },
+          {
+            "round": 8,
+            "p1_score": 34,
+            "p1_left": 148,
+            "p2_score": 21,
+            "p2_left": 176
+          },
+          {
+            "round": 9,
+            "p1_score": 77,
+            "p1_left": 71,
+            "p2_score": 77,
+            "p2_left": 99
+          },
+          {
+            "round": 10,
+            "p1_score": 51,
+            "p1_left": 20,
+            "p2_score": 67,
+            "p2_left": 32
+          },
+          {
+            "round": 11,
+            "p1_score": null,
+            "p1_left": null,
+            "p2_score": -3,
+            "p2_left": null
+          }
+        ]
+      },
+      {
+        "leg_number": 3,
+        "starter_id": 4,
+        "leg_winner_id": 2,
+        "p1_darts_leg": 42,
+        "p2_darts_leg": 42,
+        "p1_avg_3dart_leg": 35.071,
+        "p2_avg_3dart_leg": 35.786,
+        "rounds": [
+          {
+            "round": 0,
+            "p1_score": null,
+            "p1_left": 501,
+            "p2_score": null,
+            "p2_left": 501
+          },
+          {
+            "round": 1,
+            "p1_score": 37,
+            "p1_left": 464,
+            "p2_score": 79,
+            "p2_left": 422
+          },
+          {
+            "round": 2,
+            "p1_score": 17,
+            "p1_left": 447,
+            "p2_score": 22,
+            "p2_left": 400
+          },
+          {
+            "round": 3,
+            "p1_score": 62,
+            "p1_left": 385,
+            "p2_score": 60,
+            "p2_left": 340
+          },
+          {
+            "round": 4,
+            "p1_score": 32,
+            "p1_left": 353,
+            "p2_score": 26,
+            "p2_left": 314
+          },
+          {
+            "round": 5,
+            "p1_score": 25,
+            "p1_left": 328,
+            "p2_score": 13,
+            "p2_left": 301
+          },
+          {
+            "round": 6,
+            "p1_score": 85,
+            "p1_left": 243,
+            "p2_score": 45,
+            "p2_left": 256
+          },
+          {
+            "round": 7,
+            "p1_score": 92,
+            "p1_left": 151,
+            "p2_score": 25,
+            "p2_left": 231
+          },
+          {
+            "round": 8,
+            "p1_score": 43,
+            "p1_left": 108,
+            "p2_score": 45,
+            "p2_left": 186
+          },
+          {
+            "round": 9,
+            "p1_score": 21,
+            "p1_left": 87,
+            "p2_score": 20,
+            "p2_left": 166
+          },
+          {
+            "round": 10,
+            "p1_score": 19,
+            "p1_left": 68,
+            "p2_score": 52,
+            "p2_left": 114
+          },
+          {
+            "round": 11,
+            "p1_score": 13,
+            "p1_left": 55,
+            "p2_score": 21,
+            "p2_left": 93
+          },
+          {
+            "round": 12,
+            "p1_score": 15,
+            "p1_left": 40,
+            "p2_score": 0,
+            "p2_left": 93
+          },
+          {
+            "round": 13,
+            "p1_score": 0,
+            "p1_left": 40,
+            "p2_score": 38,
+            "p2_left": 55
+          },
+          {
+            "round": 14,
+            "p1_score": 30,
+            "p1_left": 10,
+            "p2_score": -3,
+            "p2_left": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "game_id": 610,
+    "season": "2026/2027",
+    "matchday": 1,
+    "player1_id": 8,
+    "player2_id": 4,
+    "legs": [
+      {
+        "leg_number": 1,
+        "starter_id": 8,
+        "leg_winner_id": 8,
+        "p1_darts_leg": 37,
+        "p2_darts_leg": 36,
+        "p1_avg_3dart_leg": 40.622,
+        "p2_avg_3dart_leg": 40.25,
+        "rounds": [
+          {
+            "round": 0,
+            "p1_score": null,
+            "p1_left": 501,
+            "p2_score": null,
+            "p2_left": 501
+          },
+          {
+            "round": 1,
+            "p1_score": 85,
+            "p1_left": 416,
+            "p2_score": 18,
+            "p2_left": 483
+          },
+          {
+            "round": 2,
+            "p1_score": 30,
+            "p1_left": 386,
+            "p2_score": 17,
+            "p2_left": 466
+          },
+          {
+            "round": 3,
+            "p1_score": 22,
+            "p1_left": 364,
+            "p2_score": 36,
+            "p2_left": 430
+          },
+          {
+            "round": 4,
+            "p1_score": 15,
+            "p1_left": 349,
+            "p2_score": 63,
+            "p2_left": 367
+          },
+          {
+            "round": 5,
+            "p1_score": 41,
+            "p1_left": 308,
+            "p2_score": 31,
+            "p2_left": 336
+          },
+          {
+            "round": 6,
+            "p1_score": 60,
+            "p1_left": 248,
+            "p2_score": 43,
+            "p2_left": 293
+          },
+          {
+            "round": 7,
+            "p1_score": 140,
+            "p1_left": 108,
+            "p2_score": 13,
+            "p2_left": 280
+          },
+          {
+            "round": 8,
+            "p1_score": 88,
+            "p1_left": 20,
+            "p2_score": 40,
+            "p2_left": 240
+          },
+          {
+            "round": 9,
+            "p1_score": 0,
+            "p1_left": 20,
+            "p2_score": 37,
+            "p2_left": 203
+          },
+          {
+            "round": 10,
+            "p1_score": 10,
+            "p1_left": 10,
+            "p2_score": 70,
+            "p2_left": 133
+          },
+          {
+            "round": 11,
+            "p1_score": 0,
+            "p1_left": 10,
+            "p2_score": 115,
+            "p2_left": 18
+          },
+          {
+            "round": 12,
+            "p1_score": 0,
+            "p1_left": 10,
+            "p2_score": 0,
+            "p2_left": 18
+          },
+          {
+            "round": 13,
+            "p1_score": -1,
+            "p1_left": null,
+            "p2_score": null,
+            "p2_left": null
+          }
+        ]
+      },
+      {
+        "leg_number": 2,
+        "starter_id": 4,
+        "leg_winner_id": 4,
+        "p1_darts_leg": 27,
+        "p2_darts_leg": 30,
+        "p1_avg_3dart_leg": 49.111,
+        "p2_avg_3dart_leg": 50.1,
+        "rounds": [
+          {
+            "round": 0,
+            "p1_score": null,
+            "p1_left": 501,
+            "p2_score": null,
+            "p2_left": 501
+          },
+          {
+            "round": 1,
+            "p1_score": 60,
+            "p1_left": 441,
+            "p2_score": 60,
+            "p2_left": 441
+          },
+          {
+            "round": 2,
+            "p1_score": 26,
+            "p1_left": 415,
+            "p2_score": 52,
+            "p2_left": 389
+          },
+          {
+            "round": 3,
+            "p1_score": 80,
+            "p1_left": 335,
+            "p2_score": 37,
+            "p2_left": 352
+          },
+          {
+            "round": 4,
+            "p1_score": 26,
+            "p1_left": 309,
+            "p2_score": 39,
+            "p2_left": 313
+          },
+          {
+            "round": 5,
+            "p1_score": 45,
+            "p1_left": 264,
+            "p2_score": 45,
+            "p2_left": 268
+          },
+          {
+            "round": 6,
+            "p1_score": 41,
+            "p1_left": 223,
+            "p2_score": 40,
+            "p2_left": 228
+          },
+          {
+            "round": 7,
+            "p1_score": 45,
+            "p1_left": 178,
+            "p2_score": 40,
+            "p2_left": 188
+          },
+          {
+            "round": 8,
+            "p1_score": 25,
+            "p1_left": 153,
+            "p2_score": 77,
+            "p2_left": 111
+          },
+          {
+            "round": 9,
+            "p1_score": 94,
+            "p1_left": 59,
+            "p2_score": 73,
+            "p2_left": 38
+          },
+          {
+            "round": 10,
+            "p1_score": null,
+            "p1_left": null,
+            "p2_score": -3,
+            "p2_left": null
+          }
+        ]
+      },
+      {
+        "leg_number": 3,
+        "starter_id": 8,
+        "leg_winner_id": 8,
+        "p1_darts_leg": 30,
+        "p2_darts_leg": 27,
+        "p1_avg_3dart_leg": 50.1,
+        "p2_avg_3dart_leg": 35.667,
+        "rounds": [
+          {
+            "round": 0,
+            "p1_score": null,
+            "p1_left": 501,
+            "p2_score": null,
+            "p2_left": 501
+          },
+          {
+            "round": 1,
+            "p1_score": 180,
+            "p1_left": 321,
+            "p2_score": 26,
+            "p2_left": 475
+          },
+          {
+            "round": 2,
+            "p1_score": 45,
+            "p1_left": 276,
+            "p2_score": 13,
+            "p2_left": 462
+          },
+          {
+            "round": 3,
+            "p1_score": 41,
+            "p1_left": 235,
+            "p2_score": 45,
+            "p2_left": 417
+          },
+          {
+            "round": 4,
+            "p1_score": 60,
+            "p1_left": 175,
+            "p2_score": 83,
+            "p2_left": 334
+          },
+          {
+            "round": 5,
+            "p1_score": 100,
+            "p1_left": 75,
+            "p2_score": 30,
+            "p2_left": 304
+          },
+          {
+            "round": 6,
+            "p1_score": 35,
+            "p1_left": 40,
+            "p2_score": 25,
+            "p2_left": 279
+          },
+          {
+            "round": 7,
+            "p1_score": 20,
+            "p1_left": 20,
+            "p2_score": 65,
+            "p2_left": 214
+          },
+          {
+            "round": 8,
+            "p1_score": 0,
+            "p1_left": 20,
+            "p2_score": 23,
+            "p2_left": 191
+          },
+          {
+            "round": 9,
+            "p1_score": 0,
+            "p1_left": 20,
+            "p2_score": 11,
+            "p2_left": 180
+          },
+          {
+            "round": 10,
+            "p1_score": -3,
+            "p1_left": null,
+            "p2_score": null,
+            "p2_left": null
+          }
+        ]
+      },
+      {
+        "leg_number": 4,
+        "starter_id": 4,
+        "leg_winner_id": 8,
+        "p1_darts_leg": 22,
+        "p2_darts_leg": 24,
+        "p1_avg_3dart_leg": 68.318,
+        "p2_avg_3dart_leg": 51.0,
+        "rounds": [
+          {
+            "round": 0,
+            "p1_score": null,
+            "p1_left": 501,
+            "p2_score": null,
+            "p2_left": 501
+          },
+          {
+            "round": 1,
+            "p1_score": 100,
+            "p1_left": 401,
+            "p2_score": 60,
+            "p2_left": 441
+          },
+          {
+            "round": 2,
+            "p1_score": 45,
+            "p1_left": 356,
+            "p2_score": 92,
+            "p2_left": 349
+          },
+          {
+            "round": 3,
+            "p1_score": 30,
+            "p1_left": 326,
+            "p2_score": 45,
+            "p2_left": 304
+          },
+          {
+            "round": 4,
+            "p1_score": 36,
+            "p1_left": 290,
+            "p2_score": 37,
+            "p2_left": 267
+          },
+          {
+            "round": 5,
+            "p1_score": 140,
+            "p1_left": 150,
+            "p2_score": 53,
+            "p2_left": 214
+          },
+          {
+            "round": 6,
+            "p1_score": 50,
+            "p1_left": 100,
+            "p2_score": 33,
+            "p2_left": 181
+          },
+          {
+            "round": 7,
+            "p1_score": 78,
+            "p1_left": 22,
+            "p2_score": 20,
+            "p2_left": 161
+          },
+          {
+            "round": 8,
+            "p1_score": -1,
+            "p1_left": null,
+            "p2_score": 68,
+            "p2_left": 93
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "game_id": 611,
+    "season": "2026/2027",
+    "matchday": 1,
+    "player1_id": 1,
+    "player2_id": 6,
+    "legs": [
+      {
+        "leg_number": 1,
+        "starter_id": 1,
+        "leg_winner_id": 1,
+        "p1_darts_leg": 40,
+        "p2_darts_leg": 39,
+        "p1_avg_3dart_leg": 37.575,
+        "p2_avg_3dart_leg": 37.077,
+        "rounds": [
+          {
+            "round": 0,
+            "p1_score": null,
+            "p1_left": 501,
+            "p2_score": null,
+            "p2_left": 501
+          },
+          {
+            "round": 1,
+            "p1_score": 7,
+            "p1_left": 494,
+            "p2_score": 39,
+            "p2_left": 462
+          },
+          {
+            "round": 2,
+            "p1_score": 41,
+            "p1_left": 453,
+            "p2_score": 37,
+            "p2_left": 425
+          },
+          {
+            "round": 3,
+            "p1_score": 42,
+            "p1_left": 411,
+            "p2_score": 28,
+            "p2_left": 397
+          },
+          {
+            "round": 4,
+            "p1_score": 31,
+            "p1_left": 380,
+            "p2_score": 43,
+            "p2_left": 354
+          },
+          {
+            "round": 5,
+            "p1_score": 64,
+            "p1_left": 316,
+            "p2_score": 54,
+            "p2_left": 300
+          },
+          {
+            "round": 6,
+            "p1_score": 40,
+            "p1_left": 276,
+            "p2_score": 54,
+            "p2_left": 246
+          },
+          {
+            "round": 7,
+            "p1_score": 22,
+            "p1_left": 254,
+            "p2_score": 38,
+            "p2_left": 208
+          },
+          {
+            "round": 8,
+            "p1_score": 81,
+            "p1_left": 173,
+            "p2_score": 74,
+            "p2_left": 134
+          },
+          {
+            "round": 9,
+            "p1_score": 21,
+            "p1_left": 152,
+            "p2_score": 41,
+            "p2_left": 93
+          },
+          {
+            "round": 10,
+            "p1_score": 23,
+            "p1_left": 129,
+            "p2_score": 69,
+            "p2_left": 24
+          },
+          {
+            "round": 11,
+            "p1_score": 27,
+            "p1_left": 102,
+            "p2_score": 5,
+            "p2_left": 19
+          },
+          {
+            "round": 12,
+            "p1_score": 100,
+            "p1_left": 2,
+            "p2_score": 0,
+            "p2_left": 19
+          },
+          {
+            "round": 13,
+            "p1_score": 0,
+            "p1_left": 2,
+            "p2_score": 0,
+            "p2_left": 19
+          },
+          {
+            "round": 14,
+            "p1_score": -1,
+            "p1_left": null,
+            "p2_score": null,
+            "p2_left": null
+          }
+        ]
+      },
+      {
+        "leg_number": 2,
+        "starter_id": 6,
+        "leg_winner_id": 1,
+        "p1_darts_leg": 66,
+        "p2_darts_leg": 66,
+        "p1_avg_3dart_leg": 22.773,
+        "p2_avg_3dart_leg": 22.5,
+        "rounds": [
+          {
+            "round": 0,
+            "p1_score": null,
+            "p1_left": 501,
+            "p2_score": null,
+            "p2_left": 501
+          },
+          {
+            "round": 1,
+            "p1_score": 66,
+            "p1_left": 435,
+            "p2_score": 18,
+            "p2_left": 483
+          },
+          {
+            "round": 2,
+            "p1_score": 60,
+            "p1_left": 375,
+            "p2_score": 47,
+            "p2_left": 436
+          },
+          {
+            "round": 3,
+            "p1_score": 60,
+            "p1_left": 315,
+            "p2_score": 36,
+            "p2_left": 400
+          },
+          {
+            "round": 4,
+            "p1_score": 11,
+            "p1_left": 304,
+            "p2_score": 32,
+            "p2_left": 368
+          },
+          {
+            "round": 5,
+            "p1_score": 65,
+            "p1_left": 239,
+            "p2_score": 76,
+            "p2_left": 292
+          },
+          {
+            "round": 6,
+            "p1_score": 22,
+            "p1_left": 217,
+            "p2_score": 39,
+            "p2_left": 253
+          },
+          {
+            "round": 7,
+            "p1_score": 57,
+            "p1_left": 160,
+            "p2_score": 18,
+            "p2_left": 235
+          },
+          {
+            "round": 8,
+            "p1_score": 80,
+            "p1_left": 80,
+            "p2_score": 21,
+            "p2_left": 214
+          },
+          {
+            "round": 9,
+            "p1_score": 20,
+            "p1_left": 60,
+            "p2_score": 4,
+            "p2_left": 210
+          },
+          {
+            "round": 10,
+            "p1_score": 20,
+            "p1_left": 40,
+            "p2_score": 63,
+            "p2_left": 147
+          },
+          {
+            "round": 11,
+            "p1_score": 26,
+            "p1_left": 14,
+            "p2_score": 30,
+            "p2_left": 117
+          },
+          {
+            "round": 12,
+            "p1_score": 0,
+            "p1_left": 14,
+            "p2_score": 40,
+            "p2_left": 77
+          },
+          {
+            "round": 13,
+            "p1_score": 10,
+            "p1_left": 4,
+            "p2_score": 32,
+            "p2_left": 45
+          },
+          {
+            "round": 14,
+            "p1_score": 0,
+            "p1_left": 4,
+            "p2_score": 10,
+            "p2_left": 35
+          },
+          {
+            "round": 15,
+            "p1_score": 2,
+            "p1_left": 2,
+            "p2_score": 29,
+            "p2_left": 6
+          },
+          {
+            "round": 16,
+            "p1_score": 0,
+            "p1_left": 2,
+            "p2_score": 0,
+            "p2_left": 6
+          },
+          {
+            "round": 17,
+            "p1_score": 0,
+            "p1_left": 2,
+            "p2_score": 0,
+            "p2_left": 6
+          },
+          {
+            "round": 18,
+            "p1_score": 0,
+            "p1_left": 2,
+            "p2_score": 0,
+            "p2_left": 6
+          },
+          {
+            "round": 19,
+            "p1_score": 0,
+            "p1_left": 2,
+            "p2_score": 0,
+            "p2_left": 6
+          },
+          {
+            "round": 20,
+            "p1_score": 0,
+            "p1_left": 2,
+            "p2_score": 0,
+            "p2_left": 6
+          },
+          {
+            "round": 21,
+            "p1_score": 0,
+            "p1_left": 2,
+            "p2_score": 0,
+            "p2_left": 6
+          },
+          {
+            "round": 22,
+            "p1_score": -3,
+            "p1_left": null,
+            "p2_score": 0,
+            "p2_left": 6
+          }
+        ]
+      },
+      {
+        "leg_number": 3,
+        "starter_id": 1,
+        "leg_winner_id": 1,
+        "p1_darts_leg": 47,
+        "p2_darts_leg": 45,
+        "p1_avg_3dart_leg": 31.979,
+        "p2_avg_3dart_leg": 32.067,
+        "rounds": [
+          {
+            "round": 0,
+            "p1_score": null,
+            "p1_left": 501,
+            "p2_score": null,
+            "p2_left": 501
+          },
+          {
+            "round": 1,
+            "p1_score": 85,
+            "p1_left": 416,
+            "p2_score": 24,
+            "p2_left": 477
+          },
+          {
+            "round": 2,
+            "p1_score": 24,
+            "p1_left": 392,
+            "p2_score": 33,
+            "p2_left": 444
+          },
+          {
+            "round": 3,
+            "p1_score": 18,
+            "p1_left": 374,
+            "p2_score": 41,
+            "p2_left": 403
+          },
+          {
+            "round": 4,
+            "p1_score": 41,
+            "p1_left": 333,
+            "p2_score": 16,
+            "p2_left": 387
+          },
+          {
+            "round": 5,
+            "p1_score": 30,
+            "p1_left": 303,
+            "p2_score": 40,
+            "p2_left": 347
+          },
+          {
+            "round": 6,
+            "p1_score": 24,
+            "p1_left": 279,
+            "p2_score": 59,
+            "p2_left": 288
+          },
+          {
+            "round": 7,
+            "p1_score": 39,
+            "p1_left": 240,
+            "p2_score": 22,
+            "p2_left": 266
+          },
+          {
+            "round": 8,
+            "p1_score": 26,
+            "p1_left": 214,
+            "p2_score": 68,
+            "p2_left": 198
+          },
+          {
+            "round": 9,
+            "p1_score": 54,
+            "p1_left": 160,
+            "p2_score": 24,
+            "p2_left": 174
+          },
+          {
+            "round": 10,
+            "p1_score": 40,
+            "p1_left": 120,
+            "p2_score": 38,
+            "p2_left": 136
+          },
+          {
+            "round": 11,
+            "p1_score": 45,
+            "p1_left": 75,
+            "p2_score": 50,
+            "p2_left": 86
+          },
+          {
+            "round": 12,
+            "p1_score": 27,
+            "p1_left": 48,
+            "p2_score": 47,
+            "p2_left": 39
+          },
+          {
+            "round": 13,
+            "p1_score": 32,
+            "p1_left": 16,
+            "p2_score": 19,
+            "p2_left": 20
+          },
+          {
+            "round": 14,
+            "p1_score": 0,
+            "p1_left": 16,
+            "p2_score": 0,
+            "p2_left": 20
+          },
+          {
+            "round": 15,
+            "p1_score": 0,
+            "p1_left": 16,
+            "p2_score": 0,
+            "p2_left": 20
+          },
+          {
+            "round": 16,
+            "p1_score": -2,
+            "p1_left": null,
+            "p2_score": null,
+            "p2_left": null
+          }
+        ]
+      }
+    ]
   }
 ]

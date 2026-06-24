@@ -1,32 +1,32 @@
 [
   {
     "kategorie": "Highest Checkout",
-    "wert": 98,
+    "wert": 112,
     "spieler": "Martin"
   },
   {
     "kategorie": "Best Leg",
-    "wert": 18,
+    "wert": 21,
     "spieler": "Martin"
   },
   {
     "kategorie": "Highest 3-Dart Average",
-    "wert": 60.12,
+    "wert": 53.05,
     "spieler": "Martin"
   },
   {
     "kategorie": "Highest First 9 Average",
-    "wert": 91.22,
+    "wert": 71.33,
     "spieler": "Martin"
   },
   {
     "kategorie": "Most 140s",
-    "wert": 5,
+    "wert": 3,
     "spieler": "Martin"
   },
   {
     "kategorie": "Most 180s",
-    "wert": 1,
+    "wert": 2,
     "spieler": "Martin"
   }
 ]
