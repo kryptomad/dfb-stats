@@ -11,8 +11,9 @@ SEASON_DEFINITION = {
     "2020/2021": 100,
     "2021/2022": 100,
     "2023/2024": 100,
-    "2024/2025": 100,   # aktuell aktiv
-    # "2025/2026": 100, # erst im September 2025 aktivieren
+    "2024/2025": 100,
+    "2026/2027": 100, # aktuell aktiv
+    # "2027/2028": 100, # erst im September 2025 aktivieren
 }
 
 def assign_season_and_matchday():

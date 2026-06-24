@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-28",
+  "generated_at": "2026-06-24",
   "total": 77,
   "insights": [
     {
@@ -11,7 +11,7 @@
       "key": "1_last10_form",
       "generated_at": "2026-02-17",
       "updated_at": "2026-03-28",
-      "value2": 33.9,
+      "value2": 34.5,
       "insight_id": "INS_009",
       "value_prev": 4
     },
@@ -60,7 +60,7 @@
       "key": "1_angstgegner_4",
       "generated_at": "2026-02-17",
       "updated_at": "2026-02-17",
-      "value2": 60,
+      "value2": 61,
       "insight_id": "INS_007",
       "value_prev": 7
     },
@@ -73,7 +73,7 @@
       "key": "1_angstgegner_8",
       "generated_at": "2026-02-17",
       "updated_at": "2026-02-17",
-      "value2": 60,
+      "value2": 61,
       "insight_id": "INS_001",
       "value_prev": 0
     },
@@ -82,62 +82,62 @@
       "player": "Uwe",
       "category": "gegner",
       "text": "Uwe dominiert gegen Frank: {value} von {value2} Spielen gewonnen.",
-      "value": 46,
+      "value": 47,
       "key": "1_lieblingsgegner_2",
       "generated_at": "2026-02-17",
-      "updated_at": "2026-03-28",
-      "value2": 60,
+      "updated_at": "2026-06-24",
+      "value2": 61,
       "insight_id": "INS_005",
-      "value_prev": 46
+      "value_prev": 47
     },
     {
       "player_id": 1,
       "player": "Uwe",
       "category": "gegner",
       "text": "Uwe dominiert gegen Heiner: {value} von {value2} Spielen gewonnen.",
-      "value": 54,
+      "value": 55,
       "key": "1_lieblingsgegner_6",
       "generated_at": "2026-02-17",
-      "updated_at": "2026-02-28",
-      "value2": 60,
+      "updated_at": "2026-06-24",
+      "value2": 61,
       "insight_id": "INS_003",
-      "value_prev": 54
+      "value_prev": 55
     },
     {
       "player_id": 1,
       "player": "Uwe",
       "category": "gegner",
       "text": "Uwe wartet seit {value} Spielen auf einen Sieg gegen Franz-Josef.",
-      "value": 4,
+      "value": 5,
       "key": "1_loss_streak_vs_4",
       "generated_at": "2026-02-28",
-      "updated_at": "2026-03-28",
+      "updated_at": "2026-06-24",
       "insight_id": "INS_078",
-      "value_prev": 4
+      "value_prev": 5
     },
     {
       "player_id": 1,
       "player": "Uwe",
       "category": "gegner",
       "text": "Uwe wartet seit {value} Spielen auf einen Sieg gegen Martin.",
-      "value": 60,
+      "value": 61,
       "key": "1_loss_streak_vs_8",
       "generated_at": "2026-02-17",
-      "updated_at": "2026-03-28",
+      "updated_at": "2026-06-24",
       "insight_id": "INS_002",
-      "value_prev": 60
+      "value_prev": 61
     },
     {
       "player_id": 1,
       "player": "Uwe",
       "category": "gegner",
       "text": "Uwe hat seine letzten {value} Spiele gegen Frank gewonnen.",
-      "value": 5,
+      "value": 6,
       "key": "1_win_streak_vs_2",
       "generated_at": "2026-02-17",
-      "updated_at": "2026-03-28",
+      "updated_at": "2026-06-24",
       "insight_id": "INS_006",
-      "value_prev": 5
+      "value_prev": 6
     },
     {
       "player_id": 1,
@@ -161,7 +161,7 @@
       "key": "1_avg_win_vs_loss",
       "generated_at": "2026-02-17",
       "updated_at": "2026-03-28",
-      "value2": 39.6,
+      "value2": 39.5,
       "insight_id": "INS_011",
       "value_prev": 36.8
     },
@@ -170,24 +170,24 @@
       "player": "Uwe",
       "category": "spielweise",
       "text": "Uwe wurde {value} Mal 0:3 besiegt ({value2}% seiner Niederlagen).",
-      "value": 77,
+      "value": 78,
       "key": "1_clean_loss_count",
       "generated_at": "2026-02-17",
-      "updated_at": "2026-03-28",
+      "updated_at": "2026-06-24",
       "value2": 58,
       "insight_id": "INS_014",
-      "value_prev": 77
+      "value_prev": 78
     },
     {
       "player_id": 1,
       "player": "Uwe",
       "category": "spielweise",
-      "text": "{value}% der Siege von Uwe sind 3:0-Siege ({value2} von 107).",
+      "text": "{value}% der Siege von Uwe sind 3:0-Siege ({value2} von 109).",
       "value": 35,
       "key": "1_clean_win_rate",
       "generated_at": "2026-02-17",
       "updated_at": "2026-02-28",
-      "value2": 37,
+      "value2": 38,
       "insight_id": "INS_012",
       "value_prev": 35
     },
@@ -207,26 +207,14 @@
       "player_id": 2,
       "player": "Frank",
       "category": "formkurve",
-      "text": "Frank steckt in einer Durststrecke: {value} Niederlagen in Folge.",
-      "value": 5,
-      "key": "2_current_loss_streak",
-      "generated_at": "2026-03-28",
-      "updated_at": "2026-03-28",
-      "insight_id": "INS_085",
-      "value_prev": 5
-    },
-    {
-      "player_id": 2,
-      "player": "Frank",
-      "category": "formkurve",
       "text": "Frank hat {value} seiner letzten 10 Spiele gewonnen (Ø {value2} Average).",
-      "value": 2,
+      "value": 3,
       "key": "2_last10_form",
       "generated_at": "2026-02-17",
-      "updated_at": "2026-03-28",
-      "value2": 35.9,
+      "updated_at": "2026-06-24",
+      "value2": 35.1,
       "insight_id": "INS_025",
-      "value_prev": 2
+      "value_prev": 3
     },
     {
       "player_id": 2,
@@ -261,7 +249,7 @@
       "key": "2_angstgegner_1",
       "generated_at": "2026-02-17",
       "updated_at": "2026-02-17",
-      "value2": 60,
+      "value2": 61,
       "insight_id": "INS_022",
       "value_prev": 14
     },
@@ -270,13 +258,13 @@
       "player": "Frank",
       "category": "gegner",
       "text": "Frank hat es schwer gegen Franz-Josef: Nur {value} von {value2} Spielen gewonnen.",
-      "value": 3,
+      "value": 4,
       "key": "2_angstgegner_4",
       "generated_at": "2026-02-17",
-      "updated_at": "2026-02-17",
-      "value2": 60,
+      "updated_at": "2026-06-24",
+      "value2": 61,
       "insight_id": "INS_018",
-      "value_prev": 3
+      "value_prev": 4
     },
     {
       "player_id": 2,
@@ -287,7 +275,7 @@
       "key": "2_angstgegner_8",
       "generated_at": "2026-02-17",
       "updated_at": "2026-02-17",
-      "value2": 60,
+      "value2": 61,
       "insight_id": "INS_019",
       "value_prev": 0
     },
@@ -296,37 +284,37 @@
       "player": "Frank",
       "category": "gegner",
       "text": "Frank dominiert gegen Heiner: {value} von {value2} Spielen gewonnen.",
-      "value": 43,
+      "value": 44,
       "key": "2_lieblingsgegner_6",
       "generated_at": "2026-02-17",
-      "updated_at": "2026-02-28",
-      "value2": 60,
+      "updated_at": "2026-06-24",
+      "value2": 61,
       "insight_id": "INS_021",
-      "value_prev": 43
+      "value_prev": 44
     },
     {
       "player_id": 2,
       "player": "Frank",
       "category": "gegner",
       "text": "Frank wartet seit {value} Spielen auf einen Sieg gegen Uwe.",
-      "value": 5,
+      "value": 6,
       "key": "2_loss_streak_vs_1",
       "generated_at": "2026-02-17",
-      "updated_at": "2026-03-28",
+      "updated_at": "2026-06-24",
       "insight_id": "INS_023",
-      "value_prev": 5
+      "value_prev": 6
     },
     {
       "player_id": 2,
       "player": "Frank",
       "category": "gegner",
       "text": "Frank wartet seit {value} Spielen auf einen Sieg gegen Martin.",
-      "value": 60,
+      "value": 61,
       "key": "2_loss_streak_vs_8",
       "generated_at": "2026-02-17",
-      "updated_at": "2026-03-28",
+      "updated_at": "2026-06-24",
       "insight_id": "INS_020",
-      "value_prev": 60
+      "value_prev": 61
     },
     {
       "player_id": 2,
@@ -346,64 +334,64 @@
       "player": "Frank",
       "category": "spielweise",
       "text": "Frank spielt bei Siegen Ø {value} Average, bei Niederlagen nur Ø {value2}.",
-      "value": 33.2,
+      "value": 33.3,
       "key": "2_avg_win_vs_loss",
       "generated_at": "2026-02-17",
-      "updated_at": "2026-02-28",
+      "updated_at": "2026-06-24",
       "value2": 37.1,
       "insight_id": "INS_026",
-      "value_prev": 33.2
+      "value_prev": 33.3
     },
     {
       "player_id": 2,
       "player": "Frank",
       "category": "spielweise",
       "text": "Frank wurde {value} Mal 0:3 besiegt ({value2}% seiner Niederlagen).",
-      "value": 97,
+      "value": 98,
       "key": "2_clean_loss_count",
       "generated_at": "2026-02-17",
-      "updated_at": "2026-03-28",
+      "updated_at": "2026-06-24",
       "value2": 54,
       "insight_id": "INS_029",
-      "value_prev": 97
+      "value_prev": 98
     },
     {
       "player_id": 2,
       "player": "Frank",
       "category": "spielweise",
-      "text": "{value}% der Siege von Frank sind 3:0-Siege ({value2} von 60).",
-      "value": 33,
+      "text": "{value}% der Siege von Frank sind 3:0-Siege ({value2} von 62).",
+      "value": 34,
       "key": "2_clean_win_rate",
       "generated_at": "2026-02-17",
-      "updated_at": "2026-02-28",
-      "value2": 20,
+      "updated_at": "2026-06-24",
+      "value2": 21,
       "insight_id": "INS_027",
-      "value_prev": 33
+      "value_prev": 34
     },
     {
       "player_id": 2,
       "player": "Frank",
       "category": "spielweise",
       "text": "Frank hat {value} knappe 2:3-Niederlagen – Pechvogel oder Nervensache?",
-      "value": 32,
+      "value": 33,
       "key": "2_close_losses_23",
       "generated_at": "2026-02-17",
-      "updated_at": "2026-03-28",
+      "updated_at": "2026-06-24",
       "insight_id": "INS_028",
-      "value_prev": 32
+      "value_prev": 33
     },
     {
       "player_id": 4,
       "player": "Franz-Josef",
       "category": "formkurve",
       "text": "Franz-Josef hat {value} seiner letzten 10 Spiele gewonnen (Ø {value2} Average).",
-      "value": 6,
+      "value": 7,
       "key": "4_last10_form",
       "generated_at": "2026-02-17",
-      "updated_at": "2026-03-28",
-      "value2": 39.5,
+      "updated_at": "2026-06-24",
+      "value2": 37.2,
       "insight_id": "INS_038",
-      "value_prev": 6
+      "value_prev": 7
     },
     {
       "player_id": 4,
@@ -438,7 +426,7 @@
       "key": "4_angstgegner_8",
       "generated_at": "2026-02-17",
       "updated_at": "2026-02-17",
-      "value2": 60,
+      "value2": 61,
       "insight_id": "INS_033",
       "value_prev": 12
     },
@@ -447,13 +435,13 @@
       "player": "Franz-Josef",
       "category": "gegner",
       "text": "Franz-Josef dominiert gegen Uwe: {value} von {value2} Spielen gewonnen.",
-      "value": 53,
+      "value": 54,
       "key": "4_lieblingsgegner_1",
       "generated_at": "2026-02-17",
-      "updated_at": "2026-03-28",
-      "value2": 60,
+      "updated_at": "2026-06-24",
+      "value2": 61,
       "insight_id": "INS_036",
-      "value_prev": 53
+      "value_prev": 54
     },
     {
       "player_id": 4,
@@ -464,7 +452,7 @@
       "key": "4_lieblingsgegner_2",
       "generated_at": "2026-02-17",
       "updated_at": "2026-03-28",
-      "value2": 60,
+      "value2": 61,
       "insight_id": "INS_032",
       "value_prev": 57
     },
@@ -473,49 +461,49 @@
       "player": "Franz-Josef",
       "category": "gegner",
       "text": "Franz-Josef dominiert gegen Heiner: {value} von {value2} Spielen gewonnen.",
-      "value": 60,
+      "value": 61,
       "key": "4_lieblingsgegner_6",
       "generated_at": "2026-02-17",
-      "updated_at": "2026-03-28",
-      "value2": 60,
+      "updated_at": "2026-06-24",
+      "value2": 61,
       "insight_id": "INS_034",
-      "value_prev": 60
+      "value_prev": 61
     },
     {
       "player_id": 4,
       "player": "Franz-Josef",
       "category": "gegner",
       "text": "Franz-Josef wartet seit {value} Spielen auf einen Sieg gegen Martin.",
-      "value": 4,
+      "value": 5,
       "key": "4_loss_streak_vs_8",
       "generated_at": "2026-02-28",
-      "updated_at": "2026-03-28",
+      "updated_at": "2026-06-24",
       "insight_id": "INS_080",
-      "value_prev": 4
+      "value_prev": 5
     },
     {
       "player_id": 4,
       "player": "Franz-Josef",
       "category": "gegner",
       "text": "Franz-Josef hat seine letzten {value} Spiele gegen Uwe gewonnen.",
-      "value": 4,
+      "value": 5,
       "key": "4_win_streak_vs_1",
       "generated_at": "2026-02-28",
-      "updated_at": "2026-03-28",
+      "updated_at": "2026-06-24",
       "insight_id": "INS_081",
-      "value_prev": 4
+      "value_prev": 5
     },
     {
       "player_id": 4,
       "player": "Franz-Josef",
       "category": "gegner",
       "text": "Franz-Josef hat seine letzten {value} Spiele gegen Heiner gewonnen.",
-      "value": 60,
+      "value": 61,
       "key": "4_win_streak_vs_6",
       "generated_at": "2026-02-17",
-      "updated_at": "2026-03-28",
+      "updated_at": "2026-06-24",
       "insight_id": "INS_035",
-      "value_prev": 60
+      "value_prev": 61
     },
     {
       "player_id": 4,
@@ -548,37 +536,37 @@
       "player": "Franz-Josef",
       "category": "spielweise",
       "text": "Franz-Josef spielt bei Siegen Ø {value} Average, bei Niederlagen nur Ø {value2}.",
-      "value": 44.6,
+      "value": 44.4,
       "key": "4_avg_win_vs_loss",
       "generated_at": "2026-02-17",
-      "updated_at": "2026-03-28",
-      "value2": 46.4,
+      "updated_at": "2026-06-24",
+      "value2": 46.3,
       "insight_id": "INS_039",
-      "value_prev": 44.6
+      "value_prev": 44.4
     },
     {
       "player_id": 4,
       "player": "Franz-Josef",
       "category": "spielweise",
       "text": "Franz-Josef wurde {value} Mal 0:3 besiegt ({value2}% seiner Niederlagen).",
-      "value": 30,
+      "value": 31,
       "key": "4_clean_loss_count",
       "generated_at": "2026-02-17",
-      "updated_at": "2026-03-28",
+      "updated_at": "2026-06-24",
       "value2": 52,
       "insight_id": "INS_042",
-      "value_prev": 30
+      "value_prev": 31
     },
     {
       "player_id": 4,
       "player": "Franz-Josef",
       "category": "spielweise",
-      "text": "{value}% der Siege von Franz-Josef sind 3:0-Siege ({value2} von 182).",
+      "text": "{value}% der Siege von Franz-Josef sind 3:0-Siege ({value2} von 184).",
       "value": 53,
       "key": "4_clean_win_rate",
       "generated_at": "2026-02-17",
       "updated_at": "2026-03-28",
-      "value2": 97,
+      "value2": 98,
       "insight_id": "INS_040",
       "value_prev": 53
     },
@@ -598,12 +586,24 @@
       "player_id": 6,
       "player": "Heiner",
       "category": "formkurve",
+      "text": "Heiner steckt in einer Durststrecke: {value} Niederlagen in Folge.",
+      "value": 4,
+      "key": "6_current_loss_streak",
+      "generated_at": "2026-06-24",
+      "updated_at": "2026-06-24",
+      "insight_id": "INS_086",
+      "value_prev": 4
+    },
+    {
+      "player_id": 6,
+      "player": "Heiner",
+      "category": "formkurve",
       "text": "Heiner hat {value} seiner letzten 10 Spiele gewonnen (Ø {value2} Average).",
       "value": 2,
       "key": "6_last10_form",
       "generated_at": "2026-02-17",
       "updated_at": "2026-03-28",
-      "value2": 30.6,
+      "value2": 30.5,
       "insight_id": "INS_054",
       "value_prev": 2
     },
@@ -612,12 +612,12 @@
       "player": "Heiner",
       "category": "fun",
       "text": "Heiner hatte {value} schwarze Abende (kein einziger Sieg).",
-      "value": 45,
+      "value": 46,
       "key": "6_black_evenings",
       "generated_at": "2026-02-17",
-      "updated_at": "2026-02-28",
+      "updated_at": "2026-06-24",
       "insight_id": "INS_060",
-      "value_prev": 45
+      "value_prev": 46
     },
     {
       "player_id": 6,
@@ -628,7 +628,7 @@
       "key": "6_angstgegner_1",
       "generated_at": "2026-02-17",
       "updated_at": "2026-03-28",
-      "value2": 60,
+      "value2": 61,
       "insight_id": "INS_046",
       "value_prev": 6
     },
@@ -641,7 +641,7 @@
       "key": "6_angstgegner_2",
       "generated_at": "2026-02-17",
       "updated_at": "2026-03-28",
-      "value2": 60,
+      "value2": 61,
       "insight_id": "INS_048",
       "value_prev": 17
     },
@@ -654,7 +654,7 @@
       "key": "6_angstgegner_4",
       "generated_at": "2026-02-17",
       "updated_at": "2026-02-17",
-      "value2": 60,
+      "value2": 61,
       "insight_id": "INS_049",
       "value_prev": 0
     },
@@ -667,7 +667,7 @@
       "key": "6_angstgegner_8",
       "generated_at": "2026-02-17",
       "updated_at": "2026-02-17",
-      "value2": 60,
+      "value2": 61,
       "insight_id": "INS_051",
       "value_prev": 0
     },
@@ -676,24 +676,24 @@
       "player": "Heiner",
       "category": "gegner",
       "text": "Heiner wartet seit {value} Spielen auf einen Sieg gegen Franz-Josef.",
-      "value": 60,
+      "value": 61,
       "key": "6_loss_streak_vs_4",
       "generated_at": "2026-02-17",
-      "updated_at": "2026-03-28",
+      "updated_at": "2026-06-24",
       "insight_id": "INS_050",
-      "value_prev": 60
+      "value_prev": 61
     },
     {
       "player_id": 6,
       "player": "Heiner",
       "category": "gegner",
       "text": "Heiner wartet seit {value} Spielen auf einen Sieg gegen Martin.",
-      "value": 60,
+      "value": 61,
       "key": "6_loss_streak_vs_8",
       "generated_at": "2026-02-17",
-      "updated_at": "2026-03-28",
+      "updated_at": "2026-06-24",
       "insight_id": "INS_052",
-      "value_prev": 60
+      "value_prev": 61
     },
     {
       "player_id": 6,
@@ -717,7 +717,7 @@
       "key": "6_avg_win_vs_loss",
       "generated_at": "2026-02-17",
       "updated_at": "2026-03-28",
-      "value2": 34.7,
+      "value2": 34.6,
       "insight_id": "INS_055",
       "value_prev": 30.4
     },
@@ -726,13 +726,13 @@
       "player": "Heiner",
       "category": "spielweise",
       "text": "Heiner wurde {value} Mal 0:3 besiegt ({value2}% seiner Niederlagen).",
-      "value": 141,
+      "value": 144,
       "key": "6_clean_loss_count",
       "generated_at": "2026-02-17",
-      "updated_at": "2026-03-28",
+      "updated_at": "2026-06-24",
       "value2": 65,
       "insight_id": "INS_058",
-      "value_prev": 141
+      "value_prev": 144
     },
     {
       "player_id": 6,
@@ -752,24 +752,24 @@
       "player": "Heiner",
       "category": "spielweise",
       "text": "Heiner hat {value} knappe 2:3-Niederlagen – Pechvogel oder Nervensache?",
-      "value": 26,
+      "value": 27,
       "key": "6_close_losses_23",
       "generated_at": "2026-02-17",
-      "updated_at": "2026-02-28",
+      "updated_at": "2026-06-24",
       "insight_id": "INS_057",
-      "value_prev": 26
+      "value_prev": 27
     },
     {
       "player_id": 8,
       "player": "Martin",
       "category": "formkurve",
       "text": "Martin ist on fire: {value} Siege in Folge!",
-      "value": 18,
+      "value": 22,
       "key": "8_current_win_streak",
       "generated_at": "2026-02-17",
-      "updated_at": "2026-03-28",
+      "updated_at": "2026-06-24",
       "insight_id": "INS_068",
-      "value_prev": 18
+      "value_prev": 22
     },
     {
       "player_id": 8,
@@ -780,7 +780,7 @@
       "key": "8_last10_form",
       "generated_at": "2026-02-17",
       "updated_at": "2026-02-17",
-      "value2": 53.1,
+      "value2": 51.5,
       "insight_id": "INS_070",
       "value_prev": 10
     },
@@ -801,112 +801,112 @@
       "player": "Martin",
       "category": "fun",
       "text": "Martin hatte {value} perfekte Abende (alle Spiele gewonnen).",
-      "value": 51,
+      "value": 52,
       "key": "8_perfect_evenings",
       "generated_at": "2026-02-17",
-      "updated_at": "2026-03-28",
+      "updated_at": "2026-06-24",
       "insight_id": "INS_077",
-      "value_prev": 51
+      "value_prev": 52
     },
     {
       "player_id": 8,
       "player": "Martin",
       "category": "gegner",
       "text": "Martin dominiert gegen Uwe: {value} von {value2} Spielen gewonnen.",
-      "value": 60,
+      "value": 61,
       "key": "8_lieblingsgegner_1",
       "generated_at": "2026-02-17",
-      "updated_at": "2026-03-28",
-      "value2": 60,
+      "updated_at": "2026-06-24",
+      "value2": 61,
       "insight_id": "INS_061",
-      "value_prev": 60
+      "value_prev": 61
     },
     {
       "player_id": 8,
       "player": "Martin",
       "category": "gegner",
       "text": "Martin dominiert gegen Frank: {value} von {value2} Spielen gewonnen.",
-      "value": 60,
+      "value": 61,
       "key": "8_lieblingsgegner_2",
       "generated_at": "2026-02-17",
-      "updated_at": "2026-03-28",
-      "value2": 60,
+      "updated_at": "2026-06-24",
+      "value2": 61,
       "insight_id": "INS_063",
-      "value_prev": 60
+      "value_prev": 61
     },
     {
       "player_id": 8,
       "player": "Martin",
       "category": "gegner",
       "text": "Martin dominiert gegen Franz-Josef: {value} von {value2} Spielen gewonnen.",
-      "value": 48,
+      "value": 49,
       "key": "8_lieblingsgegner_4",
       "generated_at": "2026-02-17",
-      "updated_at": "2026-03-28",
-      "value2": 60,
+      "updated_at": "2026-06-24",
+      "value2": 61,
       "insight_id": "INS_065",
-      "value_prev": 48
+      "value_prev": 49
     },
     {
       "player_id": 8,
       "player": "Martin",
       "category": "gegner",
       "text": "Martin dominiert gegen Heiner: {value} von {value2} Spielen gewonnen.",
-      "value": 60,
+      "value": 61,
       "key": "8_lieblingsgegner_6",
       "generated_at": "2026-02-17",
-      "updated_at": "2026-03-28",
-      "value2": 60,
+      "updated_at": "2026-06-24",
+      "value2": 61,
       "insight_id": "INS_066",
-      "value_prev": 60
+      "value_prev": 61
     },
     {
       "player_id": 8,
       "player": "Martin",
       "category": "gegner",
       "text": "Martin hat seine letzten {value} Spiele gegen Uwe gewonnen.",
-      "value": 60,
+      "value": 61,
       "key": "8_win_streak_vs_1",
       "generated_at": "2026-02-17",
-      "updated_at": "2026-03-28",
+      "updated_at": "2026-06-24",
       "insight_id": "INS_062",
-      "value_prev": 60
+      "value_prev": 61
     },
     {
       "player_id": 8,
       "player": "Martin",
       "category": "gegner",
       "text": "Martin hat seine letzten {value} Spiele gegen Frank gewonnen.",
-      "value": 60,
+      "value": 61,
       "key": "8_win_streak_vs_2",
       "generated_at": "2026-02-17",
-      "updated_at": "2026-03-28",
+      "updated_at": "2026-06-24",
       "insight_id": "INS_064",
-      "value_prev": 60
+      "value_prev": 61
     },
     {
       "player_id": 8,
       "player": "Martin",
       "category": "gegner",
       "text": "Martin hat seine letzten {value} Spiele gegen Franz-Josef gewonnen.",
-      "value": 4,
+      "value": 5,
       "key": "8_win_streak_vs_4",
       "generated_at": "2026-02-28",
-      "updated_at": "2026-03-28",
+      "updated_at": "2026-06-24",
       "insight_id": "INS_083",
-      "value_prev": 4
+      "value_prev": 5
     },
     {
       "player_id": 8,
       "player": "Martin",
       "category": "gegner",
       "text": "Martin hat seine letzten {value} Spiele gegen Heiner gewonnen.",
-      "value": 60,
+      "value": 61,
       "key": "8_win_streak_vs_6",
       "generated_at": "2026-02-17",
-      "updated_at": "2026-03-28",
+      "updated_at": "2026-06-24",
       "insight_id": "INS_067",
-      "value_prev": 60
+      "value_prev": 61
     },
     {
       "player_id": 8,
@@ -939,24 +939,24 @@
       "player": "Martin",
       "category": "spielweise",
       "text": "Martin spielt bei Siegen Ø {value} Average, bei Niederlagen nur Ø {value2}.",
-      "value": 53.1,
+      "value": 53.0,
       "key": "8_avg_win_vs_loss",
       "generated_at": "2026-02-17",
-      "updated_at": "2026-02-28",
+      "updated_at": "2026-06-24",
       "value2": 50.7,
       "insight_id": "INS_072",
-      "value_prev": 53.1
+      "value_prev": 53.0
     },
     {
       "player_id": 8,
       "player": "Martin",
       "category": "spielweise",
-      "text": "{value}% der Siege von Martin sind 3:0-Siege ({value2} von 228).",
+      "text": "{value}% der Siege von Martin sind 3:0-Siege ({value2} von 232).",
       "value": 80,
       "key": "8_clean_win_rate",
       "generated_at": "2026-02-17",
       "updated_at": "2026-03-28",
-      "value2": 182,
+      "value2": 185,
       "insight_id": "INS_073",
       "value_prev": 80
     },

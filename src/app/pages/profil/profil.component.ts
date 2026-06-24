@@ -62,7 +62,7 @@ import { StatRow } from '../../services/stats.service';
 export class ProfilComponent implements OnInit {
   playerId!: number;
   player: Player | undefined;
-  selectedSeason: string = '2024/2025';
+  selectedSeason: string = '2026/2027';
   stats$: Observable<StatRow[]>;
   totalLegsWon: number = 0;
   total180s: number = 0;
@@ -215,22 +215,16 @@ export class ProfilComponent implements OnInit {
       );
       this.avgDarts = totalLegs > 0 ? totalDartsWeighted / totalLegs : 0;
       this.setsWon = playerRows.reduce((sum, r) => sum + (r.sets_won || 0), 0);
-      this.bestLeg =
-        playerRows.reduce(
-          (min, r) =>
-            r.best_leg !== null && (min === 0 || r.best_leg < min)
-              ? r.best_leg
-              : min,
-          Infinity,
-        ) || 0;
-      this.worstLeg =
-        playerRows.reduce(
-          (min, r) =>
-            r.worst_leg !== null && (min === 0 || r.worst_leg < min)
-              ? r.worst_leg
-              : min,
-          Infinity,
-        ) || 0;
+      const bestLegRaw = playerRows.reduce(
+        (min, r) => r.best_leg !== null && r.best_leg < min ? r.best_leg : min,
+        Infinity,
+      );
+      this.bestLeg = isFinite(bestLegRaw) ? bestLegRaw : 0;
+      const worstLegRaw = playerRows.reduce(
+        (min, r) => r.worst_leg !== null && r.worst_leg < min ? r.worst_leg : min,
+        Infinity,
+      );
+      this.worstLeg = isFinite(worstLegRaw) ? worstLegRaw : 0;
       this.highFinish = playerRows.reduce(
         (max, r) => Math.max(max, r.high_finish || 0),
         0,

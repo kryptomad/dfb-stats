@@ -1,9 +1,9 @@
 {
-  "gastgeber": "Heiner",
-  "datum": "Freitag, 05.06.2026",
+  "gastgeber": "Frank",
+  "datum": "Freitag, 17.07.2026",
   "zeit": "19:30 Uhr",
-  "oskardarten": false,
-  "gelddarten": true,
+  "oskardarten": true,
+  "gelddarten": false,
   "season": "2026/2027",
-  "matchday": 1
+  "matchday": 2
 }
