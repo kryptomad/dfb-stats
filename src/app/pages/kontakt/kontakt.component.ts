@@ -2,12 +2,12 @@ import { Component } from '@angular/core';
 
 @Component({
   standalone: true,
-  selector: 'app-impressum',
+  selector: 'app-kontakt',
   imports: [],
-  templateUrl: './impressum.component.html',
-  styleUrl: './impressum.component.scss'
+  templateUrl: './kontakt.component.html',
+  styleUrl: './kontakt.component.scss'
 })
-export class ImpressumComponent {
+export class KontaktComponent {
 
   // datenschutz.component.ts
 email = ['kryptomad','proton.me']; // ['name','domain']

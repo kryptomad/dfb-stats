@@ -10,7 +10,7 @@ import { RouterLink } from '@angular/router';
       <div>© {{ year }} Dartfreunde Borchen n.e.V.</div>
       <div class="data-note">Elektronische Datenerfassung seit 2018 via n01</div>
       <div>
-        <a routerLink="pages/impressum">Impressum</a> <span style="color: var(--primary-color)">·</span>
+        <a routerLink="pages/kontakt">Kontakt</a> <span style="color: var(--primary-color)">·</span>
         <a routerLink="pages/datenschutz">Datenschutz</a>
       </div>
     </footer>
